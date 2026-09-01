@@ -11,10 +11,9 @@ body {
     line-height: 1.5;
 }
 
-/* Fundo Atmosférico com a Imagem do DDLC */
+/* Fundo Atmosférico */
 .vndb-bg-wrapper {
     min-height: 100vh;
-    /* Reduzi a escuridão do gradiente para mostrar bem a imagem */
     background: linear-gradient(rgba(5, 7, 10, 0.4), rgba(5, 7, 10, 0.6)), 
                 url('https://i.8upload.com/image/609e2998ae1139ae/caefdfcdf0a24a1f8dfae4e80cb65a6e.jpg') no-repeat center top fixed;
     background-size: cover;
@@ -25,10 +24,10 @@ body {
 a { color: #6897bb; text-decoration: none; }
 a:hover { color: #80bcd8; text-decoration: underline; }
 
-/* Cabeçalho Superior Estilo Database (Semi-Transparente) */
+/* Cabeçalho Superior Estilo Database */
 #top-header {
     background: rgba(15, 22, 34, 0.85);
-    backdrop-filter: blur(2px); /* Efeito suave de vidro */
+    backdrop-filter: blur(2px);
     border-bottom: 2px solid #283850;
     padding: 10px 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
@@ -71,7 +70,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     color: #a9c5df;
 }
 
-/* Barra de Pesquisa Compacta */
+/* Barra de Pesquisa */
 .search-bar { position: relative; display: flex; }
 .search-bar input {
     padding: 6px 10px;
@@ -128,10 +127,10 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     flex-grow: 1;
 }
 
-/* Conteúdo Principal (Transparente) */
+/* Conteúdo Principal */
 #content {
     flex-grow: 1;
-    background-color: rgba(15, 22, 34, 0.85); /* Fundo Semi-Transparente */
+    background-color: rgba(15, 22, 34, 0.85);
     backdrop-filter: blur(2px);
     border: 1px solid #202e42;
     border-radius: 4px;
@@ -161,7 +160,102 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 #content ul, #content ol { margin: 0 0 15px 20px; color: #b8c2cd; }
 #content li { margin-bottom: 4px; }
 
-/* Infobox Lateral */
+/* ==========================================================
+   ELEMENTOS DA PÁGINA INICIAL (HOME)
+   ========================================================== */
+.home-banner {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(11, 17, 24, 0.6);
+    border-radius: 6px;
+    border: 1px solid #202e42;
+    margin-bottom: 30px;
+}
+.home-banner h2 {
+    border: none;
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    color: #fff;
+}
+.home-section {
+    margin-bottom: 35px;
+}
+.home-section h3 {
+    font-size: 16px;
+    color: #e0e6ed;
+    border-bottom: 1px solid #202e42;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* Grid de Jogos (Responsivo) */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+.home-card {
+    background: rgba(11, 17, 24, 0.8);
+    border: 1px solid #202e42;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.home-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    border-color: #4a75a0;
+    text-decoration: none;
+}
+.home-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-bottom: 1px solid #202e42;
+}
+.home-card span {
+    padding: 10px;
+    font-weight: bold;
+    color: #c5c8c6;
+    font-size: 13px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-card:hover span { color: #fff; }
+
+/* Botões de Link para Lojas */
+.play-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.play-links a {
+    padding: 8px 12px;
+    background: rgba(28, 43, 62, 0.8);
+    border: 1px solid #283850;
+    border-radius: 3px;
+    color: #a9c5df;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.play-links a:hover {
+    background: #283850;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ==========================================================
+   INFOBOX E NAVEGAÇÃO DE ARTIGOS
+   ========================================================== */
 .infobox {
     float: right;
     width: 280px;
@@ -172,7 +266,6 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     font-size: 12px;
     border-radius: 3px;
 }
-
 .infobox-title {
     background: rgba(22, 32, 46, 0.9);
     text-align: center;
@@ -182,14 +275,12 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     font-size: 13px;
     border-bottom: 1px solid #283850;
 }
-
 .infobox img {
     width: 100%;
     height: auto;
     display: block;
     border-bottom: 1px solid #283850;
 }
-
 .infobox table { width: 100%; border-collapse: collapse; }
 .infobox th, .infobox td { padding: 6px; border-bottom: 1px solid rgba(22, 32, 46, 0.5); vertical-align: top; }
 .infobox th { text-align: left; background-color: rgba(15, 22, 34, 0.6); width: 38%; color: #8fa3bc; }
@@ -220,7 +311,9 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 .category-list h3, .all-games-list h3 { font-size: 16px; margin-bottom: 4px; font-family: Georgia, serif; }
 .category-list p, .all-games-list p { font-size: 12px; color: #8fa3bc; margin: 0; }
 
-/* Sidebar (Barra Lateral na Direita - Semi-Transparente) */
+/* ==========================================================
+   SIDEBAR (BARRA LATERAL)
+   ========================================================== */
 #sidebar {
     width: 240px;
     flex-shrink: 0;
@@ -228,7 +321,6 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     flex-direction: column;
     gap: 15px;
 }
-
 .sidebar-box {
     background-color: rgba(15, 22, 34, 0.85);
     backdrop-filter: blur(2px);
@@ -237,7 +329,6 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     padding: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-
 .sidebar-box h3 {
     font-size: 12px;
     text-transform: uppercase;
@@ -247,7 +338,6 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     padding-bottom: 5px;
     margin-bottom: 8px;
 }
-
 .vndb-menu { list-style: none; }
 .vndb-menu li { margin-bottom: 6px; font-size: 12.5px; }
 .vndb-menu li a { display: block; color: #a9c5df; padding: 2px 0; }
@@ -277,7 +367,6 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     margin-top: 40px;
 }
 
-/* Overlay para Mobile Menu */
 #menuOverlay {
     display: none;
     position: fixed;
@@ -287,7 +376,9 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     z-index: 1500;
 }
 
-/* Responsividade Mobile e Hamburger */
+/* ==========================================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================================== */
 @media (max-width: 900px) {
     .header-content { flex-direction: column; align-items: stretch; }
     .logo { display: flex; justify-content: space-between; align-items: center; width: 100%; }
@@ -297,7 +388,13 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 
     .container { flex-direction: column; padding: 10px; }
     #content { padding: 15px; }
+    
+    /* Ajustes específicos para celular */
     .infobox { float: none; width: 100%; margin: 0 0 15px 0; }
+    .home-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } /* 2 colunas no celular */
+    .home-card img { height: 80px; }
+    .play-links { flex-direction: column; } /* Botões de jogar ocupam a tela toda no celular */
+    .play-links a { text-align: center; justify-content: center; padding: 10px; }
 
     #sidebar {
         position: fixed;

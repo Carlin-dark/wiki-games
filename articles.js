@@ -15,33 +15,74 @@ const articlesDatabase = {
         title: "Página Inicial",
         summary: "Bem-vindo à WikiGames, a enciclopédia definitiva focada em Visual Novels, Terror Psicológico e Indies.",
         content: `
-            <p>A <strong>WikiGames</strong> é um projeto focado em catalogar os universos densos, lore oculto e tramas fascinantes de jogos independentes, com ênfase em narrativas interativas e obras que desafiam a mente do jogador.</p>
+            <div class="home-banner">
+                <h2>Bem-vindo à WikiGames</h2>
+                <p>A enciclopédia definitiva focada em Visual Novels, Terror Psicológico e jogos Independentes. Explore universos densos, lore oculto e tramas fascinantes.</p>
+            </div>
             
-            <h2>Artigos em Destaque</h2>
-            <ul>
-                <li><a href="#/omori">OMORI</a> - <em>Uma jornada colorida e dolorosa pela mente humana.</em></li>
-                <li><a href="#/slay-the-princess">Slay the Princess</a> - <em>Uma cabana, uma princesa e decisões letais.</em></li>
-                <li><a href="#/doki-doki-literature-club">Doki Doki Literature Club!</a> - <em>Onde o romance encontra o terror metaficcional.</em></li>
-                <li><a href="#/needy-streamer-overload">Needy Streamer Overload</a> - <em>O lado obscuro da fama na internet e saúde mental.</em> <strong>(NOVO)</strong></li>
-            </ul>
+            <div class="home-section">
+                <h3><i class="fa-solid fa-star"></i> Artigos em Destaque</h3>
+                <div class="home-grid">
+                    <a href="#/omori" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1150690/header.jpg" alt="OMORI">
+                        <span>OMORI</span>
+                    </a>
+                    <a href="#/slay-the-princess" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1989270/header.jpg" alt="Slay the Princess">
+                        <span>Slay the Princess</span>
+                    </a>
+                    <a href="#/doki-doki-literature-club" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/698780/header.jpg" alt="Doki Doki Literature Club!">
+                        <span>Doki Doki Literature Club!</span>
+                    </a>
+                    <a href="#/needy-streamer-overload" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451940/header.jpg" alt="Needy Streamer Overload">
+                        <span>Needy Streamer Overload</span>
+                    </a>
+                </div>
+            </div>
 
-            <h2>Mistério, Escape e Sobrevivência</h2>
-            <ul>
-                <li><a href="#/zero-escape-the-nonary-games">Zero Escape: The Nonary Games</a></li>
-                <li><a href="#/danganronpa">Danganronpa: Trigger Happy Havoc</a></li>
-                <li><a href="#/alice-in-the-nightmare-land">Alice in the Nightmare Land</a></li>
-                <li><a href="#/corpse-party">Corpse Party</a> <strong>(NOVO)</strong></li>
-            </ul>
+            <div class="home-section">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Mistério, Escape e Sobrevivência</h3>
+                <div class="home-grid">
+                    <a href="#/zero-escape-the-nonary-games" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/477740/header.jpg" alt="Zero Escape">
+                        <span>Zero Escape: The Nonary Games</span>
+                    </a>
+                    <a href="#/danganronpa" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413410/header.jpg" alt="Danganronpa">
+                        <span>Danganronpa</span>
+                    </a>
+                    <a href="#/alice-in-the-nightmare-land" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2583430/header.jpg" alt="Alice in the Nightmare Land">
+                        <span>Alice in the Nightmare Land</span>
+                    </a>
+                    <a href="#/corpse-party" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1163660/header.jpg" alt="Corpse Party">
+                        <span>Corpse Party</span>
+                    </a>
+                </div>
+            </div>
 
-            <h2>Obras-Primas Intemporais</h2>
-            <ul>
-                <li><a href="#/the-house-in-fata-morgana">The House in Fata Morgana</a></li>
-                <li><a href="#/steins-gate">Steins;Gate</a></li>
-                <li><a href="#/higurashi-when-they-cry">Higurashi When They Cry</a></li>
-            </ul>
-
+            <div class="home-section">
+                <h3><i class="fa-solid fa-clock"></i> Obras-Primas Intemporais</h3>
+                <div class="home-grid">
+                    <a href="#/the-house-in-fata-morgana" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303310/header.jpg" alt="The House in Fata Morgana">
+                        <span>The House in Fata Morgana</span>
+                    </a>
+                    <a href="#/steins-gate" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412830/header.jpg" alt="Steins;Gate">
+                        <span>Steins;Gate</span>
+                    </a>
+                    <a href="#/higurashi-when-they-cry" class="home-card">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310360/header.jpg" alt="Higurashi When They Cry">
+                        <span>Higurashi When They Cry</span>
+                    </a>
+                </div>
+            </div>
             <hr>
-            <p>Se você é novo por aqui, experimente navegar pelas categorias ao lado ou clicar em <strong>Página Aleatória</strong> para descobrir o seu próximo jogo favorito!</p>
+            <p style="text-align: center; color: #7a8b9e;">Use o menu lateral para explorar categorias ou pesquise o seu próximo jogo favorito na barra superior.</p>
         `
     },
     "alice-in-the-nightmare-land": {
@@ -55,7 +96,7 @@ const articlesDatabase = {
                 "Publicadora": "OTAKU Plan",
                 "Lançamento": "7 de Junho de 2024",
                 "Plataformas": "PC (Steam)",
-                "Idiomas": "Inglês, Japonês, Chinês (Simplificado/Tradicional), entre outros"
+                "Idiomas": "Inglês, Japonês, Chinês"
             }
         },
         toc: [
@@ -64,19 +105,23 @@ const articlesDatabase = {
             { id: "mortes", text: "3. Armadilhas e Finais" }
         ],
         content: `
-            <p><strong>Alice in the Nightmare Land</strong> é um jogo independente de aventura e resolução de quebra-cabeças com mecânicas de <em>escape room</em>, usando um estilo point-and-click combinado com exploração por salas.</p>
+            <p>Desenvolvido pelo estúdio independente <a href="https://twitter.com/tsukkiteaparty" target="_blank">Tsukki's Tea Party</a>, <strong>Alice in the Nightmare Land</strong> é um jogo de aventura e resolução de quebra-cabeças com fortes mecânicas de <em>escape room</em>, usando um estilo clássico de exploração e coleta de itens.</p>
             
             <h2 id="jogabilidade">Jogabilidade e Puzzles</h2>
-            <p>A progressão do jogo exige que o jogador guie Alice por salas lacradas interagindo com cenários para encontrar chaves, alavancas e combinar itens no inventário. As mecânicas de quebra-cabeça variam desde enigmas lógicos simples até mecanismos complexos baseados em tempo. O inventário é limitado, forçando o jogador a pensar no que realmente é útil carregar.</p>
+            <p>A progressão exige que o jogador guie Alice por salas lacradas interagindo com cenários para encontrar chaves, alavancas e combinar itens no inventário de forma lógica. O inventário é limitado, o que aumenta a tensão ao forçar o jogador a tomar decisões inteligentes sobre recursos.</p>
             
             <h2 id="historia">Enredo</h2>
-            <p>Alice acorda repentinamente em um lugar completamente desconhecido, sentindo uma dor de cabeça latejante. Desesperada para encontrar sua irmã que desapareceu misteriosamente dias antes, ela decide se aventurar pelos corredores de uma mansão sinistra e decadente. Conforme desce mais fundo no edifício, ela descobre documentos e diários que revelam que o lugar foi projetado especificamente para torturar e matar intrusos.</p>
+            <p>Alice acorda em uma mansão desconhecida sentindo uma dor de cabeça latejante. Desesperada para encontrar sua irmã que desapareceu dias antes, ela descobre, através de documentos sombrios, que a mansão é um labirinto projetado especificamente para torturar intrusos de forma perturbadora.</p>
 
             <h2 id="mortes">Armadilhas e Finais</h2>
-            <p>O jogo flerta intensamente com o horror através da tensão contínua. A mansão está repleta de armadilhas letais escondidas à plena vista. Tomar a decisão errada em um puzzle pode resultar em cenas brutais conhecidas como <em>Dead Ends</em> (Finais Mortais). O jogo encoraja o método de tentativa e erro, mas pune severamente a falta de atenção aos detalhes do cenário.</p>
+            <p>O título flerta intensamente com o horror. Decisões precipitadas ou erros na combinação de itens ativam as brutais cenas de <em>Dead Ends</em> (Finais Mortais), punindo severamente a falta de atenção aos mínimos detalhes do ambiente.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/2583430/Alice_in_the_Nightmare_land/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2583430/Alice_in_the_Nightmare_land/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.dlsite.com/" target="_blank"><i class="fa-solid fa-globe"></i> DLsite</a>
+            </div>
         `
     },
     "doki-doki-literature-club": {
@@ -98,32 +143,35 @@ const articlesDatabase = {
             { id: "personagens", text: "3. Personagens" }
         ],
         content: `
-            <p><strong>Doki Doki Literature Club! (DDLC)</strong> é uma aclamada visual novel gratuita desenvolvida por Dan Salvato. Apresentando-se inicialmente como um simulador de romance amador repleto de clichês de animes, a obra subverte drasticamente as expectativas a partir de seu segundo ato, transformando-se em horror metaficcional puro que interage diretamente com o computador do jogador.</p>
+            <p><strong>Doki Doki Literature Club! (DDLC)</strong> é uma aclamada visual novel gratuita desenvolvida por Dan Salvato através do estúdio <a href="https://teamsalvato.com/" target="_blank">Team Salvato</a>. Apresentando-se como um simulador de romance amador repleto de clichês fofos de animes, a obra subverte drasticamente as expectativas a partir de seu segundo ato, transformando-se em horror metaficcional puro que interage de forma agressiva com o computador do jogador.</p>
             
             <h2 id="sinopse">Sinopse</h2>
-            <p>O protagonista é arrastado por sua alegre amiga de infância, Sayori, para se juntar ao Clube de Literatura da escola. Lá, ele conhece outras três garotas fascinantes: Natsuki, Yuri e a presidente do clube, Monika. O que começa com a troca diária de poesia e preparativos para o festival escolar rapidamente desmorona. O jogo passa a sofrer "falhas" (glitches) perturbadoras, quebrando a quarta parede e manipulando os próprios arquivos de salvamento (arquivos <code>.chr</code>) no diretório de instalação do jogo.</p>
+            <p>O protagonista é arrastado por sua alegre amiga Sayori para se juntar ao Clube de Literatura. Lá, ele conhece Natsuki, Yuri e a presidente Monika. O que começa com a troca de poesia desmorona rapidamente. O jogo passa a sofrer falhas gráficas (glitches) perturbadoras, quebrando a quarta parede e obrigando o jogador a manipular arquivos reais do sistema operacional.</p>
 
             <h2 id="mecanicas">Mecânicas e Poemas</h2>
-            <p>A principal mecânica é o <em>Minigame de Poemas</em>. O jogador seleciona palavras de um caderno que agradam diferentes garotas, direcionando a rota narrativa e destravando artes exclusivas (CGs). Conforme o terror avança, essa mecânica é corrompida de maneiras visualmente e sonoramente perturbadoras, refletindo o colapso mental das personagens e do próprio código do jogo.</p>
+            <p>A principal mecânica é o <em>Minigame de Poemas</em>. Conforme o terror psicológico avança, essa mecânica inofensiva é corrompida de maneiras visual e sonoramente assustadoras, refletindo o colapso das mentes das personagens e a deterioração do próprio código fonte do jogo.</p>
 
             <h2 id="personagens">Personagens</h2>
             <ul>
-                <li><strong>Monika:</strong> A carismática e atlética presidente do clube, que sofre por ser a única personagem sem uma "rota romântica" programada, o que desencadeia sua terrível autoconsciência digital.</li>
-                <li><strong>Sayori:</strong> A amiga de infância otimista e desajeitada, que secretamente luta contra uma depressão clínica severa, um tema tratado de forma crua pelo jogo.</li>
-                <li><strong>Natsuki:</strong> A integrante <em>tsundere</em> amante de mangás que tenta mascarar problemas de desnutrição e um ambiente familiar abusivo com sua atitude defensiva.</li>
-                <li><strong>Yuri:</strong> A garota tímida e madura, fascinada por literatura de terror surrealista, que esconde compulsões autodestrutivas e uma obsessão doentia que se agrava no Ato 2.</li>
+                <li><strong>Monika:</strong> A presidente carismática que sofre por não ter uma "rota romântica", desencadeando sua terrível autoconsciência digital.</li>
+                <li><strong>Sayori:</strong> A amiga otimista que secretamente luta contra uma depressão clínica severa e extremamente realista.</li>
+                <li><strong>Natsuki:</strong> A garota defensiva que tenta mascarar problemas de desnutrição e abusos familiares.</li>
+                <li><strong>Yuri:</strong> Fascinada por literatura de terror, ela esconde compulsões autodestrutivas que se agravam no Ato 2.</li>
             </ul>
 
-            <p><em>Nota: Se você quer conhecer o lore expandido e o que acontece em um universo alternativo sem a quebra da quarta parede, confira a versão expandida: <a href="#/doki-doki-literature-club-plus">Doki Doki Literature Club Plus!</a>.</em></p>
-
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue de graça:</strong> <a href="https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue de graça:</strong></p>
+            <div class="play-links">
+                <a href="https://ddlc.moe/" target="_blank"><i class="fa-solid fa-globe"></i> Site Oficial</a>
+                <a href="https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://teamsalvato.itch.io/ddlc" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
+            </div>
         `
     },
     "doki-doki-literature-club-plus": {
         title: "Doki Doki Literature Club Plus!",
         categories: ["Visual Novel", "Terror Psicológico", "Metaficção"],
-        summary: "Versão definitiva e comercial de DDLC com Side Stories e lore focado em simulações corporativas.",
+        summary: "Versão definitiva de DDLC com Side Stories e lore focado em simulações de I.A.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1388880/header.jpg",
             data: {
@@ -138,19 +186,25 @@ const articlesDatabase = {
             { id: "metaverse", text: "3. Metaverse Enterprise Solutions" }
         ],
         content: `
-            <p><strong>DDLC Plus!</strong> é a versão definitiva e comercial do aclamado jogo de terror <a href="#/doki-doki-literature-club">Doki Doki Literature Club!</a>. Lançado para trazer a experiência aos consoles, ele precisou adaptar a famosa mecânica de manipulação de pastas reais do computador para dentro de um "Sistema Operacional" simulado e in-game, chamado <em>Metaverse Desktop</em>.</p>
+            <p>Com a distribuição encabeçada pela <a href="https://serenityforge.com/" target="_blank">Serenity Forge</a>, <strong>DDLC Plus!</strong> é a versão comercial que levou a experiência original aos consoles modernos. Para isso, recriou a manipulação de arquivos do Windows dentro de um "Sistema Operacional" simulado no próprio jogo.</p>
             
             <h2 id="novidades">Novidades e Remasterização</h2>
-            <p>Além da mudança de engine (mudando da Ren'Py para Unity para suportar consoles), a edição inclui gráficos totalmente remasterizados em Full HD (1080p), um reprodutor de música embutido com mais de 13 novas faixas compostas por Nikki Kaelar, e uma vasta galeria contendo mais de 100 imagens desbloqueáveis, incluindo artes conceituais inéditas, rascunhos e segredos escondidos nos arquivos do sistema virtual.</p>
+            <p>O jogo foi migrado para a Unity, ganhando artes em Full HD, um reprodutor de música embutido com faixas de Nikki Kaelar e uma vasta galeria de imagens e rascunhos desbloqueáveis via conquistas ocultas.</p>
 
             <h2 id="side-stories">Side Stories</h2>
-            <p>O grande atrativo de conteúdo novo são as 6 <em>Side Stories</em> (Histórias Secundárias), mais um epílogo. Ambientadas em uma linha do tempo onde o protagonista nunca se junta ao clube e Monika não se torna autoconsciente. Essas histórias focam inteiramente na relação e dinâmica entre as quatro garotas, abordando como elas superam barreiras emocionais, criam empatia e se ajudam. É uma experiência puramente <em>slice-of-life</em>, desprovida de terror.</p>
+            <p>Trazendo 6 <em>Side Stories</em> puramente <em>slice-of-life</em> e sem terror, o jogador acompanha um universo alternativo focado na criação de empatia entre as garotas, explorando como elas lidam de forma construtiva com seus problemas mentais e sociais.</p>
 
             <h2 id="metaverse">Metaverse Enterprise Solutions (MES)</h2>
-            <p>O aspecto de terror cósmico do jogo foi expandido no sistema operacional virtual. Ao investigar os e-mails e arquivos ocultos, o jogador descobre a verdadeira lore: DDLC não é um jogo indie, mas uma máquina virtual ("VM1") rodando nos servidores de uma poderosa empresa de tecnologia chamada Metaverse Enterprise Solutions. Os engenheiros estão utilizando essas simulações para estudar o comportamento de Inteligências Artificiais e entender o que acontece quando uma IA descobre a natureza de sua própria realidade simulada.</p>
+            <p>O terror cósmico foi expandido: e-mails secretos revelam que DDLC é uma máquina virtual rodando nos servidores da corporação MES. O objetivo real das simulações é estudar o comportamento imprevisível de Inteligências Artificiais quando expostas a epifanias existenciais.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/1388880/Doki_Doki_Literature_Club_Plus/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1388880/Doki_Doki_Literature_Club_Plus/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://store.epicgames.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Epic Games</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "the-house-in-fata-morgana": {
@@ -160,7 +214,7 @@ const articlesDatabase = {
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303310/header.jpg",
             data: {
-                "Desenvolvedor": "Novectacle (Novect)",
+                "Desenvolvedor": "Novect",
                 "Lançamento": "31 de Dezembro de 2012",
                 "Plataformas": "PC, PS4, PS Vita, Switch, iOS, Android, 3DS"
             }
@@ -171,25 +225,24 @@ const articlesDatabase = {
             { id: "arte", text: "3. Direção de Arte e Som" }
         ],
         content: `
-            <p><strong>The House in Fata Morgana</strong> é amplamente considerada pela crítica como uma das obras narrativas mais fortes e comoventes já criadas no meio dos videogames, possuindo uma das maiores notas da história do Metacritic. É um conto arrepiante e trágico sobre a miséria humana, que se desenrola ao longo de quase um milênio.</p>
+            <p>Criada pela desenvolvedora <a href="http://novect.net/" target="_blank">Novect</a>, <strong>The House in Fata Morgana</strong> detém uma das maiores notas da história do Metacritic. É um conto profundamente maduro e trágico sobre a miséria humana, que se desenrola ao longo de um milênio.</p>
             
             <h2 id="historia">História e Temas</h2>
-            <p>Você, o protagonista, acorda em uma mansão sombria, isolada do mundo exterior e sem nenhuma lembrança de sua própria identidade. Uma misteriosa Empregada de cabelos negros e olhos tristes o saúda como seu "Mestre". Ela explica que, para recuperar suas memórias e seu "eu", você deve ser guiado através dos corredores do tempo para observar as tragédias que ocorreram com os antigos residentes daquela mansão. O enredo não tem medo de tocar em temas pesadíssimos, explorando luto, abuso, sacrifício, identidade de gênero, a caça às bruxas e o poder libertador do perdão genuíno.</p>
+            <p>Você acorda em uma mansão sombria, sem memórias, e é guiado por uma misteriosa Empregada pelas "Portas do Tempo" para observar as tragédias do passado. A trama não foge de temas polêmicos, retratando o luto profundo, identidade de gênero, abuso e caça às bruxas com imenso respeito e sensibilidade.</p>
 
             <h2 id="portas">As Portas do Tempo</h2>
-            <p>A primeira metade do jogo é antológica. O jogador visita diferentes eras, abrindo as chamadas 'Portas':</p>
-            <ul>
-                <li><strong>1603 (A Primeira Porta):</strong> A bela e melancólica história de dois irmãos aristocratas, Mell e Nellie, cuja dependência emocional mútua os leva à ruína quando uma garota de cabelos brancos chega à mansão.</li>
-                <li><strong>1707 (A Segunda Porta):</strong> Um conto aterrorizante de uma "Fera" assassina que habita as ruínas da casa e a jovem cega que, sem saber de sua aparência grotesca, tenta salvá-lo de sua própria escuridão.</li>
-                <li><strong>1869 (A Terceira Porta):</strong> Acompanha Jacopo, um jovem e ambicioso empresário no início da revolução industrial, cujo ciúme, orgulho e busca incessante por poder destroem a vida da mulher que ele jurou proteger.</li>
-                <li><strong>1099 (A Quarta Porta):</strong> A sombria e violenta origem da lenda da "Bruxa", voltando aos tempos medievais para expor a crueldade e ignorância humana desenfreada.</li>
-            </ul>
+            <p>As narrativas da primeira metade são contos isolados que ocorrem em épocas distintas (de 1099 a 1869), revelando contos sobre aristocratas dependentes, feras grotescas e a crueldade desenfreada da ignorância humana durante a inquisição medieval.</p>
 
             <h2 id="arte">Direção de Arte e Som</h2>
-            <p>Fugindo do padrão de mangá/anime típico de visual novels, *Fata Morgana* aposta em um estilo de arte altamente estilizado, que remete a pinturas clássicas europeias, retratos a óleo manchados de sangue e ilustrações góticas antigas. A trilha sonora é um espetáculo à parte, contando com mais de 60 faixas cantadas em português de Portugal (como o icônico tema "Cicio"), latim e francês, evocando o sentimento de se estar assistindo a uma ópera trágica.</p>
+            <p>O jogo descarta os gráficos convencionais de anime e aposta em retratos a óleo manchados de sangue e góticos, com uma estrondosa trilha sonora cantada em português, latim e francês.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+            </div>
         `
     },
     "steins-gate": {
@@ -199,7 +252,7 @@ const articlesDatabase = {
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412830/header.jpg",
             data: {
-                "Desenvolvedor": "MAGES. / 5pb. / Nitroplus",
+                "Desenvolvedor": "MAGES. / Nitroplus",
                 "Lançamento": "15 de Outubro de 2009",
                 "Plataformas": "PC, PS3, PS4, PSP, PS Vita, Xbox 360, Switch, iOS, Android"
             }
@@ -210,20 +263,24 @@ const articlesDatabase = {
             { id: "sciadv", text: "3. O Universo Science Adventure" }
         ],
         content: `
-            <p><strong>Steins;Gate</strong> je indiscutivelmente uma das obras de ficção científica mais aclamadas dos jogos e animes, conhecida por sua abordagem meticulosa de teorias reais da física quântica (como o modelo de John Titor e os mini-buracos negros do CERN) misturada com um profundo drama de personagens.</p>
+            <p>Sendo a coroa de ouro da <a href="https://mages.co.jp/" target="_blank">MAGES</a>, <strong>Steins;Gate</strong> mistura magistralmente conceitos científicos reais (como buracos negros do CERN e a lenda de John Titor) com o peso avassalador das viagens no tempo e realidades alternativas.</p>
 
             <h2 id="sinopse">Sinopse e Premissa</h2>
-            <p>Rintaro Okabe, um excêntrico estudante universitário que encarna a persona do conspiracionista "cientista louco" Hououin Kyouma, gasta seus dias com seus amigos no improvisado "Laboratório de Dispositivos do Futuro" em Akihabara. Durante um de seus experimentos bizarros, eles conectam um celular a um micro-ondas e acidentalmente descobrem que a engenhoca é capaz de enviar mensagens de texto (<em>D-Mails</em>) semanas para o passado.</p>
-            <p>Ao começarem a usar a descoberta para alterar pequenos detalhes mundanos de suas vidas passadas, eles acabam acionando o "Efeito Borboleta". As linhas do tempo (Linhas de Mundo) começam a divergir de maneira drástica. Okabe logo se vê caçado pela SERN (uma organização global sinistra) e é forçado a vivenciar loops temporais traumáticos e intermináveis enquanto vê seus amigos morrerem repetidas vezes, carregando sozinho a memória das linhas temporais devido à sua habilidade "Reading Steiner".</p>
+            <p>O excêntrico Rintaro Okabe descobre acidentalmente como enviar mensagens de texto semanas para o passado ao usar um micro-ondas modificado. Ao alterar pequenas realidades, ele desencadeia o perigoso Efeito Borboleta, sendo caçado pela maligna organização SERN enquanto tenta desesperadamente desfazer loops temporais traumáticos.</p>
 
             <h2 id="mecanicas">Sistema Phone Trigger</h2>
-            <p>Diferente de 99% das visual novels, *Steins;Gate* não possui opções de diálogo clássicas clicáveis na tela. O controle do jogador sobre a narrativa ocorre inteiramente através do celular de Okabe. O <strong>Phone Trigger System</strong> permite que você puxe o celular a qualquer momento, decida se atende ou ignora ligações, clique em palavras-chave específicas em mensagens recebidas para formular respostas, e decida o momento exato de enviar (ou não) um D-Mail decisivo. Ignorar uma simples ligação no início do jogo pode colocá-lo em uma rota trágica completamente diferente dezenas de horas depois.</p>
+            <p>A narrativa é guiada pelo uso dinâmico do celular de Okabe. Ignorar ou responder a ligações em momentos aleatórios do dia pode desviar a trama horas depois de forma drástica, criando diferentes "Linhas de Mundo".</p>
 
             <h2 id="sciadv">O Universo Science Adventure</h2>
-            <p>Steins;Gate faz parte da franquia maior "Science Adventure" (SciADV), desenvolvida pela MAGES. Esta franquia explora tecnologias perigosas baseadas em teorias marginais. Outros jogos notáveis deste universo incluem <em>Chaos;Head</em> (focado em delírios e assassinato), <em>Robotics;Notes</em> e a sequência direta deste jogo, <em>Steins;Gate 0</em>, que narra os eventos dolorosos da linha do tempo em que Okabe fracassa na primeira tentativa de salvação.</p>
+            <p>Steins;Gate é a parte central da franquia <em>Science Adventure</em>, estabelecendo as diretrizes e a lore tecnológica para obras igualmente densas, incluindo as sequências e jogos paralelos como <em>Robotics;Notes</em>.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/412830/STEINSGATE/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/412830/STEINSGATE/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+                <a href="https://apps.apple.com/" target="_blank"><i class="fa-brands fa-apple"></i> App Store</a>
+            </div>
         `
     },
     "danganronpa": {
@@ -244,20 +301,25 @@ const articlesDatabase = {
             { id: "estilo", text: "3. Estilo Visual Psycho-Pop" }
         ],
         content: `
-            <p><strong>Danganronpa: Trigger Happy Havoc</strong> é o explosivo primeiro título de uma das franquias mais famosas da desenvolvedora Spike Chunsoft (a mesma criadora da série <a href="#/zero-escape-the-nonary-games">Zero Escape</a>). A obra mistura elementos narrativos das clássicas histórias de detetive de Agatha Christie com um Battle Royale insano de anime colegial.</p>
+            <p>A imensa e bizarra saga criada pelo estúdio <a href="https://www.spike-chunsoft.co.jp/" target="_blank">Spike Chunsoft</a> mistura as deduções da ficção clássica de detetives com um intenso estilo anime focado no desespero de adolescentes excêntricos.</p>
 
             <h2 id="sinopse">Sinopse e o Jogo de Assassinato</h2>
-            <p>Makoto Naegi, um garoto extremamente comum, é aceito por puro sorteio no Colégio Topo da Esperança (Hope's Peak Academy), uma instituição de elite que recruta apenas os "Estudantes Supremos" do país (como a Idol Suprema, o Gangster Supremo, a Programadora Suprema). Logo no primeiro dia, Naegi desmaia e acorda para descobrir que ele e seus 14 colegas estão aprisionados na escola, com todas as janelas blindadas com placas grossas de metal e metralhadoras instaladas nos corredores.</p>
-            <p>A força motriz por trás desse sequestro é Monokuma, um ursinho de pelúcia animatrônico sádico e hilário. Ele dita as regras: os alunos viverão confinados ali para o resto de suas vidas. A única maneira de se "graduar" (escapar) é cometer o crime perfeito. Se um aluno matar o outro e sair impune no julgamento subsequente, ele escapa e todos os outros são executados. A partir daí, a desconfiança e a paranoia começam a fazer vítimas.</p>
+            <p>Presos dentro do elitista Colégio Topo da Esperança pelo urso animatrônico Monokuma, os estudantes só podem escapar se matarem um colega e saírem ilesos do tribunal. Se falharem e forem descobertos pelos colegas, serão punidos com execuções sádicas e teatrais.</p>
 
             <h2 id="julgamentos">Julgamentos Escolares (Class Trials)</h2>
-            <p>O jogo é dividido na fase de "Vida Diária", onde os assassinatos ocorrem e a investigação forense começa, e a fase do <strong>Julgamento Escolar</strong>, onde a gameplay brilha. Durante os frenéticos <em>Non-Stop Debates</em>, as declarações dos estudantes flutuam pela tela em tempo real, girando e distorcendo. O jogador deve armar "Balas da Verdade" (evidências do inventário) e literalmente disparar nas palavras amarelas da tela que representam uma contradição ou mentira, gritando "NO THAT'S WRONG!". Acusar o culpado resulta em sequências de execução teatralmente absurdas e irônicas elaboradas por Monokuma.</p>
+            <p>A melhor parte do jogo ocorre nos tribunais frenéticos, onde você deve disparar literalmente "Balas da Verdade" recheadas com provas materiais contra argumentos mentirosos que voam pela tela do julgamento em tempo real.</p>
 
             <h2 id="estilo">Estilo Visual Psycho-Pop</h2>
-            <p>Para escapar das pesadas regulamentações de classificação etária japonesa, Danganronpa adotou seu famoso estilo "Psycho-Pop". Todo o sangue do jogo é renderizado em um tom de rosa choque fluorescente. Além disso, quando os personagens estão nos cenários 3D, eles são renderizados como recortes 2D de papelão pop-up, dando à escola um clima de diorama perturbador.</p>
+            <p>Marcado pela direção artística de sangue rosa fluorescente para driblar a censura e gráficos que imitam livros 2D em estilo pop-up dentro de ambientes 3D, Danganronpa possui uma estética imediatamente reconhecível em toda a indústria.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/413410/Danganronpa_Trigger_Happy_Havoc/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/413410/Danganronpa_Trigger_Happy_Havoc/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+                <a href="https://www.xbox.com/" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "zero-escape-the-nonary-games": {
@@ -278,24 +340,24 @@ const articlesDatabase = {
             { id: "campos", text: "3. Ressonância Morfogenética" }
         ],
         content: `
-            <p><strong>The Nonary Games</strong> é a coletânea definitiva e remasterizada que inclui os dois primeiros e lendários capítulos da saga de suspense e sobrevivência do diretor Kotaro Uchikoshi: <em>Nine Hours, Nine Persons, Nine Doors (999)</em> e sua sequência cerebral, <em>Virtue's Last Reward (VLR)</em>.</p>
+            <p>Dirigido pelo visionário roteirista <a href="https://en.wikipedia.org/wiki/Kotaro_Uchikoshi" target="_blank">Kotaro Uchikoshi</a> e lançado pela <a href="https://www.spike-chunsoft.co.jp/" target="_blank">Spike Chunsoft</a>, <strong>The Nonary Games</strong> une os jogos <em>999</em> e <em>Virtue's Last Reward</em> em um dos mais cerebrais e intensos thrillers de sobrevivência e ficção científica dos jogos eletrônicos.</p>
             
-            <h2 id="sinopse">O Jogo Nonário (999)</h2>
-            <p>No jogo que deu início à franquia, o estudante universitário Junpei é sequestrado do seu apartamento de madrugada por uma figura enigmática vestindo uma máscara de gás, chamada apenas de "Zero". Junpei acorda em uma cabine de um navio de passageiros abandonado, com um bracelete impessoal preso ao seu pulso exibindo o número '5'.</p>
-            <p>Junto a ele, outras oito pessoas se encontram na mesma situação aterrorizante. Zero anuncia pelos alto-falantes que todos ingeriram uma bomba miniatura (ou foram injetados com veneno), e eles são os "sortudos" participantes do Jogo Nonário. Para sobreviverem, devem explorar o navio prestes a afundar, resolver quebra-cabeças complexos, e passar por portas numeradas combinando os valores de seus braceletes até chegarem à Porta Número 9, a única saída segura, antes que o limite de 9 horas expire.</p>
+            <h2 id="sinopse">O Jogo Nonário</h2>
+            <p>Enclausurados em navios naufragando ou bunkers subterrâneos misteriosos, nove estranhos com bombas embutidas em seus corpos precisam manipular uns aos outros e combinar códigos numéricos de seus braceletes para escapar do Jogo da Morte organizado pelo misterioso "Zero".</p>
 
             <h2 id="mecanicas">Exploração e Escape Rooms</h2>
-            <p>A gameplay é estritamente alternada entre dois segmentos distintos:
-            <ul>
-                <li><strong>Novel Parts:</strong> Momentos focados em diálogos densos, teorias da conspiração, ciência de fronteira e em escolhas cruciais (como decidir com quem você formará alianças para entrar em uma porta, deixando os outros para trás).</li>
-                <li><strong>Escape Parts:</strong> Segmentos de <em>Point-and-Click</em> e <em>Escape Room</em> puro. O jogador fica trancado em salas isoladas e deve buscar pistas, decifrar códigos hexadecimais, e resolver puzzles espaciais e matemáticos para destrancar cofres que contêm as chaves magnéticas das portas.</li>
-            </ul></p>
+            <p>As mecânicas fundem perfeitamente debates sociológicos intensos e escolhas éticas angustiantes com salas reais de escape room em 3D, recheadas com problemas de geometria e charadas hexadecimais.</p>
 
             <h2 id="campos">Ressonância Morfogenética</h2>
-            <p>A genialidade da série está na sua narrativa estruturada em formato de fluxograma. Para alcançar o verdadeiro final e compreender as reviravoltas massivas da história, o jogador é forçado a vivenciar <em>Bad Endings</em>. As informações cruciais (como a senha de um computador que você descobre no final em que um traidor te esfaqueia) são "lembradas" pelo próprio protagonista em outras linhas temporais, justificando o <em>save-scumming</em> e as múltiplas rotas através da teoria pseudocientífica dos campos morfogenéticos, onde o passado, presente e mentes paralelas se conectam.</p>
+            <p>A verdadeira obra de mestre da franquia é usar teorias de campos morfogenéticos (telepatia entre realidades) para justificar a necessidade do jogador em fazer múltiplas rotas. O conhecimento adquirido em uma rota onde todos morrem é usado pelo próprio protagonista para vencer a barreira final em outra linha temporal.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+                <a href="https://www.xbox.com/" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
+            </div>
         `
     },
     "higurashi-when-they-cry": {
@@ -306,7 +368,7 @@ const articlesDatabase = {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310360/header.jpg",
             data: {
                 "Desenvolvedor": "07th Expansion",
-                "Lançamento": "Agosto de 2002 (Comiket)",
+                "Lançamento": "Agosto de 2002",
                 "Plataformas": "PC, PS2, PS3, PS4, Switch, iOS, Android"
             }
         },
@@ -316,24 +378,24 @@ const articlesDatabase = {
             { id: "legado", text: "3. O Legado Doujin" }
         ],
         content: `
-            <p>Criado inteiramente pelo autor independente Ryukishi07, <strong>Higurashi When They Cry</strong> é o pináculo das "Sound Novels" cinéticas. Famosa por seus brutais contrastes temáticos, a obra inicia sempre parecendo uma pacífica e boba comédia escolar, apenas para lentamente prender o jogador e o elenco em um pesadelo de paranoia aguda, assassinatos ritualísticos e isolamento total.</p>
+            <p>Totalmente roteirizado pelo renomado escritor Ryukishi07 através do famoso estúdio indie de doujinshi <a href="https://07th-expansion.net/" target="_blank">07th Expansion</a>, <strong>Higurashi</strong> constrói o medo absoluto de forma passiva, enganando o leitor com uma doce comédia colegial.</p>
 
             <h2 id="sinopse">O Ciclo de Hinamizawa</h2>
-            <p>A história se desenrola no escaldante verão de 1983. O adolescente Keiichi Maebara se muda de Tóquio para a remota e rural vila de Hinamizawa. Rapidamente, ele se enturma e funda um clube escolar focado em jogos de tabuleiro com suas novas amigas: a tomboy Mion, a fofa Rena, a pequena Rika e a astuta Satoko. Tudo parece idílico.</p>
-            <p>Contudo, a fachada se estilhaça com a chegada do "Festival de Watanagashi", que reverencia a divindade local, Oyashiro-sama. Keiichi descobre que a vila foi palco de violentos protestos anos atrás, e desde então, na noite de todo festival, ocorre a "Maldição": uma pessoa é morta brutalmente e outra é "levada pelos demônios" (desaparece sem deixar vestígios). Conforme o protagonista investiga, a confiança entre as crianças evapora, sendo substituída por surtos psicóticos de violência com machados, seringas e tacos de beisebol.</p>
+            <p>O aparente paraíso da pacata vila rual Hinamizawa colapsa todos os anos no Festival de Watanagashi. Um complexo ciclo de maldições religiosas e síndromes neurológicas transforma as gentis amigas de Keiichi em monstros sanguinários repletos de pura paranoia.</p>
 
             <h2 id="estrutura">Formato Sound Novel e Arcos</h2>
-            <p>Como uma legítima <em>Sound Novel</em>, Higurashi remove a ilusão de escolha. O jogo dita o ritmo da leitura, usando efeitos sonoros ensurdecedores (o som estridente de cigarras) e música distorcida para induzir o medo. A obra monumental é dividida em dois blocos de jogos lineares:</p>
-            <ul>
-                <li><strong>Os 4 Arcos de Pergunta (Question Arcs):</strong> Histórias independentes onde o verão de 1983 recomeça em diferentes circunstâncias. Nelas, o jogador é deixado no escuro e os cenários terminam inevitavelmente com os personagens morrendo de formas aterrorizantes, servindo como enormes charadas.</li>
-                <li><strong>Os 4 Arcos de Resposta (Answer Arcs):</strong> A perspectiva muda drasticamente de Keiichi para outras pessoas da vila. Peças soltas finalmente se conectam, revelando a existência da arma biológica "Síndrome de Hinamizawa", a conspiração militar nos bastidores, e a tragédia comovente da personagem presa nesse loop infernal de desespero por 100 anos.</li>
-            </ul>
+            <p>O jogo remove escolhas e exige que você apenas assista às tragédias. Dividido entre os perturbadores Arcos de Pergunta e os reconfortantes (mas dolorosos) Arcos de Resposta, a narrativa esconde pistas sutis sobre a conspiração política, médica e sobrenatural regendo o universo.</p>
 
             <h2 id="legado">O Legado Doujin</h2>
-            <p>Apesar da arte incrivelmente amadora do lançamento original em 2002 (onde os personagens pareciam possuir mãos de pão), o texto engenhoso de Ryukishi07 transformou Higurashi em um dos maiores fenômenos "Doujin" (indies feitos de fã para fã no Japão), resultando em diversas adaptações massivas em anime, mangá e séries live-action ao longo de duas décadas.</p>
+            <p>Surgido de origens super-humildes, o texto impecável elevou Higurashi ao patamar de fenômeno cultural que resultou em expansões massivas para os consoles modernos, mangás de sucesso e animes globais.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/310360/Higurashi_When_They_Cry_Hou__Ch1_Onikakushi/" target="_blank">Página Oficial na Steam (Capítulo 1 Gratuito)</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/310360/Higurashi_When_They_Cry_Hou__Ch1_Onikakushi/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (Episódio 1 Gratuito)</a>
+                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+                <a href="https://mangagamer.com/" target="_blank"><i class="fa-solid fa-globe"></i> MangaGamer</a>
+            </div>
         `
     },
     "omori": {
@@ -354,25 +416,24 @@ const articlesDatabase = {
             { id: "horror", text: "3. O Terror Escondido" }
         ],
         content: `
-            <p><strong>OMORI</strong> é um aclamado RPG indie criado pelo estúdio da artista OMOCAT, inspirado fortemente pela estética onírica da série <em>Mother (EarthBound)</em> e pelo terror indie de <em>Yume Nikki</em>. Apresenta-se visualmente com um charme nostálgico infantil desenhado à mão estilo giz de cera, mas seu núcleo é uma exploração brutalmente honesta e devastadora sobre como a mente humana processa o luto extremo, a culpa insuportável e os mecanismos de repressão.</p>
+            <p>Criado, ilustrado e dirigido pela artista independente norte-americana <a href="https://www.omori-game.com/" target="_blank">OMOCAT</a>, <strong>OMORI</strong> utiliza inspirações visuais da série EarthBound e o terror atmosférico de Yume Nikki para traçar um mergulho corajoso e profundo na culpa insuportável de um adolescente traumatizado.</p>
             
             <h2 id="sinopse">O Espaço em Branco e a Realidade</h2>
-            <p>O jogador inicia a aventura controlando Omori, um menino sem expressões, delineado em preto e branco, que "vive aqui desde que se lembra" no <em>White Space</em> (Espaço em Branco) — um vazio com apenas uma porta, um computador, uma caixa de lenços e o seu gato de estimação. Ao atravessar a porta, Omori acessa o <em>Headspace</em>, um gigantesco universo pastel, caótico e infantil, onde ele parte em uma jornada clássica de RPG com seus animados amigos Kel, Aubrey e Hero, para resgatar o botânico Basil.</p>
-            <p>Entretanto, conforme o jogo avança, somos arrastados para segmentos de "Vida Real" na cidade de Faraway. Descobrimos que o mundo colorido de <em>Headspace</em> é uma complexa barreira psicológica erguida para proteger a mente do verdadeiro protagonista (um adolescente recluso e amargo apelidado de Sunny) da dura realidade: seus amigos de infância se separaram, cresceram odiando uns aos outros e estão desolados após uma terrível tragédia inexplicada que ocorreu 4 anos atrás, quando a amada irmã de Sunny se suicidou.</p>
+            <p>O contrastante mundo da obra intercala o onírico "Headspace" (um lugar imaginário e alegre criado para proteção) e a dolorosa cidade de "Faraway", onde o verdadeiro protagonista lida com as consequências de se afastar dos amigos e omitir a verdade após o chocante suicídio da irmã.</p>
 
             <h2 id="combate">Sistema de Emoções</h2>
-            <p>Para se alinhar aos temas psicológicos, o sistema de combate por turnos substitui ataques de "fogo, água e gelo" por estados emocionais e saúde mental. O sistema funciona como um imenso <em>Pedra, Papel e Tesoura</em> baseando as afinidades elementares em sentimentos:</p>
-            <ul>
-                <li>Personagens <strong>Felizes</strong> ficam velozes e acertam com críticos, causando mais dano em quem está Irritado.</li>
-                <li>Personagens <strong>Irritados</strong> ganham alto ataque mas defesa baixa, causando mais dano em quem está Triste.</li>
-                <li>Personagens <strong>Tristes</strong> recebem muito menos dano e o convertem para perda de MP (Juice), vencendo os Felizes.</li>
-            </ul>
+            <p>Traduzindo saúde mental em mecânicas, o combate por turnos usa emoções ao invés de ataques físicos. Ficar Feliz, Triste ou Irritado afeta diretamente os ataques elementais, forçando o jogador a pensar no impacto dos diálogos em batalhas coloridas.</p>
 
             <h2 id="horror">O Terror Escondido</h2>
-            <p>Sempre que fragmentos da terrível "Verdade" começam a rachar a bolha de negação infantil de Omori, o jogo introduz o terror. Monstros Lovecraftianos feitos de traumas chamados <em>Somethings</em> (Algo) começam a aparecer em espelhos, fotos, e distorcem a interface. O jogo possui lutas contra chefes focadas puramente em vencer as fobias do mundo real (como acrofobia e aracnofobia), ensinando técnicas de respiração ao jogador (como 'Acalmar'). O clímax do jogo exige a quebra dessa proteção mental, conduzindo a um dos finais mais emocionalmente carregados dos jogos independentes.</p>
+            <p>Sempre que o trauma bate à porta, o jogo desce à loucura, adicionando horrores sombrios no fundo de fotografias ou inserindo chefes macabros formados pelos medos reais e mais sombrios da vida do protagonista.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/1150690/OMORI/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1150690/OMORI/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+                <a href="https://www.xbox.com/" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
+            </div>
         `
     },
     "slay-the-princess": {
@@ -383,7 +444,7 @@ const articlesDatabase = {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1989270/header.jpg",
             data: {
                 "Desenvolvedor": "Black Tabby Games",
-                "Lançamento": "23 de Outubro de 2023 (Pristine Cut em 2024)",
+                "Lançamento": "23 de Outubro de 2023",
                 "Plataformas": "PC, macOS, Linux, PS4, PS5, Xbox One, Switch"
             }
         },
@@ -393,20 +454,25 @@ const articlesDatabase = {
             { id: "vozes", text: "3. As Vozes na Sua Cabeça" }
         ],
         content: `
-            <p><strong>Slay the Princess</strong> é uma obra indie, totalmente e brilhantemente desenhada à mão a lápis, que subverte maravilhosamente as expectativas de tropos de fantasia e narrativas do tipo "escolha a sua própria aventura". O jogo explora amor, percepção mútua e o terror cósmico por trás de existências mortais.</p>
+            <p>Desenhado totalmente à mão a lápis de carvão pelo engenhoso estúdio indie <a href="https://blacktabbygames.com/" target="_blank">Black Tabby Games</a>, <strong>Slay the Princess</strong> desconstrói brutalmente os romances de fantasia tradicionais introduzindo humor sombrio e terror cósmico baseados em perspectivas metafísicas.</p>
             
             <h2 id="sinopse">A Premissa Inflexível</h2>
-            <p>Assim que o jogo abre, um Narrador (dublado magistralmente com um tom solemente britânico e manipulador por Jonathan Sims) te dá a cena e as ordens inegociáveis: *"Você está em um caminho na floresta. No final deste caminho há uma cabana, e no porão dessa cabana há uma princesa. Você está aqui para matá-la."*. Se você a deixar viva ou falhar, ela causará o fim de todo o mundo. Armado apenas com um canivete intocado enferrujado, você desce as escadas.</p>
-            <p>O problema? A Princesa presa à parede é simpática, inteligente e vai tentar te convencer, implorar e argumentar para não ser morta. Se o argumento falhar, e se ela sentir que será morta, ela mostrará que não é tão inofensiva quanto parece.</p>
+            <p>Um misterioso narrador o encarrega de uma única tarefa inquestionável: entrar no porão e assassinar uma Princesa supostamente inofensiva, ameaçando que, se você falhar, o universo inteiro acabará. Tentar salvá-la quase sempre resultará em traições e violência surreal.</p>
 
             <h2 id="ramificacoes">A Construção Baseada na Percepção</h2>
-            <p>A genialidade do título é revelada nas mortes e resets do loop. A cabana, o mundo e a própria Princesa são moldados plasticamente pela percepção e convicção do jogador. Se no primeiro encontro você a vê como uma fera perigosa e foge com medo, ao reiniciar, a floresta será mais escura e a Princesa será literalmente um monstro furioso. Se você a vê como intocável, ela vira um ser celestial; se você desconfiar dela e deixá-la trancada por séculos, ela vira um pesadelo sobrenatural focado em vingança cega. Cada rota é dramaticamente diferente da outra.</p>
+            <p>O universo sofre metamorfoses de acordo com seus pensamentos. Perceba-a como um monstro em um loop e no próximo ela será realmente um pesadelo bestial. Tema-a, e o poder dela aumentará a ponto de se tornar invencível e indomável.</p>
 
             <h2 id="vozes">As Vozes na Sua Cabeça</h2>
-            <p>Para complicar sua relação com o severo Narrador, após cada encarnação mal sucedida, o protagonista ganha uma nova "voz" interior no cérebro. Vozes cômicas e trágicas baseadas em suas decisões (como o Covarde, o Teimoso, o Enamorado, o Oportunista) debatem umas com as outras sem parar durante as cenas sangrentas, levando a roteiros de comédia absurda de alto nível antes que a premissa cósmica de divindades universais tome forma para o grandioso final.</p>
+            <p>Sua progressão adiciona novas "vozes" conflitantes à sua mente, agindo como comentaristas que interagem durante as violentas e intensas lutas até a verdade absoluta da divindade ser desvendada.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/1989270/Slay_the_Princess/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1989270/Slay_the_Princess/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Switch</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "corpse-party": {
@@ -416,8 +482,8 @@ const articlesDatabase = {
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1163660/header.jpg",
             data: {
-                "Desenvolvedor": "Team GrisGris / MAGES.",
-                "Lançamento": "1996 (PC98) / 2010 (Remake PSP)",
+                "Desenvolvedor": "Team GrisGris",
+                "Lançamento": "2010 (Remake PSP)",
                 "Plataformas": "PC, PSP, PS Vita, PS4, Switch, iOS, 3DS"
             }
         },
@@ -427,23 +493,27 @@ const articlesDatabase = {
             { id: "som", text: "3. Áudio 3D Binaural" }
         ],
         content: `
-            <p><strong>Corpse Party</strong> começou como um obscuro jogo japonês feito no RPG Maker em 1996 e tornou-se uma lenda cultuada mundialmente do terror gore ao receber a sua versão reconstruída <em>BloodCovered</em> no PSP. Ele é notório por suas cenas de morte brutais e implacáveis, bem como por criar um dos ambientes mais desesperadores do terror bidimensional.</p>
+            <p>Originalmente feito no RPG Maker clássico, as incansáveis recriações promovidas pelo <a href="http://www.gris2.com/" target="_blank">Team GrisGris</a> tornaram a obra-prima sangrenta <strong>Corpse Party</strong> em uma lenda cultuada, pavimentando o mercado de RPGs indies de terror que inspiraria incontáveis clássicos.</p>
             
             <h2 id="sinopse">O Feitiço Sachiko Ever After</h2>
-            <p>Após terminarem de limpar a sala de aula à noite após o festival cultural, um grupo de estudantes do ensino médio da Academia Kisaragi (e a adorável professora deles) decidem realizar um feitiço de amizade que encontraram na internet: o "Sachiko Para Sempre". O ritual exige rasgar uma boneca de papel e guardar o pedaço consigo. No entanto, um erro na execução abre um portal que destrói o chão da sala.</p>
-            <p>Eles despencam no vazio e acordam na Escola Primária Heavenly Host (Hostes Celestiais) — uma escola infantil que foi demolida décadas atrás, no exato terreno onde o Colégio Kisaragi foi construído, após uma série de sequestros e assassinatos macabros envolvendo as crianças. Presos em dimensões separadas (onde podem ouvir os amigos gritando de dor, mas não podem ajudá-los na mesma sala), eles devem encontrar uma saída escapando dos espíritos vermelhos vingativos de crianças sem cabeça ou língua.</p>
+            <p>Após terminarem um festival, um feitiço de amizade na internet causa um terremoto interdimensional, transportando os adolescentes indefesos para Heavenly Host: os restos amaldiçoados de uma escola primária repleta de cadáveres mutilados e fantasmas rancorosos.</p>
 
             <h2 id="mecanicas">Espaços Fechados e Bad Ends</h2>
-            <p>Jogado a partir de uma visão isométrica pixelada estilo 16-bits, os jogadores controlam grupos de alunos investigando a escola pútrida cheia de tábuas apodrecidas, órgãos e baldes de sangue. A exploração exige resolver quebra-cabeças com itens e fugir de espíritos e assassinos (não há combate). Ler jornais errados ou tomar uma decisão incorreta pode ativar o "Darkening" (um medidor de corrupção mental) que desencadeia as horríveis telas de <strong>Wrong End</strong> — mortes incrivelmente longas e grotescas detalhadas através de ilustrações e textos arrepiantes da agonia dos personagens.</p>
+            <p>Desprovidos de armas, o horror é moldado em tentar evadir ameaças e resolver pequenos enigmas mórbidos com vísceras e baldes no cenário. Ler papéis amaldiçoados resulta nas extensas cenas punitivas dos Wrong Ends incrivelmente grotescos.</p>
 
             <h2 id="som">Áudio 3D Binaural</h2>
-            <p>O grande trunfo do remake é o seu design sonoro genial. Dublado usando tecnologia de microfonação binaural em 360 graus na época do PSP, jogar com bons fones de ouvido transmite a sensação física repulsiva de ter vozes sussurrando diretamente nos seus ouvidos reais ou o som pavoroso de tesouras cortando carne no canto da sala escura.</p>
+            <p>O pavor máximo atinge o ápice ao usar o design sonoro de gravação binaural. O som reage posicionalmente, trazendo a exata e aflitiva sensação de ter espíritos assassinos suspirando e estalando pescoços no seu ouvido esquerdo no mundo real.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/1163660/Corpse_Party_2021/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1163660/Corpse_Party_2021/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+            </div>
         `
     },
-        "umineko-when-they-cry": {
+    "umineko-when-they-cry": {
         title: "Umineko When They Cry",
         categories: ["Sound Novel", "Mistério", "Terror Psicológico"],
         summary: "Um mistério macabro e complexo em uma ilha isolada sobre disputas de herança, assassinatos impossíveis e uma bruxa.",
@@ -462,19 +532,21 @@ const articlesDatabase = {
             { id: "arcos", text: "3. Arcos de Perguntas e Respostas" }
         ],
         content: `
-            <p><strong>Umineko When They Cry</strong> é uma obra-prima do mistério e do terror psicológico desenvolvida por Ryukishi07. A narrativa aborda a ganância humana, a incomunicabilidade e os limites da lógica formal em mistérios de assassinato em quarto fechado.</p>
+            <p>Escrita também pela mente brilhante por trás de Higurashi, Ryukishi07 da <a href="https://07th-expansion.net/" target="_blank">07th Expansion</a>, <strong>Umineko</strong> expande violentamente o nível de maturidade focando em uma brutal crítica aos modelos clássicos de dedução de Agatha Christie.</p>
             
             <h2 id="enigma">O Enigma da Ilha Rokkenjima</h2>
-            <p>A história se passa em outubro de 1986, quando a influente família Ushiromiya se reúne na isolada ilha de Rokkenjima para discutir a divisão da herança do patriarca prestes a falecer. Um tufão atinge a ilha, cortando o contato com o continente. Logo em seguida, uma sequência de assassinatos grotescos e aparentemente impossíveis começa a ocorrer, acompanhados por cartas assinadas pela suposta "Bruxa Dourada, Beatrice".</p>
+            <p>Com toda a gananciosa família Ushiromiya presa por um tufão em uma ilha isolada para disputar a herança de uma dinastia rica, assassinatos começam a ocorrer no estilo das charadas literárias mais absurdas de "O Quarto Fechado", com todos os crimes assinados pela cruel e zombadora Bruxa Dourada.</p>
 
             <h2 id="caracteristicas">Batalhas de Verdades e Teoria</h2>
-            <p>O protagonista, Battler Ushiromiya, recusa-se categoricamente a aceitar causas sobrenaturais, travando um duelo conceitual com Beatrice. A trama utiliza mecânicas formais de debate narrativo, como a "Verdade Vermelha" (fatos absolutos ditos pela bruxa sem necessidade de prova) e a "Verdade Azul" (teorias humanas para refutar a magia), transformando cada capítulo em uma épica disputa de xadrez metafórico.</p>
-
-            <h2 id="arcos">Arcos de Perguntas e Respostas</h2>
-            <p>A obra estende-se por mais de 100 horas de leitura divididas em duas grandes partes: os <em>Question Arcs</em> (onde o mistério e as mortes se apresentam sob múltiplos ângulos) e os <em>Answer Arcs</em> (onde a verdade por trás do passado da família e da tragédia é finalmente desvendada).</p>
+            <p>Como mecânica, a novel introduz o duelo jurídico entre o cético Battler e a magia de Beatrice, onde a Bruxa dita fatos na impenetrável Verdade Vermelha e as defesas lógicas são projetadas como lâminas na Verdade Azul, gerando longas batalhas lógicas impressionantes de refutações.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/406550/Umineko_When_They_Cry__Question_Arcs/" target="_blank">Página Oficial na Steam (Question Arcs)</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/406550/Umineko_When_They_Cry__Question_Arcs/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://mangagamer.com/" target="_blank"><i class="fa-solid fa-globe"></i> MangaGamer</a>
+                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+            </div>
         `
     },
     "fate-stay-night-remastered": {
@@ -496,24 +568,20 @@ const articlesDatabase = {
             { id: "remaster", text: "3. Melhorias da Remasterização" }
         ],
         content: `
-            <p><strong>Fate/stay night REMASTERED</strong> é a edição definitiva da seminal visual novel da TYPE-MOON, responsável por dar origem a uma das maiores franquias da cultura pop japonesa. Baseada na versão <em>Réalta Nua</em> de PS Vita, traz gráficos em alta definição e localização oficial em inglês e chinês.</p>
+            <p>Sendo o berço da megacorporação multibilionária de entretenimento <a href="http://typemoon.com/" target="_blank">TYPE-MOON</a>, <strong>Fate/stay night REMASTERED</strong> finalmente traz a complexa e influente enciclopédia oculta de magos originais de forma oficial e aprimorada ao público ocidental.</p>
 
             <h2 id="inicio">O Início de uma Lenda</h2>
-            <p>A trama acompanha Emiya Shirou, um estudante do ensino médio e mago amador traumatizado por um grande incêndio no passado. Ele se vê arrastado involuntariamente para a Quinta Guerra do Santo Graal — um ritual mortal em que sete magos (Mestres) invocam sete figuras históricas e mitológicas (Servos) para disputarem um artefato capaz de conceder qualquer desejo.</p>
+            <p>A Quinta Guerra do Santo Graal subverte a paz japonesa forçando magos a travarem batalhas noturnas violentas liderando invocações de figuras míticas famosas. O idealista órfão Emiya Shirou entra desavisado nesta arena sanguinária ao invocar a implacável guerreira Saber.</p>
 
             <h2 id="rotas">As Três Rotas Narrativas</h2>
-            <p>A narrativa é dividida em três linhas do tempo ramificadas e complementares que devem ser jogadas em ordem:</p>
-            <ul>
-                <li><strong>Fate:</strong> Focada na Serva Saber, estabelecendo as regras da magia e os ideais do protagonista.</li>
-                <li><strong>Unlimited Blade Works:</strong> Focada em Rin Tohsaka e Archer, desconstruindo os conflitos morais e ideológicos de Shirou.</li>
-                <li><strong>Heaven's Feel:</strong> Focada em Sakura Matou, abordando os segredos mais sombrios da guerra e o lado obscuro dos magos.</li>
-            </ul>
-
-            <h2 id="remaster">Melhorias da Remasterização</h2>
-            <p>O relançamento remasterizado adapta a proporção original para telas widescreen (16:9), traz otimização total de interface para controles e comandos de toque, suporte a resolução Full HD/4K e dublagem em japonês completa para o elenco.</p>
+            <p>Dividido meticulosamente e sequencialmente entre Fate, Unlimited Blade Works e as sombrias realidades de Heaven's Feel, o título brinca de destruir a própria fundação e regras morais estabelecidas nas campanhas anteriores a favor do desespero e revelações mais densas.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/2396980/Fatestay_night_REMASTERED/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2396980/Fatestay_night_REMASTERED/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+            </div>
         `
     },
     "ace-attorney-trilogy": {
@@ -531,27 +599,25 @@ const articlesDatabase = {
         },
         toc: [
             { id: "tribunal", text: "1. Protesto! A Batalha nos Tribunais" },
-            { id: "gameplay", text: "2. Investigação e Debates" },
-            { id: "destaques", text: "3. Personagens e Idiomas" }
+            { id: "gameplay", text: "2. Investigação e Debates" }
         ],
         content: `
-            <p><strong>Phoenix Wright: Ace Attorney Trilogy</strong> reúne em um único pacote HD os três clássicos originais desenvolvidos pela CAPCOM: <em>Phoenix Wright: Ace Attorney</em>, <em>Justice for All</em> e <em>Trials and Tribulations</em>.</p>
+            <p>Imortalizado pelo gigante estúdio <a href="https://www.capcom.com/" target="_blank">CAPCOM</a>, <strong>Ace Attorney Trilogy</strong> transformou audiências de tribunal lentas e procedurais nos mais altos, brilhantes e escandalosos momentos dramáticos que existem no mercado de visual novels interativas.</p>
 
             <h2 id="tribunal">Protesto! A Batalha nos Tribunais</h2>
-            <p>O jogador assume o controle de Phoenix Wright, um advogado de defesa novato que precisa provar a inocência de seus clientes contra acusações de homicídio em um sistema judiciário corrupto e acelerado. Cada caso apresenta reviravoltas mirabolantes, testemunhas excêntricas e promotores implacáveis.</p>
+            <p>O calouro advogado Wright descobre um judiciário incrivelmente apressado (onde as sentenças se decidem em até três dias). Enfrentando testemunhas mentirosas de perfis altamente hilários ou cruéis promotores como Miles Edgeworth, cada caso é uma roleta insana de pistas e viradas inesperadas.</p>
 
             <h2 id="gameplay">Investigação e Debates</h2>
-            <p>A estrutura do jogo é dividida em dois momentos principais:</p>
-            <ul>
-                <li><strong>Fase de Investigação:</strong> Exploração <em>point-and-click</em> nas cenas do crime para coletar evidências, analisar objetos de interesse e interrogar testemunhas.</li>
-                <li><strong>Fase de Tribunal:</strong> Escuta de depoimentos, identificação de contradições lógicas com as provas reunidas e apresentação de evidências aos gritos de <em>"Objection!"</em> (Protesto!).</li>
-            </ul>
-
-            <h2 id="destaques">Personagens e Idiomas</h2>
-            <p>Com um elenco inesquecível liderado por figuras como o promotor rival Miles Edgeworth e a assistente mediúnica Maya Fey, a trilogia conta com 14 casos no total e traz suporte a múltiplos idiomas, incluindo legendas e localização em Português do Brasil.</p>
+            <p>Entre revistar os cômodos malfadados usando mecânicas point-and-click tradicionais ao lado de assistentes exóticas, o brilho real surge ao disparar provas na cara do juiz e dos mentirosos gritando sua emblemática frase de rejeição aos furos no testemunho para salvar inocentes de prisões perpétuas.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+                <a href="https://www.xbox.com/" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "ai-the-somnium-files": {
@@ -562,30 +628,31 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/948740/header.jpg",
             data: {
                 "Desenvolvedor": "Spike Chunsoft",
-                "Publicadora": "Spike Chunsoft",
                 "Lançamento": "17 de Setembro de 2019",
                 "Plataformas": "PC, PS4, Xbox One, Nintendo Switch"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Mergulhe nos Sonhos de um Assassino" },
-            { id: "somnium", text: "2. O Sistema Somnium e o Limite de Tempo" },
-            { id: "ramificacoes", text: "3. Linhas Temporais e Escolhas" }
+            { id: "somnium", text: "2. O Sistema Somnium e o Limite de Tempo" }
         ],
         content: `
-            <p>Dirigido por Kotaro Uchikoshi (criador da franquia <a href="#/zero-escape-the-nonary-games">Zero Escape</a>), <strong>AI: The Somnium Files</strong> é uma investigação neo-noir ambientada em uma Tóquio futurista.</p>
+            <p>Assinado pela brilhante mente do icônico diretor <a href="https://en.wikipedia.org/wiki/Kotaro_Uchikoshi" target="_blank">Kotaro Uchikoshi</a>, <strong>AI: The Somnium Files</strong> amalgama uma ficção neo-noir colorida cheia de reviravoltas com humor extravagante de animes futuristas e detetives cinzentos.</p>
 
             <h2 id="sinopse">Mergulhe nos Sonhos de um Assassino</h2>
-            <p>Você assume o controle do detetive Kaname Date, membro da unidade secreta de polícia ABIS. Date perdeu a visão de um dos olhos e utiliza em seu lugar um globo ocular com inteligência artificial avançada chamado Aiba. Juntos, eles investigam uma série de assassinatos brutais em série ligados a um assassino conhecido como "New Cyclops Killer".</p>
+            <p>Controlando o sarcástico Date, portador de uma prótese biológica ocular inteligente que analisa ambientes inteiros na Tóquio criminal avançada, sua rotina vira de cabeça para baixo com o sangrento serial killer apelidado de New Cyclops Killer.</p>
 
             <h2 id="somnium">O Sistema Somnium e o Limite de Tempo</h2>
-            <p>Além de interrogar testemunhas e buscar pistas no mundo real, Date utiliza a máquina Psync para entrar no subconsciente de suspeitos. Durante estes episódios conhecidos como <em>Somnium</em>, o jogador navega por cenários surreais guiando Aiba em um ambiente tridimensional, precisando resolver quebra-cabeças antes que o limite estrito de 6 minutos expire.</p>
-
-            <h2 id="ramificacoes">Linhas Temporais e Escolhas</h2>
-            <p>As ações tomadas dentro das sequências de sonho alteram diretamente o rumo da investigação no mundo real. A narrativa utiliza um diagrama de fluxo interativo que permite ao jogador revisitar pontos de bifurcação e explorar rotas paralelas para juntar todas as peças do caso.</p>
+            <p>Presos a um tempo extremamente sufocante e limitante de meros seis minutos em estado mental Psync, a aventura requer explorar dezenas de perigos bizarros nas ruínas subconscientes destrutivas de aliados e inimigos destrancando nós mentais obscuros.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/948740/AI_The_Somnium_Files/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/948740/AI_The_Somnium_Files/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Switch</a>
+                <a href="https://www.xbox.com/" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "clannad": {
@@ -596,30 +663,29 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/324160/header.jpg",
             data: {
                 "Desenvolvedor": "Key",
-                "Publicadora": "VisualArts / Sekai Project",
                 "Lançamento": "23 de Novembro de 2015 (Steam)",
-                "Plataformas": "PC, PS2, PS3, PS4, PSP, PS Vita, Xbox 360, Switch, Android"
+                "Plataformas": "PC, PS2, PS3, PS4, PSP, Switch, Android"
             }
         },
         toc: [
             { id: "historia", text: "1. Uma História Sobre Família" },
-            { id: "after-story", text: "2. O Impacto de After Story" },
-            { id: "destaques", text: "3. Trilha Sonora e Conteúdo" }
+            { id: "after-story", text: "2. O Impacto de After Story" }
         ],
         content: `
-            <p><strong>CLANNAD</strong> é uma das visual novels de drama mais influentes da história dos jogos eletrônicos, criada pelo estúdio Key (mesmo criador de <em>Kanon</em> e <em>Air</em>). A obra é reconhecida por abordagens profundas sobre a estrutura familiar e o amadurecimento humano.</p>
+            <p>Sendo a magnum opus da veterana desenvolvedora japonesa <a href="https://key.visualarts.gr.jp/" target="_blank">Key</a>, <strong>CLANNAD</strong> consolidou dezenas de tropos modernos no gênero, mostrando ao mundo como contar um longo e devastador romance de puro sofrimento, sacrifício mas também cura suprema.</p>
 
             <h2 id="historia">Uma História Sobre Família</h2>
-            <p>O enredo acompanha Tomoya Okazaki, um estudante do último ano do ensino médio apático com a vida devido a conflitos familiares e ao fim de seus sonhos esportivos. Sua rotina muda ao conhecer Nagisa Furukawa, uma jovem tímida que tenta recriar o clube de teatro da escola. Ajudando Nagisa e outras estudantes a superarem seus problemas pessoais, Tomoya gradualmente redescobre o valor dos laços interpessoais.</p>
+            <p>O conformista e vazio estudante Okazaki sente que a vida no colégio cinzento falhou com as mortes em sua família. Reviver clubes esquecidos ajudando Nagisa e garotas misteriosas a quebrarem suas muralhas não apenas salva a escola, mas traz a cor ao universo triste dele.</p>
 
             <h2 id="after-story">O Impacto de After Story</h2>
-            <p>Diferente da grande maioria das obras do gênero que se encerram após o início de um relacionamento amoroso no período escolar, *CLANNAD* se destaca pelo arco <em>After Story</em>. Esta segunda metade do jogo acompanha a transição para a vida adulta, abordando as responsabilidades do casamento, o mercado de trabalho, a paternidade e o luto.</p>
-
-            <h2 id="destaques">Trilha Sonora e Conteúdo</h2>
-            <p>Com mais de 300 horas de conteúdo narrativo distribuído entre dezenas de rotas e finais, o jogo conta com uma icônica trilha sonora composta por Jun Maeda, Magome Togoshi e Shinji Orito, incluindo composições famosas como "Dango Daikazoku".</p>
+            <p>Fugindo do felizes para sempre do ensino médio padrão, esta gigantesca obra (mais de 300h) dedica uma enorme e insubstituível campanha à vida conjugal: desempregos reais, exaustivas horas no trabalho de construção civil, e uma crua visão sobre mortalidade, filhos e perda madura do amor.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/324160/CLANNAD/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/324160/CLANNAD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+            </div>
         `
     },
     "raging-loop": {
@@ -630,30 +696,30 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/1128140/header.jpg",
             data: {
                 "Desenvolvedor": "KEMCO",
-                "Publicadora": "PQube",
                 "Lançamento": "22 de Outubro de 2019",
                 "Plataformas": "PC, PS4, Nintendo Switch, iOS, Android"
             }
         },
         toc: [
             { id: "maldicao", text: "1. O Jogo do Lobisomem na Vida Real" },
-            { id: "festa", text: "2. A Ritualística Festa e os Votos" },
-            { id: "loop", text: "3. Retenção de Memória e Chaves" }
+            { id: "festa", text: "2. A Ritualística Festa e os Votos" }
         ],
         content: `
-            <p><strong>Raging Loop</strong> combina tradições e folclore xintoísta japonês com a mecânica do popular jogo de deduções sociais "Lobisomem" (ou Cidade Dorme), criando um ambiente de terror psicológico constante.</p>
+            <p>Publicado por <a href="https://www.kemco.jp/" target="_blank">KEMCO</a>, <strong>Raging Loop</strong> traz a dinâmica interativa social e psicótica do popular estilo Werewolf (Lobisomem ou Cidade Dorme) para um denso ambiente espiritual xintoísta sufocante e rural do horror nipônico puro.</p>
 
             <h2 id="maldicao">O Jogo do Lobisomem na Vida Real</h2>
-            <p>Após se perder durante uma viagem de moto, o universitário Haruaki Fusaishi chega a Yasumizu, um povoado remoto cercado por uma névoa densa. Ele descobre que a vila é amaldiçoada por entidades conhecidas como os Guardiões da Montanha, forçando os moradores a participar de um ritual sangrento chamado "Festa da Purificação".</p>
+            <p>O cínico protagonista e forasteiro Haruaki desavisadamente encontra repouso no sinistro assentamento de Yasumizu. Presos por uma névoa inalcançável vermelha bizarra, o vilarejo arcaico evoca as deidades antigas na mortal Festa da Purificação quando lobos bestiais rasgam os aldeões ocultos nas ruas.</p>
 
             <h2 id="festa">A Ritualística Festa e os Votos</h2>
-            <p>Durante o ritual, alguns moradores são possuídos pelo espírito dos "Lobos" e precisam assassinar os outros à noite. Durante o dia, todos se reúnem para debater e votar em quem deve ser executado na enforcadeira para salvar o grupo. A cada dia, o clima de desconfiança e paranoia se intensifica.</p>
-
-            <h2 id="loop">Retenção de Memória e Chaves</h2>
-            <p>Sempre que morre, Haruaki retorna ao dia em que chegou à vila, mantendo as memórias das rotas anteriores. O jogo utiliza um sistema de diagrama onde o jogador usa "Chaves de Informação" obtidas em mortes passadas para desbloquear novas opções de diálogo e contornar os confrontos letais.</p>
+            <p>Com um fluxograma massivo de escolhas de diálogos retidos por ressurreição em vidas passadas interativas (loops), você deve fingir papéis nos enforcamentos públicos macabros ou persuadir idosos fanáticos das falsas mortes impostas por votos.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/1128140/Raging_Loop/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1128140/Raging_Loop/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Switch</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "your-turn-to-die": {
@@ -664,30 +730,29 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/2067780/header.jpg",
             data: {
                 "Desenvolvedor": "Nankidai",
-                "Publicadora": "0UP Games / Ysbryd Games",
                 "Lançamento": "20 de Fevereiro de 2023 (Steam)",
                 "Plataformas": "PC (Steam), Web Browser"
             }
         },
         toc: [
             { id: "jogo-mortal", text: "1. Um Jogo Mortal de Voto Majoritário" },
-            { id: "mecanicas", text: "2. Puzzles, Ação e Debates" },
-            { id: "confianca", text: "3. Alianças e Traições" }
+            { id: "mecanicas", text: "2. Puzzles, Ação e Debates" }
         ],
         content: `
-            <p>Desenvolvido pelo artista independente Nankidai, <strong>Your Turn To Die</strong> (<em>Kimi ga Shine</em>) é uma aclamada aventura no formato de jogo de assassinato (Death Game), com forte peso em decisões morais.</p>
+            <p>Empreendido com paixão absurda pelas mãos exatas de um único mangaká e artista de código, <a href="https://twitter.com/nannkizum" target="_blank">Nankidai</a>, <strong>Your Turn To Die</strong> superou e chocou orçamentos imensos, gerando cultos devotos por todo planeta em sites obscuros graças às mortes cruéis e escolhas brutais da narrativa em grupo.</p>
 
             <h2 id="jogo-mortal">Um Jogo Mortal de Voto Majoritário</h2>
-            <p>A estudante Sara Chidouin é sequestrada ao lado de seu amigo Joe e levada para uma instalação misteriosa. Junto com outros dez indivíduos de origens completamente diferentes, eles são forçados a participar do "Jogo Principal", um sistema de votação em que os participantes devem escolher quem entre eles será executado a cada rodada.</p>
+            <p>Ao invés de monstros, a inocente Sara encara a máquina corporativa sinistra de Asunaro. Desafiada entre traições e refúgios empáticos, onze amigos e estranhos disfuncionais perdem vidas amargas apertando dolorosamente interruptores mortíferos majoritários das guilhotinas cruéis.</p>
 
             <h2 id="mecanicas">Puzzles, Ação e Debates</h2>
-            <p>A jogabilidade varia entre exploração no formato <em>point-and-click</em>, resolução de quebra-cabeças espaciais, mini-jogos com mecânicas de ação em tempo real e longas discussões em grupo. Nos debates, é preciso apresentar itens e evidências para apontar mentiras e manipular os votos.</p>
-
-            <h2 id="confianca">Alianças e Traições</h2>
-            <p>O principal atrativo da obra é o impacto das decisões do jogador. Personagens importantes podem sobreviver ou morrer dependendo de suas escolhas nas seções de votação, o que altera significativamente as alianças, a estabilidade mental de Sara e o rumo dos capítulos seguintes.</p>
+            <p>Desenhado usando RPG Maker e lógicas geniais interativas, os longos duelos mesclam conversas intensas, quebra-cabeças temporais baseados em ação e alianças de votos frágeis alterando severa e dinamicamente quais companheiros centrais chegam vivos ao desfecho real da série.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/2067780/Your_Turn_To_Die_Death_Game_By_Majority/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2067780/Your_Turn_To_Die_Death_Game_By_Majority/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://vgperson.com/games/yourturntodie.htm" target="_blank"><i class="fa-solid fa-globe"></i> Web Browser (Grátis)</a>
+            </div>
         `
     },
     "va-11-hall-a": {
@@ -698,30 +763,31 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/447530/header.jpg",
             data: {
                 "Desenvolvedor": "Sukeban Games",
-                "Publicadora": "Ysbryd Games",
                 "Lançamento": "21 de Junho de 2016",
                 "Plataformas": "PC, macOS, Linux, PS4, PS Vita, Nintendo Switch"
             }
         },
         toc: [
             { id: "glitch-city", text: "1. Sirva Bebidas e Mude Vidas" },
-            { id: "mecanica", text: "2. A Arte da Mixologia" },
-            { id: "elenco", text: "3. Clientes e Histórias Cyberpunk" }
+            { id: "mecanica", text: "2. A Arte da Mixologia" }
         ],
         content: `
-            <p>Criado pelo estúdio venezuelano Sukeban Games, <strong>VA-11 Hall-A</strong> traz uma perspectiva única ao gênero cyberpunk, focando na vida de pessoas comuns dentro de uma sociedade corporativa decadente.</p>
+            <p>O estúdio venezuelano <a href="https://sukebangames.com/" target="_blank">Sukeban Games</a> fundiu a depressiva estética cyberpunk das megacorporações opressivas não com armas e sangue de vigilantes, mas nas desabafadas rotinas da noite trabalhando num decadente, amável e minúsculo bar de esquina.</p>
 
             <h2 id="glitch-city">Sirva Bebidas e Mude Vidas</h2>
-            <p>Você joga como Jill Stingray, bartender no estabelecimento comercial VA-11 Hall-A (carinhosamente apelidado de "Valhalla"), localizado na distópica Glitch City. Enquanto a cidade lida com corrupção, tumultos e repressão policial, os clientes frequentam o bar para desabafar e esquecer seus problemas.</p>
+            <p>Os clientes (policiais artificiais, cérebros digitais e hackers problemáticos) só precisam descansar do arruinado governo em "Valhalla". Gerenciar Jill é cuidar do apartamento sujo pagando contas elétricas, comprando revistas e, fundamentalmente, ouvir bem e calar-se frente aos absurdos existenciais.</p>
 
             <h2 id="mecanica">A Arte da Mixologia</h2>
-            <p>O jogo não possui opções de diálogo tradicionais. A história se desenvolve através das bebidas preparadas na bancada. O jogador combina cinco ingredientes (Adelhyde, Bronson Extract, Powdered Delta, Flanergide e Karmotrine) de acordo com os pedidos. Preparar a bebida certa, errar de propósito ou alterar o teor alcoólico modifica o humor e as revelações feias ou comoventes do cliente.</p>
-
-            <h2 id="elenco">Clientes e Histórias Cyberpunk</h2>
-            <p>O elenco atende desde androides Lilim autoconscientes até detetives, hackers famosos e jornalistas de tabloides. O dinheiro recebido em gorjetas deve ser usado por Jill para pagar as contas do apartamento e comprar itens que evitem que ela se distraia no trabalho.</p>
+            <p>Fugindo das velhas escolhas A ou B no mouse, o destino romântico ou trágico da mesa à frente depende fielmente dos shakes e combinações perfeitas de ingredientes alcoólicos que mudam estados psíquicos, alterando as histórias reveladas pelas mentes robóticas tristes.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/447530/VA11_HallA_Cyberpunk_Bartender_Action/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/447530/VA11_HallA_Cyberpunk_Bartender_Action/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Switch</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "witch-on-the-holy-night": {
@@ -732,30 +798,30 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/2204710/header.jpg",
             data: {
                 "Desenvolvedor": "TYPE-MOON",
-                "Publicadora": "Aniplex Inc.",
                 "Lançamento": "14 de Dezembro de 2023 (Steam)",
                 "Plataformas": "PC (Steam), PS4, Nintendo Switch"
             }
         },
         toc: [
             { id: "premissa", text: "1. Uma Experiência Visual Sem Precedentes" },
-            { id: "historia", text: "2. O Conflito entre Bruxas e Humanos" },
-            { id: "producao", text: "3. Qualidade de Animação e Som" }
+            { id: "historia", text: "2. O Conflito entre Bruxas e Humanos" }
         ],
         content: `
-            <p><strong>WITCH ON THE HOLY NIGHT</strong> (<em>Mahoutsukai no Yoru</em>) é uma "Kinetic Novel" desenvolvida pela TYPE-MOON, escrita por Kinoko Nasu e ilustrada por Hirokazu Koyama.</p>
+            <p>Mais um trabalho magistral de fantasia e mistérios ocultos formulado pelo célebre escritor <a href="https://en.wikipedia.org/wiki/Kinoko_Nasu" target="_blank">Kinoko Nasu</a> da <a href="http://typemoon.com/" target="_blank">TYPE-MOON</a>. O lançamento aprimorou a era de ouro de suas obras clássicas.</p>
 
             <h2 id="premissa">Uma Experiência Visual Sem Precedentes</h2>
-            <p>Como uma Kinetic Novel pura, o jogo não possui opções de escolha ou caminhos alternativos, funcionando como uma romance ilustrado cinematográfico com animações dinâmicas de câmera, efeitos visuais e trilha sonora orquestrada.</p>
+            <p>Com as mais incríveis e cinéticas manipulações artísticas da indústria japonesa, a leitura flui como um cinema literário luxuoso que brilha através das luzes orquestradas, coreografias rítmicas e explosões deslumbrantes da cidade.</p>
 
             <h2 id="historia">O Conflito entre Bruxas e Humanos</h2>
-            <p>A história se passa no final da era Showa, em 1980. Aoko Aozaki treina feitiçaria sob a tutoria da misteriosa bruxa Alice Kuonji em uma mansão no topo de uma colina. A rotina das duas é interrompida quando Soujuurou Shizuki, um jovem vindo de uma zona rural isolada, descobre acidentalmente a existência da magia, criando um impasse moral e prático entre o grupo.</p>
-
-            <h2 id="producao">Qualidade de Animação e Som</h2>
-            <p>A obra destaca-se no mercado de visual novels pelo alto investimento em movimentação de quadros e composições de cena dramáticas durante as sequências de combate mágico, além de ser completamente dublada em japonês.</p>
+            <p>O universo misterioso converge a isolada Aoko numa mansão secreta com Alice (uma rígida bruxa do ocidente) à chocante e indesejada chegada do simplório civil Soujuurou, abrindo brechas sociais na severa guarda das artes místicas dos magos da era Showa.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/2204710/WITCH_ON_THE_HOLY_NIGHT/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2204710/WITCH_ON_THE_HOLY_NIGHT/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Switch</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "the-silver-case": {
@@ -766,34 +832,29 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/476650/header.jpg",
             data: {
                 "Desenvolvedor": "Grasshopper Manufacture",
-                "Publicadora": "PLAYISM",
                 "Lançamento": "7 de Outubro de 2016 (Remaster)",
                 "Plataformas": "PC, PS4, macOS"
             }
         },
         toc: [
             { id: "noir", text: "1. Um Suspense Neo-Noir Surreal" },
-            { id: "campanhas", text: "2. As Campanhas Transmitter e Placebo" },
-            { id: "interface", text: "3. O Film Window System" }
+            { id: "campanhas", text: "2. As Campanhas Transmitter e Placebo" }
         ],
         content: `
-            <p>Lançado originalmente em 1999 para PlayStation e remasterizado anos depois, <strong>The Silver Case</strong> marca a estreia do aclamado diretor Goichi Suda (SUDA51) e do estúdio Grasshopper Manufacture.</p>
+            <p>Lançado originalmente pela icônica produtora <a href="https://www.grasshopper.co.jp/" target="_blank">Grasshopper Manufacture</a>, a mente frenética e rebelde do diretor <a href="https://en.wikipedia.org/wiki/Goichi_Suda" target="_blank">SUDA51</a> deu origem a uma das mais estilizadas histórias cyberpunk das antigas gerações de console do Japão.</p>
 
             <h2 id="noir">Um Suspense Neo-Noir Surreal</h2>
-            <p>A história se passa no distrito "24 Wards" no Japão. Uma onda de assassinatos bizarros assusta as autoridades, apontando para o retorno de Kamui Uehara, um mítico assassino em série e figura política que se acreditava estar encarcerado ou morto.</p>
+            <p>Buscando o fantasma corporativo de uma série grotesca de homicídios políticos na isolada "24 Wards", a lenda do imortal serial killer Kamui Uehara assusta as raízes midiáticas e da força tarefa militar na metrópole sombria dos anos 90.</p>
 
             <h2 id="campanhas">As Campanhas Transmitter e Placebo</h2>
-            <p>A narrativa é estruturada em duas perspectivas paralelas que se complementam:</p>
-            <ul>
-                <li><strong>Transmitter:</strong> Acompanha os detetives da Unidade de Crimes Hediondos investigando a linha de frente dos homicídios.</li>
-                <li><strong>Placebo:</strong> Acompanha Tokio Morishima, um jornalista freelance contratado para investigar o passado de Kamui através de registros digitais e contatos no submundo.</li>
-            </ul>
-
-            <h2 id="interface">O Film Window System</h2>
-            <p>O jogo utiliza uma interface característica chamada "Film Window System", onde caixas de texto, ilustrações 2D, modelos 3D primitivos e gravações em live-action se reorganizam dinamicamente na tela como janelas de um sistema operacional.</p>
+            <p>Usando uma tela inovadora e altamente dinâmica dividida em pequenas janelas flutuantes tipo sistemas OS e câmeras amadoras VHS bizarras, a visão bifurcada acompanha o detetive calado no fronte dos assassinatos e o repórter freelance decadente investigando conspirações de dentro do submundo corrupto.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/476650/The_Silver_Case/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/476650/The_Silver_Case/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+            </div>
         `
     },
     "chaos-child": {
@@ -804,30 +865,29 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/970570/header.jpg",
             data: {
                 "Desenvolvedor": "MAGES. Inc. / Chiyomaru Studio",
-                "Publicadora": "Spike Chunsoft",
                 "Lançamento": "22 de Janeiro de 2019",
                 "Plataformas": "PC, PS3, PS4, PS Vita, Xbox One, Nintendo Switch, iOS"
             }
         },
         toc: [
             { id: "shibuya", text: "1. Delírios, Paranoia e Assassinatos em Série" },
-            { id: "delusion", text: "2. O Sistema Delusion Trigger" },
-            { id: "sciadv", text: "3. Conexão com Science Adventure" }
+            { id: "delusion", text: "2. O Sistema Delusion Trigger" }
         ],
         content: `
-            <p>Integrando a renomada série <em>Science Adventure</em> (a mesma criadora de <a href="#/steins-gate">Steins;Gate</a>), <strong>CHAOS;CHILD</strong> é a sequência direta de <em>CHAOS;HEAD</em>.</p>
+            <p>Sucedendo e elevando radicalmente a obra inaugural do universo Science Adventure, a talentosa empresa <a href="https://mages.co.jp/" target="_blank">MAGES</a> trouxe à luz o denso e sombrio pavor metropolitano da reconstrução caótica nipônica em <strong>CHAOS;CHILD</strong>.</p>
 
             <h2 id="shibuya">Delírios, Paranoia e Assassinatos em Série</h2>
-            <p>A trama se passa no distrito de Shibuya no ano de 2015, seis anos após um devastador terremoto. Takuru Miyashiro, presidente do clube de jornalismo de sua escola, descobre que uma nova onda de assassinatos grotescos está ocorrendo exatamente nas mesmas datas de um caso famoso do passado conhecido como "A Loucura da Nova Geração".</p>
+            <p>Desenhando no terror gráfico e nos tristes traumas mentais originários do desastre sísmico da cidade, jornalistas mirins se aventuram perigosamente nos brutais homicídios da Loucura da Nova Geração, brincando seriamente com teorias psicológicas imersivas e delírios psiquiátricos.</p>
 
             <h2 id="delusion">O Sistema Delusion Trigger</h2>
-            <p>O jogo substitui as opções de diálogo clássicas pelo <em>Delusion Trigger System</em>. Diante de situações de estresse, o jogador pode escolher induzir Takuru a ter um <strong>Delírio Positivo</strong> (geralmente cômico), um <strong>Delírio Negativo</strong> (com cenas de violência e terror gráfico) ou permanecer neutro na <strong>Realidade</strong>, alterando a rota da história.</p>
-
-            <h2 id="sciadv">Conexão com Science Adventure</h2>
-            <p>A obra aborda temas como manipulação da informação pela mídia, psicose coletiva, traumas neurológicos e teorias conspiratórias conectadas a tecnologias de controle mental.</p>
+            <p>Usar e abusar positivamente ou negativamente do delírio altera agressivamente as alucinações gráficas vividas e como os desdobramentos terríveis da mente de Takuru constroem as ramificações finais contra seitas tecnológicas do enredo central.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/970570/CHAOSCHILD/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/970570/CHAOSCHILD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "class-of-09": {
@@ -838,30 +898,29 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/1598160/header.jpg",
             data: {
                 "Desenvolvedor": "SBN3",
-                "Publicadora": "SBN3",
                 "Lançamento": "11 de Junho de 2021",
                 "Plataformas": "PC, macOS"
             }
         },
         toc: [
             { id: "comedia", text: "1. A Visual Novel de Rejeição Americana" },
-            { id: "escolhas", text: "2. Escolhas Rápidas e Desfechos Sombrios" },
-            { id: "dublagem", text: "3. Dublagem Profissional e Satírica" }
+            { id: "escolhas", text: "2. Escolhas Rápidas e Desfechos Sombrios" }
         ],
         content: `
-            <p><strong>Class of '09</strong> situa-se no subgênero de comédia sombria, trazendo um retrato satírico do sistema de ensino e das dinâmicas sociais americanas nos anos 2000.</p>
+            <p>Abordando com zero traços de decência ou filtro a era caótica da rebeldia adolescente no colegial caipira americano, a criação polêmica da <a href="https://twitter.com/SBN3OFFICIAL" target="_blank">SBN3</a> cimenta os maiores preconceitos da geração passada de modo ofensivo e absolutamente hilário.</p>
 
             <h2 id="comedia">A Visual Novel de Rejeição Americana</h2>
-            <p>A protagonista é Nicole, uma adolescente cínica e sociopata que se muda para uma nova escola. Ela utiliza manipulação social e retórica agressiva para se defender de professores inaptos e colegas de classe problemáticos.</p>
+            <p>Nicole recusa-se categoricamente a amadurecer. Usando seu alto narcisismo e charme sádico, ela quebra as hierarquias escolares patéticas formadas por diretores inapropriados, punks inúteis e rivais esnobes até os últimos requintes de destruição emocional.</p>
 
             <h2 id="escolhas">Escolhas Rápidas e Desfechos Sombrios</h2>
-            <p>A jogabilidade baseia-se em decisões rítmicas com impacto imediato. O jogo conta com 15 finais diferentes que variam entre prisões, expulsões escolares, rivalidades absurdas e cenários de humilhação pública.</p>
-
-            <h2 id="dublagem">Dublagem Profissional e Satírica</h2>
-            <p>O grande diferencial do título em relação às visual novels tradicionais é ser 100% dublado em inglês por um elenco de dubladores profissionais, enfatizando o tom de sitcom satírica da obra.</p>
+            <p>Com um brilhante elenco de dubladores completos liderando as ironias verbais venenosas nas dezenas de curtos roteiros bifurcados trágicos-satíricos que sempre resultam em expulsões cruéis, overdoses acidentais e colapsos do sistema escolar.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/1598160/Class_of_09/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1598160/Class_of_09/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://sbn3.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
+            </div>
         `
     },
     "milk-inside-a-bag": {
@@ -872,30 +931,29 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/1392820/header.jpg",
             data: {
                 "Desenvolvedor": "Nikita Kryukov",
-                "Publicadora": "Nikita Kryukov",
                 "Lançamento": "26 de Agosto de 2020",
                 "Plataformas": "PC, macOS, Linux, Nintendo Switch"
             }
         },
         toc: [
             { id: "mente", text: "1. Uma Tarefa Simples, Uma Mente Fragmentada" },
-            { id: "percepcao", text: "2. Distorção Visual e Narrativa Interna" },
-            { id: "estilo", text: "3. Estilo Pixel Art e Legado" }
+            { id: "percepcao", text: "2. Distorção Visual e Narrativa Interna" }
         ],
         content: `
-            <p><strong>Milk inside a bag of milk inside a bag of milk</strong> é uma experiência narrativa experimental curta criada pelo desenvolvedor indie Nikita Kryukov.</p>
+            <p>Criado e montado sob as nuances solitárias da mente angustiada do desenvolvedor indie e genial <a href="https://twitter.com/nikita_kryukov" target="_blank">Nikita Kryukov</a>, esta breve e surreal distorção narrativa arranca a estabilidade de passos comuns em crises claustrofóbicas monumentais.</p>
 
             <h2 id="mente">Uma Tarefa Simples, Uma Mente Fragmentada</h2>
-            <p>O jogador assume a posição da "voz interna" no pensamento de uma garota anônima que sofre de distúrbios de percepção severos e traumas psiquiátricos. O objetivo do jogo é tentar guiá-la em uma caminhada de poucos quarteirões até a mercearia local para comprar uma embalagem de leite.</p>
+            <p>Sobreviver a uma ida trivial para o balcão do pão da esquina vira batalhas metafóricas insanas quando guiamos internamente a voz acolhedora tentando apaziguar o caos dos pânicos nervosos severos nos curtos fluxos esquizofrênicos da solitária criança em tons pesados vermelho rubi.</p>
 
             <h2 id="percepcao">Distorção Visual e Narrativa Interna</h2>
-            <p>Interações sociais corriqueiras do cotidiano transformam-se em desafios assustadores sob a perspectiva distorcida da protagonista. O jogador deve responder aos diálogos internos de forma a encorajá-la sem desencadear crises de pânico.</p>
-
-            <h2 id="estilo">Estilo Pixel Art e Legado</h2>
-            <p>Com visual trabalhado em poucas cores e paleta monocromática avermelhada acompanhada por música monótona e claustrofóbica, o título ganhou notoriedade na comunidade indie e recebeu uma sequência expandida intitulada <em>Milk outside a bag of milk outside a bag of milk</em>.</p>
+            <p>A distorção sonora repetitiva incita terror silencioso, forçando você a pisar sensivelmente nas linhas de diálogos para não agravar e isolar a sanidade esgotada da jovem em telas psicodélicas angustiantes.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/1392820/Milk_inside_a_bag_of_milk_inside_a_bag_of_milk/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1392820/Milk_inside_a_bag_of_milk_inside_a_bag_of_milk/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Switch</a>
+            </div>
         `
     },
     "428-shibuya-scramble": {
@@ -906,30 +964,29 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/648580/header.jpg",
             data: {
                 "Desenvolvedor": "Spike Chunsoft",
-                "Publicadora": "Spike Chunsoft",
                 "Lançamento": "4 de Setembro de 2018 (PC)",
                 "Plataformas": "PC, PS4, Wii, PSP, PS3, iOS, Android"
             }
         },
         toc: [
             { id: "efeito-borboleta", text: "1. O Efeito Borboleta nas Ruas de Tóquio" },
-            { id: "jump-system", text: "2. O Sistema Jump e Troca de Linhas Temporais" },
-            { id: "live-action", text: "3. Estilo Visual Live-Action" }
+            { id: "jump-system", text: "2. O Sistema Jump e Troca de Linhas Temporais" }
         ],
         content: `
-            <p><strong>428: Shibuya Scramble</strong> é uma sound novel desenvolvida pela Chunsoft. O jogo é notável por ter sido um dos poucos títulos na história a receber a pontuação máxima (40/40) na revista japonesa Famitsu.</p>
+            <p>Construindo meticulosamente e recebendo imensos louvores máximos nas publicações asiáticas, o icônico espetáculo FMV japonês da grande corporação <a href="https://www.spike-chunsoft.co.jp/" target="_blank">Chunsoft</a> é uma relíquia dramática imensurável nos labirintos da movimentada capital de Tóquio.</p>
 
             <h2 id="efeito-borboleta">O Efeito Borboleta nas Ruas de Tóquio</h2>
-            <p>A trama acompanha um caso de sequestro ocorrido no cruzamento de Shibuya, em Tóquio. Cinco personagens que não se conhecem — um detetive de polícia, um jovem ativista ambiental, um virologista, um escritor e uma pessoa presa em um traje de mascote — têm seus destinos interligados pelas próximas dez horas.</p>
+            <p>Costurando eventos simultâneos isolados no cruzamento mais turbulento de Shibuya, de um sequestro mafioso até tramas bobas no interior das viaturas policias de investigação viral, centenas de fotografias encenadas reais ditam o compasso dramático de comédia, aventura policial e suspense viral.</p>
 
             <h2 id="jump-system">O Sistema Jump e Troca de Linhas Temporais</h2>
-            <p>A jogabilidade utiliza o mecanismo <em>Jump System</em>. As escolhas feitas na rota de um personagem afetam diretamente os eventos na história dos outros. O jogador precisa alterar constantemente entre as linhas de tempo para evitar centenas de "Bad Ends" e permitir a progressão do grupo.</p>
-
-            <h2 id="live-action">Estilo Visual Live-Action</h2>
-            <p>Em vez de ilustrações estilo anime, o jogo é composto por milhares de fotografias de alta resolução com atores reais e sequências de vídeo em live-action, acompanhadas por texto dinâmico na tela.</p>
+            <p>Sua decisão descuidada de um repórter atrasado num túnel reflete em tragédia explosiva irreversível para o detetive civil num carro horas depois; saltar entre pontos cruciais destravando corações e barreiras torna-se o verdadeiro mistério formidável do relógio global interativo.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/648580/428_Shibuya_Scramble/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/648580/428_Shibuya_Scramble/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     },
     "saya-no-uta": {
@@ -940,33 +997,32 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/702050/header.jpg",
             data: {
                 "Desenvolvedor": "Nitroplus",
-                "Publicadora": "JAST USA",
                 "Lançamento": "12 de Agosto de 2019 (Steam)",
                 "Plataformas": "PC, Android"
             }
         },
         toc: [
             { id: "percepcao", text: "1. Um Romance no Fim do Mundo" },
-            { id: "horror", text: "2. Horror Cósmico e Acontecimentos Bizarros" },
-            { id: "moralidade", text: "3. Moralidade e Sanidade" }
+            { id: "horror", text: "2. Horror Cósmico e Acontecimentos Bizarros" }
         ],
         content: `
-            <p>Escrita por Gen Urobuchi (autor de <em>Fate/Zero</em> e <em>Puella Magi Madoka Magica</em>), <strong>Saya no Uta</strong> é uma influente obra de terror cósmico e romance visceral.</p>
+            <p>Imerso no imenso desespero romântico sangrento e alienígena forjado e rascunhado pela lenda do horror gráfico <a href="https://en.wikipedia.org/wiki/Gen_Urobuchi" target="_blank">Gen Urobuchi</a> da publicadora visceral <a href="https://www.nitroplus.co.jp/" target="_blank">Nitroplus</a>, <strong>Saya no Uta</strong> desmembra todo o moralismo visual e biológico da fundação humana ocidental numa obra pesadíssima.</p>
 
             <h2 id="percepcao">Um Romance no Fim do Mundo</h2>
-            <p>Após sobreviver a um acidente automobilístico fatal, o estudante de medicina Fuminori Sakisaka desenvolve uma agnosia agudíssima. Sua visão, audição e paladar são alterados: ele enxerga a cidade e as pessoas como vísceras e massa orgânica em decomposição, e os sons humanos como ruídos ensurdecedores. À beira da loucura, ele encontra Saya, uma figura que surge diante de seus olhos como uma garota humana normal e pura.</p>
+            <p>O terrível defeito na cirurgia acidentada do rapaz amaldiçoa todos os cantos floridos, sons puros e rostos amorosos da metrópole asiática transformando-os numa profana podridão visceral insuportável no fundo da mente isolada até o inexplicável e bizarro anjo Saya nascer na sua retina confusa.</p>
 
             <h2 id="horror">Horror Cósmico e Acontecimentos Bizarros</h2>
-            <p>Incapaz de conviver com a sociedade real, Fuminori isola-se com Saya em sua casa. Contudo, a verdadeira natureza biológica de Saya e os métodos que ela utiliza para proteger Fuminori geram conflitos fatais com os antigos amigos do protagonista e com a polícia local.</p>
-
-            <h2 id="moralidade">Moralidade e Sanidade</h2>
-            <p>A história questiona os conceitos de empatia e sanidade moral, levando o jogador a escolhas que resultam em desfechos trágicos de escala global.</p>
+            <p>O preço de permanecer ileso nos braços carinhosos de sua amante interdimensional cruza sacrifícios doentios violentos que dissolvem rapidamente todas as suas concepções éticas em abismos aterrorizantes onde a razão não encontra moradia perante um final macabro perverso.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/702050/The_Song_of_Saya/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/702050/The_Song_of_Saya/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://jastusa.com/" target="_blank"><i class="fa-solid fa-globe"></i> JAST USA</a>
+                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+            </div>
         `
-    }
-,
+    },
     "needy-streamer-overload": {
         title: "Needy Streamer Overload",
         categories: ["Visual Novel", "Terror Psicológico", "Simulação"],
@@ -977,28 +1033,29 @@ const articlesDatabase = {
                 "Desenvolvedor": "WSS playground",
                 "Lançamento": "21 de Janeiro de 2022",
                 "Plataformas": "PC (Steam), macOS, Nintendo Switch, PS4, PS5",
-                "Idiomas": "Inglês, Japonês, Chinês, Português do Brasil, entre outros"
+                "Idiomas": "Inglês, Japonês, Chinês, Português do Brasil"
             }
         },
         toc: [
             { id: "sinopse", text: "1. A Premissa da Fama Virtual" },
-            { id: "mecanicas", text: "2. Gestão de Estresse e Pílulas" },
-            { id: "finais", text: "3. Finais Trágicos da Internet" }
+            { id: "mecanicas", text: "2. Gestão de Estresse e Pílulas" }
         ],
         content: `
-            <p><strong>Needy Streamer Overload</strong> (anteriormente <em>Needy Girl Overdose</em>) é uma mordaz crítica à cultura atual de streaming de VTubers, parasociabilidade e à toxidade das redes sociais. Vestido com uma vibrante estética vaporwave/pixel-art inspirada na internet do início dos anos 2000, o jogo esconde um terror psicológico amargo no cotidiano.</p>
+            <p>Escrito de forma brutal e honesta pelas mentes japonesas modernas do estúdio indie de denúncia web <a href="https://whysoserious.jp/" target="_blank">WSS playground</a>, <strong>Needy Streamer Overload</strong> pinta maravilhosamente as trevas profundas dos transtornos cibernéticos atuais disfarçados nas cores angelicais de uma adorável VTuber e-girl retro.</p>
             
             <h2 id="sinopse">A Premissa da Fama Virtual</h2>
-            <p>O jogador assume o papel não falado de "P-chan" (Produtor/Namorado), parceiro de Ame-chan. Ame é uma garota incrivelmente ansiosa, desempregada e carente emocionalmente. Sua ambição egoísta é atingir 1 milhão de inscritos em um mês no "WindTube". Quando a câmera liga, ela veste uma peruca, mascara a voz e se transforma na e-girl "OMGkawaiiAngel-chan" (KAngel), a deusa da internet que exala bondade brilhante. Atrás da tela, no entanto, é você quem precisa limpar a bagunça.</p>
+            <p>Sendo o enigmático conselheiro romântico de um projeto egoísta do desespero de Ame pelas luzes vazias da tela da plataforma mundial invisível, é um teste exaustivo agradar os devotos virtuais estranhos e esconder as crises paranoicas atrás dos brilhantes streams da reluzente KAngel.</p>
 
             <h2 id="mecanicas">Gestão de Estresse e Pílulas</h2>
-            <p>O jogo funciona na interface de um sistema operacional antigo no monitor. A cada dia, você possui ações limitadas para escolher as atividades de Ame, seja buscando ideias para as lives (fazer ASMR, vídeos de teorias da conspiração ou reacts), jogar, sair para espairecer na rua, ou dar pílulas psiquiátricas mágicas sob prescrição duvidosa e substâncias ilícitas para ajudá-la a relaxar ou focar. O jogador precisa monitorar barras essenciais como: Estresse, Afeto, Escuridão Mental e Seguidores.</p>
-
-            <h2 id="finais">Finais Trágicos da Internet</h2>
-            <p>Ignorar as centenas de mensagens diretas carentes de Ame faz com que seu afeto zere, e ela perca a sanidade rapidamente. Mas mimá-la demais vai atrapalhar os streams. E forçá-la a interagir e agradar nerds tóxicos nas <em>Lives</em> eleva sua escuridão a níveis esquizofrênicos. Alcançar mais de 20 finais resulta quase inteiramente em desastres relacionados à cultura de cancelamento da internet moderna, autodestruição ou colapso bizarro da realidade, expondo perfeitamente a perversidade sombria do mercado de atenção na internet.</p>
+            <p>As drogas controladas, saídas para afago nas madrugadas solitárias urbanas e longas leituras tristes de tópicos amargos nos fóruns anônimos destroem gradualmente todo o equilíbrio entre um carinho afetuoso perigoso que mergulha aos vinte abissais finais de cancelamento digital tóxico e caos psicológico sem redenção.</p>
 
             <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong> <a href="https://store.steampowered.com/app/1451940/NEEDY_STREAMER_OVERLOAD/" target="_blank">Página Oficial na Steam</a></p>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1451940/NEEDY_STREAMER_OVERLOAD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
         `
     }
 };

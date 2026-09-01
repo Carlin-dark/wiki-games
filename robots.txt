@@ -1,12 +1,6 @@
-# =========================================================
-# ATENÇÃO: Substitua "https://seusite.com" pelo seu domínio 
-# real antes de publicar na Vercel ou GitHub Pages!
-# =========================================================
-
 User-agent: *
 Allow: /
 
-# Bloqueia pastas ou arquivos que não precisam de indexação
 Disallow: /assets/raw/
 
-Sitemap: https://wikigames.duckdns.org/sitemap.xml
+Sitemap: https://carlin-dark.github.io/wiki-games/sitemap.xml
