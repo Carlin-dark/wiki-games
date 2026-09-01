@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>WikiGames - A Enciclopédia de Visual Novels e jogos Indie</title>
     <meta name="description" content="WikiGames é a maior enciclopédia focada em Visual Novels, Jogos Indies e Terror Psicológico.">
-    
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://github.com/Carlin-dark">
     <meta property="og:title" content="WikiGames">
     <meta property="og:description" content="A enciclopédia definitiva de Visual Novels e Terror Psicológico.">
-    
+
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0b0e14">
     <link rel="icon" type="image/x-icon" href="favicon.ico.jpg">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Fundo Atmosférico Estilo VNDB -->
     <div class="vndb-bg-wrapper">
-        
-        <!-- Cabeçalho Superior Estilo Database -->
+
         <header id="top-header">
             <div class="header-content">
                 <div class="logo">
-                    <a href="#/home">
+                    <a href="/home">
                         <h1>WikiGames</h1>
                         <span>the visual novel & indie database</span>
                     </a>
                 </div>
-                
-                <!-- Botão Hamburger (Apenas Mobile) -->
+
                 <button id="hamburgerBtn" aria-label="Abrir Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -47,20 +44,14 @@
             </div>
         </header>
 
-        <!-- Fundo escuro overlay para mobile -->
         <div id="menuOverlay"></div>
 
-        <!-- Container Centralizado Estilo Fórum/Database -->
         <div class="container">
-            
-            <!-- Conteúdo Principal do Artigo -->
             <main id="content">
                 <article id="article-container">
-                    <!-- O conteúdo é injetado dinamicamente pelo app.js -->
                 </article>
             </main>
 
-            <!-- Barra Lateral (Sidebar) na Direita -->
             <aside id="sidebar">
                 <button id="closeMenuBtn" aria-label="Fechar Menu">
                     <i class="fa-solid fa-xmark"></i>
@@ -69,20 +60,20 @@
                 <div class="sidebar-box">
                     <h3>Navegação</h3>
                     <ul class="vndb-menu">
-                        <li><a href="#/home"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
+                        <li><a href="/home"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
                         <li><a href="#" id="randomPageBtn"><i class="fa-solid fa-dice"></i> Página Aleatória</a></li>
-                        <li><a href="#/all"><i class="fa-solid fa-database"></i> Todos os Jogos</a></li>
+                        <li><a href="/all"><i class="fa-solid fa-database"></i> Todos os Jogos</a></li>
                     </ul>
                 </div>
 
                 <div class="sidebar-box">
                     <h3>Categorias</h3>
                     <ul class="vndb-menu">
-                        <li><a href="#/categoria/terror-psicologico">Terror Psicológico</a></li>
-                        <li><a href="#/categoria/visual-novel">Visual Novel</a></li>
-                        <li><a href="#/categoria/escape-room">Escape Room</a></li>
-                        <li><a href="#/categoria/aventura-2d">Aventura 2D</a></li>
-                        <li><a href="#/categoria/horror-gotico">Horror Gótico</a></li>
+                        <li><a href="/categoria/terror-psicologico">Terror Psicológico</a></li>
+                        <li><a href="/categoria/visual-novel">Visual Novel</a></li>
+                        <li><a href="/categoria/escape-room">Escape Room</a></li>
+                        <li><a href="/categoria/aventura-2d">Aventura 2D</a></li>
+                        <li><a href="/categoria/horror-gotico">Horror Gótico</a></li>
                     </ul>
                 </div>
 
@@ -94,14 +85,11 @@
                     </a>
                 </div>
             </aside>
-
         </div>
 
-        <!-- Rodapé do Site -->
         <footer class="vndb-footer">
             <p>WikiGames &copy; 2026. Desenvolvido por <a href="https://github.com/Carlin-dark" target="_blank" style="color: #6897bb; text-decoration: underline;">Carlin-dark</a>. Todos os direitos reservados.</p>
         </footer>
-
     </div>
 
     <script src="articles.js"></script>

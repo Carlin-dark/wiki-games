@@ -1,35 +1,195 @@
-// Utilitário para transformar texto em "slug" (Ex: "Terror Psicológico" vira "terror-psicologico")
 function createSlug(text) {
-    return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+    return String(text || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9\s-]/g, '')
+        .trim()
+        .replace(/\s+/g, '-');
 }
 
-// Renderiza o conteúdo principal baseado na URL (#)
-function renderPage() {
-    const hashData = window.location.hash.substring(2); // Remove o "#/"
-    const container = document.getElementById("article-container");
-    
-    // 1. ROTA: Lista de Todos os Jogos
-    if (hashData === "all") {
-        document.title = "Todos os Jogos - WikiGames";
-        let html = `<h1><i class="fa-solid fa-list"></i> Todos os Artigos</h1><ul class="all-games-list">`;
-        
-        // Pega todos, exclui a home, ordena por ordem alfabética
-        const games = Object.keys(articlesDatabase).filter(k => k !== "home").sort();
-        games.forEach(key => {
+function getRouteInfo() {
+    const hashValue = window.location.hash || '';
+    const pathnameValue = window.location.pathname || '/';
+
+    let routeFromHash = '';
+    if (hashValue.startsWith('#/')) {
+        routeFromHash = hashValue.substring(2);
+    } else if (hashValue.startsWith('#')) {
+        routeFromHash = hashValue.substring(1);
+    }
+
+    const normalizedPath = pathnameValue.endsWith('/index.html') || pathnameValue.endsWith('index.html') || pathnameValue === '/'
+        ? 'home'
+        : pathnameValue.replace(/^\/+|\/+$/g, '');
+
+    const rawRoute = routeFromHash || normalizedPath || 'home';
+    const [route, anchor] = rawRoute.split('#');
+
+    return {
+        route: route && route !== '' ? route : 'home',
+        anchor: anchor || ''
+    };
+}
+
+function buildRoutePath(route) {
+    const cleanRoute = String(route || 'home').replace(/^\/+|\/+$/g, '');
+    if (!cleanRoute || cleanRoute === 'home') {
+        return '/home';
+    }
+    return '/' + cleanRoute;
+}
+
+function updateRoute(route, preserveScroll = false) {
+    const nextPath = buildRoutePath(route);
+    const currentPath = window.location.pathname;
+
+    if (currentPath !== nextPath) {
+        window.history.pushState({}, '', nextPath);
+    }
+
+    if (!preserveScroll) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    renderPage();
+}
+
+function getTrailerData(article) {
+    if (!article) return null;
+
+    const videoId = article.youtubeId || article.trailerId || article.trailer || null;
+    if (videoId && /^[a-zA-Z0-9_-]{11}$/.test(String(videoId).trim())) {
+        return {
+            id: String(videoId).trim(),
+            embedUrl: `https://www.youtube-nocookie.com/embed/${String(videoId).trim()}?rel=0`,
+            watchUrl: `https://www.youtube.com/watch?v=${String(videoId).trim()}`,
+            searchUrl: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${article.title} trailer`)}`
+        };
+    }
+
+    if (article.trailerUrl) {
+        const match = String(article.trailerUrl).match(/(?:v=|be\/|embed\/|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+        if (match && match[1]) {
+            return {
+                id: match[1],
+                embedUrl: `https://www.youtube-nocookie.com/embed/${match[1]}?rel=0`,
+                watchUrl: article.trailerUrl,
+                searchUrl: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${article.title} trailer`)}`
+            };
+        }
+    }
+
+    const searchQuery = article.youtubeSearch || article.title;
+    return {
+        id: null,
+        searchUrl: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${searchQuery} trailer`)}`
+    };
+}
+
+function renderAllGamesPage() {
+    const container = document.getElementById('article-container');
+    const allGames = Object.keys(articlesDatabase).filter(key => key !== 'home');
+    const categories = [...new Set(allGames.flatMap(key => articlesDatabase[key].categories || []))].sort((a, b) => a.localeCompare(b));
+
+    document.title = 'Todos os Jogos - WikiGames';
+    container.innerHTML = `
+        <h1><i class="fa-solid fa-list"></i> Todos os Jogos</h1>
+        <div class="advanced-filters">
+            <div class="filter-row">
+                <label class="filter-field">
+                    <span>Buscar</span>
+                    <input type="text" id="allGamesSearch" placeholder="Nome do jogo...">
+                </label>
+                <label class="filter-field">
+                    <span>Categoria</span>
+                    <select id="allGamesCategory">
+                        <option value="all">Todas</option>
+                        ${categories.map(cat => `<option value="${createSlug(cat)}">${cat}</option>`).join('')}
+                    </select>
+                </label>
+                <label class="filter-field">
+                    <span>Ordenar</span>
+                    <select id="allGamesSort">
+                        <option value="title-asc">Título A-Z</option>
+                        <option value="title-desc">Título Z-A</option>
+                        <option value="category">Categoria</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div id="allGamesResults" class="all-games-grid"></div>
+    `;
+
+    const searchInputEl = document.getElementById('allGamesSearch');
+    const categorySelectEl = document.getElementById('allGamesCategory');
+    const sortSelectEl = document.getElementById('allGamesSort');
+    const resultsContainer = document.getElementById('allGamesResults');
+
+    function renderResults() {
+        const query = (searchInputEl.value || '').toLowerCase().trim();
+        const selectedCategory = categorySelectEl.value;
+        const selectedSort = sortSelectEl.value;
+
+        let filteredGames = allGames.filter(key => {
             const game = articlesDatabase[key];
-            html += `<li><a href="#/${key}"><h3>${game.title}</h3></a><p>${game.summary}</p></li>`;
+            const matchesQuery = !query || game.title.toLowerCase().includes(query) || (game.summary || '').toLowerCase().includes(query);
+            const matchesCategory = selectedCategory === 'all' || (game.categories || []).some(cat => createSlug(cat) === selectedCategory);
+            return matchesQuery && matchesCategory;
         });
-        html += `</ul>`;
-        container.innerHTML = html;
-        window.scrollTo(0,0);
+
+        if (selectedSort === 'title-desc') {
+            filteredGames.sort((a, b) => articlesDatabase[b].title.localeCompare(articlesDatabase[a].title));
+        } else if (selectedSort === 'category') {
+            filteredGames.sort((a, b) => {
+                const catA = (articlesDatabase[a].categories || [])[0] || '';
+                const catB = (articlesDatabase[b].categories || [])[0] || '';
+                const byCategory = catA.localeCompare(catB);
+                return byCategory !== 0 ? byCategory : articlesDatabase[a].title.localeCompare(articlesDatabase[b].title);
+            });
+        } else {
+            filteredGames.sort((a, b) => articlesDatabase[a].title.localeCompare(articlesDatabase[b].title));
+        }
+
+        if (!filteredGames.length) {
+            resultsContainer.innerHTML = '<div class="all-games-empty">Nenhum jogo encontrado com esses filtros.</div>';
+            return;
+        }
+
+        resultsContainer.innerHTML = filteredGames.map(key => {
+            const game = articlesDatabase[key];
+            return `
+                <a href="/\${key}" class="all-game-card">
+                    <img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}">
+                    <div class="all-game-card-content">
+                        <h3>${game.title}</h3>
+                        <p>${game.summary}</p>
+                    </div>
+                </a>
+            `;
+        }).join('');
+    }
+
+    searchInputEl.addEventListener('input', renderResults);
+    categorySelectEl.addEventListener('change', renderResults);
+    sortSelectEl.addEventListener('change', renderResults);
+    renderResults();
+    window.scrollTo(0, 0);
+}
+
+function renderPage() {
+    const { route, anchor } = getRouteInfo();
+    const container = document.getElementById('article-container');
+
+    if (route === 'all') {
+        renderAllGamesPage();
         return;
     }
 
-    // 2. ROTA: Categorias (Ex: #/categoria/terror-psicologico)
-    if (hashData.startsWith("categoria/")) {
-        const catSlug = hashData.split("/")[1];
+    if (route.startsWith('categoria/')) {
+        const catSlug = route.split('/')[1];
         let foundGames = [];
-        let catNameDisplay = "Categoria";
+        let catNameDisplay = 'Categoria';
 
         for (const key in articlesDatabase) {
             const game = articlesDatabase[key];
@@ -37,7 +197,7 @@ function renderPage() {
                 game.categories.forEach(cat => {
                     if (createSlug(cat) === catSlug) {
                         foundGames.push({ key, title: game.title, summary: game.summary });
-                        catNameDisplay = cat; // Pega o nome original formatado
+                        catNameDisplay = cat;
                     }
                 });
             }
@@ -45,33 +205,33 @@ function renderPage() {
 
         document.title = `Categoria: ${catNameDisplay} - WikiGames`;
         let html = `<h1><i class="fa-solid fa-tag"></i> Categoria: ${catNameDisplay}</h1>`;
-        
+
         if (foundGames.length > 0) {
             html += `<ul class="category-list">`;
             foundGames.forEach(g => {
-                html += `<li><a href="#/${g.key}"><h3>${g.title}</h3></a><p>${g.summary}</p></li>`;
+                html += `<li><a href="/${g.key}"><h3>${g.title}</h3></a><p>${g.summary}</p></li>`;
             });
             html += `</ul>`;
         } else {
-            html += `<p>Nenhum jogo encontrado nesta categoria.</p>`;
+            html += '<p>Nenhum jogo encontrado nesta categoria.</p>';
         }
-        
+
         container.innerHTML = html;
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
         return;
     }
 
-    // 3. ROTA: Artigo Específico (Jogo)
-    const route = hashData.split('#')[0] || "home"; // Lida com âncoras na mesma pag
     const article = articlesDatabase[route];
 
     if (article) {
         document.title = `${article.title} - WikiGames`;
-        document.querySelector('meta[name="description"]').setAttribute("content", article.summary);
-        
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', article.summary);
+        }
+
         let htmlContent = `<h1>${article.title}</h1>`;
-        
-        // Infobox
+
         if (article.infobox) {
             htmlContent += `<div class="infobox">
                 <div class="infobox-title">${article.title}</div>
@@ -83,76 +243,127 @@ function renderPage() {
             htmlContent += `</table></div>`;
         }
 
-        // Índice (TOC)
         if (article.toc && article.toc.length > 0) {
             htmlContent += `<div class="toc"><div class="toc-title">Índice</div><ul>`;
             article.toc.forEach(item => {
-                // Link aponta pra propria rota + âncora
-                htmlContent += `<li><a href="#/${route}#${item.id}">${item.text}</a></li>`;
+                htmlContent += `<li><a href="/${route}#${item.id}">${item.text}</a></li>`;
             });
             htmlContent += `</ul></div>`;
         }
 
-        // Texto do Artigo
         htmlContent += `<div class="article-text">${article.content}</div>`;
-        
-        // Links de Categorias no final
-        if(article.categories) {
+
+        const trailerData = getTrailerData(article);
+        if (trailerData) {
+            htmlContent += `
+                <div class="trailer-panel">
+                    <div class="trailer-header"><i class="fa-brands fa-youtube"></i> Trailer e vídeo do jogo</div>
+                    ${trailerData.id ? `
+                        <div class="video-frame">
+                            <iframe src="${trailerData.embedUrl}" title="Trailer de ${article.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    ` : ''}
+                    <div class="trailer-actions">
+                        ${trailerData.searchUrl ? `<a href="${trailerData.searchUrl}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-magnifying-glass"></i> Pesquisar no YouTube</a>` : ''}
+                        ${trailerData.watchUrl ? `<a href="${trailerData.watchUrl}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> Abrir trailer</a>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        if (article.categories) {
             htmlContent += `<hr style="margin: 30px 0 15px;"><p style="font-size:13px;"><i class="fa-solid fa-tags"></i> <strong>Categorias:</strong> `;
-            const catLinks = article.categories.map(cat => `<a href="#/categoria/${createSlug(cat)}">${cat}</a>`);
+            const catLinks = article.categories.map(cat => `<a href="/categoria/${createSlug(cat)}">${cat}</a>`);
             htmlContent += catLinks.join(' | ') + `</p>`;
         }
 
+        htmlContent += `
+            <div class="article-actions">
+                <button id="sharePageBtn" class="share-page-btn" type="button">
+                    <i class="fa-solid fa-share-nodes"></i> Compartilhar página
+                </button>
+            </div>
+        `;
+
         container.innerHTML = htmlContent;
 
-        // Controle de Scroll (Vai pro topo ou pra ancora clicada no indice)
-        const anchor = hashData.split('#')[1];
-        if(anchor) {
+        const sharePageBtn = document.getElementById('sharePageBtn');
+        if (sharePageBtn) {
+            sharePageBtn.addEventListener('click', async function () {
+                const shareUrl = window.location.href;
+                const shareTitle = document.title;
+
+                try {
+                    if (navigator.share) {
+                        await navigator.share({
+                            title: shareTitle,
+                            text: `Confira ${article.title} na WikiGames`,
+                            url: shareUrl
+                        });
+                    } else if (navigator.clipboard) {
+                        await navigator.clipboard.writeText(shareUrl);
+                        sharePageBtn.innerHTML = '<i class="fa-solid fa-check"></i> Link copiado';
+                    } else {
+                        window.prompt('Copie este link:', shareUrl);
+                    }
+                } catch (error) {
+                    if (navigator.clipboard) {
+                        await navigator.clipboard.writeText(shareUrl);
+                        sharePageBtn.innerHTML = '<i class="fa-solid fa-check"></i> Link copiado';
+                    }
+                }
+            });
+        }
+
+        if (anchor) {
             setTimeout(() => {
                 const targetElement = document.getElementById(anchor);
-                if(targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 150);
         } else {
             window.scrollTo(0, 0);
         }
 
     } else {
-        // Erro 404 Virtual
-        document.title = `Página não encontrada - WikiGames`;
+        document.title = 'Página não encontrada - WikiGames';
         container.innerHTML = `
             <h1><i class="fa-solid fa-triangle-exclamation"></i> Erro 404 - Artigo não encontrado</h1>
             <p>O artigo que você tentou acessar não existe na nossa base de dados.</p>
-            <p>Volte para a <a href="#/home">Página Inicial</a> ou use a barra de busca acima.</p>
+            <p>Volte para a <a href="/home">Página Inicial</a> ou use a barra de busca acima.</p>
         `;
     }
 }
 
-// Funcionalidade: Barra de Pesquisa
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 
-searchInput.addEventListener('input', function() {
+searchInput.addEventListener('input', function () {
     const query = this.value.toLowerCase();
     searchResults.innerHTML = '';
-    
-    if(query.length === 0) {
+
+    if (query.length === 0) {
         searchResults.style.display = 'none';
         return;
     }
 
     let results = [];
-    for(const key in articlesDatabase) {
-        if(key !== "home" && articlesDatabase[key].title.toLowerCase().includes(query)) {
+    for (const key in articlesDatabase) {
+        if (key !== 'home' && articlesDatabase[key].title.toLowerCase().includes(query)) {
             results.push({ key, title: articlesDatabase[key].title });
         }
     }
 
-    if(results.length > 0) {
+    if (results.length > 0) {
         results.forEach(res => {
             const a = document.createElement('a');
-            a.href = `#/${res.key}`;
+            a.href = `/${res.key}`;
             a.innerHTML = `<i class="fa-solid fa-gamepad"></i> ${res.title}`;
-            a.onclick = () => { searchResults.style.display = 'none'; searchInput.value = ''; };
+            a.onclick = () => {
+                searchResults.style.display = 'none';
+                searchInput.value = '';
+            };
             searchResults.appendChild(a);
         });
         searchResults.style.display = 'block';
@@ -162,52 +373,43 @@ searchInput.addEventListener('input', function() {
     }
 });
 
-// Fecha pesquisa ao clicar fora
-document.addEventListener('click', function(e) {
-    if(!searchInput.contains(e.target)) searchResults.style.display = 'none';
+document.addEventListener('click', function (e) {
+    if (!searchInput.contains(e.target)) searchResults.style.display = 'none';
 });
 
-// Funcionalidade: Página Aleatória
-document.getElementById('randomPageBtn').addEventListener('click', function(e) {
+document.getElementById('randomPageBtn').addEventListener('click', function (e) {
     e.preventDefault();
-    const keys = Object.keys(articlesDatabase).filter(k => k !== "home");
+    const keys = Object.keys(articlesDatabase).filter(k => k !== 'home');
     const randomKey = keys[Math.floor(Math.random() * keys.length)];
-    window.location.hash = `#/${randomKey}`;
+    updateRoute(randomKey);
 });
 
-// Inicia os Listeners de Rota
 window.addEventListener('hashchange', renderPage);
+window.addEventListener('popstate', renderPage);
 window.addEventListener('DOMContentLoaded', renderPage);
 
-/* ====================================================
-   LÓGICA DO MENU HAMBURGER (MOBILE)
-==================================================== */
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const closeMenuBtn = document.getElementById('closeMenuBtn');
 const sidebar = document.getElementById('sidebar');
 const menuOverlay = document.getElementById('menuOverlay');
-const sidebarLinks = sidebar.querySelectorAll('a'); // Todos os links do menu
+const sidebarLinks = sidebar.querySelectorAll('a');
 
-// Função para abrir menu
 function openMenu() {
     sidebar.classList.add('active');
     menuOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+    document.body.style.overflow = 'hidden';
 }
 
-// Função para fechar menu
 function closeMenu() {
     sidebar.classList.remove('active');
     menuOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Destrava o scroll
+    document.body.style.overflow = 'auto';
 }
 
-// Eventos de clique
 hamburgerBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
 menuOverlay.addEventListener('click', closeMenu);
 
-// Fecha o menu automaticamente quando o usuário clica em qualquer link do menu no celular
 sidebarLinks.forEach(link => {
     link.addEventListener('click', () => {
         if (window.innerWidth <= 900) {
