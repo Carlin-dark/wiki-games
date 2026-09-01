@@ -172,7 +172,7 @@ const articlesDatabase = {
     "doki-doki-literature-club-plus": {
         title: "Doki Doki Literature Club Plus!",
         categories: ["Visual Novel", "Terror Psicológico", "Metaficção"],
-        youtubeId: "NjKZG9HYP7U",
+        youtubeId: "j__NPsUxR5Q",
         summary: "Versão definitiva de DDLC com Side Stories e lore focado em simulações de I.A.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1388880/header.jpg",
@@ -212,7 +212,6 @@ const articlesDatabase = {
     "the-house-in-fata-morgana": {
         title: "The House in Fata Morgana",
         categories: ["Visual Novel", "Horror Gótico", "Tragédia", "Romance"],
-        youtubeId: "oQkZAV_m6BU",
         summary: "Uma épica visual novel de horror gótico que conta tragédias que perpassam séculos em uma mansão amaldiçoada.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303310/header.jpg",
@@ -251,7 +250,6 @@ const articlesDatabase = {
     "steins-gate": {
         title: "Steins;Gate",
         categories: ["Visual Novel", "Ficção Científica", "Thriller"],
-        youtubeId: "dS3Y0TqEnnc",
         summary: "Um thriller psicológico e de ficção científica sobre amigos que acidentalmente criam uma máquina de enviar e-mails para o passado.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412830/header.jpg",
@@ -329,6 +327,7 @@ const articlesDatabase = {
     "zero-escape-the-nonary-games": {
         title: "Zero Escape: The Nonary Games",
         categories: ["Escape Room", "Visual Novel", "Mistério", "Sci-Fi"],
+        youtubeId: "EKgwrm_7Zsc",
         summary: "Nove pessoas presas num espaço confinado são forçadas a participar num impiedoso jogo da morte de números e confiança.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/477740/header.jpg",
@@ -405,6 +404,7 @@ const articlesDatabase = {
     "omori": {
         title: "OMORI",
         categories: ["RPG", "Terror Psicológico", "Surrealismo"],
+        youtubeId: "CyVv-jFJiJ8",
         summary: "Um RPG psicológico aclamado focado no luto, depressão e nos coloridos mecanismos de defesa da mente.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1150690/header.jpg",
@@ -443,6 +443,7 @@ const articlesDatabase = {
     "slay-the-princess": {
         title: "Slay the Princess",
         categories: ["Visual Novel", "Terror Psicológico", "Escolhas Múltiplas"],
+        youtubeId: "RByDoYQpFa8",
         summary: "Você está em um caminho na floresta. No final há uma cabana com uma Princesa no porão. Mate-a. Confie no Narrador.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1989270/header.jpg",
@@ -1030,6 +1031,7 @@ const articlesDatabase = {
     "needy-streamer-overload": {
         title: "Needy Streamer Overload",
         categories: ["Visual Novel", "Terror Psicológico", "Simulação"],
+        youtubeId: "e-3pEF_NBT0",
         summary: "Transforme sua namorada instável no maior Anjo da Internet. Gerencie seus remédios, streams e surtos de saúde mental.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451940/header.jpg",

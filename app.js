@@ -10,7 +10,7 @@ function createSlug(text) {
 
 function getRouteInfo() {
     const hashValue = window.location.hash || '';
-    const pathnameValue = window.location.pathname || '/';
+    const pathnameValue = decodeURIComponent(window.location.pathname || '/');
     const searchParams = new URLSearchParams(window.location.search || '');
 
     let routeFromHash = '';
@@ -36,11 +36,11 @@ function getRouteInfo() {
 }
 
 function buildRoutePath(route) {
-    const safeRoute = String(route || 'home').replace(/^\/+|\/+$/g, '');
-    if (!safeRoute || safeRoute === 'home') {
-        return '/?route=home';
+    const cleanRoute = String(route || 'home').replace(/^\/+|\/+$/g, '');
+    if (!cleanRoute || cleanRoute === 'home') {
+        return '/';
     }
-    return `/?route=${encodeURIComponent(safeRoute)}`;
+    return '/' + cleanRoute;
 }
 
 function navigateToRoute(route) {
@@ -70,14 +70,6 @@ function isInternalAppLink(href) {
     } catch (error) {
         return false;
     }
-}
-
-function buildRoutePath(route) {
-    const cleanRoute = String(route || 'home').replace(/^\/+|\/+$/g, '');
-    if (!cleanRoute || cleanRoute === 'home') {
-        return '/home';
-    }
-    return '/' + cleanRoute;
 }
 
 function updateRoute(route, preserveScroll = false) {
@@ -195,7 +187,7 @@ function renderAllGamesPage() {
         resultsContainer.innerHTML = filteredGames.map(key => {
             const game = articlesDatabase[key];
             return `
-                <a href="/\${key}" class="all-game-card">
+                <a href="/${key}" class="all-game-card">
                     <img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}">
                     <div class="all-game-card-content">
                         <h3>${game.title}</h3>
