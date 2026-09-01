@@ -172,6 +172,7 @@ const articlesDatabase = {
     "doki-doki-literature-club-plus": {
         title: "Doki Doki Literature Club Plus!",
         categories: ["Visual Novel", "Terror Psicológico", "Metaficção"],
+        youtubeId: "NjKZG9HYP7U",
         summary: "Versão definitiva de DDLC com Side Stories e lore focado em simulações de I.A.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1388880/header.jpg",
@@ -211,6 +212,7 @@ const articlesDatabase = {
     "the-house-in-fata-morgana": {
         title: "The House in Fata Morgana",
         categories: ["Visual Novel", "Horror Gótico", "Tragédia", "Romance"],
+        youtubeId: "oQkZAV_m6BU",
         summary: "Uma épica visual novel de horror gótico que conta tragédias que perpassam séculos em uma mansão amaldiçoada.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303310/header.jpg",
@@ -249,6 +251,7 @@ const articlesDatabase = {
     "steins-gate": {
         title: "Steins;Gate",
         categories: ["Visual Novel", "Ficção Científica", "Thriller"],
+        youtubeId: "dS3Y0TqEnnc",
         summary: "Um thriller psicológico e de ficção científica sobre amigos que acidentalmente criam uma máquina de enviar e-mails para o passado.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412830/header.jpg",
