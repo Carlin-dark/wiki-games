@@ -127,6 +127,7 @@ const articlesDatabase = {
     "doki-doki-literature-club": {
         title: "Doki Doki Literature Club!",
         categories: ["Visual Novel", "Terror Psicológico", "Metaficção"],
+        youtubeId: "kB1663FTpzU",
         summary: "Visual Novel de terror psicológico disfarçada de um simulador de encontros fofo.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/698780/header.jpg",

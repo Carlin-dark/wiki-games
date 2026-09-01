@@ -104,7 +104,7 @@ function getTrailerData(article) {
             id: String(videoId).trim(),
             embedUrl: `https://www.youtube-nocookie.com/embed/${String(videoId).trim()}?rel=0`,
             watchUrl: `https://www.youtube.com/watch?v=${String(videoId).trim()}`,
-            searchUrl: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${article.title} trailer`)}`
+            searchUrl: null
         };
     }
 
@@ -115,16 +115,12 @@ function getTrailerData(article) {
                 id: match[1],
                 embedUrl: `https://www.youtube-nocookie.com/embed/${match[1]}?rel=0`,
                 watchUrl: article.trailerUrl,
-                searchUrl: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${article.title} trailer`)}`
+                searchUrl: null
             };
         }
     }
 
-    const searchQuery = article.youtubeSearch || article.title;
-    return {
-        id: null,
-        searchUrl: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${searchQuery} trailer`)}`
-    };
+    return null;
 }
 
 function renderAllGamesPage() {
@@ -293,7 +289,7 @@ function renderPage() {
 
         htmlContent += `<div class="article-text">${article.content}</div>`;
 
-        const trailerData = getTrailerData(article);
+        const trailerData = route !== 'home' && !route.startsWith('categoria/') ? getTrailerData(article) : null;
         if (trailerData) {
             htmlContent += `
                 <div class="trailer-panel">
@@ -304,7 +300,6 @@ function renderPage() {
                         </div>
                     ` : ''}
                     <div class="trailer-actions">
-                        ${trailerData.searchUrl ? `<a href="${trailerData.searchUrl}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-magnifying-glass"></i> Pesquisar no YouTube</a>` : ''}
                         ${trailerData.watchUrl ? `<a href="${trailerData.watchUrl}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> Abrir trailer</a>` : ''}
                     </div>
                 </div>
@@ -315,6 +310,15 @@ function renderPage() {
             htmlContent += `<hr style="margin: 30px 0 15px;"><p style="font-size:13px;"><i class="fa-solid fa-tags"></i> <strong>Categorias:</strong> `;
             const catLinks = article.categories.map(cat => `<a href="/?route=categoria/${createSlug(cat)}">${cat}</a>`);
             htmlContent += catLinks.join(' | ') + `</p>`;
+        }
+
+        if (article.youtubeId || article.trailerId || article.trailerUrl) {
+            htmlContent += `
+                <div class="trailer-config-box">
+                    <p><i class="fa-brands fa-youtube"></i> <strong>Trailer do jogo</strong></p>
+                    <p>Adicione o ID do vídeo abaixo da categoria do artigo, por exemplo: <code>youtubeId: "kB1663FTpzU"</code></p>
+                </div>
+            `;
         }
 
         htmlContent += `
