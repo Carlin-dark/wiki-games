@@ -3,7 +3,7 @@
 
     <!-- Página Inicial -->
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/home</loc>
+        <loc>https://wikigames.duckdns.org/#/home</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
     <!-- Todos os Jogos / Catálogo -->
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/all</loc>
+        <loc>https://wikigames.duckdns.org/#/all</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -19,56 +19,56 @@
 
     <!-- Jogos do articlesDatabase -->
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/alice-in-the-nightmare-land</loc>
+        <loc>https://wikigames.duckdns.org/#/alice-in-the-nightmare-land</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/doki-doki-literature-club</loc>
+        <loc>https://wikigames.duckdns.org/#/doki-doki-literature-club</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/doki-doki-literature-club-plus</loc>
+        <loc>https://wikigames.duckdns.org/#/doki-doki-literature-club-plus</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/the-house-in-fata-morgana</loc>
+        <loc>https://wikigames.duckdns.org/#/the-house-in-fata-morgana</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/steins-gate</loc>
+        <loc>https://wikigames.duckdns.org/#/steins-gate</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/danganronpa</loc>
+        <loc>https://wikigames.duckdns.org/#/danganronpa</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/zero-escape-the-nonary-games</loc>
+        <loc>https://wikigames.duckdns.org/#/zero-escape-the-nonary-games</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://carlin-dark.github.io/wiki-games/#/higurashi-when-they-cry</loc>
+        <loc>https://wikigames.duckdns.org/#/higurashi-when-they-cry</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
