@@ -9,4 +9,4 @@ Allow: /
 # Bloqueia pastas ou arquivos que não precisam de indexação
 Disallow: /assets/raw/
 
-Sitemap: https://seusite.com/sitemap.xml
+Sitemap: https://wikigames.duckdns.org/sitemap.xml
