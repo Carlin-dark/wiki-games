@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>WikiGames - A Enciclopédia de Visual Novels e Terror Indie</title>
+    <meta name="description" content="WikiGames é a maior enciclopédia focada em Visual Novels, Jogos Indies e Terror Psicológico.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seusite.com/">
+    <meta property="og:title" content="WikiGames">
+    <meta property="og:description" content="A enciclopédia definitiva de Visual Novels e Terror Psicológico.">
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Superior -->
+    <header id="top-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="#/home">
+                    <h1><i class="fa-solid fa-book-journal-whills"></i> WikiGames</h1>
+                    <span>A Enciclopédia Livre dos Indies</span>
+                </a>
+            </div>
+            
+            <!-- Botão Hamburger (Apenas Mobile) -->
+            <button id="hamburgerBtn" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Pesquisar jogos...">
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div id="searchResults" class="search-results-dropdown"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fundo escuro quando o menu mobile abrir -->
+    <div id="menuOverlay"></div>
+
+    <!-- Layout Principal -->
+    <div class="container">
+        
+        <!-- Conteúdo do Artigo (Vem primeiro no HTML para melhorar o SEO) -->
+        <main id="content">
+            <article id="article-container">
+                <!-- O conteúdo é injetado pelo app.js -->
+            </article>
+        </main>
+
+        <!-- Barra Lateral (Sidebar) Agora na Direita -->
+        <aside id="sidebar">
+            <!-- Botão Fechar (Apenas Mobile) -->
+            <button id="closeMenuBtn" aria-label="Fechar Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <h3><i class="fa-solid fa-compass"></i> Navegação</h3>
+                <ul>
+                    <li><a href="#/home"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
+                    <li><a href="#" id="randomPageBtn"><i class="fa-solid fa-dice"></i> Página Aleatória</a></li>
+                    <li><a href="#/all"><i class="fa-solid fa-list"></i> Todos os Jogos</a></li>
+                </ul>
+
+                <h3><i class="fa-solid fa-tags"></i> Categorias</h3>
+                <ul>
+                    <li><a href="#/categoria/terror-psicologico">Terror Psicológico</a></li>
+                    <li><a href="#/categoria/visual-novel">Visual Novel</a></li>
+                    <li><a href="#/categoria/escape-room">Escape Room</a></li>
+                    <li><a href="#/categoria/aventura-2d">Aventura 2D</a></li>
+                    <li><a href="#/categoria/horror-gotico">Horror Gótico</a></li>
+                </ul>
+            </nav>
+
+            <div class="discord-widget">
+                <h3>Comunidade</h3>
+                <p>Junte-se aos fãs e editores!</p>
+                <a href="https://discord.com" target="_blank" class="discord-btn">
+                    <i class="fa-brands fa-discord"></i> Entrar no Discord
+                </a>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="articles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* Reset e Variáveis */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: sans-serif;
+    background-color: #f6f6f6;
+    color: #202122;
+    line-height: 1.6;
+}
+a { color: #3366cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Cabeçalho */
+#top-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #a2a9b1;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header-content {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+    max-width: 1400px; margin: 0 auto; gap: 15px;
+}
+.logo h1 { font-family: 'Georgia', serif; font-size: 24px; color: #000; display: flex; align-items: center; gap: 8px;}
+.logo span { font-size: 12px; color: #54595d; margin-left: 32px;}
+
+/* Botões do Menu Mobile (Escondidos no PC) */
+#hamburgerBtn, #closeMenuBtn {
+    display: none; background: none; border: none; font-size: 26px; cursor: pointer; color: #3366cc;
+}
+
+/* Pesquisa */
+.search-bar { position: relative; display: flex; }
+.search-bar input {
+    padding: 8px; border: 1px solid #a2a9b1; border-right: none; border-radius: 2px 0 0 2px; width: 250px;
+}
+.search-bar button { 
+    padding: 8px 12px; cursor: pointer; border: 1px solid #a2a9b1; background: #f8f9fa; border-radius: 0 2px 2px 0; color: #3366cc;
+}
+.search-results-dropdown {
+    position: absolute; top: 100%; left: 0; width: 100%; background: white; border: 1px solid #a2a9b1;
+    display: none; max-height: 300px; overflow-y: auto; z-index: 1001; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.search-results-dropdown a { display: block; padding: 10px; border-bottom: 1px solid #eaecf0; color: #000; font-size: 14px;}
+.search-results-dropdown a:hover { background: #eaecf0; }
+
+/* Layout Grid (Conteúdo à esquerda, Sidebar à direita) */
+.container { display: flex; max-width: 1400px; margin: 0 auto; padding: 20px; gap: 30px; }
+
+/* Conteúdo Principal */
+#content {
+    flex-grow: 1; background-color: #ffffff; border: 1px solid #a2a9b1; padding: 35px; min-height: 80vh; border-radius: 2px;
+}
+#content h1 { font-family: 'Georgia', serif; border-bottom: 1px solid #a2a9b1; padding-bottom: 5px; margin-bottom: 20px; font-size: 28px;}
+#content h2 { border-bottom: 1px solid #a2a9b1; padding-bottom: 5px; margin: 30px 0 15px; font-family: 'Georgia', serif; font-size: 22px;}
+#content p { margin-bottom: 15px; text-align: justify;}
+#content ul, #content ol { margin: 0 0 15px 20px; }
+
+/* Sidebar (Barra Lateral) */
+#sidebar { width: 220px; flex-shrink: 0; }
+.nav-menu h3 { font-size: 14px; margin-bottom: 8px; border-bottom: 1px solid #a2a9b1; padding-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+.nav-menu ul { list-style: none; margin-bottom: 25px; }
+.nav-menu li { margin-bottom: 8px; font-size: 13.5px; }
+.nav-menu li i { width: 16px; text-align: center; color: #54595d; margin-right: 5px; }
+
+.discord-widget {
+    background-color: #f8f9fa; border: 1px solid #a2a9b1; padding: 15px 10px; text-align: center; border-radius: 4px;
+}
+.discord-widget h3 { font-size: 14px; margin-bottom: 5px;}
+.discord-widget p { font-size: 12px; color: #54595d; margin-bottom: 10px;}
+.discord-btn {
+    display: inline-block; background-color: #5865F2; color: white; padding: 8px 12px;
+    border-radius: 4px; font-size: 13px; font-weight: bold; width: 100%;
+}
+.discord-btn:hover { background-color: #4752C4; text-decoration: none; color: white;}
+
+/* Infobox (Caixa Lateral Dentro do Artigo) */
+.infobox {
+    float: right; width: 320px; background-color: #f8f9fa; border: 1px solid #a2a9b1;
+    margin: 0 0 20px 20px; padding: 5px; font-size: 13.5px; clear: right;
+}
+.infobox-title { background: #eaecf0; text-align: center; font-weight: bold; font-size: 16px; padding: 8px; }
+.infobox img { width: 100%; height: auto; display: block; }
+.infobox table { width: 100%; border-collapse: collapse; margin-top: 5px;}
+.infobox th, .infobox td { padding: 8px; border-bottom: 1px solid #eaecf0; vertical-align: top; }
+.infobox th { text-align: left; background-color: #f8f9fa; width: 40%; color: #202122;}
+
+/* Índice (TOC) e Categorias */
+.toc { background-color: #f8f9fa; border: 1px solid #a2a9b1; display: inline-block; padding: 15px 25px; margin: 15px 0 20px; font-size: 14px; min-width: 250px; }
+.toc-title { font-weight: bold; text-align: center; margin-bottom: 10px; }
+.toc ul { list-style: none; margin: 0; padding: 0;}
+.toc li { margin-bottom: 6px; }
+.category-list, .all-games-list { list-style: none; margin: 0; padding: 0; }
+.category-list li, .all-games-list li { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+/* Fundo do Menu Mobile */
+#menuOverlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6); z-index: 1500; opacity: 0; transition: opacity 0.3s;
+}
+
+/* =========================================
+   Responsividade Mobile e Menu Hamburger
+   ========================================= */
+@media (max-width: 900px) {
+    /* Cabeçalho */
+    .logo { width: calc(100% - 50px); }
+    #hamburgerBtn { display: block; }
+    .search-bar { width: 100%; }
+    .search-bar input { width: 100%; }
+    
+    /* Grid Mobile */
+    .container { flex-direction: column; padding: 10px; }
+    #content { padding: 20px; }
+    .infobox { float: none; width: 100%; margin: 0 0 20px 0; }
+
+    /* Menu Lateral Deslizante (Off-Canvas) */
+    #sidebar {
+        position: fixed; top: 0; right: -300px; /* Escondido na direita */
+        width: 280px; height: 100vh; background-color: #f6f6f6;
+        z-index: 2000; box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+        padding: 20px; overflow-y: auto;
+        transition: right 0.3s ease;
+    }
+    
+    #closeMenuBtn { 
+        display: block; width: 100%; text-align: right; margin-bottom: 20px; color: #202122;
+    }
+
+    /* Classes Ativas quando o menu é aberto pelo JS */
+    #sidebar.active { right: 0; }
+    #menuOverlay.active { display: block; opacity: 1; }
+}
