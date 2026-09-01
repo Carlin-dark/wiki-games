@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Caso o arquivo real exista, serve ele normalmente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Todas as rotas internas da Wiki devem cair no index da SPA
+RewriteRule ^ /index.html [L,QSA]

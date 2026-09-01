@@ -23,19 +23,19 @@ const articlesDatabase = {
             <div class="home-section">
                 <h3><i class="fa-solid fa-star"></i> Artigos em Destaque</h3>
                 <div class="home-grid">
-                    <a href="/omori" class="home-card">
+                    <a href="/?route=omori" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1150690/header.jpg" alt="OMORI">
                         <span>OMORI</span>
                     </a>
-                    <a href="/slay-the-princess" class="home-card">
+                    <a href="/?route=slay-the-princess" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1989270/header.jpg" alt="Slay the Princess">
                         <span>Slay the Princess</span>
                     </a>
-                    <a href="/doki-doki-literature-club" class="home-card">
+                    <a href="/?route=doki-doki-literature-club" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/698780/header.jpg" alt="Doki Doki Literature Club!">
                         <span>Doki Doki Literature Club!</span>
                     </a>
-                    <a href="/needy-streamer-overload" class="home-card">
+                    <a href="/?route=needy-streamer-overload" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451940/header.jpg" alt="Needy Streamer Overload">
                         <span>Needy Streamer Overload</span>
                     </a>
@@ -45,19 +45,19 @@ const articlesDatabase = {
             <div class="home-section">
                 <h3><i class="fa-solid fa-magnifying-glass"></i> Mistério, Escape e Sobrevivência</h3>
                 <div class="home-grid">
-                    <a href="/zero-escape-the-nonary-games" class="home-card">
+                    <a href="/?route=zero-escape-the-nonary-games" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/477740/header.jpg" alt="Zero Escape">
                         <span>Zero Escape: The Nonary Games</span>
                     </a>
-                    <a href="/danganronpa" class="home-card">
+                    <a href="/?route=danganronpa" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413410/header.jpg" alt="Danganronpa">
                         <span>Danganronpa</span>
                     </a>
-                    <a href="/alice-in-the-nightmare-land" class="home-card">
+                    <a href="/?route=alice-in-the-nightmare-land" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2583430/header.jpg" alt="Alice in the Nightmare Land">
                         <span>Alice in the Nightmare Land</span>
                     </a>
-                    <a href="/corpse-party" class="home-card">
+                    <a href="/?route=corpse-party" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1163660/header.jpg" alt="Corpse Party">
                         <span>Corpse Party</span>
                     </a>
@@ -67,15 +67,15 @@ const articlesDatabase = {
             <div class="home-section">
                 <h3><i class="fa-solid fa-clock"></i> Obras-Primas Intemporais</h3>
                 <div class="home-grid">
-                    <a href="/the-house-in-fata-morgana" class="home-card">
+                    <a href="/?route=the-house-in-fata-morgana" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303310/header.jpg" alt="The House in Fata Morgana">
                         <span>The House in Fata Morgana</span>
                     </a>
-                    <a href="/steins-gate" class="home-card">
+                    <a href="/?route=steins-gate" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412830/header.jpg" alt="Steins;Gate">
                         <span>Steins;Gate</span>
                     </a>
-                    <a href="/higurashi-when-they-cry" class="home-card">
+                    <a href="/?route=higurashi-when-they-cry" class="home-card">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310360/header.jpg" alt="Higurashi When They Cry">
                         <span>Higurashi When They Cry</span>
                     </a>

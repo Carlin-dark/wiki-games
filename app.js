@@ -35,10 +35,16 @@ function getRouteInfo() {
     };
 }
 
-function navigateToRoute(route) {
+function buildRoutePath(route) {
     const safeRoute = String(route || 'home').replace(/^\/+|\/+$/g, '');
-    const nextPath = safeRoute && safeRoute !== 'home' ? '/' + safeRoute : '/';
+    if (!safeRoute || safeRoute === 'home') {
+        return '/?route=home';
+    }
+    return `/?route=${encodeURIComponent(safeRoute)}`;
+}
 
+function navigateToRoute(route) {
+    const nextPath = buildRoutePath(route);
     history.pushState({}, '', nextPath);
     renderPage();
 }
@@ -55,7 +61,11 @@ function isInternalAppLink(href) {
     try {
         const url = new URL(href, window.location.origin);
         if (url.origin !== window.location.origin) return false;
+
         const cleanPath = url.pathname.replace(/^\/+|\/+$/g, '');
+        const cleanQuery = url.searchParams.get('route');
+
+        if (cleanQuery) return true;
         return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath.startsWith('categoria/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
     } catch (error) {
         return false;
@@ -303,7 +313,7 @@ function renderPage() {
 
         if (article.categories) {
             htmlContent += `<hr style="margin: 30px 0 15px;"><p style="font-size:13px;"><i class="fa-solid fa-tags"></i> <strong>Categorias:</strong> `;
-            const catLinks = article.categories.map(cat => `<a href="/categoria/${createSlug(cat)}">${cat}</a>`);
+            const catLinks = article.categories.map(cat => `<a href="/?route=categoria/${createSlug(cat)}">${cat}</a>`);
             htmlContent += catLinks.join(' | ') + `</p>`;
         }
 
@@ -361,7 +371,7 @@ function renderPage() {
         container.innerHTML = `
             <h1><i class="fa-solid fa-triangle-exclamation"></i> Erro 404 - Artigo não encontrado</h1>
             <p>O artigo que você tentou acessar não existe na nossa base de dados.</p>
-            <p>Volte para a <a href="/home">Página Inicial</a> ou use a barra de busca acima.</p>
+            <p>Volte para a <a href="/?route=home">Página Inicial</a> ou use a barra de busca acima.</p>
         `;
     }
 }
@@ -415,8 +425,9 @@ document.addEventListener('click', function (e) {
     if (clickedLink.target === '_blank') return;
 
     e.preventDefault();
-    const path = new URL(href, window.location.origin).pathname;
-    const route = path === '/' ? 'home' : path.replace(/^\/+|\/+$/g, '');
+
+    const url = new URL(href, window.location.origin);
+    const route = url.searchParams.get('route') || url.pathname.replace(/^\/+|\/+$/g, '') || 'home';
     navigateToRoute(route);
 });
 

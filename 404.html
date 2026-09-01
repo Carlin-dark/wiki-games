@@ -9,7 +9,11 @@
         (function() {
             try {
                 const rawPath = window.location.pathname || '/';
-                const route = rawPath.replace(/^\/+|\/+$/g, '').replace(/index\.html$/, '');
+                const route = rawPath
+                    .replace(/^\/+|\/+$/g, '')
+                    .replace(/index\.html$/, '')
+                    .replace(/^\?/, '');
+
                 const target = route && route !== '' ? '/?route=' + encodeURIComponent(route) : '/';
                 setTimeout(function() {
                     window.location.replace(target);
