@@ -1,46 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-=========================================================
- ATENÇÃO: Troque "https://seusite.com" pela sua URL real!
- Sempre que cadastrar um jogo no articles.js, 
- copie e cole um bloco <url> aqui e mude o link.
-=========================================================
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    
+
+    <!-- Página Inicial -->
     <url>
-        <loc>https://seusite.com/</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://carlin-dark.github.io/wiki-games/#/home</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
+    <!-- Todos os Jogos / Catálogo -->
     <url>
-        <loc>https://seusite.com/#/alice-in-the-nightmare-land</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://carlin-dark.github.io/wiki-games/#/all</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Jogos do articlesDatabase -->
+    <url>
+        <loc>https://carlin-dark.github.io/wiki-games/#/alice-in-the-nightmare-land</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://seusite.com/#/doki-doki-literature-club</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://carlin-dark.github.io/wiki-games/#/doki-doki-literature-club</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://seusite.com/#/doki-doki-literature-club-plus</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://carlin-dark.github.io/wiki-games/#/doki-doki-literature-club-plus</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://seusite.com/#/the-house-in-fata-morgana</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://carlin-dark.github.io/wiki-games/#/the-house-in-fata-morgana</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://carlin-dark.github.io/wiki-games/#/steins-gate</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://carlin-dark.github.io/wiki-games/#/danganronpa</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://carlin-dark.github.io/wiki-games/#/zero-escape-the-nonary-games</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://carlin-dark.github.io/wiki-games/#/higurashi-when-they-cry</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 
 </urlset>
