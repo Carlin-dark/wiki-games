@@ -1,44 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-=========================================================
- ATENÇÃO: Troque "https://seusite.com" pela sua URL real!
- Sempre que cadastrar um jogo no articles.js, 
- copie e cole um bloco <url> aqui e mude o link.
-=========================================================
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    
     <url>
-        <loc>https://seusite.com/</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://wikigames.duckdns.org/</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://seusite.com/#/alice-in-the-nightmare-land</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://wikigames.duckdns.org/all</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/alice-in-the-nightmare-land</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://seusite.com/#/doki-doki-literature-club</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://wikigames.duckdns.org/doki-doki-literature-club</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://seusite.com/#/doki-doki-literature-club-plus</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://wikigames.duckdns.org/doki-doki-literature-club-plus</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://seusite.com/#/the-house-in-fata-morgana</loc>
-        <lastmod>2023-11-01</lastmod>
+        <loc>https://wikigames.duckdns.org/the-house-in-fata-morgana</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/steins-gate</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/danganronpa</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/zero-escape-the-nonary-games</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/higurashi-when-they-cry</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/omori</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/slay-the-princess</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/corpse-party</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/umineko-when-they-cry</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/fate-stay-night-remastered</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/ace-attorney-trilogy</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/ai-the-somnium-files</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/clannad</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/raging-loop</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/your-turn-to-die</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/va-11-hall-a</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/witch-on-the-holy-night</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/the-silver-case</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/chaos-child</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/class-of-09</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/milk-inside-a-bag</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/428-shibuya-scramble</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/saya-no-uta</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://wikigames.duckdns.org/needy-streamer-overload</loc>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
