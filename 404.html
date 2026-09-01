@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Não Encontrada - WikiGames</title>
     <link rel="stylesheet" href="style.css">
-    <meta http-equiv="refresh" content="3;url=/">
+    <script>
+        (function() {
+            try {
+                const rawPath = window.location.pathname || '/';
+                const route = rawPath.replace(/^\/+|\/+$/g, '').replace(/index\.html$/, '');
+                const target = route && route !== '' ? '/?route=' + encodeURIComponent(route) : '/';
+                setTimeout(function() {
+                    window.location.replace(target);
+                }, 3000);
+            } catch (error) {
+                setTimeout(function() {
+                    window.location.replace('/');
+                }, 3000);
+            }
+        })();
+    </script>
 </head>
 <body style="text-align:center; padding-top: 100px; background: #f6f6f6; font-family: sans-serif;">
     <h1 style="font-size: 50px;">404</h1>

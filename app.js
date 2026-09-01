@@ -11,6 +11,7 @@ function createSlug(text) {
 function getRouteInfo() {
     const hashValue = window.location.hash || '';
     const pathnameValue = window.location.pathname || '/';
+    const searchParams = new URLSearchParams(window.location.search || '');
 
     let routeFromHash = '';
     if (hashValue.startsWith('#/')) {
@@ -19,17 +20,46 @@ function getRouteInfo() {
         routeFromHash = hashValue.substring(1);
     }
 
+    const routeFromQuery = searchParams.get('route') || '';
+
     const normalizedPath = pathnameValue.endsWith('/index.html') || pathnameValue.endsWith('index.html') || pathnameValue === '/'
         ? 'home'
         : pathnameValue.replace(/^\/+|\/+$/g, '');
 
-    const rawRoute = routeFromHash || normalizedPath || 'home';
+    const rawRoute = routeFromHash || routeFromQuery || normalizedPath || 'home';
     const [route, anchor] = rawRoute.split('#');
 
     return {
         route: route && route !== '' ? route : 'home',
         anchor: anchor || ''
     };
+}
+
+function navigateToRoute(route) {
+    const safeRoute = String(route || 'home').replace(/^\/+|\/+$/g, '');
+    const nextPath = safeRoute && safeRoute !== 'home' ? '/' + safeRoute : '/';
+
+    history.pushState({}, '', nextPath);
+    renderPage();
+}
+
+function isInternalAppLink(href) {
+    if (!href || href.startsWith('http://') || href.startsWith('https://') || href.startsWith('//') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+        return false;
+    }
+
+    if (href.startsWith('#')) {
+        return false;
+    }
+
+    try {
+        const url = new URL(href, window.location.origin);
+        if (url.origin !== window.location.origin) return false;
+        const cleanPath = url.pathname.replace(/^\/+|\/+$/g, '');
+        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath.startsWith('categoria/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
+    } catch (error) {
+        return false;
+    }
 }
 
 function buildRoutePath(route) {
@@ -375,6 +405,19 @@ searchInput.addEventListener('input', function () {
 
 document.addEventListener('click', function (e) {
     if (!searchInput.contains(e.target)) searchResults.style.display = 'none';
+
+    const clickedLink = e.target.closest('a');
+    if (!clickedLink) return;
+
+    const href = clickedLink.getAttribute('href');
+    if (!href || !isInternalAppLink(href)) return;
+
+    if (clickedLink.target === '_blank') return;
+
+    e.preventDefault();
+    const path = new URL(href, window.location.origin).pathname;
+    const route = path === '/' ? 'home' : path.replace(/^\/+|\/+$/g, '');
+    navigateToRoute(route);
 });
 
 document.getElementById('randomPageBtn').addEventListener('click', function (e) {
