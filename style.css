@@ -1,134 +1,319 @@
-/* Reset e Variáveis */
+/* ==========================================================
+   WIKIGAMES - TEMA VISUAL NOVEL DATABASE (ESTILO VNDB)
+   ========================================================== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-    font-family: sans-serif;
-    background-color: #f6f6f6;
-    color: #202122;
-    line-height: 1.6;
-}
-a { color: #3366cc; text-decoration: none; }
-a:hover { text-decoration: underline; }
 
-/* Cabeçalho */
+body {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    background-color: #05070a;
+    color: #c5c8c6;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Fundo Atmosférico com a Imagem do DDLC */
+.vndb-bg-wrapper {
+    min-height: 100vh;
+    /* Reduzi a escuridão do gradiente para mostrar bem a imagem */
+    background: linear-gradient(rgba(5, 7, 10, 0.4), rgba(5, 7, 10, 0.6)), 
+                url('https://i.8upload.com/image/609e2998ae1139ae/caefdfcdf0a24a1f8dfae4e80cb65a6e.jpg') no-repeat center top fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+a { color: #6897bb; text-decoration: none; }
+a:hover { color: #80bcd8; text-decoration: underline; }
+
+/* Cabeçalho Superior Estilo Database (Semi-Transparente) */
 #top-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #a2a9b1;
-    padding: 15px 20px;
+    background: rgba(15, 22, 34, 0.85);
+    backdrop-filter: blur(2px); /* Efeito suave de vidro */
+    border-bottom: 2px solid #283850;
+    padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+
 .header-content {
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
-    max-width: 1400px; margin: 0 auto; gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.logo h1 { font-family: 'Georgia', serif; font-size: 24px; color: #000; display: flex; align-items: center; gap: 8px;}
-.logo span { font-size: 12px; color: #54595d; margin-left: 32px;}
 
-/* Botões do Menu Mobile (Escondidos no PC) */
+.logo a { text-decoration: none; }
+.logo h1 { 
+    font-family: Georgia, serif; 
+    font-size: 22px; 
+    color: #e0e6ed; 
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+.logo span { 
+    font-size: 11px; 
+    color: #7a8b9e; 
+    font-style: italic;
+    display: block;
+}
+
 #hamburgerBtn, #closeMenuBtn {
-    display: none; background: none; border: none; font-size: 26px; cursor: pointer; color: #3366cc;
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #a9c5df;
 }
 
-/* Pesquisa */
+/* Barra de Pesquisa Compacta */
 .search-bar { position: relative; display: flex; }
 .search-bar input {
-    padding: 8px; border: 1px solid #a2a9b1; border-right: none; border-radius: 2px 0 0 2px; width: 250px;
+    padding: 6px 10px;
+    background: rgba(11, 17, 24, 0.8);
+    border: 1px solid #283850;
+    border-right: none;
+    color: #fff;
+    border-radius: 3px 0 0 3px;
+    width: 240px;
+    font-size: 12px;
 }
-.search-bar button { 
-    padding: 8px 12px; cursor: pointer; border: 1px solid #a2a9b1; background: #f8f9fa; border-radius: 0 2px 2px 0; color: #3366cc;
+.search-bar input:focus { outline: none; border-color: #4a75a0; background: rgba(11, 17, 24, 0.95); }
+.search-bar button {
+    padding: 6px 12px;
+    background: rgba(28, 43, 62, 0.9);
+    border: 1px solid #283850;
+    color: #a9c5df;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
 }
+.search-bar button:hover { background: #283850; }
+
 .search-results-dropdown {
-    position: absolute; top: 100%; left: 0; width: 100%; background: white; border: 1px solid #a2a9b1;
-    display: none; max-height: 300px; overflow-y: auto; z-index: 1001; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 24, 34, 0.95);
+    backdrop-filter: blur(4px);
+    border: 1px solid #283850;
+    display: none;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1001;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.7);
 }
-.search-results-dropdown a { display: block; padding: 10px; border-bottom: 1px solid #eaecf0; color: #000; font-size: 14px;}
-.search-results-dropdown a:hover { background: #eaecf0; }
+.search-results-dropdown a {
+    display: block;
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(26, 38, 54, 0.8);
+    color: #c5c8c6;
+    font-size: 12px;
+}
+.search-results-dropdown a:hover { background: #1c2b3e; color: #fff; text-decoration: none; }
 
-/* Layout Grid (Conteúdo à esquerda, Sidebar à direita) */
-.container { display: flex; max-width: 1400px; margin: 0 auto; padding: 20px; gap: 30px; }
+/* Container Geral */
+.container {
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
+    gap: 20px;
+    flex-grow: 1;
+}
 
-/* Conteúdo Principal */
+/* Conteúdo Principal (Transparente) */
 #content {
-    flex-grow: 1; background-color: #ffffff; border: 1px solid #a2a9b1; padding: 35px; min-height: 80vh; border-radius: 2px;
+    flex-grow: 1;
+    background-color: rgba(15, 22, 34, 0.85); /* Fundo Semi-Transparente */
+    backdrop-filter: blur(2px);
+    border: 1px solid #202e42;
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
-#content h1 { font-family: 'Georgia', serif; border-bottom: 1px solid #a2a9b1; padding-bottom: 5px; margin-bottom: 20px; font-size: 28px;}
-#content h2 { border-bottom: 1px solid #a2a9b1; padding-bottom: 5px; margin: 30px 0 15px; font-family: 'Georgia', serif; font-size: 22px;}
-#content p { margin-bottom: 15px; text-align: justify;}
-#content ul, #content ol { margin: 0 0 15px 20px; }
 
-/* Sidebar (Barra Lateral) */
-#sidebar { width: 220px; flex-shrink: 0; }
-.nav-menu h3 { font-size: 14px; margin-bottom: 8px; border-bottom: 1px solid #a2a9b1; padding-bottom: 4px; display: flex; align-items: center; gap: 6px; }
-.nav-menu ul { list-style: none; margin-bottom: 25px; }
-.nav-menu li { margin-bottom: 8px; font-size: 13.5px; }
-.nav-menu li i { width: 16px; text-align: center; color: #54595d; margin-right: 5px; }
-
-.discord-widget {
-    background-color: #f8f9fa; border: 1px solid #a2a9b1; padding: 15px 10px; text-align: center; border-radius: 4px;
+#content h1 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: #e0e6ed;
+    border-bottom: 1px solid rgba(32, 46, 66, 0.8);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
 }
-.discord-widget h3 { font-size: 14px; margin-bottom: 5px;}
-.discord-widget p { font-size: 12px; color: #54595d; margin-bottom: 10px;}
-.discord-btn {
-    display: inline-block; background-color: #5865F2; color: white; padding: 8px 12px;
-    border-radius: 4px; font-size: 13px; font-weight: bold; width: 100%;
-}
-.discord-btn:hover { background-color: #4752C4; text-decoration: none; color: white;}
 
-/* Infobox (Caixa Lateral Dentro do Artigo) */
+#content h2 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: #d0dbe7;
+    border-bottom: 1px solid rgba(26, 38, 54, 0.8);
+    padding-bottom: 5px;
+    margin: 25px 0 12px;
+}
+
+#content p { margin-bottom: 12px; color: #b8c2cd; }
+#content ul, #content ol { margin: 0 0 15px 20px; color: #b8c2cd; }
+#content li { margin-bottom: 4px; }
+
+/* Infobox Lateral */
 .infobox {
-    float: right; width: 320px; background-color: #f8f9fa; border: 1px solid #a2a9b1;
-    margin: 0 0 20px 20px; padding: 5px; font-size: 13.5px; clear: right;
+    float: right;
+    width: 280px;
+    background-color: rgba(11, 17, 24, 0.7);
+    border: 1px solid #283850;
+    margin: 0 0 15px 20px;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 3px;
 }
-.infobox-title { background: #eaecf0; text-align: center; font-weight: bold; font-size: 16px; padding: 8px; }
-.infobox img { width: 100%; height: auto; display: block; }
-.infobox table { width: 100%; border-collapse: collapse; margin-top: 5px;}
-.infobox th, .infobox td { padding: 8px; border-bottom: 1px solid #eaecf0; vertical-align: top; }
-.infobox th { text-align: left; background-color: #f8f9fa; width: 40%; color: #202122;}
 
-/* Índice (TOC) e Categorias */
-.toc { background-color: #f8f9fa; border: 1px solid #a2a9b1; display: inline-block; padding: 15px 25px; margin: 15px 0 20px; font-size: 14px; min-width: 250px; }
-.toc-title { font-weight: bold; text-align: center; margin-bottom: 10px; }
-.toc ul { list-style: none; margin: 0; padding: 0;}
-.toc li { margin-bottom: 6px; }
+.infobox-title {
+    background: rgba(22, 32, 46, 0.9);
+    text-align: center;
+    font-weight: bold;
+    color: #e0e6ed;
+    padding: 6px;
+    font-size: 13px;
+    border-bottom: 1px solid #283850;
+}
+
+.infobox img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #283850;
+}
+
+.infobox table { width: 100%; border-collapse: collapse; }
+.infobox th, .infobox td { padding: 6px; border-bottom: 1px solid rgba(22, 32, 46, 0.5); vertical-align: top; }
+.infobox th { text-align: left; background-color: rgba(15, 22, 34, 0.6); width: 38%; color: #8fa3bc; }
+.infobox td { color: #c5c8c6; }
+
+/* Índice (TOC) */
+.toc {
+    background-color: rgba(11, 17, 24, 0.7);
+    border: 1px solid #202e42;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 15px 0 20px;
+    font-size: 13px;
+    border-radius: 3px;
+    min-width: 220px;
+}
+.toc-title { font-weight: bold; text-align: center; margin-bottom: 8px; color: #d0dbe7; border-bottom: 1px solid rgba(26, 38, 54, 0.8); padding-bottom: 4px;}
+.toc ul { list-style: none; margin: 0; padding: 0; }
+.toc li { margin-bottom: 5px; }
+
+/* Listas de Categorias / Todos os Jogos */
 .category-list, .all-games-list { list-style: none; margin: 0; padding: 0; }
-.category-list li, .all-games-list li { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.category-list li, .all-games-list li { 
+    margin-bottom: 12px; 
+    border-bottom: 1px solid rgba(22, 32, 46, 0.6); 
+    padding-bottom: 12px; 
+}
+.category-list h3, .all-games-list h3 { font-size: 16px; margin-bottom: 4px; font-family: Georgia, serif; }
+.category-list p, .all-games-list p { font-size: 12px; color: #8fa3bc; margin: 0; }
 
-/* Fundo do Menu Mobile */
-#menuOverlay {
-    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.6); z-index: 1500; opacity: 0; transition: opacity 0.3s;
+/* Sidebar (Barra Lateral na Direita - Semi-Transparente) */
+#sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* =========================================
-   Responsividade Mobile e Menu Hamburger
-   ========================================= */
+.sidebar-box {
+    background-color: rgba(15, 22, 34, 0.85);
+    backdrop-filter: blur(2px);
+    border: 1px solid #202e42;
+    border-radius: 4px;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.sidebar-box h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #7a8b9e;
+    border-bottom: 1px solid rgba(32, 46, 66, 0.8);
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+.vndb-menu { list-style: none; }
+.vndb-menu li { margin-bottom: 6px; font-size: 12.5px; }
+.vndb-menu li a { display: block; color: #a9c5df; padding: 2px 0; }
+.vndb-menu li a:hover { color: #fff; padding-left: 3px; text-decoration: none; }
+.vndb-menu li i { width: 16px; text-align: center; color: #637d9c; margin-right: 4px; }
+
+.discord-box p { font-size: 11px; color: #7a8b9e; margin-bottom: 8px; }
+.discord-btn {
+    display: block;
+    background-color: #5865F2;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.discord-btn:hover { background-color: #4752C4; color: white; text-decoration: none; }
+
+/* Rodapé */
+.vndb-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: #637d9c;
+    border-top: 1px solid rgba(22, 32, 46, 0.5);
+    margin-top: 40px;
+}
+
+/* Overlay para Mobile Menu */
+#menuOverlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 1500;
+}
+
+/* Responsividade Mobile e Hamburger */
 @media (max-width: 900px) {
-    /* Cabeçalho */
-    .logo { width: calc(100% - 50px); }
+    .header-content { flex-direction: column; align-items: stretch; }
+    .logo { display: flex; justify-content: space-between; align-items: center; width: 100%; }
     #hamburgerBtn { display: block; }
-    .search-bar { width: 100%; }
+    .search-bar { width: 100%; margin-top: 5px; }
     .search-bar input { width: 100%; }
-    
-    /* Grid Mobile */
+
     .container { flex-direction: column; padding: 10px; }
-    #content { padding: 20px; }
-    .infobox { float: none; width: 100%; margin: 0 0 20px 0; }
+    #content { padding: 15px; }
+    .infobox { float: none; width: 100%; margin: 0 0 15px 0; }
 
-    /* Menu Lateral Deslizante (Off-Canvas) */
     #sidebar {
-        position: fixed; top: 0; right: -300px; /* Escondido na direita */
-        width: 280px; height: 100vh; background-color: #f6f6f6;
-        z-index: 2000; box-shadow: -2px 0 10px rgba(0,0,0,0.3);
-        padding: 20px; overflow-y: auto;
+        position: fixed;
+        top: 0; right: -300px;
+        width: 260px; height: 100vh;
+        background-color: rgba(15, 22, 34, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 2000;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.8);
+        padding: 20px;
+        overflow-y: auto;
         transition: right 0.3s ease;
+        gap: 20px;
     }
     
-    #closeMenuBtn { 
-        display: block; width: 100%; text-align: right; margin-bottom: 20px; color: #202122;
-    }
-
-    /* Classes Ativas quando o menu é aberto pelo JS */
+    #closeMenuBtn { display: block; text-align: right; margin-bottom: 10px; }
     #sidebar.active { right: 0; }
-    #menuOverlay.active { display: block; opacity: 1; }
+    #menuOverlay.active { display: block; }
 }
