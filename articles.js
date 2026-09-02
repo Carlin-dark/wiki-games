@@ -1049,6 +1049,300 @@ const articlesDatabase = {
             </div>
         `
     },
+    "paranormasight-seven-mysteries": {
+        title: "PARANORMASIGHT: The Seven Mysteries of Honjo",
+        categories: ["Visual Novel", "Mistério", "Sobrenatural", "Horror"],
+        summary: "Uma visual novel de mistério e horror sobrenatural baseada em lendas urbanas mortais de Tóquio.",
+        infobox: {
+            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106530/header.jpg",
+            data: {
+                "Desenvolvedor": "Square Enix",
+                "Gêneros": "Visual Novel, Horror, Aventura",
+                "Lançamento": "8 de Março de 2023",
+                "Plataformas": "PC, Switch, iOS, Android"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Maldições e Investigação" },
+            { id: "lendas", text: "3. Os Sete Mistérios" }
+        ],
+        content: `
+            <p><strong>PARANORMASIGHT: The Seven Mysteries of Honjo</strong> é uma aclamada visual novel de terror e investigação desenvolvida pela <a href="https://square-enix-games.com/" target="_blank">Square Enix</a>. Ambientada no Japão do final do século XX (Período Showa), a obra mergulha os jogadores em uma atmosfera sombria, onde lendas urbanas do bairro de Sumida ganham vida através de maldições mortais.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>A história acompanha múltiplos protagonistas, começando por Shogo Okiie, um trabalhador comum que se envolve com os ocultos "Sete Mistérios de Honjo" após uma tragédia no parque Kinshibori. Logo, descobre-se que portadores de pedras amaldiçoadas estão participando de um jogo mortal: quem conseguir coletar almas suficientes poderá usar o poder do Rito da Ressurreição.</p>
+
+            <h2 id="mecanicas">Maldições e Investigação</h2>
+            <p>O jogo apresenta uma visão em 360 graus para investigação dos cenários. A mecânica principal envolve o uso de <em>Maldições</em>: cada personagem possui uma condição específica para ativar sua maldição e assassinar outros portadores. O terror psicológico se baseia em descobrir a condição de ativação do inimigo antes que ele descubra a sua, criando batalhas mentais intensas.</p>
+
+            <h2 id="lendas">Os Sete Mistérios</h2>
+            <ul>
+                <li><strong>A Folha de Junco de um Lado Só:</strong> Uma das lendas centrais que desencadeia as primeiras mortes do jogo.</li>
+                <li><strong>O Fosso de Pesca da Mentira:</strong> Relacionado a afogamentos e desaparecimentos misteriosos.</li>
+                <li><strong>A Luz Que Guia:</strong> Uma aparição sobrenatural que atrai os curiosos para a morte.</li>
+            </ul>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2106530/PARANORMASIGHT_The_Seven_Mysteries_of_Honjo/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.nintendo.com/store/products/paranormasight-the-seven-mysteries-of-honjo-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo Switch</a>
+            </div>
+        `
+    },
+
+    "zero-escape-999": {
+        title: "Zero Escape: Nine Hours, Nine Persons, Nine Doors",
+        categories: ["Visual Novel", "Mistério", "Escape Room", "Terror Psicológico"],
+        summary: "Nove pessoas são sequestradas e forçadas a participar de um jogo mortal de escape e traição.",
+        infobox: {
+            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/477740/header.jpg",
+            data: {
+                "Desenvolvedor": "Spike Chunsoft",
+                "Gêneros": "Visual Novel, Puzzle, Death Game",
+                "Lançamento": "10 de Dezembro de 2009",
+                "Plataformas": "Nintendo DS, PC, PS4, Vita, Xbox"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. O Jogo Nonário (Nonary Game)" },
+            { id: "personagens", text: "3. Os Participantes" }
+        ],
+        content: `
+            <p><strong>Nine Hours, Nine Persons, Nine Doors (999)</strong> é o primeiro título da aclamada trilogia <a href="https://vndb.org/v3112" target="_blank">Zero Escape</a>. Criado por Kotaro Uchikoshi, o jogo combina narrativas densas de ficção científica e filosofia com salas de escape incrivelmente bem desenhadas. O clima constante de paranóia define a experiência.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>O estudante universitário Junpei acorda em uma cabine de navio inundada com um bracelete marcando o número "5". Ele logo descobre que foi sequestrado pelo misterioso "Zero" junto com outras oito pessoas. Eles estão a bordo de uma réplica do Titanic e têm exatamente nove horas para encontrar a porta com o número 9 antes que o navio afunde. Se quebrarem as regras, uma bomba explodirá em seus estômagos.</p>
+
+            <h2 id="mecanicas">O Jogo Nonário (Nonary Game)</h2>
+            <p>A jogabilidade é dividida em duas partes: <em>Novel</em> (onde a história e as escolhas morais ocorrem) e <em>Escape</em> (onde o jogador deve resolver puzzles complexos de point-and-click para sair das salas). A matemática das "raízes digitais" dita quais personagens podem entrar em quais portas, forçando alianças e traições.</p>
+
+            <h2 id="personagens">Os Participantes</h2>
+            <ul>
+                <li><strong>Junpei (5):</strong> O protagonista principal, buscando entender os motivos do sequestro.</li>
+                <li><strong>Akane / June (6):</strong> Amiga de infância de Junpei que esconde segredos sobre o passado.</li>
+                <li><strong>Clover (4) & Snake (2):</strong> Irmãos com uma conexão profunda, sendo Snake cego, mas extremamente astuto.</li>
+                <li><strong>Seven (7):</strong> Um homem amnésico com porte físico intimidador.</li>
+            </ul>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (The Nonary Games)</a>
+            </div>
+        `
+    },
+
+    "death-mark": {
+        title: "Spirit Hunter: Death Mark",
+        categories: ["Visual Novel", "Terror Psicológico", "Investigação", "Horror"],
+        summary: "Investigue lendas urbanas macabras em Tóquio para se livrar de uma maldição que garante sua morte ao amanhecer.",
+        infobox: {
+            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/980830/header.jpg",
+            data: {
+                "Desenvolvedor": "Experience Inc.",
+                "Gêneros": "Terror, Aventura, Investigação",
+                "Lançamento": "1 de Junho de 2017",
+                "Plataformas": "PC, PS4, Vita, Switch"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Live or Die (Viva ou Morra)" },
+            { id: "fantasmas", text: "3. Os Espíritos" }
+        ],
+        content: `
+            <p><strong>Spirit Hunter: Death Mark</strong>, conhecido no Japão como <em>Shiin</em>, é o primeiro jogo da série Spirit Hunter da produtora <a href="http://www.experience.jp/" target="_blank">Experience</a>. Diferente do horror ocidental focado em sustos repentinos (jumpscares), Death Mark brilha no terror psicológico opressivo, folclore japonês grotesco e um design de som perturbador.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>Um boato estranho se espalha pela Cidade H: aqueles que possuem a "Marca" — um sinal bizarro no corpo que se assemelha a uma mordida de cachorro — morrerão ao amanhecer de forma horrenda. O protagonista acorda amnésico diante da Mansão Kujou. Lá, uma boneca falante chamada Mary informa que ele está marcado. Para sobreviver, ele precisará investigar os espíritos vingativos da cidade.</p>
+
+            <h2 id="mecanicas">Live or Die (Viva ou Morra)</h2>
+            <p>Durante a exploração em primeira pessoa de locais abandonados com o uso de uma lanterna, o jogador enfrentará os espíritos. Nas sequências de <em>Live or Die</em>, você tem apenas alguns segundos para escolher a resposta ou ação correta com base nas pistas coletadas. Errar drena sua "Alma" (HP), resultando em mortes brutais. Além disso, a escolha de como purificar o espírito dita se seus parceiros sobrevivem ou não.</p>
+
+            <h2 id="fantasmas">Os Espíritos</h2>
+            <ul>
+                <li><strong>Hanahiko:</strong> O espírito de uma criança em uma escola em ruínas que odeia adultos e espelhos.</li>
+                <li><strong>Shimi-O (Homem Mancha):</strong> Uma entidade horrenda que habita a floresta de suicídios local.</li>
+                <li><strong>Hanayome (A Noiva):</strong> O espírito trágico e furioso que aterroriza cabines telefônicas abandonadas.</li>
+            </ul>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/980830/Spirit_Hunter_Death_Mark/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+            </div>
+        `
+    },
+
+    "slay-the-princess": {
+        title: "Slay the Princess",
+        categories: ["Visual Novel", "Terror Psicológico", "Indie", "Escolhas"],
+        summary: "Você está em um caminho na floresta. No final do caminho há uma cabana. E no porão dessa cabana há uma Princesa. Você deve matá-la.",
+        infobox: {
+            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1989270/header.jpg",
+            data: {
+                "Desenvolvedor": "Black Tabby Games",
+                "Gêneros": "Horror Psicológico, Metaficção, Indie",
+                "Lançamento": "23 de Outubro de 2023",
+                "Plataformas": "PC, Mac, Linux"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Escolhas e Consequências" },
+            { id: "vozes", text: "3. As Vozes na Cabeça" }
+        ],
+        content: `
+            <p><strong>Slay the Princess</strong> é uma obra-prima do horror metaficcional desenvolvida pelo estúdio indie <a href="https://blacktabbygames.com/" target="_blank">Black Tabby Games</a>. Totalmente desenhado à mão com um traço a lápis visceral e totalmente dublado por apenas duas pessoas (Jonathan Sims e Nichole Goodnight), o jogo brinca com a percepção do jogador, a confiança no narrador e os ciclos de vida e morte.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>O conceito é enganosamente simples. Um Narrador onisciente diz que você tem uma única missão: entrar em uma cabana e matar a Princesa acorrentada no porão. Se você não fizer isso, ela destruirá o mundo inteiro. Ela fará de tudo para impedi-lo. Ela vai mentir, seduzir, ameaçar ou implorar. Mas você não deve acreditar nela... ou deve?</p>
+
+            <h2 id="mecanicas">Escolhas e Consequências</h2>
+            <p>O jogo funciona na base de <em>loops</em> temporais (ciclos). Se você morrer, ou se ela morrer, o mundo reseta, mas a cabana e a Princesa mudam fisicamente dependendo das escolhas que você fez no loop anterior. Se você hesitou, ela pode se tornar uma entidade monstruosa e dominadora; se você tentou salvá-la de forma romântica, a dinâmica do jogo se transforma completamente.</p>
+
+            <h2 id="vozes">As Vozes na Cabeça</h2>
+            <p>Conforme os loops avançam, fragmentos da sua mente se manifestam como vozes distintas argumentando com você e com o Narrador:</p>
+            <ul>
+                <li><strong>O Herói:</strong> A voz original que tenta fazer a coisa certa.</li>
+                <li><strong>O Cético:</strong> Desconfia de tudo que o Narrador fala.</li>
+                <li><strong>O Paranoico, O Frio, O Teimoso:</strong> Mais de uma dúzia de vozes que mudam o tom da narrativa dependendo de como você morreu na vida anterior.</li>
+            </ul>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1989270/Slay_the_Princess/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://blacktabbygames.itch.io/slay-the-princess" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
+            </div>
+        `
+    },
+
+    "the-sekimeiya-spun-glass": {
+        title: "The Sekimeiya: Spun Glass",
+        categories: ["Visual Novel", "Mistério", "Indie"],
+        summary: "Um mistério de sala trancada incrivelmente complexo envolvendo 400 anos de história e pedras preciosas.",
+        infobox: {
+            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1432190/header.jpg",
+            data: {
+                "Desenvolvedor": "Trinimac",
+                "Gêneros": "Visual Novel, Mistério de Dedução",
+                "Lançamento": "6 de Maio de 2021",
+                "Plataformas": "PC"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Dedução e Ferramentas" },
+            { id: "complexidade", text: "3. Nível de Complexidade" }
+        ],
+        content: `
+            <p><strong>The Sekimeiya: Spun Glass</strong> é um thriller de mistério indie famoso na comunidade <a href="https://vndb.org/" target="_blank">VNDB</a> por ser um dos enredos mais intrincados, complexos e exigentes já escritos. Feito para fãs hardcore de deduções de "Salas Trancadas", a obra não entrega as respostas facilmente nas mãos do jogador.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>Oito pessoas se encontram presas em um misterioso edifício em formato de torre chamado Sekimeiya. Sem saída visível e sem memória de como chegaram lá, o grupo descobre a existência de habilidades estranhas ligadas a cristais. Logo, eventos impossíveis começam a ocorrer, forçando o grupo a desvendar as leis físicas do edifício e a história centenária por trás de sua construção para escapar com vida.</p>
+
+            <h2 id="mecanicas">Dedução e Ferramentas</h2>
+            <p>Para lidar com o volume insano de informações, o jogo fornece um conjunto de ferramentas dentro da interface: uma função de busca de texto completa de diálogos anteriores, um bloco de notas virtual para o jogador e mapas detalhados da estrutura. O jogo espera que o jogador teorize, anote horários, localizações de personagens e anomalias físicas ativamente.</p>
+
+            <h2 id="complexidade">Nível de Complexidade</h2>
+            <ul>
+                <li>Não há "escolhas erradas" clássicas, mas momentos onde você deve digitar as respostas para os mistérios baseando-se unicamente nas suas próprias deduções lógicas.</li>
+                <li>O enredo exige atenção a micro-detalhes, diálogos ambíguos e saltos de linha do tempo.</li>
+            </ul>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1432190/The_Sekimeiya_Spun_Glass/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+            </div>
+        `
+    },
+
+    "chaos-head-noah": {
+        title: "CHAOS;HEAD NOAH",
+        categories: ["Visual Novel", "Terror Psicológico", "Ficção Científica"],
+        summary: "Um otaku com delírios psicóticos é arrastado para uma série de bizarros assassinatos em série em Shibuya.",
+        infobox: {
+            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1961950/header.jpg",
+            data: {
+                "Desenvolvedor": "MAGES. Inc.",
+                "Gêneros": "Horror Psicológico, Sci-Fi",
+                "Lançamento": "26 de Fevereiro de 2009",
+                "Plataformas": "PC, Switch, PS3, Vita"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. O Sistema Delusion Trigger" },
+            { id: "universo", text: "3. Science Adventure" }
+        ],
+        content: `
+            <p><strong>CHAOS;HEAD NOAH</strong> é o título fundamental que deu origem à aclamada série <em>Science Adventure</em> (a mesma de Steins;Gate). A versão <em>NOAH</em> é a versão definitiva e sem cortes do jogo original, entregando uma das experiências mais perturbadoras, esquizofrênicas e mergulhadas na cultura otaku do final dos anos 2000.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>Takumi Nishijou é um estudante recluso que vive em um container em Shibuya, passando os dias jogando MMOs e cercado por <em>figures</em> de anime. A cidade entra em pânico devido a uma série de assassinatos bizarros apelidados de "New Generation Madness" (Nova Loucura da Geração). Takumi tenta ignorar tudo, até que começa a sofrer alucinações onde ficção e realidade se misturam, e as pessoas ao seu redor parecem ter ligações diretas com as mortes macabras.</p>
+
+            <h2 id="mecanicas">O Sistema Delusion Trigger</h2>
+            <p>No lugar das escolhas convencionais de diálogos, o jogo utiliza o <em>Delusion Trigger</em> (Gatilho de Delírio). O jogador pode escolher como Takumi vai interpretar a realidade naquele momento:</p>
+            <ul>
+                <li><strong>Delírio Positivo (Verde):</strong> Takumi imagina uma situação cômica ou erótica, fugindo da realidade estressante.</li>
+                <li><strong>Delírio Negativo (Vermelho):</strong> Takumi entra em pânico total, alucinando mortes brutais, perseguições e horror gore.</li>
+                <li><strong>Ficar Neutro:</strong> Ignorar o gatilho mantém Takumi preso à realidade seca (o que nem sempre é a opção mais segura).</li>
+            </ul>
+
+            <h2 id="universo">Science Adventure</h2>
+            <p>A obra introduz conceitos de manipulação do oceano de Dirac, sincronicidade de pensamentos e projeções visuais que moldam o universo compartilhado da <a href="https://en.wikipedia.org/wiki/Science_Adventure" target="_blank">MAGES</a>, servindo de prelúdio para CHAOS;CHILD.</p>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1961950/CHAOSHEAD_NOAH/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+            </div>
+        `
+    },
+
+    "13-sentinels-aegis-rim": {
+        title: "13 Sentinels: Aegis Rim",
+        categories: ["Visual Novel", "Mistério", "Ficção Científica"],
+        summary: "13 adolescentes precisam pilotar mechas gigantes para salvar a humanidade em uma narrativa sci-fi extremamente complexa não linear.",
+        infobox: {
+            image: "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000049447/31cf4663efcda53416b9b2be56a7d5fb6d302a454d6517a6590b561c1df7ecad",
+            data: {
+                "Desenvolvedor": "Vanillaware",
+                "Gêneros": "Visual Novel, RTS, Sci-fi",
+                "Lançamento": "28 de Novembro de 2019",
+                "Plataformas": "PS4, Nintendo Switch"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Arquivos de Pensamento e Combate" },
+            { id: "narrativa", text: "3. Uma Obra-Prima da Não Linearidade" }
+        ],
+        content: `
+            <p><strong>13 Sentinels: Aegis Rim</strong> é o <em>magnum opus</em> do estúdio <a href="http://vanillaware.co.jp/" target="_blank">Vanillaware</a>. Com uma das direções de arte 2D mais deslumbrantes da indústria, a obra mescla aventura point-and-click com combates de estratégia em tempo real (RTS), oferecendo o que é frequentemente considerado uma das maiores histórias de ficção científica dos videogames modernos.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>O mundo está sendo destruído por "Kaijus" (monstros robóticos gigantes). A única defesa da humanidade são os Sentinelas, mechas controlados por 13 adolescentes. O grande mistério é que esses 13 protagonistas pertencem a diferentes épocas do Japão (desde a Segunda Guerra Mundial até o ano de 2105) e seus destinos se cruzam de maneiras inesperadas e repletas de reviravoltas de explodir mentes.</p>
+
+            <h2 id="mecanicas">Arquivos de Pensamento e Combate</h2>
+            <p>A seção de Visual Novel/Aventura usa a mecânica de <em>Thought Cloud</em> (Nuvem de Pensamentos), onde você adquire palavras-chave nos diálogos e as aplica em objetos ou personagens para avançar. O jogo é dividido em três áreas: <em>Remembrance</em> (A história), <em>Destruction</em> (As batalhas de mecha no estilo tower defense RTS) e <em>Analysis</em> (O arquivo de documentos que organiza a caótica linha do tempo).</p>
+
+            <h2 id="narrativa">Uma Obra-Prima da Não Linearidade</h2>
+            <p>Você pode jogar a história dos 13 personagens em praticamente qualquer ordem. Uma revelação feita na história do personagem A pode mudar completamente o contexto de um evento no ano de 1985 vivenciado pelo personagem B. O jogo homenageia clássicos do sci-fi como Guerra dos Mundos, Matrix, Exterminador do Futuro e Evangelion de forma genial.</p>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://www.nintendo.com/store/products/13-sentinels-aegis-rim-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo Switch</a>
+                <a href="https://store.playstation.com/pt-br/product/UP0177-CUSA19610_00-13SENTINELSNA001" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+            </div>
+        `
+    },
     "needy-streamer-overload": {
         title: "Needy Streamer Overload",
         categories: ["Visual Novel", "Terror Psicológico", "Simulação"],
