@@ -304,15 +304,6 @@ function renderPage() {
             htmlContent += catLinks.join(' | ') + `</p>`;
         }
 
-        if (article.youtubeId || article.trailerId || article.trailerUrl) {
-            htmlContent += `
-                <div class="trailer-config-box">
-                    <p><i class="fa-brands fa-youtube"></i> <strong>Trailer do jogo</strong></p>
-                    <p>Adicione o ID do vídeo abaixo da categoria do artigo, por exemplo: <code>youtubeId: "kB1663FTpzU"</code></p>
-                </div>
-            `;
-        }
-
         htmlContent += `
             <div class="article-actions">
                 <button id="sharePageBtn" class="share-page-btn" type="button">
