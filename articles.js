@@ -1310,7 +1310,7 @@ const articlesDatabase = {
         categories: ["Visual Novel", "Mistério", "Ficção Científica"],
         summary: "13 adolescentes precisam pilotar mechas gigantes para salvar a humanidade em uma narrativa sci-fi extremamente complexa não linear.",
         infobox: {
-            image: "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000049447/31cf4663efcda53416b9b2be56a7d5fb6d302a454d6517a6590b561c1df7ecad",
+            image: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/store/software/switch/70010000046471/5e6c8ac2bfb2c4c6c293613fd001f61eebdc49c82a9dc33001716197eb884202",
             data: {
                 "Desenvolvedor": "Vanillaware",
                 "Gêneros": "Visual Novel, RTS, Sci-fi",
