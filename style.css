@@ -13,12 +13,29 @@ body {
 
 .vndb-bg-wrapper {
     min-height: 100vh;
+    position: relative;
+    isolation: isolate;
     background: linear-gradient(rgba(5, 7, 10, 0.4), rgba(5, 7, 10, 0.6)),
-                url('https://i.8upload.com/image/609e2998ae1139ae/caefdfcdf0a24a1f8dfae4e80cb65a6e.jpg') no-repeat center top fixed;
+                url('https://i.8upload.com/image/609e2998ae1139ae/caefdfcdf0a24a1f8dfae4e80cb65a6e.jpg') no-repeat center top;
     background-size: cover;
     display: flex;
     flex-direction: column;
 }
+.vndb-bg-wrapper::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), var(--game-background-image);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, background-image 0.4s ease-in-out;
+}
+.vndb-bg-wrapper.game-background-active::before { opacity: 1; }
+.vndb-bg-wrapper > * { position: relative; z-index: 1; }
 
 a { color: #6897bb; text-decoration: none; }
 a:hover { color: #80bcd8; text-decoration: underline; }
@@ -101,6 +118,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     display: none;
     max-height: 250px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 1001;
     box-shadow: 0 6px 16px rgba(0,0,0,0.7);
 }
@@ -192,6 +210,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     overflow: hidden;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    will-change: transform, opacity;
     display: flex;
     flex-direction: column;
 }
@@ -355,6 +374,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     width: 100vw; height: 100vh;
     background: rgba(0,0,0,0.8);
     z-index: 1500;
+    will-change: transform, opacity;
 }
 
 .advanced-filters {
@@ -405,6 +425,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     overflow: hidden;
     color: #c5c8c6;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    will-change: transform, opacity;
 }
 .all-game-card:hover {
     transform: translateY(-4px);
@@ -540,6 +561,8 @@ a:hover { color: #80bcd8; text-decoration: underline; }
         box-shadow: -5px 0 20px rgba(0,0,0,0.8);
         padding: 20px;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        will-change: transform, opacity;
         transition: right 0.3s ease;
         gap: 20px;
     }
@@ -547,4 +570,21 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     #closeMenuBtn { display: block; text-align: right; margin-bottom: 10px; }
     #sidebar.active { right: 0; }
     #menuOverlay.active { display: block; }
+}
+
+@media (max-width: 768px) {
+    .vndb-bg-wrapper {
+        background-attachment: scroll;
+    }
+
+    .vndb-bg-wrapper::before {
+        position: absolute;
+        background-attachment: scroll;
+    }
+
+    #top-header,
+    #content,
+    .sidebar-box {
+        backdrop-filter: blur(1px);
+    }
 }

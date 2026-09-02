@@ -24,19 +24,19 @@ const articlesDatabase = {
                 <h3><i class="fa-solid fa-star"></i> Artigos em Destaque</h3>
                 <div class="home-grid">
                     <a href="/?route=omori" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1150690/header.jpg" alt="OMORI">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1150690/header.jpg" alt="OMORI" loading="lazy">
                         <span>OMORI</span>
                     </a>
                     <a href="/?route=slay-the-princess" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1989270/header.jpg" alt="Slay the Princess">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1989270/header.jpg" alt="Slay the Princess" loading="lazy">
                         <span>Slay the Princess</span>
                     </a>
                     <a href="/?route=doki-doki-literature-club" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/698780/header.jpg" alt="Doki Doki Literature Club!">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/698780/header.jpg" alt="Doki Doki Literature Club!" loading="lazy">
                         <span>Doki Doki Literature Club!</span>
                     </a>
                     <a href="/?route=needy-streamer-overload" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451940/header.jpg" alt="Needy Streamer Overload">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451940/header.jpg" alt="Needy Streamer Overload" loading="lazy">
                         <span>Needy Streamer Overload</span>
                     </a>
                 </div>
@@ -46,19 +46,19 @@ const articlesDatabase = {
                 <h3><i class="fa-solid fa-magnifying-glass"></i> Mistério, Escape e Sobrevivência</h3>
                 <div class="home-grid">
                     <a href="/?route=zero-escape-the-nonary-games" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/477740/header.jpg" alt="Zero Escape">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/477740/header.jpg" alt="Zero Escape" loading="lazy">
                         <span>Zero Escape: The Nonary Games</span>
                     </a>
                     <a href="/?route=danganronpa" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413410/header.jpg" alt="Danganronpa">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413410/header.jpg" alt="Danganronpa" loading="lazy">
                         <span>Danganronpa</span>
                     </a>
                     <a href="/?route=alice-in-the-nightmare-land" class="home-card">
-                        <img src="https://midia.hentaijogos.com/file/midia-site-traducoes/wp-content/uploads/2024/09/Alice-in-the-Nightmare-Land-hentaijogos.com-1-1024x771.webp" alt="Alice in the Nightmare Land">
+                        <img src="https://midia.hentaijogos.com/file/midia-site-traducoes/wp-content/uploads/2024/09/Alice-in-the-Nightmare-Land-hentaijogos.com-1-1024x771.webp" alt="Alice in the Nightmare Land" loading="lazy">
                         <span>Alice in the Nightmare Land</span>
                     </a>
                     <a href="/?route=corpse-party" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1163660/header.jpg" alt="Corpse Party">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1163660/header.jpg" alt="Corpse Party" loading="lazy">
                         <span>Corpse Party</span>
                     </a>
                 </div>
@@ -68,15 +68,15 @@ const articlesDatabase = {
                 <h3><i class="fa-solid fa-clock"></i> Obras-Primas Intemporais</h3>
                 <div class="home-grid">
                     <a href="/?route=the-house-in-fata-morgana" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303310/header.jpg" alt="The House in Fata Morgana">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303310/header.jpg" alt="The House in Fata Morgana" loading="lazy">
                         <span>The House in Fata Morgana</span>
                     </a>
                     <a href="/?route=steins-gate" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412830/header.jpg" alt="Steins;Gate">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412830/header.jpg" alt="Steins;Gate" loading="lazy">
                         <span>Steins;Gate</span>
                     </a>
                     <a href="/?route=higurashi-when-they-cry" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310360/header.jpg" alt="Higurashi When They Cry">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310360/header.jpg" alt="Higurashi When They Cry" loading="lazy">
                         <span>Higurashi When They Cry</span>
                     </a>
                 </div>

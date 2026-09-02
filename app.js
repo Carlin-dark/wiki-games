@@ -87,6 +87,20 @@ function updateRoute(route, preserveScroll = false) {
     renderPage();
 }
 
+function setPageBackground(article) {
+    const backgroundWrapper = document.querySelector('.vndb-bg-wrapper');
+    if (!backgroundWrapper) return;
+
+    const imageUrl = article && article.infobox && article.infobox.image;
+    if (imageUrl) {
+        backgroundWrapper.style.setProperty('--game-background-image', `url("${imageUrl}")`);
+        backgroundWrapper.classList.add('game-background-active');
+    } else {
+        backgroundWrapper.classList.remove('game-background-active');
+        backgroundWrapper.style.removeProperty('--game-background-image');
+    }
+}
+
 function getTrailerData(article) {
     if (!article) return null;
 
@@ -116,6 +130,7 @@ function getTrailerData(article) {
 }
 
 function renderAllGamesPage() {
+    setPageBackground(null);
     const container = document.getElementById('article-container');
     const allGames = Object.keys(articlesDatabase).filter(key => key !== 'home');
     const categories = [...new Set(allGames.flatMap(key => articlesDatabase[key].categories || []))].sort((a, b) => a.localeCompare(b));
@@ -188,7 +203,7 @@ function renderAllGamesPage() {
             const game = articlesDatabase[key];
             return `
                 <a href="/${key}" class="all-game-card">
-                    <img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}">
+                    <img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}" loading="lazy">
                     <div class="all-game-card-content">
                         <h3>${game.title}</h3>
                         <p>${game.summary}</p>
@@ -208,6 +223,8 @@ function renderAllGamesPage() {
 function renderPage() {
     const { route, anchor } = getRouteInfo();
     const container = document.getElementById('article-container');
+
+    setPageBackground(null);
 
     if (route === 'all') {
         renderAllGamesPage();
@@ -252,6 +269,7 @@ function renderPage() {
     const article = articlesDatabase[route];
 
     if (article) {
+        setPageBackground(article);
         document.title = `${article.title} - WikiGames`;
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
@@ -263,7 +281,7 @@ function renderPage() {
         if (article.infobox) {
             htmlContent += `<div class="infobox">
                 <div class="infobox-title">${article.title}</div>
-                <img src="${article.infobox.image}" alt="Capa">
+                <img src="${article.infobox.image}" alt="Capa" loading="lazy">
                 <table>`;
             for (const [key, value] of Object.entries(article.infobox.data)) {
                 htmlContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
