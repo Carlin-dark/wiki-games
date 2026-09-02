@@ -88,6 +88,7 @@ const articlesDatabase = {
     "alice-in-the-nightmare-land": {
         title: "Alice in the Nightmare Land",
         categories: ["Escape Room", "Aventura", "Puzzle"],
+        youtubeId: "N37uMETPRoM",
         summary: "Jogo indie de escape e exploração onde Alice procura sua irmã desaparecida em uma mansão cheia de armadilhas mortais.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2583430/header.jpg",
@@ -212,6 +213,7 @@ const articlesDatabase = {
     "the-house-in-fata-morgana": {
         title: "The House in Fata Morgana",
         categories: ["Visual Novel", "Horror Gótico", "Tragédia", "Romance"],
+        youtubeId: "oQkZAV_m6BU",
         summary: "Uma épica visual novel de horror gótico que conta tragédias que perpassam séculos em uma mansão amaldiçoada.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303310/header.jpg",
@@ -250,6 +252,7 @@ const articlesDatabase = {
     "steins-gate": {
         title: "Steins;Gate",
         categories: ["Visual Novel", "Ficção Científica", "Thriller"],
+        youtubeId: "dS3Y0TqEnnc",
         summary: "Um thriller psicológico e de ficção científica sobre amigos que acidentalmente criam uma máquina de enviar e-mails para o passado.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412830/header.jpg",
@@ -288,6 +291,7 @@ const articlesDatabase = {
     "danganronpa": {
         title: "Danganronpa: Trigger Happy Havoc",
         categories: ["Visual Novel", "Mistério", "Julgamento Escolar"],
+        youtubeId: "TLWM6m37lfU",
         summary: "Adolescentes prodígios são presos numa escola e forçados a cometer o assassinato perfeito para poderem escapar.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413410/header.jpg",
@@ -366,6 +370,7 @@ const articlesDatabase = {
     "higurashi-when-they-cry": {
         title: "Higurashi When They Cry",
         categories: ["Sound Novel", "Terror Psicológico", "Suspense"],
+        youtubeId: "kMU-DBtNBOQ",
         summary: "Um mistério macabro e circular numa vila pacata japonesa, onde um festival sagrado sempre culmina em morte e paranoia.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310360/header.jpg",
@@ -483,6 +488,7 @@ const articlesDatabase = {
     "corpse-party": {
         title: "Corpse Party",
         categories: ["RPG", "Terror Psicológico", "Sobrevivência", "Gore"],
+        youtubeId: "7B8H-SB_OCo",
         summary: "Um ritual de amizade dá errado e transporta estudantes para uma escola primária assombrada por fantasmas de crianças torturadas.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1163660/header.jpg",
@@ -521,6 +527,7 @@ const articlesDatabase = {
     "umineko-when-they-cry": {
         title: "Umineko When They Cry",
         categories: ["Sound Novel", "Mistério", "Terror Psicológico"],
+        youtubeId: "dcPNaY3EIUc",
         summary: "Um mistério macabro e complexo em uma ilha isolada sobre disputas de herança, assassinatos impossíveis e uma bruxa.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/406550/header.jpg",
@@ -557,6 +564,7 @@ const articlesDatabase = {
     "fate-stay-night-remastered": {
         title: "Fate/stay night REMASTERED",
         categories: ["Visual Novel", "Ação", "Fantasia Urbana", "Drama"],
+        youtubeId: "K_hHrpAp8rU",
         summary: "A icônica visual novel sobre a Guerra do Santo Graal reeditada em alta definição com suporte oficial no ocidente.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/2396980/header.jpg",
@@ -592,6 +600,7 @@ const articlesDatabase = {
     "ace-attorney-trilogy": {
         title: "Phoenix Wright: Ace Attorney Trilogy",
         categories: ["Mistério", "Tribunal", "Investigação", "Aventura"],
+        youtubeId: "sHbBVN5AkL0",
         summary: "A coletânea dos três primeiros jogos do famoso advogado Phoenix Wright defendendo clientes inocentes com a virada de provas.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/787480/header.jpg",
@@ -628,6 +637,7 @@ const articlesDatabase = {
     "ai-the-somnium-files": {
         title: "AI: The Somnium Files",
         categories: ["Ficção Científica", "Mistério", "Investigação", "Thriller"],
+        youtubeId: "w7ADS6XvBxM",
         summary: "Um thriller cyberpunk de investigação onde um detetive invada os sonhos e subconsciente de suspeitos para resolver crimes.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/948740/header.jpg",
@@ -663,6 +673,7 @@ const articlesDatabase = {
     "clannad": {
         title: "CLANNAD",
         categories: ["Visual Novel", "Romance", "Drama", "Slice of Life"],
+        youtubeId: "Z1ShQMEXHAo",
         summary: "Uma lendária e emocionante história sobre a vida, laços familiares, amor e superação de trauma na vida adulta.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/324160/header.jpg",
@@ -696,6 +707,7 @@ const articlesDatabase = {
     "raging-loop": {
         title: "Raging Loop",
         categories: ["Terror Psicológico", "Mistério", "Suspense", "Loop Temporal"],
+        youtubeId: "V1mlyeW7p6s",
         summary: "Uma releitura sombria do jogo da Cidade Dorme em uma vila isolada assolada por uma névoa mortal e lobos assassinos.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/1128140/header.jpg",
@@ -730,6 +742,7 @@ const articlesDatabase = {
     "your-turn-to-die": {
         title: "Your Turn To Die -Death Game By Majority-",
         categories: ["Death Game", "Terror Psicológico", "Mistério", "Aventura"],
+        youtubeId: "TLDU18zO1EM",
         summary: "Um brutal jogo de sobrevivência por voto majoritário onde escolhas difíceis ditam quem vive e quem morre.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/2067780/header.jpg",
@@ -763,6 +776,7 @@ const articlesDatabase = {
     "va-11-hall-a": {
         title: "VA-11 Hall-A: Cyberpunk Bartender Action",
         categories: ["Cyberpunk", "Slice of Life", "Simulação", "Visual Novel"],
+        youtubeId: "SiZ5TMm1DJk",
         summary: "Sirva bebidas para ciborgues, hackers e figuras peculiares de uma cidade distópica cyberpunk para alterar suas vidas.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/447530/header.jpg",
@@ -798,6 +812,7 @@ const articlesDatabase = {
     "witch-on-the-holy-night": {
         title: "WITCH ON THE HOLY NIGHT (Mahoutsukai no Yoru)",
         categories: ["Kinetic Novel", "Fantasia Urbana", "Drama", "Ação"],
+        youtubeId: "s_oAO0LG51A",
         summary: "Uma experiência narrativa visual deslumbrante no final dos anos 80 envolvendo bruxas, feitiçaria e mistérios.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/2204710/header.jpg",
@@ -832,6 +847,7 @@ const articlesDatabase = {
     "the-silver-case": {
         title: "The Silver Case",
         categories: ["Crime", "Noir", "Thriller", "Mistério"],
+        youtubeId: "20YJxIQO1Qg",
         summary: "Investigação neo-noir dirigida por SUDA51 focada na busca por um prolífico serial killer em um distrito futurista.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/476650/header.jpg",
@@ -865,6 +881,7 @@ const articlesDatabase = {
     "chaos-child": {
         title: "CHAOS;CHILD",
         categories: ["Ficção Científica", "Terror Psicológico", "Mistério", "Thriller"],
+        youtubeId: "Vo70prsrPDY",
         summary: "Assassinatos teatrais chocam Shibuya anos após um terremoto, forçando estudantes a lidarem com delírios e paranoia.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/970570/header.jpg",
@@ -898,6 +915,7 @@ const articlesDatabase = {
     "class-of-09": {
         title: "Class of '09",
         categories: ["Comédia Ácida", "Slice of Life", "Visual Novel"],
+        youtubeId: "MdoIzurCPC4",
         summary: "Uma comédia politicamente incorreta e não filtrada sobre o cotidiano tóxico e narcisista no ensino médio dos anos 2000.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/1598160/header.jpg",
@@ -931,6 +949,7 @@ const articlesDatabase = {
     "milk-inside-a-bag": {
         title: "Milk inside a bag of milk inside a bag of milk",
         categories: ["Terror Psicológico", "Experimental", "Visual Novel"],
+        youtubeId: "sG2_VtgRQbg",
         summary: "Ajude uma garota traumatizada e com severas distorções perceptivas em uma tarefa simples: comprar uma caixa de leite.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/1392820/header.jpg",
@@ -964,6 +983,7 @@ const articlesDatabase = {
     "428-shibuya-scramble": {
         title: "428: Shibuya Scramble",
         categories: ["Mistério", "Thriller", "FMV", "Sound Novel"],
+        youtubeId: "2WAgYvOrQwc",
         summary: "Uma história interativa em live-action cruzando a vida de cinco protagonistas durante um sequestro no centro de Tóquio.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/648580/header.jpg",
@@ -997,6 +1017,7 @@ const articlesDatabase = {
     "saya-no-uta": {
         title: "The Song of Saya (Saya no Uta)",
         categories: ["Terror Cósmico", "Visual Novel", "Eroge", "Drama"],
+        youtubeId: "zsBGP1SZnPc",
         summary: "Um estudante cuja mente percebe o mundo como carne em decomposição se apaixona por uma misteriosa garota angelical.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/702050/header.jpg",
