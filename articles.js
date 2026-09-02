@@ -54,7 +54,7 @@ const articlesDatabase = {
                         <span>Danganronpa</span>
                     </a>
                     <a href="/?route=alice-in-the-nightmare-land" class="home-card">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2583430/header.jpg" alt="Alice in the Nightmare Land">
+                        <img src="https://midia.hentaijogos.com/file/midia-site-traducoes/wp-content/uploads/2024/09/Alice-in-the-Nightmare-Land-hentaijogos.com-1-1024x771.webp" alt="Alice in the Nightmare Land">
                         <span>Alice in the Nightmare Land</span>
                     </a>
                     <a href="/?route=corpse-party" class="home-card">
@@ -91,7 +91,7 @@ const articlesDatabase = {
         youtubeId: "N37uMETPRoM",
         summary: "Jogo indie de escape e exploração onde Alice procura sua irmã desaparecida em uma mansão cheia de armadilhas mortais.",
         infobox: {
-            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2583430/header.jpg",
+            image: "https://midia.hentaijogos.com/file/midia-site-traducoes/wp-content/uploads/2024/09/Alice-in-the-Nightmare-Land-hentaijogos.com-1-1024x771.webp",
             data: {
                 "Desenvolvedor": "Tsukki's Tea Party",
                 "Publicadora": "OTAKU Plan",
@@ -123,6 +123,17 @@ const articlesDatabase = {
                 <a href="https://store.steampowered.com/app/2583430/Alice_in_the_Nightmare_land/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
                 <a href="https://www.dlsite.com/" target="_blank"><i class="fa-solid fa-globe"></i> DLsite</a>
             </div>
+
+            <h2>Versões para Download</h2>
+            <p><strong>Versão Android (APK):</strong> A versão para Android pode apresentar problemas devido à adaptação para dispositivos móveis. Se uma falha impedir sua progressão, recomendamos baixar a versão para PC e jogar pelo JoiPlay.</p>
+            <p><strong>Atenção:</strong> o arquivo Android já está descompactado no formato APK, portanto não é necessário inserir uma senha. Se uma senha for solicitada, você baixou a versão para PC por engano.</p>
+            <p><strong>Versão em PT-BR (APK) - 75,51 MB:</strong> há um problema conhecido ao carregar o save. Será necessário jogar tudo de uma vez ou usar a versão de PC pelo JoiPlay.</p>
+            <div class="play-links">
+                <a href="https://4br.me/xdAd9CCE" target="_blank"><i class="fa-brands fa-android"></i> Download APK</a>
+                <a href="https://4br.me/bYdRQ7Q" target="_blank"><i class="fa-solid fa-desktop"></i> Download para PC Windows</a>
+            </div>
+            <p><strong>Senha da versão para PC:</strong> hentaijogos.com</p>
+            <p><strong>Aviso:</strong> Caso algum dos links esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
         `
     },
     "doki-doki-literature-club": {
@@ -168,6 +179,22 @@ const articlesDatabase = {
                 <a href="https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
                 <a href="https://teamsalvato.itch.io/ddlc" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
             </div>
+
+            <h2>Tradução em Português Brasileiro</h2>
+            <p><strong>Ano de lançamento:</strong> 2017<br>
+            <strong>Ano de tradução:</strong> 2017<br>
+            <strong>Tradutores, revisão e RomHacking:</strong> Vinicius Dias<br>
+            <strong>Classificação:</strong> +13<br>
+            <strong>Duração:</strong> 7 horas<br>
+            <strong>Tamanho:</strong> 220,50 MB<br>
+            <strong>Formato:</strong> .exe<br>
+            <strong>Local de instalação:</strong> C:\\SekaiVN\\<br>
+            <strong>Aplicativo:</strong> versão oficial na Play Store<br>
+            <strong>Dispositivo testado:</strong> Moto G30 (Android 11)</p>
+            <div class="play-links">
+                <a href="https://4br.me/nWP4mQb5" target="_blank"><i class="fa-solid fa-download"></i> Download</a>
+            </div>
+            <p><strong>Aviso:</strong> Caso o link esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
         `
     },
     "doki-doki-literature-club-plus": {
@@ -247,6 +274,58 @@ const articlesDatabase = {
                 <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
                 <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
             </div>
+        `
+    },
+    "it-gets-so-lonely-here": {
+        title: "It gets so lonely here",
+        categories: ["Visual Novel", "Terror Psicológico", "Indie"],
+        summary: "Uma garota tenta escapar desesperadamente de um perseguidor em uma floresta escura, encontrando destinos perturbadores em um conto de fadas macabro.",
+        infobox: {
+            image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2386250/header.jpg",
+            data: {
+                "Desenvolvedor": "ebi-hime",
+                "Gêneros": "Visual Novel, Yandere, Yuri, Horror",
+                "Lançamento": "25 de Maio de 2023",
+                "Plataformas": "PC (Windows, macOS, Linux)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Múltiplos Finais e Consequências" },
+            { id: "narrativa", text: "3. Conto de Fadas Macabro e Narrativa" }
+        ],
+        content: `
+            <p><strong>It gets so lonely here</strong> é uma <em>visual novel</em> indie de terror psicológico focada em relacionamentos sáficos (yuri) e no arquétipo <em>yandere</em>, desenvolvida e publicada pela criadora <a href="https://ebihime.itch.io/" target="_blank">ebi-hime</a> originalmente para a Yandere Game Jam de 2023. A obra é elogiada por transformar uma premissa simples de perseguição em uma exploração angustiante sobre obsessão, solidão e relacionamentos destrutivos.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>O jogador assume o papel de uma adolescente sem nome de um colégio interno prestigiado, que corre desesperadamente durante a noite por uma floresta escura. Seu único instinto é fugir de um perseguidor desconhecido. Ao encontrar uma bifurcação, ela deve escolher entre fugir para a praia, para a vila ou para o castelo [cite: 1.1.2]. Em cada um desses refúgios, ela conhece garotas misteriosas (uma sereia, uma coveira ou uma princesa) por quem se sente atraída, mas o perigo está longe de ter acabado [cite: 1.1.2].</p>
+
+            <h2 id="mecanicas">Múltiplos Finais e Consequências</h2>
+            <p>O jogo possui cerca de 50.000 palavras e oferece uma estrutura ramificada baseada nas escolhas do jogador [cite: 1.1.3]. A premissa central de jogabilidade brinca com a ideia de ilusão de segurança: dependendo da rota e das decisões tomadas, a protagonista invariavelmente encontra finais fatídicos e sombrios, que envolvem destinos brutais nas mãos das garotas que supostamente a acolheram. Um dos destaques é a presença de um narrador irônico, que constantemente julga e repreende as péssimas decisões do jogador [cite: 1.1.3].</p>
+
+            <h2 id="narrativa">Conto de Fadas Macabro e Narrativa</h2>
+            <p>A direção de arte utiliza cores suaves e propositalmente limitadas em uma resolução nostálgica de 800x600, remetendo a livros de contos de fadas antigos [cite: 1.1.3]. Esse contraste entre o design fofo e os temas extremamente sombrios do jogo (como relacionamentos abusivos, ciúmes, luto e obsessão) cria uma atmosfera de constante desconforto. A trilha sonora original complementa perfeitamente a tensão psicológica das diferentes rotas [cite: 1.1.3].</p>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2386250/It_gets_so_lonely_here/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (PC)</a>
+                <a href="https://ebihime.itch.io/lonely" target="_blank"><i class="fa-solid fa-gamepad"></i> itch.io (PC)</a>
+            </div>
+
+            <h2>Tradução em Português Brasileiro</h2>
+            <p><strong>Ano de lançamento:</strong> 2023<br>
+            <strong>Ano de tradução:</strong> 2024<br>
+            <strong>Tradutores, revisão e RomHacking:</strong> <a href="https://fepulo.itch.io/" target="_blank">Fepulo</a><br>
+            <strong>Classificação:</strong> +18<br>
+            <strong>Duração:</strong> 3 horas<br>
+            <strong>Tamanho:</strong> 126 MB<br>
+            <strong>Formato:</strong> .exe<br>
+            <strong>Local de instalação:</strong> C:\\SekaiVN\\</p>
+            <div class="play-links">
+                <a href="https://4br.me/6DbpPe" target="_blank"><i class="fa-solid fa-download"></i> Download</a>
+            </div>
+            <p><strong>Aviso:</strong> Caso algum dos links esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
         `
     },
     "steins-gate": {
@@ -404,6 +483,34 @@ const articlesDatabase = {
                 <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
                 <a href="https://mangagamer.com/" target="_blank"><i class="fa-solid fa-globe"></i> MangaGamer</a>
             </div>
+
+            <h2>Versões para Android e PC</h2>
+            <p><strong>Aviso sobre a versão Android:</strong> esta é uma versão não oficial de <em>Higurashi no Naku Koro ni</em> para Android, com gráficos atualizados, dublagem e músicas do jogo original e das versões de console.</p>
+            <ol>
+                <li>Sprites do PS3: <a href="https://4br.me/Yg7Fqss6P" target="_blank">Espelho 1</a> | <a href="https://4br.me/atl3qK" target="_blank">Espelho 2</a></li>
+                <li>APK e recursos separados. Instale o APK e coloque os seis arquivos .rpa em <code>/Android/data/com.higurashi/files/game</code>: <a href="https://4br.me/MfG9" target="_blank">Mirror 1</a> | <a href="https://4br.me/gCcMhg" target="_blank">Mirror 2</a></li>
+                <li>Sprites originais: <a href="https://4br.me/xj53" target="_blank">Espelho 1</a> | <a href="https://4br.me/J1kH4Lh" target="_blank">Espelho 2</a></li>
+                <li>Patch para corrigir o bug de tag CPS não fechada: coloque <code>patch.rpyc</code> em <code>/Android/data/com.higurashi/files/game</code>. <a href="https://4br.me/jsxYLSJno" target="_blank">Download do patch</a></li>
+            </ol>
+            <p><strong>Extras:</strong> extraia os arquivos para <code>/Android/data/com.ps3.higurashi/files/game/</code>. Reinstale o jogo se ele travar após criar a pasta "jogo".</p>
+            <ul>
+                <li>Efeitos sonoros do PS3: <a href="https://4br.me/P9ml5MkI" target="_blank">Download</a></li>
+                <li>Tradução russa: <a href="https://4br.me/qD3zm" target="_blank">Download</a></li>
+            </ul>
+            <p><strong>Créditos:</strong> versão baseada na versão Ren'Py do jogo original de <a href="https://vndb.org/p4052" target="_blank">-07-</a>, nos gráficos e no mod de voz do <a href="https://07th-mod.com/" target="_blank">07th-Mod</a> para PC. Crédito adicional: darwin07.</p>
+
+            <h3>Higurashi no Naku Koro ni Hou em português</h3>
+            <p><strong>Capítulo 1:</strong> tradução de Higurashi Eternal e 0Mateus; revisão e RomHacking pelos mesmos tradutores. Windows (.exe), 1,71 GB, compatível com Winlator. <a href="https://4br.me/2JVIOEkjQY" target="_blank">Download do capítulo 1</a></p>
+            <p><strong>Capítulos 2 a 6:</strong> tradução de Higurashi Eternal; formato .exe, instalação em <code>C:\\SekaiVN\\</code>.</p>
+            <div class="play-links">
+                <a href="https://4br.me/XZEdKxtcAV" target="_blank">Capítulo 2</a>
+                <a href="https://4br.me/1jmLJ" target="_blank">Capítulo 3</a>
+                <a href="https://4br.me/GftiXyDUF" target="_blank">Capítulo 4</a>
+                <a href="https://4br.me/gHNWzD80N7" target="_blank">Capítulo 5</a>
+                <a href="https://4br.me/Xgqha" target="_blank">Capítulo 6</a>
+            </div>
+            <p><strong>Todos os capítulos:</strong> tradução brasileira de <em>Higurashi no Naku Koro ni Hou</em>, da Miracle Translations, compatível com o <a href="https://07th-mod.com/" target="_blank">07th-Mod</a>. <a href="https://4br.me/S8u5kFHZcW" target="_blank">Download completo</a></p>
+            <p><strong>Aviso:</strong> Caso algum dos links esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
         `
     },
     "omori": {
@@ -443,6 +550,13 @@ const articlesDatabase = {
                 <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
                 <a href="https://www.xbox.com/" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
             </div>
+
+            <h2>Versão Mobile (portabilidade feita por fã)</h2>
+            <p><strong>AVISO:</strong> O jogo possui uma portabilidade feita por um fã. Ela pode não funcionar em todos os celulares e pode não oferecer um desempenho satisfatório.</p>
+            <div class="play-links">
+                <a href="https://4br.me/S4zfF" target="_blank"><i class="fa-brands fa-android"></i> Download OMORI-br-1.0.8.1</a>
+            </div>
+            <p><strong>Aviso:</strong> Caso o link esteja quebrado ou fora do ar, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">entre no servidor do Discord</a> para mais informações.</p>
         `
     },
     "slay-the-princess": {
@@ -702,6 +816,20 @@ const articlesDatabase = {
                 <a href="https://store.steampowered.com/app/324160/CLANNAD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
                 <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
             </div>
+
+            <h2>Tradução e versão para Android</h2>
+            <p><strong>Créditos de localização:</strong> ZeroForce.</p>
+            <p><strong>Avisos de instalação:</strong></p>
+            <ul>
+                <li>Ao instalar o jogo, uma janela do Windows solicitará a instalação de uma fonte. Instale-a.</li>
+                <li>Configure programas não Unicode para japonês (Japão) nas configurações administrativas do Windows.</li>
+                <li>Na primeira inicialização, abra as configurações, escolha a fonte <em>Open Sans Ligth</em> e clique em OK.</li>
+            </ul>
+            <p><strong>Informações:</strong> lançamento em 2004; tradução em 2021; formato .exe; 3,26 GB; duração de 77 horas; programa: RLVM; instalação em <code>C:\\SekaiVN\\</code>. Dispositivo testado: Moto G30 (Android 11).</p>
+            <div class="play-links">
+                <a href="https://4br.me/oAeH5G" target="_blank"><i class="fa-solid fa-download"></i> Download</a>
+            </div>
+            <p><strong>Aviso:</strong> Caso o link esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
         `
     },
     "raging-loop": {
@@ -1304,7 +1432,6 @@ const articlesDatabase = {
             </div>
         `
     },
-
     "13-sentinels-aegis-rim": {
         title: "13 Sentinels: Aegis Rim",
         categories: ["Visual Novel", "Mistério", "Ficção Científica"],
@@ -1340,6 +1467,46 @@ const articlesDatabase = {
             <div class="play-links">
                 <a href="https://www.nintendo.com/store/products/13-sentinels-aegis-rim-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo Switch</a>
                 <a href="https://store.playstation.com/pt-br/product/UP0177-CUSA19610_00-13SENTINELSNA001" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+            </div>
+        `
+    },
+    "limbo": {
+        title: "Limbo",
+        categories: ["Plataforma", "Quebra-cabeça", "Indie"],
+        summary: "Um garoto sem nome desperta em um mundo sombrio e monocromático e parte em uma perigosa jornada em busca de sua irmã.",
+        infobox: {
+            image: "https://cdn.cloudflare.steamstatic.com/steam/apps/48000/header.jpg",
+            data: {
+                "Desenvolvedor": "Playdead",
+                "Gêneros": "Puzzle-Platformer, Indie, Terror",
+                "Lançamento": "21 de Julho de 2010",
+                "Plataformas": "PC, Xbox, PlayStation, Switch, iOS, Android"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Tentativa e Morte" },
+            { id: "atmosfera", text: "3. Atmosfera e Estética" }
+        ],
+        content: `
+            <p><strong>Limbo</strong> é o aclamado título de estreia do estúdio dinamarquês <a href="https://playdead.com/" target="_blank">Playdead</a>. Sendo um dos principais jogos a impulsionar o renascimento da cena indie na década de 2010, a obra é amplamente reconhecida por seu design minimalista, atmosfera opressiva e quebra-cabeças complexos baseados em física real.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>Sem diálogos, textos ou qualquer exposição direta, o jogo começa com um garoto sem nome acordando no meio de uma floresta escura, à beira do inferno (o Limbo). Ele parte em uma jornada instintiva para encontrar sua irmã perdida, atravessando florestas macabras habitadas por aranhas gigantes e cenários industriais decadentes repletos de armadilhas letais.</p>
+
+            <h2 id="mecanicas">Tentativa e Morte</h2>
+            <p>As mecânicas de Limbo misturam plataforma clássica em 2D com resolução de quebra-cabeças ambientais. Os desenvolvedores classificaram o estilo de jogo como <em>"Trial and Death"</em> (Tentativa e Morte). As armadilhas geralmente não são visíveis até serem ativadas, exigindo que o jogador falhe e morra de maneiras grotescas para aprender como superar o obstáculo na próxima tentativa.</p>
+
+            <h2 id="atmosfera">Atmosfera e Estética</h2>
+            <p>A direção de arte é inteiramente em preto, branco e tons de cinza, utilizando técnicas de iluminação dinâmica e granulação de filme para criar uma estética reminiscente do expressionismo alemão e dos filmes noir. O design de som é minimalista, focado em ruídos do ambiente e na ausência quase total de música, o que amplifica o sentimento de solidão e perigo constante.</p>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/48000/LIMBO/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (PC)</a>
+                <a href="https://store.epicgames.com/pt-BR/p/limbo" target="_blank"><i class="fa-solid fa-gamepad"></i> Epic Games Store</a>
+                <a href="https://www.gog.com/game/limbo" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG (DRM-Free)</a>
+                <a href="https://www.nintendo.com/pt-br/store/products/limbo-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo Switch</a>
             </div>
         `
     },
