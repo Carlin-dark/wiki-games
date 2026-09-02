@@ -4,47 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Principal -->
-    <title>WikiGames - A Enciclopédia de Visual Novels e Jogos Indie</title>
-    <meta name="description" content="WikiGames é a maior enciclopédia focada em Visual Novels, Jogos Indies e Terror Psicológico. Encontre artigos, análises e guias completos.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wikigames.duckdns.org/">
+    <title>WikiGames - A Enciclopédia de Visual Novels e jogos Indie</title>
+    <meta name="description" content="WikiGames é a maior enciclopédia focada em Visual Novels, Jogos Indies e Terror Psicológico.">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wikigames.duckdns.org/">
-    <meta property="og:title" content="WikiGames - Enciclopédia de Visual Novels e Jogos Indie">
-    <meta property="og:description" content="A enciclopédia definitiva de Visual Novels, Jogos Indies e Terror Psicológico.">
-    <meta property="og:site_name" content="WikiGames">
+    <meta property="og:url" content="https://github.com/Carlin-dark">
+    <meta property="og:title" content="WikiGames">
+    <meta property="og:description" content="A enciclopédia definitiva de Visual Novels e Terror Psicológico.">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WikiGames - Enciclopédia de Visual Novels">
-    <meta name="twitter:description" content="Banco de dados e enciclopédia de Visual Novels, Jogos Indies e Terror Psicológico.">
-
-    <!-- PWA & Configurações de Tema -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0b0e14">
     <link rel="icon" type="image/x-icon" href="favicon.ico.jpg">
 
-    <!-- CSS Externo e Estilos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Dados Estruturados Schema.org para SEO no Google -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "WikiGames",
-      "url": "https://wikigames.duckdns.org/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://wikigames.duckdns.org/?search={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
 </head>
 <body>
 
@@ -65,7 +38,7 @@
 
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="Pesquisar banco de dados...">
-                    <button id="searchBtn" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <div id="searchResults" class="search-results-dropdown"></div>
                 </div>
             </div>
@@ -86,32 +59,28 @@
 
                 <div class="sidebar-box">
                     <h3>Navegação</h3>
-                    <nav>
-                        <ul class="vndb-menu">
-                            <li><a href="/?route=home"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
-                            <li><a href="#" id="randomPageBtn"><i class="fa-solid fa-dice"></i> Página Aleatória</a></li>
-                            <li><a href="/?route=all"><i class="fa-solid fa-database"></i> Todos os Jogos</a></li>
-                        </ul>
-                    </nav>
+                    <ul class="vndb-menu">
+                        <li><a href="/?route=home"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
+                        <li><a href="#" id="randomPageBtn"><i class="fa-solid fa-dice"></i> Página Aleatória</a></li>
+                        <li><a href="/?route=all"><i class="fa-solid fa-database"></i> Todos os Jogos</a></li>
+                    </ul>
                 </div>
 
                 <div class="sidebar-box">
                     <h3>Categorias</h3>
-                    <nav>
-                        <ul class="vndb-menu">
-                            <li><a href="/?route=categoria/terror-psicologico">Terror Psicológico</a></li>
-                            <li><a href="/?route=categoria/visual-novel">Visual Novel</a></li>
-                            <li><a href="/?route=categoria/escape-room">Escape Room</a></li>
-                            <li><a href="/?route=categoria/aventura-2d">Aventura 2D</a></li>
-                            <li><a href="/?route=categoria/horror-gotico">Horror Gótico</a></li>
-                        </ul>
-                    </nav>
+                    <ul class="vndb-menu">
+                        <li><a href="/?route=categoria/terror-psicologico">Terror Psicológico</a></li>
+                        <li><a href="/?route=categoria/visual-novel">Visual Novel</a></li>
+                        <li><a href="/?route=categoria/escape-room">Escape Room</a></li>
+                        <li><a href="/?route=categoria/aventura-2d">Aventura 2D</a></li>
+                        <li><a href="/?route=categoria/horror-gotico">Horror Gótico</a></li>
+                    </ul>
                 </div>
 
                 <div class="sidebar-box discord-box">
                     <h3>Comunidade</h3>
                     <p>Servidor oficial da comunidade.</p>
-                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="discord-btn">
+                    <a href="https://discord.gg/T2gZfXMCAm" target="_blank" class="discord-btn">
                         <i class="fa-brands fa-discord"></i> Discord Oficial
                     </a>
                 </div>
@@ -119,7 +88,7 @@
         </div>
 
         <footer class="vndb-footer">
-            <p>WikiGames &copy; 2026. Desenvolvido por <a href="https://github.com/Carlin-dark" target="_blank" rel="noopener noreferrer" style="color: #6897bb; text-decoration: underline;">Carlin-dark</a>. Todos os direitos reservados.</p>
+            <p>WikiGames &copy; 2026. Desenvolvido por <a href="https://github.com/Carlin-dark" target="_blank" style="color: #6897bb; text-decoration: underline;">Carlin-dark</a>. Todos os direitos reservados.</p>
         </footer>
     </div>
 
