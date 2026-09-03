@@ -466,8 +466,16 @@ function closeMenu() {
 }
 
 hamburgerBtn.addEventListener('click', openMenu);
+hamburgerBtn.addEventListener('touchstart', function (event) {
+    event.preventDefault();
+    openMenu();
+}, { passive: false });
 closeMenuBtn.addEventListener('click', closeMenu);
 menuOverlay.addEventListener('click', closeMenu);
+menuOverlay.addEventListener('touchstart', function (event) {
+    event.preventDefault();
+    closeMenu();
+}, { passive: false });
 
 sidebarLinks.forEach(link => {
     link.addEventListener('click', () => {
