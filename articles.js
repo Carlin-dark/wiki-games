@@ -85,6 +85,35 @@ const articlesDatabase = {
             <p style="text-align: center; color: #7a8b9e;">Use o menu lateral para explorar categorias ou pesquise o seu próximo jogo favorito na barra superior.</p>
         `
     },
+    "sobre": {
+        title: "Sobre a WikiGames",
+        summary: "Informações sobre o projeto, termos de uso e política de links de terceiros e downloads.",
+        categories: ["Institucional", "Aviso Legal", "Sobre"],
+        infobox: null,
+        toc: [
+            { id: "o-projeto", text: "1. O Projeto" },
+            { id: "downloads", text: "2. Política de Downloads e Links" },
+            { id: "aviso-legal", text: "3. Direitos Autorais e Isenção" }
+        ],
+        content: `
+            <p>A <strong>WikiGames</strong> é um projeto colaborativo sem fins lucrativos, criado por fãs e para fãs, com o objetivo de catalogar, analisar e documentar o vasto universo dos jogos Indie, Visual Novels e obras de Terror Psicológico.</p>
+
+            <h2 id="o-projeto">O Projeto</h2>
+            <p>Muitos jogos indie de nicho ou visual novels japonesas não recebem o devido reconhecimento ou sequer chegam traduzidos ao nosso idioma. Nosso objetivo é criar uma enciclopédia centralizada onde os jogadores possam encontrar histórias, guias de rotas, finais (dead ends) e informações cruciais sobre esses títulos.</p>
+
+            <h2 id="downloads">Política de Downloads e Links</h2>
+            <p>Em diversos artigos da nossa enciclopédia, os usuários podem encontrar informações e redirecionamentos para baixar <strong>jogos gratuitos, versões traduzidas pela comunidade (fan-translations), patches de censura ou ports adaptados para celular (Android/iOS)</strong>.</p>
+
+            <div style="background-color: #fff3cd; color: #856404; border-left: 4px solid #ffeeba; padding: 15px; margin: 15px 0;">
+                <strong>Atenção:</strong> Gostaríamos de deixar estritamente claro que <strong>nenhum arquivo, jogo, ROM ou software está hospedado em nossos servidores</strong>. Todos os links de download fornecidos na WikiGames são apenas indexados e redirecionados para <strong>sites de terceiros</strong> (como MediaFire, Mega, Google Drive, fóruns de tradutores ou sites oficiais dos desenvolvedores).
+            </div>
+
+            <h2 id="aviso-legal">Direitos Autorais e Isenção (Disclaimer)</h2>
+            <p>Como não hospedamos nenhum arquivo em nosso domínio, a WikiGames <strong>não se responsabiliza</strong> pelo conteúdo contido nestes sites de terceiros, nem por eventuais problemas decorrentes do download ou instalação dos mesmos nos aparelhos dos usuários.</p>
+            <p>Nós respeitamos os direitos autorais. Se você é um desenvolvedor ou detentor de direitos e deseja que um link de redirecionamento para o seu jogo seja removido de nossa wiki, entre em contato conosco através do nosso Discord e removeremos a página ou o link imediatamente.</p>
+            <p>Por fim, incentivamos fortemente que os jogadores <strong>apoiem os desenvolvedores originais</strong>, adquirindo os jogos em plataformas oficiais (como Steam, Itch.io, GOG, PlayStation Store e Nintendo eShop) sempre que o título estiver disponível de forma oficial e acessível.</p>
+        `
+    },
     "alice-in-the-nightmare-land": {
         title: "Alice in the Nightmare Land",
         categories: ["Escape Room", "Aventura", "Puzzle"],
@@ -1348,7 +1377,75 @@ const articlesDatabase = {
             </div>
         `
     },
+    "black-souls": {
+        title: "BLACK SOULS",
+        categories: ["RPG", "Indie", "Dark Fantasy", "Terror Psicológico", "Souls-like", "Conteúdo Adulto"],
+        summary: "Um RPG de fantasia sombria e terror psicológico inspirado na franquia Dark Souls e em contos de fadas, onde um morto-vivo desperta num império em colapso coberto por névoa e monstros.",
+        infobox: {
+            image: "https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-Free-Download-1-639x361.jpg",
+            data: {
+                "Desenvolvedor": "Eeny, meeny, miny, moe?",
+                "Distribuidora": "OTAKU Plan, NEWS",
+                "Gêneros": "RPG, Aventura, Indie, Fantasia Sombria",
+                "Lançamento (Steam)": "15 de Agosto de 2025",
+                "Plataformas": "PC (Windows)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Mecânicas e Exploração" },
+            { id: "personagens", text: "3. Personagens e Heroínas" },
+            { id: "download", text: "4. Download para PC" },
+            { id: "requisitos", text: "5. Requisitos do Sistema" },
+            { id: "galeria", text: "6. Galeria de Imagens" }
+        ],
+        content: `
+            <p><strong>BLACK SOULS</strong> é um RPG indie de fantasia sombria e exploração profunda publicado na Steam pela <a href="https://store.steampowered.com/publisher/OTAKUPlan" target="_blank">OTAKU Plan</a>. O jogo combina a atmosfera melancólica, o combate punitivo e o design de mundo interconectado no estilo <em>Souls-like</em> com o universo perturbador dos contos de fadas clássicos subvertidos em horror psicológico.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>Há muito tempo, existia um reino envolto por uma densa névoa conhecido como o Império Perdido. Essa névoa misteriosa transformou os humanos em feras aterrorizantes, mergulhando o mundo no desespero. Você desperta nesse cenário catastrófico como um morto-vivo sem nome. Em uma jornada impiedosa através das ruínas de um mundo decadente, você deve encarar terrores cósmicos e descobrir os segredos esquecidos do reino.</p>
 
+            <h2 id="mecanicas">Mecânicas e Exploração</h2>
+            <p>O jogo apresenta um sistema de combate dinâmico por turnos com tempo ativo (ATB) e mecânica de encontros por símbolos. Oferece alta liberdade de exploração em mundo aberto, seleção de classes e múltiplos finais. A morte faz parte do aprendizado e não resulta em Game Over direto, permitindo ao jogador retornar para recuperar o progresso e explorar caminhos alternativos enquanto tenta evitar os finais mais sombrios.</p>
+
+            <h2 id="personagens">Personagens e Heroínas</h2>
+            <ul>
+                <li><strong>O Protagonista:</strong> Um morto-vivo sem nome que desperta no Império Perdido e cujas escolhas moldam o destino do mundo.</li>
+                <li><strong>Heroínas de Contos de Fadas:</strong> O jogo conta com mais de 20 heroínas inspiradas em clássicos da literatura (como Alice no País das Maravilhas, Chapeuzinho Vermelho e Branca de Neve), cada uma com arcos, intenções e segredos trágicos.</li>
+                <li><strong>Habitantes do Império:</strong> Cavaleiros, cortesãs e entidades corrompidas pela névoa que habitam os cantos e jardins secretos do reino destruído.</li>
+            </ul>
+
+            <hr>
+            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar (Steam):</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/3755860/BLACK_SOULS/" target="_blank"><i class="fa-brands fa-steam"></i> Steam Store</a>
+            </div>
+
+            <h2 id="download">Download para PC</h2>
+            <p><strong>BLACK SOULS.rar</strong> (561,42 MB)</p>
+            <p>Este download é totalmente gratuito. Se você gosta do jogo, apoie os desenvolvedores adquirindo a versão oficial na <a href="https://store.steampowered.com/app/3755860/BLACK_SOULS/" target="_blank">Steam</a>.</p>
+            <div class="play-links">
+                <a href="https://4br.me/Pa8lPv19" target="_blank"><i class="fa-solid fa-download"></i> Download para PC (Servidor 1)</a>
+                <a href="https://4br.me/CS4sdDbhG" target="_blank"><i class="fa-solid fa-download"></i> Download para PC (Servidor 2)</a>
+            </div>
+
+            <h2 id="requisitos">Requisitos do Sistema</h2>
+            <ul>
+                <li><strong>Sistema operacional:</strong> Windows 10</li>
+                <li><strong>Processador:</strong> 3 GHz ou superior</li>
+                <li><strong>Memória:</strong> 4 GB de RAM</li>
+                <li><strong>Gráficos:</strong> GPU compatível com DirectX 10 ou OpenGL 4.1</li>
+                <li><strong>DirectX:</strong> Versão 10</li>
+                <li><strong>Armazenamento:</strong> 1 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div class="image-gallery">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-gog-639x361.jpg" alt="Cena de BLACK SOULS" loading="lazy">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-crack-639x361.jpg" alt="Outra cena de BLACK SOULS" loading="lazy">
+            </div>
+        `
+    },
     "the-sekimeiya-spun-glass": {
         title: "The Sekimeiya: Spun Glass",
         categories: ["Visual Novel", "Mistério", "Indie"],
@@ -1543,6 +1640,78 @@ const articlesDatabase = {
                 <a href="https://store.steampowered.com/app/1451940/NEEDY_STREAMER_OVERLOAD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
                 <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
                 <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+            </div>
+        `
+    },
+    "alice-and-the-devils-prison": {
+        title: "Alice and the Devil's Prison",
+        categories: ["Aventura", "Escape", "Indie", "+18"],
+        youtubeId: "gIayFt4D91E",
+        summary: "Jogo de aventura de fuga. Durante uma festa do chá, Alice e seus amigos ficam presos em um mundo criado por demônios.",
+        infobox: {
+            image: "https://www.ryuugames.com/wp-content/uploads/2026/08/Alice-and-the-Devils-Prison.jpg",
+            data: {
+                "Desenvolvedor": "Tsukki's Tea Party",
+                "Gêneros": "Aventura, Escape Room, +18",
+                "Lançamento": "08 de Agosto de 2026",
+                "Plataformas": "PC (Windows)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "galeria", text: "2. Galeria de Imagens" },
+            { id: "downloads", text: "3. Links e Downloads" }
+        ],
+        content: `
+            <p><strong>Alice and the Devil's Prison</strong> (título original: <em>アリスと悪魔の牢獄</em>) é um jogo de aventura e escape desenvolvido pelo estúdio indie <strong>Tsukki's Tea Party</strong>. O jogo foca em quebra-cabeças e sobrevivência, mesclando temas de fantasia clássica com elementos sombrios e maduros.</p>
+
+            <h2 id="sinopse">Sinopse</h2>
+            <p>A história começa de forma inocente: durante uma festa do chá, Alice e seus amigos são repentinamente capturados e ficam presos em um mundo bizarro criado por demônios. Agora, cabe a eles explorar este reino distorcido, resolver diversos enigmas e encontrar uma forma de escapar com segurança antes que seja tarde demais.</p>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div class="image-gallery">
+                <img src="https://p.inari.site/usr/2803/6a78af7b70b95.jpg" alt="Screenshot 1" loading="lazy">
+                <img src="https://p.inari.site/usr/2803/6a78af7bd6e9a.jpg" alt="Screenshot 2" loading="lazy">
+                <img src="https://otaku-plan.net/images/games/AliceandtheDevilsPrison/des.avif" alt="Screenshot 3" loading="lazy">
+            </div>
+
+            <hr>
+            <h2 id="downloads">Links e Downloads</h2>
+            <p><i class="fa-solid fa-link"></i> <strong>Página Oficial:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/4145350/Alice_and_the_Devils_Prison/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+            </div>
+
+            <h3>Download (Versão Uncensored)</h3>
+            <p><strong>Idioma:</strong> Inglês (Oficial)<br>
+            <strong>Senha de extração:</strong> ryuugames.com</p>
+            <div class="play-links">
+                <a href="https://4br.me/JQK8vz" target="_blank"><i class="fa-solid fa-download"></i> Servidor 1</a>
+                <a href="https://4br.me/BQo1W" target="_blank"><i class="fa-solid fa-download"></i> Servidor 2</a>
+                <a href="https://4br.me/ie0P" target="_blank"><i class="fa-solid fa-download"></i> Servidor 3</a>
+            </div>
+
+            <h3>Download (Versão Japonesa)</h3>
+            <p><strong>Idioma:</strong> Japonês<br>
+            <strong>Senha de extração:</strong> ryuugames.com</p>
+            <div class="play-links">
+                <a href="https://4br.me/fN9V" target="_blank"><i class="fa-solid fa-download"></i> Servidor 1</a>
+                <a href="https://4br.me/FEmE0Dpg" target="_blank"><i class="fa-solid fa-download"></i> Servidor 2</a>
+            </div>
+
+            <h3>Patches Adicionais</h3>
+            <p><strong>Patch EN (Inglês):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/Ofdee" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 1</a>
+                <a href="https://4br.me/oh9eu9Cyho" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 2</a>
+                <a href="https://4br.me/jP2QAnWtP" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 3</a>
+            </div>
+
+            <p><strong>Patch TCN (Chinês Tradicional):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/YbIQx" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 1</a>
+                <a href="https://4br.me/uEZhIcum2o" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 2</a>
+                <a href="https://4br.me/As8EURj8" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 3</a>
             </div>
         `
     }

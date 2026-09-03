@@ -292,6 +292,20 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 .infobox th { text-align: left; background-color: rgba(15, 22, 34, 0.6); width: 38%; color: #8fa3bc; }
 .infobox td { color: #c5c8c6; }
 
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 10px;
+    margin: 15px 0 20px;
+}
+.image-gallery img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 .toc {
     background-color: rgba(11, 17, 24, 0.7);
     border: 1px solid #202e42;
@@ -555,6 +569,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     #content { padding: 15px; }
 
     .infobox { float: none; width: 100%; margin: 0 0 15px 0; }
+    .image-gallery { grid-template-columns: 1fr; }
     .home-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .home-card img { height: 80px; }
     .play-links { flex-direction: column; }
