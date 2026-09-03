@@ -1,6 +1,9 @@
 RewriteEngine On
 RewriteBase /
 
+AddType application/xml .xml
+AddDefaultCharset UTF-8
+
 # Caso o arquivo real exista, serve ele normalmente
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

@@ -368,13 +368,20 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 }
 
 #menuOverlay {
-    display: none;
+    display: block;
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
     background: rgba(0,0,0,0.8);
-    z-index: 1500;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
     will-change: transform, opacity;
+    transition: opacity 0.2s ease;
+}
+#menuOverlay.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .advanced-filters {
@@ -557,7 +564,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
         width: 260px; height: 100vh;
         background-color: rgba(15, 22, 34, 0.95);
         backdrop-filter: blur(10px);
-        z-index: 2000;
+        z-index: 1001;
         box-shadow: -5px 0 20px rgba(0,0,0,0.8);
         padding: 20px;
         overflow-y: auto;
@@ -569,7 +576,6 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 
     #closeMenuBtn { display: block; text-align: right; margin-bottom: 10px; }
     #sidebar.active { right: 0; }
-    #menuOverlay.active { display: block; }
 }
 
 @media (max-width: 768px) {

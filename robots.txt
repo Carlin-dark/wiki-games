@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /assets/raw/
 
-Sitemap: https://carlin-dark.github.io/wiki-games/sitemap.xml
+Sitemap: https://wikigames.duckdns.org/sitemap.xml
