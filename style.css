@@ -173,6 +173,38 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 #content ul, #content ol { margin: 0 0 15px 20px; color: #b8c2cd; }
 #content li { margin-bottom: 4px; }
 
+.download-warning {
+    margin: 25px 0 10px;
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 193, 7, 0.45);
+    background: rgba(49, 40, 15, 0.72);
+    border-radius: 8px;
+    color: #f5e5aa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-warning h3 {
+    margin: 0 0 12px;
+    color: #ffd76a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.download-warning p {
+    margin: 0 0 10px;
+    color: #f2df9a;
+}
+
+.download-warning a {
+    color: #8ac7ff;
+    font-weight: 700;
+}
+
+.download-warning em {
+    color: #ffe8a3;
+    font-style: italic;
+}
+
 .home-banner {
     text-align: center;
     padding: 30px 20px;

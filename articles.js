@@ -1643,6 +1643,144 @@ const articlesDatabase = {
             </div>
         `
     },
+    "the-coffin-of-andy-and-leyley": {
+        title: "The Coffin of Andy and Leyley",
+        categories: ["RPG", "Terror Psicológico", "Indie", "Sobrevivência"],
+        youtubeId: "qlBkkewJM0c",
+        summary: "Navegue pela realidade sombria de Andy e Leyley, irmãos presos em um mundo abominável onde o terror psicológico e o espectro do canibalismo se agigantam.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_211eee43e3663cff98c3661fdeb99099229f9679.1920x1080.jpg?t=1774434375",
+            data: {
+                "Desenvolvedor": "Kit9 Studio",
+                "Gêneros": "Simulação, RPG, Terror Psicológico",
+                "Lançamento": "13 de Outubro de 2023",
+                "Plataformas": "PC (Windows), Android"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "caracteristicas", text: "2. Características Sombrias" },
+            { id: "galeria", text: "3. Galeria de Imagens" },
+            { id: "downloads", text: "4. Links e Downloads" }
+        ],
+        content: `
+            <p>Entre na jornada de <strong>The Coffin of Andy and Leyley</strong> (<em>O Caixão de Andy e Leyley: Shadows of Descent</em>), onde o terror de sobrevivência assume uma forma nova e distorcida. Desenvolvido pela <strong>Kit9 Studio</strong>, o jogo foca em uma narrativa densa e escolhas morais perturbadoras.</p>
+            
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Neste jogo, você navega pela realidade sombria de Andy (Andrew) e Leyley (Ashley), irmãos presos em um mundo desolado e abominável. Presos em um pesadelo implacável, os irmãos enfrentam o horror supremo: seu próprio parentesco corrompido por uma necessidade extrema de sustento.</p>
+            <p>Cada decisão que você toma tece uma história de terror psicológico, onde os fantasmas de suas ações se agigantam e o espectro do canibalismo lança uma longa sombra. É preciso lutar contra os demônios internos que ameaçam consumi-los, literal e metaforicamente.</p>
+
+            <h2 id="caracteristicas">Características Sombrias</h2>
+            <ul>
+                <li>Navegue por um mundo desolado e opressivo.</li>
+                <li>Resolva quebra-cabeças enigmáticos que testam sua vontade de sobreviver.</li>
+                <li>Alterne entre os protagonistas que lutam por sua humanidade.</li>
+                <li>Enfrente escolhas sombrias que distorcem a espinha da narrativa.</li>
+                <li>Abrace ou enfrente a realidade macabra da sobrevivência a qualquer custo.</li>
+                <li>Revele uma infinidade de finais em que cada sombra abriga uma escuridão diferente.</li>
+            </ul>
+            <p><em>Neste jogo, o verdadeiro horror não é apenas a ameaça de morte — é o que se esconde dentro do Caixão de Andy e Leyley.</em></p>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_46e4c8758c065bfd1da33bd02b0290fcdadb18e7.1920x1080.jpg?t=1774434375" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_3b636d075e491a1c1e9bda943e08c3cfbe06aa34.1920x1080.jpg?t=1774434375" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_f1371c9cc91cd6d1cbb26e2786cdf59a8b1f3059.1920x1080.jpg?t=1774434375" alt="Screenshot 3" style="max-width: 98%; height: auto; border-radius: 4px; border: 1px solid #ccc; margin-top: 10px;">
+            </div>
+
+            <hr>
+            <h2 id="downloads">Links e Downloads</h2>
+            
+            <p><i class="fa-solid fa-link"></i> <strong>Página Oficial:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2378900/The_Coffin_of_Andy_and_Leyley/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+            </div>
+
+            <h3>Informações da Versão</h3>
+            <p><strong>Versão do Jogo:</strong> v2.0.8<br>
+            <strong>Idiomas:</strong> Inglês, Japonês, Chinês e <strong>Português</strong><br>
+            <em>(OBS: A tradução em Português foi feita por Shinra Kun e seu amigo)</em></p>
+
+            <h3>Download (PC - Multi-language)</h3>
+            <p><strong>Tamanho:</strong> 334.1 MB<br>
+            <strong>Senha de extração:</strong> hentaijogos.com</p>
+            <div class="play-links">
+                <a href="https://4br.me/BtAtxfwYrg" target="_blank"><i class="fa-solid fa-download"></i> Download PC</a>
+            </div>
+
+            <h3>Download (Android - APK)</h3>
+            <p>Pode ser jogado nativamente instalando o APK ou via emulador JoiPlay.</p>
+            <div class="play-links">
+                <a href="https://4br.me/DesaHlfd" target="_blank"><i class="fa-brands fa-android"></i> Download APK</a>
+            </div>
+        `
+    },
+    "gnosia": {
+        title: "Gnosia",
+        categories: ["RPG", "Dedução Social", "Ficção Científica", "Indie", "Visual Novel"],
+        summary: "Um RPG de ficção científica de dedução social onde você deve identificar e eliminar a ameaça alienígena Gnosia em meio a loops temporais.",
+        infobox: {
+            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1608290/header.jpg",
+            data: {
+                "Desenvolvedor": "Petit Depotto",
+                "Gêneros": "RPG, Dedução Social, Sci-Fi",
+                "Lançamento": "23 de Janeiro de 2022 (PC)",
+                "Plataformas": "PC (Windows), Nintendo Switch"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse" },
+            { id: "mecanicas", text: "2. Mecânicas e Loops" },
+            { id: "requisitos", text: "3. Requisitos do Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "downloads", text: "5. Links e Downloads" }
+        ],
+        content: `
+            <p><strong>Gnosia</strong> é um aclamado RPG de ficção científica focado em dedução social, desenvolvido pelo estúdio indie japonês <strong>Petit Depotto</strong>. O jogo mistura elementos clássicos de jogos de tabuleiro (como <em>Máfia</em> ou <em>Lobisomem</em>) com uma narrativa profunda estilo <em>Visual Novel</em> baseada em viagens no tempo.</p>
+            
+            <h2 id="sinopse">Sinopse</h2>
+            <p>A mentira da Gnosia. Fingindo ser humanos, eles se aproximam, enganam e então eliminam uma vítima de cada vez. A tripulação de uma nave espacial à deriva enfrenta essa ameaça misteriosa e mortal, não tendo ideia de quem entre eles é realmente o inimigo.</p>
+            <p>Para sobreviver, eles formulam um plano desesperado: debater entre si e colocar os membros mais suspeitos em "sono frio" (criogenia), um por um, na esperança de livrar a nave de todos os Gnosia infiltrados.</p>
+
+            <h2 id="mecanicas">Mecânicas e Loops</h2>
+            <p>O jogador deve discutir com uma variedade de personagens únicos, coletando informações para deduzir quem é o inimigo, e então votar. Trabalhe em colaboração com ou contra outros membros da tripulação para garantir sua sobrevivência. Conforme você avança, as habilidades da tripulação também melhoram.</p>
+            <ul>
+                <li><strong>Loops Temporais:</strong> Jogue repetidos "loops" (ciclos), desencadeando eventos especiais para desvendar o grande mistério. Certos eventos desbloqueiam novos comandos de diálogo.</li>
+                <li><strong>Estatísticas RPG:</strong> Suas estatísticas determinam sua capacidade de influenciar o grupo, mentir ou perceber mentiras, afetando também a probabilidade de você ser selecionado para o sono frio.</li>
+                <li><strong>Papéis Variados:</strong> Entre em uma variedade de papéis (como Engenheiro, Doutor, Anjo da Guarda, ou até mesmo jogar como Gnosia) que alteram completamente a dinâmica das discussões.</li>
+                <li><strong>Eventos de Tripulação:</strong> Vivencie eventos desencadeados aleatoriamente que revelam o passado e os segredos de seus companheiros na forma de "Notas" no diário.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos do Sistema (PC)</h2>
+            <ul>
+                <li><strong>SO:</strong> Windows 7 / 8 / 8.1 / 10 (32-bit / 64-bit) <em>*Nota: Atualmente a Steam exige Windows 10+</em></li>
+                <li><strong>Processador:</strong> Intel Core i5</li>
+                <li><strong>Memória:</strong> 4 GB de RAM</li>
+                <li><strong>Armazenamento:</strong> 1 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/GNOSIA-gog-639x361.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/GNOSIA-crack-639x361.png" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="downloads">Links e Downloads</h2>
+            
+            <p><i class="fa-solid fa-link"></i> <strong>Página Oficial:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1608290/GNOSIA/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+            </div>
+
+            <h3>Download (Grátis)</h3>
+            <p><strong>Versão do Jogo:</strong> v2022.03.03<br>
+            <strong>Tamanho:</strong> 727,21 MB</p>
+            <div class="play-links">
+                <a href="https://4br.me/cBGR6uD" target="_blank"><i class="fa-solid fa-download"></i> Download PC</a>
+            </div>
+        `
+    },
     "alice-and-the-devils-prison": {
         title: "Alice and the Devil's Prison",
         categories: ["Aventura", "Escape", "Indie", "+18"],

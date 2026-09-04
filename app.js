@@ -129,6 +129,17 @@ function getTrailerData(article) {
     return null;
 }
 
+function renderDownloadWarning() {
+    return `
+        <div class="download-warning">
+            <h3><i class="fa-solid fa-triangle-exclamation"></i> Aviso Importante sobre Downloads</h3>
+            <p>Os links de downloads disponibilizados para <em>ports</em>, <em>patches</em> de tradução e modificações são conteúdos encontrados e compartilhados pela comunidade da internet.</p>
+            <p>Por questões de segurança, <strong>recomendamos fortemente</strong> que você faça o escaneamento do arquivo ou do link no site do <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer">VirusTotal</a> antes de realizar o download ou a instalação no seu dispositivo.</p>
+            <p><em>O Wiki Games não hospedará arquivos e não se responsabiliza por eventuais problemas causados por arquivos de terceiros.</em></p>
+        </div>
+    `;
+}
+
 function renderAllGamesPage() {
     setPageBackground(null);
     const container = document.getElementById('article-container');
@@ -298,6 +309,11 @@ function renderPage() {
         }
 
         htmlContent += `<div class="article-text">${article.content}</div>`;
+
+        const isGamePage = route !== 'home' && route !== 'sobre' && route !== 'all' && !route.startsWith('categoria/');
+        if (isGamePage) {
+            htmlContent += renderDownloadWarning();
+        }
 
         const trailerData = route !== 'home' && !route.startsWith('categoria/') ? getTrailerData(article) : null;
         if (trailerData) {
