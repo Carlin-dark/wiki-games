@@ -728,7 +728,8 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     color: #fff;
 }
 
-#article-container img {
+#article-container .image-gallery img,
+#article-container .mod-gallery img {
     cursor: zoom-in;
 }
 .image-lightbox {

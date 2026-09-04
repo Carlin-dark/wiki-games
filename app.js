@@ -622,7 +622,7 @@ document.addEventListener('keydown', event => {
 });
 
 document.addEventListener('click', function (e) {
-    const image = e.target.closest('#article-container img');
+    const image = e.target.closest('#article-container .image-gallery img, #article-container .mod-gallery img');
     if (!image) return;
 
     e.preventDefault();
