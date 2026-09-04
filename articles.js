@@ -186,6 +186,12 @@ const articlesDatabase = {
         ],
         content: `
             <p><strong>Doki Doki Literature Club! (DDLC)</strong> é uma aclamada visual novel gratuita desenvolvida por Dan Salvato através do estúdio <a href="https://teamsalvato.com/" target="_blank">Team Salvato</a>. Apresentando-se como um simulador de romance amador repleto de clichês fofos de animes, a obra subverte drasticamente as expectativas a partir de seu segundo ato, transformando-se em horror metaficcional puro que interage de forma agressiva com o computador do jogador.</p>
+
+            <div class="mods-link-panel">
+                <strong><i class="fa-solid fa-puzzle-piece"></i> Mods de Doki Doki Literature Club!</strong>
+                <p>Explore mods do jogo reunidos em uma página, com pesquisa por nome, autor, descrição e gênero.</p>
+                <a href="/mods/doki-doki-literature-club" class="mod-download"><i class="fa-solid fa-list"></i> Ver página de mods</a>
+            </div>
             
             <h2 id="sinopse">Sinopse</h2>
             <p>O protagonista é arrastado por sua alegre amiga Sayori para se juntar ao Clube de Literatura. Lá, ele conhece Natsuki, Yuri e a presidente Monika. O que começa com a troca de poesia desmorona rapidamente. O jogo passa a sofrer falhas gráficas (glitches) perturbadoras, quebrando a quarta parede e obrigando o jogador a manipular arquivos reais do sistema operacional.</p>
@@ -1784,6 +1790,7 @@ const articlesDatabase = {
     "the-zodiac-trial": {
         title: "The Zodiac Trial",
         categories: ["Visual Novel", "Mistério", "Death Game", "Quebra-Cabeças", "Indie"],
+        youtubeId: "duXpCP0qVE4",
         summary: "O Julgamento do Zodíaco começou e a vida de 12 jurados está em jogo! Um jogo de mistério, traição e quebra-cabeças com mais de 52 finais.",
         infobox: {
             image: "https://igg-games.com/wp-content/uploads/2026/01/The-Zodiac-Trial-PC-Crack.jpg",

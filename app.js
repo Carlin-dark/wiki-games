@@ -66,7 +66,7 @@ function isInternalAppLink(href) {
         const cleanQuery = url.searchParams.get('route');
 
         if (cleanQuery) return true;
-        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath.startsWith('categoria/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
+        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath.startsWith('categoria/') || cleanPath.startsWith('mods/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
     } catch (error) {
         return false;
     }
@@ -231,6 +231,92 @@ function renderAllGamesPage() {
     window.scrollTo(0, 0);
 }
 
+function renderModsPage(gameKey) {
+    const modsPage = modsDatabase[gameKey];
+    const container = document.getElementById('article-container');
+
+    if (!modsPage) return false;
+
+    setPageBackground(null);
+    document.title = `Mods de ${modsPage.gameTitle} - WikiGames`;
+    const genres = [...new Set(modsPage.mods.flatMap(mod => mod.genres))].sort((a, b) => a.localeCompare(b));
+
+    container.innerHTML = `
+        <h1><i class="fa-solid fa-puzzle-piece"></i> Mods de ${modsPage.gameTitle}</h1>
+        <p class="mods-intro">Mods reunidos para <a href="/${modsPage.gameRoute}">${modsPage.gameTitle}</a>. Pesquise somente nesta coleção ou filtre por gênero.</p>
+        <div class="advanced-filters mods-filters">
+            <div class="filter-row">
+                <label class="filter-field">
+                    <span>Pesquisar mods</span>
+                    <input type="text" id="modsSearch" placeholder="Nome, autor ou descrição...">
+                </label>
+                <label class="filter-field">
+                    <span>Gênero</span>
+                    <select id="modsGenre">
+                        <option value="all">Todos os gêneros</option>
+                        ${genres.map(genre => `<option value="${createSlug(genre)}">${genre}</option>`).join('')}
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div id="modsResults" class="mods-grid"></div>
+        <div class="mods-request-box">
+            <h2><i class="fa-brands fa-discord"></i> MOD não disponível?</h2>
+            <p>Não encontrou o MOD que procura no site? Solicite sua adição através do nosso servidor oficial no Discord.</p>
+            <p>Nossa equipe analisará sua solicitação e, quando possível, providenciará a disponibilização do MOD na plataforma.</p>
+            <a href="https://discord.gg/T2gZfXMCAm" target="_blank" rel="noopener noreferrer" class="discord-btn"><i class="fa-brands fa-discord"></i> Enviar solicitação no Discord</a>
+        </div>
+    `;
+
+    const searchInputEl = document.getElementById('modsSearch');
+    const genreSelectEl = document.getElementById('modsGenre');
+    const resultsContainer = document.getElementById('modsResults');
+
+    function renderResults() {
+        const query = searchInputEl.value.toLowerCase().trim();
+        const selectedGenre = genreSelectEl.value;
+        const filteredMods = modsPage.mods.filter(mod => {
+            const searchableText = [mod.title, mod.author, mod.description, ...mod.genres].join(' ').toLowerCase();
+            const matchesQuery = !query || searchableText.includes(query);
+            const matchesGenre = selectedGenre === 'all' || mod.genres.some(genre => createSlug(genre) === selectedGenre);
+            return matchesQuery && matchesGenre;
+        });
+
+        if (!filteredMods.length) {
+            resultsContainer.innerHTML = '<div class="all-games-empty">Nenhum mod encontrado com esses filtros.</div>';
+            return;
+        }
+
+        resultsContainer.innerHTML = filteredMods.map(mod => `
+            <article class="mod-card">
+                <img src="${mod.cover}" alt="Capa de ${mod.title}" loading="lazy">
+                <div class="mod-card-content">
+                    <h2>${mod.title}</h2>
+                    <p class="mod-author">Criado por: <strong>${mod.author}</strong></p>
+                    <div class="mod-tags">${mod.genres.map(genre => `<span>${genre}</span>`).join('')}</div>
+                    <dl class="mod-meta">
+                        <div><dt>Comprimento</dt><dd>${mod.length}</dd></div>
+                        <div><dt>Status</dt><dd>${mod.status}</dd></div>
+                        <div><dt>Lançado</dt><dd>${mod.releaseDate}</dd></div>
+                        <div><dt>Plataforma</dt><dd>${mod.platform}</dd></div>
+                    </dl>
+                    <p>${mod.description}</p>
+                    <div class="mod-gallery">
+                        ${mod.screenshots.map((image, index) => `<img src="${image}" alt="Screenshot ${index + 1} de ${mod.title}" loading="lazy">`).join('')}
+                    </div>
+                    <a href="${mod.downloadUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-download"></i> Download para ${mod.platform}</a>
+                </div>
+            </article>
+        `).join('');
+    }
+
+    searchInputEl.addEventListener('input', renderResults);
+    genreSelectEl.addEventListener('change', renderResults);
+    renderResults();
+    window.scrollTo(0, 0);
+    return true;
+}
+
 function renderPage() {
     const { route, anchor } = getRouteInfo();
     const container = document.getElementById('article-container');
@@ -240,6 +326,10 @@ function renderPage() {
     if (route === 'all') {
         renderAllGamesPage();
         return;
+    }
+
+    if (route.startsWith('mods/')) {
+        if (renderModsPage(route.split('/')[1])) return;
     }
 
     if (route.startsWith('categoria/')) {
