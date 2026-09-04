@@ -66,7 +66,7 @@ function isInternalAppLink(href) {
         const cleanQuery = url.searchParams.get('route');
 
         if (cleanQuery) return true;
-        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath.startsWith('categoria/') || cleanPath.startsWith('mods/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
+        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath === 'mods' || cleanPath.startsWith('categoria/') || cleanPath.startsWith('mods/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
     } catch (error) {
         return false;
     }
@@ -317,6 +317,94 @@ function renderModsPage(gameKey) {
     return true;
 }
 
+function renderAllModsPage() {
+    setPageBackground(null);
+    const container = document.getElementById('article-container');
+    const allMods = Object.entries(modsDatabase).flatMap(([gameKey, modsPage]) => modsPage.mods.map(mod => ({
+        ...mod,
+        gameKey,
+        gameTitle: modsPage.gameTitle,
+        gameRoute: modsPage.gameRoute
+    })));
+    const genres = [...new Set(allMods.flatMap(mod => mod.genres))].sort((a, b) => a.localeCompare(b));
+    const games = [...new Map(allMods.map(mod => [mod.gameKey, mod.gameTitle]))].sort((a, b) => a[1].localeCompare(b[1]));
+
+    document.title = 'Todos os Mods - WikiGames';
+    container.innerHTML = `
+        <h1><i class="fa-solid fa-puzzle-piece"></i> Todos os Mods</h1>
+        <p class="mods-intro">Uma coleção com todos os mods disponíveis na WikiGames.</p>
+        <div class="advanced-filters mods-filters">
+            <div class="filter-row">
+                <label class="filter-field">
+                    <span>Pesquisar mods</span>
+                    <input type="text" id="allModsSearch" placeholder="Nome, autor ou descrição...">
+                </label>
+                <label class="filter-field">
+                    <span>Gênero</span>
+                    <select id="allModsGenre">
+                        <option value="all">Todos os gêneros</option>
+                        ${genres.map(genre => `<option value="${createSlug(genre)}">${genre}</option>`).join('')}
+                    </select>
+                </label>
+                <label class="filter-field">
+                    <span>Jogo</span>
+                    <select id="allModsGame">
+                        <option value="all">Todos os jogos</option>
+                        ${games.map(([key, title]) => `<option value="${key}">${title}</option>`).join('')}
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div id="allModsResults" class="mods-grid"></div>
+    `;
+
+    const searchInputEl = document.getElementById('allModsSearch');
+    const genreSelectEl = document.getElementById('allModsGenre');
+    const gameSelectEl = document.getElementById('allModsGame');
+    const resultsContainer = document.getElementById('allModsResults');
+
+    function renderResults() {
+        const query = searchInputEl.value.toLowerCase().trim();
+        const selectedGenre = genreSelectEl.value;
+        const selectedGame = gameSelectEl.value;
+        const filteredMods = allMods.filter(mod => {
+            const searchableText = [mod.title, mod.author, mod.description, mod.gameTitle, ...mod.genres].join(' ').toLowerCase();
+            return (!query || searchableText.includes(query)) &&
+                (selectedGenre === 'all' || mod.genres.some(genre => createSlug(genre) === selectedGenre)) &&
+                (selectedGame === 'all' || mod.gameKey === selectedGame);
+        });
+
+        resultsContainer.innerHTML = filteredMods.length
+            ? filteredMods.map(mod => `
+                <article class="mod-card">
+                    <img src="${mod.cover}" alt="Capa de ${mod.title}" loading="lazy">
+                    <div class="mod-card-content">
+                        <p class="mod-game-link"><i class="fa-solid fa-gamepad"></i> <a href="/${mod.gameRoute}">${mod.gameTitle}</a></p>
+                        <h2>${mod.title}</h2>
+                        <p class="mod-author">Criado por: <strong>${mod.author}</strong></p>
+                        <div class="mod-tags">${mod.genres.map(genre => `<span>${genre}</span>`).join('')}</div>
+                        <dl class="mod-meta">
+                            <div><dt>Comprimento</dt><dd>${mod.length}</dd></div>
+                            <div><dt>Status</dt><dd>${mod.status}</dd></div>
+                            <div><dt>Lançado</dt><dd>${mod.releaseDate}</dd></div>
+                            <div><dt>Plataforma</dt><dd>${mod.platform}</dd></div>
+                        </dl>
+                        <p>${mod.description}</p>
+                        <div class="mod-gallery">${mod.screenshots.map((image, index) => `<img src="${image}" alt="Screenshot ${index + 1} de ${mod.title}" loading="lazy">`).join('')}</div>
+                        <a href="${mod.downloadUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-download"></i> Download para ${mod.platform}</a>
+                    </div>
+                </article>
+            `).join('')
+            : '<div class="all-games-empty">Nenhum mod encontrado com esses filtros.</div>';
+    }
+
+    searchInputEl.addEventListener('input', renderResults);
+    genreSelectEl.addEventListener('change', renderResults);
+    gameSelectEl.addEventListener('change', renderResults);
+    renderResults();
+    window.scrollTo(0, 0);
+}
+
 function renderPage() {
     const { route, anchor } = getRouteInfo();
     const container = document.getElementById('article-container');
@@ -325,6 +413,11 @@ function renderPage() {
 
     if (route === 'all') {
         renderAllGamesPage();
+        return;
+    }
+
+    if (route === 'mods') {
+        renderAllModsPage();
         return;
     }
 
@@ -489,6 +582,53 @@ function renderPage() {
 
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
+
+function openImageLightbox(image) {
+    let lightbox = document.getElementById('imageLightbox');
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.id = 'imageLightbox';
+        lightbox.className = 'image-lightbox';
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-modal', 'true');
+        lightbox.innerHTML = `
+            <button class="image-lightbox-close" type="button" aria-label="Fechar imagem"><i class="fa-solid fa-xmark"></i></button>
+            <img class="image-lightbox-preview" alt="">
+        `;
+        document.body.appendChild(lightbox);
+        lightbox.addEventListener('click', event => {
+            if (event.target === lightbox || event.target.closest('.image-lightbox-close')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    const preview = lightbox.querySelector('.image-lightbox-preview');
+    preview.src = image.currentSrc || image.src;
+    preview.alt = image.alt || 'Imagem ampliada';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+        const lightbox = document.getElementById('imageLightbox');
+        if (lightbox && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+});
+
+document.addEventListener('click', function (e) {
+    const image = e.target.closest('#article-container img');
+    if (!image) return;
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    openImageLightbox(image);
+});
 
 searchInput.addEventListener('input', function () {
     const query = this.value.toLowerCase();
