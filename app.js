@@ -214,7 +214,7 @@ function renderAllGamesPage() {
             const game = articlesDatabase[key];
             return `
                 <a href="/${key}" class="all-game-card">
-                    <img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}" loading="lazy">
+                    <img class="zoomable-image" src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}" loading="lazy">
                     <div class="all-game-card-content">
                         <h3>${game.title}</h3>
                         <p>${game.summary}</p>
@@ -289,7 +289,7 @@ function renderModsPage(gameKey) {
 
         resultsContainer.innerHTML = filteredMods.map(mod => `
             <article class="mod-card">
-                <img src="${mod.cover}" alt="Capa de ${mod.title}" loading="lazy">
+                <img class="zoomable-image" src="${mod.cover}" alt="Capa de ${mod.title}" loading="lazy">
                 <div class="mod-card-content">
                     <h2>${mod.title}</h2>
                     <p class="mod-author">Criado por: <strong>${mod.author}</strong></p>
@@ -377,7 +377,7 @@ function renderAllModsPage() {
         resultsContainer.innerHTML = filteredMods.length
             ? filteredMods.map(mod => `
                 <article class="mod-card">
-                    <img src="${mod.cover}" alt="Capa de ${mod.title}" loading="lazy">
+                    <img class="zoomable-image" src="${mod.cover}" alt="Capa de ${mod.title}" loading="lazy">
                     <div class="mod-card-content">
                         <p class="mod-game-link"><i class="fa-solid fa-gamepad"></i> <a href="/${mod.gameRoute}">${mod.gameTitle}</a></p>
                         <h2>${mod.title}</h2>
@@ -475,7 +475,7 @@ function renderPage() {
         if (article.infobox) {
             htmlContent += `<div class="infobox">
                 <div class="infobox-title">${article.title}</div>
-                <img src="${article.infobox.image}" alt="Capa" loading="lazy">
+                    <img class="zoomable-image" src="${article.infobox.image}" alt="Capa" loading="lazy">
                 <table>`;
             for (const [key, value] of Object.entries(article.infobox.data)) {
                 htmlContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
@@ -628,7 +628,7 @@ document.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopImmediatePropagation();
     openImageLightbox(image);
-});
+}, true);
 
 searchInput.addEventListener('input', function () {
     const query = this.value.toLowerCase();
