@@ -293,7 +293,7 @@ function renderModsPage(gameKey) {
                 <div class="mod-card-content">
                     <h2>${mod.title}</h2>
                     <p class="mod-author">Criado por: <strong>${mod.author}</strong></p>
-                    <div class="mod-tags">${mod.genres.map(genre => `<span>${genre}</span>`).join('')}</div>
+                    <div class="mod-tags"><span>${mod.type || 'Mod de jogo'}</span>${mod.genres.map(genre => `<span>${genre}</span>`).join('')}</div>
                     <dl class="mod-meta">
                         <div><dt>Comprimento</dt><dd>${mod.length}</dd></div>
                         <div><dt>Status</dt><dd>${mod.status}</dd></div>
@@ -304,7 +304,11 @@ function renderModsPage(gameKey) {
                     <div class="mod-gallery">
                         ${mod.screenshots.map((image, index) => `<img src="${image}" alt="Screenshot ${index + 1} de ${mod.title}" loading="lazy">`).join('')}
                     </div>
-                    <a href="${mod.downloadUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-download"></i> Download para ${mod.platform}</a>
+                    <div class="mod-links">
+                        <a href="${mod.downloadUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-download"></i> Download para ${mod.platform}</a>
+                        ${mod.alternativeDownloadUrl ? `<a href="${mod.alternativeDownloadUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-server"></i> Servidor alternativo</a>` : ''}
+                        ${mod.officialUrl ? `<a href="${mod.officialUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-globe"></i> Site oficial</a>` : ''}
+                    </div>
                 </div>
             </article>
         `).join('');
@@ -382,7 +386,7 @@ function renderAllModsPage() {
                         <p class="mod-game-link"><i class="fa-solid fa-gamepad"></i> <a href="/${mod.gameRoute}">${mod.gameTitle}</a></p>
                         <h2>${mod.title}</h2>
                         <p class="mod-author">Criado por: <strong>${mod.author}</strong></p>
-                        <div class="mod-tags">${mod.genres.map(genre => `<span>${genre}</span>`).join('')}</div>
+                        <div class="mod-tags"><span>${mod.type || 'Mod de jogo'}</span>${mod.genres.map(genre => `<span>${genre}</span>`).join('')}</div>
                         <dl class="mod-meta">
                             <div><dt>Comprimento</dt><dd>${mod.length}</dd></div>
                             <div><dt>Status</dt><dd>${mod.status}</dd></div>
@@ -391,7 +395,11 @@ function renderAllModsPage() {
                         </dl>
                         <p>${mod.description}</p>
                         <div class="mod-gallery">${mod.screenshots.map((image, index) => `<img src="${image}" alt="Screenshot ${index + 1} de ${mod.title}" loading="lazy">`).join('')}</div>
-                        <a href="${mod.downloadUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-download"></i> Download para ${mod.platform}</a>
+                        <div class="mod-links">
+                            <a href="${mod.downloadUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-download"></i> Download para ${mod.platform}</a>
+                            ${mod.alternativeDownloadUrl ? `<a href="${mod.alternativeDownloadUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-server"></i> Servidor alternativo</a>` : ''}
+                            ${mod.officialUrl ? `<a href="${mod.officialUrl}" target="_blank" rel="noopener noreferrer" class="mod-download"><i class="fa-solid fa-globe"></i> Site oficial</a>` : ''}
+                        </div>
                     </div>
                 </article>
             `).join('')

@@ -114,5 +114,50 @@ const modsDatabase = {
                 ]
             }
         ]
+    },
+    "higurashi-when-they-cry": {
+        gameTitle: "Higurashi When They Cry",
+        gameRoute: "higurashi-when-they-cry",
+        mods: [
+            {
+                title: "07th-Mod v1.4.1",
+                type: "Patch",
+                author: "07th-Mod Team",
+                genres: ["Voz", "Gráficos", "Tradução"],
+                downloadUrl: "https://4br.me/XafUy32",
+                platform: "PC",
+                length: "16 MB",
+                status: "Versão 1.4.1",
+                releaseDate: "1º de julho de 2026",
+                description: "Patch de voz e gráficos de console para Higurashi When They Cry. Reproduz a experiência da versão Nintendo Switch, com narração completa, lipsync, sprites e fundos em 16:9, conteúdo exclusivo de console, interface atualizada, modos ADV e NVL e vídeos de abertura. Compatível com a versão Steam e versões sem DRM, incluindo GOG; não é compatível com o lançamento japonês antigo. O patch oferece instalador e inclui suporte opcional a arcos de console e idiomas de terceiros.",
+                cover: "https://07th-mod.com/favicon.png",
+                screenshots: [
+                    "https://cdn.gracza.pl/galeria/html/pliki/554339406.jpg"
+                ],
+                officialUrl: "https://07th-mod.com/",
+                alternativeDownloadUrl: "https://4br.me/higurashi07thmod141"
+            }
+        ]
+    },
+    "clannad": {
+        gameTitle: "CLANNAD",
+        gameRoute: "clannad",
+        mods: [
+            {
+                title: "Patch de Tradução PT-BR para CLANNAD (Android / RLVM)",
+                type: "Patch",
+                author: "Taiyaki Club e Kikachan Games",
+                genres: ["Tradução", "Android", "PT-BR"],
+                downloadUrl: "https://taiyakiclub.wordpress.com/2025/02/01/clannad-no-android-e-na-steam/",
+                platform: "Android / RLVM",
+                length: "Não informado",
+                status: "BETA",
+                releaseDate: "30 de maio de 2025",
+                description: "Patch que adapta a tradução da Zero Force para rodar no emulador RLVM no Android, corrigindo a exibição de acentos em português. Requer a versão Full Voice (2008) do jogo. Para instalar, baixe o patch no post oficial, use a versão Full Voice 2008 para PC, extraia primeiro o patch da Zero Force e depois o patch modificado por cima. Em seguida, instale o rlvm.apk, abra o RLVM e selecione a pasta do jogo. A partir de 30/05/2025, não é mais necessário copiar o DroidSansFallbackFull.ttf.",
+                cover: "https://cdn.akamai.steamstatic.com/steam/apps/324160/header.jpg",
+                screenshots: [],
+                officialUrl: "https://taiyakiclub.wordpress.com/2025/02/01/clannad-no-android-e-na-steam/"
+            }
+        ]
     }
 };

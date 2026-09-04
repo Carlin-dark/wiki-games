@@ -627,6 +627,11 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     color: #fff;
     text-decoration: none;
 }
+.mod-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 .mods-link-panel,
 .mods-request-box {
     margin: 20px 0;
