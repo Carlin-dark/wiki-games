@@ -1781,6 +1781,68 @@ const articlesDatabase = {
             </div>
         `
     },
+    "the-zodiac-trial": {
+        title: "The Zodiac Trial",
+        categories: ["Visual Novel", "Mistério", "Death Game", "Quebra-Cabeças", "Indie"],
+        summary: "O Julgamento do Zodíaco começou e a vida de 12 jurados está em jogo! Um jogo de mistério, traição e quebra-cabeças com mais de 52 finais.",
+        infobox: {
+            image: "https://igg-games.com/wp-content/uploads/2026/01/The-Zodiac-Trial-PC-Crack.jpg",
+            data: {
+                "Desenvolvedor": "Themis",
+                "Gêneros": "Visual Novel, Mistério, Sobrevivência",
+                "Lançamento": "2021",
+                "Plataformas": "PC (Windows), macOS"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Personagens" },
+            { id: "mecanicas", text: "2. Rotas, Finais e Quebra-Cabeças" },
+            { id: "recursos", text: "3. Recursos Adicionais" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "downloads", text: "5. Links e Downloads" }
+        ],
+        content: `
+            <p><strong>The Zodiac Trial</strong> é uma intrigante Visual Novel de mistério e sobrevivência (<em>Death Game</em>). O Julgamento do Zodíaco começou e a vida de todos está em jogo! Será que esses 12 jurados conseguirão resolver os mistérios e cooperar, ou recorrerão à traição, ao engano e à violência?</p>
+            
+            <h2 id="sinopse">Sinopse e Personagens</h2>
+            <p>Saia vivo ou morra, morra de novo! Jogue como <strong>Mo use</strong>, uma estudante de direito que está muito acima de sua capacidade. Conheça os outros 11 jurados, todos os quais podem se tornar aliados confiáveis ou inimigos cruéis. Do Boi composto à misteriosa Cobra e ao Galo estúpido, há um elenco inteiro de personagens inspirados no zodíaco para fazer amizade ou trair.</p>
+
+            <h2 id="mecanicas">Rotas, Finais e Quebra-Cabeças</h2>
+            <p>O <em>Zodiac Trial</em> está repleto de quebra-cabeças de todos os formatos e tamanhos. De um enigma casual escrito em alguma folha de papel a um mistério de assassinato de alto risco em uma sala trancada, o jogo certamente fará você pensar.</p>
+            <ul>
+                <li><strong>13 Rotas Únicas:</strong> Seu destino está em suas mãos. Há um total de 13 cenários completamente diferentes para passar. Você enfrentará assassinatos em salas trancadas, guerras territoriais totais, ou talvez um novo <em>Trinket</em> transforme o jogo numa tentativa política de obter votos.</li>
+                <li><strong>52+ Finais:</strong> Há muitas opções e inúmeras maneiras de as coisas acontecerem. Dependendo de como você vive (ou morre), você desbloqueará um <strong>Cartão da Morte</strong> personalizado representando esse final. Se você realmente entender o jogo, talvez consiga encontrar uma maneira de tirar todo mundo vivo.</li>
+            </ul>
+
+            <h2 id="recursos">Recursos Adicionais</h2>
+            <p>Além das mais de <strong>30 horas do Conteúdo da História Principal</strong>, o jogo conta com diversas opções de qualidade de vida. Há também um modo desbloqueável adicional para aqueles que conquistaram o jogo principal (projetado para lançar luz sobre certas verdades ocultas), bem como um <strong>Comentário do Narrador</strong> que fornece todos os tipos de insights ao longo da jogatina.</p>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDMuanBn/original/%2BrXMrm.jpg" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDEuanBn/original/8pCpYJ.jpg" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDIuanBn/original/WW2MHE.jpg" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="downloads">Links e Downloads</h2>
+            
+            <p><i class="fa-solid fa-link"></i> <strong>Páginas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1513120/The_Zodiac_Trial/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://themis729.itch.io/the-zodiac-trial" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
+                <a href="https://gg.deals/game/the-zodiac-trial/" target="_blank"><i class="fa-solid fa-tag"></i> GG.deals</a>
+            </div>
+
+            <h3>Download (Grátis)</h3>
+            <p><strong>Plataformas:</strong> Windows, macOS</p>
+            <div class="play-links">
+                <a href="https://4br.me/tuil" target="_blank"><i class="fa-solid fa-download"></i> MegaUp.net</a>
+                <a href="https://4br.me/r0tCLbrt" target="_blank"><i class="fa-solid fa-download"></i> Mega.nz</a>
+                <a href="https://4br.me/mAAbC3Z" target="_blank"><i class="fa-solid fa-download"></i> Rapidgator</a>
+            </div>
+        `
+    },
     "alice-and-the-devils-prison": {
         title: "Alice and the Devil's Prison",
         categories: ["Aventura", "Escape", "Indie", "+18"],
