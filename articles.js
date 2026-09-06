@@ -1850,6 +1850,90 @@ const articlesDatabase = {
             </div>
         `
     },
+    "scarlet-hollow": {
+        title: "Scarlet Hollow",
+        categories: ["Visual Novel", "Mistério", "Ficção Interativa", "RPG", "Terror Psicológico"],
+        summary: "Dos criadores de Slay the Princess. Sobreviva a uma semana em uma cidade mineira assombrada por criptídeos e horrores onde suas decisões alteram drasticamente a história.",
+        infobox: {
+            image: "https://img.itch.zone/aW1nLzI1NTY5NDc4LnBuZw==/original/o4tjkg.png",
+            data: {
+                "Desenvolvedor": "Black Tabby Games",
+                "Gêneros": "Visual Novel, Interativa, RPG, Horror",
+                "Lançamento": "11 de Junho de 2021",
+                "Plataformas": "PC (Windows), macOS, Linux",
+                "Engine": "Ren'Py"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "caracteristicas", text: "2. Características e RPG" },
+            { id: "requisitos", text: "3. Requisitos do Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "downloads", text: "5. Links, Instruções e Downloads" }
+        ],
+        content: `
+            <p><strong>Scarlet Hollow</strong> é um mistério de terror envolvente com escrita afiada e escolhas incrivelmente impactantes, desenvolvido pela <strong>Black Tabby Games</strong> (o mesmo estúdio por trás do aclamado <a href="#/slay-the-princess">Slay the Princess</a>). Totalmente desenhado à mão e focado na tensão narrativa, o jogo é estruturado de forma episódica, com 7 capítulos planejados no total (sendo que os 5 primeiros já estão disponíveis).</p>
+            
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>O que deveria ser um retiro tranquilo nas montanhas rurais da Carolina do Norte, focado em conhecer sua prima distante e confortá-la no funeral de sua tia, rapidamente se transforma em um pesadelo implacável. Você chega à decadente cidade mineira de Scarlet Hollow apenas para descobrir que o local despertou para o horror: minas de carvão desabadas, gado sendo mutilado por criaturas bizarras e casas infestadas por espíritos.</p>
+            <p>Você tem apenas uma semana para sobreviver e desvendar esses mistérios assustadores. Mas esteja avisado: <strong>você não conseguirá salvar todo mundo</strong>, e dependendo das suas escolhas, talvez não consiga salvar nem a si mesmo.</p>
+
+            <h2 id="caracteristicas">Características e Elementos de RPG</h2>
+            <ul>
+                <li><strong>Narrativa e Traços de RPG:</strong> O sistema de diálogos é impulsionado por características de <em>Role-playing Game</em>. Você é um brutamontes, possui o dom de falar com animais, ou é extremamente observador? Há 21 construções diferentes de personagem que mudam drasticamente a interação com o mundo.</li>
+                <li><strong>Relacionamentos Dinâmicos:</strong> A cidade não reage apenas com "gostar" ou "não gostar" de você. Suas atitudes podem gerar rivalidades amigáveis, ódio profundo, melhores amizades ou até mesmo <strong>romances</strong> complexos (seja com pessoas excêntricas ou até monstros reais).</li>
+                <li><strong>Mitologia dos Apalaches:</strong> Designs de monstros originais inspirados fortemente em mitos e criptídeos folclóricos locais da cultura norte-americana.</li>
+                <li><strong>Terror Atmosférico (Sem Sustos Baratos):</strong> Todo o horror vem do puro pavor, de uma tensão constante e imagens perturbadoras construídas pela arte tradicional em tinta da romancista gráfica Abby Howard, com centenas de fundos desenhados à mão.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos do Sistema (Mínimos)</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> 1.8 GHz Dual Core</li>
+                <li><strong>Memória:</strong> 2 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Gráficos Integrados</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço livre disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5My5qcGc=/347x500/SFRrfy.jpg" alt="Screenshot 1" style="max-width: 30%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5NS5qcGc=/original/rUBeRq.jpg" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5Mi5qcGc=/original/qUCTYR.jpg" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="downloads">Links, Instruções e Downloads</h2>
+            
+            <p><i class="fa-solid fa-link"></i> <strong>Páginas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1609230/Scarlet_Hollow/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://blacktabbygames.itch.io/scarlet-hollow" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
+            </div>
+
+            <h3>Download da Demonstração (Link Direto)</h3>
+            <p>Contém o primeiro episódio inteiro, e seus arquivos de salvamento serão transferidos automaticamente para o jogo completo caso decida comprar depois.</p>
+            <div class="play-links">
+                <a href="https://itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com/upload2/game/1012280/13071527?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3edfcce40115d057d0b5606758e7e9ee%2F20260906%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260906T094250Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=6066491405bdca9d73f4d3469fc9e9583e63250ecbd64b0ca9db5a6f5054ffd2" target="_blank"><i class="fa-solid fa-download"></i> Baixar Demo (Itch.io Mirror)</a>
+            </div>
+
+            <h3>Download Completo - Grátis (v1.0g)</h3>
+            <div class="play-links">
+                <a href="https://4br.me/2MOmICVAT7" target="_blank"><i class="fa-solid fa-download"></i> Download Scarlet Hollow (v1.0g)</a>
+            </div>
+            
+            <blockquote>
+                <strong>Instruções de Download e Instalação:</strong>
+                <ol>
+                    <li>Após clicar no link e passar pelo encurtador, você será redirecionado para a página do <em>UploadHaven</em>.</li>
+                    <li>Aguarde 5 segundos e clique no botão azul <strong>"Download Now"</strong>. (É recomendado utilizar um gerenciador de downloads, como o <a href="https://www.freedownloadmanager.org/pt/" target="_blank">FDM</a>, para velocidades mais rápidas).</li>
+                    <li>Quando o download do arquivo ZIP terminar, clique com o botão direito do mouse no arquivo e selecione <strong>“Extrair para Scarlet Hollow v1.0g”</strong>. Você precisará do extrator do Windows ou de um programa como o <a href="https://www.7-zip.org/" target="_blank">7-Zip</a>.</li>
+                    <li>Abra a pasta extraída, execute o aplicativo de instalação (Setup), aceite os termos e instale o jogo.</li>
+                    <li>Inicie o jogo através do atalho gerado na sua área de trabalho e divirta-se!</li>
+                </ol>
+            </blockquote>
+        `
+    },
     "alice-and-the-devils-prison": {
         title: "Alice and the Devil's Prison",
         categories: ["Aventura", "Escape", "Indie", "+18"],
