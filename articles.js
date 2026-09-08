@@ -1934,6 +1934,194 @@ const articlesDatabase = {
             </blockquote>
         `
     },
+    "little-busters": {
+        title: "Little Busters! English Edition",
+        categories: ["Visual Novel", "Drama", "Comédia", "Escolar", "Romance", "Anime"],
+        summary: "Mergulhe em uma história emocionante sobre amizade, nostalgia e fantasia enquanto acompanha Riki Naoe e os divertidos membros dos Little Busters.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/635940/header.jpg?t=1732683318",
+            data: {
+                "Desenvolvedor": "VisualArts/Key",
+                "Gêneros": "Visual Novel, Aventura, Escolar",
+                "Lançamento": "1 de Novembro de 2017",
+                "Plataformas": "PC (Windows)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "mecanicas", text: "2. Mecânicas e Recursos" },
+            { id: "galeria", text: "3. Galeria de Imagens" },
+            { id: "downloads", text: "4. Links Oficiais, Anime e Downloads" }
+        ],
+        content: `
+            <p>Mergulhe em uma história emocionante que mistura amizade, nostalgia e um toque de fantasia. Uma obra clássica do renomado estúdio <strong>Key</strong> (conhecido por obras como <em>Clannad</em> e <em>Angel Beats!</em>).</p>
+            
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Esta visual novel gira em torno de <strong>Riki Naoe</strong>, que, depois de uma infância cheia de perdas e tragédias, encontra consolo e alegria na camaradagem dos <strong>Little Busters</strong>, um grupo peculiar dedicado a combater os males de seu mundo — muitas vezes de maneiras hilariantemente fúteis.</p>
+            <p>Ambientado em um ambiente escolar vibrante, os jogadores devem navegar pelos relacionamentos de Riki, fazendo escolhas difíceis que moldam ativamente a narrativa e influenciam o desenvolvimento emocional de todos os personagens ao seu redor.</p>
+
+            <h2 id="mecanicas">Mecânicas e Recursos</h2>
+            <p>Este jogo é perfeito para fãs de narrativas baseadas em personagens e roteiros altamente emocionais, oferecendo uma experiência rica e difícil de esquecer.</p>
+            <ul>
+                <li><strong>Laços Profundos:</strong> Capacidade de aprofundar os relacionamentos com vários personagens através de histórias paralelas envolventes e rotas individuais.</li>
+                <li><strong>Minijogos:</strong> Uma mecânica de jogo exclusiva e interativa, onde você pode participar de rebatidas de beisebol, lutas corporais cômicas e outras atividades com o grupo.</li>
+                <li><strong>Múltiplos Finais:</strong> Descubra vários finais diferentes baseados nos caminhos escolhidos, culminando no verdadeiro mistério por trás do mundo do jogo.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Little-Busters-Ecstasy-Edition-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Little-Busters-Ecstasy-Edition-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="downloads">Links e Downloads</h2>
+            
+            <p><i class="fa-solid fa-link"></i> <strong>Página Oficial:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/635940/Little_Busters_English_Edition/?l=brazilian" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+            </div>
+
+            <p><i class="fa-solid fa-film"></i> <strong>Adaptação em Anime:</strong></p>
+            <div class="play-links">
+                <a href="https://www.litbus-anime.com/" target="_blank"><i class="fa-solid fa-globe"></i> Site oficial do anime</a>
+            </div>
+
+            <h3>Download (Grátis)</h3>
+            <p><strong>Versão do Jogo:</strong> v1.2.4 (GameDrive) - English Edition</p>
+            
+            <blockquote style="border-left: 4px solid #ff4c4c; padding-left: 15px; color: #cc0000; background-color: #ffe6e6; margin-bottom: 15px;">
+                <strong><i class="fa-solid fa-triangle-exclamation"></i> AVISO DE SEGURANÇA:</strong> Ignore coisas falsas em anúncios — feche-os e retorne à página original. Os arquivos reais do jogo são grandes. Anúncios costumam baixar arquivos minúsculos disfarçados. Não usamos arquivos muito pequenos!
+            </blockquote>
+
+            <div class="play-links">
+                <a href="https://4br.me/puDjlUSfNU" target="_blank"><i class="fa-solid fa-download"></i> Servidor Multiup</a>
+                <a href="https://4br.me/YAC3f" target="_blank"><i class="fa-solid fa-download"></i> Servidor MyPikPak</a>
+                <a href="https://4br.me/dFGn" target="_blank"><i class="fa-solid fa-download"></i> Servidor DL</a>
+                <a href="https://4br.me/HmTggmcI4" target="_blank"><i class="fa-solid fa-download"></i> Servidor MEGA</a>
+                <a href="https://4br.me/PWZJRTiy" target="_blank"><i class="fa-solid fa-download"></i> Servidor Alternativo</a>
+            </div>
+        `
+    },
+    "planetarian": {
+        title: "Planetarian HD",
+        categories: ["Visual Novel", "Ficção Científica", "Pós-apocalíptico", "Drama", "Indie"],
+        summary: "Em um mundo pós-apocalíptico, um sobrevivente encontra uma robô solitária em um planetário abandonado. Uma história inesquecível sobre esperança e perda.",
+        infobox: {
+            image: "https://dn710006.ca.archive.org/0/items/planetarianHD-EN/planetarian%20HD.jpg",
+            data: {
+                "Desenvolvedor": "VisualArts/Key",
+                "Gêneros": "Visual Novel, Ficção Científica, Drama",
+                "Lançamento": "Original: 2004 / HD: 2017",
+                "Plataformas": "PC (Windows)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "experiencia", text: "2. Experiência e Narrativa" },
+            { id: "galeria", text: "3. Galeria de Imagens" },
+            { id: "downloads", text: "4. Links Oficiais, Anime e Downloads" }
+        ],
+        content: `
+            <p><strong>Planetarian: The Reverie of a Little Planet</strong> (ou em sua versão remasterizada <em>Planetarian HD</em>) é uma aclamada visual novel cinética desenvolvida pelo icônico estúdio <strong>Key</strong>. Conhecida por entregar narrativas curtas, mas de impacto profundo, a obra mistura um cenário desolador com uma delicada humanidade.</p>
+            
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Entre em um mundo onde o tempo parou e as maravilhas do universo aguardam sua exploração. A história mergulha os jogadores em um cenário pós-apocalíptico implacável, trinta anos após o colapso dos esforços de colonização espacial e a devastação do planeta.</p>
+            <p>Assumindo o papel de um "Junker" (um catador de sucata), você navega por uma cidade em ruínas sob uma chuva eterna até entrar em um planetário abandonado há muito tempo. Lá, você interage com uma robô encantadora que, alheia ao fim do mundo, ainda espera por clientes, desvendando uma narrativa tocante sobre esperança, sonhos e perda.</p>
+
+            <h2 id="experiencia">Experiência e Narrativa</h2>
+            <p>O jogo cativa com seus visuais lindamente ilustrados e uma trilha sonora comovente que aprimora sua atmosfera reflexiva. Os jogadores se envolvem na exploração melancólica dos escombros e na construção de um vínculo improvável entre o humano sobrevivente e a máquina de coração puro.</p>
+            <ul>
+                <li><strong>Conexão Pessoal:</strong> A narrativa conduz o jogador por momentos profundamente emocionais, permitindo uma conexão íntima com a pureza inabalável da robô em contraste com o cinismo do protagonista.</li>
+                <li><strong>Trilha Sonora:</strong> Melodias inesquecíveis que acompanham o som constante da chuva, ditando o tom agridoce da experiência.</li>
+                <li><strong>Estilo de Arte:</strong> Visuais esteticamente únicos em alta definição, perfeitos para fãs de narrativas baseadas no profundo desenvolvimento de personagens.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Planetarian-the-Reverie-Of-A-Little-Planet-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Planetarian-the-Reverie-Of-A-Little-Planet-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="downloads">Links e Downloads</h2>
+            
+            <p><i class="fa-solid fa-link"></i> <strong>Páginas Oficiais, Anime e Mídia:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/623080/planetarian_HD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://www.crunchyroll.com/pt-br/series/G5PHNM7M1/planetarian" target="_blank"><i class="fa-solid fa-film"></i> Assistir ao Anime (Crunchyroll)</a>
+            </div>
+
+            <h3>Download (Grátis)</h3>
+            <p><strong>Plataforma:</strong> PC (Windows)</p>
+            <div class="play-links">
+                <a href="https://4br.me/rNNHg" target="_blank"><i class="fa-solid fa-download"></i> Download Planetarian HD</a>
+            </div>
+        `
+    },
+    "summer-pockets": {
+        title: "Summer Pockets",
+        categories: ["Visual Novel", "Romance", "Drama", "Anime", "Key"],
+        summary: "Uma inesquecível visual novel de verão desenvolvida pela Key (Jun Maeda), onde memórias, amizades e o folclore local se encontram em uma ilha nostálgica.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/897220/header.jpg?t=1732683225",
+            data: {
+                "Desenvolvedor": "VisualArts/Key",
+                "Gêneros": "Visual Novel, Aventura, Drama",
+                "Lançamento": "6 de Fevereiro de 2020 (Steam)",
+                "Plataformas": "PC (Windows)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "equipe", text: "2. Equipe e Elenco de Voz" },
+            { id: "conteudo", text: "3. Conteúdo e Classificação" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Anime" }
+        ],
+        content: `
+            <p><strong>Summer Pockets</strong> é uma aclamada visual novel desenvolvida pelo lendário estúdio <strong>VisualArts/Key</strong>, com o conceito e a história original idealizados por <strong>Jun Maeda</strong> (criador de obras icônicas como <em>Clannad</em>, <em>Angel Beats!</em> e <em>Little Busters!</em>).</p>
+            
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Ambientada em uma ilha pacífica e isolada durante as nostálgicas férias de verão, a narrativa acompanha a jornada de um protagonista que busca refúgio da cidade grande. Ao chegar, ele acaba criando laços inesquecíveis com as garotas locais. A história explora temas como memórias de infância, o folclore misterioso da ilha, amizades profundas e os milagres melancólicos que são a marca registrada da Key.</p>
+
+            <h2 id="equipe">Equipe e Elenco de Voz</h2>
+            <p>A obra conta com uma equipe de peso para entregar uma experiência audiovisual rica e emocionante:</p>
+            <ul>
+                <li><strong>História original:</strong> Jun Maeda</li>
+                <li><strong>Produtor:</strong> Touya Okano | <strong>Diretor:</strong> Kai</li>
+                <li><strong>Escritores de cenário:</strong> Yuu Niijima, Kai, Hasama</li>
+                <li><strong>Ilustradores:</strong> Na-Ga, Tsubasu Izumi, Yuunon Nagayama, Humuyun (personagens secundários), Engiyoshi (SD)</li>
+                <li><strong>Música:</strong> Shinji Orito, Jun Maeda, Donmaru, Tomohiro Takeshita, Ryo Mizutsuki</li>
+            </ul>
+            <p><strong>Elenco de Voz Principal:</strong> Naruse Shiroha (Konomi Kohara), Sorakado Ao (Takamori Natsumi), Kushima Kamome (Tomomi Mineuchi), Tsumugi Wenders (Emiri Iwai), Umi Katou (Aimi Tanaka), Miki Nomura (Saku Ichimiya), Mizuori Shizuku (Sahomi Koyama), Mizutani Ryouichi (Kentarou Kumagai), Kanou Tenzen (Youhei Hamada), Misaki Kyouko (Megumi Takamoto), Naruse Kobato (Minoru Shiraishi) e Nanami (Kana Hanazawa).</p>
+
+            <h2 id="conteudo">Conteúdo e Classificação</h2>
+            <p><strong>Descrição de Conteúdo Adulto:</strong> De acordo com os desenvolvedores, <em>Summer Pockets</em> contém nudez parcial e temas levemente sugestivos em sua história e ilustrações CG. A obra recebeu as classificações indicativas <strong>IARC 12+ / ESRB T (Teen)</strong> em sua versão global e plataformas móveis.</p>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/897220/extras/2606b33a1d1a50014f4bd8e5f0dbe85f.avif?t=1732683225" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/897220/extras/29da80d6ae00da3fffe6eaa64b612a3c.avif?t=1732683225" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/897220/extras/09cc92843d11e2f0cf5063758aeb857f.avif?t=1732683225" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/897220/extras/c9aef71d5837b67ca3c051c1845e3b78.avif?t=1732683225" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc; margin-top: 10px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/897220/extras/487a7777e9b44d6e0e9be0299ce4e304.avif?t=1732683225" alt="Screenshot 5" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc; margin-top: 10px;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Mídia</h2>
+            
+            <p><i class="fa-solid fa-link"></i> <strong>Página do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/897220/Summer_Pockets/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+            </div>
+
+            <p><i class="fa-solid fa-film"></i> <strong>Adaptação em Anime:</strong></p>
+            <div class="play-links">
+                <a href="https://www.crunchyroll.com/pt-br/series/G0XHWM17X/summer-pockets" target="_blank"><i class="fa-solid fa-play"></i> Assistir na Crunchyroll</a>
+            </div>
+        `
+    },
     "alice-and-the-devils-prison": {
         title: "Alice and the Devil's Prison",
         categories: ["Aventura", "Escape", "Indie", "+18"],
