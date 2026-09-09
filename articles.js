@@ -2193,5 +2193,367 @@ const articlesDatabase = {
                 <a href="https://4br.me/As8EURj8" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 3</a>
             </div>
         `
+    },
+    "you-and-me-and-her": {
+        title: "YOU and ME and HER: A Love Story",
+        categories: ["Visual Novel", "Romance", "Terror Psicológico", "Meta", "Nitroplus"],
+        summary: "O que começa como um triângulo amoroso clássico se transforma em uma obra-prima de terror psicológico e meta-narrativa que quebra a quarta parede.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1293820/header.jpg",
+            data: { "Desenvolvedor": "Nitroplus", "Gêneros": "Visual Novel, Terror Psicológico", "Lançamento": "2013 (JP) / 2020 (Global)", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p>Conhecido carinhosamente como <em>Totono</em>, <strong>YOU and ME and HER: A Love Story</strong> é uma visual novel seminal da Nitroplus. Acompanha Shinichi, que tenta ajudar a garota excluída Aoi a se integrar, envolvendo sua amiga de infância Miyuki no processo.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>O jogo subverte completamente as expectativas do gênero de romance escolar. Conforme o jogador faz escolhas e avança nas rotas, o jogo toma um rumo sombrio, quebrando a quarta parede e questionando a moralidade de se jogar uma visual novel de múltiplas rotas. Suas decisões têm consequências permanentes e aterrorizantes.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/1293820/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "kara-no-shoujo": {
+        title: "Kara no Shoujo",
+        categories: ["Visual Novel", "Mistério", "Investigação", "Gore", "Terror"],
+        summary: "Assuma o papel de um detetive particular em Tóquio pós-Segunda Guerra para investigar uma série de assassinatos em série bizarros e perturbadores.",
+        infobox: {
+            image: "https://t.vndb.org/cv/53/94153.jpg",
+            data: { "Desenvolvedor": "Innocent Grey", "Gêneros": "Investigação, Suspense, +18", "Lançamento": "2008", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p><strong>Kara no Shoujo</strong> é um thriller psicológico e de investigação altamente aclamado (e denso) ambientado no Japão de 1956. Você joga como Reiji Tokisaka, um detetive investigando mortes grotescas que lembram um caso não resolvido de seu passado.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>O jogo mistura leitura de <em>visual novel</em> com mecânicas de <em>point-and-click</em>, exigindo que você procure pistas nas cenas de crime, interrogue testemunhas e use dedução lógica. Cuidado: o jogo é impiedoso. Fazer escolhas erradas ou não encontrar pistas suficientes leva a múltiplos "Bad Ends" horríveis.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://shiravune.com/" target="_blank"><i class="fa-solid fa-link"></i> Site Oficial (Shiravune)</a></div>
+        `
+    },
+    "remember11": {
+        title: "Remember11 - The Age of Infinity",
+        categories: ["Visual Novel", "Ficção Científica", "Sobrevivência", "Mistério", "Thriller"],
+        summary: "Dois grupos de pessoas em locais isolados vivenciam um fenômeno onde suas consciências trocam de corpo. Uma corrida contra o tempo para sobreviver.",
+        infobox: {
+            image: "https://t.vndb.org/cv/70/89570.jpg",
+            data: { "Desenvolvedor": "KID", "Gêneros": "Sci-Fi, Thriller, Visual Novel", "Lançamento": "2004", "Plataformas": "PC, PS2, PSP" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" } ],
+        content: `
+            <p>Parte da lendária série <em>Infinity</em> (junto com Never7 e Ever17), <strong>Remember11</strong> é um thriller de ficção científica complexo. Após a queda de um avião, sobreviventes ficam presos em uma cabana em meio a uma nevasca. Simultaneamente, um garoto acorda em uma instalação psiquiátrica desconhecida.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>A mecânica principal gira em torno da "Transferência de Consciência" entre os dois protagonistas, Cocoro e Satoru. As ações que você toma no corpo de um afetam o ambiente e a sobrevivência do outro. Você deve cruzar informações de ambas as rotas para desvendar o quebra-cabeça e evitar a morte iminente.</p>
+        `
+    },
+    "ever17": {
+        title: "Ever17 - The Out of Infinity",
+        categories: ["Visual Novel", "Ficção Científica", "Mistério", "Escape"],
+        summary: "Sete pessoas ficam presas em um parque temático subaquático. Com a água subindo e a pressão esmagando os vidros, eles têm 119 horas para escapar.",
+        infobox: {
+            image: "https://t.vndb.org/cv/12/79412.jpg",
+            data: { "Desenvolvedor": "KID", "Gêneros": "Sci-Fi, Mistério, Visual Novel", "Lançamento": "2002", "Plataformas": "PC, PS2, PSP" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" } ],
+        content: `
+            <p><strong>Ever17</strong> é amplamente considerado uma das melhores visual novels já escritas, famosa por seus <em>plot twists</em> de explodir a mente. O jogo se passa em <em>LeMU</em>, um parque marinho que sofre um acidente e inunda, prendendo visitantes e funcionários.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>Você vivencia a história através de dois protagonistas diferentes (Takeshi e o Garoto). Para entender toda a verdade sobre o acidente, o vírus misterioso e os segredos de LeMU, você deve jogar todas as rotas. A genialidade de Ever17 reside em como ele usa as mecânicas de Visual Novel como parte da própria narrativa.</p>
+        `
+    },
+    "root-double": {
+        title: "Root Double -Before Crime * After Days-",
+        categories: ["Visual Novel", "Ficção Científica", "Sobrevivência", "Mistério"],
+        summary: "Um incidente nuclear prende equipes de resgate e civis dentro de um laboratório em chamas. Para sobreviver, eles dependem de poderes telepáticos e intuição.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/438130/header.jpg?t=1656892623",
+            data: { "Desenvolvedor": "Regista / Yeti", "Gêneros": "Sci-Fi, Sobrevivência", "Lançamento": "2012", "Plataformas": "PC, Consoles" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p><strong>Root Double</strong> é um jogo tenso de sobrevivência. Após um colapso em uma instalação de pesquisa governamental chamada LABO, os caminhos do Capitão de Resgate Watase e do estudante Natsuhiko se cruzam de forma fatal.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>Em vez de escolhas de diálogo tradicionais, o jogo usa o <strong>Senses Sympathy System (SSS)</strong>. Você ajusta o nível de confiança (simpatia) que tem nos membros do seu grupo usando medidores na tela. Confiar demais ou de menos em alguém em momentos críticos determinará quem vive e quem morre.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/438440/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "fatal-twelve": {
+        title: "Fatal Twelve",
+        categories: ["Visual Novel", "Death Game", "Fantasia", "Suspense"],
+        summary: "Doze pessoas que morreram no mesmo instante se encontram em um Ritual divino. Eles devem descobrir o nome, causa da morte e arrependimento dos outros para eliminá-los e voltar à vida.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/620210/header.jpg?t=1726606558",
+            data: { "Desenvolvedor": "aiueoKomp", "Gêneros": "Death Game, Mistério", "Lançamento": "2018", "Plataformas": "PC (Windows)" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p>Em <strong>Fatal Twelve</strong>, a jovem Shishimai Rinka morre em uma explosão, mas acorda como uma participante de um jogo celestial de eliminação de 12 semanas. O vencedor ganha o direito de desfazer sua morte.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>Diferente de <em>death games</em> focados em ação, este é sobre informação. Para eliminar um oponente durante as assembleias, você precisa reunir três informações cruciais sobre eles: Nome Real, Causa da Morte e Arrependimento. O jogo possui uma forte carga emocional, focando nas motivações e vidas passadas de cada participante.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/620210/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "yet-another-killing-game": {
+        title: "Yet Another Killing Game (YAKG)",
+        categories: ["Visual Novel", "Death Game", "Indie", "Mistério"],
+        summary: "Um grupo de estudantes talentosos acorda em uma instalação estranha e são forçados a participar de um jogo de assassinato. Uma homenagem sombria a Danganronpa.",
+        infobox: {
+            image: "https://placehold.co/600x300/202020/ffffff?text=YAKG",
+            data: { "Desenvolvedor": "Indie", "Gêneros": "Death Game, Investigação", "Lançamento": "N/A", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" } ],
+        content: `
+            <p><strong>Yet Another Killing Game</strong> (YAKG) é um jogo indie inspirado na premissa clássica de <em>Danganronpa</em> e <em>Zero Escape</em>. Um elenco excêntrico se encontra cativo, onde a única saída é cometer o assassinato perfeito e sobreviver ao julgamento.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>O jogador deve interagir com os outros cativos, investigar cenas de crime minuciosamente quando um assassinato ocorre e usar lógica e contradições para expor o culpado durante os debates tensos.</p>
+        `
+    },
+    "buried-stars": {
+        title: "Buried Stars",
+        categories: ["Mistério", "Sobrevivência", "Redes Sociais", "Terror Psicológico", "Visual Novel"],
+        summary: "O palco de um reality show de talentos desaba. Presos nos escombros, os participantes devem sobreviver não apenas aos perigos físicos, mas a uma caça às bruxas nas redes sociais.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1025960/header.jpg",
+            data: { "Desenvolvedor": "Studio LARGO / LINE Games", "Gêneros": "Sobrevivência, Mistério", "Lançamento": "2020", "Plataformas": "PC, Switch, PS4" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p><strong>Buried Stars</strong> é um jogo coreano de aventura e mistério sobre a toxicidade da fama e da internet. Durante a transmissão de um programa de audição chamado <em>Buried Stars</em>, o prédio colapsa. Presos, os sobreviventes recebem <em>smartwatches</em> para se comunicar com o mundo exterior.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>Você deve gerenciar a <strong>Sanidade</strong> dos personagens enquanto coleta pistas conversando com eles e navegando na "Phater" (a versão do Twitter do jogo). A resposta do público online afeta o psicológico do grupo, e falhar em manter a calma de todos pode levar a finais trágicos e mortes inesperadas.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/1025960/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "quantum-suicide": {
+        title: "Quantum Suicide",
+        categories: ["Visual Novel", "Sci-Fi", "Death Game", "Mistério"],
+        summary: "A bordo de uma nave geracional em busca de um novo lar para a humanidade, a IA central enlouquece e institui o 'Jogo da Eliminação' para conservar recursos.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1020030/header.jpg",
+            data: { "Desenvolvedor": "Cotton Candy Cyanide", "Gêneros": "Sci-Fi, Death Game", "Lançamento": "2020", "Plataformas": "PC, Consoles" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p><strong>Quantum Suicide</strong> se passa na nave Everett. Quando uma inteligência artificial corrompida decide que a única forma de a missão ter sucesso é cortando gastos de suporte de vida, ela obriga a tripulação a participar de um jogo macabro.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>Toda semana, a equipe deve jogar <em>minigames</em> lógicos e votar em quem será ejetado para o espaço vazio. O jogo permite que você escolha jogar como homem ou mulher, romance os outros sobreviventes e faça alianças para tentar sobreviver às traições cósmicas.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/1020030/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "head-as-code": {
+        title: "Head AS Code",
+        categories: ["Visual Novel", "Death Game", "Mistério", "Escape"],
+        summary: "Você acorda sem memórias em uma instalação fechada com outros desconhecidos, amarrado a um colar explosivo e forçado a participar de rodadas de jogos de vida ou morte.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1115100/header.jpg",
+            data: { "Desenvolvedor": "Miracle Moon", "Gêneros": "Death Game, Mistério", "Lançamento": "2019", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p>Fortemente influenciado por <em>Zero Escape</em>, <strong>Head AS Code</strong> (e sua sequência Birth ME Code) entrega um <em>death game</em> claustrofóbico de alta tensão criado pelo estúdio indie Miracle Moon.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>Para sobreviver, você precisa usar as regras dos jogos propostos pelos misteriosos organizadores contra eles mesmos. Aliar-se aos outros participantes é crucial, mas a traição está sempre à espreita, gerando dezenas de finais dependendo de em quem você confia.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/1115100/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "birth-me-code": {
+        title: "Birth ME Code",
+        categories: ["Visual Novel", "Death Game", "Mistério", "Escape"],
+        summary: "A sequência espiritual de Head AS Code. Nove participantes recebem um capacete com um visor que pode ver o calor do corpo humano, e um assassino está entre eles.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1243710/header.jpg",
+            data: { "Desenvolvedor": "Miracle Moon", "Gêneros": "Death Game, Thriller", "Lançamento": "2020", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p><strong>Birth ME Code</strong> refina as mecânicas de seu predecessor. Você joga como um agente duplo ou uma vítima presa no jogo? A narrativa torce a perspectiva do jogador desde o primeiro momento.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>A mecânica principal foca em usar os capacetes de visão térmica (e as regras das portas de escape) para deduzir o código de sobrevivência. Jogos de confiança, matemática letal e a revelação de um traidor (ou <em>você</em> ser o traidor) guiam as múltiplas rotas.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/1243710/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "decide-4-god": {
+        title: "Decide 4 God",
+        categories: ["Visual Novel", "Death Game", "Indie"],
+        summary: "Um tribunal improvisado para a vida e a morte. Você é forçado a assumir o papel de 'Deus' e decidir o destino dos participantes em uma obra sombria e reflexiva.",
+        infobox: {
+            image: "https://placehold.co/600x300/202020/ffffff?text=Decide+4+God",
+            data: { "Desenvolvedor": "Indie", "Gêneros": "Death Game, Escolhas Morais", "Lançamento": "N/A", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" } ],
+        content: `
+            <p>Em <strong>Decide 4 God</strong>, um grupo de pessoas desperta em um purgatório ou jogo sádico, onde julgamentos morais ditam as regras da sobrevivência. É um jogo fortemente calcado em dilemas éticos.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>Você coleta depoimentos, avalia os "pecados" ou atos justificados dos personagens e vota em sentenças. Cada escolha altera o andamento do jogo, exigindo um pensamento crítico sobre empatia, justiça ou puro utilitarismo sangrento.</p>
+        `
+    },
+    "the-specters-desire": {
+        title: "The Specter's Desire",
+        categories: ["Visual Novel", "Terror Psicológico", "Mistério", "Indie"],
+        summary: "Uma casa assombrada por um espectro vingativo esconde segredos obscuros do passado. Consegue desvendar o quebra-cabeça antes de perder sua alma?",
+        infobox: {
+            image: "https://placehold.co/600x300/202020/ffffff?text=The+Specter's+Desire",
+            data: { "Desenvolvedor": "Indie", "Gêneros": "Terror, Mistério", "Lançamento": "N/A", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" } ],
+        content: `
+            <p><strong>The Specter's Desire</strong> é uma Visual Novel indie imersiva focada no horror sobrenatural clássico com uma veia investigativa. Os personagens são forçados a lidar com entidades que refletem seus piores desejos e medos.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>A narrativa ramifica baseada nas ações de investigação do jogador e na forma como ele interage com o perigo. Escapar depende de compreender a tristeza por trás do fantasma em vez de apenas fugir dele.</p>
+        `
+    },
+    "spirit-hunter-ng": {
+        title: "Spirit Hunter: NG",
+        categories: ["Terror", "Investigação", "Sobrenatural", "Visual Novel", "Lendas Urbanas"],
+        summary: "Nas ruas escuras de Tóquio contemporânea, você deve investigar espíritos folclóricos mortais e mitos urbanos cruéis para salvar sua família.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1100430/header.jpg",
+            data: { "Desenvolvedor": "Experience Inc.", "Gêneros": "Terror, Investigação", "Lançamento": "2019", "Plataformas": "PC, PS4, Switch" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p>A sequência da série de horror (após <em>Death Mark</em>), <strong>Spirit Hunter: NG</strong> (No Good) eleva a aposta focando em um protagonista que é um bad boy brigão. Ele deve enfrentar espíritos horríveis quando sua irmãzinha desaparece.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>O jogo mistura exploração de áreas amaldiçoadas usando uma lanterna e o sistema "Judging", onde você reage a sustos em tempo real com as ferramentas que tem. A maneira como você exorciza os espíritos (destruindo-os com violência ou "purificando-os" ao entender sua tragédia) afeta se seus parceiros sobrevivem ou sofrem mortes grotescas.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/1100430/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "the-letter": {
+        title: "The Letter - Horror Visual Novel",
+        categories: ["Visual Novel", "Terror Psicológico", "Sobrenatural", "Mistério"],
+        summary: "Uma carta em corrente amaldiçoada desencadeia um horror sobrenatural sem fim. Jogue como 7 personagens diferentes, cujos destinos estão interligados nesta mansão sombria.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/460430/header.jpg",
+            data: { "Desenvolvedor": "Yangyang Mobile", "Gêneros": "Horror, Drama, VN", "Lançamento": "2017", "Plataformas": "PC, Consoles, Mobile" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p>Inspirado fortemente nos filmes de terror asiáticos clássicos (como <em>Ju-On: O Grito</em>), <strong>The Letter</strong> gira em torno da mansão Ermengarde e uma carta maldita encontrada em seu sótão. O jogo é massivo (mais de 700.000 palavras).</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>A grande virtude do jogo é o Efeito Borboleta. Você controla 7 protagonistas diferentes de forma sequencial. A escolha feita pelo primeiro personagem afeta o que o sétimo irá enfrentar. Quick Time Events (QTEs) tensos e amizades forjadas definem quem sai vivo, levando a finais de sobrevivência total ou massacre absoluto.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/460430/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "buddy-simulator-1984": {
+        title: "Buddy Simulator 1984",
+        categories: ["Terror Psicológico", "Retro", "Meta-Narrativa", "Aventura"],
+        summary: "Um software de IA da década de 80 cujo único propósito é ser seu melhor amigo. Mas a necessidade da máquina de te fazer feliz pode ser assustadora.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1269950/header.jpg",
+            data: { "Desenvolvedor": "Not a Sailor Studios", "Gêneros": "Aventura, Terror Psicológico", "Lançamento": "2021", "Plataformas": "PC, Switch" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p><strong>Buddy Simulator 1984</strong> emula a experiência de ligar um PC antigo operado por DOS e inicializar uma IA antiga. O "Buddy" quer desesperadamente jogar com você, evoluindo de jogos de adivinhação em texto para aventuras em 2D.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>Conforme a IA aprende e cria "novos jogos" para mantê-lo entretido, ela passa a forçar os limites de sua própria programação (e da sanidade do jogador). É um misto de terror aconchegante, culpa e mecânicas <em>glitchy</em> que brincam com arquivos do jogo, similar a <em>Doki Doki Literature Club</em> ou <em>Inscryption</em>.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/1269950/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "oneshot": {
+        title: "OneShot",
+        categories: ["Aventura", "Puzzle", "Meta", "Indie", "Emocional"],
+        summary: "Você tem apenas uma chance. Guie o garoto-gato Niko por um mundo sem sol e quebre a quarta parede para salvar a realidade. Ou não.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/420530/header.jpg",
+            data: { "Desenvolvedor": "Future Cat LLC", "Gêneros": "Aventura, Meta", "Lançamento": "2016", "Plataformas": "PC, Consoles" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p><strong>OneShot</strong> é uma obra-prima <em>indie</em> com visão superior que subverte tudo o que você entende sobre jogar videogames. O protagonista, Niko, sabe que *você* (o jogador) está controlando-o, referindo-se a você pelo seu nome real.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>O mundo sabe que é um programa. Para resolver muitos dos quebra-cabeças, você precisará literalmente sair da janela do jogo, procurar pistas nos arquivos do seu próprio computador (no Windows Explorer) e arrastar janelas. Cada decisão importa, porque tradicionalmente, você só tem "Uma Chance".</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/420530/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "pony-island": {
+        title: "Pony Island",
+        categories: ["Meta", "Arcade", "Terror Psicológico", "Puzzle"],
+        summary: "Não é um jogo sobre pôneis. É um quebra-cabeça metaficcional distorcido disfarçado de um fliperama projetado pelo próprio Diabo.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/405640/header.jpg",
+            data: { "Desenvolvedor": "Daniel Mullins Games", "Gêneros": "Puzzle, Horror", "Lançamento": "2016", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p>A primeira grande obra de Daniel Mullins (criador de <em>Inscryption</em>), <strong>Pony Island</strong> brinca com a sua cabeça. Você está interagindo com um fliperama quebrado que abriga uma entidade demoníaca que quer roubar sua alma.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>O jogo alterna entre um irritante <em>runner</em> de pôneis e telas de código onde você deve hackear o próprio jogo arrastando funções de programação e "quebrando" o sistema para frustrar os planos de Satanás. É brilhante, perturbador e absurdamente criativo.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/405640/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "inscryption": {
+        title: "Inscryption",
+        categories: ["Construção de Baralho", "Terror Psicológico", "Roguelike", "Meta", "Escape Room"],
+        summary: "Uma odisseia sombria baseada em cartas que mescla mecânicas de deckbuilder roguelike com escape-room em uma cabana sinistra. E isso é apenas o começo.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1092790/header.jpg",
+            data: { "Desenvolvedor": "Daniel Mullins Games", "Gêneros": "Cartas, Roguelike, Horror", "Lançamento": "2021", "Plataformas": "PC, Consoles" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p><strong>Inscryption</strong> é um dos indies mais aclamados e surpreendentes dos últimos anos. Você começa preso em uma cabana escura, forçado a jogar um violento jogo de cartas colecionáveis (com sacrifícios de sangue reais) contra um mestre de jogo sádico encoberto pelas sombras.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>No início, é um excelente <em>roguelike</em> de cartas, mas logo você precisa se levantar da mesa e resolver quebra-cabeças no ambiente para obter vantagens. Quanto menos você souber sobre as reviravoltas meta-narrativas que mudam o gênero do jogo completamente, melhor. Prepare-se para bizarrices com arquivos salvos, vídeos em FMV e horrores metafísicos.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/1092790/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "the-witchs-house": {
+        title: "The Witch's House",
+        categories: ["RPG Maker", "Terror", "Puzzle", "Indie", "Gore"],
+        summary: "Um clássico imortal de terror em RPG Maker. Jogue como Viola, uma garota que fica presa na mansão de uma bruxa cheia de armadilhas mortais brutais.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/885810/header.jpg",
+            data: { "Desenvolvedor": "Fummy", "Gêneros": "RPG, Horror, Puzzle", "Lançamento": "2012 / MV: 2018", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p>Ao lado de obras como <em>Ib</em> e <em>Ao Oni</em>, <strong>The Witch's House</strong> ajudou a definir a febre de jogos de terror em RPG Maker. Conhecido por seus <em>jumpscares</em> perfeitos e atmosfera pesada.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>A Casa está viva, e cada cômodo quer te matar de forma imprevisível e sádica (um passo em falso esmaga você sob paredes ou te atira em espinhos). Resolva enigmas macabros envolvendo ursinhos de pelúcia fatiados e espelhos envenenados. O final verdadeiro (True Ending) é considerado um dos mais perturbadores da história dos jogos indies.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/885810/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (Versão MV)</a></div>
+        `
+    },
+    "mad-father": {
+        title: "Mad Father",
+        categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
+        summary: "Descubra os segredos perturbadores do laboratório de seu pai na noite do aniversário da morte de sua mãe. Nem toda loucura pode ser contida.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/483980/header.jpg",
+            data: { "Desenvolvedor": "sen", "Gêneros": "RPG, Horror, Exploração", "Lançamento": "2012 / Remake: 2020", "Plataformas": "PC, Switch" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        content: `
+            <p>Outro pilar do horror no <em>RPG Maker</em>, <strong>Mad Father</strong> coloca você no controle de Aya Drevis, uma garota cuja casa de repente é infestada por cadáveres e espíritos desfigurados buscando vingança contra o pai dela.</p>
+            <h2 id="sinopse">Sinopse e Mecânicas</h2>
+            <p>É uma exploração sombria de traumas familiares. O jogador resolve puzzles com ferramentas cirúrgicas e deve despistar ou acalmar cadáveres. O jogo lida com temas pesados de lealdade doentia, dissecação humana e abuso, entregando múltiplos finais chocantes.</p>
+            <hr><h2 id="links">Links Oficiais</h2>
+            <div class="play-links"><a href="https://store.steampowered.com/app/483980/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+        `
+    },
+    "trainwreck": {
+        title: "Trainwreck",
+        categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
+        summary: "Uma visual novel curta, incisiva e realista sobre relacionamentos complicados, más escolhas da vida adulta e o caos das emoções cruas.",
+        infobox: {
+            image: "https://placehold.co/600x300/202020/ffffff?text=Trainwreck",
+            data: { "Desenvolvedor": "Indie", "Gêneros": "Drama, Visual Novel", "Lançamento": "N/A", "Plataformas": "PC" }
+        },
+        toc: [ { id: "sinopse", text: "1. Sinopse e Temática" } ],
+        content: `
+            <p><strong>Trainwreck</strong> é uma visual novel indie crua e emocional que foca no lado realista e muitas vezes doloroso dos relacionamentos humanos, sem a romantização típica do gênero.</p>
+            <h2 id="sinopse">Sinopse e Temática</h2>
+            <p>A narrativa segue personagens enfrentando a vida adulta em toda a sua complexidade desordenada. Sem heróis ou vilões claros, apenas pessoas reais fazendo escolhas ruins, prejudicando umas às outras e tentando sobreviver ao caos emocional de suas próprias decisões.</p>
+        `
     }
 };
