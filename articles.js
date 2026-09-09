@@ -2346,7 +2346,7 @@ const articlesDatabase = {
         categories: ["Visual Novel", "Death Game", "Mistério", "Escape"],
         summary: "Você acorda sem memórias em uma instalação fechada com outros desconhecidos, amarrado a um colar explosivo e forçado a participar de rodadas de jogos de vida ou morte.",
         infobox: {
-            image: "https://cdn.akamai.steamstatic.com/steam/apps/1115100/header.jpg",
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1338940/header.jpg?t=1758338672",
             data: { "Desenvolvedor": "Miracle Moon", "Gêneros": "Death Game, Mistério", "Lançamento": "2019", "Plataformas": "PC" }
         },
         toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
