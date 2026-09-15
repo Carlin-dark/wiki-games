@@ -17,27 +17,6 @@ function logFirebaseError(context, error) {
 }
 
 async function getFirestoreDocumentWithRetry(services, documentReference, attempts = 3) {
-    async function ensureUserProfile(user) {
-        const services = window.firebaseServices;
-        if (!services || !user) return;
-        const profileReference = services.doc(services.db, 'users', user.uid);
-        try {
-            const profileSnapshot = await getFirestoreDocumentWithRetry(services, profileReference);
-            if (!profileSnapshot.exists()) {
-                const username = user.displayName || user.email?.split('@')[0] || 'Usuário';
-                await services.setDoc(profileReference, {
-                    username,
-                    name: username,
-                    email: user.email || '',
-                    photoURL: user.photoURL || '',
-                    createdAt: new Date()
-                });
-                console.info('[Firebase] Perfil criado:', user.uid);
-            }
-        } catch (error) {
-            logFirebaseError(`Falha ao criar/verificar perfil ${user.uid}`, error);
-        }
-    }
     let lastError;
     for (let attempt = 1; attempt <= attempts; attempt += 1) {
         try {
@@ -53,6 +32,28 @@ async function getFirestoreDocumentWithRetry(services, documentReference, attemp
     } catch (cacheError) {
         cacheError.cause = lastError;
         throw cacheError;
+    }
+}
+
+async function ensureUserProfile(user) {
+    const services = window.firebaseServices;
+    if (!services || !user) return;
+    const profileReference = services.doc(services.db, 'users', user.uid);
+    try {
+        const profileSnapshot = await getFirestoreDocumentWithRetry(services, profileReference);
+        if (!profileSnapshot.exists()) {
+            const username = user.displayName || user.email?.split('@')[0] || 'Usuário';
+            await services.setDoc(profileReference, {
+                username,
+                name: username,
+                email: user.email || '',
+                photoURL: user.photoURL || '',
+                createdAt: new Date()
+            });
+            console.info('[Firebase] Perfil criado:', user.uid);
+        }
+    } catch (error) {
+        logFirebaseError(`Falha ao criar/verificar perfil ${user.uid}`, error);
     }
 }
 
@@ -358,7 +359,8 @@ function setupAccount() {
             }
         } catch (error) {
             logFirebaseError('Falha no fluxo de autenticação', error);
-            if (message) message.textContent = 'Não foi possível concluir o acesso. Verifique os dados.';
+            const errorCode = error?.code ? ` (${error.code})` : '';
+            if (message) message.textContent = `Não foi possível concluir o acesso${errorCode}. Verifique os dados.`;
         }
     });
 
