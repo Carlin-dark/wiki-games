@@ -41,6 +41,13 @@
                     <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <div id="searchResults" class="search-results-dropdown"></div>
                 </div>
+
+                <div id="accountArea" class="account-area">
+                    <button id="accountBtn" class="account-btn" type="button" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i><span>Entrar</span>
+                    </button>
+                    <div id="accountMenu" class="account-menu" hidden></div>
+                </div>
             </div>
         </header>
 
@@ -63,6 +70,8 @@
                         <li><a href="/?route=home"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
                         <li><a href="#" id="randomPageBtn"><i class="fa-solid fa-dice"></i> Página Aleatória</a></li>
                         <li><a href="/?route=all"><i class="fa-solid fa-database"></i> Todos os Jogos</a></li>
+                        <li><a href="/?route=minha-lista"><i class="fa-solid fa-heart"></i> Minha Lista</a></li>
+                        <li><a href="/?route=listas"><i class="fa-solid fa-list"></i> Listas públicas</a></li>
                         <li><a href="/?route=mods"><i class="fa-solid fa-puzzle-piece"></i> Todos os Mods</a></li>
                         <li><a href="#/sobre">Sobre o Site / Aviso Legal</a></li>
                     </ul>
@@ -96,6 +105,7 @@
 
     <script src="articles.js"></script>
     <script src="mods.js"></script>
+    <script type="module" src="firebase-config.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

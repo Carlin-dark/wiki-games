@@ -8,6 +8,208 @@ function createSlug(text) {
         .replace(/\s+/g, '-');
 }
 
+const FAVORITES_STORAGE_KEY = 'wikigames-favorites';
+
+function getFavorites() {
+    try {
+        return JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || '[]');
+    } catch (error) {
+        return [];
+    }
+}
+
+function setFavorites(favorites) {
+    localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...new Set(favorites)]));
+}
+
+function isFavorite(route) {
+    return getFavorites().includes(route);
+}
+
+function favoriteButton(route, compact = false) {
+    const active = isFavorite(route);
+    return `<button class="favorite-btn${compact ? ' favorite-btn-compact' : ''}${active ? ' is-favorite' : ''}" type="button" data-favorite-route="${route}" aria-label="${active ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}" aria-pressed="${active}"><i class="fa-${active ? 'solid' : 'regular'} fa-heart"></i>${compact ? '' : `<span>${active ? 'Favoritado' : 'Favoritar'}</span>`}</button>`;
+}
+
+function toggleFavorite(route) {
+    const favorites = getFavorites();
+    const nextFavorites = favorites.includes(route) ? favorites.filter(item => item !== route) : [...favorites, route];
+    setFavorites(nextFavorites);
+    document.querySelectorAll(`[data-favorite-route="${route}"]`).forEach(button => {
+        const active = nextFavorites.includes(route);
+        button.classList.toggle('is-favorite', active);
+        button.setAttribute('aria-pressed', active);
+        button.setAttribute('aria-label', active ? 'Remover dos favoritos' : 'Adicionar aos favoritos');
+        const icon = button.querySelector('i');
+        if (icon) icon.className = `fa-${active ? 'solid' : 'regular'} fa-heart`;
+        const label = button.querySelector('span');
+        if (label) label.textContent = active ? 'Favoritado' : 'Favoritar';
+    });
+}
+
+function renderMyListPage() {
+    setPageBackground(null);
+    const container = document.getElementById('article-container');
+    const favorites = getFavorites();
+    const games = favorites.map(route => ({ route, game: articlesDatabase[route] })).filter(item => item.game);
+    document.title = 'Minha Lista - WikiGames';
+    container.innerHTML = `
+        <h1><i class="fa-solid fa-heart"></i> Minha Lista</h1>
+        <p class="list-intro">Seus jogos favoritos ficam salvos neste dispositivo.</p>
+        <div class="all-games-grid my-list-grid">
+            ${games.length ? games.map(({ route, game }) => `
+                <article class="all-game-card">
+                    <a href="/${route}" class="game-card-image-link"><img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}" loading="lazy"></a>
+                    <div class="all-game-card-content"><div class="game-card-heading"><h3><a href="/${route}">${game.title}</a></h3>${favoriteButton(route, true)}</div><p>${game.summary || ''}</p></div>
+                </article>`).join('') : '<div class="all-games-empty">Você ainda não favoritou nenhum jogo.</div>'}
+        </div>
+    `;
+    window.scrollTo(0, 0);
+}
+
+function renderProfilePage() {
+    const container = document.getElementById('article-container');
+    const services = window.firebaseServices;
+    const user = services?.auth.currentUser;
+    if (!user) {
+        container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><p>Entre na sua conta para editar seu perfil.</p>';
+        return;
+    }
+    container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${user.displayName || ''}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${user.photoURL || ''}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Conte um pouco sobre você"></textarea></label><label>Redes sociais<input name="socials" maxlength="300" placeholder="https://..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form>`;
+    document.getElementById('profileForm').addEventListener('submit', async event => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const message = document.getElementById('profileMessage');
+        try {
+            await services.updateProfile(user, { displayName: form.name.value.trim(), photoURL: form.photoURL.value.trim() || null });
+            await services.setDoc(services.doc(services.db, 'profiles', user.uid), { name: form.name.value.trim(), photoURL: form.photoURL.value.trim(), bio: form.bio.value.trim(), socials: form.socials.value.trim(), updatedAt: services.serverTimestamp() }, { merge: true });
+            message.textContent = 'Perfil salvo.';
+        } catch (error) { message.textContent = 'Não foi possível salvar o perfil.'; }
+    });
+}
+
+function escapeHtml(value) {
+    return String(value || '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
+}
+
+function markArticleGalleryImages(container) {
+    container.querySelectorAll('h2#galeria + div img').forEach(image => image.classList.add('gallery-image'));
+}
+
+function renderListsPage() {
+    setPageBackground(null);
+    const container = document.getElementById('article-container');
+    document.title = 'Listas públicas - WikiGames';
+    const games = Object.entries(articlesDatabase).filter(([route]) => route !== 'home' && route !== 'sobre');
+    container.innerHTML = `<h1><i class="fa-solid fa-list"></i> Listas públicas</h1><p class="list-intro">Crie coleções de jogos e compartilhe o link com a comunidade.</p><form id="publicListForm" class="public-list-form"><input name="title" placeholder="Nome da sua lista" maxlength="80" required><div class="list-game-picker">${games.map(([route, game]) => `<label><input type="checkbox" name="games" value="${route}"> ${game.title}</label>`).join('')}</div><button class="share-page-btn" type="submit"><i class="fa-solid fa-plus"></i> Criar lista</button><span id="listMessage"></span></form><div id="publicLists" class="public-lists"><p>Carregando listas...</p></div>`;
+    const services = window.firebaseServices;
+    const selectedListId = new URLSearchParams(window.location.search).get('list');
+    const listMessage = document.getElementById('listMessage');
+    document.getElementById('publicListForm').addEventListener('submit', async event => {
+        event.preventDefault();
+        if (!services?.auth.currentUser) { listMessage.textContent = 'Entre para criar uma lista.'; return; }
+        const form = event.currentTarget;
+        const selectedGames = [...form.querySelectorAll('input[name="games"]:checked')].map(input => input.value);
+        if (!selectedGames.length) { listMessage.textContent = 'Escolha pelo menos um jogo.'; return; }
+        try {
+            await services.addDoc(services.collection(services.db, 'publicLists'), { title: form.title.value.trim(), gameRoutes: selectedGames, ownerId: services.auth.currentUser.uid, ownerName: services.auth.currentUser.displayName || services.auth.currentUser.email, createdAt: services.serverTimestamp() });
+            form.reset(); listMessage.textContent = 'Lista publicada.';
+        } catch (error) { listMessage.textContent = 'Não foi possível publicar a lista.'; }
+    });
+    if (!services) { document.getElementById('publicLists').innerHTML = '<p>O Firebase ainda não está disponível.</p>'; return; }
+    services.onSnapshot(services.collection(services.db, 'publicLists'), snapshot => {
+        const allLists = snapshot.docs.map(item => ({ id: item.id, ...item.data() }));
+        const lists = selectedListId ? allLists.filter(list => list.id === selectedListId) : allLists;
+        document.getElementById('publicLists').innerHTML = lists.length ? lists.map(list => `<article class="public-list-card"><h2>${escapeHtml(list.title)}</h2><p>Por ${escapeHtml(list.ownerName || 'WikiGames')}</p><div>${(list.gameRoutes || []).map(route => articlesDatabase[route] ? `<a href="/${route}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${window.location.origin}/?route=listas&list=${list.id}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`).join('') : '<p>Nenhuma lista publicada ainda.</p>';
+    }, () => { document.getElementById('publicLists').innerHTML = '<p>Não foi possível carregar as listas agora.</p>'; });
+    document.getElementById('publicLists').addEventListener('click', async event => {
+        const copyButton = event.target.closest('[data-list-url]');
+        if (!copyButton) return;
+        await navigator.clipboard?.writeText(copyButton.dataset.listUrl);
+        copyButton.innerHTML = '<i class="fa-solid fa-check"></i> Link copiado';
+    });
+}
+
+function setupChat(route, container) {
+    const services = window.firebaseServices;
+    const panel = document.createElement('section');
+    panel.className = 'chat-panel';
+    panel.innerHTML = `<h2><i class="fa-solid fa-comments"></i> Chat da rota</h2><p>Converse sobre este jogo em uma sala separada.</p><div class="chat-messages"><span>Carregando mensagens...</span></div><form class="chat-form"><input name="message" maxlength="300" placeholder="Escreva uma mensagem..." required><button type="submit" aria-label="Enviar mensagem"><i class="fa-solid fa-paper-plane"></i></button></form>`;
+    container.appendChild(panel);
+    if (!services) {
+        window.addEventListener('firebase-ready', () => setupChat(route, container), { once: true });
+        return;
+    }
+    const messagesRef = services.ref(services.realtimeDb, `gameChats/${route}/messages`);
+    const messages = panel.querySelector('.chat-messages');
+    services.onValue(messagesRef, snapshot => {
+        const values = Object.values(snapshot.val() || {}).slice(-50);
+        messages.innerHTML = values.length ? values.map(item => `<p><strong>${escapeHtml(item.author)}</strong> ${escapeHtml(item.text)}</p>`).join('') : '<span>Nenhuma mensagem ainda.</span>';
+        messages.scrollTop = messages.scrollHeight;
+    });
+    panel.querySelector('form').addEventListener('submit', async event => {
+        event.preventDefault();
+        const user = services.auth.currentUser;
+        const input = event.currentTarget.message;
+        if (!user) { input.value = ''; input.placeholder = 'Entre para participar do chat'; return; }
+        const text = input.value.trim();
+        if (!text) return;
+        await services.push(messagesRef, { text, author: user.displayName || user.email, uid: user.uid, createdAt: services.realtimeTimestamp() });
+        input.value = '';
+    });
+}
+
+function setupAccount() {
+    const area = document.getElementById('accountArea');
+    const button = document.getElementById('accountBtn');
+    const menu = document.getElementById('accountMenu');
+    if (!area || !button || !menu) return;
+
+    function renderUser(user) {
+        if (!user) {
+            button.innerHTML = '<i class="fa-solid fa-user"></i><span>Entrar</span>';
+            menu.innerHTML = '<strong>Entre na WikiGames</strong><button data-auth-action="google"><i class="fa-brands fa-google"></i> Entrar com Google</button><form id="emailAuthForm"><input type="email" name="email" placeholder="Seu e-mail" required><input type="password" name="password" placeholder="Sua senha" minlength="6" required><div><button type="submit" data-auth-action="login">Entrar</button><button type="button" data-auth-action="signup">Criar conta</button></div></form><small id="authMessage"></small>';
+            return;
+        }
+        const avatar = user.photoURL ? `<img src="${user.photoURL}" alt="">` : '<i class="fa-solid fa-user"></i>';
+        button.innerHTML = `${avatar}<span>${user.displayName || user.email.split('@')[0]}</span>`;
+        menu.innerHTML = `<strong>${user.displayName || user.email}</strong><a href="/?route=perfil"><i class="fa-solid fa-id-card"></i> Meu perfil</a><a href="/?route=minha-lista"><i class="fa-solid fa-heart"></i> Minha Lista</a><button data-auth-action="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>`;
+    }
+
+    function showMenu() { menu.hidden = false; button.setAttribute('aria-expanded', 'true'); }
+    button.addEventListener('click', () => menu.hidden ? showMenu() : (menu.hidden = true, button.setAttribute('aria-expanded', 'false')));
+    document.addEventListener('click', event => { if (!area.contains(event.target)) menu.hidden = true; });
+    area.addEventListener('click', async event => {
+        const action = event.target.closest('[data-auth-action]')?.dataset.authAction;
+        if (!action || !window.firebaseServices) return;
+        const services = window.firebaseServices;
+        const message = document.getElementById('authMessage');
+        try {
+            if (action === 'google') await services.signInWithPopup(services.auth, new services.GoogleAuthProvider());
+            if (action === 'logout') await services.signOut(services.auth);
+            if (action === 'login' || action === 'signup') {
+                event.preventDefault();
+                const form = document.getElementById('emailAuthForm');
+                const email = form.email.value;
+                const password = form.password.value;
+                if (action === 'login') await services.signInWithEmailAndPassword(services.auth, email, password);
+                else await services.createUserWithEmailAndPassword(services.auth, email, password);
+            }
+        } catch (error) {
+            if (message) message.textContent = 'Não foi possível concluir o acesso. Verifique os dados.';
+        }
+    });
+
+    function connectFirebase() {
+        const services = window.firebaseServices;
+        if (!services) return;
+        services.onAuthStateChanged(services.auth, renderUser);
+    }
+    window.addEventListener('firebase-ready', connectFirebase, { once: true });
+    connectFirebase();
+    renderUser(null);
+}
+
 function getRouteInfo() {
     const hashValue = window.location.hash || '';
     const pathnameValue = decodeURIComponent(window.location.pathname || '/');
@@ -213,13 +415,13 @@ function renderAllGamesPage() {
         resultsContainer.innerHTML = filteredGames.map(key => {
             const game = articlesDatabase[key];
             return `
-                <a href="/${key}" class="all-game-card">
-                    <img class="zoomable-image" src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}" loading="lazy">
+                <article class="all-game-card">
+                    <a href="/${key}" class="game-card-image-link"><img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}" loading="lazy"></a>
                     <div class="all-game-card-content">
-                        <h3>${game.title}</h3>
+                        <div class="game-card-heading"><h3><a href="/${key}">${game.title}</a></h3>${favoriteButton(key, true)}</div>
                         <p>${game.summary}</p>
                     </div>
-                </a>
+                </article>
             `;
         }).join('');
     }
@@ -413,6 +615,30 @@ function renderAllModsPage() {
     window.scrollTo(0, 0);
 }
 
+function setupRating(route, panel) {
+    const services = window.firebaseServices;
+    const average = panel.querySelector('#ratingAverage');
+    const stars = [...panel.querySelectorAll('[data-rating]')];
+    const ratingRef = services ? services.collection(services.db, 'games', route, 'ratings') : null;
+    const drawStars = value => stars.forEach(star => { star.classList.toggle('selected', Number(star.dataset.rating) <= value); star.querySelector('i').className = `fa-${Number(star.dataset.rating) <= value ? 'solid' : 'regular'} fa-star`; });
+    if (!services || !ratingRef) {
+        average.textContent = 'Disponível após conectar ao Firebase';
+        window.addEventListener('firebase-ready', () => setupRating(route, panel), { once: true });
+        return;
+    }
+    services.onSnapshot(ratingRef, snapshot => {
+        const values = snapshot.docs.map(item => Number(item.data().value) || 0).filter(Boolean);
+        const result = values.length ? (values.reduce((total, value) => total + value, 0) / values.length).toFixed(1) : 'Ainda sem notas';
+        average.textContent = values.length ? `${result}/5 (${values.length})` : result;
+    }, () => { average.textContent = 'Avaliações indisponíveis'; });
+    stars.forEach(star => star.addEventListener('click', async () => {
+        const user = services.auth.currentUser;
+        if (!user) { average.textContent = 'Entre para votar'; return; }
+        await services.setDoc(services.doc(services.db, 'games', route, 'ratings', user.uid), { value: Number(star.dataset.rating), userId: user.uid, updatedAt: services.serverTimestamp() });
+        drawStars(Number(star.dataset.rating));
+    }));
+}
+
 function renderPage() {
     const { route, anchor } = getRouteInfo();
     const container = document.getElementById('article-container');
@@ -426,6 +652,23 @@ function renderPage() {
 
     if (route === 'mods') {
         renderAllModsPage();
+        return;
+    }
+
+    if (route === 'minha-lista') {
+        renderMyListPage();
+        return;
+    }
+
+    if (route === 'perfil') {
+        setPageBackground(null);
+        document.title = 'Meu perfil - WikiGames';
+        renderProfilePage();
+        return;
+    }
+
+    if (route === 'listas') {
+        renderListsPage();
         return;
     }
 
@@ -478,7 +721,8 @@ function renderPage() {
             metaDescription.setAttribute('content', article.summary);
         }
 
-        let htmlContent = `<h1>${article.title}</h1>`;
+        const isGamePage = route !== 'home' && route !== 'sobre' && route !== 'all' && !route.startsWith('categoria/');
+        let htmlContent = `<div class="article-title-row"><h1>${article.title}</h1>${isGamePage ? favoriteButton(route) : ''}</div>`;
 
         if (article.infobox) {
             htmlContent += `<div class="infobox">
@@ -501,7 +745,6 @@ function renderPage() {
 
         htmlContent += `<div class="article-text">${article.content}</div>`;
 
-        const isGamePage = route !== 'home' && route !== 'sobre' && route !== 'all' && !route.startsWith('categoria/');
         if (isGamePage) {
             htmlContent += renderDownloadWarning();
         }
@@ -538,6 +781,16 @@ function renderPage() {
         `;
 
         container.innerHTML = htmlContent;
+        markArticleGalleryImages(container);
+
+        if (isGamePage) {
+            const ratingPanel = document.createElement('section');
+            ratingPanel.className = 'rating-panel';
+            ratingPanel.innerHTML = `<div><strong>Avaliação da comunidade</strong><span id="ratingAverage">Carregando...</span></div><div class="rating-stars" role="group" aria-label="Avaliar de 1 a 5 estrelas">${[1, 2, 3, 4, 5].map(value => `<button type="button" data-rating="${value}" aria-label="${value} estrela${value > 1 ? 's' : ''}"><i class="fa-regular fa-star"></i></button>`).join('')}</div>`;
+            container.querySelector('.article-actions')?.before(ratingPanel);
+            setupRating(route, ratingPanel);
+            setupChat(route, container);
+        }
 
         const sharePageBtn = document.getElementById('sharePageBtn');
         if (sharePageBtn) {
@@ -601,9 +854,20 @@ function openImageLightbox(image) {
         lightbox.setAttribute('aria-modal', 'true');
         lightbox.innerHTML = `
             <button class="image-lightbox-close" type="button" aria-label="Fechar imagem"><i class="fa-solid fa-xmark"></i></button>
+            <div class="image-lightbox-toolbar" role="toolbar" aria-label="Controles da imagem">
+                <button type="button" data-lightbox-action="zoom-out" aria-label="Diminuir zoom"><i class="fa-solid fa-minus"></i></button>
+                <span data-lightbox-zoom>100%</span>
+                <button type="button" data-lightbox-action="zoom-in" aria-label="Aumentar zoom"><i class="fa-solid fa-plus"></i></button>
+                <button type="button" data-lightbox-action="fullscreen" aria-label="Tela cheia"><i class="fa-solid fa-expand"></i></button>
+            </div>
             <img class="image-lightbox-preview" alt="">
         `;
         document.body.appendChild(lightbox);
+        lightbox.dataset.zoom = '1';
+        lightbox.querySelector('[data-lightbox-action="zoom-in"]').addEventListener('click', () => updateLightboxZoom(lightbox, 0.25));
+        lightbox.querySelector('[data-lightbox-action="zoom-out"]').addEventListener('click', () => updateLightboxZoom(lightbox, -0.25));
+        lightbox.querySelector('[data-lightbox-action="fullscreen"]').addEventListener('click', () => lightbox.requestFullscreen?.());
+        lightbox.querySelector('.image-lightbox-preview').addEventListener('dblclick', () => updateLightboxZoom(lightbox, 0.5));
         lightbox.addEventListener('click', event => {
             if (event.target === lightbox || event.target.closest('.image-lightbox-close')) {
                 lightbox.classList.remove('active');
@@ -615,8 +879,20 @@ function openImageLightbox(image) {
     const preview = lightbox.querySelector('.image-lightbox-preview');
     preview.src = image.currentSrc || image.src;
     preview.alt = image.alt || 'Imagem ampliada';
+    lightbox.dataset.zoom = '1';
+    preview.style.transform = 'scale(1)';
+    lightbox.querySelector('[data-lightbox-zoom]').textContent = '100%';
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
+}
+
+function updateLightboxZoom(lightbox, amount) {
+    const preview = lightbox.querySelector('.image-lightbox-preview');
+    const currentZoom = Number(lightbox.dataset.zoom || 1);
+    const nextZoom = Math.min(3, Math.max(1, currentZoom + amount));
+    lightbox.dataset.zoom = String(nextZoom);
+    preview.style.transform = `scale(${nextZoom})`;
+    lightbox.querySelector('[data-lightbox-zoom]').textContent = `${Math.round(nextZoom * 100)}%`;
 }
 
 document.addEventListener('keydown', event => {
@@ -630,7 +906,14 @@ document.addEventListener('keydown', event => {
 });
 
 document.addEventListener('click', function (e) {
-    const image = e.target.closest('#article-container .image-gallery img, #article-container .mod-gallery img');
+    const favorite = e.target.closest('[data-favorite-route]');
+    if (favorite) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleFavorite(favorite.dataset.favoriteRoute);
+        return;
+    }
+    const image = e.target.closest('#article-container .image-gallery img, #article-container .mod-gallery img, #article-container img.gallery-image');
     if (!image) return;
 
     e.preventDefault();
@@ -700,6 +983,7 @@ document.getElementById('randomPageBtn').addEventListener('click', function (e) 
 window.addEventListener('hashchange', renderPage);
 window.addEventListener('popstate', renderPage);
 window.addEventListener('DOMContentLoaded', renderPage);
+setupAccount();
 
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const closeMenuBtn = document.getElementById('closeMenuBtn');
