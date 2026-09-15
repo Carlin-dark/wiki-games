@@ -2346,7 +2346,7 @@ const articlesDatabase = {
         categories: ["Visual Novel", "Death Game", "Mistério", "Escape"],
         summary: "Você acorda sem memórias em uma instalação fechada com outros desconhecidos, amarrado a um colar explosivo e forçado a participar de rodadas de jogos de vida ou morte.",
         infobox: {
-            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1338940/header.jpg?t=1758338672",
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/1115100/header.jpg",
             data: { "Desenvolvedor": "Miracle Moon", "Gêneros": "Death Game, Mistério", "Lançamento": "2019", "Plataformas": "PC" }
         },
         toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
@@ -2522,6 +2522,74 @@ const articlesDatabase = {
             <p>A Casa está viva, e cada cômodo quer te matar de forma imprevisível e sádica (um passo em falso esmaga você sob paredes ou te atira em espinhos). Resolva enigmas macabros envolvendo ursinhos de pelúcia fatiados e espelhos envenenados. O final verdadeiro (True Ending) é considerado um dos mais perturbadores da história dos jogos indies.</p>
             <hr><h2 id="links">Links Oficiais</h2>
             <div class="play-links"><a href="https://store.steampowered.com/app/885810/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (Versão MV)</a></div>
+        `
+    },
+    "yume-nikki": {
+        title: "Yume Nikki",
+        categories: ["RPG Maker", "Surreal", "Terror Psicológico", "Indie", "Aventura"],
+        summary: "Um clássico cult absoluto do RPG Maker e do terror psicológico surreal, onde você explora os bizarros mundos dos sonhos de Madotsuki coletando 'Efeitos' sem enredo linear ou diálogos.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/header.jpg?t=1779843132",
+            data: {
+                "Desenvolvedor": "kikiyama",
+                "Distribuidora": "PLAYISM",
+                "Gêneros": "Aventura, Casual, Indie",
+                "Lançamento": "10 de Janeiro de 2018 (Steam)",
+                "Plataformas": "PC (Windows), Web"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Visão Geral e Mecânicas" },
+            { id: "faq", text: "2. Perguntas Frequentes e Requisitos" },
+            { id: "galeria", text: "3. Galeria de Imagens" },
+            { id: "links", text: "4. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Yume Nikki</strong> é um <em>tour de force</em> do RPG Maker e um trabalho divisivamente controverso para os fãs, tendo se tornado um dos jogos indie mais conhecidos do Japão por sua atmosfera profundamente sombria e agourenta.</p>
+            
+            <h2 id="sinopse">Visão Geral e Mecânicas</h2>
+            <p>Você é livre para explorar os vários mundos dos sonhos no seu próprio ritmo. É diferente de qualquer outro RPG, especialmente no fato de que realmente não há ação ou diálogo digno de nota — não há objetivos específicos nem histórias sobre as quais falar; você simplesmente anda por aí.</p>
+            <p>Ao verificar certos personagens ou itens no jogo, você coleta um <strong>“Efeito”</strong> que altera a aparência do personagem principal. Alguns desses efeitos possuem ações ou animações especiais que você pode ativar pressionando as teclas <strong>1</strong> ou <strong>3</strong> no teclado numérico. O uso do mesmo efeito uma segunda vez faz o personagem voltar à forma original, e eles só podem ser descartados dentro de salas com muitas portas.</p>
+
+            <h2 id="faq">Perguntas Frequentes e Requisitos</h2>
+            <p><strong>P. Há uma falha ou problema de proporção no jogo?</strong><br>
+            R. Mude para o modo Janela pressionando <code>F4</code> ou <code>Alt + Enter</code>.</p>
+            <p><strong>P. Por que a versão japonesa trava?</strong><br>
+            R. A codificação em japonês neste jogo é executada apenas em locais do sistema japonês. Se quiser jogar em japonês e travar, altere a localidade do sistema para japonês.</p>
+            <p><strong>Requisitos Mínimos do Sistema:</strong><br>
+            SO: Windows 2000 / XP / Vista / 7 (Nota: A partir de 1º de janeiro de 2024, o cliente Steam é compatível apenas com o Windows 10 ou posterior).<br>
+            Processador: MMX Pentium(R) 200MHz (Pentium(R) II 450MHz ou superior recomendado).<br>
+            Memória: 32 MB de RAM.</p>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_94eb3eadcaa3371228499e9efa23062a5ba0c" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_6e99025af2f6669b7f08f35d9174bfdb925dc4c9.1920x1080.jpg?t=1779843132" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_bb41ccd5905753fe86f7d10527c9e2808d2efb8e.1920x1080.jpg?t=1779843132" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-link"></i> <strong>Lojas e Plataformas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/650700/Yume_Nikki/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://ynoproject.net/" target="_blank"><i class="fa-solid fa-globe"></i> YNOproject (Versão Web/Multiplayer)</a>
+            </div>
+
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads e Traduções:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/RTP-2003" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> RTP do RPG Maker 2003</a>
+                <a href="https://4br.me/Yume-Nikki-PT-BR" target="_blank"><i class="fa-solid fa-language"></i> Yume Nikki PT-BR</a>
+            </div>
+
+            <p><i class="fa-solid fa-share-nodes"></i> <strong>Redes Sociais da Distribuidora (PLAYISM):</strong></p>
+            <div class="play-links">
+                <a href="https://x.com/playismEN" target="_blank"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a>
+                <a href="https://bsky.app/profile/playismen.bsky.social" target="_blank"><i class="fa-solid fa-cloud"></i> Bluesky</a>
+                <a href="https://www.instagram.com/playism_jp/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.youtube.com/@ActiveGamingMedia/videos" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            </div>
         `
     },
     "mad-father": {
