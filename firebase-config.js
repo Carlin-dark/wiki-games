@@ -13,10 +13,13 @@ import {
     getFirestore,
     doc,
     getDoc,
+    getDocFromServer,
     setDoc,
     collection,
     addDoc,
     onSnapshot,
+    query,
+    where,
     serverTimestamp
 } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js';
 import { getDatabase, ref, push, onValue, serverTimestamp as realtimeTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js';
@@ -52,10 +55,13 @@ try {
         updateProfile,
         doc,
         getDoc,
+        getDocFromServer,
         setDoc,
         collection,
         addDoc,
         onSnapshot,
+        query,
+        where,
         serverTimestamp,
         ref,
         push,

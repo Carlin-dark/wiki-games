@@ -16,6 +16,25 @@ function logFirebaseError(context, error) {
     console.error(`[Firebase] ${context}`, error);
 }
 
+async function getFirestoreDocumentWithRetry(services, documentReference, attempts = 3) {
+    let lastError;
+    for (let attempt = 1; attempt <= attempts; attempt += 1) {
+        try {
+            return await services.getDocFromServer(documentReference);
+        } catch (error) {
+            lastError = error;
+            if (attempt < attempts) await new Promise(resolve => setTimeout(resolve, 500 * attempt));
+        }
+    }
+    try {
+        console.warn('[Firebase] Servidor indisponível; tentando dados em cache.', lastError);
+        return await services.getDoc(documentReference);
+    } catch (cacheError) {
+        cacheError.cause = lastError;
+        throw cacheError;
+    }
+}
+
 window.addEventListener('firebase-error', event => {
     logFirebaseError('Serviços indisponíveis', event.detail);
 });
@@ -108,7 +127,7 @@ async function renderProfilePage() {
     }
     let profile = {};
     try {
-        profile = (await services.getDoc(services.doc(services.db, 'users', user.uid))).data() || {};
+        profile = (await getFirestoreDocumentWithRetry(services, services.doc(services.db, 'users', user.uid))).data() || {};
     } catch (error) {
         logFirebaseError('Falha ao carregar o perfil', error);
     }
@@ -147,7 +166,7 @@ async function renderPublicProfilePage(userId) {
     }
     container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Carregando perfil...</p>';
     try {
-        const snapshot = await services.getDoc(services.doc(services.db, 'users', userId));
+        const snapshot = await getFirestoreDocumentWithRetry(services, services.doc(services.db, 'users', userId));
         if (!snapshot.exists()) {
             container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Este perfil ainda não foi preenchido.</p>';
             return;
@@ -735,7 +754,7 @@ function setupRating(route, panel) {
     const services = window.firebaseServices;
     const average = panel.querySelector('#ratingAverage');
     const stars = [...panel.querySelectorAll('[data-rating]')];
-    const ratingRef = services ? services.collection(services.db, 'ratings') : null;
+    const ratingRef = services ? services.query(services.collection(services.db, 'ratings'), services.where('gameId', '==', route)) : null;
     const drawStars = value => stars.forEach(star => { star.classList.toggle('selected', Number(star.dataset.rating) <= value); star.querySelector('i').className = `fa-${Number(star.dataset.rating) <= value ? 'solid' : 'regular'} fa-star`; });
     if (!services || !ratingRef) {
         average.textContent = 'Disponível após conectar ao Firebase';
@@ -745,7 +764,7 @@ function setupRating(route, panel) {
     try {
         services.onSnapshot(ratingRef, snapshot => {
             try {
-                const values = snapshot.docs.filter(item => item.data().gameId === route).map(item => Number(item.data().value) || 0).filter(value => value >= 1 && value <= 5);
+                const values = snapshot.docs.map(item => Number(item.data().value) || 0).filter(value => value >= 1 && value <= 5);
                 const result = values.length ? (values.reduce((total, value) => total + value, 0) / values.length).toFixed(1) : 'Ainda sem notas';
                 average.textContent = values.length ? `${result}/5 (${values.length})` : result;
             } catch (error) {
@@ -779,7 +798,7 @@ function setupRating(route, panel) {
         };
         try {
             await services.setDoc(ratingDocument, ratingData, { merge: true });
-            const savedRating = await services.getDoc(ratingDocument);
+            const savedRating = await getFirestoreDocumentWithRetry(services, ratingDocument);
             if (!savedRating.exists() || savedRating.data().userId !== user.uid || Number(savedRating.data().value) !== value) {
                 throw new Error('A avaliação não foi confirmada pelo Firestore');
             }
