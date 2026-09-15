@@ -17,6 +17,27 @@ function logFirebaseError(context, error) {
 }
 
 async function getFirestoreDocumentWithRetry(services, documentReference, attempts = 3) {
+    async function ensureUserProfile(user) {
+        const services = window.firebaseServices;
+        if (!services || !user) return;
+        const profileReference = services.doc(services.db, 'users', user.uid);
+        try {
+            const profileSnapshot = await getFirestoreDocumentWithRetry(services, profileReference);
+            if (!profileSnapshot.exists()) {
+                const username = user.displayName || user.email?.split('@')[0] || 'Usuário';
+                await services.setDoc(profileReference, {
+                    username,
+                    name: username,
+                    email: user.email || '',
+                    photoURL: user.photoURL || '',
+                    createdAt: new Date()
+                });
+                console.info('[Firebase] Perfil criado:', user.uid);
+            }
+        } catch (error) {
+            logFirebaseError(`Falha ao criar/verificar perfil ${user.uid}`, error);
+        }
+    }
     let lastError;
     for (let attempt = 1; attempt <= attempts; attempt += 1) {
         try {
@@ -301,6 +322,7 @@ function setupAccount() {
             menu.innerHTML = '<strong>Entre na WikiGames</strong><button data-auth-action="google"><i class="fa-brands fa-google"></i> Entrar com Google</button><form id="emailAuthForm"><input type="email" name="email" placeholder="Seu e-mail" required><input type="password" name="password" placeholder="Sua senha" minlength="6" required><div><button type="submit" data-auth-action="login">Entrar</button><button type="button" data-auth-action="signup">Criar conta</button></div></form><small id="authMessage"></small>';
             return;
         }
+        ensureUserProfile(user);
         const avatar = user.photoURL ? `<img src="${user.photoURL}" alt="">` : '<i class="fa-solid fa-user"></i>';
         const adminBadge = isAdminUser(user) ? '<i class="fa-solid fa-crown admin-crown" title="Administrador do site" aria-label="Administrador do site"></i>' : '';
         button.innerHTML = `${avatar}<span>${user.displayName || user.email.split('@')[0]}</span>${adminBadge}`;
@@ -319,15 +341,20 @@ function setupAccount() {
         const services = window.firebaseServices;
         const message = document.getElementById('authMessage');
         try {
-            if (action === 'google') await services.signInWithPopup(services.auth, new services.GoogleAuthProvider());
+            if (action === 'google') {
+                const result = await services.signInWithPopup(services.auth, new services.GoogleAuthProvider());
+                await ensureUserProfile(result.user);
+            }
             if (action === 'logout') await services.signOut(services.auth);
             if (action === 'login' || action === 'signup') {
                 event.preventDefault();
                 const form = document.getElementById('emailAuthForm');
                 const email = form.email.value;
                 const password = form.password.value;
-                if (action === 'login') await services.signInWithEmailAndPassword(services.auth, email, password);
-                else await services.createUserWithEmailAndPassword(services.auth, email, password);
+                let result;
+                if (action === 'login') result = await services.signInWithEmailAndPassword(services.auth, email, password);
+                else result = await services.createUserWithEmailAndPassword(services.auth, email, password);
+                await ensureUserProfile(result.user);
             }
         } catch (error) {
             logFirebaseError('Falha no fluxo de autenticação', error);
@@ -764,7 +791,7 @@ function setupRating(route, panel) {
     try {
         services.onSnapshot(ratingRef, snapshot => {
             try {
-                const values = snapshot.docs.map(item => Number(item.data().value) || 0).filter(value => value >= 1 && value <= 5);
+                const values = snapshot.docs.map(item => Number(item.data().rating ?? item.data().value) || 0).filter(value => value >= 1 && value <= 5);
                 const result = values.length ? (values.reduce((total, value) => total + value, 0) / values.length).toFixed(1) : 'Ainda sem notas';
                 average.textContent = values.length ? `${result}/5 (${values.length})` : result;
             } catch (error) {
@@ -792,6 +819,7 @@ function setupRating(route, panel) {
         const ratingDocument = services.doc(services.db, 'ratings', ratingId);
         const ratingData = {
             gameId: route,
+            rating: value,
             value,
             userId: user.uid,
             updatedAt: services.serverTimestamp()
@@ -799,7 +827,7 @@ function setupRating(route, panel) {
         try {
             await services.setDoc(ratingDocument, ratingData, { merge: true });
             const savedRating = await getFirestoreDocumentWithRetry(services, ratingDocument);
-            if (!savedRating.exists() || savedRating.data().userId !== user.uid || Number(savedRating.data().value) !== value) {
+            if (!savedRating.exists() || savedRating.data().userId !== user.uid || Number(savedRating.data().rating ?? savedRating.data().value) !== value) {
                 throw new Error('A avaliação não foi confirmada pelo Firestore');
             }
             console.info(`[Firebase] Avaliação salva: ${route}`, { userId: user.uid, value });
