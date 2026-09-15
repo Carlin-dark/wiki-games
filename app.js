@@ -367,7 +367,14 @@ function setupAccount() {
     function connectFirebase() {
         const services = window.firebaseServices;
         if (!services) return;
-        services.onAuthStateChanged(services.auth, renderUser);
+        services.onAuthStateChanged(services.auth, user => {
+            renderUser(user);
+            const currentRoute = getRouteInfo().route;
+            const profileId = new URLSearchParams(window.location.search).get('uid');
+            if (currentRoute === 'perfil' && !profileId) {
+                renderProfilePage();
+            }
+        });
     }
     window.addEventListener('firebase-ready', connectFirebase, { once: true });
     connectFirebase();
