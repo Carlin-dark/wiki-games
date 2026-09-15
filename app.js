@@ -133,8 +133,16 @@ async function renderProfilePage() {
 async function renderPublicProfilePage(userId) {
     const container = document.getElementById('article-container');
     const services = window.firebaseServices;
-    if (!services || !userId) {
+    if (!userId) {
         container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Perfil indisponível.</p>';
+        return;
+    }
+    if (!services) {
+        container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Conectando ao Firebase...</p>';
+        window.addEventListener('firebase-ready', () => renderPublicProfilePage(userId), { once: true });
+        window.addEventListener('firebase-error', () => {
+            container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>O Firebase não está disponível agora.</p>';
+        }, { once: true });
         return;
     }
     container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Carregando perfil...</p>';
@@ -152,7 +160,8 @@ async function renderPublicProfilePage(userId) {
         document.title = `${name} - WikiGames`;
     } catch (error) {
         logFirebaseError(`Falha ao carregar perfil ${userId}`, error);
-        container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Não foi possível carregar este perfil agora.</p>';
+        const errorCode = error?.code ? ` (${escapeHtml(error.code)})` : '';
+        container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Não foi possível carregar este perfil agora${errorCode}.</p>`;
     }
 }
 
@@ -777,7 +786,8 @@ function setupRating(route, panel) {
             console.info(`[Firebase] Avaliação salva: ${route}`, { userId: user.uid, value });
         } catch (error) {
             logFirebaseError(`Falha ao salvar avaliação de ${route}`, error);
-            average.textContent = 'Não foi possível salvar sua nota';
+            const errorCode = error?.code ? ` (${error.code})` : '';
+            average.textContent = `Não foi possível salvar sua nota${errorCode}`;
             throw error;
         }
     };
