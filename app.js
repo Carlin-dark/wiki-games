@@ -8,23 +8,16 @@ function createSlug(text) {
         .replace(/\s+/g, '-');
 }
 
-const FAVORITES_STORAGE_KEY = 'wikigames-favorites';
 const ADMIN_EMAIL = 'konozuba1k@gmail.com';
+let favoriteRoutes = [];
+let favoritesLoadedFor = null;
 
 function isAdminUser(user) {
     return String(user?.email || '').trim().toLowerCase() === ADMIN_EMAIL;
 }
 
 function getFavorites() {
-    try {
-        return JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || '[]');
-    } catch (error) {
-        return [];
-    }
-}
-
-function setFavorites(favorites) {
-    localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...new Set(favorites)]));
+    return favoriteRoutes;
 }
 
 function isFavorite(route) {
@@ -36,10 +29,14 @@ function favoriteButton(route, compact = false) {
     return `<button class="favorite-btn${compact ? ' favorite-btn-compact' : ''}${active ? ' is-favorite' : ''}" type="button" data-favorite-route="${route}" aria-label="${active ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}" aria-pressed="${active}"><i class="fa-${active ? 'solid' : 'regular'} fa-heart"></i>${compact ? '' : `<span>${active ? 'Favoritado' : 'Favoritar'}</span>`}</button>`;
 }
 
-function toggleFavorite(route) {
+async function toggleFavorite(route) {
+    const services = window.firebaseServices;
+    const user = services?.auth.currentUser;
+    if (!user) return;
     const favorites = getFavorites();
     const nextFavorites = favorites.includes(route) ? favorites.filter(item => item !== route) : [...favorites, route];
-    setFavorites(nextFavorites);
+    await services.setDoc(services.doc(services.db, 'users', user.uid), { favorites: nextFavorites }, { merge: true });
+    favoriteRoutes = nextFavorites;
     document.querySelectorAll(`[data-favorite-route="${route}"]`).forEach(button => {
         const active = nextFavorites.includes(route);
         button.classList.toggle('is-favorite', active);
@@ -52,15 +49,36 @@ function toggleFavorite(route) {
     });
 }
 
+async function loadFavorites(user) {
+    const services = window.firebaseServices;
+    if (!services || !user) {
+        favoriteRoutes = [];
+        favoritesLoadedFor = null;
+        return;
+    }
+    const snapshot = await services.getDoc(services.doc(services.db, 'users', user.uid));
+    favoriteRoutes = Array.isArray(snapshot.data()?.favorites) ? snapshot.data().favorites : [];
+    favoritesLoadedFor = user.uid;
+}
+
 function renderMyListPage() {
     setPageBackground(null);
     const container = document.getElementById('article-container');
+    const user = window.firebaseServices?.auth.currentUser;
+    if (!user) {
+        container.innerHTML = '<h1><i class="fa-solid fa-heart"></i> Minha Lista</h1><p>Entre na sua conta para acessar sua lista global.</p>';
+        return;
+    }
+    if (favoritesLoadedFor !== user.uid) {
+        container.innerHTML = '<h1><i class="fa-solid fa-heart"></i> Minha Lista</h1><p>Carregando sua lista...</p>';
+        return;
+    }
     const favorites = getFavorites();
     const games = favorites.map(route => ({ route, game: articlesDatabase[route] })).filter(item => item.game);
     document.title = 'Minha Lista - WikiGames';
     container.innerHTML = `
         <h1><i class="fa-solid fa-heart"></i> Minha Lista</h1>
-        <p class="list-intro">Seus jogos favoritos ficam salvos neste dispositivo.</p>
+        <p class="list-intro">Sua lista é sincronizada com sua conta em todos os dispositivos.</p>
         <div class="all-games-grid my-list-grid">
             ${games.length ? games.map(({ route, game }) => `
                 <article class="all-game-card">
@@ -87,7 +105,7 @@ function renderProfilePage() {
         const message = document.getElementById('profileMessage');
         try {
             await services.updateProfile(user, { displayName: form.name.value.trim(), photoURL: form.photoURL.value.trim() || null });
-            await services.setDoc(services.doc(services.db, 'profiles', user.uid), { name: form.name.value.trim(), photoURL: form.photoURL.value.trim(), bio: form.bio.value.trim(), socials: form.socials.value.trim(), updatedAt: services.serverTimestamp() }, { merge: true });
+            await services.setDoc(services.doc(services.db, 'users', user.uid), { name: form.name.value.trim(), photoURL: form.photoURL.value.trim(), bio: form.bio.value.trim(), socials: form.socials.value.trim(), updatedAt: services.serverTimestamp() }, { merge: true });
             message.textContent = 'Perfil salvo.';
         } catch (error) { message.textContent = 'Não foi possível salvar o perfil.'; }
     });
@@ -117,12 +135,12 @@ function renderListsPage() {
         const selectedGames = [...form.querySelectorAll('input[name="games"]:checked')].map(input => input.value);
         if (!selectedGames.length) { listMessage.textContent = 'Escolha pelo menos um jogo.'; return; }
         try {
-            await services.addDoc(services.collection(services.db, 'publicLists'), { title: form.title.value.trim(), gameRoutes: selectedGames, ownerId: services.auth.currentUser.uid, ownerName: services.auth.currentUser.displayName || services.auth.currentUser.email, createdAt: services.serverTimestamp() });
+            await services.addDoc(services.collection(services.db, 'lists'), { title: form.title.value.trim(), gameRoutes: selectedGames, authorId: services.auth.currentUser.uid, ownerName: services.auth.currentUser.displayName || services.auth.currentUser.email, createdAt: services.serverTimestamp() });
             form.reset(); listMessage.textContent = 'Lista publicada.';
         } catch (error) { listMessage.textContent = 'Não foi possível publicar a lista.'; }
     });
     if (!services) { document.getElementById('publicLists').innerHTML = '<p>O Firebase ainda não está disponível.</p>'; return; }
-    services.onSnapshot(services.collection(services.db, 'publicLists'), snapshot => {
+    services.onSnapshot(services.collection(services.db, 'lists'), snapshot => {
         const allLists = snapshot.docs.map(item => ({ id: item.id, ...item.data() }));
         const lists = selectedListId ? allLists.filter(list => list.id === selectedListId) : allLists;
         document.getElementById('publicLists').innerHTML = lists.length ? lists.map(list => `<article class="public-list-card"><h2>${escapeHtml(list.title)}</h2><p>Por ${escapeHtml(list.ownerName || 'WikiGames')}</p><div>${(list.gameRoutes || []).map(route => articlesDatabase[route] ? `<a href="/${route}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${window.location.origin}/?route=listas&list=${list.id}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`).join('') : '<p>Nenhuma lista publicada ainda.</p>';
@@ -145,13 +163,13 @@ function setupChat(route, container) {
         window.addEventListener('firebase-ready', () => setupChat(route, container), { once: true });
         return;
     }
-    const messagesRef = services.ref(services.realtimeDb, `gameChats/${route}/messages`);
+    const messagesRef = services.ref(services.realtimeDb, `chats/${route}`);
     const messages = panel.querySelector('.chat-messages');
     services.onValue(messagesRef, snapshot => {
-        const values = Object.values(snapshot.val() || {}).slice(-50);
-        messages.innerHTML = values.length ? values.map(item => `<p><strong>${escapeHtml(item.author)}</strong> ${escapeHtml(item.text)}</p>`).join('') : '<span>Nenhuma mensagem ainda.</span>';
+        const values = Object.values(snapshot.val() || {}).sort((first, second) => (first.timestamp || 0) - (second.timestamp || 0)).slice(-50);
+        messages.innerHTML = values.length ? values.map(item => `<p><strong>${escapeHtml(item.author || 'Usuário')}</strong> ${escapeHtml(item.text)}</p>`).join('') : '<span>Nenhuma mensagem ainda.</span>';
         messages.scrollTop = messages.scrollHeight;
-    });
+    }, () => { messages.innerHTML = '<span>Não foi possível carregar as mensagens.</span>'; });
     panel.querySelector('form').addEventListener('submit', async event => {
         event.preventDefault();
         const user = services.auth.currentUser;
@@ -159,8 +177,12 @@ function setupChat(route, container) {
         if (!user) { input.value = ''; input.placeholder = 'Entre para participar do chat'; return; }
         const text = input.value.trim();
         if (!text) return;
-        await services.push(messagesRef, { text, author: user.displayName || user.email, uid: user.uid, createdAt: services.realtimeTimestamp() });
-        input.value = '';
+        try {
+            await services.push(messagesRef, { text, userId: user.uid, author: user.displayName || user.email, timestamp: services.realtimeTimestamp() });
+            input.value = '';
+        } catch (error) {
+            input.placeholder = 'Não foi possível enviar a mensagem';
+        }
     });
 }
 
@@ -172,6 +194,8 @@ function setupAccount() {
 
     function renderUser(user) {
         if (!user) {
+            favoriteRoutes = [];
+            favoritesLoadedFor = null;
             button.innerHTML = '<i class="fa-solid fa-user"></i><span>Entrar</span>';
             menu.innerHTML = '<strong>Entre na WikiGames</strong><button data-auth-action="google"><i class="fa-brands fa-google"></i> Entrar com Google</button><form id="emailAuthForm"><input type="email" name="email" placeholder="Seu e-mail" required><input type="password" name="password" placeholder="Sua senha" minlength="6" required><div><button type="submit" data-auth-action="login">Entrar</button><button type="button" data-auth-action="signup">Criar conta</button></div></form><small id="authMessage"></small>';
             return;
@@ -180,6 +204,9 @@ function setupAccount() {
         const adminBadge = isAdminUser(user) ? '<i class="fa-solid fa-crown admin-crown" title="Administrador do site" aria-label="Administrador do site"></i>' : '';
         button.innerHTML = `${avatar}<span>${user.displayName || user.email.split('@')[0]}</span>${adminBadge}`;
         menu.innerHTML = `<strong>${user.displayName || user.email} ${adminBadge}</strong><a href="/?route=perfil"><i class="fa-solid fa-id-card"></i> Meu perfil</a><a href="/?route=minha-lista"><i class="fa-solid fa-heart"></i> Minha Lista</a><button data-auth-action="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>`;
+        loadFavorites(user).then(() => {
+            if (getRouteInfo().route === 'minha-lista') renderMyListPage();
+        }).catch(() => { favoritesLoadedFor = user.uid; favoriteRoutes = []; });
     }
 
     function showMenu() { menu.hidden = false; button.setAttribute('aria-expanded', 'true'); }
@@ -625,7 +652,7 @@ function setupRating(route, panel) {
     const services = window.firebaseServices;
     const average = panel.querySelector('#ratingAverage');
     const stars = [...panel.querySelectorAll('[data-rating]')];
-    const ratingRef = services ? services.collection(services.db, 'games', route, 'ratings') : null;
+    const ratingRef = services ? services.collection(services.db, 'ratings') : null;
     const drawStars = value => stars.forEach(star => { star.classList.toggle('selected', Number(star.dataset.rating) <= value); star.querySelector('i').className = `fa-${Number(star.dataset.rating) <= value ? 'solid' : 'regular'} fa-star`; });
     if (!services || !ratingRef) {
         average.textContent = 'Disponível após conectar ao Firebase';
@@ -633,14 +660,14 @@ function setupRating(route, panel) {
         return;
     }
     services.onSnapshot(ratingRef, snapshot => {
-        const values = snapshot.docs.map(item => Number(item.data().value) || 0).filter(Boolean);
+        const values = snapshot.docs.filter(item => item.data().gameId === route).map(item => Number(item.data().value) || 0).filter(Boolean);
         const result = values.length ? (values.reduce((total, value) => total + value, 0) / values.length).toFixed(1) : 'Ainda sem notas';
         average.textContent = values.length ? `${result}/5 (${values.length})` : result;
     }, () => { average.textContent = 'Avaliações indisponíveis'; });
     stars.forEach(star => star.addEventListener('click', async () => {
         const user = services.auth.currentUser;
         if (!user) { average.textContent = 'Entre para votar'; return; }
-        await services.setDoc(services.doc(services.db, 'games', route, 'ratings', user.uid), { value: Number(star.dataset.rating), userId: user.uid, updatedAt: services.serverTimestamp() });
+        await services.setDoc(services.doc(services.db, 'ratings', `${route}__${user.uid}`), { gameId: route, value: Number(star.dataset.rating), userId: user.uid, updatedAt: services.serverTimestamp() });
         drawStars(Number(star.dataset.rating));
     }));
 }
@@ -916,7 +943,9 @@ document.addEventListener('click', function (e) {
     if (favorite) {
         e.preventDefault();
         e.stopPropagation();
-        toggleFavorite(favorite.dataset.favoriteRoute);
+        toggleFavorite(favorite.dataset.favoriteRoute).catch(() => {
+            favorite.setAttribute('aria-label', 'Não foi possível atualizar os favoritos');
+        });
         return;
     }
     const image = e.target.closest('#article-container .image-gallery img, #article-container .mod-gallery img, #article-container img.gallery-image');
