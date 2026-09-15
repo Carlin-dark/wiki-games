@@ -12,6 +12,14 @@ const ADMIN_EMAIL = 'konozuba1k@gmail.com';
 let favoriteRoutes = [];
 let favoritesLoadedFor = null;
 
+function logFirebaseError(context, error) {
+    console.error(`[Firebase] ${context}`, error);
+}
+
+window.addEventListener('firebase-error', event => {
+    logFirebaseError('Serviços indisponíveis', event.detail);
+});
+
 function isAdminUser(user) {
     return String(user?.email || '').trim().toLowerCase() === ADMIN_EMAIL;
 }
@@ -90,7 +98,7 @@ function renderMyListPage() {
     window.scrollTo(0, 0);
 }
 
-function renderProfilePage() {
+async function renderProfilePage() {
     const container = document.getElementById('article-container');
     const services = window.firebaseServices;
     const user = services?.auth.currentUser;
@@ -98,8 +106,16 @@ function renderProfilePage() {
         container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><p>Entre na sua conta para editar seu perfil.</p>';
         return;
     }
-    container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${user.displayName || ''}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${user.photoURL || ''}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Conte um pouco sobre você"></textarea></label><label>Redes sociais<input name="socials" maxlength="300" placeholder="https://..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form>`;
-    document.getElementById('profileForm').addEventListener('submit', async event => {
+    let profile = {};
+    try {
+        profile = (await services.getDoc(services.doc(services.db, 'users', user.uid))).data() || {};
+    } catch (error) {
+        logFirebaseError('Falha ao carregar o perfil', error);
+    }
+    container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${escapeHtml(profile.name || user.displayName || '')}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${escapeHtml(profile.photoURL || user.photoURL || '')}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Conte um pouco sobre você">${escapeHtml(profile.bio || '')}</textarea></label><label>Redes sociais<input name="socials" maxlength="300" value="${escapeHtml(profile.socials || '')}" placeholder="https://..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form>`;
+    const profileForm = document.getElementById('profileForm');
+    if (!profileForm) return;
+    profileForm.addEventListener('submit', async event => {
         event.preventDefault();
         const form = event.currentTarget;
         const message = document.getElementById('profileMessage');
@@ -107,7 +123,10 @@ function renderProfilePage() {
             await services.updateProfile(user, { displayName: form.name.value.trim(), photoURL: form.photoURL.value.trim() || null });
             await services.setDoc(services.doc(services.db, 'users', user.uid), { name: form.name.value.trim(), photoURL: form.photoURL.value.trim(), bio: form.bio.value.trim(), socials: form.socials.value.trim(), updatedAt: services.serverTimestamp() }, { merge: true });
             message.textContent = 'Perfil salvo.';
-        } catch (error) { message.textContent = 'Não foi possível salvar o perfil.'; }
+        } catch (error) {
+            logFirebaseError('Falha ao salvar o perfil', error);
+            message.textContent = 'Não foi possível salvar o perfil.';
+        }
     });
 }
 
@@ -128,7 +147,10 @@ function renderListsPage() {
     const services = window.firebaseServices;
     const selectedListId = new URLSearchParams(window.location.search).get('list');
     const listMessage = document.getElementById('listMessage');
-    document.getElementById('publicListForm').addEventListener('submit', async event => {
+    const publicListForm = document.getElementById('publicListForm');
+    const publicLists = document.getElementById('publicLists');
+    if (!publicListForm || !publicLists) return;
+    publicListForm.addEventListener('submit', async event => {
         event.preventDefault();
         if (!services?.auth.currentUser) { listMessage.textContent = 'Entre para criar uma lista.'; return; }
         const form = event.currentTarget;
@@ -137,39 +159,58 @@ function renderListsPage() {
         try {
             await services.addDoc(services.collection(services.db, 'lists'), { title: form.title.value.trim(), gameRoutes: selectedGames, authorId: services.auth.currentUser.uid, ownerName: services.auth.currentUser.displayName || services.auth.currentUser.email, createdAt: services.serverTimestamp() });
             form.reset(); listMessage.textContent = 'Lista publicada.';
-        } catch (error) { listMessage.textContent = 'Não foi possível publicar a lista.'; }
+        } catch (error) {
+            logFirebaseError('Falha ao publicar a lista', error);
+            listMessage.textContent = 'Não foi possível publicar a lista.';
+        }
     });
-    if (!services) { document.getElementById('publicLists').innerHTML = '<p>O Firebase ainda não está disponível.</p>'; return; }
-    services.onSnapshot(services.collection(services.db, 'lists'), snapshot => {
-        const allLists = snapshot.docs.map(item => ({ id: item.id, ...item.data() }));
-        const lists = selectedListId ? allLists.filter(list => list.id === selectedListId) : allLists;
-        document.getElementById('publicLists').innerHTML = lists.length ? lists.map(list => `<article class="public-list-card"><h2>${escapeHtml(list.title)}</h2><p>Por ${escapeHtml(list.ownerName || 'WikiGames')}</p><div>${(list.gameRoutes || []).map(route => articlesDatabase[route] ? `<a href="/${route}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${window.location.origin}/?route=listas&list=${list.id}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`).join('') : '<p>Nenhuma lista publicada ainda.</p>';
-    }, () => { document.getElementById('publicLists').innerHTML = '<p>Não foi possível carregar as listas agora.</p>'; });
-    document.getElementById('publicLists').addEventListener('click', async event => {
+    if (!services) { publicLists.innerHTML = '<p>O Firebase ainda não está disponível.</p>'; return; }
+    try {
+        services.onSnapshot(services.collection(services.db, 'lists'), snapshot => {
+            const allLists = snapshot.docs.map(item => ({ id: item.id, ...item.data() }));
+            const lists = selectedListId ? allLists.filter(list => list.id === selectedListId) : allLists;
+            publicLists.innerHTML = lists.length ? lists.map(list => `<article class="public-list-card"><h2>${escapeHtml(list.title)}</h2><p>Por ${escapeHtml(list.ownerName || 'WikiGames')}</p><div>${(list.gameRoutes || []).map(route => articlesDatabase[route] ? `<a href="/${route}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${window.location.origin}/?route=listas&list=${list.id}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`).join('') : '<p>Nenhuma lista publicada ainda.</p>';
+        }, error => {
+            logFirebaseError('Falha ao carregar listas', error);
+            publicLists.innerHTML = '<p>Não foi possível carregar as listas agora.</p>';
+        });
+    } catch (error) {
+        logFirebaseError('Falha ao registrar o listener de listas', error);
+        publicLists.innerHTML = '<p>Não foi possível carregar as listas agora.</p>';
+    }
+    publicLists.addEventListener('click', async event => {
         const copyButton = event.target.closest('[data-list-url]');
         if (!copyButton) return;
-        await navigator.clipboard?.writeText(copyButton.dataset.listUrl);
-        copyButton.innerHTML = '<i class="fa-solid fa-check"></i> Link copiado';
+        try {
+            await navigator.clipboard?.writeText(copyButton.dataset.listUrl);
+            copyButton.innerHTML = '<i class="fa-solid fa-check"></i> Link copiado';
+        } catch (error) {
+            logFirebaseError('Falha ao copiar link da lista', error);
+        }
     });
 }
 
 function setupChat(route, container) {
     const services = window.firebaseServices;
-    const panel = document.createElement('section');
-    panel.className = 'chat-panel';
-    panel.innerHTML = `<h2><i class="fa-solid fa-comments"></i> Chat da rota</h2><p>Converse sobre este jogo em uma sala separada.</p><div class="chat-messages"><span>Carregando mensagens...</span></div><form class="chat-form"><input name="message" maxlength="300" placeholder="Escreva uma mensagem..." required><button type="submit" aria-label="Enviar mensagem"><i class="fa-solid fa-paper-plane"></i></button></form>`;
-    container.appendChild(panel);
     if (!services) {
         window.addEventListener('firebase-ready', () => setupChat(route, container), { once: true });
         return;
     }
+    const panel = document.createElement('section');
+    panel.className = 'chat-panel';
+    panel.dataset.chatRoute = route;
+    panel.innerHTML = `<h2><i class="fa-solid fa-comments"></i> Chat da rota</h2><p>Converse sobre este jogo em uma sala separada.</p><div class="chat-messages"><span>Carregando mensagens...</span></div><form class="chat-form"><input name="message" maxlength="300" placeholder="Escreva uma mensagem..." required><button type="submit" aria-label="Enviar mensagem"><i class="fa-solid fa-paper-plane"></i></button></form>`;
+    container.appendChild(panel);
     const messagesRef = services.ref(services.realtimeDb, `chats/${route}`);
     const messages = panel.querySelector('.chat-messages');
     services.onValue(messagesRef, snapshot => {
         const values = Object.values(snapshot.val() || {}).sort((first, second) => (first.timestamp || 0) - (second.timestamp || 0)).slice(-50);
         messages.innerHTML = values.length ? values.map(item => `<p><strong>${escapeHtml(item.author || 'Usuário')}</strong> ${escapeHtml(item.text)}</p>`).join('') : '<span>Nenhuma mensagem ainda.</span>';
         messages.scrollTop = messages.scrollHeight;
-    }, () => { messages.innerHTML = '<span>Não foi possível carregar as mensagens.</span>'; });
+    }, error => {
+        logFirebaseError(`Falha ao carregar chat ${route}`, error);
+        messages.innerHTML = '<span>Não foi possível carregar as mensagens.</span>';
+    });
     panel.querySelector('form').addEventListener('submit', async event => {
         event.preventDefault();
         const user = services.auth.currentUser;
@@ -181,6 +222,7 @@ function setupChat(route, container) {
             await services.push(messagesRef, { text, userId: user.uid, author: user.displayName || user.email, timestamp: services.realtimeTimestamp() });
             input.value = '';
         } catch (error) {
+            logFirebaseError(`Falha ao enviar mensagem no chat ${route}`, error);
             input.placeholder = 'Não foi possível enviar a mensagem';
         }
     });
@@ -229,6 +271,7 @@ function setupAccount() {
                 else await services.createUserWithEmailAndPassword(services.auth, email, password);
             }
         } catch (error) {
+            logFirebaseError('Falha no fluxo de autenticação', error);
             if (message) message.textContent = 'Não foi possível concluir o acesso. Verifique os dados.';
         }
     });
@@ -659,16 +702,35 @@ function setupRating(route, panel) {
         window.addEventListener('firebase-ready', () => setupRating(route, panel), { once: true });
         return;
     }
-    services.onSnapshot(ratingRef, snapshot => {
-        const values = snapshot.docs.filter(item => item.data().gameId === route).map(item => Number(item.data().value) || 0).filter(Boolean);
-        const result = values.length ? (values.reduce((total, value) => total + value, 0) / values.length).toFixed(1) : 'Ainda sem notas';
-        average.textContent = values.length ? `${result}/5 (${values.length})` : result;
-    }, () => { average.textContent = 'Avaliações indisponíveis'; });
+    try {
+        services.onSnapshot(ratingRef, snapshot => {
+            try {
+                const values = snapshot.docs.filter(item => item.data().gameId === route).map(item => Number(item.data().value) || 0).filter(value => value >= 1 && value <= 5);
+                const result = values.length ? (values.reduce((total, value) => total + value, 0) / values.length).toFixed(1) : 'Ainda sem notas';
+                average.textContent = values.length ? `${result}/5 (${values.length})` : result;
+            } catch (error) {
+                logFirebaseError(`Falha ao processar avaliações de ${route}`, error);
+                average.textContent = 'Avaliações indisponíveis';
+            }
+        }, error => {
+            logFirebaseError(`Falha ao carregar avaliações de ${route}`, error);
+            average.textContent = 'Avaliações indisponíveis';
+        });
+    } catch (error) {
+        logFirebaseError(`Falha ao registrar avaliações de ${route}`, error);
+        average.textContent = 'Avaliações indisponíveis';
+    }
     stars.forEach(star => star.addEventListener('click', async () => {
         const user = services.auth.currentUser;
         if (!user) { average.textContent = 'Entre para votar'; return; }
-        await services.setDoc(services.doc(services.db, 'ratings', `${route}__${user.uid}`), { gameId: route, value: Number(star.dataset.rating), userId: user.uid, updatedAt: services.serverTimestamp() });
-        drawStars(Number(star.dataset.rating));
+        try {
+            const value = Number(star.dataset.rating);
+            await services.setDoc(services.doc(services.db, 'ratings', `${route}__${user.uid}`), { gameId: route, value, userId: user.uid, updatedAt: services.serverTimestamp() });
+            drawStars(value);
+        } catch (error) {
+            logFirebaseError(`Falha ao salvar avaliação de ${route}`, error);
+            average.textContent = 'Não foi possível salvar sua nota';
+        }
     }));
 }
 
@@ -956,7 +1018,7 @@ document.addEventListener('click', function (e) {
     openImageLightbox(image);
 }, true);
 
-searchInput.addEventListener('input', function () {
+if (searchInput && searchResults) searchInput.addEventListener('input', function () {
     const query = this.value.toLowerCase();
     searchResults.innerHTML = '';
 
@@ -991,7 +1053,7 @@ searchInput.addEventListener('input', function () {
 });
 
 document.addEventListener('click', function (e) {
-    if (!searchInput.contains(e.target)) searchResults.style.display = 'none';
+    if (searchInput && searchResults && !searchInput.contains(e.target)) searchResults.style.display = 'none';
 
     const clickedLink = e.target.closest('a');
     if (!clickedLink) return;
@@ -1008,7 +1070,8 @@ document.addEventListener('click', function (e) {
     navigateToRoute(route);
 });
 
-document.getElementById('randomPageBtn').addEventListener('click', function (e) {
+const randomPageBtn = document.getElementById('randomPageBtn');
+if (randomPageBtn) randomPageBtn.addEventListener('click', function (e) {
     e.preventDefault();
     const keys = Object.keys(articlesDatabase).filter(k => k !== 'home');
     const randomKey = keys[Math.floor(Math.random() * keys.length)];
@@ -1024,31 +1087,37 @@ const hamburgerBtn = document.getElementById('hamburgerBtn');
 const closeMenuBtn = document.getElementById('closeMenuBtn');
 const sidebar = document.getElementById('sidebar');
 const menuOverlay = document.getElementById('menuOverlay');
-const sidebarLinks = sidebar.querySelectorAll('a');
+const sidebarLinks = sidebar ? sidebar.querySelectorAll('a') : [];
 
 function openMenu() {
+    if (!sidebar || !menuOverlay) return;
     sidebar.classList.add('active');
     menuOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
+    if (!sidebar || !menuOverlay) return;
     sidebar.classList.remove('active');
     menuOverlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 
-hamburgerBtn.addEventListener('click', openMenu);
-hamburgerBtn.addEventListener('touchstart', function (event) {
-    event.preventDefault();
-    openMenu();
-}, { passive: false });
-closeMenuBtn.addEventListener('click', closeMenu);
-menuOverlay.addEventListener('click', closeMenu);
-menuOverlay.addEventListener('touchstart', function (event) {
-    event.preventDefault();
-    closeMenu();
-}, { passive: false });
+if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', openMenu);
+    hamburgerBtn.addEventListener('touchstart', function (event) {
+        event.preventDefault();
+        openMenu();
+    }, { passive: false });
+}
+if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+if (menuOverlay) {
+    menuOverlay.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('touchstart', function (event) {
+        event.preventDefault();
+        closeMenu();
+    }, { passive: false });
+}
 
 sidebarLinks.forEach(link => {
     link.addEventListener('click', () => {
