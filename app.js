@@ -9,6 +9,11 @@ function createSlug(text) {
 }
 
 const FAVORITES_STORAGE_KEY = 'wikigames-favorites';
+const ADMIN_EMAIL = 'konozuba1k@gmail.com';
+
+function isAdminUser(user) {
+    return String(user?.email || '').trim().toLowerCase() === ADMIN_EMAIL;
+}
 
 function getFavorites() {
     try {
@@ -172,8 +177,9 @@ function setupAccount() {
             return;
         }
         const avatar = user.photoURL ? `<img src="${user.photoURL}" alt="">` : '<i class="fa-solid fa-user"></i>';
-        button.innerHTML = `${avatar}<span>${user.displayName || user.email.split('@')[0]}</span>`;
-        menu.innerHTML = `<strong>${user.displayName || user.email}</strong><a href="/?route=perfil"><i class="fa-solid fa-id-card"></i> Meu perfil</a><a href="/?route=minha-lista"><i class="fa-solid fa-heart"></i> Minha Lista</a><button data-auth-action="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>`;
+        const adminBadge = isAdminUser(user) ? '<i class="fa-solid fa-crown admin-crown" title="Administrador do site" aria-label="Administrador do site"></i>' : '';
+        button.innerHTML = `${avatar}<span>${user.displayName || user.email.split('@')[0]}</span>${adminBadge}`;
+        menu.innerHTML = `<strong>${user.displayName || user.email} ${adminBadge}</strong><a href="/?route=perfil"><i class="fa-solid fa-id-card"></i> Meu perfil</a><a href="/?route=minha-lista"><i class="fa-solid fa-heart"></i> Minha Lista</a><button data-auth-action="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>`;
     }
 
     function showMenu() { menu.hidden = false; button.setAttribute('aria-expanded', 'true'); }
