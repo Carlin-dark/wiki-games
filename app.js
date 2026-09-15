@@ -35,23 +35,28 @@ async function getFirestoreDocumentWithRetry(services, documentReference, attemp
     }
 }
 
+async function getFirestoreDocumentFast(services, documentReference, timeout = 8000) {
+    return Promise.race([
+        services.getDoc(documentReference),
+        new Promise((resolve, reject) => setTimeout(() => reject(new Error('Firestore demorou para responder')), timeout))
+    ]);
+}
+
 async function ensureUserProfile(user) {
     const services = window.firebaseServices;
     if (!services || !user) return;
     const profileReference = services.doc(services.db, 'users', user.uid);
     try {
-        const profileSnapshot = await getFirestoreDocumentWithRetry(services, profileReference);
-        if (!profileSnapshot.exists()) {
-            const username = user.displayName || user.email?.split('@')[0] || 'Usuário';
-            await services.setDoc(profileReference, {
-                username,
-                name: username,
-                email: user.email || '',
-                photoURL: user.photoURL || '',
-                createdAt: new Date()
-            });
-            console.info('[Firebase] Perfil criado:', user.uid);
-        }
+        const username = user.displayName || 'Novo Usuário';
+        await services.setDoc(profileReference, {
+            username,
+            name: username,
+            email: user.email || '',
+            photoURL: user.photoURL || '',
+            createdAt: new Date()
+        }, { merge: true }).then(() => {
+            console.log('Perfil salvo com sucesso no Firestore');
+        });
     } catch (error) {
         logFirebaseError(`Falha ao criar/verificar perfil ${user.uid}`, error);
     }
@@ -144,18 +149,23 @@ async function renderProfilePage() {
     const services = window.firebaseServices;
     const user = services?.auth.currentUser;
     if (!user) {
-        container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><p>Entre na sua conta para editar seu perfil.</p>';
+        container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><p>Carregando sua sessão...</p>';
         return;
     }
-    let profile = {};
-    try {
-        profile = (await getFirestoreDocumentWithRetry(services, services.doc(services.db, 'users', user.uid))).data() || {};
-    } catch (error) {
-        logFirebaseError('Falha ao carregar o perfil', error);
-    }
-    container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${escapeHtml(profile.name || user.displayName || '')}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${escapeHtml(profile.photoURL || user.photoURL || '')}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Conte um pouco sobre você">${escapeHtml(profile.bio || '')}</textarea></label><label>Redes sociais<input name="socials" maxlength="300" value="${escapeHtml(profile.socials || '')}" placeholder="https://..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form>`;
+    container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${escapeHtml(user.displayName || user.email?.split('@')[0] || '')}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${escapeHtml(user.photoURL || '')}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Carregando dados do perfil..."></textarea></label><label>Redes sociais<input name="socials" maxlength="300" placeholder="Carregando dados do perfil..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form>`;
     const profileForm = document.getElementById('profileForm');
     if (!profileForm) return;
+    const profileFields = profileForm.elements;
+    getFirestoreDocumentFast(services, services.doc(services.db, 'users', user.uid)).then(snapshot => {
+        if (!snapshot.exists()) return;
+        const profile = snapshot.data();
+        profileFields.name.value = profile.name || profile.username || profileFields.name.value;
+        profileFields.photoURL.value = profile.photoURL || user.photoURL || '';
+        profileFields.bio.value = profile.bio || '';
+        profileFields.socials.value = profile.socials || '';
+        profileFields.bio.placeholder = 'Conte um pouco sobre você';
+        profileFields.socials.placeholder = 'https://...';
+    }).catch(error => logFirebaseError('Falha ao carregar dados complementares do perfil', error));
     profileForm.addEventListener('submit', async event => {
         event.preventDefault();
         const form = event.currentTarget;
@@ -188,7 +198,7 @@ async function renderPublicProfilePage(userId) {
     }
     container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Carregando perfil...</p>';
     try {
-        const snapshot = await getFirestoreDocumentWithRetry(services, services.doc(services.db, 'users', userId));
+        const snapshot = await getFirestoreDocumentFast(services, services.doc(services.db, 'users', userId));
         if (!snapshot.exists()) {
             container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Este perfil ainda não foi preenchido.</p>';
             return;
@@ -344,7 +354,7 @@ function setupAccount() {
         try {
             if (action === 'google') {
                 const result = await services.signInWithPopup(services.auth, new services.GoogleAuthProvider());
-                await ensureUserProfile(result.user);
+                ensureUserProfile(result.user);
             }
             if (action === 'logout') await services.signOut(services.auth);
             if (action === 'login' || action === 'signup') {
@@ -355,7 +365,7 @@ function setupAccount() {
                 let result;
                 if (action === 'login') result = await services.signInWithEmailAndPassword(services.auth, email, password);
                 else result = await services.createUserWithEmailAndPassword(services.auth, email, password);
-                await ensureUserProfile(result.user);
+                ensureUserProfile(result.user);
             }
         } catch (error) {
             logFirebaseError('Falha no fluxo de autenticação', error);
@@ -834,7 +844,9 @@ function setupRating(route, panel) {
             updatedAt: services.serverTimestamp()
         };
         try {
-            await services.setDoc(ratingDocument, ratingData, { merge: true });
+            await services.setDoc(ratingDocument, ratingData, { merge: true }).then(() => {
+                console.log('Avaliação salva com sucesso no Firestore');
+            });
             const savedRating = await getFirestoreDocumentWithRetry(services, ratingDocument);
             if (!savedRating.exists() || savedRating.data().userId !== user.uid || Number(savedRating.data().rating ?? savedRating.data().value) !== value) {
                 throw new Error('A avaliação não foi confirmada pelo Firestore');
