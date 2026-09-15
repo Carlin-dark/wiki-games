@@ -130,6 +130,32 @@ async function renderProfilePage() {
     });
 }
 
+async function renderPublicProfilePage(userId) {
+    const container = document.getElementById('article-container');
+    const services = window.firebaseServices;
+    if (!services || !userId) {
+        container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Perfil indisponível.</p>';
+        return;
+    }
+    container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Carregando perfil...</p>';
+    try {
+        const snapshot = await services.getDoc(services.doc(services.db, 'users', userId));
+        if (!snapshot.exists()) {
+            container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Este perfil ainda não foi preenchido.</p>';
+            return;
+        }
+        const profile = snapshot.data();
+        const name = profile.name || 'Usuário WikiGames';
+        const avatar = profile.photoURL ? `<img class="public-profile-avatar" src="${escapeHtml(profile.photoURL)}" alt="Avatar de ${escapeHtml(name)}">` : '<div class="public-profile-avatar public-profile-avatar-placeholder"><i class="fa-solid fa-user"></i></div>';
+        const socials = profile.socials ? `<p><i class="fa-solid fa-link"></i> <a href="${escapeHtml(profile.socials)}" target="_blank" rel="noopener noreferrer">Rede social</a></p>` : '';
+        container.innerHTML = `<section class="public-profile"><div class="public-profile-heading">${avatar}<div><h1>${escapeHtml(name)}</h1><p>Perfil da comunidade WikiGames</p></div></div><div class="public-profile-bio"><h2>Sobre</h2><p>${escapeHtml(profile.bio || 'Este usuário ainda não adicionou uma biografia.')}</p>${socials}</div></section>`;
+        document.title = `${name} - WikiGames`;
+    } catch (error) {
+        logFirebaseError(`Falha ao carregar perfil ${userId}`, error);
+        container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Não foi possível carregar este perfil agora.</p>';
+    }
+}
+
 function escapeHtml(value) {
     return String(value || '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
 }
@@ -205,7 +231,12 @@ function setupChat(route, container) {
     const messages = panel.querySelector('.chat-messages');
     services.onValue(messagesRef, snapshot => {
         const values = Object.values(snapshot.val() || {}).sort((first, second) => (first.timestamp || 0) - (second.timestamp || 0)).slice(-50);
-        messages.innerHTML = values.length ? values.map(item => `<p><strong>${escapeHtml(item.author || 'Usuário')}</strong> ${escapeHtml(item.text)}</p>`).join('') : '<span>Nenhuma mensagem ainda.</span>';
+        messages.innerHTML = values.length ? values.map(item => {
+            const profileId = item.userId || item.uid;
+            const author = escapeHtml(item.author || 'Usuário');
+            const authorMarkup = profileId ? `<a class="chat-author" href="/?route=perfil&uid=${encodeURIComponent(profileId)}">${author}</a>` : `<strong>${author}</strong>`;
+            return `<p>${authorMarkup} ${escapeHtml(item.text)}</p>`;
+        }).join('') : '<span>Nenhuma mensagem ainda.</span>';
         messages.scrollTop = messages.scrollHeight;
     }, error => {
         logFirebaseError(`Falha ao carregar chat ${route}`, error);
@@ -720,16 +751,48 @@ function setupRating(route, panel) {
         logFirebaseError(`Falha ao registrar avaliações de ${route}`, error);
         average.textContent = 'Avaliações indisponíveis';
     }
-    stars.forEach(star => star.addEventListener('click', async () => {
+    const saveRating = async value => {
         const user = services.auth.currentUser;
-        if (!user) { average.textContent = 'Entre para votar'; return; }
+        if (!user) {
+            average.textContent = 'Entre para votar';
+            throw new Error('Usuário não autenticado');
+        }
+        if (!Number.isInteger(value) || value < 1 || value > 5) {
+            throw new Error('Nota inválida');
+        }
+        const ratingId = `${route}__${user.uid}`;
+        const ratingDocument = services.doc(services.db, 'ratings', ratingId);
+        const ratingData = {
+            gameId: route,
+            value,
+            userId: user.uid,
+            updatedAt: services.serverTimestamp()
+        };
         try {
-            const value = Number(star.dataset.rating);
-            await services.setDoc(services.doc(services.db, 'ratings', `${route}__${user.uid}`), { gameId: route, value, userId: user.uid, updatedAt: services.serverTimestamp() });
-            drawStars(value);
+            await services.setDoc(ratingDocument, ratingData, { merge: true });
+            const savedRating = await services.getDoc(ratingDocument);
+            if (!savedRating.exists() || savedRating.data().userId !== user.uid || Number(savedRating.data().value) !== value) {
+                throw new Error('A avaliação não foi confirmada pelo Firestore');
+            }
+            console.info(`[Firebase] Avaliação salva: ${route}`, { userId: user.uid, value });
         } catch (error) {
             logFirebaseError(`Falha ao salvar avaliação de ${route}`, error);
             average.textContent = 'Não foi possível salvar sua nota';
+            throw error;
+        }
+    };
+    stars.forEach(star => star.addEventListener('click', async () => {
+        const value = Number(star.dataset.rating);
+        stars.forEach(button => { button.disabled = true; });
+        average.textContent = 'Salvando sua nota...';
+        try {
+            await saveRating(value);
+            drawStars(value);
+            average.textContent = 'Sua nota foi salva';
+        } catch (error) {
+            if (error.message === 'Usuário não autenticado') average.textContent = 'Entre para votar';
+        } finally {
+            stars.forEach(button => { button.disabled = false; });
         }
     }));
 }
@@ -757,8 +820,13 @@ function renderPage() {
 
     if (route === 'perfil') {
         setPageBackground(null);
-        document.title = 'Meu perfil - WikiGames';
-        renderProfilePage();
+        const profileId = new URLSearchParams(window.location.search).get('uid');
+        if (profileId) {
+            renderPublicProfilePage(profileId);
+        } else {
+            document.title = 'Meu perfil - WikiGames';
+            renderProfilePage();
+        }
         return;
     }
 
@@ -1067,7 +1135,13 @@ document.addEventListener('click', function (e) {
 
     const url = new URL(href, window.location.origin);
     const route = url.searchParams.get('route') || url.pathname.replace(/^\/+|\/+$/g, '') || 'home';
-    navigateToRoute(route);
+    const profileId = url.searchParams.get('uid');
+    if (profileId) {
+        history.pushState({}, '', `/?route=${encodeURIComponent(route)}&uid=${encodeURIComponent(profileId)}`);
+        renderPage();
+    } else {
+        navigateToRoute(route);
+    }
 });
 
 const randomPageBtn = document.getElementById('randomPageBtn');

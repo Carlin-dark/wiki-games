@@ -871,10 +871,19 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 .chat-messages { height: 180px; overflow-y: auto; padding: 9px; margin: 10px 0; border: 1px solid #202e42; background: #080c12; }
 .chat-messages p { margin: 0 0 7px; font-size: 12px; color: #c5c8c6; }
 .chat-messages strong { color: #8ac7ff; }
+.chat-author { color: #8ac7ff; font-weight: 700; text-decoration: underline; text-decoration-color: rgba(138,199,255,.45); }
 .chat-messages span { color: #7a8b9e; font-size: 12px; }
 .chat-form { display: flex; gap: 7px; }
 .chat-form input { flex: 1; min-width: 0; padding: 9px; border: 1px solid #283850; background: #0b1118; color: #fff; border-radius: 3px; }
 .chat-form button { width: 40px; border: 1px solid #283850; border-radius: 3px; background: #1c2b3e; color: #dfeaf7; cursor: pointer; }
+.public-profile { max-width: 720px; }
+.public-profile-heading { display: flex; align-items: center; gap: 18px; padding-bottom: 18px; border-bottom: 1px solid #283850; }
+.public-profile-heading h1 { margin: 0; }
+.public-profile-heading p, .public-profile-bio p { color: #9fb4c8; }
+.public-profile-avatar { width: 84px; height: 84px; flex: 0 0 84px; border-radius: 50%; object-fit: cover; border: 2px solid #385575; }
+.public-profile-avatar-placeholder { display: grid; place-items: center; background: #162235; color: #8ac7ff; font-size: 28px; }
+.public-profile-bio { margin-top: 22px; }
+.public-profile-bio h2 { margin-top: 0; }
 
 @media (max-width: 900px) {
     .header-content { flex-direction: column; align-items: stretch; }
