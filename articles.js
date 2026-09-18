@@ -2597,6 +2597,83 @@ const articlesDatabase = {
             </div>
         `
     },
+    "sadistic-blood": {
+        title: "SaDistic BlooD",
+        categories: ["Visual Novel", "Terror", "Vampiros", "Conteúdo Adulto", "Eroge"],
+        summary: "Uma dark visual novel de terror e sobrevivência onde as vampiras Yuna e Shizuha lutam para escapar da armadilha mortal dos Caçadores de Vampiros na ilha de Chisakura.",
+        infobox: {
+            image: "https://gogunlocked.com/wp-content/uploads/2026/06/SaDistic-BlooD-Free-Download-1-639x361.jpg",
+            data: {
+                "Desenvolvedor": "B-Cyc / Cyc-Soft",
+                "Gêneros": "Visual Novel, Terror, Eroge, Sobrevivência",
+                "Lançamento": "2020",
+                "Plataformas": "PC (Windows)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "aviso", text: "2. Conteúdo Adulto e Aviso de Sensibilidade" },
+            { id: "requisitos", text: "3. Requisitos do Sistema e Instalação" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>SaDistic BlooD</strong> é uma <em>visual novel</em> de terror e suspense sombrio desenvolvida pela <strong>B-Cyc / Cyc-Soft</strong>, focada na luta desesperada de duas vampiras contra hordas de caçadores e armas biológicas mortais.</p>
+            
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Os vampiros Yuna e Shizuha chegam à cidade insular de Chisakura na esperança de encontrar refúgio da perseguição implacável dos Caçadores de Vampiros. No entanto, os Caçadores já estão à espreita. Na fatídica noite de sua chegada, a lua cheia brilha intensificando seus impulsos vampíricos enquanto tentam saciar a sede de sangue sem serem notados.</p>
+            <p>Em menor número contra um grupo de armas biológicas perigosas comandadas pela vingativa Yuika, Yuna e Shizuha precisam tomar decisões cruciais: fugir da ilha ou manter-se firmes e lutar. Com o tempo se esgotando e as probabilidades contra elas, a dupla de vampiros precisa escolher sabiamente se deseja escapar com vida ou encarar um destino pior do que a morte.</p>
+
+            <h2 id="aviso">Conteúdo Adulto e Aviso de Sensibilidade</h2>
+            <p><strong>⚠️ AVISO IMPORTANTE:</strong> Este jogo contém temas extremamente sensíveis, violência gráfica, gore, tortura e conteúdo adulto explícito (18+). Não é recomendado para pessoas sensíveis ou menores de idade.</p>
+
+            <h2 id="requisitos">Requisitos do Sistema e Instalação</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>SO:</strong> Windows XP ou mais recente</li>
+                <li><strong>Processador:</strong> 2 GHz</li>
+                <li><strong>Memória:</strong> 2 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 256 MB de VRAM</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Instruções de Instalação (Servidor 1):</strong></p>
+            <ol>
+                <li>Acesse o link do servidor e aguarde a contagem regressiva no UploadHaven para realizar o download.</li>
+                <li>Após concluir o download, extraia o arquivo baixado para uma pasta usando o <strong>7-Zip</strong> ou <strong>WinRAR</strong>.</li>
+                <li>Abra a pasta extraída e execute o arquivo principal do jogo normalmente.</li>
+            </ol>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/sadistic-blood-screen1.png" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/sadistic-blood-screen5.png" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/no579.png" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Site Oficial:</strong></p>
+            <div class="play-links">
+                <a href="https://cyc-soft.com/b-cyc-pro/sadisticblood/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Cyc-Soft)</a>
+            </div>
+
+            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download (PC):</strong></p>
+            <p><em>Nota: Para os Servidores 3 ao 5, utilize a senha <code>ryuugames.com</code> caso seja solicitada na descompactação.</em></p>
+            <div class="play-links">
+                <a href="https://4br.me/2u347F" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 (Sem Censura)</a>
+                <a href="https://seulink.net/SaDistic-BlooD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2</a>
+                <a href="https://seulink.net/O5fPkgKJG7" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 3 (Sem Censura - Senha)</a>
+                <a href="https://seulink.net/O3HZr7Z7vB" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 4 (TeraBox - Senha)</a>
+                <a href="https://seulink.net/Lo79V1EuMN" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 5 (Senha)</a>
+                <a href="https://seulink.net/Sc22eD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 6 (Sem Censura)</a>
+                <a href="https://seulink.net/JOtgC" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 7</a>
+                <a href="https://seulink.net/Sc22eD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 8 (Sem Censura)</a>
+                <a href="https://seulink.digital/JOtgC" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 9</a>
+            </div>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
