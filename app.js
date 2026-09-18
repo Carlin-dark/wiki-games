@@ -817,30 +817,33 @@ function setupRating(route, panel) {
         services.collection(services.db, 'ratings'),
         services.where('gameId', '==', route)
     );
+    let latestSnapshot = null;
+
+    const drawUserRating = (snapshot, currentUser) => {
+        const userRating = currentUser
+            ? snapshot.docs
+                .map(doc => doc.data())
+                .find(data => data.userId === currentUser.uid)
+            : null;
+        const value = Number(userRating?.rating) || 0;
+        drawStars(value >= 1 && value <= 5 ? value : 0);
+    };
 
     // Escuta atualizações no Firestore em tempo real
     try {
         services.onSnapshot(ratingRef, snapshot => {
+            latestSnapshot = snapshot;
             const currentUser = services.auth?.currentUser;
             const values = [];
-            let currentUserRating = 0;
 
             snapshot.docs.forEach(doc => {
                 const data = doc.data();
-                const val = Number(data.rating ?? data.value) || 0;
+                const val = Number(data.rating) || 0;
                 if (val >= 1 && val <= 5) {
                     values.push(val);
-                    // Se o documento pertencer ao usuário logado, recupera a nota dele
-                    if (currentUser && data.userId === currentUser.uid) {
-                        currentUserRating = val;
-                    }
                 }
             });
-
-            // Pinta as estrelas com a nota prévia do usuário (se existir)
-            if (currentUserRating > 0) {
-                drawStars(currentUserRating);
-            }
+            drawUserRating(snapshot, currentUser);
 
             // Exibe a média geral do jogo
             const result = values.length 
@@ -856,6 +859,12 @@ function setupRating(route, panel) {
         average.textContent = 'Avaliações indisponíveis';
     }
 
+    if (services.onAuthStateChanged) {
+        services.onAuthStateChanged(services.auth, currentUser => {
+            if (latestSnapshot) drawUserRating(latestSnapshot, currentUser);
+        });
+    }
+
     // Salva a nota no Firestore
     const saveRating = async value => {
         const user = services.auth?.currentUser;
@@ -868,8 +877,7 @@ function setupRating(route, panel) {
         const ratingDocument = services.doc(services.db, 'ratings', ratingId);
         const ratingData = {
             gameId: route,
-            rating: value,
-            value: value,
+            rating: Number(value),
             userId: user.uid,
             updatedAt: services.serverTimestamp()
         };
@@ -886,6 +894,11 @@ function setupRating(route, panel) {
 
     // Eventos de clique nas estrelas
     stars.forEach(star => star.addEventListener('click', async () => {
+        if (!services.auth?.currentUser) {
+            average.textContent = 'Entre para votar';
+            return;
+        }
+
         const value = Number(star.dataset.rating);
         stars.forEach(button => { button.disabled = true; });
         average.textContent = 'Salvando nota...';
@@ -895,7 +908,7 @@ function setupRating(route, panel) {
             drawStars(value);
             average.textContent = 'Sua nota foi salva!';
         } catch (error) {
-            if (error.message === 'Usuário não autenticado') average.textContent = 'Entre para votar';
+            average.textContent = 'Erro ao salvar nota no servidor';
         } finally {
             stars.forEach(button => { button.disabled = false; });
         }
