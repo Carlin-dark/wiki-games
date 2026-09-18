@@ -2671,8 +2671,9 @@ const articlesDatabase = {
                 <a href="https://seulink.net/JOtgC" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 7</a>
                 <a href="https://seulink.net/Sc22eD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 8 (Sem Censura)</a>
                 <a href="https://seulink.digital/JOtgC" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 9</a>
-                <a href="https://4br.me/SaDistic-BlooD-jp" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 10 (Japonês)</a>
-                <a href="https://4br.me/SaDistic-BlooD-jp2" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 11 (Japonês)</a>
+                <a href="https://4br.me/SaDistic-BlooD-jp" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 10 (Japonês - Versão Teste)</a>
+                <a href="https://4br.me/SaDistic-BlooD-jp2" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 11 (Japonês - Versão Teste)</a>
+                <a href="https://4br.me/Patch-Correcao" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 12 (Japonês - Versão Patch)</a>
             </div>
         `
     },
