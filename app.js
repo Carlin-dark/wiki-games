@@ -306,6 +306,71 @@ function enhanceGameCovers(root = document) {
     });
 }
 
+function getHomeGames() {
+    return Object.entries(articlesDatabase)
+        .filter(([route, game]) => route !== 'home' && route !== 'sobre' && game.infobox?.image)
+        .map(([route, game]) => ({ route, game }));
+}
+
+function renderHomeGameCard(route, game, extra = '') {
+    return `<article class="home-game-item"><a href="/${route}" class="home-card">${gameCoverMarkup(route, game)}<span>${escapeHtml(game.title)}</span></a>${extra ? `<small>${extra}</small>` : ''}</article>`;
+}
+
+function renderHomeSection(title, icon, items, emptyMessage, sectionClass = '') {
+    return `<section class="home-section${sectionClass ? ` ${sectionClass}` : ''}"><h3><i class="fa-solid ${icon}"></i> ${title}</h3><div class="home-grid">${items.length ? items.join('') : `<p class="home-empty">${emptyMessage}</p>`}</div></section>`;
+}
+
+function renderRecentHomeSection() {
+    const currentTime = Date.now();
+    const weekInMilliseconds = 7 * 24 * 60 * 60 * 1000;
+    const recentGames = getHomeGames()
+        .filter(({ game }) => {
+            const timestamp = getGameTimestamp(game);
+            return Number.isFinite(timestamp) && currentTime - timestamp >= 0 && currentTime - timestamp <= weekInMilliseconds;
+        })
+        .sort((first, second) => getGameTimestamp(second.game) - getGameTimestamp(first.game));
+    return renderHomeSection('Adicionado recentemente', 'fa-clock', recentGames.map(({ route, game }) => renderHomeGameCard(route, game)), 'Nenhum jogo foi adicionado nos últimos 7 dias.');
+}
+
+function getGameTimestamp(game) {
+    const value = game?.addedAt || game?.createdAt;
+    if (typeof value === 'number') return value < 100000000000 ? value * 1000 : value;
+    const timestamp = Date.parse(value || '');
+    return Number.isFinite(timestamp) ? timestamp : NaN;
+}
+
+function renderHomeSections() {
+    const games = getHomeGames();
+    const androidGames = games.filter(({ game }) => /android/i.test(game.infobox.data?.Plataformas || ''));
+    const androidSection = renderHomeSection('Para Android', 'fa-android', androidGames.map(({ route, game }) => renderHomeGameCard(route, game)), 'Nenhum jogo com versão para Android foi catalogado ainda.');
+    const popularSection = renderHomeSection('Mais Curtido', 'fa-heart', [], 'Carregando as notas da comunidade...', 'home-popular-section');
+    return `${androidSection}${popularSection}${renderRecentHomeSection()}`;
+}
+
+function loadPopularHomeSection() {
+    const section = document.querySelector('.home-popular-section');
+    const services = window.firebaseServices;
+    if (!section || !services?.rtdb) {
+        if (section) section.innerHTML = renderHomeSection('Mais Curtido', 'fa-heart', [], 'As notas da comunidade estarão disponíveis após conectar ao Firebase.');
+        if (!services) window.addEventListener('firebase-ready', loadPopularHomeSection, { once: true });
+        return;
+    }
+    services.onValue(services.ref(services.rtdb, 'avaliar'), snapshot => {
+        const ratings = snapshot.val() || {};
+        const popularGames = getHomeGames().map(({ route, game }) => {
+            const values = Object.values(ratings[route] || {}).map(item => Number(item.rating)).filter(value => value >= 1 && value <= 5);
+            return { route, game, average: values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0, votes: values.length };
+        }).filter(item => item.votes).sort((first, second) => second.average - first.average || second.votes - first.votes).slice(0, 8);
+        const replacement = document.createElement('div');
+        replacement.innerHTML = renderHomeSection('Mais Curtido', 'fa-heart', popularGames.map(({ route, game, average, votes }) => renderHomeGameCard(route, game, `${average.toFixed(1)}/5 (${votes} ${votes === 1 ? 'nota' : 'notas'})`)), 'Nenhum jogo recebeu notas ainda.', 'home-popular-section');
+        const currentSection = document.querySelector('.home-popular-section');
+        if (currentSection && replacement.firstElementChild) {
+            currentSection.replaceWith(replacement.firstElementChild);
+            enhanceGameCovers(document.querySelector('.home-popular-section'));
+        }
+    });
+}
+
 function markArticleGalleryImages(container) {
     container.querySelectorAll('h2#galeria + div img').forEach(image => image.classList.add('gallery-image'));
 }
@@ -1093,7 +1158,11 @@ function renderPage() {
         const isGamePage = route !== 'home' && route !== 'sobre' && route !== 'all' && !route.startsWith('categoria/');
         let htmlContent = `<div class="article-title-row"><h1>${article.title}</h1>${isGamePage ? favoriteButton(route) : ''}</div>`;
 
-        if (article.infobox) {
+        if (route === 'home') {
+            htmlContent += `${article.content.split('<div class="home-section">')[0]}${renderHomeSections()}<hr><p style="text-align: center; color: #7a8b9e;">Use o menu lateral para explorar categorias ou pesquise o seu próximo jogo favorito na barra superior.</p>`;
+        }
+
+        if (route !== 'home' && article.infobox) {
             htmlContent += `<div class="infobox">
                 <div class="infobox-title">${article.title}</div>
                     ${gameCoverMarkup(route, article, 'zoomable-image')}
@@ -1151,6 +1220,7 @@ function renderPage() {
 
         container.innerHTML = htmlContent;
         markArticleGalleryImages(container);
+        if (route === 'home') loadPopularHomeSection();
 
         if (isGamePage) {
             const ratingPanel = document.createElement('section');

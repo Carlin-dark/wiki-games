@@ -312,6 +312,9 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     justify-content: center;
 }
 .home-card:hover span { color: #fff; }
+.home-game-item { min-width: 0; }
+.home-game-item > small { display: block; padding: 6px 4px 0; color: #ffd166; font-size: 11px; text-align: center; }
+.home-empty { grid-column: 1 / -1; margin: 0; padding: 18px; border: 1px dashed #40536b; color: #8fa3bc; text-align: center; }
 
 .play-links {
     display: flex;
