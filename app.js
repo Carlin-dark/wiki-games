@@ -819,21 +819,23 @@ function setupRating(route, panel) {
     );
     let latestSnapshot = null;
 
-    const drawUserRating = (snapshot, currentUser) => {
-        const userRating = currentUser
-            ? snapshot.docs
-                .map(doc => doc.data())
-                .find(data => data.userId === currentUser.uid)
-            : null;
-        const value = Number(userRating?.rating) || 0;
-        drawStars(value >= 1 && value <= 5 ? value : 0);
+    const drawUserRating = (documents, user) => {
+        let hasUserRating = false;
+        documents.forEach(doc => {
+            const data = doc.data();
+            if (data.userId === user?.uid) {
+                drawStars(Number(data.rating) || 0);
+                hasUserRating = true;
+            }
+        });
+        if (!hasUserRating) drawStars(0);
     };
 
     // Escuta atualizações no Firestore em tempo real
     try {
         services.onSnapshot(ratingRef, snapshot => {
             latestSnapshot = snapshot;
-            const currentUser = services.auth?.currentUser;
+            const user = services.auth?.currentUser;
             const values = [];
 
             snapshot.docs.forEach(doc => {
@@ -842,8 +844,10 @@ function setupRating(route, panel) {
                 if (val >= 1 && val <= 5) {
                     values.push(val);
                 }
+                if (data.userId === user?.uid) {
+                    drawStars(data.rating);
+                }
             });
-            drawUserRating(snapshot, currentUser);
 
             // Exibe a média geral do jogo
             const result = values.length 
@@ -860,8 +864,8 @@ function setupRating(route, panel) {
     }
 
     if (services.onAuthStateChanged) {
-        services.onAuthStateChanged(services.auth, currentUser => {
-            if (latestSnapshot) drawUserRating(latestSnapshot, currentUser);
+        services.onAuthStateChanged(services.auth, user => {
+            if (latestSnapshot) drawUserRating(latestSnapshot.docs, user);
         });
     }
 
@@ -869,7 +873,7 @@ function setupRating(route, panel) {
     const saveRating = async value => {
         const user = services.auth?.currentUser;
         if (!user) {
-            average.textContent = 'Entre para votar';
+            average.textContent = 'Faça login para avaliar';
             throw new Error('Usuário não autenticado');
         }
 
@@ -886,6 +890,7 @@ function setupRating(route, panel) {
             await services.setDoc(ratingDocument, ratingData, { merge: true });
             console.log('[Firebase] Avaliação salva com sucesso:', ratingId);
         } catch (error) {
+            console.error('[Firestore Rating Error]', error);
             logFirebaseError(`Falha ao salvar avaliação de ${route}`, error);
             average.textContent = 'Erro ao salvar nota no servidor';
             throw error;
@@ -895,7 +900,7 @@ function setupRating(route, panel) {
     // Eventos de clique nas estrelas
     stars.forEach(star => star.addEventListener('click', async () => {
         if (!services.auth?.currentUser) {
-            average.textContent = 'Entre para votar';
+            average.textContent = 'Faça login para avaliar';
             return;
         }
 
