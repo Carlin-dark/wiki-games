@@ -139,7 +139,7 @@ function renderMyListPage() {
         <div class="all-games-grid my-list-grid">
             ${games.length ? games.map(({ route, game }) => `
                 <article class="all-game-card">
-                    <a href="/${route}" class="game-card-image-link"><img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}" loading="lazy"></a>
+                    <a href="/${route}" class="game-card-image-link">${gameCoverMarkup(route, game)}</a>
                     <div class="all-game-card-content"><div class="game-card-heading"><h3><a href="/${route}">${game.title}</a></h3>${favoriteButton(route, true)}</div><p>${game.summary || ''}</p></div>
                 </article>`).join('') : '<div class="all-games-empty">Você ainda não favoritou nenhum jogo.</div>'}
         </div>
@@ -280,6 +280,30 @@ async function renderPublicProfilePage(userId) {
 
 function escapeHtml(value) {
     return String(value || '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
+}
+
+function gameCoverMarkup(route, game, className = '') {
+    const imageUrl = game?.infobox?.image || '';
+    const trailerData = getTrailerData(game);
+    return `<img class="game-cover${className ? ` ${className}` : ''}" src="${escapeHtml(imageUrl)}" alt="Capa de ${escapeHtml(game?.title || '')}" loading="lazy" data-game-id="${escapeHtml(route)}" data-game-title="${escapeHtml(game?.title || '')}" data-game-url="${escapeHtml(new URL(`/${route}`, window.location.origin).href)}" data-highres-cover="${escapeHtml(imageUrl)}"${trailerData?.watchUrl ? ` data-trailer-url="${escapeHtml(trailerData.watchUrl)}"` : ''}>`;
+}
+
+function enhanceGameCovers(root = document) {
+    root.querySelectorAll('a[href] img:not(.game-cover)').forEach(image => {
+        const link = image.closest('a');
+        if (!link) return;
+        const url = new URL(link.href, window.location.origin);
+        const route = url.searchParams.get('route') || url.pathname.replace(/^\/+|\/+$/g, '');
+        const game = articlesDatabase[route];
+        if (!game?.infobox?.image) return;
+        image.classList.add('game-cover');
+        image.dataset.gameId = route;
+        image.dataset.gameTitle = game.title;
+        image.dataset.gameUrl = new URL(`/${route}`, window.location.origin).href;
+        image.dataset.highresCover = game.infobox.image;
+        const trailerData = getTrailerData(game);
+        if (trailerData?.watchUrl) image.dataset.trailerUrl = trailerData.watchUrl;
+    });
 }
 
 function markArticleGalleryImages(container) {
@@ -671,7 +695,7 @@ function renderAllGamesPage() {
             const game = articlesDatabase[key];
             return `
                 <article class="all-game-card">
-                    <a href="/${key}" class="game-card-image-link"><img src="${game.infobox ? game.infobox.image : ''}" alt="${game.title}" loading="lazy"></a>
+                    <a href="/${key}" class="game-card-image-link">${gameCoverMarkup(key, game)}</a>
                     <div class="all-game-card-content">
                         <div class="game-card-heading"><h3><a href="/${key}">${game.title}</a></h3>${favoriteButton(key, true)}</div>
                         <p>${game.summary}</p>
@@ -1072,7 +1096,7 @@ function renderPage() {
         if (article.infobox) {
             htmlContent += `<div class="infobox">
                 <div class="infobox-title">${article.title}</div>
-                    <img class="zoomable-image" src="${article.infobox.image}" alt="Capa" loading="lazy">
+                    ${gameCoverMarkup(route, article, 'zoomable-image')}
                 <table>`;
             for (const [key, value] of Object.entries(article.infobox.data)) {
                 htmlContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
@@ -1222,7 +1246,7 @@ function openImageLightbox(image) {
     }
 
     const preview = lightbox.querySelector('.image-lightbox-preview');
-    preview.src = image.currentSrc || image.src;
+    preview.src = image.dataset.highresCover || image.currentSrc || image.src;
     preview.alt = image.alt || 'Imagem ampliada';
     lightbox.dataset.zoom = '1';
     preview.style.transform = 'scale(1)';
@@ -1239,6 +1263,170 @@ function updateLightboxZoom(lightbox, amount) {
     preview.style.transform = `scale(${nextZoom})`;
     lightbox.querySelector('[data-lightbox-zoom]').textContent = `${Math.round(nextZoom * 100)}%`;
 }
+
+function showToast(message) {
+    let toast = document.getElementById('appToast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'appToast';
+        toast.className = 'app-toast';
+        document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('active');
+    clearTimeout(showToast.timer);
+    showToast.timer = setTimeout(() => toast.classList.remove('active'), 2800);
+}
+
+function closeContextMenu() {
+    document.getElementById('gameContextMenu')?.remove();
+}
+
+function openTrailerModal(image) {
+    const trailerUrl = image.dataset.trailerUrl || '';
+    const match = trailerUrl.match(/(?:v=|be\/|embed\/|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+    if (!match) {
+        showToast('Trailer não disponível para este jogo.');
+        return;
+    }
+    const modal = document.createElement('div');
+    modal.className = 'game-media-modal active';
+    modal.innerHTML = `<div class="game-media-dialog" role="dialog" aria-modal="true" aria-label="Trailer de ${escapeHtml(image.dataset.gameTitle)}"><button class="game-media-close" type="button" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/${match[1]}?autoplay=1&rel=0" title="Trailer de ${escapeHtml(image.dataset.gameTitle)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div></div>`;
+    document.body.appendChild(modal);
+    const close = () => modal.remove();
+    modal.addEventListener('click', event => { if (event.target === modal || event.target.closest('.game-media-close')) close(); });
+}
+
+async function downloadGameCover(image) {
+    const imageUrl = image.dataset.highresCover || image.currentSrc || image.src;
+    try {
+        const response = await fetch(imageUrl, { mode: 'cors' });
+        if (!response.ok) throw new Error('download failed');
+        const blobUrl = URL.createObjectURL(await response.blob());
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = `${createSlug(image.dataset.gameTitle || 'capa')}.jpg`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+        const link = document.createElement('a');
+        link.href = imageUrl;
+        link.download = `${createSlug(image.dataset.gameTitle || 'capa')}.jpg`;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.click();
+    }
+}
+
+async function setProfileBackground(image) {
+    const imageUrl = image.dataset.highresCover || image.currentSrc || image.src;
+    localStorage.setItem('wikigames-profile-background', imageUrl);
+    applyProfileBackground(imageUrl);
+    const services = window.firebaseServices;
+    const user = services?.auth.currentUser;
+    if (services?.rtdb && user) {
+        try {
+            const reference = services.ref(services.rtdb, `users/${user.uid}`);
+            const snapshot = await services.get(reference);
+            await services.set(reference, { ...(snapshot.val() || {}), profileBackground: imageUrl });
+        } catch (error) {
+            logFirebaseError('Falha ao salvar fundo do perfil', error);
+        }
+    }
+    showToast('Imagem definida como fundo do perfil!');
+}
+
+function applyProfileBackground(imageUrl) {
+    const wrapper = document.querySelector('.vndb-bg-wrapper');
+    if (!wrapper || !imageUrl) return;
+    wrapper.style.setProperty('--profile-background-image', `url("${imageUrl}")`);
+    wrapper.classList.add('profile-background-set');
+}
+
+async function copyGameLink(image) {
+    const gameUrl = image.dataset.gameUrl || window.location.href;
+    try {
+        await navigator.clipboard.writeText(gameUrl);
+        showToast('Link do jogo copiado!');
+    } catch (error) {
+        window.prompt('Copie o link do jogo:', gameUrl);
+    }
+}
+
+function openShareMenu(image) {
+    const url = image.dataset.gameUrl || window.location.href;
+    const title = image.dataset.gameTitle || 'jogo';
+    const message = `Confira ${title} na WikiGames: ${url}`;
+    if (navigator.share) {
+        navigator.share({ title, text: message, url }).catch(() => {});
+        return;
+    }
+    const modal = document.createElement('div');
+    modal.className = 'share-modal active';
+    modal.innerHTML = `<div class="share-dialog" role="dialog" aria-modal="true" aria-label="Compartilhar jogo"><button class="game-media-close" type="button" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button><h2>Compartilhar jogo</h2><div class="share-options"><a href="https://discord.com/channels/@me?text=${encodeURIComponent(message)}" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Discord</a><a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> X</a><a href="https://wa.me/?text=${encodeURIComponent(message)}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a><button type="button" data-copy-share><i class="fa-solid fa-copy"></i> Copiar mensagem</button></div></div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', event => {
+        if (event.target === modal || event.target.closest('.game-media-close')) modal.remove();
+        if (event.target.closest('[data-copy-share]')) { navigator.clipboard?.writeText(message); showToast('Mensagem copiada!'); modal.remove(); }
+    });
+}
+
+function openGameContextMenu(image, x, y) {
+    closeContextMenu();
+    const menu = document.createElement('div');
+    menu.id = 'gameContextMenu';
+    menu.className = 'game-context-menu';
+    menu.innerHTML = `<div class="game-context-heading">${escapeHtml(image.dataset.gameTitle || 'Jogo')}</div><button type="button" data-context-action="download"><i class="fa-solid fa-download"></i> Descarregar pôster / capa</button><button type="button" data-context-action="view"><i class="fa-solid fa-expand"></i> Ver capa em alta resolução</button><button type="button" data-context-action="trailer"><i class="fa-solid fa-play"></i> Assistir abertura / trailer</button><button type="button" data-context-action="profile"><i class="fa-solid fa-image"></i> Usar como fundo do perfil</button><button type="button" data-context-action="copy"><i class="fa-solid fa-link"></i> Copiar link do jogo</button><button type="button" data-context-action="share"><i class="fa-solid fa-share-nodes"></i> Partilhar no Discord / redes</button><button type="button" class="game-context-native" data-context-action="native"><i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir menu padrão do navegador</button>`;
+    document.body.appendChild(menu);
+    const width = menu.offsetWidth;
+    const height = menu.offsetHeight;
+    menu.style.left = `${Math.max(8, Math.min(x, window.innerWidth - width - 8))}px`;
+    menu.style.top = `${Math.max(8, Math.min(y, window.innerHeight - height - 8))}px`;
+    menu.addEventListener('click', event => {
+        const action = event.target.closest('[data-context-action]')?.dataset.contextAction;
+        if (!action) return;
+        closeContextMenu();
+        if (action === 'download') downloadGameCover(image);
+        if (action === 'view') openImageLightbox(image);
+        if (action === 'trailer') openTrailerModal(image);
+        if (action === 'profile') setProfileBackground(image);
+        if (action === 'copy') copyGameLink(image);
+        if (action === 'share') openShareMenu(image);
+        if (action === 'native') {
+            image.dataset.allowNativeContextMenu = 'true';
+            image.dispatchEvent(new MouseEvent('contextmenu', { bubbles: true, clientX: x, clientY: y }));
+        }
+    });
+}
+
+let coverLongPressTimer;
+document.addEventListener('contextmenu', event => {
+    const image = event.target.closest('img.game-cover');
+    if (!image) return;
+    if (image.dataset.allowNativeContextMenu === 'true') {
+        delete image.dataset.allowNativeContextMenu;
+        return;
+    }
+    event.preventDefault();
+    openGameContextMenu(image, event.clientX, event.clientY);
+});
+document.addEventListener('pointerdown', event => {
+    const image = event.target.closest('img.game-cover');
+    if (!image || event.pointerType !== 'touch') return;
+    coverLongPressTimer = setTimeout(() => openGameContextMenu(image, event.clientX, event.clientY), 600);
+});
+document.addEventListener('pointerup', () => clearTimeout(coverLongPressTimer));
+document.addEventListener('pointercancel', () => clearTimeout(coverLongPressTimer));
+document.addEventListener('click', event => {
+    if (!event.target.closest('#gameContextMenu')) closeContextMenu();
+});
+window.addEventListener('scroll', closeContextMenu, { passive: true });
+applyProfileBackground(localStorage.getItem('wikigames-profile-background'));
+const articleObserver = new MutationObserver(() => enhanceGameCovers(document.getElementById('article-container') || document));
+articleObserver.observe(document.getElementById('article-container') || document.body, { childList: true, subtree: true });
+enhanceGameCovers();
 
 document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
