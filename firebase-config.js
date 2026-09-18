@@ -13,6 +13,7 @@ import {
     getFirestore,
     doc,
     getDoc,
+    getDocs,
     getDocFromServer,
     setDoc,
     collection,
@@ -22,7 +23,7 @@ import {
     where,
     serverTimestamp
 } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js';
-import { getDatabase, ref, push, onValue, serverTimestamp as realtimeTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js';
+import { getDatabase, ref, get, set, push, onValue, serverTimestamp as realtimeTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js';
 
 const firebaseConfig = {
     apiKey: 'AIzaSyA1XjZlbThiUK0huaLpU-j2tuYtx2VQcSA',
@@ -55,6 +56,7 @@ try {
         updateProfile,
         doc,
         getDoc,
+        getDocs,
         getDocFromServer,
         setDoc,
         collection,
@@ -64,6 +66,8 @@ try {
         where,
         serverTimestamp,
         ref,
+        get,
+        set,
         push,
         onValue,
         realtimeTimestamp

@@ -44,19 +44,20 @@ async function getFirestoreDocumentFast(services, documentReference, timeout = 8
 
 async function ensureUserProfile(user) {
     const services = window.firebaseServices;
-    if (!services || !user) return;
-    const profileReference = services.doc(services.db, 'users', user.uid);
+    if (!services?.rtdb || !user) return;
+    const profileReference = services.ref(services.rtdb, `users/${user.uid}`);
     try {
-        const username = user.displayName || 'Novo Usuário';
-        await services.setDoc(profileReference, {
+        const existingSnapshot = await services.get(profileReference);
+        const existingProfile = existingSnapshot.val() || {};
+        const username = user.displayName || existingProfile.username || 'Usuário';
+        await services.set(profileReference, {
+            ...existingProfile,
             username,
-            name: username,
-            email: user.email || '',
-            photoURL: user.photoURL || '',
-            createdAt: new Date()
-        }, { merge: true }).then(() => {
-            console.log('Perfil salvo com sucesso no Firestore');
+            name: existingProfile.name || username,
+            email: user.email || existingProfile.email || '',
+            photoURL: user.photoURL || existingProfile.photoURL || ''
         });
+        console.log('Perfil salvo com sucesso no Realtime Database');
     } catch (error) {
         logFirebaseError(`Falha ao criar/verificar perfil ${user.uid}`, error);
     }
@@ -89,7 +90,9 @@ async function toggleFavorite(route) {
     if (!user) return;
     const favorites = getFavorites();
     const nextFavorites = favorites.includes(route) ? favorites.filter(item => item !== route) : [...favorites, route];
-    await services.setDoc(services.doc(services.db, 'users', user.uid), { favorites: nextFavorites }, { merge: true });
+    const profileReference = services.ref(services.rtdb, `users/${user.uid}`);
+    const profileSnapshot = await services.get(profileReference);
+    await services.set(profileReference, { ...(profileSnapshot.val() || {}), favorites: nextFavorites });
     favoriteRoutes = nextFavorites;
     document.querySelectorAll(`[data-favorite-route="${route}"]`).forEach(button => {
         const active = nextFavorites.includes(route);
@@ -110,8 +113,8 @@ async function loadFavorites(user) {
         favoritesLoadedFor = null;
         return;
     }
-    const snapshot = await services.getDoc(services.doc(services.db, 'users', user.uid));
-    favoriteRoutes = Array.isArray(snapshot.data()?.favorites) ? snapshot.data().favorites : [];
+    const snapshot = await services.get(services.ref(services.rtdb, `users/${user.uid}`));
+    favoriteRoutes = Array.isArray(snapshot.val()?.favorites) ? snapshot.val().favorites : [];
     favoritesLoadedFor = user.uid;
 }
 
@@ -148,17 +151,18 @@ async function renderProfilePage() {
     const container = document.getElementById('article-container');
     const services = window.firebaseServices;
     const user = services?.auth.currentUser;
+    const targetUid = new URLSearchParams(window.location.search).get('uid') || user?.uid;
     if (!user) {
         container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><p>Carregando sua sessão...</p>';
         return;
     }
-    container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${escapeHtml(user.displayName || user.email?.split('@')[0] || '')}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${escapeHtml(user.photoURL || '')}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Carregando dados do perfil..."></textarea></label><label>Redes sociais<input name="socials" maxlength="300" placeholder="Carregando dados do perfil..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form>`;
+    container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${escapeHtml(user.displayName || user.email?.split('@')[0] || '')}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${escapeHtml(user.photoURL || '')}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Carregando dados do perfil..."></textarea></label><label>Redes sociais<input name="socials" maxlength="300" placeholder="Carregando dados do perfil..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form><section class="profile-ratings"><h2>Jogos Avaliados</h2><div id="profileRatings"><p>Carregando avaliações...</p></div></section><section class="profile-lists"><h2>Listas Criadas</h2><div id="profileLists"><p>Carregando listas...</p></div></section>`;
     const profileForm = document.getElementById('profileForm');
     if (!profileForm) return;
     const profileFields = profileForm.elements;
-    getFirestoreDocumentFast(services, services.doc(services.db, 'users', user.uid)).then(snapshot => {
-        if (!snapshot.exists()) return;
-        const profile = snapshot.data();
+    services.get(services.ref(services.rtdb, `users/${user.uid}`)).then(snapshot => {
+        const profile = snapshot.val();
+        if (!profile) return;
         profileFields.name.value = profile.name || profile.username || profileFields.name.value;
         profileFields.photoURL.value = profile.photoURL || user.photoURL || '';
         profileFields.bio.value = profile.bio || '';
@@ -166,19 +170,75 @@ async function renderProfilePage() {
         profileFields.bio.placeholder = 'Conte um pouco sobre você';
         profileFields.socials.placeholder = 'https://...';
     }).catch(error => logFirebaseError('Falha ao carregar dados complementares do perfil', error));
+    const ratedGames = await getRatedGamesMarkup(services, targetUid);
+    const ratingsSection = document.getElementById('profileRatings');
+    if (ratingsSection) ratingsSection.innerHTML = ratedGames;
+    const createdLists = await getCreatedListsMarkup(services, targetUid);
+    const listsSection = document.getElementById('profileLists');
+    if (listsSection) listsSection.innerHTML = createdLists;
     profileForm.addEventListener('submit', async event => {
         event.preventDefault();
         const form = event.currentTarget;
         const message = document.getElementById('profileMessage');
         try {
             await services.updateProfile(user, { displayName: form.name.value.trim(), photoURL: form.photoURL.value.trim() || null });
-            await services.setDoc(services.doc(services.db, 'users', user.uid), { name: form.name.value.trim(), photoURL: form.photoURL.value.trim(), bio: form.bio.value.trim(), socials: form.socials.value.trim(), updatedAt: services.serverTimestamp() }, { merge: true });
+            const profileReference = services.ref(services.rtdb, `users/${user.uid}`);
+            const profileSnapshot = await services.get(profileReference);
+            await services.set(profileReference, { ...(profileSnapshot.val() || {}), name: form.name.value.trim(), username: form.name.value.trim(), email: user.email || '', photoURL: form.photoURL.value.trim(), bio: form.bio.value.trim(), socials: form.socials.value.trim() });
             message.textContent = 'Perfil salvo.';
         } catch (error) {
             logFirebaseError('Falha ao salvar o perfil', error);
             message.textContent = 'Não foi possível salvar o perfil.';
         }
     });
+}
+
+async function getRatedGamesMarkup(services, targetUid) {
+    if (!services?.get || !targetUid) {
+        return '<p>Não foi possível carregar os jogos avaliados.</p>';
+    }
+
+    try {
+        const snapshot = await services.get(services.ref(services.rtdb, 'avaliar'));
+        const ratingsByGame = snapshot.val() || {};
+        const ratings = Object.entries(ratingsByGame)
+            .map(([gameId, ratingsByUser]) => ({ gameId, ...(ratingsByUser?.[targetUid] || {}) }))
+            .filter(rating => rating.userId === targetUid)
+            .filter(rating => Number(rating.rating) >= 1 && Number(rating.rating) <= 5)
+            .sort((first, second) => String(first.gameId).localeCompare(String(second.gameId)));
+
+        if (!ratings.length) return '<p>Este usuário ainda não avaliou nenhum jogo.</p>';
+
+        return `<div class="profile-ratings-list">${ratings.map(rating => {
+            const gameId = String(rating.gameId || '');
+            const game = articlesDatabase[gameId];
+            const gameName = game?.title || gameId || 'Jogo desconhecido';
+            const value = Number(rating.rating);
+            const stars = Array.from({ length: 5 }, (_, index) => `<i class="fa-${index < value ? 'solid' : 'regular'} fa-star"></i>`).join('');
+            return `<div class="profile-rating-item"><a href="/?route=${encodeURIComponent(gameId)}">${escapeHtml(gameName)}</a><span class="profile-rating-stars" aria-label="Nota ${value} de 5">${stars}</span><strong>${value}/5</strong></div>`;
+        }).join('')}</div>`;
+    } catch (error) {
+        logFirebaseError(`Falha ao carregar avaliações do perfil ${targetUid}`, error);
+        return '<p>Não foi possível carregar os jogos avaliados.</p>';
+    }
+}
+
+async function getCreatedListsMarkup(services, targetUid) {
+    if (!services?.get || !targetUid) return '<p>Não foi possível carregar as listas.</p>';
+
+    try {
+        const snapshot = await services.get(services.ref(services.rtdb, 'lists'));
+        const lists = Object.entries(snapshot.val() || {})
+            .map(([id, list]) => ({ id, ...list }))
+            .filter(list => list.authorId === targetUid)
+            .sort((first, second) => Number(second.createdAt || 0) - Number(first.createdAt || 0));
+
+        if (!lists.length) return '<p>Este usuário ainda não criou nenhuma lista.</p>';
+        return lists.map(list => renderPublicListCard(list)).join('');
+    } catch (error) {
+        logFirebaseError(`Falha ao carregar listas do perfil ${targetUid}`, error);
+        return '<p>Não foi possível carregar as listas.</p>';
+    }
 }
 
 async function renderPublicProfilePage(userId) {
@@ -198,16 +258,18 @@ async function renderPublicProfilePage(userId) {
     }
     container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Carregando perfil...</p>';
     try {
-        const snapshot = await getFirestoreDocumentFast(services, services.doc(services.db, 'users', userId));
+        const snapshot = await services.get(services.ref(services.rtdb, `users/${userId}`));
         if (!snapshot.exists()) {
             container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Perfil</h1><p>Este perfil ainda não foi preenchido.</p>';
             return;
         }
-        const profile = snapshot.data();
+        const profile = snapshot.val();
         const name = profile.name || 'Usuário WikiGames';
         const avatar = profile.photoURL ? `<img class="public-profile-avatar" src="${escapeHtml(profile.photoURL)}" alt="Avatar de ${escapeHtml(name)}">` : '<div class="public-profile-avatar public-profile-avatar-placeholder"><i class="fa-solid fa-user"></i></div>';
         const socials = profile.socials ? `<p><i class="fa-solid fa-link"></i> <a href="${escapeHtml(profile.socials)}" target="_blank" rel="noopener noreferrer">Rede social</a></p>` : '';
-        container.innerHTML = `<section class="public-profile"><div class="public-profile-heading">${avatar}<div><h1>${escapeHtml(name)}</h1><p>Perfil da comunidade WikiGames</p></div></div><div class="public-profile-bio"><h2>Sobre</h2><p>${escapeHtml(profile.bio || 'Este usuário ainda não adicionou uma biografia.')}</p>${socials}</div></section>`;
+        const ratedGames = await getRatedGamesMarkup(services, userId);
+        const createdLists = await getCreatedListsMarkup(services, userId);
+        container.innerHTML = `<section class="public-profile"><div class="public-profile-heading">${avatar}<div><h1>${escapeHtml(name)}</h1><p>Perfil da comunidade WikiGames</p></div></div><div class="public-profile-bio"><h2>Sobre</h2><p>${escapeHtml(profile.bio || 'Este usuário ainda não adicionou uma biografia.')}</p>${socials}<h2>Jogos Avaliados</h2><div id="profileRatings">${ratedGames}</div><h2>Listas Criadas</h2><div id="profileLists">${createdLists}</div></div></section>`;
         document.title = `${name} - WikiGames`;
     } catch (error) {
         logFirebaseError(`Falha ao carregar perfil ${userId}`, error);
@@ -229,7 +291,7 @@ function renderListsPage() {
     const container = document.getElementById('article-container');
     document.title = 'Listas públicas - WikiGames';
     const games = Object.entries(articlesDatabase).filter(([route]) => route !== 'home' && route !== 'sobre');
-    container.innerHTML = `<h1><i class="fa-solid fa-list"></i> Listas públicas</h1><p class="list-intro">Crie coleções de jogos e compartilhe o link com a comunidade.</p><form id="publicListForm" class="public-list-form"><input name="title" placeholder="Nome da sua lista" maxlength="80" required><div class="list-game-picker">${games.map(([route, game]) => `<label><input type="checkbox" name="games" value="${route}"> ${game.title}</label>`).join('')}</div><button class="share-page-btn" type="submit"><i class="fa-solid fa-plus"></i> Criar lista</button><span id="listMessage"></span></form><div id="publicLists" class="public-lists"><p>Carregando listas...</p></div>`;
+    container.innerHTML = `<h1><i class="fa-solid fa-list"></i> Listas públicas</h1><p class="list-intro">Crie coleções de jogos e compartilhe o link com a comunidade.</p><form id="publicListForm" class="public-list-form"><input name="title" placeholder="Nome da sua lista" maxlength="80" required><textarea name="description" placeholder="Descrição da lista" maxlength="300"></textarea><div class="list-game-picker">${games.map(([route, game]) => `<label><input type="checkbox" name="games" value="${route}"> ${game.title}</label>`).join('')}</div><button class="share-page-btn" type="submit"><i class="fa-solid fa-plus"></i> Criar lista</button><span id="listMessage"></span></form><div id="publicLists" class="public-lists"><p>Carregando listas...</p></div>`;
     const services = window.firebaseServices;
     const selectedListId = new URLSearchParams(window.location.search).get('list');
     const listMessage = document.getElementById('listMessage');
@@ -243,19 +305,24 @@ function renderListsPage() {
         const selectedGames = [...form.querySelectorAll('input[name="games"]:checked')].map(input => input.value);
         if (!selectedGames.length) { listMessage.textContent = 'Escolha pelo menos um jogo.'; return; }
         try {
-            await services.addDoc(services.collection(services.db, 'lists'), { title: form.title.value.trim(), gameRoutes: selectedGames, authorId: services.auth.currentUser.uid, ownerName: services.auth.currentUser.displayName || services.auth.currentUser.email, createdAt: services.serverTimestamp() });
+            const user = services.auth.currentUser;
+            await services.push(services.ref(services.rtdb, 'lists'), { title: form.title.value.trim(), description: form.description.value.trim(), games: selectedGames, authorId: user.uid, authorName: user.displayName || 'Usuário', createdAt: Date.now() });
             form.reset(); listMessage.textContent = 'Lista publicada.';
         } catch (error) {
             logFirebaseError('Falha ao publicar a lista', error);
             listMessage.textContent = 'Não foi possível publicar a lista.';
         }
     });
-    if (!services) { publicLists.innerHTML = '<p>O Firebase ainda não está disponível.</p>'; return; }
+    if (!services?.rtdb) {
+        publicLists.innerHTML = '<p>Conectando ao Firebase...</p>';
+        window.addEventListener('firebase-ready', () => renderListsPage(), { once: true });
+        return;
+    }
     try {
-        services.onSnapshot(services.collection(services.db, 'lists'), snapshot => {
-            const allLists = snapshot.docs.map(item => ({ id: item.id, ...item.data() }));
+        services.onValue(services.ref(services.rtdb, 'lists'), snapshot => {
+            const allLists = Object.entries(snapshot.val() || {}).map(([id, list]) => ({ id, ...list }));
             const lists = selectedListId ? allLists.filter(list => list.id === selectedListId) : allLists;
-            publicLists.innerHTML = lists.length ? lists.map(list => `<article class="public-list-card"><h2>${escapeHtml(list.title)}</h2><p>Por ${escapeHtml(list.ownerName || 'WikiGames')}</p><div>${(list.gameRoutes || []).map(route => articlesDatabase[route] ? `<a href="/${route}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${window.location.origin}/?route=listas&list=${list.id}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`).join('') : '<p>Nenhuma lista publicada ainda.</p>';
+            publicLists.innerHTML = lists.length ? lists.map(renderPublicListCard).join('') : '<p>Nenhuma lista publicada ainda.</p>';
         }, error => {
             logFirebaseError('Falha ao carregar listas', error);
             publicLists.innerHTML = '<p>Não foi possível carregar as listas agora.</p>';
@@ -274,6 +341,13 @@ function renderListsPage() {
             logFirebaseError('Falha ao copiar link da lista', error);
         }
     });
+}
+
+function renderPublicListCard(list) {
+    const games = Array.isArray(list.games) ? list.games : (list.gameRoutes || []);
+    const authorId = escapeHtml(list.authorId || '');
+    const authorName = escapeHtml(list.authorName || list.ownerName || 'Usuário');
+    return `<article class="public-list-card"><h2>${escapeHtml(list.title || 'Lista sem título')}</h2><p>${games.length} jogo${games.length === 1 ? '' : 's'} · Por <a href="/?route=perfil&uid=${encodeURIComponent(list.authorId || '')}">${authorName}</a></p>${list.description ? `<p>${escapeHtml(list.description)}</p>` : ''}<div>${games.map(route => articlesDatabase[route] ? `<a href="/${route}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${window.location.origin}/?route=listas&list=${encodeURIComponent(list.id)}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`;
 }
 
 function setupChat(route, container) {
@@ -807,39 +881,22 @@ function setupRating(route, panel) {
         star.querySelector('i').className = `fa-${isSelected ? 'solid' : 'regular'} fa-star`;
     });
 
-    if (!services || !services.db) {
+    if (!services?.rtdb) {
         average.textContent = 'Disponível após conectar ao Firebase';
         window.addEventListener('firebase-ready', () => setupRating(route, panel), { once: true });
         return;
     }
 
-    const ratingRef = services.query(
-        services.collection(services.db, 'ratings'),
-        services.where('gameId', '==', route)
-    );
-    let latestSnapshot = null;
-
-    const drawUserRating = (documents, user) => {
-        let hasUserRating = false;
-        documents.forEach(doc => {
-            const data = doc.data();
-            if (data.userId === user?.uid) {
-                drawStars(Number(data.rating) || 0);
-                hasUserRating = true;
-            }
-        });
-        if (!hasUserRating) drawStars(0);
-    };
+    const ratingRef = services.ref(services.rtdb, `avaliar/${route}`);
 
     // Escuta atualizações no Firestore em tempo real
     try {
-        services.onSnapshot(ratingRef, snapshot => {
-            latestSnapshot = snapshot;
+        services.onValue(ratingRef, snapshot => {
+            const ratings = snapshot.val() || {};
             const user = services.auth?.currentUser;
             const values = [];
 
-            snapshot.docs.forEach(doc => {
-                const data = doc.data();
+            Object.values(ratings).forEach(data => {
                 const val = Number(data.rating) || 0;
                 if (val >= 1 && val <= 5) {
                     values.push(val);
@@ -865,7 +922,10 @@ function setupRating(route, panel) {
 
     if (services.onAuthStateChanged) {
         services.onAuthStateChanged(services.auth, user => {
-            if (latestSnapshot) drawUserRating(latestSnapshot.docs, user);
+            services.get(ratingRef).then(snapshot => {
+                const currentRating = snapshot.val()?.[user?.uid];
+                drawStars(Number(currentRating?.rating) || 0);
+            }).catch(error => logFirebaseError(`Falha ao carregar nota do usuário em ${route}`, error));
         });
     }
 
@@ -878,19 +938,18 @@ function setupRating(route, panel) {
         }
 
         const ratingId = `${route}__${user.uid}`;
-        const ratingDocument = services.doc(services.db, 'ratings', ratingId);
+        const ratingReference = services.ref(services.rtdb, `avaliar/${route}/${user.uid}`);
         const ratingData = {
-            gameId: route,
-            rating: Number(value),
             userId: user.uid,
-            updatedAt: services.serverTimestamp()
+            rating: Number(value),
+            updatedAt: Date.now()
         };
 
         try {
-            await services.setDoc(ratingDocument, ratingData, { merge: true });
+            await services.set(ratingReference, ratingData);
             console.log('[Firebase] Avaliação salva com sucesso:', ratingId);
         } catch (error) {
-            console.error('[Firestore Rating Error]', error);
+            console.error('[Realtime Database Rating Error]', error);
             logFirebaseError(`Falha ao salvar avaliação de ${route}`, error);
             average.textContent = 'Erro ao salvar nota no servidor';
             throw error;
