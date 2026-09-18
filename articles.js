@@ -1394,7 +1394,7 @@ const articlesDatabase = {
                 "Distribuidora": "OTAKU Plan, NEWS",
                 "Gêneros": "RPG, Aventura, Indie, Fantasia Sombria",
                 "Lançamento (Steam)": "15 de Agosto de 2025",
-                "Plataformas": "PC (Windows)"
+                "Plataformas": "PC (Windows) e Android"
             }
         },
         toc: [
@@ -1427,12 +1427,13 @@ const articlesDatabase = {
                 <a href="https://store.steampowered.com/app/3755860/BLACK_SOULS/" target="_blank"><i class="fa-brands fa-steam"></i> Steam Store</a>
             </div>
 
-            <h2 id="download">Download para PC</h2>
+            <h2 id="download">Download para PC e Android</h2>
             <p><strong>BLACK SOULS.rar</strong> (561,42 MB)</p>
             <p>Este download é totalmente gratuito. Se você gosta do jogo, apoie os desenvolvedores adquirindo a versão oficial na <a href="https://store.steampowered.com/app/3755860/BLACK_SOULS/" target="_blank">Steam</a>.</p>
             <div class="play-links">
                 <a href="https://4br.me/Pa8lPv19" target="_blank"><i class="fa-solid fa-download"></i> Download para PC (Servidor 1)</a>
                 <a href="https://4br.me/CS4sdDbhG" target="_blank"><i class="fa-solid fa-download"></i> Download para PC (Servidor 2)</a>
+                <a href="https://4br.me/Black-Souls-APK" target="_blank"><i class="fa-solid fa-download"></i> Download para Android</a>
             </div>
 
             <h2 id="requisitos">Requisitos do Sistema</h2>
