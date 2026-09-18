@@ -800,73 +800,100 @@ function setupRating(route, panel) {
     const services = window.firebaseServices;
     const average = panel.querySelector('#ratingAverage');
     const stars = [...panel.querySelectorAll('[data-rating]')];
-    const ratingRef = services ? services.query(services.collection(services.db, 'ratings'), services.where('gameId', '==', route)) : null;
-    const drawStars = value => stars.forEach(star => { star.classList.toggle('selected', Number(star.dataset.rating) <= value); star.querySelector('i').className = `fa-${Number(star.dataset.rating) <= value ? 'solid' : 'regular'} fa-star`; });
-    if (!services || !ratingRef) {
+    
+    const drawStars = value => stars.forEach(star => {
+        const isSelected = Number(star.dataset.rating) <= value;
+        star.classList.toggle('selected', isSelected);
+        star.querySelector('i').className = `fa-${isSelected ? 'solid' : 'regular'} fa-star`;
+    });
+
+    if (!services || !services.db) {
         average.textContent = 'Disponível após conectar ao Firebase';
         window.addEventListener('firebase-ready', () => setupRating(route, panel), { once: true });
         return;
     }
+
+    const ratingRef = services.query(
+        services.collection(services.db, 'ratings'),
+        services.where('gameId', '==', route)
+    );
+
+    // Escuta atualizações no Firestore em tempo real
     try {
         services.onSnapshot(ratingRef, snapshot => {
-            try {
-                const values = snapshot.docs.map(item => Number(item.data().rating ?? item.data().value) || 0).filter(value => value >= 1 && value <= 5);
-                const result = values.length ? (values.reduce((total, value) => total + value, 0) / values.length).toFixed(1) : 'Ainda sem notas';
-                average.textContent = values.length ? `${result}/5 (${values.length})` : result;
-            } catch (error) {
-                logFirebaseError(`Falha ao processar avaliações de ${route}`, error);
-                average.textContent = 'Avaliações indisponíveis';
+            const currentUser = services.auth?.currentUser;
+            const values = [];
+            let currentUserRating = 0;
+
+            snapshot.docs.forEach(doc => {
+                const data = doc.data();
+                const val = Number(data.rating ?? data.value) || 0;
+                if (val >= 1 && val <= 5) {
+                    values.push(val);
+                    // Se o documento pertencer ao usuário logado, recupera a nota dele
+                    if (currentUser && data.userId === currentUser.uid) {
+                        currentUserRating = val;
+                    }
+                }
+            });
+
+            // Pinta as estrelas com a nota prévia do usuário (se existir)
+            if (currentUserRating > 0) {
+                drawStars(currentUserRating);
             }
+
+            // Exibe a média geral do jogo
+            const result = values.length 
+                ? (values.reduce((a, b) => a + b, 0) / values.length).toFixed(1) 
+                : 'Ainda sem notas';
+            average.textContent = values.length ? `${result}/5 (${values.length})` : result;
         }, error => {
             logFirebaseError(`Falha ao carregar avaliações de ${route}`, error);
             average.textContent = 'Avaliações indisponíveis';
         });
     } catch (error) {
-        logFirebaseError(`Falha ao registrar avaliações de ${route}`, error);
+        logFirebaseError(`Falha ao registrar listener de ${route}`, error);
         average.textContent = 'Avaliações indisponíveis';
     }
+
+    // Salva a nota no Firestore
     const saveRating = async value => {
-        const user = services.auth.currentUser;
+        const user = services.auth?.currentUser;
         if (!user) {
             average.textContent = 'Entre para votar';
             throw new Error('Usuário não autenticado');
         }
-        if (!Number.isInteger(value) || value < 1 || value > 5) {
-            throw new Error('Nota inválida');
-        }
+
         const ratingId = `${route}__${user.uid}`;
         const ratingDocument = services.doc(services.db, 'ratings', ratingId);
         const ratingData = {
             gameId: route,
             rating: value,
-            value,
+            value: value,
             userId: user.uid,
             updatedAt: services.serverTimestamp()
         };
+
         try {
-            await services.setDoc(ratingDocument, ratingData, { merge: true }).then(() => {
-                console.log('Avaliação salva com sucesso no Firestore');
-            });
-            const savedRating = await getFirestoreDocumentWithRetry(services, ratingDocument);
-            if (!savedRating.exists() || savedRating.data().userId !== user.uid || Number(savedRating.data().rating ?? savedRating.data().value) !== value) {
-                throw new Error('A avaliação não foi confirmada pelo Firestore');
-            }
-            console.info(`[Firebase] Avaliação salva: ${route}`, { userId: user.uid, value });
+            await services.setDoc(ratingDocument, ratingData, { merge: true });
+            console.log('[Firebase] Avaliação salva com sucesso:', ratingId);
         } catch (error) {
             logFirebaseError(`Falha ao salvar avaliação de ${route}`, error);
-            const errorCode = error?.code ? ` (${error.code})` : '';
-            average.textContent = `Não foi possível salvar sua nota${errorCode}`;
+            average.textContent = 'Erro ao salvar nota no servidor';
             throw error;
         }
     };
+
+    // Eventos de clique nas estrelas
     stars.forEach(star => star.addEventListener('click', async () => {
         const value = Number(star.dataset.rating);
         stars.forEach(button => { button.disabled = true; });
-        average.textContent = 'Salvando sua nota...';
+        average.textContent = 'Salvando nota...';
+
         try {
             await saveRating(value);
             drawStars(value);
-            average.textContent = 'Sua nota foi salva';
+            average.textContent = 'Sua nota foi salva!';
         } catch (error) {
             if (error.message === 'Usuário não autenticado') average.textContent = 'Entre para votar';
         } finally {
