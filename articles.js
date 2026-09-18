@@ -92,26 +92,61 @@ const articlesDatabase = {
         infobox: null,
         toc: [
             { id: "o-projeto", text: "1. O Projeto" },
-            { id: "downloads", text: "2. Política de Downloads e Links" },
-            { id: "aviso-legal", text: "3. Direitos Autorais e Isenção" }
+            { id: "links-externos", text: "2. Links Externos e Downloads" },
+            { id: "direitos-autorais", text: "3. Direitos Autorais" },
+            { id: "apoie-desenvolvedores", text: "4. Apoie os Desenvolvedores" },
+            { id: "compromisso", text: "5. Nosso Compromisso" }
         ],
         content: `
-            <p>A <strong>WikiGames</strong> é um projeto colaborativo sem fins lucrativos, criado por fãs e para fãs, com o objetivo de catalogar, analisar e documentar o vasto universo dos jogos Indie, Visual Novels e obras de Terror Psicológico.</p>
+            <p>A <strong>WikiGames</strong> é uma enciclopédia colaborativa, independente e sem fins lucrativos, criada por fãs e para fãs. Nosso objetivo é <strong>catalogar, organizar e preservar informações sobre jogos independentes, Visual Novels, jogos narrativos e obras de Terror Psicológico</strong>, reunindo em um único espaço informações que muitas vezes se encontram dispersas pela internet.</p>
 
             <h2 id="o-projeto">O Projeto</h2>
-            <p>Muitos jogos indie de nicho ou visual novels japonesas não recebem o devido reconhecimento ou sequer chegam traduzidos ao nosso idioma. Nosso objetivo é criar uma enciclopédia centralizada onde os jogadores possam encontrar histórias, guias de rotas, finais (dead ends) e informações cruciais sobre esses títulos.</p>
+            <p>Existe uma grande quantidade de jogos independentes e Visual Novels, especialmente títulos de nicho e produções japonesas, que possuem pouca documentação em português ou que não recebem a mesma visibilidade que obras de maior alcance.</p>
+            <p>A WikiGames busca preencher essa lacuna oferecendo uma base de conhecimento organizada, acessível e construída colaborativamente pela comunidade.</p>
+            <p>Entre os conteúdos que podem ser encontrados na plataforma estão:</p>
+            <ul>
+                <li>Informações sobre jogos e desenvolvedores;</li>
+                <li>Sinopses e descrições das obras;</li>
+                <li>Personagens e seus respectivos perfis;</li>
+                <li>Guias de rotas e escolhas;</li>
+                <li>Finais, incluindo finais alternativos e <em>dead ends</em>;</li>
+                <li>Detalhes sobre sistemas e mecânicas;</li>
+                <li>Informações sobre versões e plataformas;</li>
+                <li>Traduções e projetos realizados pela comunidade;</li>
+                <li>Links para páginas e recursos oficiais relacionados aos jogos.</li>
+            </ul>
+            <p>Nosso objetivo é facilitar o acesso à informação e ajudar jogadores a conhecer, compreender e descobrir novas obras.</p>
 
-            <h2 id="downloads">Política de Downloads e Links</h2>
-            <p>Em diversos artigos da nossa enciclopédia, os usuários podem encontrar informações e redirecionamentos para baixar <strong>jogos gratuitos, versões traduzidas pela comunidade (fan-translations), patches de censura ou ports adaptados para celular (Android/iOS)</strong>.</p>
+            <h2 id="links-externos">Links Externos e Downloads</h2>
+            <p>Alguns artigos da WikiGames podem conter <strong>links ou redirecionamentos para recursos externos</strong>, incluindo páginas oficiais de jogos, projetos de tradução da comunidade, patches, ports e outros materiais relacionados.</p>
 
-            <div style="background-color: #fff3cd; color: #856404; border-left: 4px solid #ffeeba; padding: 15px; margin: 15px 0;">
-                <strong>Atenção:</strong> Gostaríamos de deixar estritamente claro que <strong>nenhum arquivo, jogo, ROM ou software está hospedado em nossos servidores</strong>. Todos os links de download fornecidos na WikiGames são apenas indexados e redirecionados para <strong>sites de terceiros</strong> (como MediaFire, Mega, Google Drive, fóruns de tradutores ou sites oficiais dos desenvolvedores).
-            </div>
+            <p>A WikiGames <strong>não hospeda arquivos de jogos, ROMs, softwares ou outros conteúdos para download em seus próprios servidores</strong>. Quando um artigo apresenta um link externo, o conteúdo é disponibilizado e mantido pelo respectivo site ou serviço de terceiros.</p>
+            <p>Os links podem direcionar para plataformas e serviços como <strong>Steam, itch.io, GOG, sites oficiais de desenvolvedores, projetos de tradução, fóruns e serviços de armazenamento de arquivos</strong>.</p>
+            <p>Recomendamos que os usuários verifiquem a procedência dos arquivos e utilizem, sempre que possível, fontes oficiais e confiáveis.</p>
 
-            <h2 id="aviso-legal">Direitos Autorais e Isenção (Disclaimer)</h2>
-            <p>Como não hospedamos nenhum arquivo em nosso domínio, a WikiGames <strong>não se responsabiliza</strong> pelo conteúdo contido nestes sites de terceiros, nem por eventuais problemas decorrentes do download ou instalação dos mesmos nos aparelhos dos usuários.</p>
-            <p>Nós respeitamos os direitos autorais. Se você é um desenvolvedor ou detentor de direitos e deseja que um link de redirecionamento para o seu jogo seja removido de nossa wiki, entre em contato conosco através do nosso Discord e removeremos a página ou o link imediatamente.</p>
-            <p>Por fim, incentivamos fortemente que os jogadores <strong>apoiem os desenvolvedores originais</strong>, adquirindo os jogos em plataformas oficiais (como Steam, Itch.io, GOG, PlayStation Store e Nintendo eShop) sempre que o título estiver disponível de forma oficial e acessível.</p>
+            <h2 id="direitos-autorais">Direitos Autorais</h2>
+            <p>A WikiGames respeita os direitos autorais e os direitos dos desenvolvedores, editoras, tradutores e demais detentores de propriedade intelectual.</p>
+            <p>O conteúdo publicado na WikiGames tem como finalidade principal <strong>informar, documentar e organizar conhecimento sobre os jogos e seus respectivos projetos</strong>.</p>
+            <p>Caso você seja um desenvolvedor, editor, tradutor ou detentor dos direitos de determinada obra e identifique um conteúdo ou link que considere inadequado, entre em contato conosco através do nosso <strong>Discord oficial</strong>. A solicitação será analisada e, quando aplicável, o conteúdo ou link poderá ser removido.</p>
+
+            <h2 id="apoie-desenvolvedores">Apoie os Desenvolvedores</h2>
+            <p>Sempre que um jogo estiver disponível oficialmente, recomendamos que os jogadores <strong>prestigiem os desenvolvedores e adquiram suas obras por meios oficiais</strong>.</p>
+            <p>Você pode encontrar jogos em plataformas como:</p>
+            <ul>
+                <li><a href="https://store.steampowered.com/?l=portuguese" target="_blank" rel="noopener noreferrer">Steam</a></li>
+                <li><a href="https://itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a></li>
+                <li><a href="https://www.gog.com/en/" target="_blank" rel="noopener noreferrer">GOG</a></li>
+                <li><a href="https://store.playstation.com/pt-br/pages/latest" target="_blank" rel="noopener noreferrer">PlayStation Store</a></li>
+                <li><a href="https://www.nintendo.com/pt-br/store/games/" target="_blank" rel="noopener noreferrer">Nintendo eShop</a></li>
+                <li><a href="https://apps.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Store</a></li>
+                <li><a href="https://www.xbox.com/pt-BR/microsoft-store" target="_blank" rel="noopener noreferrer">Xbox</a></li>
+                <li>Sites oficiais dos desenvolvedores</li>
+            </ul>
+            <p>Acreditamos que preservar informações sobre jogos e apoiar seus criadores podem caminhar juntos. A WikiGames existe para ajudar a comunidade a <strong>descobrir, conhecer e documentar essas obras</strong>, valorizando também as pessoas responsáveis por criá-las.</p>
+
+            <h2 id="compromisso">Nosso Compromisso</h2>
+            <p>A WikiGames é construída de forma colaborativa e está em constante desenvolvimento. Buscamos manter as informações organizadas, úteis e atualizadas, contribuindo para a preservação e divulgação de jogos que muitas vezes acabam esquecidos ou pouco documentados.</p>
+            <p><strong>WikiGames — Conheça. Explore. Documente. Preserve.</strong></p>
         `
     },
     "alice-in-the-nightmare-land": {
