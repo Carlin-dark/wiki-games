@@ -1450,6 +1450,8 @@ const articlesDatabase = {
             <div class="image-gallery">
                 <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-gog-639x361.jpg" alt="Cena de BLACK SOULS" loading="lazy">
                 <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-crack-639x361.jpg" alt="Outra cena de BLACK SOULS" loading="lazy">
+                <img src="https://pdalife.com/app/6868f862c9d19/screen-4.jpg" alt="Cena de BLACK SOULS para Android" loading="lazy">
+                <img src="https://pdalife.com/app/6868f862c9d19/screen-5.jpg" alt="Cena de BLACK SOULS para Android" loading="lazy">
             </div>
         `
     },
