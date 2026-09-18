@@ -4,6 +4,9 @@ RewriteBase /
 AddType application/xml .xml
 AddDefaultCharset UTF-8
 
+# O sitemap deve ser servido como ficheiro XML, nunca pelo fallback da SPA.
+RewriteRule ^sitemap\.xml$ sitemap.xml [END]
+
 # Caso o arquivo real exista, serve ele normalmente
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
