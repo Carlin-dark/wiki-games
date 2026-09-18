@@ -2650,7 +2650,7 @@ const articlesDatabase = {
         categories: ["Visual Novel", "Terror Psicológico", "Yuri", "Indie", "Romance Dark"],
         summary: "Uma visual novel de terror psicológico e yuri sobre Yuuna, uma garota hikikomori que baixa um assistente virtual de sua personagem de anime favorita, desencadeando um relacionamento obsessivo e perturbador.",
         infobox: {
-            image: "https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDExOC5wbmc=/original/dZsIsl.png",
+            image: "https://i.8upload.com/image/3d3ffa60e8999f06/dzsisl.png",
             data: {
                 "Desenvolvedor": "♡ Ofélia ♡ (LilyByte Studios)",
                 "Gêneros": "Visual Novel, Terror Psicológico, Yuri, Indie",
@@ -2709,7 +2709,7 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDExOC5wbmc=/original/dZsIsl.png" alt="Love Angel Syndrome Cover" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://i.8upload.com/image/3d3ffa60e8999f06/dzsisl.png" alt="Love Angel Syndrome Cover" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
                 <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE2MC5wbmc=/original/gqLHzf.png" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
                 <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE3My5wbmc=/original/miUJwP.png" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
                 <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE4OC5wbmc=/original/ZX9cHo.png" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
