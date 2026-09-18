@@ -995,7 +995,22 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 
     .infobox { float: none; width: 100%; margin: 0 0 15px 0; }
     .image-gallery { grid-template-columns: 1fr; }
-    .home-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .home-section .home-grid {
+        display: flex;
+        flex-direction: row;
+        direction: rtl;
+        gap: 10px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        padding: 2px 2px 10px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+    }
+    .home-section .home-game-item {
+        flex: 0 0 min(72vw, 220px);
+        direction: ltr;
+        scroll-snap-align: start;
+    }
     .home-card img { height: 80px; }
     .play-links { flex-direction: column; }
     .play-links a { text-align: center; justify-content: center; padding: 10px; }

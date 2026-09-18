@@ -1156,11 +1156,9 @@ function renderPage() {
         }
 
         const isGamePage = route !== 'home' && route !== 'sobre' && route !== 'all' && !route.startsWith('categoria/');
-        let htmlContent = `<div class="article-title-row"><h1>${article.title}</h1>${isGamePage ? favoriteButton(route) : ''}</div>`;
-
-        if (route === 'home') {
-            htmlContent += `${article.content.split('<div class="home-section">')[0]}${renderHomeSections()}<hr><p style="text-align: center; color: #7a8b9e;">Use o menu lateral para explorar categorias ou pesquise o seu próximo jogo favorito na barra superior.</p>`;
-        }
+        let htmlContent = route === 'home'
+            ? renderHomeSections()
+            : `<div class="article-title-row"><h1>${article.title}</h1>${isGamePage ? favoriteButton(route) : ''}</div>`;
 
         if (route !== 'home' && article.infobox) {
             htmlContent += `<div class="infobox">
@@ -1210,13 +1208,15 @@ function renderPage() {
             htmlContent += catLinks.join(' | ') + `</p>`;
         }
 
-        htmlContent += `
-            <div class="article-actions">
-                <button id="sharePageBtn" class="share-page-btn" type="button">
-                    <i class="fa-solid fa-share-nodes"></i> Compartilhar página
-                </button>
-            </div>
-        `;
+        if (route !== 'home') {
+            htmlContent += `
+                <div class="article-actions">
+                    <button id="sharePageBtn" class="share-page-btn" type="button">
+                        <i class="fa-solid fa-share-nodes"></i> Compartilhar página
+                    </button>
+                </div>
+            `;
+        }
 
         container.innerHTML = htmlContent;
         markArticleGalleryImages(container);
