@@ -1433,7 +1433,9 @@ const articlesDatabase = {
             <div class="play-links">
                 <a href="https://4br.me/Pa8lPv19" target="_blank"><i class="fa-solid fa-download"></i> Download para PC (Servidor 1)</a>
                 <a href="https://4br.me/CS4sdDbhG" target="_blank"><i class="fa-solid fa-download"></i> Download para PC (Servidor 2)</a>
-                <a href="https://4br.me/Black-Souls-APK" target="_blank"><i class="fa-solid fa-download"></i> Download para Android</a>
+                <a href="https://4br.me/Black-Souls-APK" target="_blank"><i class="fa-solid fa-download"></i> Download para Android (Servidor 1)</a>
+                <a href="https://4br.me/Black-Souls-APK2" target="_blank"><i class="fa-solid fa-download"></i> Download para Android (Servidor 2)</a>
+                <a href="https://4br.me/Black-Souls-APK3" target="_blank"><i class="fa-solid fa-download"></i> Download para Android (Servidor 3)</a>
             </div>
 
             <h2 id="requisitos">Requisitos do Sistema</h2>
