@@ -317,7 +317,8 @@ function renderHomeGameCard(route, game, extra = '') {
 }
 
 function renderHomeSection(title, icon, items, emptyMessage, sectionClass = '') {
-    return `<section class="home-section${sectionClass ? ` ${sectionClass}` : ''}"><h3><i class="fa-solid ${icon}"></i> ${title}</h3><div class="home-grid">${items.length ? items.join('') : `<p class="home-empty">${emptyMessage}</p>`}</div></section>`;
+    const iconClass = icon.includes(' ') ? icon : `fa-solid ${icon}`;
+    return `<section class="home-section${sectionClass ? ` ${sectionClass}` : ''}"><h3><i class="${iconClass}"></i> ${title}</h3><div class="home-grid">${items.length ? items.join('') : `<p class="home-empty">${emptyMessage}</p>`}</div></section>`;
 }
 
 function renderRecentHomeSection() {
@@ -342,7 +343,7 @@ function getGameTimestamp(game) {
 function renderHomeSections() {
     const games = getHomeGames();
     const androidGames = games.filter(({ game }) => /android/i.test(game.infobox.data?.Plataformas || ''));
-    const androidSection = renderHomeSection('Para Android', 'fa-android', androidGames.map(({ route, game }) => renderHomeGameCard(route, game)), 'Nenhum jogo com versão para Android foi catalogado ainda.');
+    const androidSection = renderHomeSection('Para Android', 'fa-brands fa-android', androidGames.map(({ route, game }) => renderHomeGameCard(route, game)), 'Nenhum jogo com versão para Android foi catalogado ainda.');
     const popularSection = renderHomeSection('Mais Curtido', 'fa-heart', [], 'Carregando as notas da comunidade...', 'home-popular-section');
     return `${androidSection}${popularSection}${renderRecentHomeSection()}`;
 }
