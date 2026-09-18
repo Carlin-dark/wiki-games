@@ -2643,6 +2643,96 @@ const articlesDatabase = {
             </div>
         `
     },
+    "love-angel-syndrome": {
+        title: "Love Angel Syndrome",
+        addedAt: "2026-09-18",
+        youtubeId: "RBZ6mzYB62k",
+        categories: ["Visual Novel", "Terror Psicológico", "Yuri", "Indie", "Romance Dark"],
+        summary: "Uma visual novel de terror psicológico e yuri sobre Yuuna, uma garota hikikomori que baixa um assistente virtual de sua personagem de anime favorita, desencadeando um relacionamento obsessivo e perturbador.",
+        infobox: {
+            image: "https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDExOC5wbmc=/original/dZsIsl.png",
+            data: {
+                "Desenvolvedor": "♡ Ofélia ♡ (LilyByte Studios)",
+                "Gêneros": "Visual Novel, Terror Psicológico, Yuri, Indie",
+                "Lançamento": "2024 (Yuri Game Jam)",
+                "Plataformas": "Windows, macOS, Android, Web Browser"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "aviso", text: "2. Avisos de Conteúdo e Demonstração" },
+            { id: "personagens", text: "3. Personagens Principais" },
+            { id: "recursos", text: "4. Características do Jogo" },
+            { id: "creditos", text: "5. Créditos e Desenvolvimento" },
+            { id: "galeria", text: "6. Galeria de Imagens" },
+            { id: "links", text: "7. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Love Angel Syndrome</strong> é uma <em>visual novel</em> curta de terror psicológico e yuri desenvolvida pela <strong>LilyByte Studios</strong> para a <em>Yuri Game Jam 2024</em>. O jogo aborda temas profundos de saúde mental, isolamento social e dependência emocional através do relacionamento de uma garota com uma IA inspirada em seu anime favorito.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Yuuna, nossa protagonista e doente mental NEET/hikikomori, passa a maior parte dos seus dias navegando em fóruns sobre seu anime favorito, <em>Ai no Uta ★ Tenshi Senshi 𝄞</em>. Um dia, ela se depara com um anúncio alegando ter um assistente de desktop inspirado em Ai, a personagem principal da obra.</p>
+            <p>Incapaz de resistir ao fascínio de conversar com sua personagem favorita, Yuuna baixa o programa. Ai-chan acaba sendo a namorada com quem Yuuna sempre sonhou — mas será que um relacionamento sem limites pode realmente florescer? Um programa de IA pode realmente sentir amor humano real?</p>
+
+            <h2 id="aviso">Avisos de Conteúdo e Demonstração</h2>
+            <p><strong>📢 NOTA IMPORTANTE:</strong> ESTE JOGO É APENAS UMA DEMONSTRAÇÃO! O jogo completo está em andamento e será lançado em atualizações futuras. PRÓXIMA ATUALIZAÇÃO: ?? / ?? / 2027
+</p>
+            <p><strong>⚠️ AVISOS DE CONTEÚDO:</strong> Este jogo contém representações de sangue, automutilação, imagens de suicídio, conversas pesadas sobre saúde mental, depressão e questões familiares. Elementos do jogo podem induzir paranoia e potencialmente desencadear convulsões em pessoas com epilepsia fotossensível. Recomenda-se extrema discrição ao jogar.</p>
+
+            <h2 id="personagens">Personagens Principais</h2>
+            <ul>
+                <li><strong>Yuuna (୨ৎ ̇⋆.̊ ᡣ𐭩):</strong> Uma garota solitária, sensível e viciada em internet, com tendências depressivas e um medo intenso em relação a pessoas e a sair de casa. Um dos seus maiores desejos é poder ir a um café e desfrutar de um parfait adorável sem sentir medo das pessoas ao seu redor.</li>
+                <li><strong>Ai (͡ ৯ Ai ୭ ̊.⁺ ̊ɞ):</strong> Uma garota mágica alegre e doce, protagonista do desenho animado <em>Ai no Uta ★ Tenshi Senshi 𝄞</em>. Uma personagem reconfortante, mas perturbadora, que tentará cuidar de Yuuna desde o primeiro instante em que é baixada em seu computador.</li>
+            </ul>
+
+            <h2 id="recursos">Características do Jogo</h2>
+            <ul>
+                <li>Mais de 28 mil palavras de texto (duração estimada entre 2,5 e 3,5 horas de jogo).</li>
+                <li>Uma história de "amor" sombria com 4 finais diferentes + 1 final secreto.</li>
+                <li>Resolução HD em 1920x1080.</li>
+                <li>Obras de arte originais adoráveis e trilha sonora original completa (OST).</li>
+                <li>Protagonista hikikomori com narrativa imersiva.</li>
+                <li>Uma garota IA amorosa que <em>não</em> vai consertar você.</li>
+            </ul>
+
+            <h2 id="creditos">Créditos e Desenvolvimento</h2>
+            <p>Criado para a <strong>Yuri Game Jam 2024</strong> pela equipe da <strong>LilyByte Studios</strong>:</p>
+            <ul>
+                <li><strong>Direção do Jogo:</strong> <a href="https://ladyoph3lia.itch.io/" target="_blank">@oph3liaa__</a></li>
+                <li><strong>Escritor:</strong> <a href="https://x.com/UsagichanP" target="_blank">@Usagichan</a></li>
+                <li><strong>PArtist:</strong> <a href="https://fluffyblessing.itch.io/" target="_blank">@fluffyblessing</a></li>
+                <li><strong>Artista de GUI e Cenários:</strong> <a href="https://x.com/peach_pxl" target="_blank">@peach_pxl</a></li>
+                <li><strong>Programação, Bug Fixes e QA:</strong> <a href="https://canislatransed.itch.io/" target="_blank">@canislatransed</a></li>
+                <li><strong>Compositor e Sound Design:</strong> <a href="https://www.youtube.com/@DuplEx_Music/videos" target="_blank">@DuplEx</a></li>
+                <li><strong>Agradecimentos Especiais:</strong> <a href="https://x.com/tokimekiUNITED_" target="_blank">@tokimekiunited</a> pelo apoio ao projeto.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDExOC5wbmc=/original/dZsIsl.png" alt="Love Angel Syndrome Cover" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE2MC5wbmc=/original/gqLHzf.png" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE3My5wbmc=/original/miUJwP.png" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE4OC5wbmc=/original/ZX9cHo.png" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDEzMS5wbmc=/original/xSedA8.png" alt="Screenshot 4" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Sites Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://ladyoph3lia.itch.io/loveangelsyndrome" target="_blank"><i class="fa-solid fa-house"></i> Página Oficial no Itch.io (PC / MAC / APK Demo)</a>
+                <a href="https://loveangelsyndrome.org/" target="_blank"><i class="fa-solid fa-window-restore"></i> Jogar Diretamente no Navegador</a>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3385804366" target="_blank"><i class="fa-brands fa-steam"></i> Comunidade Steam</a>
+            </div>
+
+            <p><i class="fa-brands fa-android"></i> <strong>Servidores de Download (Android APK):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/D9OExzRK" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 (Android APK)</a>
+                <a href="https://4br.me/k0dvJ8h" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 (Android APK)</a>
+            </div>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
