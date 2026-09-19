@@ -2882,6 +2882,108 @@ const articlesDatabase = {
             <p>🔑 <em>Senha para descompactar os arquivos RAR/7z dos servidores 2/1 e 2/2:</em> <code>kimochi.info</code></p>
         `
     },
+    "hoshizora-no-memoria": {
+        title: "Hoshizora no Memoria - Wish upon a Shooting Star HD",
+        addedAt: "2026-09-19",
+        youtubeId: "lw4aET29N1Q",
+        categories: ["Visual Novel", "Romance", "Comédia", "Sobrenatural", "Eroge"],
+        summary: "Após a morte repentina de sua mãe, You Kogasaka e sua irmã retornam à sua cidade natal para cumprir uma antiga promessa de infância, deparando-se com uma misteriosa Ceifadora de almas e segredos do passado.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/715580/header.jpg?t=1726607068",
+            data: {
+                "Desenvolvedor": "Favorite",
+                "Publicadora": "Sekai Project",
+                "Gêneros": "Visual Novel, Romance, Sobrenatural, Comédia",
+                "Lançamento": "18 de Dezembro de 2017 (Steam)",
+                "Plataformas": "PC (Windows)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "instalacao", text: "2. Ordem de Rotas e Guia de Instalação" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais, Patches e Downloads" }
+        ],
+        content: `
+            <p><strong>Hoshizora no Memoria - Wish upon a Shooting Star HD</strong> é uma aclamada <em>visual novel</em> de romance e fantasia sobrenatural desenvolvida pelo estúdio <strong>Favorite</strong> e publicada ocidentalmente pela <strong>Sekai Project</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Acompanhe a jornada de Kogasaka You e sua irmã mais nova, Chinami, que, após a morte repentina de sua mãe, precisam deixar a cidade grande para voltar à sua cidade natal de infância, Hibarigasaki, para morar com sua tia Shino.</p>
+            <p>Deixar a cidade natal no passado foi difícil para You, pois ele mantinha uma promessa com uma amiga próxima que encontrava todos os dias no mirante local. Ao partir, ela o fez prometer que voltaria um dia para se casar com ela, deixando apenas um beijo na testa como lembrança.</p>
+            <p>Ao retornar a Hibarigasaki, You tenta reencontrar sua amiga de infância, apenas para descobrir que o antigo mirante está cercado e abandonado. Durante sua busca, ele tropeça em uma garota misteriosa chamada Mare, que carrega uma foice e afirma ser uma Ceifadora. Agora, You precisa reconstruir sua vida, fazer novas amizades e descobrir a verdade sobre a garota da promessa e quem é Mare de verdade.</p>
+
+            <p><strong>Destaques do Jogo:</strong></p>
+            <ul>
+                <li>Siga o caminho de You enquanto ele descobre o amor com 7 heroínas marcantes.</li>
+                <li>Dublagem completa em japonês para todos os personagens (exceto o protagonista).</li>
+                <li>Sete finais e rotas completamente diferentes.</li>
+                <li>Duração estimada de 30 a 50 horas de leitura.</li>
+            </ul>
+
+            <p><strong>🔞 Conteúdo Adulto:</strong> O jogo contém nudez e cenas adultas não específicas em sua versão original com patch eroge.</p>
+
+            <h2 id="instalacao">Ordem de Rotas e Guia de Instalação</h2>
+            
+            <p><strong>Ordem Recomendada das Rotas:</strong></p>
+            <p><code>Asuho</code> ➔ <code>Komomo</code> ➔ <code>Kosame</code> ➔ <code>Isuzu</code> ➔ <code>Chinami</code> ➔ <code>Garota Misteriosa</code> ➔ <code>Mare</code></p>
+
+            <p><strong>Instruções de Instalação (Versão ISO / Clássica):</strong></p>
+            <ol>
+                <li>Altere a Localidade do Sistema (Unicode) para <strong>Japonês</strong> (Painel de Controle > Relógio e Região > Administrativo > Alterar localidade do sistema) e reinicie o PC.</li>
+                <li>Monte a imagem ISO do jogo utilizando o programa <strong>Daemon Tools Lite</strong> ou similar e realize a instalação.</li>
+                <li>Extraia os arquivos do Patch de Tradução e cole-os diretamente dentro da pasta raiz onde o jogo foi instalado.</li>
+                <li>Instale a fonte fornecida com o arquivo do jogo.</li>
+                <li>Execute o jogo e selecione a fonte instalada nas configurações do jogo.</li>
+            </ol>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10</li>
+                <li><strong>Processador:</strong> Pentium 4 1,3 GHz</li>
+                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Compatível com DirectX ou OpenGL</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 6 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigTaDTn3J4UCiW5dZ1SeGTq2aR70EgP6cTU79-1Z1vPy1ORct8auQKR_UePjldcirxmlcnvmKtr3ln2TVcSLlUgDKNUeHLufQzVJkAvTlnt1rp3lijpZsnKKjCyhgt_rrBRWPNQZ7sRDA/s1600/10.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizEzRgrEYzQCAlNQI1pZcQi_ieVHWI9c7qu_GWia7YrP1-x2YAmdMD6iOw9M7HgMCdCP3lHjfo7d0Uo0nr8ZJgyLfQ6xTDpGbUDjv0GHkkNr7Pvi5pbEmPTSu9z3f_cAJPFNAd87sBnW4/s1600/11.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais, Patches e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Guias Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/715580/Hoshizora_no_Memoria_Wish_upon_a_Shooting_Star_HD/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam (HD)</a>
+                <a href="https://sekaiproject.com/products/hoshizora-no-memoria-wish-upon-a-shooting-star/?v=dc634e207282" target="_blank"><i class="fa-solid fa-shop"></i> Sekai Project</a>
+                <a href="https://sharin-sub.blogspot.com/2018/04/hoshizora-no-memoria-wish-upon-shooting.html" target="_blank"><i class="fa-solid fa-book"></i> Guia do Jogo em Espanhol (Sharin-sub)</a>
+            </div>
+
+            <p><i class="fa-solid fa-gears"></i> <strong>Patches de Tradução:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/english_patch_1_0" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch v1.0</a>
+                <a href="https://4br.me/english_patch_1_2" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch v1.2</a>
+                <a href="https://4br.me/kLXaOj" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Patch Espanhol (Mega)</a>
+                <a href="https://4br.me/KoIAwAV" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Patch Espanhol (Mediafire)</a>
+            </div>
+
+            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download:</strong></p>
+            <p>🔑 <em>Senha dos Servidores 1 ao 3:</em> <code>animegame</code><br>
+            🔑 <em>Senha dos Servidores 4 e 5:</em> <code>otomi-games.com</code></p>
+            <div class="play-links">
+                <a href="https://4br.me/C3H5S" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 - Mega (Partes 1 a 7 - ES)</a>
+                <a href="https://4br.me/QDRlMyL03" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 - Mediafire (Partes 1 a 7 - ES)</a>
+                <a href="https://4br.me/English-torrent" target="_blank"><i class="fa-solid fa-download"></i> Servidor 3 - Torrent (ES)</a>
+                <a href="https://4br.me/0ygZm" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 4</a>
+                <a href="https://4br.me/faUgG" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 5</a>
+                <a href="https://4br.me/XCeHMRedI" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 6</a>
+            </div>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
