@@ -662,12 +662,22 @@ function getTrailerData(article) {
     }
 
     if (article.trailerUrl) {
+        if (/\.mp4(?:$|[?#])/i.test(String(article.trailerUrl))) {
+            return {
+                id: null,
+                embedUrl: null,
+                watchUrl: article.trailerUrl,
+                directUrl: article.trailerUrl,
+                searchUrl: null
+            };
+        }
         const match = String(article.trailerUrl).match(/(?:v=|be\/|embed\/|youtu\.be\/)([A-Za-z0-9_-]{11})/);
         if (match && match[1]) {
             return {
                 id: match[1],
                 embedUrl: `https://www.youtube-nocookie.com/embed/${match[1]}?rel=0`,
                 watchUrl: article.trailerUrl,
+                directUrl: null,
                 searchUrl: null
             };
         }
@@ -1195,9 +1205,13 @@ function renderPage() {
                         <div class="video-frame">
                             <iframe src="${trailerData.embedUrl}" title="Trailer de ${article.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
+                    ` : trailerData.directUrl ? `
+                        <div class="video-frame">
+                            <video src="${escapeHtml(trailerData.directUrl)}" title="Trailer de ${escapeHtml(article.title)}" controls preload="metadata"></video>
+                        </div>
                     ` : ''}
                     <div class="trailer-actions">
-                        ${trailerData.watchUrl ? `<a href="${trailerData.watchUrl}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> Abrir trailer</a>` : ''}
+                        ${trailerData.watchUrl ? `<a href="${trailerData.watchUrl}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir trailer</a>` : ''}
                     </div>
                 </div>
             `;

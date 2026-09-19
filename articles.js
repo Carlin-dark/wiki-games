@@ -2733,6 +2733,155 @@ const articlesDatabase = {
             </div>
         `
     },
+    "aokana-four-rhythms-across-the-blue": {
+        title: "Aokana: Four Rhythms Across the Blue",
+        addedAt: "2026-09-19",
+        trailerUrl: "https://video.akamai.steamstatic.com/store_trailers/256753501/movie480.mp4",
+        categories: ["Visual Novel", "Romance", "Ficção Científica", "Esportes", "Escolar"],
+        summary: "Em um mundo onde voar é tão simples quanto andar de bicicleta, Masaya Hinata retorna ao esporte Flying Circus como treinador para guiar quatro garotas rumo aos céus em uma emocionante história de superação e romance.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/7e9682047fc6f1b558f0d4ddee8e5cdb2e844dd2/header.jpg?t=1747952729",
+            data: {
+                "Desenvolvedor": "Sprite",
+                "Publicadora": "NekoNyan Ltd.",
+                "Gêneros": "Visual Novel, Romance, Sci-Fi, Esportes",
+                "Lançamento": "27 de setembro de 2019 (Steam)",
+                "Plataformas": "Windows, Nintendo Switch, PlayStation 4",
+                "Classificação": "18+ (Conteúdo Adulto Leve)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "personagens", text: "2. Personagens" },
+            { id: "guia", text: "3. Guia do Jogo e Rotas" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "links", text: "6. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Aokana: Four Rhythms Across the Blue</strong> é uma premiada <em>visual novel</em> romântica com elementos de ficção científica e esportes, desenvolvida pela <strong>Sprite</strong> e publicada pela <strong>NekoNyan Ltd.</strong> A história se passa em um mundo onde sapatos antigravitacionais conhecidos como <em>Grav-Shoes</em> permitem que as pessoas voem livremente pelos céus, dando origem a um esporte competitivo popular chamado <strong>Flying Circus</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Em um mundo onde voar é tão simples quanto andar de bicicleta, existe um esporte popular chamado "Circo Voador" (Flying Circus).</p>
+            <p>O protagonista, Masaya Hinata, já teve um futuro brilhante pela frente naquele campo esportivo, mas devido a uma derrota esmagadora — além de outros motivos pessoais —, ele se afastou do esporte. No entanto, ao conhecer a aluna transferida Asuka Kurashina e ensiná-la a voar, Masaya recupera sua paixão adormecida.</p>
+            <p>Com sua situação alterada, ele aceita o papel de treinador e participa mais uma vez do Circo Voador. Quão alto ele conseguirá voar desta vez com Asuka e as outras garotas ao seu lado? Esta é uma história sobre amor, superação e amizade nos céus.</p>
+
+            <p><strong>🔞 Nota dos Desenvolvedores sobre Conteúdo Adulto:</strong><br>
+            <em>"O conteúdo adulto inclui algumas ilustrações com nudez leve e beijos. Os personagens entram em um relacionamento sexual que não é mostrado na tela, mas cujos atos são mencionados na conversa. Além disso, todos os personagens que aparecem têm mais de 18 anos."</em></p>
+
+            <h2 id="personagens">Personagens</h2>
+            <p>Aokana se destaca por seus personagens cativantes e bem desenvolvidos:</p>
+            <ul>
+                <li><strong>Asuka Kurashina:</strong> Estudante transferida para o Instituto Kunahama. Nova no Flying Circus, demonstra um talento natural impressionante e uma personalidade alegre e determinada.</li>
+                <li><strong>Misaki Tobisawa:</strong> Aluna do segundo ano, inteligente e descontraída. Possui experiência prévia no esporte, adora gatos e frequentemente usa "nya" na fala.</li>
+                <li><strong>Mashiro Arisaka:</strong> Aluna do primeiro ano e melhor amiga de Misaki. Energética, gamer e extremamente protetora em relação a Misaki.</li>
+                <li><strong>Rika Ichinose:</strong> Vizinha de Masaya e aluna da prestigiada Academia Takafuji. Dedicada, trabalhadora e um pouco teimosa.</li>
+                <li><strong>Masaya Hinata:</strong> Protagonista do jogo e ex-prodígio do Flying Circus que retorna ao esporte como treinador.</li>
+                <li><strong>Shion Aoyagi:</strong> Presidente dramático e empolgado do clube de Flying Circus do Instituto Kunahama.</li>
+                <li><strong>Madoka Aoyagi:</strong> Irmã mais nova de Shion e gerente organizada do clube.</li>
+                <li><strong>Reiko Satōin:</strong> Vice-capitã orgulhosa do clube da Academia Takafuji.</li>
+                <li><strong>Saki Inui:</strong> Aluna da Academia Kairyou e uma das jogadoras mais rápidas do mundo no Flying Circus.</li>
+                <li><strong>Aoi Kagami:</strong> Professora de educação física, ex-jogadora nacional e mentora de Masaya.</li>
+                <li><strong>Irina Avalon:</strong> Treinadora de Saki e amiga de infância.</li>
+                <li><strong>Minori Hosaka:</strong> Membro do clube de jornalismo e comentarista dos torneios.</li>
+                <li><strong>Hayato Shirase & Minamo Shirase:</strong> Proprietários da loja de equipamentos esportivos Sky Sports Shirase.</li>
+                <li><strong>Botan Arisaka:</strong> Mãe de Mashiro e dona do restaurante Mashiro Udon.</li>
+                <li><strong>Kazunari Shindō:</strong> Capitão de nível mundial do clube da Academia Takafuji.</li>
+            </ul>
+
+            <h2 id="guia">Guia do Jogo e Rotas</h2>
+            <p>O jogo contém uma rota comum e 4 rotas individuais de heroínas. Para desbloqueá-las, siga as escolhas recomendadas abaixo:</p>
+
+            <h3>Ordem de Leitura Recomendada</h3>
+            <ol>
+                <li>Mashiro Arisaka</li>
+                <li>Rika Ichinose</li>
+                <li>Misaki Tobisawa</li>
+                <li>Asuka Kurashina (Leva ao Final Verdadeiro)</li>
+            </ol>
+
+            <h3>Escolhas de Decisão por Rota</h3>
+            <p><strong>Rota de Mashiro Arisaka:</strong></p>
+            <ul>
+                <li>Chamar a atenção dela</li>
+                <li>Porque quero que você saiba como voar</li>
+                <li>Perguntar sobre a falta de motivação de Misaki</li>
+                <li>Claro, por que não. Eu vou junto</li>
+                <li>Dizer a ela para tentar mais</li>
+                <li>Continuar nossa prática</li>
+                <li>Inventar um movimento especial</li>
+                <li>Dizer a ela</li>
+                <li>Ir e conversar com ela</li>
+                <li>Não, eu não posso fazer isso</li>
+                <li>Eu quero que você</li>
+            </ul>
+
+            <p><strong>Rota de Rika Ichinose:</strong></p>
+            <ul>
+                <li>Carregar o Slot de Salvamento 1</li>
+                <li>Não, eu não posso fazer isso</li>
+                <li>Salvar o Slot de Salvamento 2</li>
+                <li>Eu quero que você</li>
+            </ul>
+
+            <p><strong>Rota de Misaki Tobisawa:</strong></p>
+            <ul>
+                <li>Carregar o Slot de Salvamento 2</li>
+                <li>Você deve fazer o que quiser</li>
+                <li>Salvar o Slot de Salvamento 3</li>
+                <li>Se você está bem comigo, eu vou fazer isso</li>
+            </ul>
+
+            <p><strong>Rota de Asuka Kurashina:</strong></p>
+            <ul>
+                <li>Carregar o Slot de Salvamento 3</li>
+                <li>Desculpe, eu não posso</li>
+                <li>Vir para a prática!</li>
+            </ul>
+
+            <p><em>Nota: Se você não se comprometer com nenhuma rota de heroína durante as escolhas, o jogo resultará em um Final Ruim (Bad Ending). Ao completar todas as rotas, o cenário final é liberado automaticamente.</em></p>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou mais recente</li>
+                <li><strong>Processador:</strong> 1.3 GHz</li>
+                <li><strong>Memória RAM:</strong> 4 GB</li>
+                <li><strong>Placa de Vídeo:</strong> 1 GB de VRAM (compatível com DirectX 11)</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 11 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_55fcdb0f1bd4df2cc182f6fcd076e94f92299941.1920x1080.jpg?t=1747952729" alt="Aokana Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_e518a1137fb91d4b6f71cebe48bb2839994b5f1c.1920x1080.jpg?t=1747952729" alt="Aokana Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_9045ca808284302464020ed4fe17d30abda54182.116x65.jpg?t=1747952729" alt="Aokana Screenshot 3" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_3ab4d1c088fdf65192688e5eea5cb4e5c5c968b7.116x65.jpg?t=1747952729" alt="Aokana Screenshot 4" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_d5fa9b48a9d212b574cf48b5c42537f1872397e9.116x65.jpg?t=1747952729" alt="Aokana Screenshot 5" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_0c1a0cebfb761e498408285cc1ce1121c24b52d2.116x65.jpg?t=1747952729" alt="Aokana Screenshot 6" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://aokanaweb.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial</a>
+                <a href="https://store.steampowered.com/app/1044620/Aokana__Four_Rhythms_Across_the_Blue/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.nutaku.net/games/aokana/?ats=eyJhIjoxMTE0NTU4LCJjIjo2Mjc3NzU3OCwibiI6MSwicyI6MSwiZSI6MTA5NDMsInAiOjJ9" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Comprar Versão Nutaku</a>
+                <a href="https://www.crunchyroll.com/pt-br/series/GYMGPXKVY/aokana-four-rhythm-across-the-blue" target="_blank"><i class="fa-solid fa-tv"></i> Assistir ao Anime no Crunchyroll</a>
+            </div>
+
+            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download (PC):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/aiQ81" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1</a>
+                <a href="https://4br.me/cYTWmcHp0" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 (Parte 1)</a>
+                <a href="https://4br.me/73G5covf2W" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 (Parte 2)</a>
+                <a href="https://4br.me/bvYOEZ" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 3</a>
+            </div>
+            <p>🔑 <em>Senha para descompactar os arquivos RAR/7z dos servidores 2/1 e 2/2:</em> <code>kimochi.info</code></p>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
