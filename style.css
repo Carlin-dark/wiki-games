@@ -1015,6 +1015,9 @@ a:hover { color: #80bcd8; text-decoration: underline; }
         direction: ltr;
         scroll-snap-align: start;
     }
+    .home-section .home-game-item:nth-child(n + 6) {
+        display: none;
+    }
     .home-card img { height: 80px; }
     .play-links { flex-direction: column; }
     .play-links a { text-align: center; justify-content: center; padding: 10px; }
