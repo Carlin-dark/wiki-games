@@ -2,7 +2,7 @@ param(
     [string]$BaseUrl = ''
 )
 
-$sitemapPath = Join-Path $PSScriptRoot 'sitemap.xml'
+$sitemapPath = Join-Path $PSScriptRoot 'public/sitemap.xml'
 $utf8 = New-Object System.Text.UTF8Encoding($false, $true)
 $content = $utf8.GetString([System.IO.File]::ReadAllBytes($sitemapPath))
 [void][System.Reflection.Assembly]::LoadWithPartialName('System.Xml.Linq')
