@@ -3178,6 +3178,689 @@ const articlesDatabase = {
             🔑 <em>Senha do arquivo Servidor 5:</em> <code>2026</code></p>
         `
     },
+    "the-house-in-fata-morgana-a-requiem-for-innocence": {
+        title: "The House in Fata Morgana: A Requiem for Innocence",
+        addedAt: "2026-09-21",
+        categories: ["Visual Novel", "Drama", "Gótico", "Tragédia", "Mistério"],
+        summary: "Prequel oficial de 'The House in Fata Morgana', contando a história de uma jovem garota adorada como santa e condenada como bruxa, marcando o primeiro capítulo da tragédia que assombraria a mansão por quase um milênio.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/804700/header.jpg?t=1725518745",
+            data: {
+                "Desenvolvedor": "NOVECT",
+                "Publicadora": "MangaGamer",
+                "Gêneros": "Visual Novel, Drama, Gótico, Tragédia",
+                "Lançamento": "17 de Maio de 2018 (Steam)",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "16+ (Violência Extrema, Linguagem Imprópria)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "requisitos", text: "2. Requisitos de Sistema" },
+            { id: "galeria", text: "3. Galeria de Imagens" },
+            { id: "links", text: "4. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>The House in Fata Morgana: A Requiem for Innocence</strong> é uma <em>visual novel</em> dramática e de suspense gótico desenvolvida pela <strong>NOVECT</strong> (anteriormente Novectacle) e publicada pela <strong>MangaGamer</strong>. O jogo atua como a prequela oficial e companheira do aclamado <em>The House in Fata Morgana</em>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Uma jovem garota, cujo sangue dizem ter poderes milagrosos de cura, ajoelha-se espancada e machucada diante do senhor da terra. Na aldeia onde nasceu, ela era adorada como a filha de Deus. E agora, o senhor ergue sua espada, a poucos momentos de decapitá-la.</p>
+            <p><em>"Você é uma bruxa maldita usando a pele de uma santa!"</em></p>
+            <p>Mas antes que ele possa desferir o golpe com sua lâmina, um jovem intervém, salvando a garota.</p>
+            <p>Assim começa o primeiro capítulo "feliz" da vida da jovem garota. E assim começa o primeiro ato de uma tragédia que viria a se estender por quase um milênio.</p>
+
+            <p><strong>⚠️ Classificação Indicativa e Alerta de Conteúdo:</strong><br>
+            <em>Recomendado para maiores de 16 anos. Este jogo contém cenas de violência frequente/detalhada, temas maduros, nudez parcial e linguagem imprópria.</em></p>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows Vista ou mais recente</li>
+                <li><strong>Processador:</strong> Pentium III 800 MHz</li>
+                <li><strong>Memória RAM:</strong> 128 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Resolução 800x600</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 500 MB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://aseriaa.wordpress.com/wp-content/uploads/2018/05/7.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://i0.wp.com/aseriaa.wordpress.com/wp-content/uploads/2018/05/6.png?w=2000&h=&ssl=1" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://i0.wp.com/aseriaa.wordpress.com/wp-content/uploads/2018/05/12.jpg?w=2000&h=&ssl=1" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://igg-games.com/wp-content/uploads/2018/05/The-House-in-Fata-Morgana-A-Requiem-for-Torrent-Download.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://igg-games.com/wp-content/uploads/2018/05/The-House-in-Fata-Morgana-A-Requiem-for-PC-Crack.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://novect.net/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Novect)</a>
+                <a href="https://novect.net/fatamorgana/" target="_blank"><i class="fa-solid fa-book"></i> Página da Série Fata Morgana</a>
+                <a href="https://store.steampowered.com/app/804700/The_House_in_Fata_Morgana_A_Requiem_for_Innocence/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+
+            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download (PC):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/phDFyLKbu5" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor MegaUp</a>
+                <a href="https://4br.me/4C9H52" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor Mega</a>
+            </div>
+            <p>ℹ️ <em>Instruções: Extraia os arquivos do jogo, instale ou aplique o crack caso necessário, e execute o arquivo executável para jogar.</em></p>
+        `
+    },
+    "the-end-of-an-obsession": {
+        title: "The end of an obsession",
+        categories: ["Visual Novel", "Terror Psicológico", "Yuri", "LGBT", "Horror", "Conto de Fadas"],
+        summary: "Você acorda sem memórias e com a cabeça latejando. Ao seu lado está uma mulher misteriosa parecida com uma rosa. Nesta curta e perturbadora história visual de ebi-hime, aprenda a amá-la para tentar encontrar um final feliz.",
+        infobox: {
+            image: "https://ifdb.org/showimage?id=2%3A2321",
+            data: {
+                "Desenvolvedor": "ebi-hime",
+                "Publicadora": "ebi-hime",
+                "Gêneros": "Visual Novel, Terror Psicológico, Yuri, LGBT",
+                "Plataformas": "Windows, macOS, Linux, Android",
+                "Idiomas": "Inglês, Francês, Russo, Chinês (Simplificado)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "caracteristicas", text: "2. Características e Recursos" },
+            { id: "creditos", text: "3. Equipe e Créditos" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>The end of an obsession</strong> é uma curta e atmosférica <em>visual novel</em> de terror psicológico com temática Yuri/LGBT criada pela aclamada desenvolvedora independente <strong>ebi-hime</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Você se sente grogue quando finalmente acorda. A parte de trás da sua cabeça está latejando e sua boca parece seca, como se estivesse cheia de lã.</p>
+            <p>Com os olhos turvos, você olha ao redor. Que horas são? Onde você está... e, talvez o mais importante, quem é você? Por mais que tente, você não consegue se lembrar de nada.</p>
+            <p>Este pode muito bem ser o seu fim —, mas espere. Quem é aquela mulher parada ao lado da sua cama, que parece uma rosa? Talvez ela possa ajudá-lo. Agora, por que você não abre seu coração para ela? Aprenda a amá-la, e talvez essa história possa até ter um final feliz.</p>
+
+            <h2 id="caracteristicas">Características e Recursos</h2>
+            <ul>
+                <li><strong>Extensão:</strong> Cerca de 18.000 palavras de texto (aproximadamente 30 a 60 minutos de leitura).</li>
+                <li><strong>Narrativa Interativa:</strong> História com múltiplas escolhas e rumos.</li>
+                <li><strong>Estilo Retrô:</strong> Resolução clássica de 800x600 pixels.</li>
+                <li><strong>Arte e Trilha Sonora:</strong> Ilustrações totalmente originais e trilha sonora exclusiva.</li>
+                <li><strong>Personagens Marcantes:</strong> Uma bruxa adoradora e um narrador exausto que não deseja mais se envolver na narrativa.</li>
+                <li><strong>Temáticas:</strong> Conto de fadas sombrio com elementos de violência e romance yandere/obsessivo.</li>
+            </ul>
+
+            <h2 id="creditos">Equipe e Créditos</h2>
+            <ul>
+                <li><strong>Escrita e Programação:</strong> <a href="https://x.com/ebihimes" target="_blank">ebi-hime</a></li>
+                <li><strong>Arte:</strong> <a href="https://x.com/kalechipskid" target="_blank">Kalechips</a></li>
+                <li><strong>GUI:</strong> <a href="https://x.com/elduator" target="_blank">elduator</a></li>
+                <li><strong>Música:</strong> <a href="https://x.com/yuzukimasu" target="_blank">yuzuki</a></li>
+                <li><strong>Masterização de Áudio:</strong> <a href="https://x.com/shimedaiko" target="_blank">xtraspicy</a></li>
+                <li><strong>Vídeo:</strong> <a href="https://x.com/eruukurage" target="_blank">ell絵</a></li>
+                <li><strong>Revisão:</strong> <a href="https://www.bishmuth.art/" target="_blank">Bishmuth</a>, <a href="https://bsky.app/profile/iberaiemelia.kasuka.be" target="_blank">Emelia K. Fletcher</a> e <a href="https://bsky.app/profile/ravnervn.bsky.social" target="_blank">Ravnervn</a></li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA3MDk5NS8xODM2NjIwMS5wbmc=/original/SSdk1D.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA3MDk5NS8xODM2NjM1NC5wbmc=/original/HufXJ2.png" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA3MDk5NS8xODM2NjE4Ny5wbmc=/original/LzRuLi.png" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA3MDk5NS8xODM2NjM1MC5wbmc=/original/f6jKbw.png" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA3MDk5NS8xODM2NjE5MC5wbmc=/original/XJFj%2FD.png" alt="Screenshot 5" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA3MDk5NS8xODM2NjE4Ni5wbmc=/original/6ohHV6.png" alt="Screenshot 6" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Página Oficial e Download:</strong></p>
+            <div class="play-links">
+                <a href="https://ebihime.itch.io/obsession" target="_blank"><i class="fa-solid fa-store"></i> Jogar / Baixar no Itch.io</a>
+            </div>
+        `
+    },
+    "steins-gate-0": {
+        title: "STEINS;GATE 0",
+        addedAt: "2026-09-21",
+        categories: ["Visual Novel", "Ficção Científica", "Viagem no Tempo", "Mistério", "Drama"],
+        summary: "Uma história sombria na aclamada franquia STEINS;GATE que explora a linha de universo Beta, onde Okabe Rintaro falha em salvar Kurisu Makise e precisa lidar com o trauma, a Inteligência Artificial Amadeus e o iminente início da 3ª Guerra Mundial.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/header.jpg?t=1715703408",
+            data: {
+                "Desenvolvedor": "MAGES. / 5pb.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Visual Novel, Sci-Fi, Viagem no Tempo, Mistério",
+                "Lançamento": "8 de Maio de 2018 (Steam)",
+                "Plataformas": "Windows, Nintendo Switch, PlayStation 4, PS Vita"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>STEINS;GATE 0</strong> é a aclamada continuação e linha do tempo alternativa da lendária <em>visual novel</em> de ficção científica <strong>STEINS;GATE</strong>, desenvolvida pela <strong>MAGES. / 5pb.</strong> e publicada pela <strong>Spike Chunsoft</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Explore uma nova linha de universo vinda das profundezas do desespero. <em>STEINS;GATE 0</em> se passa na Linha do Universo Beta e aborda o que aconteceria se o protagonista Okabe Rintaro tivesse fracassado na tentativa de resgatar Kurisu Makise na história original.</p>
+            <p>Consumido pela culpa e sofrendo de estresse pós-traumático, Okabe decide abandonar sua persona de "cientista louco" Kyouma Hououin. No entanto, sua vida muda novamente ao conhecer o programa "Amadeus" — uma Inteligência Artificial avançada criada a partir das memórias e da personalidade da própria Kurisu antes de falecer. Agora, Okabe e seus amigos precisam dobrar o tempo mais uma vez para evitar a eclosão devastadora da 3ª Guerra Mundial.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Nova Temática Central:</strong> Além das viagens temporais e teorias científicas, a inteligência artificial torna-se o pilar central da trama.</li>
+                <li><strong>Mecânica de Smartphone:</strong> Interaja com a história através do smartphone de Okabe. Suas decisões ao atender (ou ignorar) chamadas e responder a mensagens no aplicativo RINE alterarão o rumo do destino e determinarão os múltiplos finais.</li>
+                <li><strong>Elenco Expandido:</strong> Personagens queridos retornam ao lado de novas figuras marcantes que aprofundam ainda mais a mitologia da série.</li>
+                <li><strong>Atmosfera Envolvente:</strong> Trilha sonora marcante, arte deslumbrante e uma narrativa dramática e emocional do início ao fim.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10</li>
+                <li><strong>Processador:</strong> Intel Core i5</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Intel HD Graphics Series (com 1 GB de VRAM alocada)</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 15 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i3 (Sandy Bridge ou superior)</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce (1 GB de VRAM ou superior)</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 15 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_a57fc097c43dc5a1a235835fe092c4fd688f3e6d.1920x1080.jpg?t=1715703408" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_9cd655261bc4ff2c583545aa0a822ad9696eb1c1.1920x1080.jpg?t=1715703408" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_28e5bd4b8c232259a26aed0d83224c8bf023c7bd.1920x1080.jpg?t=1715703408" alt="Screenshot 3" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_10a4925d86dac7163d813c528840e46b555fec7b.1920x1080.jpg?t=1715703408" alt="Screenshot 4" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_f5481057a227455d98fa37aa63a89db780368319.1920x1080.jpg?t=1715703408" alt="Screenshot 5" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_2d45fbed3ff71662f73b69c06f9cb5d054854d0b.1920x1080.jpg?t=1715703408" alt="Screenshot 6" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://www.spike-chunsoft.com/games/steinsgate-0/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Spike Chunsoft)</a>
+                <a href="https://store.steampowered.com/app/825630/STEINSGATE_0/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://nintendo.com/pt-br/store/products/steins-gate-0-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+                <a href="https://store.playstation.com/pt-br/product/UP4293-CUSA05894_00-STEINSGATEZEROP4" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+                <a href="https://www.crunchyroll.com/series/GYW4D15K6/steinsgate-0" target="_blank"><i class="fa-solid fa-tv"></i> Assistir ao Anime no Crunchyroll</a>
+            </div>
+
+            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download (PC):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/7RvmAUfM" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 (Download Direto)</a>
+            </div>
+        `
+    },
+    "steins-gate-elite": {
+        title: "STEINS;GATE ELITE",
+        addedAt: "2026-09-21",
+        categories: ["Visual Novel", "Ficção Científica", "Viagem no Tempo", "Animação", "Aventura"],
+        summary: "Uma versão totalmente animada e remasterizada do clássico STEINS;GATE, combinando a narrativa interativa e ramificada da visual novel original com as animações da adaptação de TV e novas cenas exclusivas.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/819030/header.jpg?t=1715703414",
+            data: {
+                "Desenvolvedor": "MAGES. Inc.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Série": "Science Adventure Series",
+                "Gêneros": "Visual Novel, Aventura, Sci-Fi, Viagem no Tempo",
+                "Lançamento": "19 de Fevereiro de 2019",
+                "Plataformas": "PC (Windows), PlayStation 4, Nintendo Switch"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Diferenciais" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>STEINS;GATE ELITE</strong> é a versão definitiva e totalmente animada da consagrada <em>visual novel</em> de ficção científica <strong>STEINS;GATE</strong>, desenvolvida pela <strong>MAGES. Inc.</strong> e publicada pela <strong>Spike Chunsoft</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>O jogo acompanha um grupo de jovens estudantes peritos em tecnologia no distrito de Akihabara que descobrem acidentalmente como alterar o passado enviando e-mails através de uma micro-onda modificada (o "D-Mail").</p>
+            <p>À medida que os experimentos temporais avançam, a situação foge do controle e eles se veem no centro de uma perigosa conspiração global envolvendo a SERN (organização responsável pelo Grande Colisor de Hádrons) e John Titor, um indivíduo misterioso que afirma ter vindo de um futuro distópico.</p>
+
+            <h2 id="gameplay">Características e Diferenciais</h2>
+            <ul>
+                <li><strong>Aventura Completamente Animada:</strong> Substitui os cenários e sprites estáticos tradicionais pelas belas sequências de animação do anime de TV oficial de <em>STEINS;GATE</em>.</li>
+                <li><strong>Cenas Inéditas:</strong> Inclui novas sequências animadas produzidas especialmente para cobrir as rotas secundárias e finais alternativos que não foram adaptados na animação original.</li>
+                <li><strong>Um Novo Jeito de Saltar no Tempo:</strong> A interatividade da <em>visual novel</em> encontra a fluidez de um filme animado, permitindo que cada escolha mova a linha de universo para mais perto ou mais longe da divergência ideal.</li>
+                <li><strong>Histórias Ramificadas:</strong> Suas respostas e decisões influenciam diretamente os acontecimentos, oferecendo múltiplos desfechos emocionais.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i5</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce (1 GB de VRAM ou superior)</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 15 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Placa de som compatível com DirectX ou chipset integrado</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/819030/ss_731163f666dfaeb15d6ec8bd0cda2bc494978ea6.1920x1080.jpg?t=1715703414" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/819030/ss_56947eb1c82eb01fb6cc2b5f5c5a9df6b6dc77d3.1920x1080.jpg?t=1715703414" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/819030/ss_4c1f99792b7e3d0a2c050ad38e894638d3a06fd0.1920x1080.jpg?t=1715703414" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/819030/STEINSGATE_ELITE/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.playstation.com/pt-br/games/steins-gate-elite/" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+            </div>
+        `
+    },
+    "steins-gate-reboot": {
+        title: "STEINS;GATE RE:BOOT",
+        addedAt: "2026-09-21",
+        categories: ["Visual Novel", "Ficção Científica", "Viagem no Tempo", "Remake", "Aventura"],
+        summary: "Uma versão totalmente reiniciada e modernizada do lendário STEINS;GATE, trazendo visuais remasterizados, artes e trajes redesenhados por Huke, uma recriação hiperrealista de Akihabara e novos cenários originais que expandem a história.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4012810/07418d40a3fdd2f403bfa506f50051f4254fa02a/header.jpg?t=1788401296",
+            data: {
+                "Desenvolvedor": "MAGES. Inc.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Visual Novel, Aventura, Sci-Fi, Viagem no Tempo",
+                "Plataformas": "PC (Windows), Nintendo Switch",
+                "Classificação": "16+ (Violência, Temas Sensíveis)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "recursos", text: "2. Novidades e Recursos" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>STEINS;GATE RE:BOOT</strong> é o reboot completo e modernizado da influente <em>visual novel</em> de ficção científica desenvolvida pela <strong>MAGES. Inc.</strong> e publicada pela <strong>Spike Chunsoft</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>O jogo acompanha um grupo heterogêneo de estudantes peritos em tecnologia liderados pelo autoproclamado "cientista louco" Rintaro Okabe. Quando sua mais recente invenção acidentalmente ganha a capacidade de enviar mensagens de texto para o passado, eles descobrem o poder de alterar a própria história e as linhas do tempo.</p>
+            <p>À medida que conspirações globais envolvendo organizações secretas ganham força e as realidades começam a se distorcer, os personagens enfrentam decisões cruciais para tentar evitar um futuro mergulhado no caos e na tragédia.</p>
+
+            <h2 id="recursos">Novidades e Recursos</h2>
+            <ul>
+                <li><strong>Visual e Arte Reformulados:</strong> O renomado designer de personagens <strong>Huke</strong> retorna com artes totalmente atualizadas e roupas redesenhadas para um toque contemporâneo no elenco.</li>
+                <li><strong>Cenários e Conteúdo Inéditos:</strong> Apresenta uma história revitalizada com novas sequências originais que expandem o universo e a mitologia da obra.</li>
+                <li><strong>Akihabara Reconstruída:</strong> O distrito de Akihabara foi meticulosamente recriado com profundidade e realismo impressionantes usando referências autênticas da época.</li>
+                <li><strong>Interface e Sistemas Otimizados:</strong> Interface de usuário refinada e sistema de decisões baseado no controle do telefone celular de Rintaro.</li>
+                <li><strong>Múltiplos Finais:</strong> Suas escolhas moldam diretamente o destino dos personagens, ramificando a história em diversos desfechos (duração estimada entre 30 e 50 horas de jogo).</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 ou posterior (64 bits)</li>
+                <li><strong>Processador:</strong> AMD FX-8150 ou equivalente</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce com 1 GB de VRAM ou mais</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 9 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Dispositivo de som compatível com DirectSound</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 ou posterior (64 bits)</li>
+                <li><strong>Processador:</strong> Intel Core i5-9300 (9ª Geração) ou superior</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce com 1 GB de VRAM ou mais</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 9 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Dispositivo de som compatível com DirectSound</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4012810/26a7cff71d04ccca868c51551e2e7907441d6532/ss_26a7cff71d04ccca868c51551e2e7907441d6532.1920x1080.jpg?t=1788401296" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4012810/c7f3950448bdfa17d3aed688db6807f17f121e29/ss_c7f3950448bdfa17d3aed688db6807f17f121e29.1920x1080.jpg?t=1788401296" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4012810/15f215bb84cbd9bc70c592d9b1bd0b8367a595ef/ss_15f215bb84cbd9bc70c592d9b1bd0b8367a595ef.1920x1080.jpg?t=1788401296" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4012810/2c50ad0251b9a06d4632c394d88fd5efb34872fd/ss_2c50ad0251b9a06d4632c394d88fd5efb34872fd.1920x1080.jpg?t=1788401296" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://steinsgate.jp/reboot/en-us/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (EN)</a>
+                <a href="https://steinsgate.jp/reboot/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (JP)</a>
+                <a href="https://spike-chunsoft.com/games/steinsgate-reboot/" target="_blank"><i class="fa-solid fa-globe"></i> Página da Spike Chunsoft</a>
+                <a href="https://store.steampowered.com/app/4012810/STEINSGATE_REBOOT/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (Standard Edition)</a>
+                <a href="https://store.steampowered.com/sub/1707312" target="_blank"><i class="fa-brands fa-steam"></i> Steam (Digital Deluxe)</a>
+                <a href="https://nintendo.com/pt-br/store/products/steins-gate-re-boot-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop (Brasil)</a>
+                <a href="https://steamcommunity.com/app/4012810" target="_blank"><i class="fa-brands fa-steam-symbol"></i> Comunidade Steam</a>
+            </div>
+        `
+    },
+    "danganronpa-2-goodbye-despair": {
+        title: "Danganronpa 2: Goodbye Despair",
+        addedAt: "2026-09-21",
+        categories: ["Visual Novel", "Mistério", "Investigação", "Anime", "Aventura"],
+        summary: "Jabberwock Island, um ex-destino turístico, transforma-se no palco de um cruel jogo de assassinato liderado por Monokuma. Reúna pistas, investigue seus colegas e enfrente o Julgamento da Classe para expor os culpados e escapar com vida.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413420/header.jpg?t=1781085654",
+            data: {
+                "Desenvolvedor": "Spike Chunsoft Co., Ltd.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Visual Novel, Mistério, Investigação, Aventura",
+                "Plataformas": "PC (Windows), PlayStation 4, Nintendo Switch, iOS, Android",
+                "Classificação": "14+ (Violência, Conteúdo Sexual, Linguagem Imprópria)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Danganronpa 2: Goodbye Despair</strong> é o segundo capítulo da renomada franquia de aventura e investigação desenvolvida e publicada pela <strong>Spike Chunsoft</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>A Jabberwock Island já foi um destino turístico popular, mas agora é uma ilha inabitada que permanece estranhamente imaculada. Você e seus colegas da aclamada Hope's Peak Academy foram trazidos para este paraíso tropical para uma "viagem escolar apaixonante de acelerar o coração".</p>
+            <p>Tudo parece diversão sob o sol tropical... até que o urso sadaco Monokuma retorna para dar início a mais um jogo assassino. Preso nesta ilha da morte, sua única esperança de fuga é resolver os mistérios e assassinatos que ocorrem entre os próprios estudantes — lembrando sempre que a verdade pode ser o próprio desespero.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Ilha Fatal e Investigação:</strong> O assassinato é a única escapatória. Conforme seus colegas começam a cair, você precisará examinar cada cena do crime, buscar pistas e entrevistar suspeitos para descobrir a oportunidade, o motivo e o método por trás de cada crime.</li>
+                <li><strong>Julgamento da Classe (Class Trial):</strong> Enfrente seus colegas em debates acalorados onde você usará "balas de verdade" (provas) para refutar contradições e falsas alegações.</li>
+                <li><strong>Confronto de Refutação (Rebuttal Showdown):</strong> Quando um estudante discordar frontalmente de você, ele o desafiará para um duelo cara a cara, forçando-o a cortar seus argumentos em tempo real e defender seu ponto de vista.</li>
+                <li><strong>Sistemas de Reflexo e Ação:</strong> Teste seus reflexos e ritmo com uma variedade de minijogos acelerados para desmascarar o assassino definitivo e escapar com vida.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo (2.8 GHz) ou superior</li>
+                <li><strong>Memória RAM:</strong> 3 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> GPU compatível com OpenGL 3.2 e no mínimo 1 GB de VRAM</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 5 GB de espaço disponível</li>
+                <li><strong>Controle:</strong> Suporte a controles de PS4, Xbox 360 ou DirectInput</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7</li>
+                <li><strong>Processador:</strong> Intel Core i5-3470 ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> GPU compatível com OpenGL 3.2 e no mínimo 1 GB de VRAM</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 6 GB de espaço disponível</li>
+                <li><strong>Controle:</strong> Suporte a controles de PS4, Xbox 360 ou DirectInput</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413420/ss_981ffc83d3679799be78315cf98b133df11e94ec.1920x1080.jpg?t=1781085654" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413420/ss_cffb6efcf228987f59e7a728fbe0c5bbbd15591e.1920x1080.jpg?t=1781085654" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413420/ss_e118a801498f04bf89a3cc5ece78baa95cad0e98.1920x1080.jpg?t=1781085654" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413420/ss_572c6c3a58a4347c7d8467707befca5c2e6e6345.1920x1080.jpg?t=1781085654" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413420/ss_2db908982b50f1006726cd49191656968282a1ad.1920x1080.jpg?t=1781085654" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/413420/Danganronpa_2_Goodbye_Despair/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+        `
+    },
+    "danganronpa-another-episode-ultra-despair-girls": {
+        title: "Danganronpa Another Episode: Ultra Despair Girls",
+        addedAt: "2026-09-21",
+        categories: ["Ação", "Tiro em Terceira Pessoa", "Mistério", "Anime", "Aventura"],
+        summary: "Spinoff de ação e tiro em terceira pessoa no universo de Danganronpa. Acompanhe Komaru Naegi e Toko Fukawa na luta para sobreviver a hordas de Monokumas e escapar de Towa City, dominada pelo grupo extremista 'Warriors of Hope'.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/555950/header.jpg?t=1715701294",
+            data: {
+                "Desenvolvedor": "Spike Chunsoft Co., Ltd.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Ação, Tiro em Terceira Pessoa, Mistério, Aventura",
+                "Plataformas": "PC (Windows), PlayStation 4, PS Vita",
+                "Classificação": "14+ (Violência, Conteúdo Sexual, Atos Criminosos)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Danganronpa Another Episode: Ultra Despair Girls</strong> é um spinoff de ação, tiro em terceira pessoa e aventura desenvolvido e publicado pela <strong>Spike Chunsoft</strong>, preenchendo a lacuna de eventos entre o primeiro e o segundo jogo da franquia principal.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Komaru Naegi, a irmã mais nova do protagonista Makoto Naegi, está aprisionada dentro de um apartamento misterioso há um ano. Sua rotina é interrompida quando Byakuya Togami, membro da Future Foundation, surge para resgatá-la.</p>
+            <p>No entanto, a operação de resgate é frustrada por um ataque repentino de centenas de robôs Monokuma. Komaru descobre que a metrópole de Towa City foi tomada por um grupo extremista de crianças conhecidas como <strong>Warriors of Hope</strong>. Lideradas pela tirânica Monaca, elas declaram a criação de um "paraíso infantil" onde todos os adultos devem ser exterminados.</p>
+            <p>Unindo forças com Toko Fukawa (e seu alter ego genocida), Komaru deve usar uma arma especial para sobreviver aos furiosos Monokumas, decifrar enigmas e escapar da cidade mortal.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Ação e Tiro em Terceira Pessoa:</strong> Diferente dos jogos principais no formato visual novel/investigação, Ultra Despair Girls adota combate em tempo real com câmera sobre o ombro.</li>
+                <li><strong>A Hacking Gun e Truth Bullets:</strong> Utilize a arma hacker desenvolvida pela Future Foundation para disparar diferentes tipos de munição especial (<em>Truth Bullets</em>), como <em>Paralyze</em> (paralisia) e <em>Link</em> (controle de inimigos). Customize seu arsenal com modificadores <em>Bling Bullet</em>.</li>
+                <li><strong>Enigmas e Quebra-cabeças:</strong> Desafie sua inteligência resolvendo puzzles espalhados pelo mapa e ultrapassando as armadilhas montadas pelas crianças da cidade.</li>
+                <li><strong>Parceria Dinâmica:</strong> Alterne entre o combate à distância com Komaru e o combate corpo a corpo devastador de Toko Fukawa / Genocide Jack.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 (64 bits)</li>
+                <li><strong>Processador:</strong> Intel Core i3-530 (2.93 GHz) ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 650 (1 GB) ou AMD Radeon HD 7700 (1 GB) [Compatível com DirectX 11]</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 18 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Placa compatível com DirectX 9.0c</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 (64 bits)</li>
+                <li><strong>Processador:</strong> Intel Core i3-530 (2.93 GHz) ou superior</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 650 (1 GB) ou AMD Radeon HD 7700 (1 GB) [Compatível com DirectX 11]</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 18 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Placa compatível com DirectX 9.0c</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/555950/ss_de6e9436c1e5297be2244604bccdc00cce64f33c.1920x1080.jpg?t=1715701294" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/555950/ss_410548318fde19764a68ba30a7ace0f19ab68f00.1920x1080.jpg?t=1715701294" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/555950/ss_5d17a26044ee031f42a617ecd25a585806cc9c6b.1920x1080.jpg?t=1715701294" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/555950/ss_9f61d9858ff9fb00df81483d171fc0c3bcae7519.1920x1080.jpg?t=1715701294" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/555950/ss_1cbeb3e411de67704e7ae55d04ff0e6828f23fef.1920x1080.jpg?t=1715701294" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/555950/Danganronpa_Another_Episode_Ultra_Despair_Girls/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+        `
+    },
+    "danganronpa-v3-killing-harmony": {
+        title: "Danganronpa V3: Killing Harmony",
+        addedAt: "2026-09-21",
+        categories: ["Visual Novel", "Mistério", "Investigação", "Anime", "Aventura"],
+        summary: "Um novo capítulo na franquia onde 16 estudantes Ultimates são sequestrados e mantidos presos em uma escola psicopata. Em meio a assassinatos brutais e investigações de alto risco, você precisará usar lógica, intuição e até mesmo mentiras para sobreviver aos Julgamentos da Classe.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/567640/header.jpg?t=1750134757",
+            data: {
+                "Desenvolvedor": "Spike Chunsoft Co., Ltd.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Visual Novel, Mistério, Investigação, Aventura",
+                "Plataformas": "PC (Windows), PlayStation 4, PS Vita, Nintendo Switch, iOS, Android",
+                "Classificação": "14+ (Violência, Conteúdo Sexual, Atos Criminosos)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Danganronpa V3: Killing Harmony</strong> é o terceiro título principal da aclamada franquia de aventura e investigação desenvolvida e publicada pela <strong>Spike Chunsoft</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Entre em um novo mundo de Danganronpa e prepare-se para o maior e mais instigante episódio da série. Ambientado em uma "escola psicopata" cercada por vegetação e segredos, um elenco inédito de 16 estudantes talentosos (Ultimates) é sequestrado e aprisionado.</p>
+            <p>Dentro desse confinamento, o infame Monokuma e seus "Monokubers" forçam os estudantes a participar de um novo jogo de assassinato. Alguns matarão, alguns morrerão e outros serão executados. Reimagine tudo o que você sabia sobre as investigações da série enquanto descobre os culpados por crimes perversos e guia os julgamentos até a verdade.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Um Novo Começo:</strong> Esqueça os acontecimentos anteriores e junte-se a um elenco completamente novo de estudantes Ultimates para uma história independente e cheia de reviravoltas.</li>
+                <li><strong>Assassinatos Misteriosos:</strong> Explore cenários macabros, colete evidências ("Truth Bullets") e questione suspeitos para desvendar as motivações por trás de cada crime.</li>
+                <li><strong>Mentiras, Pânico e Debate:</strong> Pela primeira vez na série, você pode usar <em>mentiras</em> propositais durante os Julgamentos da Classe para virar o jogo, desarmar argumentos falaciosos e conduzir os estudantes à conclusão correta.</li>
+                <li><strong>Novos Minijogos de Julgamento:</strong> Enfrente mecânicas inéditas como o <em>Scrum Debate</em> (onde a turma se divide em duas facções opostas), <em>Psyche Taxi</em> e <em>Mind Mine</em>.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 (64 bits)</li>
+                <li><strong>Processador:</strong> Intel Core i3-4170 @ 3.70 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 460 ou superior</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 26 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Placa de som compatível com DirectX ou chipset integrado</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 (64 bits)</li>
+                <li><strong>Processador:</strong> Intel Core i5-4690K @ 3.50 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 960 ou superior</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 26 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Placa de som compatível com DirectX ou chipset integrado</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/567640/ss_1082ae1d1ae6e2fbeca380166f8c10fa6e6bb0ea.1920x1080.jpg?t=1750134757" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/567640/ss_a3b1f7c070bcec8e9cbd68bc50180b0dd52c84b5.1920x1080.jpg?t=1750134757" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/567640/ss_0dc300d94128667dcaaecf31e5db83fc36540c7e.1920x1080.jpg?t=1750134757" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/567640/ss_c90bd34a6e88b122fc1d99f18cde58bc3706f685.1920x1080.jpg?t=1750134757" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/567640/Danganronpa_V3_Killing_Harmony/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+        `
+    },
+    "danganronpa-s-ultimate-summer-camp": {
+        title: "Danganronpa S: Ultimate Summer Camp",
+        addedAt: "2026-09-21",
+        categories: ["Tabuleiro", "RPG", "Anime", "Estratégia", "Crossover"],
+        summary: "Uma versão massivamente aprimorada do jogo de tabuleiro de Danganronpa V3. Reúna os personagens de toda a franquia em um acampamento de verão na Jabberwock Island para evoluir seus atributos, enfrentar os 200 andares da Tower of Despair e desbloquear novos trajes de banho e colecionáveis.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1691970/header.jpg?t=1715701297",
+            data: {
+                "Desenvolvedor": "Spike Chunsoft Co., Ltd.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Tabuleiro, RPG, Estratégia, Crossover",
+                "Plataformas": "PC (Windows), Nintendo Switch, PlayStation 4, iOS, Android",
+                "Classificação": "Livre / 6+ (Violência Fantasiosa)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Visão Geral" },
+            { id: "recursos", text: "2. Modos de Jogo e Recursos" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Danganronpa S: Ultimate Summer Camp</strong> é um spin-off de RPG e jogo de tabuleiro desenvolvido e publicado pela <strong>Spike Chunsoft</strong>, expandindo o popular minijogo <em>Ultimate Talent Development Plan</em> presente em <em>Danganronpa V3: Killing Harmony</em>.</p>
+
+            <h2 id="sinopse">Sinopse e Visão Geral</h2>
+            <p>O palco está montado no resort tropical de Jabberwock Island. Em uma celebração especial, personagens de todos os títulos da franquia Danganronpa se reúnem em um acampamento de verão sem as ameaças do jogo assassino original.</p>
+            <p>O jogo serve como o crossover dos sonhos para os fãs da série, reunindo mais de 1.000 cenas de eventos inéditas, interações únicas entre personagens de diferentes gerações e novos trajes de banho exclusivos para todo o elenco.</p>
+
+            <h2 id="recursos">Modos de Jogo e Recursos</h2>
+            <ul>
+                <li><strong>Desenvolvimento (Jogo de Tabuleiro):</strong> O modo principal no qual você evolui seus personagens ao longo de 50 dias (turnos) na ilha. Role os dados para avançar pelas casas, suba de nível, participe de eventos, adquira habilidades com Talent Fragments e enfrente inimigos e chefes posicionados por Monokuma.</li>
+                <li><strong>Modo Batalha (Tower of Despair):</strong> Monte uma equipe de até quatro personagens previamente desenvolvidos no tabuleiro e enfrente os 200 andares da <em>Tower of Despair</em>. Derrote hordas de monstros Monokuma em combates por turnos para obter Monokuma Medals.</li>
+                <li><strong>School Store (MonoMono Machine):</strong> Utilize as moedas e medalhas conquistadas nas batalhas para rodar a máquina gacha e desbloquear novos personagens com diferentes raridades (quanto maior a raridade, mais rápido eles evoluem) e colecionar ilustrações comemorativas e promocionais.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 Home (64 bits)</li>
+                <li><strong>Processador:</strong> Intel Core i5-750</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GT 740 (1 GB)</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 Home (64 bits)</li>
+                <li><strong>Processador:</strong> Intel Core i7-3770</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 1060 (6 GB)</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1691970/ss_ae034fb0e1627b95ccf63a750f80a16a48e7b8ad.1920x1080.jpg?t=1715701297" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1691970/ss_ee4ab3282810c360f6db02550b39cc80f3d23e5e.1920x1080.jpg?t=1715701297" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1691970/ss_3979526e934a39649167e89fde812f5474b76405.1920x1080.jpg?t=1715701297" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1691970/ss_baef57d49e2875305e03a6812f2ac4b4dee52418.1920x1080.jpg?t=1715701297" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1691970/Danganronpa_S_Ultimate_Summer_Camp/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],

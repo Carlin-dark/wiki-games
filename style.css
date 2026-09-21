@@ -18,6 +18,7 @@ body {
     background: linear-gradient(rgba(5, 7, 10, 0.4), rgba(5, 7, 10, 0.6)),
                 url('https://i.8upload.com/image/d174f2bbcb6548d7/22653953.png') no-repeat center top;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
 }
