@@ -2985,6 +2985,120 @@ const articlesDatabase = {
             </div>
         `
     },
+    "black-souls-2": {
+        title: "BLACK SOULS II",
+        addedAt: "2026-09-21",
+        categories: ["RPG", "Terror Psicológico", "Fantasia Sombria", "Eroge", "Aventura"],
+        summary: "Uma obra de fantasia sombria e terror psicológico inspirada em 'Alice no País das Maravilhas', focada na exploração de um mundo louco, combates mortais contra bestas demoníacas e um inquietante sistema de sanidade.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3855540/b1a169268bb89754248da4fded96ebda8f2f283a/header.jpg?t=1788921850",
+            data: {
+                "Desenvolvedor": "Sushi-Arai",
+                "Publicadora": "Otaku Plan",
+                "Gêneros": "RPG, Terror Psicológico, Fantasia Sombria, Eroge",
+                "Plataformas": "PC (Windows)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Jogabilidade e Sistema SEN" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais, Patches e Downloads" }
+        ],
+        content: `
+            <p><strong>BLACK SOULS II</strong> é um RPG de fantasia sombria e terror psicológico desenvolvido pela <strong>Sushi-Arai</strong> e publicado pela <strong>Otaku Plan</strong>, fortemente inspirado nos clássicos contos <em>"As Aventuras de Alice no País das Maravilhas"</em> e <em>"Através do Espelho"</em> de Lewis Carroll.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Desespero. Medo. Loucura, mais uma vez.</p>
+            <p>Em um mundo macabro e distorcido, você embarca em uma jornada sombria onde a linha entre a sanidade e a loucura se extingue. Seu objetivo principal e mais importante continua sendo encontrar Alice, enquanto explora cenários bizarros e enfrenta criaturas demoníacas em batalhas de vida ou morte.</p>
+            <p><em>※ Esta versão inclui todo o conteúdo expandido das 3 DLCs lançadas para o jogo.</em></p>
+
+            <h2 id="gameplay">Jogabilidade e Sistema SEN</h2>
+            <p><strong>Heroínas e Personagens:</strong></p>
+            <p>Nesta jornada, você encontrará 45 heroínas inspiradas no universo de Alice, transformadas em garotas encantadoras e perturbadoras:</p>
+            <ul>
+                <li>O Coelho Branco</li>
+                <li>O Gato de Cheshire</li>
+                <li>O Chapeleiro Maluco</li>
+                <li>A Lebre de Março</li>
+                <li>O Arganaz</li>
+                <li>A Duquesa</li>
+                <li>A Tartaruga Falsa</li>
+                <li>O Grifo</li>
+                <li>A Rainha de Copas</li>
+                <li>A Rainha Vermelha (entre muitas outras...)</li>
+            </ul>
+
+            <p><strong>● Sistema SEN (Sanidade):</strong></p>
+            <p>Todos os NPCs neste mundo podem ser mortos. No entanto, matar habitantes reduz drasticamente seu nível de <strong>SEN</strong> (Sanidade). Conforme seu SEN atinge níveis criticamente baixos, o mundo ao seu redor muda drasticamente:</p>
+            <ul>
+                <li>A música de fundo (BGM) desaparece por completo.</li>
+                <li>Os habitantes começam a falar em uma língua incompreensível e grotesca.</li>
+                <li>Coisas e aberrações que não deveriam ser vistas se tornam visíveis nos cenários.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10</li>
+                <li><strong>Processador:</strong> Processador de 3+ GHz</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> GPU compatível com DirectX 11 / OpenGL 4.1</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 11</li>
+                <li><strong>Processador:</strong> Processador de 3+ GHz</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Suporte ao driver de hardware OpenGL ES 2.0 (AMD Catalyst 10.9, nVidia 358.50)</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-II-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-II-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://steamonfire.com/wp-content/uploads/2025/12/BLACK-SOULS-II-direct-download.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://steamonfire.com/wp-content/uploads/2025/12/BLACK-SOULS-II-pc.jpg" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais, Patches e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Páginas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/3855540/BLACK_SOULS_II/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://otaku-plan.com/en/blacksouls2_en/" target="_blank"><i class="fa-solid fa-house"></i> Otaku Plan (EN)</a>
+                <a href="https://otaku-plan.net/games/3855540" target="_blank"><i class="fa-solid fa-shop"></i> Otaku Plan Net</a>
+            </div>
+
+            <p><i class="fa-solid fa-gears"></i> <strong>Patches em Inglês:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/QmjcMY" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch 1</a>
+                <a href="https://4br.me/6WyGZZDG" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch 2</a>
+                <a href="https://4br.me/DGyL" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch 3</a>
+                <a href="https://4br.me/Is2bjsD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch 4</a>
+            </div>
+
+            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/4YbM" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor RJ237469 (627 MB)</a>
+                <a href="https://4br.me/4pdLMG7s" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 (v1.1 & Uncensored)</a>
+                <a href="https://4br.me/a28SUEKSxZ" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 (v1.1 & All DLC)</a>
+                <a href="https://4br.me/kIZkG" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 3</a>
+                <a href="https://4br.me/uMWL8j" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 4 (EN/JP)</a>
+                <a href="https://4br.me/7mCRf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 5</a>
+                <a href="https://4br.me/eRDkRc1K0" target="_blank"><i class="fa-solid fa-download"></i> Download Torrent</a>
+            </div>
+            <p>🔑 <em>Senha do arquivo Servidor 4:</em> <code>123</code><br>
+            🔑 <em>Senha do arquivo Servidor 5:</em> <code>2026</code></p>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
