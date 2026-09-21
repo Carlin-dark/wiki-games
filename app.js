@@ -697,6 +697,23 @@ function renderDownloadWarning() {
     `;
 }
 
+function renderJoiplayInfo() {
+    return `
+        <section class="joiplay-panel">
+            <div class="joiplay-heading">
+                <h2><i class="fa-solid fa-mobile-screen-button"></i> Jogue no Android com JoiPlay</h2>
+                <span>Android</span>
+            </div>
+            <p><strong>Jogue seus jogos indie favoritos no Android.</strong> JoiPlay é um interpretador de jogos modular e um inicializador para jogos baseados em RPG Maker, Ren'Py, TyranoBuilder, Construct 2 e 3, Godot (GDScript), Adobe Flash e HTML5, sem necessidade de portabilidade nativa.</p>
+            <p>Baixe a versão do jogo para PC quando disponível, abra-a pelo JoiPlay e consulte a compatibilidade específica do jogo antes de instalar.</p>
+            <div class="play-links joiplay-links">
+                <a href="https://joiplay.net/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i> Site oficial</a>
+                <a href="https://joiplay.net/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download do JoiPlay</a>
+            </div>
+        </section>
+    `;
+}
+
 function renderAllGamesPage() {
     setPageBackground(null);
     const container = document.getElementById('article-container');
@@ -1193,6 +1210,7 @@ function renderPage() {
         htmlContent += `<div class="article-text">${article.content}</div>`;
 
         if (isGamePage) {
+            htmlContent += renderJoiplayInfo();
             htmlContent += renderDownloadWarning();
         }
 

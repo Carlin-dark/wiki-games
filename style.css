@@ -340,6 +340,43 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     text-decoration: none;
 }
 
+.joiplay-panel {
+    clear: both;
+    margin: 25px 0 18px;
+    padding: 16px 18px;
+    background: linear-gradient(135deg, rgba(24, 52, 70, 0.88), rgba(17, 28, 43, 0.92));
+    border: 1px solid #3e7894;
+    border-left: 4px solid #51c2d5;
+    border-radius: 4px;
+    color: #d9e8ee;
+}
+.joiplay-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+.joiplay-heading h2 {
+    margin: 0;
+    color: #f1fbff;
+    font-size: 18px;
+}
+.joiplay-heading h2 i { color: #51c2d5; }
+.joiplay-heading span {
+    padding: 4px 8px;
+    border: 1px solid rgba(81, 194, 213, 0.5);
+    border-radius: 3px;
+    color: #9de4ec;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.joiplay-panel p { margin: 8px 0; }
+.joiplay-panel strong { color: #fff; }
+.joiplay-links { margin-bottom: 0; }
+.joiplay-links a { background: rgba(11, 27, 40, 0.75); }
+
 .infobox {
     float: right;
     width: 280px;

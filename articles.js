@@ -7,6 +7,7 @@
  4. No 'toc' (Índice), coloque o 'id' e o 'text' de cada título da sua página.
  5. No 'content', escreva o texto em HTML. 
     DICA: Para criar um link para outro jogo, use <a href="#/nome-da-chave-do-jogo">Texto</a>.
+ 6. O painel com informações e download do JoiPlay é adicionado automaticamente a todas as páginas de jogos.
 ==========================================================================
 */
 
