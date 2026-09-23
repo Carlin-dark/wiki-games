@@ -3861,6 +3861,246 @@ const articlesDatabase = {
             </div>
         `
     },
+    "zero-escape-zero-time-dilemma": {
+        title: "Zero Escape: Zero Time Dilemma",
+        addedAt: "2026-09-22",
+        categories: ["Visual Novel", "Aventura", "Mistério", "Ficção Científica", "Quebra-cabeça"],
+        summary: "Capítulo final da aclamada trilogia Zero Escape. Presos em uma instalação subterrânea, nove participantes divididos em três equipes são forçados a participar de um jogo mortal onde a saída de emergência só se abrirá após seis mortes.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/header.jpg?t=1715700046",
+            data: {
+                "Desenvolvedor": "Spike Chunsoft Co., Ltd.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Aventura, Mistério, Ficção Científica, Quebra-cabeça",
+                "Plataformas": "PC (Windows), PlayStation 4, PS Vita, Xbox One, Nintendo 3DS",
+                "Classificação": "18+ (Violência, Temas Adultos)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "equipes", text: "2. Equipes e Personagens" },
+            { id: "gameplay", text: "3. Características e Jogabilidade" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "links", text: "6. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Zero Escape: Zero Time Dilemma</strong> é o terceiro e conclusivo capítulo da aclamada série de suspense e ficção científica criada por Kotaro Uchikoshi e desenvolvida pela <strong>Spike Chunsoft</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Não era para o experimento acabar assim. Nove participantes acordam no subsolo de uma instalação de testes de isolamento, presos pelos pulsos por estranhos braceletes pretos.</p>
+            <p>Para escapar, eles são forçados a participar do mortal "Decision Game". As regras impostas pelo misterioso mascarado Zero são simples: após a morte de seis participantes, a porta de saída de emergência se abrirá. Quem viverá e quem morrerá? A escolha está nas suas mãos em uma corrida contra o tempo cheia de dilemas morais profundos.</p>
+
+            <h2 id="equipes">Equipes e Personagens</h2>
+            <p>Os nove participantes estão divididos em três grupos distintos, cada um explorando diferentes setores do complexo subterrâneo:</p>
+            <ul>
+                <li><strong>Team C:</strong> Liderada por <strong>Carlos</strong> (um bombeiro destemido com forte senso de justiça), acompanhado por <strong>Junpei Tenmyouji</strong> (um detetive amargurado em busca do seu passado) e <strong>Akane Kurashiki</strong> (uma astuta estrategista de uma organização secreta).</li>
+                <li><strong>Team D:</strong> Liderada por <strong>Diana</strong> (uma enfermeira pacifista), acompanhada por <strong>Phi</strong> (uma jovem inteligente e direta) e <strong>Sigma Klim</strong> (um homem experiente cuja consciência habita um corpo mais jovem).</li>
+                <li><strong>Team Q:</strong> Liderada por <strong>Q</strong> (um garoto amnésico preso em um capacete esférico), acompanhado por <strong>Eric</strong> (um funcionário de sorveteria ansioso) e <strong>Mira</strong> (uma mulher fria e emocionalmente desapegada).</li>
+            </ul>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Pense do seu Jeito:</strong> Explore cenários 3D imersivos no estilo <em>Escape Room</em> em busca de pistas para resolver enigmas complexos.</li>
+                <li><strong>Jogo de Escolhas Cruciais:</strong> Coloque sua moralidade em teste tomando decisões de vida ou morte em que até as melhores opções carregam repercussões estarrecedoras.</li>
+                <li><strong>Narrativa Não Linear Fragmentada:</strong> Salte livremente entre linhas temporais, eventos e perspectivas de personagens para juntar o quebra-cabeça da história e desbloquear múltiplos finais.</li>
+                <li><strong>Apresentação Cinemática:</strong> Cenas de história inteiramente animadas e dubladas que elevam a imersão visual e dramática do jogo.</li>
+                <li><strong>Conclusão Épica:</strong> Reúne personagens marcantes de <em>Nine Hours, Nine Persons, Nine Doors (999)</em> e <em>Virtue's Last Reward</em> para encerrar os mistérios da franquia.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7</li>
+                <li><strong>Processador:</strong> Intel Core i3-530 (2.93 GHz) ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 650 (1 GB) ou AMD Radeon HD 7700 (1 GB) [Compatível com DirectX 11]</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Placa compatível com DirectX 9.0c</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7</li>
+                <li><strong>Processador:</strong> Intel Core i5-3570K (3.40 GHz) ou superior</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 650 (1 GB) ou AMD Radeon HD 7700 (1 GB) [Compatível com DirectX 11]</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Placa compatível com DirectX 9.0c</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_f71e31f1cd405a613a48764f4d75fc5646cc0d46.1920x1080.jpg?t=1715700046" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_580244bb4ffb4979803347a9e5707fc8a09bd09c.1920x1080.jpg?t=1715700046" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_455ea843113b192abddabcec738ca0970f7df9af.1920x1080.jpg?t=1715700046" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_2e363c88dabd6013051489ee93845f29e9be6319.1920x1080.jpg?t=1715700046" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/311240/Zero_Escape_Zero_Time_Dilemma/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://store.playstation.com/pt-br/product/UP1024-CUSA07593_00-ZEROESCAPE000000" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+                <a href="https://www.xbox.com/pt-BR/games/store/zero-escape-zero-time-dilemma/9p3lcdlhwnms" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
+                <a href="https://4br.me/ICqigmC" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 1)</a>
+                <a href="https://4br.me/Hqu9rlw" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 2)</a>
+                <a href="https://4br.me/z2MUSmZ" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 3)</a>
+            </div>
+        `
+    },
+    "slay-the-princess-the-pristine-cut": {
+        title: "Slay the Princess - The Pristine Cut",
+        addedAt: "2026-09-22",
+        categories: ["Visual Novel", "Terror Psicológico", "Aventura", "Indie", "Escolhas"],
+        summary: "Um visual novel de terror psicológico com escolhas de ramificações dramáticas e arte inteiramente feita à mão a lápis. Sua missão é ceifar a Princesa no porão de uma cabana isolada para salvar o mundo — mas cada decisão, dúvida e crença altera a própria realidade.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1989270/74a54248cfec29144de5e867a333c30e6d62801d/header.jpg?t=1775751748",
+            data: {
+                "Desenvolvedor": "Black Tabby Games",
+                "Publicadora": "Black Tabby Games",
+                "Gêneros": "Visual Novel, Terror Psicológico, Aventura, Indie",
+                "Plataformas": "PC (Windows, macOS, Linux), PlayStation 4, PlayStation 5, Xbox, Nintendo Switch",
+                "Classificação": "16+ (Violência, Temas Sensíveis, Medo)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "pristine-cut", text: "2. O Que Há no 'The Pristine Cut'?" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Redes Sociais" }
+        ],
+        content: `
+            <p><strong>Slay the Princess - The Pristine Cut</strong> é a versão definitiva e expandida do aclamado visual novel de terror psicológico desenvolvido e publicado pelo estúdio independente <strong>Black Tabby Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Você está em uma trilha na mata e, no final dela, encontra uma cabana isolada. No porão dessa cabana, há uma Princesa. Sua missão é simples e direta: <strong>ceifá-la para salvar o mundo</strong>.</p>
+            <p>No entanto, a Princesa fará de tudo para impedi-lo — ela mentirá, seduzirá e prometerá tudo o que você desejar. Se você vacilar, ela o matará repetidamente. Nesta jornada altamente ramificada, cada palavra dita, dúvida expressa e escolha tomada moldam não apenas a personalidade do protagonista, mas também a verdadeira forma e natureza da Princesa e do próprio universo.</p>
+
+            <h2 id="pristine-cut">O Que Há no "The Pristine Cut"?</h2>
+            <p>Esta edição expandida traz um acréscimo massivo de conteúdo à experiência original:</p>
+            <ul>
+                <li><strong>3 Novos Capítulos:</strong> Mistérios inéditos e ramificações com consequências devastadoras.</li>
+                <li><strong>Novas Princesas:</strong> Encontros com novas variações da Princesa prontas para testar a sua determinação.</li>
+                <li><strong>Rotas Expandidas:</strong> As rotas <em>O Covil (The Den)</em>, <em>A Apoteose (The Apotheosis)</em> e <em>A Fúria (The Fury)</em> tiveram suas durações mais que dobradas.</li>
+                <li><strong>Mais de 35% de Conteúdo Extra:</strong> Adição de um novo final inédito que busca salvar o mundo de uma vez por todas.</li>
+                <li><strong>Novo Recurso de Galeria:</strong> Acompanhe seu progresso, relembre memórias, reviva conquistas e descubra segredos profundos.</li>
+                <li><strong>Arte e Áudio Expandidos:</strong> Mais de 1.200 novos quadros desenhados tradicionalmente a lápis por Abby Howard e mais de 2.500 novas linhas de diálogo dubladas por Jonathan Sims e Nichole Goodnight.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / macOS / Linux (recentes)</li>
+                <li><strong>Processador:</strong> Quad Core de 2.6 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Gráficos Integrados</li>
+                <li><strong>Armazenamento:</strong> 13 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1989270/ss_5262a1ed60b5f1f8419f0c0be3dafa92a7167eba.1920x1080.jpg?t=1775751748" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1989270/ss_d48a0403c8ce84a614120fa419109151f166fb40.1920x1080.jpg?t=1775751748" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1989270/ss_9d91e5ccfe3f0ee5484054d7b535d4a3209e3c0e.1920x1080.jpg?t=1775751748" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Redes Sociais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1989270/Slay_the_Princess__The_Pristine_Cut/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://store.playstation.com/pt-br/product/UP0604-CUSA49893_00-0051989719815455" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+                <a href="https://blacktabbygames.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial</a>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3354529871" target="_blank"><i class="fa-brands fa-steam-symbol"></i> Guia da Comunidade Steam</a>
+                <a href="https://discord.com/invite/xCnAeqkkEY" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
+                <a href="https://bsky.app/profile/blacktabbygames.com" target="_blank"><i class="fa-solid fa-square-share-nodes"></i> Bluesky</a>
+                <a href="https://x.com/blacktabbygames" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+                <a href="https://www.youtube.com/channel/UC6bbk3AuxgkmTlIqmTgv2mQ/" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+                <a href="https://www.twitch.tv/black_tabby_games/" target="_blank"><i class="fa-brands fa-twitch"></i> Canal na Twitch</a>
+            </div>
+        `
+    },
+    "the-book-of-shadows": {
+        title: "The Book of Shadows",
+        addedAt: "2026-09-22",
+        categories: ["RPG", "JRPG", "Indie", "Aventura", "Fantasia"],
+        summary: "Um RPG clássico de fantasia e aventura onde Alex e sua namorada Talia acidentalmente ativam um livro misterioso, sendo transportados para o mundo de Esteron. Enfrente perigos, controle múltiplos personagens e proteja o artefato de forças malignas.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1419870/header.jpg?t=1730471193",
+            data: {
+                "Desenvolvedor": "Tiny Goblin Productions",
+                "Publicadora": "Aldorlea Games",
+                "Gêneros": "RPG, JRPG, Indie, Aventura",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "10+ (Violência)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Redes Sociais" }
+        ],
+        content: `
+            <p><strong>The Book of Shadows</strong> é um RPG independente em estilo clássico e retrô, desenvolvido pela <strong>Tiny Goblin Productions</strong> e publicado pela <strong>Aldorlea Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>O que acontece quando você e sua namorada encontram um livro misterioso e o ativam sem querer? Foi exatamente isso que ocorreu com Alex e Talia.</p>
+            <p>Após a ativação do artefato, Alex é subitamente transportado para o desconhecido e misterioso mundo de Esteron, enquanto Talia acaba possuída por uma entidade desconhecida. Para piorar a situação, a ativação do tomo despertou a atenção de diversas facções perigosas que desejam tomar o poder do livro para fins nefastos. Alex precisará se manter um passo à frente de seus inimigos enquanto busca entender a verdadeira natureza do livro e encontrar um meio de salvar sua namorada.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Campanha Extensa:</strong> Mais de 40 horas de jogabilidade envolvente distribuídas ao longo de 9 capítulos.</li>
+                <li><strong>Múltiplos Personagens Jogáveis:</strong> Assuma o controle de até 11 personagens diferentes com estilos de combate e personalidades próprias.</li>
+                <li><strong>Sistema de Árvore de Habilidades:</strong> Escolha exatamente quais feitiços e técnicas aprender conforme seus personagens sobem de nível.</li>
+                <li><strong>Fear Level System:</strong> Desenvolva o poder do seu grupo a ponto de fazer com que os monstros sintam medo e fujam de você no mapa.</li>
+                <li><strong>Exploração Rica:</strong> Encontre 50 salas secretas escondidas com tesouros e desafios especiais.</li>
+                <li><strong>Conveniências Modernas:</strong> Suporte completo para controle via mouse, salvamento automático e encontros visíveis no mapa.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows XP / Vista / 7 / 8 / 10</li>
+                <li><strong>Processador:</strong> 2 GHz</li>
+                <li><strong>Memória RAM:</strong> 128 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Placa compatível com DirectX 9.0</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 500 MB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Compatível com DirectX 9.0</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1419870/ss_ce5f020f0a56051abf92914b5acb15fc535f781d.1920x1080.jpg?t=1730471193" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1419870/ss_9e751dd6859f45a5978abeeef2003c89ecebfd94.1920x1080.jpg?t=1730471193" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1419870/ss_b29b2f118606afddf7d970ae8e0ccf5a41d45e9a.1920x1080.jpg?t=1730471193" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1419870/ss_d2057cb1105ba4f5539d591d7541ccb215e3c492.1920x1080.jpg?t=1730471193" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1419870/ss_83925818efa2b7518728ab3b6e8d8c9ffc032ec4.1920x1080.jpg?t=1730471193" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Redes Sociais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1419870/The_Book_of_Shadows/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.aldorlea.org/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Aldorlea)</a>
+                <a href="https://discord.com/invite/pSVd3fAxgM" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
+                <a href="https://x.com/Indinera" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+                <a href="https://www.youtube.com/aldorlea" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+                <a href="https://www.facebook.com/aldorlea" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Oficial</a>
+            </div>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
