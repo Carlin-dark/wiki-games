@@ -4394,6 +4394,320 @@ const articlesDatabase = {
             </div>
         `
     },
+    "otakus-adventure": {
+        title: "Otaku's Adventure",
+        addedAt: "2026-09-23",
+        categories: ["Aventura", "Indie", "RPG", "Comédia", "Visual Novel"],
+        summary: "Um jogo de aventura (AVG) atípico sobre um jovem otaku solteiro há anos em busca do amor. Misturando narrativa envolvente, enigmas estilo escape room (TAKAGISM) e diversos minijogos, embarque em uma jornada bizarra para conquistar o coração de diferentes garotas.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/header.jpg?t=1667193086",
+            data: {
+                "Desenvolvedor": "Spacelight Studio",
+                "Publicadora": "Spacelight Studio",
+                "Gêneros": "Aventura, Indie, RPG, Visual Novel",
+                "Plataformas": "PC (Windows), iOS, Android",
+                "Classificação": "10+ (Violência Fantasiosa)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Otaku's Adventure</strong> é um jogo de aventura e navegação no estilo AVG bastante peculiar, desenvolvido e publicado pela <strong>Spacelight Studio</strong>. O título conta com localização oficial em Português do Brasil realizada em parceria com o grupo <em>Zero Force Translations</em>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>A trama acompanha um jovem otaku que passou anos solteiro e deseja desesperadamente encontrar o amor verdadeiro. Quando ele inadvertidamente embarca em uma jornada inacreditável e fantástica, surge a oportunidade de conquistar o afeto de diferentes garotas.</p>
+
+            <p>Cada uma das garotas possui uma linha narrativa completamente distinta, levando o protagonista a enfrentar situações absurdas, batalhas inesperadas, viagens espaciais e mistérios bizarros. O destino de seu relacionamento dependerá das escolhas e habilidades do jogador em meio a um humor único e imprevisível.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Controles Simples e Acessíveis:</strong> Jogabilidade intuitiva baseada em cliques, arrastar e soltar itens usando o mouse.</li>
+                <li><strong>Histórias Diversificadas:</strong> Diferentes rotas para cada garota, oferecendo enredos totalmente variados e com tom cômico envolvente.</li>
+                <li><strong>Enigmas Estilo TAKAGISM:</strong> Puzzles inspirados no formato clássico de "Escape Room" para desafiar seu raciocínio.</li>
+                <li><strong>Coleção de Minijogos e Combates:</strong> Intercalado com a narrativa, o jogo apresenta diversos minijogos e estilos de batalhas variados para enriquecer a experiência.</li>
+                <li><strong>Múltiplos Finais:</strong> Uma grande variedade de Finais Inesperados e cômicos para desbloquear ao longo de cada rota.</li>
+                <li><strong>Localização em Português (PT-BR):</strong> Tradução completa para o português do Brasil.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8 / 8.1 / 10 (32/64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo ou superior</li>
+                <li><strong>Memória RAM:</strong> 2 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Intel HD Graphics 4000 ou superior</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_950229ece5c025549f5c3914ae9b958585f1aae3.1920x1080.jpg?t=1667193086" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_2379ca120d654a34019c48bf5a0d8f658bebb300.1920x1080.jpg?t=1667193086" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_790f7c74dba613aacf0c7233b27693f13838114e.1920x1080.jpg?t=1667193086" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_fb40d534300ce0d55c594009b848a8842455aa6f.1920x1080.jpg?t=1667193086" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_57727121e8b22948854174992a7cdfdd36d9b350.1920x1080.jpg?t=1667193086" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/937170/Otakus_Adventure/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://steamcommunity.com/app/937170" target="_blank"><i class="fa-brands fa-steam"></i> Comunidade Steam</a>
+                <a href="https://apps.apple.com/br/app/otakus-adventure/id1614795077" target="_blank"><i class="fa-brands fa-apple"></i> App Store (iOS)</a>
+                <a href="https://www.taptap.io/br/app/233165" target="_blank"><i class="fa-solid fa-mobile-screen"></i> TapTap (Demo)</a>
+                <a href="https://4br.me/MUFHD" target="_blank"><i class="fa-solid fa-download"></i> Download APK v1.2.3</a>
+            </div>
+        `
+    },
+    "fate-hollow-ataraxia-remastered": {
+        title: "Fate/hollow ataraxia REMASTERED",
+        addedAt: "2026-09-23",
+        categories: ["Visual Novel", "Aventura", "Anime", "Fantasia", "Mistério"],
+        summary: "Remasterização em Full HD do clássico romance visual da TYPE-MOON. Ambientado seis meses após os eventos da Quinta Guerra do Santo Graal, vivencie um ciclo temporal de quatro dias onde Shirou Emiya e a maga Bazett Fraga McRemitz tentam desvendar a verdade por trás de uma nova ameaça.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/3f9699f3c1b9ac8519f89f46c1ab6f7db9e48fe8/header.jpg?t=1771568121",
+            data: {
+                "Desenvolvedor": "TYPE-MOON, fuzz Inc.",
+                "Publicadora": "Aniplex Inc.",
+                "Gêneros": "Aventura, Visual Novel, Anime",
+                "Plataformas": "PC (Windows), Nintendo Switch",
+                "Classificação": "14+ (Violência)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Fate/hollow ataraxia REMASTERED</strong> é a versão remasterizada em alta definição do renomado romance visual desenvolvido pela <strong>TYPE-MOON</strong> em colaboração com a <strong>fuzz Inc.</strong> e publicado pela <strong>Aniplex Inc.</strong></p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Seis meses se passaram desde o fim da Quinta Guerra do Santo Graal. Shirou Emiya e seus companheiros estão reajustados a uma rotina diária tranquila e pacífica em Fuyuki. No entanto, em uma mansão desolada nos arredores da cidade, desperta a maga Bazett Fraga McRemitz, ex-Mestre na guerra, acompanhada por um misterioso Servant de oitava classe chamado Avenger.</p>
+            <p>Com o início de um estranho loop temporal que faz com que os mesmos quatro dias se repitam continuamente, Shirou e Bazett precisam explorar a cidade, enfrentar mistérios ocultos e tentar sobreviver enquanto desvendam a verdade por trás desta nova anomalia no Santo Graal.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Visual Remasterizado em Full HD:</strong> Baseado na versão de 2014, conta com artes e visuais totalmente aprimorados para telas de alta resolução.</li>
+                <li><strong>Localização Oficial em Inglês:</strong> Pela primeira vez na história do título, o jogo inclui textos traduzidos oficialmente para o inglês e chinês simplificado.</li>
+                <li><strong>Estrutura de Loop Temporal de 4 Dias:</strong> Explore a cidade de Fuyuki livremente alternando entre dia e noite para interagir com personagens emblemáticos e descobrir novas rotas na história.</li>
+                <li><strong>Minijogos Inclusos:</strong>
+                    <ul>
+                        <li><em>Jump! Tiger&Shorts Hanafuda Travel Journal EX (Excellion)</em></li>
+                        <li><em>Rise! Operation Super Space-Time Tiger&Shorts Hanafuda</em></li>
+                        <li><em>Tempest Illya's Castle ~Assault! Einzbern~</em></li>
+                        <li><em>Better Fortune Tohsaka Shrine</em></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core de 4ª geração ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Intel HD Graphics (suporte a OpenGL 3.1)</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 16 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 / 11 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core de 6ª geração ou AMD Ryzen</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 660 / GTX 760 / GTX 950 / GTX 1050 / GTX 1650 ou superior (3 GB VRAM)</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 16 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/e5e04301bdfa0804a8aafc68022ec7dd6f1dc325/ss_e5e04301bdfa0804a8aafc68022ec7dd6f1dc325.1920x1080.jpg?t=1771568121" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/9e77082d504a83e85e8a90a037018dabff4e312f/ss_9e77082d504a83e85e8a90a037018dabff4e312f.1920x1080.jpg?t=1771568121" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/3cddd7138501374b18af32149dbef4287e9c85c4/ss_3cddd7138501374b18af32149dbef4287e9c85c4.1920x1080.jpg?t=1771568121" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/7a7edd8d877077856f8af17141766e0faf4975f3/ss_7a7edd8d877077856f8af17141766e0faf4975f3.1920x1080.jpg?t=1771568121" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/f6b85fe10689343e3161bda16481b3022c547f93/ss_f6b85fe10689343e3161bda16481b3022c547f93.1920x1080.jpg?t=1771568121" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/0a3c1fdda02634c18b5955014939bfe2b4cc97bd/ss_0a3c1fdda02634c18b5955014939bfe2b4cc97bd.1920x1080.jpg?t=1771568121" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2396990/Fatehollow_ataraxia_REMASTERED/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.nintendo.com/pt-br/store/products/fate-hollow-ataraxia-remastered-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+                <a href="https://typemoon.com/products/f-ha/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (TYPE-MOON)</a>
+                <a href="https://x.com/Fate_SN_Game" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+                <a href="https://www.youtube.com/@TYPE-MOON_GAMES" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+                <a href="https://4br.me/YaJr0f8nB" target="_blank"><i class="fa-solid fa-download"></i> Download (SteamRIP - Senha: 123)</a>
+                <a href="https://4br.me/9pGz4o9ph5" target="_blank"><i class="fa-solid fa-magnet"></i> Download Torrent</a>
+                <a href="https://4br.me/UiJCAiZek" target="_blank"><i class="fa-solid fa-download"></i> Download Direto</a>
+            </div>
+        `
+    },
+    "tomoyo-after-its-a-wonderful-life": {
+        title: "Tomoyo After ~It's a Wonderful Life~",
+        addedAt: "2026-09-23",
+        categories: ["Visual Novel", "Aventura", "Casual", "RPG", "Estratégia", "Drama", "Romance"],
+        summary: "A sequência do aclamado romance visual CLANNAD que dá continuidade ao final da rota de Tomoyo Sakagami. Acompanhe a jornada de Tomoya e Tomoyo em um verão inesquecível cuidando de novos membros na casa, com direito ao minijogo de RPG tático 'Dungeon & Takafumis'.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/header.jpg",
+            data: {
+                "Desenvolvedor": "VisualArts / Key",
+                "Publicadora": "VisualArts",
+                "Gêneros": "Aventura, Casual, RPG, Estratégia, Visual Novel",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "12+ (Nudez, Violência)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Tomoyo After ~It's a Wonderful Life~</strong> é uma visual novel dramática desenvolvida pelo estúdio <strong>Key</strong> (autores de <em>CLANNAD</em>, <em>Air</em> e <em>Kanon</em>) e publicada pela <strong>VisualArts</strong>, servindo como uma sequência direta da rota de Tomoyo no clássico <em>CLANNAD</em>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Após se formar no ensino médio, Tomoya Okazaki começa a trabalhar em uma empresa de coleta de resíduos na periferia da cidade. Vivendo de forma independente em seu próprio apartamento, ele desfruta de uma rotina calma e feliz ao lado de sua namorada, Tomoyo Sakagami.</p>
+
+            <p>A tranquilidade do casal é interrompida quando Takafumi, irmão de Tomoyo, traz até o apartamento a jovem Tomo, uma criança ilegítima de seu pai que foi abandonada pela mãe. Relutantes, Tomoya e Tomoyo concordam em cuidar da garota. Para complicar ainda mais a convivência, Kanako, a ex-namorada de Takafumi, foge de casa antes das férias de verão e também passa a morar no local. Assim começa o primeiro e último verão que os cinco passarão juntos.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Continuação Oficial de CLANNAD:</strong> Experiência narrativa aprofundada focada na vida adulta dos personagens e no amadurecimento dos relacionamentos.</li>
+                <li><strong>Dublagem Completa em Japonês:</strong> História totalmente dublada com a atuação de talentos consagrados como Yuichi Nakamura e Hikaru Isshiki.</li>
+                <li><strong>Minijogo RPG "Dungeon & Takafumis":</strong> Inclui um RPG tático de estratégia completo, trazendo os personagens em uma ambientação de fantasia com horas extras de conteúdo comovente e cômico.</li>
+                <li><strong>Recurso Tomopedia:</strong> Glossário integrado exclusivo da versão em inglês que fornece explicações sobre termos culturais e costumes japoneses citados ao longo da narrativa.</li>
+                <li><strong>Trilha Sonora Emocionante:</strong> Produzida por Shinji Orito, Magome Togoshi e Jun Maeda, incluindo o tema principal "Light colors" interpretado pela cantora Lia.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8 / Vista</li>
+                <li><strong>Processador:</strong> Pentium III 1.0 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 128 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Resolução 800 x 600, 16-bit</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10</li>
+                <li><strong>Processador:</strong> Pentium 4 2.0 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 256 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Resolução 800 x 600, 24-bit / 32-bit</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_3817862f76315f7e9b207cb26c68f1c7822fc889.1920x1080.jpg?t=1732683261" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_6656b4951a4f4989505c06e30b4c1e52abe2d5b9.1920x1080.jpg?t=1732683261" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_7e2d74a20c4025386a87bfc43c06f54817d001ca.1920x1080.jpg?t=1732683261" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_2e895580271dda0427a76b6b2a9d9f349af5a7eb.1920x1080.jpg?t=1732683261" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_5522d84cf2a87cdb0e52030333c90ece24b5ee35.1920x1080.jpg?t=1732683261" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_c1f636de08c99ab9a0923059b0df6939772245dd.1920x1080.jpg?t=1732683261" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/462990/Tomoyo_After_Its_a_Wonderful_Life_English_Edition/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://4br.me/q7gkSY3P" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo (Opção 1)</a>
+                <a href="https://4br.me/u59JcNigsY" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo (Opção 2)</a>
+            </div>
+            <p><small><em>Nota: Senha do arquivo compactado: <code>ryuugames.com</code> ou <code>ryuublogger.com</code></em></small></p>
+        `
+    },
+    "clannad-side-stories": {
+        title: "CLANNAD Side Stories",
+        addedAt: "2026-09-23",
+        categories: ["Visual Novel", "Casual", "Anime", "Drama", "Aventura"],
+        summary: "Uma coleção de histórias paralelas lineares que se passam no universo de CLANNAD. Conhecido no Japão como 'CLANNAD Hikari Mimamoru Sakamichi de', explore momentos inéditos e aprofunde o conhecimento sobre os personagens da cidade de Hikarizaka.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/d6ccf871e353f99c0bab14f27fe33bbcab9b99ad/header.jpg?t=1770346311",
+            data: {
+                "Desenvolvedor": "VisualArts / Key",
+                "Publicadora": "Sekai Project",
+                "Gêneros": "Casual, Visual Novel, Anime",
+                "Plataformas": "PC (Windows), PSP",
+                "Classificação": "Livre"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>CLANNAD Side Stories</strong> (originalmente conhecido no Japão como <em>CLANNAD Hikari Mimamoru Sakamichi de</em>) é uma coletânea de contos narrativos em formato de visual novel desenvolvida pelo lendário estúdio <strong>VisualArts / Key</strong> e publicada no Ocidente pela <strong>Sekai Project</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Aprofunde-se ainda mais no emocionante universo de <em>CLANNAD</em> e experimente histórias que vão além da jornada apresentada no romance visual original. Esta coleção de contos lineares permite explorar novos ângulos, reviravoltas e momentos cotidianos dos personagens favoritos da pequena cidade de Hikarizaka.</p>
+            <p>Estes capítulos abordam perspectivas e eventos que não foram mostrados na visual novel principal nem na famosa adaptação em anime, trazendo novos detalhes sobre as vidas de Tomoya Okazaki, Nagisa Furukawa e diversos outros habitantes enquanto buscam aconchego, amizade e pertencimento.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Histórias Inéditas e Lineares:</strong> Uma coletânea de capítulos focados no desenvolvimento de lore e no aprofundamento dos personagens sem ramificações complexas.</li>
+                <li><strong>Conteúdo Exclusivo:</strong> Histórias escritas para expandir os laços afetivos e o passado das figuras mais marcantes de Hikarizaka.</li>
+                <li><strong>Ativos em Alta Resolução (HD):</strong> Lançado originalmente para o PSP, esta versão para PC conta com artes atualizadas para a resolução de 1280x960.</li>
+                <li><strong>Tradução Oficial em Inglês:</strong> Pela primeira vez disponível oficialmente no Ocidente com localização completa dos textos.</li>
+                <li><strong>Atmosfera Original do Estúdio Key:</strong> Mantém a trilha sonora emocionante e a sensibilidade narrativa características da franquia.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows XP / Vista / 7 / 8 (32-bit ou 64-bit)</li>
+                <li><strong>Processador:</strong> Intel Pentium 4 @ 1.2 GHz</li>
+                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Suporte a resolução 1280x960 (DirectX 9.0c)</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_04faef38d701308b089a7dda41a32be5a80974ff.1920x1080.jpg?t=1770346311" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_c277ac6e14a102a8d9f535ea64280db79ca233a4.1920x1080.jpg?t=1770346311" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_46d1f3c8e77d46159d25b877b50efbd6dd876b97.1920x1080.jpg?t=1770346311" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_0ccbdbcb9f2d799cc72e37372d3e609778836748.1920x1080.jpg?t=1770346311" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/420100/CLANNAD_Side_Stories/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://4br.me/ywLilECD" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo</a>
+            </div>
+            <p><small><em>Nota: Senha do arquivo compactado: <code>ryuugames.com</code> ou <code>ryuublogger.com</code></em></small></p>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
