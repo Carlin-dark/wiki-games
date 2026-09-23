@@ -236,7 +236,7 @@ const articlesDatabase = {
             <div class="mods-link-panel">
                 <strong><i class="fa-solid fa-puzzle-piece"></i> Mods de Doki Doki Literature Club!</strong>
                 <p>Explore mods do jogo reunidos em uma página, com pesquisa por nome, autor, descrição e gênero.</p>
-                <a href="${buildAppHref('/mods/doki-doki-literature-club')}" class="mod-download"><i class="fa-solid fa-list"></i> Ver página de mods</a>
+                <a href="/mods/doki-doki-literature-club" class="mod-download"><i class="fa-solid fa-list"></i> Ver página de mods</a>
             </div>
             
             <h2 id="sinopse">Sinopse</h2>
