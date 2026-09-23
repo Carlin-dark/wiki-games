@@ -8,19 +8,23 @@
     <script>
         (function() {
             try {
+                const basePath = (window.location.hostname.endsWith('github.io') && window.location.pathname.split('/').filter(Boolean)[0])
+                    ? '/' + window.location.pathname.split('/').filter(Boolean)[0]
+                    : '';
                 const rawPath = window.location.pathname || '/';
                 const route = rawPath
+                    .replace(new RegExp('^' + basePath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/?'), '')
                     .replace(/^\/+|\/+$/g, '')
                     .replace(/index\.html$/, '')
                     .replace(/^\?/, '');
 
-                const target = route && route !== '' ? '/?route=' + encodeURIComponent(route) : '/';
+                const target = route && route !== '' ? (basePath || '') + '/?route=' + encodeURIComponent(route) : (basePath || '') + '/';
                 setTimeout(function() {
                     window.location.replace(target);
                 }, 3000);
             } catch (error) {
                 setTimeout(function() {
-                    window.location.replace('/');
+                    window.location.replace((window.location.origin + (window.location.pathname.includes('/wiki-games') ? '/wiki-games' : '')) || '/');
                 }, 3000);
             }
         })();

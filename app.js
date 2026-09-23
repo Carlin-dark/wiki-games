@@ -139,8 +139,8 @@ function renderMyListPage() {
         <div class="all-games-grid my-list-grid">
             ${games.length ? games.map(({ route, game }) => `
                 <article class="all-game-card">
-                    <a href="/${route}" class="game-card-image-link">${gameCoverMarkup(route, game)}</a>
-                    <div class="all-game-card-content"><div class="game-card-heading"><h3><a href="/${route}">${game.title}</a></h3>${favoriteButton(route, true)}</div><p>${game.summary || ''}</p></div>
+                    <a href="${buildAppHref(`/${route}`)}" class="game-card-image-link">${gameCoverMarkup(route, game)}</a>
+                    <div class="all-game-card-content"><div class="game-card-heading"><h3><a href="${buildAppHref(`/${route}`)}">${game.title}</a></h3>${favoriteButton(route, true)}</div><p>${game.summary || ''}</p></div>
                 </article>`).join('') : '<div class="all-games-empty">Você ainda não favoritou nenhum jogo.</div>'}
         </div>
     `;
@@ -215,7 +215,7 @@ async function getRatedGamesMarkup(services, targetUid) {
             const gameName = game?.title || gameId || 'Jogo desconhecido';
             const value = Number(rating.rating);
             const stars = Array.from({ length: 5 }, (_, index) => `<i class="fa-${index < value ? 'solid' : 'regular'} fa-star"></i>`).join('');
-            return `<div class="profile-rating-item"><a href="/?route=${encodeURIComponent(gameId)}">${escapeHtml(gameName)}</a><span class="profile-rating-stars" aria-label="Nota ${value} de 5">${stars}</span><strong>${value}/5</strong></div>`;
+            return `<div class="profile-rating-item"><a href="${buildAppHref(`/?route=${encodeURIComponent(gameId)}`)}">${escapeHtml(gameName)}</a><span class="profile-rating-stars" aria-label="Nota ${value} de 5">${stars}</span><strong>${value}/5</strong></div>`;
         }).join('')}</div>`;
     } catch (error) {
         logFirebaseError(`Falha ao carregar avaliações do perfil ${targetUid}`, error);
@@ -282,6 +282,28 @@ function escapeHtml(value) {
     return String(value || '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
 }
 
+function getSiteBasePath() {
+    const hostname = window.location.hostname || '';
+    const pathname = window.location.pathname || '/';
+    const pathParts = pathname.split('/').filter(Boolean);
+    const firstSegment = pathParts[0];
+
+    if (hostname.endsWith('github.io') && firstSegment) {
+        return `/${firstSegment}`;
+    }
+
+    return '';
+}
+
+function buildAppHref(path) {
+    const value = String(path || '').trim();
+    if (!value || value === '/') return getSiteBasePath() || '/';
+    if (/^(https?:)?\/\//i.test(value)) return value;
+    if (value.startsWith('?') || value.startsWith('#')) return `${getSiteBasePath() || ''}${value}`;
+    const normalized = value.startsWith('/') ? value : `/${value}`;
+    return `${getSiteBasePath()}${normalized}`;
+}
+
 function getAgeRatingConfig(value) {
     const text = String(value || '').trim();
     const normalised = text.toLowerCase();
@@ -329,7 +351,7 @@ function renderClassificationBadge(value) {
 function gameCoverMarkup(route, game, className = '') {
     const imageUrl = game?.infobox?.image || '';
     const trailerData = getTrailerData(game);
-    return `<img class="game-cover${className ? ` ${className}` : ''}" src="${escapeHtml(imageUrl)}" alt="Capa de ${escapeHtml(game?.title || '')}" loading="lazy" data-game-id="${escapeHtml(route)}" data-game-title="${escapeHtml(game?.title || '')}" data-game-url="${escapeHtml(new URL(`/${route}`, window.location.origin).href)}" data-highres-cover="${escapeHtml(imageUrl)}"${trailerData?.watchUrl ? ` data-trailer-url="${escapeHtml(trailerData.watchUrl)}"` : ''}>`;
+    return `<img class="game-cover${className ? ` ${className}` : ''}" src="${escapeHtml(imageUrl)}" alt="Capa de ${escapeHtml(game?.title || '')}" loading="lazy" data-game-id="${escapeHtml(route)}" data-game-title="${escapeHtml(game?.title || '')}" data-game-url="${escapeHtml(buildAppHref(`/${route}`))}" data-highres-cover="${escapeHtml(imageUrl)}"${trailerData?.watchUrl ? ` data-trailer-url="${escapeHtml(trailerData.watchUrl)}"` : ''}>`;
 }
 
 function enhanceGameCovers(root = document) {
@@ -337,13 +359,13 @@ function enhanceGameCovers(root = document) {
         const link = image.closest('a');
         if (!link) return;
         const url = new URL(link.href, window.location.origin);
-        const route = url.searchParams.get('route') || url.pathname.replace(/^\/+|\/+$/g, '');
+        const route = url.searchParams.get('route') || url.pathname.replace(/^\/+|\/+$/g, '').replace(new RegExp(`^${getSiteBasePath().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/?`), '');
         const game = articlesDatabase[route];
         if (!game?.infobox?.image) return;
         image.classList.add('game-cover');
         image.dataset.gameId = route;
         image.dataset.gameTitle = game.title;
-        image.dataset.gameUrl = new URL(`/${route}`, window.location.origin).href;
+        image.dataset.gameUrl = buildAppHref(`/${route}`);
         image.dataset.highresCover = game.infobox.image;
         const trailerData = getTrailerData(game);
         if (trailerData?.watchUrl) image.dataset.trailerUrl = trailerData.watchUrl;
@@ -357,7 +379,7 @@ function getHomeGames() {
 }
 
 function renderHomeGameCard(route, game, extra = '') {
-    return `<article class="home-game-item"><a href="/${route}" class="home-card">${gameCoverMarkup(route, game)}<span>${escapeHtml(game.title)}</span></a>${extra ? `<small>${extra}</small>` : ''}</article>`;
+    return `<article class="home-game-item"><a href="${buildAppHref(`/${route}`)}" class="home-card">${gameCoverMarkup(route, game)}<span>${escapeHtml(game.title)}</span></a>${extra ? `<small>${extra}</small>` : ''}</article>`;
 }
 
 function renderHomeSection(title, icon, items, emptyMessage, sectionClass = '') {
@@ -481,7 +503,7 @@ function renderPublicListCard(list) {
     const games = Array.isArray(list.games) ? list.games : (list.gameRoutes || []);
     const authorId = escapeHtml(list.authorId || '');
     const authorName = escapeHtml(list.authorName || list.ownerName || 'Usuário');
-    return `<article class="public-list-card"><h2>${escapeHtml(list.title || 'Lista sem título')}</h2><p>${games.length} jogo${games.length === 1 ? '' : 's'} · Por <a href="/?route=perfil&uid=${encodeURIComponent(list.authorId || '')}">${authorName}</a></p>${list.description ? `<p>${escapeHtml(list.description)}</p>` : ''}<div>${games.map(route => articlesDatabase[route] ? `<a href="/${route}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${window.location.origin}/?route=listas&list=${encodeURIComponent(list.id)}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`;
+    return `<article class="public-list-card"><h2>${escapeHtml(list.title || 'Lista sem título')}</h2><p>${games.length} jogo${games.length === 1 ? '' : 's'} · Por <a href="${buildAppHref(`/?route=perfil&uid=${encodeURIComponent(list.authorId || '')}`)}">${authorName}</a></p>${list.description ? `<p>${escapeHtml(list.description)}</p>` : ''}<div>${games.map(route => articlesDatabase[route] ? `<a href="${buildAppHref(`/${route}`)}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${new URL(buildAppHref(`/?route=listas&list=${encodeURIComponent(list.id)}`), window.location.origin).href}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`;
 }
 
 function setupChat(route, container) {
@@ -502,7 +524,7 @@ function setupChat(route, container) {
         messages.innerHTML = values.length ? values.map(item => {
             const profileId = item.userId || item.uid;
             const author = escapeHtml(item.author || 'Usuário');
-            const authorMarkup = profileId ? `<a class="chat-author" href="/?route=perfil&uid=${encodeURIComponent(profileId)}">${author}</a>` : `<strong>${author}</strong>`;
+            const authorMarkup = profileId ? `<a class="chat-author" href="${buildAppHref(`/?route=perfil&uid=${encodeURIComponent(profileId)}`)}">${author}</a>` : `<strong>${author}</strong>`;
             return `<p>${authorMarkup} ${escapeHtml(item.text)}</p>`;
         }).join('') : '<span>Nenhuma mensagem ainda.</span>';
         messages.scrollTop = messages.scrollHeight;
@@ -545,7 +567,7 @@ function setupAccount() {
         const avatar = user.photoURL ? `<img src="${user.photoURL}" alt="">` : '<i class="fa-solid fa-user"></i>';
         const adminBadge = isAdminUser(user) ? '<i class="fa-solid fa-crown admin-crown" title="Administrador do site" aria-label="Administrador do site"></i>' : '';
         button.innerHTML = `${avatar}<span>${user.displayName || user.email.split('@')[0]}</span>${adminBadge}`;
-        menu.innerHTML = `<strong>${user.displayName || user.email} ${adminBadge}</strong><a href="/?route=perfil"><i class="fa-solid fa-id-card"></i> Meu perfil</a><a href="/?route=minha-lista"><i class="fa-solid fa-heart"></i> Minha Lista</a><button data-auth-action="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>`;
+        menu.innerHTML = `<strong>${user.displayName || user.email} ${adminBadge}</strong><a href="${buildAppHref('/?route=perfil')}"><i class="fa-solid fa-id-card"></i> Meu perfil</a><a href="${buildAppHref('/?route=minha-lista')}"><i class="fa-solid fa-heart"></i> Minha Lista</a><button data-auth-action="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>`;
         loadFavorites(user).then(() => {
             if (getRouteInfo().route === 'minha-lista') renderMyListPage();
         }).catch(() => { favoritesLoadedFor = user.uid; favoriteRoutes = []; });
@@ -612,10 +634,13 @@ function getRouteInfo() {
     }
 
     const routeFromQuery = searchParams.get('route') || '';
-
-    const normalizedPath = pathnameValue.endsWith('/index.html') || pathnameValue.endsWith('index.html') || pathnameValue === '/'
+    const rootPath = pathnameValue.replace(/^\/+|\/+$/g, '');
+    const basePath = getSiteBasePath().replace(/^\/+|\/+$/g, '');
+    const normalizedPath = rootPath === basePath || !rootPath
         ? 'home'
-        : pathnameValue.replace(/^\/+|\/+$/g, '');
+        : rootPath.startsWith(`${basePath}/`)
+            ? rootPath.slice(basePath.length + 1)
+            : rootPath;
 
     const rawRoute = routeFromHash || routeFromQuery || normalizedPath || 'home';
     const [route, anchor] = rawRoute.split('#');
@@ -628,10 +653,11 @@ function getRouteInfo() {
 
 function buildRoutePath(route) {
     const cleanRoute = String(route || 'home').replace(/^\/+|\/+$/g, '');
+    const base = getSiteBasePath();
     if (!cleanRoute || cleanRoute === 'home') {
-        return '/';
+        return base ? `${base}/` : '/';
     }
-    return '/' + cleanRoute;
+    return `${base}/${cleanRoute}`;
 }
 
 function navigateToRoute(route) {
@@ -653,7 +679,7 @@ function isInternalAppLink(href) {
         const url = new URL(href, window.location.origin);
         if (url.origin !== window.location.origin) return false;
 
-        const cleanPath = url.pathname.replace(/^\/+|\/+$/g, '');
+        const cleanPath = getRouteInfo().route === 'home' ? 'home' : url.pathname.replace(/^\/+|\/+$/g, '').replace(new RegExp(`^${getSiteBasePath().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/?`), '');
         const cleanQuery = url.searchParams.get('route');
 
         if (cleanQuery) return true;
@@ -832,9 +858,9 @@ function renderAllGamesPage() {
             const game = articlesDatabase[key];
             return `
                 <article class="all-game-card">
-                    <a href="/${key}" class="game-card-image-link">${gameCoverMarkup(key, game)}</a>
+                    <a href="${buildAppHref(`/${key}`)}" class="game-card-image-link">${gameCoverMarkup(key, game)}</a>
                     <div class="all-game-card-content">
-                        <div class="game-card-heading"><h3><a href="/${key}">${game.title}</a></h3>${favoriteButton(key, true)}</div>
+                        <div class="game-card-heading"><h3><a href="${buildAppHref(`/${key}`)}">${game.title}</a></h3>${favoriteButton(key, true)}</div>
                         <p>${game.summary}</p>
                     </div>
                 </article>
@@ -861,7 +887,7 @@ function renderModsPage(gameKey) {
 
     container.innerHTML = `
         <h1><i class="fa-solid fa-puzzle-piece"></i> Mods de ${modsPage.gameTitle}</h1>
-        <p class="mods-intro">Mods reunidos para <a href="/${modsPage.gameRoute}">${modsPage.gameTitle}</a>. Pesquise somente nesta coleção ou filtre por gênero.</p>
+        <p class="mods-intro">Mods reunidos para <a href="${buildAppHref(`/${modsPage.gameRoute}`)}">${modsPage.gameTitle}</a>. Pesquise somente nesta coleção ou filtre por gênero.</p>
         <div class="advanced-filters mods-filters">
             <div class="filter-row">
                 <label class="filter-field">
@@ -1001,7 +1027,7 @@ function renderAllModsPage() {
                 <article class="mod-card">
                     <img class="zoomable-image" src="${mod.cover}" alt="Capa de ${mod.title}" loading="lazy">
                     <div class="mod-card-content">
-                        <p class="mod-game-link"><i class="fa-solid fa-gamepad"></i> <a href="/${mod.gameRoute}">${mod.gameTitle}</a></p>
+                        <p class="mod-game-link"><i class="fa-solid fa-gamepad"></i> <a href="${buildAppHref(`/${mod.gameRoute}`)}">${mod.gameTitle}</a></p>
                         <h2>${mod.title}</h2>
                         <p class="mod-author">Criado por: <strong>${mod.author}</strong></p>
                         <div class="mod-tags"><span>${mod.type || 'Mod de jogo'}</span>${mod.genres.map(genre => `<span>${genre}</span>`).join('')}</div>
@@ -1205,7 +1231,7 @@ function renderPage() {
         if (foundGames.length > 0) {
             html += `<ul class="category-list">`;
             foundGames.forEach(g => {
-                html += `<li><a href="/${g.key}"><h3>${g.title}</h3></a><p>${g.summary}</p></li>`;
+                html += `<li><a href="${buildAppHref(`/${g.key}`)}"><h3>${g.title}</h3></a><p>${g.summary}</p></li>`;
             });
             html += `</ul>`;
         } else {
@@ -1247,7 +1273,7 @@ function renderPage() {
         if (article.toc && article.toc.length > 0) {
             htmlContent += `<div class="toc"><div class="toc-title">Índice</div><ul>`;
             article.toc.forEach(item => {
-                htmlContent += `<li><a href="/${route}#${item.id}">${item.text}</a></li>`;
+                htmlContent += `<li><a href="${buildAppHref(`/${route}#${item.id}`)}">${item.text}</a></li>`;
             });
             htmlContent += `</ul></div>`;
         }
@@ -1282,7 +1308,7 @@ function renderPage() {
 
         if (article.categories) {
             htmlContent += `<hr style="margin: 30px 0 15px;"><p style="font-size:13px;"><i class="fa-solid fa-tags"></i> <strong>Categorias:</strong> `;
-            const catLinks = article.categories.map(cat => `<a href="/?route=categoria/${createSlug(cat)}">${cat}</a>`);
+            const catLinks = article.categories.map(cat => `<a href="${buildAppHref(`/?route=categoria/${createSlug(cat)}`)}">${cat}</a>`);
             htmlContent += catLinks.join(' | ') + `</p>`;
         }
 
@@ -1353,7 +1379,7 @@ function renderPage() {
         container.innerHTML = `
             <h1><i class="fa-solid fa-triangle-exclamation"></i> Erro 404 - Artigo não encontrado</h1>
             <p>O artigo que você tentou acessar não existe na nossa base de dados.</p>
-            <p>Volte para a <a href="/?route=home">Página Inicial</a> ou use a barra de busca acima.</p>
+            <p>Volte para a <a href="${buildAppHref('/?route=home')}">Página Inicial</a> ou use a barra de busca acima.</p>
         `;
     }
 }
@@ -1623,7 +1649,7 @@ if (searchInput && searchResults) searchInput.addEventListener('input', function
     if (results.length > 0) {
         results.forEach(res => {
             const a = document.createElement('a');
-            a.href = `/${res.key}`;
+            a.href = buildAppHref(`/${res.key}`);
             a.innerHTML = `<i class="fa-solid fa-gamepad"></i> ${res.title}`;
             a.onclick = () => {
                 searchResults.style.display = 'none';
@@ -1655,7 +1681,7 @@ document.addEventListener('click', function (e) {
     const route = url.searchParams.get('route') || url.pathname.replace(/^\/+|\/+$/g, '') || 'home';
     const profileId = url.searchParams.get('uid');
     if (profileId) {
-        history.pushState({}, '', `/?route=${encodeURIComponent(route)}&uid=${encodeURIComponent(profileId)}`);
+        history.pushState({}, '', buildAppHref(`/?route=${encodeURIComponent(route)}&uid=${encodeURIComponent(profileId)}`));
         renderPage();
     } else {
         navigateToRoute(route);
