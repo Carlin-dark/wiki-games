@@ -282,6 +282,50 @@ function escapeHtml(value) {
     return String(value || '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
 }
 
+function getAgeRatingConfig(value) {
+    const text = String(value || '').trim();
+    const normalised = text.toLowerCase();
+
+    if (/sem\s+restri[cç][aã]o/i.test(normalised)) {
+        return { label: 'Sem restrição', className: 'rating-badge--white' };
+    }
+
+    if (/\b(?:livre|l)\b/i.test(normalised) && !/[0-9]/.test(text)) {
+        return { label: 'Livre (L)', className: 'rating-badge--green' };
+    }
+
+    if (/\+?6\+?/i.test(text)) {
+        return { label: '+6', className: 'rating-badge--pink' };
+    }
+
+    if (/\+?10\+?/i.test(text)) {
+        return { label: '+10', className: 'rating-badge--blue' };
+    }
+
+    if (/\+?12\+?/i.test(text)) {
+        return { label: '+12', className: 'rating-badge--yellow' };
+    }
+
+    if (/\+?14\+?/i.test(text)) {
+        return { label: '+14', className: 'rating-badge--orange' };
+    }
+
+    if (/\+?16\+?/i.test(text)) {
+        return { label: '+16', className: 'rating-badge--red' };
+    }
+
+    if (/\+?18\+?/i.test(text)) {
+        return { label: '+18', className: 'rating-badge--black' };
+    }
+
+    return { label: text || 'Classificação', className: 'rating-badge--neutral' };
+}
+
+function renderClassificationBadge(value) {
+    const config = getAgeRatingConfig(value);
+    return `<span class="rating-badge ${config.className}">${escapeHtml(config.label)}</span>`;
+}
+
 function gameCoverMarkup(route, game, className = '') {
     const imageUrl = game?.infobox?.image || '';
     const trailerData = getTrailerData(game);
@@ -1194,7 +1238,8 @@ function renderPage() {
                     ${gameCoverMarkup(route, article, 'zoomable-image')}
                 <table>`;
             for (const [key, value] of Object.entries(article.infobox.data)) {
-                htmlContent += `<tr><th>${key}</th><td>${value}</td></tr>`;
+                const cellValue = key === 'Classificação' ? renderClassificationBadge(value) : escapeHtml(value);
+                htmlContent += `<tr><th>${escapeHtml(key)}</th><td>${cellValue}</td></tr>`;
             }
             htmlContent += `</table></div>`;
         }

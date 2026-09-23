@@ -4101,6 +4101,299 @@ const articlesDatabase = {
             </div>
         `
     },
+    "corpse-party-2-dead-patient": {
+        title: "Corpse Party 2: Dead Patient",
+        addedAt: "2026-09-23",
+        categories: ["Terror", "Sobrevivência", "Aventura", "Indie", "Anime"],
+        summary: "A estudante Ayame acorda de um coma presa a uma mesa de operação em um hospital abandonado e sinistro. Ambientado 5 anos após Corpse Party: Blood Drive, explore os corredores macabros do hospital Amare Patriarcha Crucis e lute para sobreviver.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/header.jpg?t=1732213819",
+            data: {
+                "Desenvolvedor": "Team GrisGris",
+                "Publicadora": "XSEED Games, Marvelous USA, Inc.",
+                "Gêneros": "Terror, Aventura, Indie",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "18+ (Violência Extrema, Medo, Linguagem Imprópria)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Corpse Party 2: Dead Patient</strong> é o início de um novo capítulo episódico na renomada e aterrorizante franquia de terror japonesa, desenvolvido pelo estúdio indie <strong>Team GrisGris</strong> e publicado pela <strong>XSEED Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>A estudante do ensino médio Ayame Itou acorda de um coma em um hospital misterioso e aparentemente abandonado chamado <em>Amare Patriarcha Crucis</em>, presa a uma mesa de operação. Sem memórias claras de seu passado e sem entender como foi parar ali, ela logo descobre que as saídas do local estão seladas por trancas pesadas e persianas de aço.</p>
+            <p>Conforme explora os corredores revirados e ensanguentados, Ayame percebe que não está sozinha. Além de outros sobreviventes e figuras hostis, o hospital abriga aberrações inumanas e espíritos vingativos. Se passar cinco anos após os eventos de <em>Corpse Party: Blood Drive</em>, o jogo estabelece uma nova história envolvente enquanto mantém conexões marcantes com o passado da franquia.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Nova Experiência de Terror Episódico:</strong> Troque os corredores da escola primária por um hospital em quarentena repleto de zumbis, aberrações sobrenaturais e sombras atormentadas. Inclui também o <em>Extra Chapter 1</em> sob a perspectiva de um antigo conhecido.</li>
+                <li><strong>Retorno da Equipe Indie ao PC:</strong> Gráficos 3D em visão superior (top-down) com iluminação dinâmica, controle em 360°, dublagem emocional em japonês e uma trilha sonora marcante composta por Mao Hamamoto.</li>
+                <li><strong>Mecânicas de Sobrevivência Aprimoradas:</strong> Corra, arremesse objetos para distrair perseguidores, esconda-se em armários e equipar itens para interagir diretamente com o ambiente e resolver enigmas.</li>
+                <li><strong>Batalhas de Chefes Verdadeiras:</strong> Enfrente chefes desafiadores pela primeira vez desde a estreia da franquia no PC-98 em 1996.</li>
+                <li><strong>Edição Aprimorada (NEUES):</strong> Conta com batalhas de chefes reformuladas, cenas de história adicionais e melhorias de jogabilidade sugeridas pela comunidade.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> AMD FX-6300</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> AMD Radeon RX 550 / NVIDIA GeForce GTX 750 Ti</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> Intel Core i5-6400</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> AMD Radeon R9 270 / NVIDIA GeForce GTX 950</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_c6e46782089ad6e0031277411db9658e74fc3b6b.1920x1080.jpg?t=1732213819" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_2041d2c5c3446e5a4898c5f990b842e629453ce8.1920x1080.jpg?t=1732213819" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_e327a66d1a6d53e283f93b14a7ed85a8a2d73df1.1920x1080.jpg?t=1732213819" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_bbd6b17bd18e3d58aa9112ba868b4941302bfd8d.1920x1080.jpg?t=1732213819" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_e75a5621d72db3d797b1cff19f4b9830cd13b00c.1920x1080.jpg?t=1732213819" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_8889ad962d9789b74856cb051cb84b14c4aa0caf.1920x1080.jpg?t=1732213819" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/940310/Corpse_Party_2_Dead_Patient/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.corpsepartyseries.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial da Série</a>
+                <a href="https://discord.com/invite/xseedgames" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
+                <a href="https://x.com/xseedgames" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+                <a href="https://www.youtube.com/xseedgames" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+                <a href="https://www.instagram.com/xseedgames" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/XSEEDGames/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://4br.me/6d1mkmu" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 1)</a>
+                <a href="https://4br.me/IopNTHpCw" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 2)</a>
+                <a href="https://4br.me/MYPwFAB90" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 3)</a>
+                <a href="https://4br.me/rR1FQ" target="_blank"><i class="fa-solid fa-magnet"></i> Download Torrent</a>
+            </div>
+        `
+    },
+    "corpse-party-book-of-shadows": {
+        title: "Corpse Party: Book of Shadows",
+        addedAt: "2026-09-23",
+        categories: ["Terror", "Visual Novel", "Aventura", "Anime", "Mistério"],
+        summary: "Uma antologia de terror que funciona como sequência, prequência e linha temporal alternativa de Corpse Party. Explore os corredores amaldiçoados de Heavenly Host em primeira pessoa no estilo point-and-click e tente evitar os trágicos 'Wrong Ends'.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778390/header.jpg?t=1787119396",
+            data: {
+                "Desenvolvedor": "MAGES. Inc., 5pb.",
+                "Publicadora": "XSEED Games, Marvelous USA, Inc.",
+                "Gêneros": "Aventura, Terror, Visual Novel",
+                "Plataformas": "PC (Windows), PSP",
+                "Classificação": "18+ (Violência Extrema, Temas Sensíveis, Linguagem Imprópria)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Corpse Party: Book of Shadows</strong> é um jogo de aventura e terror psicológico no formato de visual novel desenvolvido pela <strong>MAGES. Inc. (5pb.)</strong> sob a supervisão do <strong>Team GrisGris</strong> e publicado pela <strong>XSEED Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Esta antologia expande o universo de <em>Corpse Party</em> explorando incidentes passados, segredos não revelados e realidades alternativas do ritual realizado na escola primária amaldiçoada Heavenly Host. O jogo permite re-visitar eventos anteriores sob novas perspectivas e alterar escolhas para escapar de mortes trágicas — abrindo caminho para novos (e nem sempre melhores) destinos.</p>
+            <p>O que teria acontecido se os estudantes tivessem uma vaga consciência do pesadelo antes que ele ocorresse? E se Mayu nunca tivesse conversado com as crianças fantasmas, ou se Seiko tivesse sido alcançada a tempo por Naomi? Além dessas realidades alternativas, a história detalha como personagens secundários foram parar na escola e investiga o mistério por trás do nefasto livro conhecido como "Book of Shadows".</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Exploração em Primeira Pessoa (Point-and-Click):</strong> Cenários em primeira pessoa imersivos e detalhados com o modo <em>Search Mode</em>, permitindo investigar minunciosamente cada ambiente usando mouse, teclado ou controle.</li>
+                <li><strong>Áudio 3D Binaural em Japonês:</strong> Dublagem completa em japonês gravada com microfones binaurais 3D, proporcionando uma experiência de áudio imersiva e assustadora ao jogar com fones de ouvido.</li>
+                <li><strong>Sistema de Obscurecimento (Darkening System):</strong> Conforme os personagens testemunham horrores, sua sanidade se deteriora, distorcendo os gráficos e alterando a capacidade de tomada de decisão, podendo levar a dezenas de perturbadores <em>Wrong Ends</em>.</li>
+                <li><strong>Foco Expandido no Elenco Secundário:</strong> Maior desenvolvimento de história e tempo de tela para os personagens que tiveram papéis menores no título original.</li>
+                <li><strong>Bônus Desbloqueáveis e Importação de Save:</strong> Conquistas Steam, galerias de arte, entrevistas com o elenco e faixas de áudio. Jogadores que possuem dados salvos do primeiro <em>Corpse Party</em> desbloqueiam artes adicionais e acesso antecipado ao capítulo final.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows XP / Vista / 7 / 8 / 10</li>
+                <li><strong>Processador:</strong> 1.5 GHz</li>
+                <li><strong>Memória RAM:</strong> 512 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 64 MB VRAM (Aceleradora 3D compatível com DirectX 9.0c)</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 6 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Compatível com DirectX 9.0c</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778390/ss_fe8b103c9d565a981d8eda8cc0ee094946e78f0e.1920x1080.jpg?t=1787119396" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778390/ss_6583afdce5afe71d4b8c6b4ba526dc92edb0b8b1.1920x1080.jpg?t=1787119396" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778390/ss_009e35bd1491f30fcb17f0fc932fb41089a9fc3c.1920x1080.jpg?t=1787119396" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778390/ss_f476a8d1703278cc2c26ce90bf4b4ee4603c8e26.1920x1080.jpg?t=1787119396" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778390/ss_1e50905bb3ca59abac813b72bf6108735e98ef86.1920x1080.jpg?t=1787119396" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778390/ss_b5afe793debd2df73e0207b692de526019015ca1.1920x1080.jpg?t=1787119396" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/778390/Corpse_Party_Book_of_Shadows/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+        `
+    },
+    "corpse-party-blood-drive": {
+        title: "Corpse Party: Blood Drive",
+        addedAt: "2026-09-23",
+        categories: ["Terror", "Aventura", "Sobrevivência", "Anime", "Visual Novel"],
+        summary: "Dois meses após os eventos de Book of Shadows, Corpse Party: Blood Drive é o capítulo final e conclusivo do arco de Heavenly Host. Explore a escola amaldiçoada em cenários 3D com iluminação dinâmica, desvie de armadilhas e enfrente os horrores definitivos.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/header.jpg?t=1787116099",
+            data: {
+                "Desenvolvedor": "Team GrisGris, MAGES., 5pb.",
+                "Publicadora": "XSEED Games, Marvelous USA, Inc.",
+                "Gêneros": "Terror, Aventura, Sobrevivência",
+                "Plataformas": "PC (Windows), PS Vita, Nintendo Switch, iOS, Android",
+                "Classificação": "16+ (Violência Extrema, Medo, Conteúdo Sensível)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Corpse Party: Blood Drive</strong> é a conclusão definitiva e eletrizante do longo arco da escola Heavenly Host, desenvolvido pela <strong>Team GrisGris</strong> em parceria com a <strong>MAGES. / 5pb.</strong> e publicado pela <strong>XSEED Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Dois meses se passaram desde os trágicos eventos de <em>Corpse Party: Book of Shadows</em>. Embora alguns alunos da Turma 2-9 da Academia Kisaragi tenham conseguido retornar do pesadelo, muitos morreram no processo — e os sobreviventes lutam diariamente para preservar as memórias daqueles que foram apagados da existência.</p>
+            <p>A única esperança de reverter as tragédias reside no livro proibido conhecido como <em>Book of Shadows</em>. A representante de classe, Ayumi Shinozaki, tenta usar o poder do tomo mais uma vez, mas suas tentativas resultam em novos infortúnios. Quando uma fotografia espiritual sugere que o artefato ainda está escondido nas ruínas de Heavenly Host, Ayumi parte em uma busca obsessiva para consertar seus erros passados, desencadeando a maior e mais perigosa jornada de sua vida.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Capítulo Final da Saga Heavenly Host:</strong> Uma campanha extensa contendo 11 capítulos principais e 8 capítulos extras repletos de revelações e reviravoltas impactantes.</li>
+                <li><strong>Ambientes 3D com Iluminação Dinâmica:</strong> Pela primeira vez na série principal, navegue pela infame escola primária em ambientes 3D ricos em detalhes com o auxílio de uma lanterna.</li>
+                <li><strong>Nove Mecânicas de Sobrevivência:</strong> Corra de perseguidores, desarme armadilhas espalhadas pelo cenário, esconda-se em armários e gerencie seus recursos para se manter vivo.</li>
+                <li><strong>Áudio 3D Binaural e Dublagem Completa:</strong> Trilha sonora imersiva e vozes originais em japonês gravadas com microfones binaurais para criar um clima de terror envolvente e intimidador.</li>
+                <li><strong>Visual Remasterizado em HD:</strong> Gráficos completamente repaginados em alta definição para PC, taxa de quadros aprimorada e o retorno do temido <em>Darkening System</em> (Sistema de Obscurecimento).</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> Intel Core i3 Dual Core @ 2.5 GHz</li>
+                <li><strong>Memória RAM:</strong> 2 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Intel UHD Graphics 620 (1 GB VRAM)</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_bdd3a4e2748f88ca6a4b284afa0eb3e3e00d11ca.1920x1080.jpg?t=1787116099" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_94d06fe9e47512dc8cd0a51523a51bdf61f32df6.1920x1080.jpg?t=1787116099" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_d6e98dc37c16945bcc2952bec9fa944ad83fdaee.1920x1080.jpg?t=1787116099" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_12709259e788fa697a8c7f45b54cf4fb568aa77e.1920x1080.jpg?t=1787116099" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_48c14e693e67862b9cddb2b8a8b47a57d9aba59e.1920x1080.jpg?t=1787116099" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_9baf7a43385558e5aac584a7cc9d13f1b61a154d.1920x1080.jpg?t=1787116099" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/824830/Corpse_Party_Blood_Drive/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://4br.me/5mbKMzsw" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo</a>
+            </div>
+        `
+    },
+    "corpse-party": {
+        title: "Corpse Party",
+        addedAt: "2026-09-23",
+        categories: ["Terror", "Aventura", "Indie", "Anime", "Visual Novel"],
+        summary: "O clássico cult de terror onde um grupo de estudantes realiza o ritual 'Sachiko Ever After' e é transportado para a horripilante escola primária amaldiçoada Heavenly Host. Explore corredores decadentes, resolva mistérios e tente sobreviver aos espíritos vingativos.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/251270/header.jpg?t=1740426499",
+            data: {
+                "Desenvolvedor": "GrisGris, Grindhouse",
+                "Publicadora": "XSEED Games, Marvelous USA, Inc.",
+                "Gêneros": "Terror, Aventura, Indie",
+                "Plataformas": "PC (Windows), PSP, PS Vita, Nintendo 3DS",
+                "Classificação": "18+ (Violência Extrema, Medo, Linguagem Imprópria)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Corpse Party</strong> é a versão original para PC do aclamado jogo de terror psicológico independente desenvolvido pela <strong>GrisGris / Grindhouse</strong> e publicado mundialmente pela <strong>XSEED Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>A estudante da Academia Kisaragi, Mayu Suzumoto, está prestes a se transferir de escola. Para marcar a despedida, sua amiga Ayumi organiza o ritual "Sachiko Ever After", uma simpatia aparentemente inofensiva encontrada na internet destinada a selar a amizade do grupo para sempre.</p>
+            <p>Porém, o ritual falha terrivelmente. Um violento terremoto arrasta os estudantes para uma dimensão paralela contendo as ruínas da escola primária Heavenly Host — uma instituição assombrada por tragédias que foi demolida anos atrás e sobre a qual a própria Academia Kisaragi foi construída. Separados em pequenos grupos, os alunos precisam enfrentar espíritos vingativos de crianças assassinadas enquanto tentam desvendar os segredos macabros do local para escapar com vida.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Visual Retrô com Foco no Clima:</strong> Gráficos 2D no estilo 16-bit inspirados na versão original desenvolvida no RPG Maker. O contraste entre o visual retrô e as descrições macabras estimula a imaginação do jogador para um horror psicológico profundo.</li>
+                <li><strong>Aventura Baseada em Escolhas:</strong> Misturando navegação estilo aventura point-and-click e exploração JRPG clássico (sem combates), cada decisão e local visitado afeta diretamente o destino dos personagens e o final da história.</li>
+                <li><strong>Narrativa em Capítulos e Conteúdo Exclusivo de PC:</strong> Dividido em 5 capítulos principais com múltiplos finais, além de 4 capítulos bônus — incluindo a recriação exclusiva para PC da história "Tooth", adaptada do universo de <em>Corpse Party: Book of Shadows</em>.</li>
+                <li><strong>Dublagem Original em Japonês:</strong> Mais de 5.000 linhas de diálogos dublados em japonês pelo elenco indie original, complementados pelas ilustrações clássicas dos personagens e um recurso de avanço rápido para facilita replays.</li>
+                <li><strong>O Início do Fenômeno:</strong> O título de 2008 que deu origem ao grande sucesso da franquia no Japão, gerando sequências, spin-offs, mangás, animes e filmes live-action, além de inspirar diversos jogos do gênero.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows XP / Vista / 7 / 8 / 10</li>
+                <li><strong>Processador:</strong> 1.5 GHz</li>
+                <li><strong>Memória RAM:</strong> 512 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 64 MB VRAM (Aceleradora 3D compatível com DirectX 9.0c)</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Compatível com DirectX 9.0c</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/251270/ss_b956e86565e4796ea0088e3649ef955f5479265e.1920x1080.jpg?t=1740426499" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/251270/ss_4ceedb62aa51e2d728fe8253a113b2f22ae100dc.1920x1080.jpg?t=1740426499" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/251270/ss_2a56560193980163f0648b26c1cf081791870cb9.1920x1080.jpg?t=1740426499" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/251270/ss_76aa56571524f28ef75a2fa668d076907fa38699.1920x1080.jpg?t=1740426499" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/251270/Corpse_Party/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+        `
+    },
     "mad-father": {
         title: "Mad Father",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
