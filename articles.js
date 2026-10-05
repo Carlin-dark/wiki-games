@@ -1693,11 +1693,12 @@ const articlesDatabase = {
 
             <hr>
             <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/1451940/NEEDY_STREAMER_OVERLOAD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
-                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
-            </div>
+          <div class="play-links">
+             <a href="https://store.steampowered.com/app/1451940/NEEDY_STREAMER_OVERLOAD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+             <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+             <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
+             <a href="https://4br.me/EpB9ZHYhYN" target="_blank"><i class="fa-solid fa-download"></i> Download Direct</a>
+         </div>
         `
     },
     "the-coffin-of-andy-and-leyley": {
