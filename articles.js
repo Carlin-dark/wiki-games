@@ -4807,6 +4807,7 @@ const articlesDatabase = {
     "nekopara-vol-1": {
         title: "NEKOPARA Vol. 1",
         addedAt: "2026-10-07",
+        youtubeId: "z1rZVgpC8xc",
         categories: ["Casual", "Indie", "Visual Novel", "Comédia", "Anime"],
         summary: "Uma popular visual novel de comédia romântica criada pela NEKO WORKs. Acompanhe Kashou Minaduki ao abrir sua própria patisserie, a La Soleil, ao lado das adoráveis catgirls Chocola e Vanilla.",
         infobox: {
