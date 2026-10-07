@@ -4641,6 +4641,278 @@ const articlesDatabase = {
             <p><small><em>Nota: Senha do arquivo compactado: <code>ryuugames.com</code> ou <code>ryuublogger.com</code></em></small></p>
         `
     },
+    "ib": {
+        title: "Ib",
+        addedAt: "2026-10-07",
+        categories: ["Aventura", "Indie", "Terror", "Puzzle", "Exploração", "Pixel Art"],
+        summary: "Um aclamado jogo de aventura e terror psicológico em 2D ambientado em uma galeria de arte misteriosa. Controle a jovem Ib enquanto explora exposições surreais, desarma armadilhas, resolve quebra-cabeças e tenta encontrar uma saída de um museu vivo e aterrorizante.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/header.jpg?t=1779842056",
+            data: {
+                "Desenvolvedor": "kouri",
+                "Publicadora": "PLAYISM",
+                "Gêneros": "Aventura, Indie, Terror, Puzzle",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "12+ (Violência, Temas Perturbadores)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Ib</strong> é um aclamado jogo de aventura, exploração e terror psicológico em 2D criado pelo desenvolvedor independente <strong>kouri</strong> e publicado pela <strong>PLAYISM</strong>. Lançado originalmente em 2012, este remake completo em HD traz visuais totalmente refeitos, novas mecânicas e enigmas inéditos.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Uma garotinha chamada Ib visita uma galeria de arte acompanhada de seus pais para prestigiar a exposição do renomado e misterioso artista Weiss Guertena.</p>
+            <p>Enquanto passeia pelo museu observando as diversas esculturas e pinturas, Ib de repente percebe que o local ficou completamente deserto. Ao procurar por qualquer outra pessoa, as luzes falham e a própria galeria começa a se transformar de maneira arrepiante. As obras de arte ganham vida e o prédio se torna um pesadelo surreal do qual Ib precisará escapar.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Foco em Puzzles e Exploração:</strong> A jogabilidade é acessível para todos os tipos de jogadores, sem combates violentos ou necessidade de reflexos rápidos. A progressão depende da inspeção minuciosa de cenários e resolução de enigmas.</li>
+                <li><strong>Múltiplos Finais:</strong> Conta com sete finais distintos que são determinados diretamente pelas ações, escolhas e relacionamentos desenvolvidos ao longo da jornada.</li>
+                <li><strong>Modo de Foco:</strong> Novo recurso da versão remasterizada que permite dar zoom nos cenários para encontrar itens pequenos com facilidade e observar as obras de arte em ricos detalhes.</li>
+                <li><strong>Sistema de Conversa:</strong> Permite que os personagens companheiros engajem em diálogos e ofereçam dicas valiosas sobre como avançar nos desafios.</li>
+                <li><strong>Gráficos e Sons Refeitos:</strong> Iluminação melhorada, arte em pixel art inteiramente redesenhada e uma trilha sonora marcante composta especialmente para a versão moderna.</li>
+                <li><strong>Conteúdo Pós-Jogo:</strong> Ao finalizar a história, desbloqueie a <em>Exibição Real de Guertena</em> para colecionar as obras encontradas e acessar um calabouço extra exclusivo.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo ou superior</li>
+                <li><strong>Memória RAM:</strong> 2 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Placa de vídeo compatível com OpenGL</li>
+                <li><strong>Armazenamento:</strong> 400 MB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_71cedf44435f49b2c2a7f4d5a02292946771d69f.1920x1080.jpg?t=1779842056" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_5473896ce73dc06677b961e7a58db453c91e4217.1920x1080.jpg?t=1779842056" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_c28c54a2203dc08216e95fb801f61f498cec0898.1920x1080.jpg?t=1779842056" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_2398c511ff38332d84cefb338d8887341a25aac3.1920x1080.jpg?t=1779842056" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_7b378d48514f5b651dbe743e28814768b1ab9c47.1920x1080.jpg?t=1779842056" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1901370/Ib/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://playism.com/game/ib/" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial (PLAYISM)</a>
+                <a href="https://x.com/monomu_kouri" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter do Autor (kouri)</a>
+                <a href="https://bsky.app/profile/playismen.bsky.social" target="_blank"><i class="fa-solid fa-square-rss"></i> Bluesky (PLAYISM)</a>
+                <a href="https://www.instagram.com/playism_jp/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.tiktok.com/@playism_plays" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                <a href="https://www.youtube.com/ActiveGamingMedia" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+                <a href="https://www.facebook.com/PLAYISM/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/LJX5rNdXRU" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo (Geral)</a>
+                <a href="https://4br.me/jsU5Tbqf" target="_blank"><i class="fa-solid fa-download"></i> Download Ib Full Game v1.07 (Servidor 1)</a>
+                <a href="https://4br.me/xkPVPBHM" target="_blank"><i class="fa-solid fa-language"></i> Download Versão em Inglês</a>
+                <a href="https://4br.me/e7lU77q" target="_blank"><i class="fa-solid fa-language"></i> Download Versão em Português (v1.05)</a>
+            </div>
+
+            <p><small><em>Nota de instalação: Extraia o arquivo .rar usando o WinRAR ou similar. Caso não possua o RPG Maker 2003 RTP instalado, execute o arquivo <code>RTPMaker.exe</code>. Consulte o arquivo <code>Ib Manual.txt</code> para instruções adicionais.</em></small></p>
+            <p><small><em>Direitos autorais: O criador kouri solicita que as imagens e músicas do jogo não sejam modificadas, desviadas ou redistribuídas sem autorização prévia.</em></small></p>
+        `
+    },
+    "misao-2024-hd-remaster": {
+        title: "Misao - 2024 HD Remaster",
+        addedAt: "2026-10-07",
+        categories: ["Aventura", "Casual", "Indie", "Terror", "Exploração", "Pixel Art"],
+        summary: "Uma versão remasterizada em HD do aclamado jogo de aventura e terror psicológico criado por sen. Explore uma escola amaldiçoada e transportada para uma dimensão macabra enquanto busca a verdade por trás do desaparecimento da estudante Misao.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/header.jpg?t=1735191987",
+            data: {
+                "Desenvolvedor": "sen",
+                "Publicadora": "PLAYISM",
+                "Gêneros": "Aventura, Casual, Indie, Terror",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "12+ (Violência)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Misao - 2024 HD Remaster</strong> é a versão aprimorada em alta definição do clássico jogo de aventura e terror desenvolvido por <strong>sen</strong> e publicado pela <strong>PLAYISM</strong>. A remasterização atualiza os visuais, a interface e a apresentação em geral da edição <em>Definitive Edition</em> de 2017, adicionando novos recursos e conteúdos inéditos.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Misao era uma garota quieta, discreta e reclusa que frequentemente se tornava alvo de bullying por parte de seus colegas. Três meses atrás, ela desapareceu misteriosamente sem deixar vestígios.</p>
+
+            <p>Desde aquele dia, diversos eventos sobrenaturais e não naturais começaram a assombrar o campus da escola. Rumores diziam tratar-se da "maldição de Misao". Quando o colégio é subitamente arrastado para uma dimensão bizarra e aterrorizante conhecida como "Outro Mundo" (<em>Otherworld</em>), o boato se confirma. Agora, você precisará explorar os corredores macabros e descobrir o que realmente aconteceu com sua colega de classe.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Exploração e Enigmas no Outro Mundo:</strong> Navegue por uma versão distorcida da escola repleta de espíritos violentos, armadilhas mortais e quebra-cabeças.</li>
+                <li><strong>Escolhas Mortais:</strong> Qualquer decisão equivocada ou passo em falso pode resultar em uma morte instantânea e trágica. Esquive-se das ameaças com habilidade para sobreviver.</li>
+                <li><strong>Elenco de Personagens Reativo:</strong> Seus colegas de classe também estão presos no Outro Mundo. Sob constante terror, eles revelarão segredos ocultos e suas conexões com o passado de Misao.</li>
+                <li><strong>Novo Recurso "Crimson Eyes" (Olhos Carmesim):</strong> Mecânica inédita que auxilia na exploração destacando locais já investigados e permitindo encontrar a misteriosa entidade "Li'l Miscreant" escondida pelos cenários.</li>
+                <li><strong>Inclusão da Versão Clássica:</strong> Ao iniciar o jogo, os jogadores têm a opção de escolher jogar também a versão <em>Misao: Definitive Edition</em> de 2017.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 / 11 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i3 ou superior</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Placa gráfica integrada / On-board graphics</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_3afb8c43bd0d77674a7cd499acaa4caf3e112ee0.1920x1080.jpg?t=1735191987" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_bac5ef98a79a733cbfcb5e59db724f7ead9e105f.1920x1080.jpg?t=1735191987" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_a011a3149b2a23db4c99fd573640f095f99e534f.1920x1080.jpg?t=1735191987" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_d3f20331e17ecac9d1cce374832f69930fd5bb65.1920x1080.jpg?t=1735191987" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_caff5adb50f54bf275fa41d39cbcb023810ac63b.1920x1080.jpg?t=1735191987" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/691450/Misao__2024_HD_Remaster/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://playism.com/game/misao-2024/" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial (PLAYISM)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/RjXf9zB" target="_blank"><i class="fa-solid fa-download"></i> Download Misao - 2024 HD Remaster (v2024.08.15)</a>
+                <a href="https://4br.me/JiUrID" target="_blank"><i class="fa-solid fa-download"></i> Download Misao: Definitive Edition (v1.06)</a>
+            </div>
+
+            <p><small><em>Instruções de instalação: Extraia o arquivo .zip baixado usando o 7-Zip ou extrator do Windows. Execute o instalador (setup) dentro da pasta extraída, aceite os termos e instale o jogo. Execute através do atalho criado na área de trabalho.</em></small></p>
+        `
+    },
+    "nekopara-vol-1": {
+        title: "NEKOPARA Vol. 1",
+        addedAt: "2026-10-07",
+        categories: ["Casual", "Indie", "Visual Novel", "Comédia", "Anime"],
+        summary: "Uma popular visual novel de comédia romântica criada pela NEKO WORKs. Acompanhe Kashou Minaduki ao abrir sua própria patisserie, a La Soleil, ao lado das adoráveis catgirls Chocola e Vanilla.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/header.jpg?t=1656892670",
+            data: {
+                "Desenvolvedor": "NEKO WORKs",
+                "Publicadora": "Sekai Project",
+                "Gêneros": "Casual, Indie, Visual Novel",
+                "Plataformas": "PC (Windows), PS4, Nintendo Switch, Android, iOS",
+                "Classificação": "14+ (Conteúdo Sexual / +18 via Patch)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais, Adaptações e Downloads" }
+        ],
+        content: `
+            <p><strong>NEKOPARA Vol. 1</strong> é uma renomada <em>Visual Novel</em> de comédia romântica desenvolvida pela <strong>NEKO WORKs</strong> e publicada pela <strong>Sekai Project</strong>. O jogo apresenta as icônicas personagens desenhadas pela artista Sayori em uma narrativa envolvente e cheia de simpatia.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Kashou Minaduki, filho de uma tradicional família de confeiteiros japoneses, decide sair de casa para abrir sua própria patisserie chamada <strong>"La Soleil"</strong>.</p>
+
+            <p>No entanto, ao desembalar suas caixas na nova loja, ele descobre duas <em>catgirls</em> (humanóides felinas) que sua família criou esconderam-se entre seus pertences: <strong>Chocola</strong> e <strong>Vanilla</strong>. Embora Kashou tente enviá-las de volta no início, a insistência e o afeto incondicional das garotas o convencem a deixá-las ficar. Juntos, eles abrem a La Soleil e dão início a uma acolhedora e divertida rotina de trabalho e convivência.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Sistema E-mote de Animação:</strong> Os retratos das personagens se movimentam suavemente na tela, alterando expressões, poses e reações em tempo real.</li>
+                <li><strong>Dublagem Completa:</strong> Todas as garotas felinas possuem dublagem profissional integral em japonês.</li>
+                <li><strong>Ilustrações por Sayori:</strong> Design de personagens e ilustrações marcantes do famoso estúdio NEKO WORKs.</li>
+                <li><strong>Narrativa Confortável (Slice of Life):** Foco em diálogos divertidos, momentos cotidianos e o desenvolvimento dos laços entre Kashou e as catgirls.</li>
+                <li><strong>Física e Opções Personalizáveis:</strong> Inclui opções para alternar a movimentação dos cenários/gráficos e personalização de exibição.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows Vista ou superior</li>
+                <li><strong>Processador:</strong> Intel Pentium 4 a 1.8 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Suporte à resolução 1280 x 720 / Compatível com DirectX 9.0</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_a41e06f39ef50377dd1a04398578f5018de5d064.1920x1080.jpg?t=1656892670" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_3433d14f96ebcd1b3cd7d3c1d79170eecdeb0577.1920x1080.jpg?t=1656892670" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_8d26d27426fdfe46b252cb21bcdcbde64c44fb3d.1920x1080.jpg?t=1656892670" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_4bfd66ccc83135641d5aba3a72227bd4d533333e.1920x1080.jpg?t=1656892670" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_d89a81cf861b81c1d9b51206cccd0f7efbbf58b5.1920x1080.jpg?t=1656892670" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais, Adaptações e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Sites Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/333600/NEKOPARA_Vol_1/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://nekopara.com/en/introduction_en" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial (NEKOPARA)</a>
+                <a href="https://store.playstation.com/pt-br/product/UP0287-CUSA12297_00-NEKOPARA010000US" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+                <a href="https://www.nintendo.com/us/store/products/nekopara-vol-1-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop (US)</a>
+                <a href="https://play.google.com/store/apps/details?id=jp.goodsmile.nekoparavol1&hl=pt" target="_blank"><i class="fa-brands fa-google-play"></i> Google Play Store</a>
+                <a href="https://www.taptap.io/br/app/285204" target="_blank"><i class="fa-solid fa-mobile-screen"></i> TapTap</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-tv"></i> <strong>Adaptações em Anime:</strong></p>
+            <div class="play-links">
+                <a href="https://www.crunchyroll.com/pt-br/series/GVDHX8J8Z/nekopara" target="_blank"><i class="fa-solid fa-video"></i> Assistir na Crunchyroll</a>
+                <a href="https://www.primevideo.com/-/pt/detail/0RQ6FHX26PWFIQMXCLENCT1IN5" target="_blank"><i class="fa-solid fa-film"></i> Assistir no Prime Video</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-share-nodes"></i> <strong>Redes Sociais da Publisher (Sekai Project):</strong></p>
+            <div class="play-links">
+                <a href="https://x.com/sekaiproject" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter / X</a>
+                <a href="https://www.facebook.com/SekaiProject/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://www.youtube.com/sekaiproject" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="https://www.twitch.tv/sekaiproject" target="_blank"><i class="fa-brands fa-twitch"></i> Twitch</a>
+                <a href="https://discord.com/invite/sekai-project" target="_blank"><i class="fa-brands fa-discord"></i> Discord</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC & Port Android):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/bzTslJ50k" target="_blank"><i class="fa-solid fa-download"></i> Download NEKOPARA Vol. 1 (v1.0 & Uncensored)</a>
+                <a href="https://4br.me/9hGl" target="_blank"><i class="fa-solid fa-download"></i> Download NEKOPARA Vol. 1 (GameTrex - Senha: www.gametrex.com)</a>
+                <a href="https://4br.me/KM1i9" target="_blank"><i class="fa-brands fa-android"></i> Download Port Android (+18 Cenas)</a>
+                <a href="https://4br.me/rktlx" target="_blank"><i class="fa-solid fa-file-zipper"></i> Download Emulador Kirikiroid2 v1.3.9 Premium (Android)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-star"></i> <strong>Bônus - Tradução PT-BR (NEKOPARA Vol. 0):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/snmgGKp1" target="_blank"><i class="fa-solid fa-download"></i> Download Vol. 0 Traduzido em PT-BR (Mediafire)</a>
+                <a href="https://4br.me/S0eLboof" target="_blank"><i class="fa-solid fa-download"></i> Download Vol. 0 Traduzido em PT-BR (Pixeldrain)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação (PC): Extraia o arquivo .zip com WinRAR ou 7-Zip, execute o instalador dentro da pasta extraída e inicie o jogo pelo atalho gerado na área de trabalho.</em></small></p>
+            <p><small><em>Instruções (Android / Kirikiroid2): Instale o Kirikiroid2 APK, extraia o jogo na memória interna (fora da pasta de dados do sistema), abra o Kirikiroid2 e selecione o arquivo <code>data.xp3</code> na pasta do jogo.</em></small></p>
+        `
+    },
     "clannad-side-stories": {
         title: "CLANNAD Side Stories",
         addedAt: "2026-09-23",
