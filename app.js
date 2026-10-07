@@ -627,10 +627,11 @@ function getRouteInfo() {
     const searchParams = new URLSearchParams(window.location.search || '');
 
     let routeFromHash = '';
+    let anchorFromHash = '';
     if (hashValue.startsWith('#/')) {
         routeFromHash = hashValue.substring(2);
     } else if (hashValue.startsWith('#')) {
-        routeFromHash = hashValue.substring(1);
+        anchorFromHash = hashValue.substring(1);
     }
 
     const routeFromQuery = searchParams.get('route') || '';
@@ -647,7 +648,7 @@ function getRouteInfo() {
 
     return {
         route: route && route !== '' ? route : 'home',
-        anchor: anchor || ''
+        anchor: anchor || anchorFromHash
     };
 }
 
@@ -660,8 +661,9 @@ function buildRoutePath(route) {
     return `${base}/${cleanRoute}`;
 }
 
-function navigateToRoute(route) {
-    const nextPath = buildRoutePath(route);
+function navigateToRoute(route, anchor = '') {
+    const routePath = buildRoutePath(route);
+    const nextPath = anchor ? `${routePath}#${encodeURIComponent(anchor)}` : routePath;
     history.pushState({}, '', nextPath);
     renderPage();
 }
@@ -1678,13 +1680,17 @@ document.addEventListener('click', function (e) {
     e.preventDefault();
 
     const url = new URL(href, window.location.origin);
-    const route = url.searchParams.get('route') || url.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+    const basePath = getSiteBasePath().replace(/^\/+|\/+$/g, '');
+    const pathnameRoute = url.pathname.replace(/^\/+|\/+$/g, '')
+        .replace(new RegExp(`^${basePath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/?`), '');
+    const route = url.searchParams.get('route') || pathnameRoute || 'home';
     const profileId = url.searchParams.get('uid');
     if (profileId) {
         history.pushState({}, '', buildAppHref(`/?route=${encodeURIComponent(route)}&uid=${encodeURIComponent(profileId)}`));
         renderPage();
     } else {
-        navigateToRoute(route);
+        const anchor = url.hash.startsWith('#/') ? '' : url.hash.substring(1);
+        navigateToRoute(route, anchor);
     }
 });
 

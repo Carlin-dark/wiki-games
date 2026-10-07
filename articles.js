@@ -747,6 +747,9 @@ const articlesDatabase = {
             <h2 id="caracteristicas">Batalhas de Verdades e Teoria</h2>
             <p>Como mecânica, a novel introduz o duelo jurídico entre o cético Battler e a magia de Beatrice, onde a Bruxa dita fatos na impenetrável Verdade Vermelha e as defesas lógicas são projetadas como lâminas na Verdade Azul, gerando longas batalhas lógicas impressionantes de refutações.</p>
 
+            <h2 id="arcos">Arcos de Perguntas e Respostas</h2>
+            <p>A história é organizada em arcos de perguntas, que apresentam os mistérios e as diferentes interpretações dos crimes, e arcos de respostas, que aprofundam as pistas e revelações para esclarecer os acontecimentos de Rokkenjima.</p>
+
             <hr>
             <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
             <div class="play-links">
@@ -783,6 +786,9 @@ const articlesDatabase = {
 
             <h2 id="rotas">As Três Rotas Narrativas</h2>
             <p>Dividido meticulosamente e sequencialmente entre Fate, Unlimited Blade Works e as sombrias realidades de Heaven's Feel, o título brinca de destruir a própria fundação e regras morais estabelecidas nas campanhas anteriores a favor do desespero e revelações mais densas.</p>
+
+            <h2 id="remaster">Melhorias da Remasterização</h2>
+            <p>A edição REMASTERED apresenta a visual novel em alta definição e marca o lançamento oficial da obra para o público ocidental, com versões para PC e Nintendo Switch.</p>
 
             <hr>
             <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
