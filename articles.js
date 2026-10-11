@@ -5007,15 +5007,77 @@ const articlesDatabase = {
     },
     "mtool-downloads": {
         title: "MTool Downloads",
-        summary: "Downloads do aplicativo MTool, plugins de suporte a jogos e versão para PC.",
+        summary: "Conheça o MTool, veja os requisitos, motores de jogo suportados e baixe o aplicativo e seus componentes.",
         toc: [
-            { id: "aplicativo-e-plugins", text: "1. Aplicativo e plugins" },
-            { id: "versao-para-pc", text: "2. Versão para PC" }
+            { id: "sobre-o-mtool", text: "1. Sobre o MTool" },
+            { id: "motores-suportados", text: "2. Motores de jogo suportados" },
+            { id: "aplicativo-e-plugins", text: "3. Aplicativo e plugins" },
+            { id: "versao-para-pc", text: "4. Versão para PC" }
         ],
         content: `
-            <p>Baixe o aplicativo MTool e os componentes de suporte correspondentes à sua plataforma ou engine de jogo.</p>
+            <h2 id="sobre-o-mtool">MTool - Ferramenta de tradução e modificação de jogos para jogadores</h2>
+            <div class="info-box">
+                <p>O MTool ajuda jogadores a traduzir e modificar jogos. Suporta dispositivos PC e Android: basta arrastar e soltar o jogo para começar a jogar, sem necessidade de configuração.</p>
+                <p><strong>Suporte multiplataforma:</strong> PC e Android</p>
+                <ul>
+                    <li><strong>Windows:</strong> 7 ou superior</li>
+                    <li><strong>Android:</strong> 11.0 ou superior</li>
+                </ul>
+                <div class="play-links">
+                    <a href="https://mtool.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i> Site oficial do MTool</a>
+                    <a href="https://mtool.app/tutorial.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book-open"></i> Tutorial do MTool</a>
+                </div>
+            </div>
+
+            <h2 id="motores-suportados">Motores de jogo suportados</h2>
+            <div class="mtool-engine-grid">
+                <section class="mtool-engine-category">
+                    <h3>RPG Maker</h3>
+                    <ul class="mtool-engine-list">
+                        <li><img src="https://mtool.app/engineIcons/rm2k.png" alt=""> RPG Maker 2000/2003</li>
+                        <li><img src="https://mtool.app/engineIcons/xp.png" alt=""> RPG Maker XP</li>
+                        <li><img src="https://mtool.app/engineIcons/vx.ico" alt=""> RPG Maker VX</li>
+                        <li><img src="https://mtool.app/engineIcons/vxace.ico" alt=""> RPG Maker VX Ace</li>
+                        <li><img src="https://mtool.app/engineIcons/mkxp-z.ico" alt=""> MKXP-Z</li>
+                        <li><img src="https://mtool.app/engineIcons/RGU.ico" alt=""> RPG Maker RGU</li>
+                        <li><img src="https://mtool.app/engineIcons/rpgmv.ico" alt=""> RPG Maker MV</li>
+                        <li><img src="https://mtool.app/engineIcons/rmmz.ico" alt=""> RPG Maker MZ</li>
+                    </ul>
+                </section>
+                <section class="mtool-engine-category">
+                    <h3>Outros motores de RPG</h3>
+                    <ul class="mtool-engine-list">
+                        <li><img src="https://mtool.app/engineIcons/wolf.png" alt=""> Wolf RPG (da versão 1.00 até a mais recente)</li>
+                        <li><img src="https://mtool.app/engineIcons/SGB.jpg" alt=""> SMILE GAME BUILDER</li>
+                        <li><img src="https://mtool.app/engineIcons/Bakin.png" alt=""> RPG Developer Bakin</li>
+                    </ul>
+                </section>
+                <section class="mtool-engine-category">
+                    <h3>Motores de Visual Novel (VN/ADV/AVG)</h3>
+                    <ul class="mtool-engine-list">
+                        <li><img src="https://mtool.app/engineIcons/tyrano.png" alt=""> TyranoBuilder</li>
+                        <li><img src="https://mtool.app/engineIcons/kirikiriz.png" alt=""> Kirikiri 2/Z</li>
+                        <li><img src="https://mtool.app/engineIcons/Renpy.png" alt=""> Ren'Py</li>
+                        <li><img src="https://mtool.app/engineIcons/vnm.jpg" alt=""> Visual Novel Maker</li>
+                        <li><img src="https://mtool.app/engineIcons/ChoiceScript.png" alt=""> ChoiceScript</li>
+                    </ul>
+                </section>
+                <section class="mtool-engine-category">
+                    <h3>Motores de jogos de estratégia (SLG)</h3>
+                    <ul class="mtool-engine-list">
+                        <li><img src="https://mtool.app/engineIcons/SRPG.ico" alt=""> SRPG Studio</li>
+                    </ul>
+                </section>
+                <section class="mtool-engine-category">
+                    <h3>Outros motores</h3>
+                    <ul class="mtool-engine-list">
+                        <li><img src="https://mtool.app/engineIcons/PixelGameMakerMV.ico" alt=""> Pixel Game Maker MV</li>
+                    </ul>
+                </section>
+            </div>
 
             <h2 id="aplicativo-e-plugins">Aplicativo e plugins</h2>
+            <p>Baixe o aplicativo MTool e os componentes de suporte correspondentes à sua plataforma ou engine de jogo.</p>
             <div class="mtool-downloads-grid">
                 <section class="mtool-download-card">
                     <h3>Aplicativo principal do MTool</h3>

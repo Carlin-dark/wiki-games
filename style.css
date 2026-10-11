@@ -795,6 +795,44 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     font-weight: bold;
 }
 .mtool-downloads-button:hover { background: #235d6d; color: #fff; text-decoration: none; }
+.mtool-engine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin: 16px 0 24px;
+}
+.mtool-engine-category {
+    padding: 14px;
+    border: 1px solid #283850;
+    border-radius: 4px;
+    background: rgba(11, 17, 24, .72);
+}
+.mtool-engine-category h3 {
+    margin: 0 0 10px;
+    color: #edf2f8;
+    font-size: 14px;
+}
+#content ul.mtool-engine-list {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.mtool-engine-list li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 32px;
+    margin: 0;
+    color: #c5d3e1;
+}
+.mtool-engine-list img {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    object-fit: contain;
+}
 .mtool-downloads-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
