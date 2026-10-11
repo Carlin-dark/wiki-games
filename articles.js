@@ -5005,6 +5005,56 @@ const articlesDatabase = {
             <div class="play-links"><a href="https://store.steampowered.com/app/483980/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
         `
     },
+    "mtool-downloads": {
+        title: "MTool Downloads",
+        summary: "Downloads do aplicativo MTool, plugins de suporte a jogos e versão para PC.",
+        toc: [
+            { id: "aplicativo-e-plugins", text: "1. Aplicativo e plugins" },
+            { id: "versao-para-pc", text: "2. Versão para PC" }
+        ],
+        content: `
+            <p>Baixe o aplicativo MTool e os componentes de suporte correspondentes à sua plataforma ou engine de jogo.</p>
+
+            <h2 id="aplicativo-e-plugins">Aplicativo e plugins</h2>
+            <div class="mtool-downloads-grid">
+                <section class="mtool-download-card">
+                    <h3>Aplicativo principal do MTool</h3>
+                    <p class="mtool-download-size">236 MB</p>
+                    <a class="mtool-download-link" href="https://4br.me/MTool-1" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Baixar aplicativo</a>
+                </section>
+                <section class="mtool-download-card">
+                    <h3>Plugin de suporte RPG Maker XP/Vx/VxAce</h3>
+                    <p class="mtool-download-size">379 MB</p>
+                    <a class="mtool-download-link" href="https://4br.me/MTool-2" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Baixar plugin</a>
+                </section>
+                <section class="mtool-download-card">
+                    <h3>Plugin de suporte do RPG Maker 2000/2003</h3>
+                    <p class="mtool-download-size">164 MB</p>
+                    <a class="mtool-download-link" href="https://4br.me/MTool-3" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Baixar plugin</a>
+                </section>
+                <section class="mtool-download-card">
+                    <h3>Plugin de suporte Ren'Py</h3>
+                    <p class="mtool-download-size">336 MB</p>
+                    <a class="mtool-download-link" href="https://4br.me/MTool-4" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Baixar plugin</a>
+                </section>
+                <section class="mtool-download-card">
+                    <h3>Componente de suporte a jogos do Windows (Winlator)</h3>
+                    <p class="mtool-download-size">Prévia antecipada · 1,1 GB</p>
+                    <a class="mtool-download-link" href="https://4br.me/MTool-5" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Baixar componente</a>
+                </section>
+            </div>
+
+            <h2 id="versao-para-pc">Versão para PC</h2>
+            <div class="info-box info-box-warning">
+                <p>A seguir estão os links para download da versão publicamente GRATUITA. Se você pagou, acesse a plataforma paga para obter seu link de download pessoal.</p>
+                <p><strong>Termos de Uso:</strong> <a href="https://trs.mtool.app/tosen.html" target="_blank" rel="noopener noreferrer">leia os termos do MTool</a>.</p>
+                <div class="play-links">
+                    <a href="https://seulink.net/MTool-6" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download versão para PC — Servidor 1</a>
+                    <a href="https://seulink.net/MTool-7" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download versão para PC — Servidor 2</a>
+                </div>
+            </div>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],

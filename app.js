@@ -1255,10 +1255,10 @@ function renderPage() {
             metaDescription.setAttribute('content', article.summary);
         }
 
-        const isGamePage = route !== 'home' && route !== 'sobre' && route !== 'all' && !route.startsWith('categoria/');
+        const isGamePage = route !== 'home' && route !== 'sobre' && route !== 'mtool-downloads' && route !== 'all' && !route.startsWith('categoria/');
         let htmlContent = route === 'home'
             ? renderHomeSections()
-            : `<div class="article-title-row"><h1>${article.title}</h1>${isGamePage ? favoriteButton(route) : ''}</div>`;
+            : `<div class="article-title-row"><h1>${article.title}</h1>${isGamePage ? `${favoriteButton(route)}<a class="mtool-downloads-button" href="${buildAppHref('/mtool-downloads')}"><i class="fa-solid fa-download"></i> MTool Downloads</a>` : ''}</div>`;
 
         if (route !== 'home' && article.infobox) {
             htmlContent += `<div class="infobox">

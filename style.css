@@ -780,6 +780,51 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 .favorite-btn:hover, .favorite-btn.is-favorite { background: #7a3037; color: #fff; }
 .favorite-btn-compact { width: 32px; height: 30px; padding: 0; }
 .favorite-btn-compact span { display: none; }
+.mtool-downloads-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex-shrink: 0;
+    padding: 9px 12px;
+    border: 1px solid #376d80;
+    border-radius: 4px;
+    background: rgba(20, 58, 70, .75);
+    color: #a9e9f1;
+    font-size: 12px;
+    font-weight: bold;
+}
+.mtool-downloads-button:hover { background: #235d6d; color: #fff; text-decoration: none; }
+.mtool-downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 18px 0 26px;
+}
+.mtool-download-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border: 1px solid #283850;
+    border-radius: 4px;
+    background: rgba(11, 17, 24, .8);
+}
+.mtool-download-card h3 { margin: 0; color: #edf2f8; font-size: 15px; }
+.mtool-download-size { margin: 9px 0 14px; color: #9fb4c8; font-size: 13px; }
+.mtool-download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: auto;
+    padding: 8px 12px;
+    border: 1px solid #376d80;
+    border-radius: 3px;
+    background: rgba(20, 58, 70, .75);
+    color: #a9e9f1;
+    font-size: 12px;
+}
+.mtool-download-link:hover { background: #235d6d; color: #fff; text-decoration: none; }
 .list-intro { color: #9fb4c8; }
 .all-game-card-content h3 {
     font-size: 15px;
