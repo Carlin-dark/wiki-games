@@ -5117,6 +5117,160 @@ const articlesDatabase = {
             </div>
         `
     },
+    "blank-dream": {
+        title: "Blank Dream",
+        addedAt: "2026-10-12",
+        categories: ["Terror", "Aventura", "Indie", "RPG", "Puzzle", "Exploração", "Pixel Art"],
+        summary: "Desejando nunca ter existido, Mishiro Usui se atira em um lago e desperta no 'Mundo Espelho', um lugar entre o céu e o inferno. Orientada por seu próprio reflexo, ela precisa explorar dimensões sombrias e quebrar espelhos para descobrir a verdade.",
+        infobox: {
+            image: "https://cdn.thegamesdb.net/images/original/boxart/front/32374-1.jpg",
+            data: {
+                "Título Original": "虚白の夢 (Kouhaku no Yume)",
+                "Desenvolvedor": "Kanawo (Teriyaki Tomato)",
+                "Gêneros": "Aventura, Terror, RPG, Puzzle",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "18+ (Suicídio, Morte, Temas Extremamente Sensíveis)",
+                "Lançamento": "24 de agosto de 2015"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "personagens", text: "2. Personagens Principais" },
+            { id: "gameplay", text: "3. Características e Jogabilidade" },
+            { id: "requisitos", text: "4. Requisitos de Sistema e Solução de Problemas" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "light-novel", text: "6. Light Novel Oficial" },
+            { id: "detonado", text: "7. Passo a Passo / Guia de Finais (Spoilers)" },
+            { id: "links", text: "8. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Blank Dream</strong> (<em>Kouhaku no Yume / 虚白の夢</em>) é um aclamado jogo freeware de aventura, exploração e terror psicológico desenvolvido no RPG Maker VX Ace por <strong>Kanawo</strong> (Teriyaki Tomato).</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO SENSÍVEL:</strong> O jogo aborda temas extremamente pesados e sombrios, com foco central em suicídio (esfaqueamento, afogamento, queda), morte, assassinatos, assédio, violência e menções a abusos e traumas severos. Recomenda-se forte discrição ao jogar.</p>
+            </div>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Tomada pelo desejo profundo de nunca ter existido, a jovem Mishiro Usui se joga no fundo de um lago. Em vez da morte definitiva, ela desperta no misterioso "Mundo Espelho" — um limbo que não é nem o céu nem o inferno.</p>
+            <p>Lá, ao encontrar seu próprio reflexo, recebe uma instrução enigmática: <em>"Encontre os espelhos neste mundo e quebre-os"</em>. Para recuperar suas memórias e entender os motivos de seu desespero, Mishiro precisará viajar por diversos reinos manifestados pelos desejos e arrependimentos de diferentes almas presas no local.</p>
+
+            <h2 id="personagens">Personagens Principais</h2>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0giHQUMb7BE-jvyi7kw6iTYu5hnoLDyM9-MKYaZwp0pI3CvBq38SSI593CTKuoPO-Lp4chDU81wcGLsLj43SYASdOyfVQItn7iD5HN-_9CNzSUkqHDTbzKoPNObV6DiCHJQ65o5f93ro/s1600/Mishiro.png" alt="Mishiro Usui" style="max-height: 150px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Mishiro Usui</h3>
+                    <p style="font-size: 0.9em; margin: 0;">A protagonista da história. Uma garota quieta, introvertida e tímida cujas atitudes e escolhas são moldadas pelo jogador.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq6LPqoCZqjgWhWh_CKFVzdmLTnQv4MEBLRUtVRkDfPzDEqN6nZg2sDR2RUHGBOciePIKJfnPOQxLSvGABEe4leV6wZWx5YoSImzw7vRqvi6ihCHNqRow-kVsmeGseaMPcuRDagQBgv8Q/s1600/Ayato.png" alt="Ayato Hinohara" style="max-height: 150px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Ayato Hinohara</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Um garoto gentil, calmo e generoso com uma forte apreciação por arte e pintura.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcnhp5H14cJXqOQqoNzqIYicOS0PY7p0V3cj3pKDHLtLtbWxgwBVRrgDH_IB1o4EyigUOxUPBHgdATtRbaZRZ1PefgPZ5YAGDEEO4wRM-wi9JoLyNR3xtlPps5MvHlYIDoBSWCUIt9qdA/s1600/Yuzu.png" alt="Yuzu Hanasaki" style="max-height: 150px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Yuzu Hanasaki</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Uma garota animada e hiperativa, embora se mostre um pouco tímida perto de quem gosta.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX3ngWmLX89Yeff5NVzHwhFNcrEmLdB_YAcvgTNLJgYzt2ow7uM2tXgbRyTTJJVbvcgLffGBmuQNTd5BqBD0QK6QaLiYnsGebqGJYVU43AQxpji2CcvJ798fXYMmGCElb55woLYOybcyI/s1600/Ryotaro.png" alt="Ryotaro Sengoku" style="max-height: 150px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Ryotaro Sengoku</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Um homem peculiar e reservado que aparenta não compreender totalmente a dimensão em que está preso.</p>
+                </div>
+            </div>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Exploração e Enigmas:</strong> Viagem por múltiplos "Reinos" (Verde, Beleza, Amor, Espíritos, Sangue e Morte) repletos de puzzles e armadilhas letais.</li>
+                <li><strong>Múltiplos Finais:</strong> O jogo possui 5 Finais diferentes (1 Melhor Final, 2 Finais Bons, 1 Normal e 1 Ruim), determinados pelos espelhos destruídos e escolhas feitas.</li>
+                <li><strong>Sem Batalhas Ativas:</strong> Focado na narrativa, investigação do ambiente e resolução de mistérios psicológicos.</li>
+                <li><strong>Significado do Título:</strong> O nome do jogo e da pintura de Ayato une os kanjis 虚 (<em>utsuro</em>, oco) e 白 (<em>shiro</em>, branco), representando a ideia de "vazio e branco".</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema e Solução de Problemas</h2>
+            <p><strong>Requisitos:</strong> Sistema Operacional Windows (PC) e instalação do <strong>RPG Maker VX Ace RTP (Runtime Package)</strong>.</p>
+            <p><strong>Dicas para Execução:</strong></p>
+            <ul>
+                <li>Certifique-se de extrair o arquivo ZIP completamente para uma pasta antes de executar, caso contrário seus arquivos de salvamento serão perdidos ao fechar o jogo.</li>
+                <li>Se o jogo não salvar seu progresso mesmo após extraído, execute o aplicativo como Administrador.</li>
+                <li>Se o texto do jogo apresentar caracteres estranhos ou quadrados, instale a fonte <code>Cinecaption</code> localizada na pasta de fontes do jogo.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://vgperson.com/graphics/BlankDreamScreen1.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://vgperson.com/graphics/BlankDreamScreen2.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://vgperson.com/graphics/BlankDreamScreen3.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <h2 id="light-novel">Light Novel Oficial</h2>
+            <p>Devido ao enorme sucesso do jogo, uma adaptação oficial em Light Novel foi lançada no Japão pela editora KADOKAWA:</p>
+            <ul>
+                <li><strong>Título:</strong> 虚白ノ夢 (Kouhaku no Yume)</li>
+                <li><strong>Autor:</strong> Masami Morokuchi | <strong>Ilustrações:</strong> Nozaki Tsubata | <strong>Original:</strong> Kanawo</li>
+                <li><strong>ISBN:</strong> 978-4-047340-47-3 (344 páginas)</li>
+                <li><strong>Links da Novel:</strong> <a href="https://www.kadokawa.co.jp/product/321601000623/" target="_blank">Página KADOKAWA</a> | <a href="https://bookwalker.jp/series/64473/" target="_blank">BookWalker (Ebook)</a> | <a href="https://www.amazon.co.jp/%E8%99%9A%E7%99%BD%E3%83%8E%E5%A4%A2-%E8%AB%B8%E5%8F%A3%E6%AD%A3%E5%B7%B3-ebook/dp/B01DJX81H8" target="_blank">Amazon Kindle</a></li>
+            </ul>
+
+            <h2 id="detonado">Passo a Passo / Guia de Finais (Spoilers)</h2>
+            <details style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #444; border-radius: 6px; padding: 12px; margin-bottom: 20px;">
+                <summary style="cursor: pointer; font-weight: bold; color: #ffaa00; font-size: 1.1em;">⚠️ Clique aqui para exibir o Detonado e Guia de Finais (Aviso de Spoilers)</summary>
+                <div style="margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
+                    <h3>Introdução</h3>
+                    <p>Suba e verifique o espelho. Afaste-se, verifique novamente e converse com o reflexo. No espelho, verifique a bolsa na mesa duas vezes para pegar a faca. Use a faca no menu de itens.</p>
+
+                    <h3>Reino do Verde</h3>
+                    <p>Pegue o Machado Decorativo na primeira sala. Entre na porta superior, pegue um machado na caixa e coloque o Machado Decorativo para substituí-lo. Na sala principal, corte a árvore morta no canto para obter lenha. Entre pela porta inferior, pegue a Lanterna perto da lareira e saia. Queime a árvore grande com a Lanterna e a Lenha. No espelho, vá até o píer e pule no lago. Ao se aproximar de onde estava a árvore, você será atacado; vire-se imediatamente e passe pela porta para escapar. Com a Chave de Bronze, você pode entrar no Reino da Beleza ou no Reino do Amor (qualquer ordem).</p>
+
+                    <h3>Reino da Beleza</h3>
+                    <p>Não pise no sangue embaixo do lustre. Você precisa trazer três tipos de tinta para o artista na sala principal. Duas necessitam de garrafas para armazenar.</p>
+                    <ul>
+                        <li><strong>Garrafa 1:</strong> Porta superior esquerda -> porta superior. Evite o corredor central. Pegue a Garrafa Vazia nas prateleiras do meio à direita.</li>
+                        <li><strong>Garrafa 2:</strong> Porta superior direita -> porta inferior. Use a Tábua de Madeira na fenda. Atravesse a ponte, pegue a Garrafa Vazia nas prateleiras. Antes de sair, recoloque a Tábua de Madeira na caixa do meio.</li>
+                        <li><strong>Tinta Azul:</strong> Porta inferior esquerda. Evite que a sombra veja ou ouça você. Pegue a tinta nos sacos na sala do fundo e retorne sem ser visto.</li>
+                        <li><strong>Tinta Vermelha:</strong> Porta superior esquerda -> porta inferior. Use a Faca na pintura e colete o sangue na Garrafa Vazia.</li>
+                        <li><strong>Tinta Preta:</strong> Porta superior direita -> porta superior. Encha a Garrafa Vazia com Água no recipiente e apague a lareira. Saia rapidamente quando as estátuas atacarem. Reentre, pegue a Tinta Preta e corra ao retornar à sala principal. No espelho, verifique o extintor de incêndio duas vezes.</li>
+                    </ul>
+
+                    <h3>Reino do Amor</h3>
+                    <p>Na sala de entulho à direita, não pise diretamente na frente da boneca. Dê a volta pelo buraco para pegar o Martelo. Entre na sala abaixo do ponto de salvamento. Afague a cabeça da boneca, leve-a até o banco e mande-a parar. Com a boneca posicionada, use o Martelo para tocar "mi-do-ré-do-mi" (topo, baixo, meio, baixo, topo). Pegue os Doces na abóbora esmagada. Saia pela esquerda e corra pelo longo corredor. Entregue os Doces ao guarda. Diga "sim" para a Alma Sorridente até escolher "Já chega" no final. Fale com a recepcionista e entre na sala de festa. Converse com o convidado distante no canto inferior direito e escolha "...". Fuja pela porta inferior esquerda. No espelho, pegue a Pinça nas gavetas perto da TV, lave as mãos e verifique a tomada elétrica duas vezes.</p>
+
+                    <h3>Reino dos Espíritos</h3>
+                    <p>Requer vivenciar os mistérios das histórias da escola. Com a Chave de Prata, entre no reino. Cuidado com a sombra nos corredores (quando a música parar, saia e reentre na sala).</p>
+
+                    <h3>Reino do Sangue e Reino da Morte</h3>
+                    <p>Com a Chave de Ouro, acesse ambos os reinos. No Reino do Sangue, siga o caminho e escolha "Cravar a faca" no espelho para evitar um final ruim. No Reino da Morte, resolva os enigmas das estantes de livros (data 0612), ajuste a luz da lanterna para fraca e forte nos momentos certos para acessar passagens secretas nas lareiras.</p>
+
+                    <h3>Guia de Finais</h3>
+                    <ul>
+                        <li><strong>Final 5 (Ruim):</strong> Escolha "Não, ainda não" no espelho do Reino do Sangue.</li>
+                        <li><strong>Final 4 (Normal):</strong> Entre na porta final central sem encontrar espelhos suficientes dos outros personagens, ou atenda aos requisitos dos finais bons mas escolha realizar o desejo.</li>
+                        <li><strong>Final 3 (Bom - Rinzou):</strong> Veja todos os três espelhos de Ryotaro, mas não todos os de Yuzu. Entre na porta final e escolha "Eu não posso".</li>
+                        <li><strong>Final 2 (Bom - Tamaki):</strong> Veja todos os três espelhos de Yuzu, mas não todos os de Ryotaro. Entre na porta final e escolha "Não realizarei meu desejo".</li>
+                        <li><strong>Final 1 (Melhor Final):</strong> Veja todos os 3 espelhos de Yuzu e todos os 3 de Ryotaro. Certifique-se de não visitar Tamaki ou Rinzou até mostrar ambos os seus espelhos finais. Após ambos verem o terceiro espelho, visite Tamaki e Rinzou. Entre pela porta final e escolha "Não realizarei meu desejo".</li>
+                    </ul>
+                </div>
+            </details>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://www.teritoma.com/kohaku" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial do Desenvolvedor (Kanawo / Teriyaki Tomato)</a>
+                <a href="http://teritoma.blog.fc2.com/" target="_blank"><i class="fa-solid fa-blog"></i> Blog Oficial do Autor</a>
+                <a href="https://www.facebook.com/BlankDreamGame/" target="_blank"><i class="fa-brands fa-facebook"></i> Página no Facebook</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo e Componentes:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/GLHD" target="_blank"><i class="fa-solid fa-language"></i> Download Blank Dream em Português BR (Zero Corpse)</a>
+                <a href="https://4br.me/cDOdVZJLow" target="_blank"><i class="fa-solid fa-download"></i> Download Blank Dream v1.05 (Inglês - Opção 1)</a>
+                <a href="https://4br.me/SzYBYy4p" target="_blank"><i class="fa-solid fa-download"></i> Download Blank Dream v1.05 (Inglês - Mirror)</a>
+                <a href="https://www.rpgmakerweb.com/run-time-package" target="_blank"><i class="fa-solid fa-gear"></i> RPG Maker VX Ace Runtime Package (RTP Obrigatório)</a>
+            </div>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
