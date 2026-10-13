@@ -1261,6 +1261,7 @@ const articlesDatabase = {
                 <a href="https://store.steampowered.com/app/702050/The_Song_of_Saya/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
                 <a href="https://jastusa.com/" target="_blank"><i class="fa-solid fa-globe"></i> JAST USA</a>
                 <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
+                <a href="https://4br.me/spFDKyl7Iv" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Patch/Tradução em Português (Completo)</a>
             </div>
         `
     },
