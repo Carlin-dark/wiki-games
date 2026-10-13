@@ -5271,6 +5271,121 @@ const articlesDatabase = {
             </div>
         `
     },
+    "the-sandman": {
+        title: "The Sandman (O Homem da Areia)",
+        addedAt: "2026-10-12",
+        categories: ["Terror", "Aventura", "Indie", "Puzzle", "RPG", "Pixel Art"],
+        summary: "O segundo título da aclamada série 'Strange Man', desenvolvida por Uri Games. Acompanhe Sophie Grundler, uma jovem que sofre de insônia extrema, enquanto vagueia por uma cidade onde todos caíram em um sono profundo e inquebrável, despertando horrores inimagináveis.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/header.jpg?t=1786327326",
+            data: {
+                "Desenvolvedor": "Uri Games",
+                "Publicadora": "PLAYISM / Active Gaming Media",
+                "Gêneros": "Terror, Aventura, Mistério, Puzzle",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "18+ (Violência Extrema, Terror Psicológico)",
+                "Lançamento": "30 de janeiro de 2018 (Steam) / 2014 (Original)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "detonado", text: "5. Passo a Passo / Guia (Spoiler)" },
+            { id: "links", text: "6. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>The Sandman</strong> (conhecido no Japón como <em>The Sand Man</em> ou <em>O Homem da Areia</em>) é um jogo de aventura e terror psicológico desenvolvido pela criadora japonesa <strong>Uri (Uri Games)</strong> utilizando o motor WOLF RPG Editor, sendo o segundo capítulo da famosa série <em>Strange Man</em>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Incapaz de dormir e exausta devido a uma insônia crônica severa, Sophie Grundler decide vagar pelas ruas da cidade durante a madrugada. No entanto, ela logo descobre algo aterrorizante: todos os habitantes e conhecidos da cidade caíram em um sono profundo do qual simplesmente não conseguem acordar.</p>
+            <p>Conforme tenta investigar e despertar as pessoas ao seu redor, Sophie percebe que a realidade ao seu redor começa a se distorcer em um pesadelo grotesco. Para salvar a todos e sobreviver à exaustão extrema que consome sua mente, ela precisará enfrentar o temível Homem da Areia e desvendar os segredos ocultos por trás desse fenômeno sobrenatural.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Aventura de Terror 2D:</strong> Exploração detalhada de ambientes sombrios combinada com quebra-cabeças desafiadores e momentos de ação tensos.</li>
+                <li><strong>Múltiplos Finais:</strong> O jogo apresenta 6 finais diferentes moldados pelas escolhas da protagonista ao longo da jornada.</li>
+                <li><strong>Violência Estilizada:</strong> Apresenta uma atmosfera madura com cenas fortes e representações viscerais de terror.</li>
+                <li><strong>Versão Aprimorada na Steam:</strong> Inclui conquistas, suporte a múltiplos idiomas (incluindo inglês, japonês e chinês) e melhorias visuais.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> Intel Core 2 de 1.06 GHz</li>
+                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Gráficos integrados</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 66 MB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_fdc15b31b8bd6d86b3476615d84f438630fd7039.1920x1080.jpg?t=1786327326" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_9b8f6e36a84cfd293f15505927e8d0c746cb7b22.1920x1080.jpg?t=1786327326" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_fdd49e6891c3c597e0f50b4a6bf00a3857aa41b9.1920x1080.jpg?t=1786327326" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_b2cb7b3cc0264a642fb871eb7a81534503d2fbca.1920x1080.jpg?t=1786327326" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_53fefa8ec035d9eb6928c78b76107c9141ffe6d5.1920x1080.jpg?t=1786327326" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <h2 id="detonado">Passo a Passo / Guia de Finais</h2>
+            <details style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #444; border-radius: 6px; padding: 12px; margin-bottom: 20px;">
+                <summary style="cursor: pointer; font-weight: bold; color: #ffaa00; font-size: 1.1em;">(aviso de spoiler)</summary>
+                <div style="margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
+                    <h3>Escola Católica Loren</h3>
+                    <p>Depois de sair de casa, pegue o mapa da cidade no quadro próximo (logo após o café à direita do apartamento de Sophie). Caminhe até encontrar alguém no parque central. Vá para sudoeste para encontrar a escola. Verifique o portão trancado. Suba uma tela e entre no barraco à direita para pegar uma escada. Retorne e use-a (no menu de itens enquanto estiver perto da parede) para escalar o muro. Verifique a frente da porta e o ponto brilhante à esquerda para pegar uma pá. Use-a para abrir a porta. Vá para o leste até os dormitórios e suba para o segundo andar para encontrar o quarto de Anne. Como ela não está lá, vá até a capela (em frente à escada no 2º andar). Para achar Anne: vá até a cafeteria (à direita da escada no 1º andar) e entre na cozinha. Empurre a caixa que bloqueia a entrada inferior.</p>
+
+                    <h3>Shopping Blumberg</h3>
+                    <p>Vá ao shopping, ao sul do parque central. Verifique a porta e o painel de segurança. Vá para a esquerda, suba uma tela e verifique o carro na estrada para entrar nele e obter o cartão de segurança. Abra o inventário e examine o cartão. Retorne ao painel de segurança e insira o código (dica baseada nos números do cartão): <strong>241917</strong>. Suba até o último andar e entre no Teatro B à direita. Abra levemente a porta para olhar para dentro. Pegue a entrada dos fundos para falar com Regan. Pegue os cortadores na mesa da extrema direita (dois cômodos atrás) e use-os para cortar as cordas. Pegue a caixa de papelão que cai e vista-a. Desça os andares observando os padrões dos inimigos: fique agachado e parado a maior parte do tempo, movendo-se apenas quando eles não estiverem olhando. No primeiro andar, use a boneca para distrair os soldados e corra para fora. Encontre David no parque ao norte.</p>
+
+                    <h3>JP Gordon & Chase</h3>
+                    <p>Vá a JP Gordon & Chase no nordeste. Verifique o leitor de cartão e o pôster de funcionários. Vá ao metrô a sudeste da cidade e abra o portão com a senha (verifique o celular): <strong>120000</strong>. Verifique a pessoa dormindo atrás do portão para pegar o passe de funcionário e use-o na JP Gordon & Chase. Suba ao terceiro andar, entre na sala aberta e examine a foto na escrivaninha. Suba ao topo e fuja do prédio. Após ser derrubada, volte para dentro, saia novamente e pegue o dente do lado de fora. Vá ao parque central, siga a sombra até o apartamento e suba as escadas.</p>
+
+                    <h3>Indo para a Casa do Homem da Areia</h3>
+                    <p>Navegue pela floresta (caminhos errados levam à mesma área). Ao chegar ao pântano, fique o mais distante possível ao caminhar para não ser puxado; fale com Nixie em seguida. Volte uma tela e entre na casa. Mostre o dente de Sophie à Fada dos Dentes (ela recusará). Vá a Nixie perguntar sobre a grama Tibbyoung. Retorne à floresta para encontrá-la, use o orvalho na grama sobre o dente e dê o dente de leite à Fada dos Dentes para receber uma moeda para Nixie. Continue e verifique a pequena casa. Volte à clareira, entre no tronco (Littlogrow), saia, verifique-o novamente para levá-lo e coloque-o em frente à pequena casa.</p>
+
+                    <h3>A Casa do Homem da Areia</h3>
+                    <p>Suba as escadas e pegue a porta do meio. Atravesse o labirinto de pisos (da entrada: cima, cima, direita) e aperte o interruptor no final para desativá-los. Na sala seguinte, tente abrir a porta ao fundo e caminhe de volta; deixe-se pegar e recuse repetidamente comer a comida. Pegue o memorando na entrada. Continue além de onde encontrou o Homem da Areia. Na sala esquerda, pegue a nota na parede. Vá à sala direita e fale com Lullaby, mostrando o memorando e o aviso para que ela os leia. Atravesse a sala das estátuas cuspidoras de fogo (note que as chamas disparam 6 vezes antes de haver uma pausa). Puxe a alavanca na sala seguinte para desativá-las. Navegue pelo labirinto de paredes de vidro transparente (o objetivo é a porta esquerda, sem bifurcações). Pegue a garrafa vermelha na próxima sala e use-a no labirinto para marcar o caminho. Entre na porta inferior na pequena sala de remédios e corra para fazer o Homem da Areia cair no buraco. Pegue o espelho na mesa. Continue pelo corredor espelhado (comandos invertidos). Quando a estátua começar a cantar, execute quatro de cinco ações para acordar: bater a cabeça na estátua, tocar música com o celular, jogar água na cara com o balde, gritar pela janela ou usar o bastão (se já o tiver). Não use o espelho aqui.</p>
+
+                    <h3>Trabalhando com o Unicórnio</h3>
+                    <p>Saia da casa (use o Espelho Mágico para voltar à entrada) e vá para o leste encontrar o Unicórnio. De volta à casa, vá à direita para achar uma Poeira e um quadro caído; fale com ele para ver o código escondido atrás. Vá ao Armazém de Remédios e use o código na porta esquerda (numerando as joias de 1 a 8 da esquerda para a direita: <strong>32754168</strong>). Na sala de areia com prateleiras, pegue o bastão e um saco na parede, escondendo-se no armário quando solicitado. Vá para a direita do Armazém de Remédios até o labirinto de vidro, encoste-se nas escadas inalcançáveis e use o bastão para quebrar a parede, pegando um caco de vidro. Suba até a sala de joias e pegue a joia rosa (levar diretamente ao Unicórnio causará morte). Obtenha o Aviso 2 na parede da sala dos fundos e mostre-o a Lullaby para traduzir. Lave a joia no balde d'água e use a máquina para forjar uma joia rosa verdadeira, entregando-a ao Unicórnio.</p>
+                    <p><em>Escolha Crítica:</em> Após dar a joia ao Unicórnio, decidir pedir de volta ou deixá-la com ele define os caminhos para finais ruins ou bons.</p>
+                    <p>Vá para o oeste até a caverna e fale com o Anão (Dwarf). Pegue a gaiola à esquerda, capture os Glimmers na tela à esquerda e entre na caverna. Retorne à sala de estátuas de fogo na casa do Homem da Areia e use o bastão para ajudar a Poeira a obter as Lentes de Tradução. Vá para a sala do mapa-múndi (ao sul do Armazém de Remédios), desça pelo buraco no canto inferior esquerdo para pegar a Chave de "Somewhere". Colete os ingredientes para a areia do sono: coloque um pedaço de Crygel na garrafa vazia, pegue a fruta Snora e corte o rabo do lagarto Caterlizard na cozinha com o caco de vidro. Use a Chave de Somewhere para abrir a porta atrás da estátua que canta. Na sala de fabricação de areia, pegue as luvas de couro no balcão, use-as na vela vermelha para carregar a chama até o caldeirão. Triture a fruta Snora no moinho. Suba a escada, coloque o pó da fruta Snora e o fluido Crygel no caldeirão; quando o caldo ficar azul (4 mudanças de cor a partir do branco), adicione o rabo de Caterlizard para deixá-lo amarelo. Use a tigela no caldeirão para despejar no funil, aperte o botão e guarde a areia do sono no saco. Suba a alavanca na Sala da Chama Esmeralda, use as luvas de couro para pegar a chama e acenda as velas na sala pequena com velas (à esquerda do corredor das estátuas de fogo). Na sala secreta, vista as Lentes de Tradução e leia o diário. Vá ao longo corredor e entre na porta do meio, desviando dos buracos na subida.</p>
+
+                    <h3>Finais</h3>
+                    <ul>
+                        <li><strong>Final Ruim 1:</strong> Deixe o Unicórnio ficar com a joia e derrote/mate o Homem da Areia.</li>
+                        <li><strong>Final Ruim 2:</strong> Pegue a joia de volta e derrote/mate o Homem da Areia.</li>
+                        <li><strong>Final Ruim 3:</strong> Pegue a joia de volta e use a Areia do Sono quando o Homem da Areia estiver com 10 de HP.</li>
+                        <li><strong>Final Feliz (Happy Ending):</strong> Deixe o Unicórnio ficar com a joia e use a Areia do Sono quando o Homem da Areia estiver com 10 de HP.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/741250/The_Sandman/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://playism.com/en/game/the-sand-man/" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial (PLAYISM)</a>
+                <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/TheSandman2014" target="_blank"><i class="fa-solid fa-book"></i> TV Tropes</a>
+                <a href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/manuals/add8475ee4aa4fcab848b336529690b99fb133c7/The_Sand_Man_Manual.pdf?t=1786327326" target="_blank"><i class="fa-solid fa-file-pdf"></i> Manual Oficial (PDF)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo e Traduções:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/ABGQX" target="_blank"><i class="fa-solid fa-language"></i> Download Versão em Inglês (Opção 1)</a>
+                <a href="https://4br.me/iCfb9io" target="_blank"><i class="fa-solid fa-language"></i> Download Versão em Inglês (Opção 2)</a>
+                <a href="https://4br.me/bEZNr" target="_blank"><i class="fa-solid fa-language"></i> Download Tradução PT-BR (Zero Corpse)</a>
+            </div>
+
+            <p><small><em>Instruções e Solução de Problemas: Extraia sempre o arquivo ZIP para uma pasta separada antes de jogar. Se as imagens não carregarem corretamente, execute o arquivo <code>Game.exe</code> como Administrador. Certifique-se de que o caminho da pasta não contenha caracteres especiais (acentos) para evitar erros de arquivo.</em></small></p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
