@@ -5271,6 +5271,131 @@ const articlesDatabase = {
             </div>
         `
     },
+    "paranoiac": {
+        title: "Paranoiac",
+        addedAt: "2026-10-12",
+        categories: ["Terror", "Aventura", "Indie", "Puzzle", "Mistério", "Sobrenatural", "Horror"],
+        summary: "Miki Takamura se muda para a casa de sua tia falecida, um lugar cheio de portas misteriosamente trancadas e um ar opressivo. Embora queira usar o local para se recuperar, coisas estranhas começam a acontecer e uma presença monstruosa a persegue.",
+        infobox: {
+            image: "https://scontent.fthe9-2.fna.fbcdn.net/v/t39.30808-6/302555121_121203424009914_9115533424689641138_n.png?stp=dst-png&cstp=mx851x315&ctp=s851x315&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=88fEf8com0IQ7kNvwEdBPL_&_nc_oc=Adrm3RvgG7boCVIdYwr4YQy7RLVPUhidJL2sb9Vs-Rd-vHSZeCLM4CdUfyROPLJPCYU&_nc_zt=23&_nc_ht=scontent.fthe9-2.fna&_nc_gid=Tx09EmYzxcUDppfqEg3c1w&_nc_ss=7b2a8&oh=00_AQN81OaAac6WQ56usteAT3KG9c6JQk8EUaI2QAuG42RdiQ&oe=6AD48108",
+            data: {
+                "Título Original": "Paranoiac",
+                "Desenvolvedor": "Uri",
+                "Gêneros": "Horror, Mistério, Puzzle, Sobrenatural",
+                "Plataformas": "Windows (Mac via WineBottler)",
+                "Classificação": "18+ (Doenças Mentais, Suicídio, Perseguição, Jumpscares)",
+                "Lançamento": "2011 (Original) · 10 de junho de 2019 (Remake)",
+                "Engine": "Wolf RPG Editor",
+                "Preço": "Freeware (gratuito)",
+                "Idiomas": "Japonês, Inglês, Espanhol, Polonês, Coreano, Chinês, Português"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "personagens", text: "2. Personagens Principais" },
+            { id: "finais", text: "3. Enredos e Finalizações (Spoilers)" },
+            { id: "conteudo-sensivel", text: "4. Conteúdo Sensível" },
+            { id: "trivia", text: "5. Trivia" },
+            { id: "requisitos", text: "6. Requisitos de Sistema e Solução de Problemas" },
+            { id: "galeria", text: "7. Galeria de Imagens" },
+            { id: "links", text: "8. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Paranoiac</strong> é um jogo freeware de aventura e terror psicológico desenvolvido por <strong>Uri</strong> no <strong>Wolf RPG Editor</strong>. Originalmente lançado em 2011, recebeu um remake completo em 10 de junho de 2019.</p>
+            
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO SENSÍVEL:</strong> O jogo aborda doenças mentais, abuso, linguagem capacitista, cenas de perseguição, jumpscares e suicídio. Recomenda-se forte discrição ao jogar.</p>
+            </div>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Miki Takamura se muda para uma casa que antes pertencia à sua tia falecida. Cheia de portas misteriosamente trancadas, a casa tem um ar opressivo. Embora queira usá-la para se recuperar, coisas estranhas continuam acontecendo com ela...</p>
+            <p>O que começa como um simples processo de adaptação se transforma em um pesadelo de mistério, paranoia e horror sobrenatural, onde a linha entre delírio e realidade se torna cada vez mais tênue.</p>
+
+            <h2 id="personagens">Personagens Principais</h2>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiX1_vzN7DkG5l-9tRD5eFzHTI3gYrc_ne6QzGqAMwpSDizkOF5IyOWu51FEp4Gl4Okddoa5BiNpJMvE90S7-GwoaGnkxngLsxdrvYg6SDKAwqXFl4nRVnyzpTCL2iMxh4NUcdJP97oHbo/s1600/Miki_Takamura.jpg" alt="Miki Takamura" style="max-height: 150px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Miki Takamura</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Protagonista. Se muda para a casa da tia falecida em busca de recuperação, mas logo se vê envolvida em eventos sobrenaturais e paranóicos.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3ha6Tw7BSVtrof42boBfA04gjFgb7ys7mpJT2x19K3Cj75BcaNnMEpFaaFQYmUVhvjod2pcCvP_ESfTmOagD45h5jgf0Yl0B-KD2wk_YnAY9vD83g_pw4T4d0BovdU4QFXO_ZemO1NNM/s1600/Paropariasdfg.jpg" alt="Shinji Miura" style="max-height: 150px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Shinji Miura</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Vizinho de Miki. Um jovem prestativo que a ajuda ao longo do jogo e se torna uma figura importante em sua jornada.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Yuriko Saeki</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Tia de Miki, que cometeu suicídio por enforcamento. Sua presença e segredos estão profundamente ligados aos eventos da casa.</p>
+                </div>
+            </div>
+
+            <h2 id="finais">Enredos e Finalizações (Spoilers)</h2>
+            <details style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #444; border-radius: 6px; padding: 12px; margin-bottom: 20px;">
+                <summary style="cursor: pointer; font-weight: bold; color: #ffaa00; font-size: 1.1em;">⚠️ Clique aqui para exibir os Finais (Aviso de Spoilers Pesados)</summary>
+                <div style="margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
+                    <h3>Good Ending</h3>
+                    <p>Miki escolhe <strong>"There's really a monster"</strong> → descobre que a monstra é a tia Yuriko, se reconcilia com ela e desmaia. Acorda no dia seguinte, é diagnosticada com esquizofrenia e deixa a casa para se tratar.</p>
+                    <p><em>No remake:</em> há uma cena bônus em que Miki retorna à casa 2 anos depois e se reencontra com Shinji.</p>
+
+                    <h3>Bad Ending</h3>
+                    <p>Miki escolhe <strong>"It's just a delusion"</strong> → se recusa a fugir da monstra e é "matada".</p>
+                    <p><em>No remake:</em> revela-se que seu corpo tinha ferimentos autoinfligidos (suicídio) e Shinji, consumido pela culpa, começa a ver a monstra também.</p>
+                </div>
+            </details>
+
+            <h2 id="conteudo-sensivel">Conteúdo Sensível</h2>
+            <ul>
+                <li>Doenças mentais (especialmente esquizofrenia e delírios)</li>
+                <li>Abuso</li>
+                <li>Linguagem capacitista</li>
+                <li>Cenas de perseguição e jumpscares</li>
+                <li>Suicídio (incluindo por enforcamento e autoinflição)</li>
+            </ul>
+            <p><em>Nota:</em> A gravidade de algumas cenas de perseguição e assaltos foi melhorada/reduzida na versão remake.</p>
+
+            <h2 id="trivia">Trivia</h2>
+            <ul>
+                <li>O nome "Miki" homenageia a atriz <strong>Miki Nakatani</strong>, do filme japonês de horror <em>Loft</em>.</li>
+                <li>A aparência original da monstra é baseada em um <strong>teke-teke</strong> (fantasma sem a metade inferior do corpo).</li>
+                <li>É um dos poucos jogos da Uri com CGs de personagens ao lado das caixas de diálogo (junto com <em>Pedestal</em>).</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema e Solução de Problemas</h2>
+            <p><strong>Plataforma:</strong> Windows nativo. No Mac é possível jogar usando ferramentas como <strong>WineBottler</strong>.</p>
+            
+            <p><strong>Dicas importantes:</strong></p>
+            <ul>
+                <li>Certifique-se de <strong>extrair o jogo para uma pasta própria</strong> em vez de executá-lo diretamente do arquivo ZIP. Caso contrário, todos os saves serão perdidos na próxima execução.</li>
+                <li>Se as imagens não aparecerem corretamente, execute o jogo como administrador: clique com o botão direito em <code>Game.exe</code> → Propriedades → Compatibilidade → marque "Executar este programa como administrador".</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://www.vgperson.com/graphics/ParanoiacScreen1.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://www.vgperson.com/graphics/ParanoiacScreen2.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://www.vgperson.com/graphics/ParanoiacScreen3.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://www.facebook.com/ParanoiacGame/" target="_blank"><i class="fa-brands fa-facebook"></i> Página Oficial no Facebook</a>
+                <a href="https://urigames.web.fc2.com/rules.html" target="_blank"><i class="fa-solid fa-scroll"></i> Regras oficiais (Japonês)</a>
+            </div>
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/QvH4GJ7I" target="_blank"><i class="fa-solid fa-language"></i> Download Paranoiac em Português</a>
+                <a href="https://4br.me/yTVL" target="_blank"><i class="fa-solid fa-download"></i> Download em Inglês (Parte 1)</a>
+                <a href="https://4br.me/s6MZG1W" target="_blank"><i class="fa-solid fa-download"></i> Download em Inglês (Parte 2)</a>
+                <a href="https://4br.me/fFtVe31M" target="_blank"><i class="fa-solid fa-download"></i> Download em Japonês</a>
+            </div>
+            <br>
+            <p style="font-size: 0.9em; color: #aaa;"><em>Nota:</em> O Chrome pode sinalizar falsamente o download como malicioso, mas é seguro ignorar. Vídeos e fanworks são permitidos (com algumas restrições de monetização e uso de assets).</p>
+        `
+    },
     "the-sandman": {
         title: "The Sandman (O Homem da Areia)",
         addedAt: "2026-10-12",
