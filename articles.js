@@ -5398,6 +5398,241 @@ const articlesDatabase = {
             <p style="font-size: 0.9em; color: #aaa;"><em>Nota:</em> O Chrome pode sinalizar falsamente o download como malicioso, mas é seguro ignorar. Vídeos e fanworks são permitidos (com algumas restrições de monetização e uso de assets).</p>
         `
     },
+    "folie-fatale": {
+        title: "Folie Fatale",
+        addedAt: "2026-10-15",
+        categories: ["Aventura", "Indie", "Simulação", "Visual Novel", "Terror Psicológico", "Otome"],
+        summary: "Um romance visual de terror psicológico para o público feminino (Otome/Psycho Love Horror). Acompanhe Natsuki Sakuraba enquanto tenta escapar de um triste destino ao ser perseguida por diversos rapazes excêntricos, obcecados e perigosos (Yandere/Menhera/Jirai).",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/header.jpg?t=1757613632",
+            data: {
+                "Desenvolvedor": "Kanmidoko (神海処)",
+                "Publicadora": "Kanmidoko, 346lab Localization",
+                "Gêneros": "Aventura, Indie, Simulação, Visual Novel, Terror Psicológico",
+                "Plataformas": "PC (Windows), macOS",
+                "Classificação": "18+ (Automutilação, Suicídio, Violência, Assassinato, Abuso de Drogas, Violência Sexual)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "personagens", text: "2. Personagens Principais" },
+            { id: "gameplay", text: "3. Características e Jogabilidade" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "links", text: "6. Links Oficiais, Fan Patch e Downloads" }
+        ],
+        content: `
+            <p><strong>Folie Fatale</strong> (<em>Folie Fatale ～病ンデレ男に堕とされる～ / Folie Fatale ~Yandere Otoko ni Otosareru~ / Folie Fatale 致命至爱</em>) é uma visual novel de terror psicológico e romance dark para o público feminino (Otome / Psycho Love Horror ADV), desenvolvida pelo estúdio <strong>Kanmidoko (神海処)</strong> e publicada em parceria com a <strong>346lab Localization</strong>.</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO ADULTO / SENSÍVEL:</strong> O jogo contém descrições e representações de automutilação, suicídio, violência extrema, assassinato, abuso de substâncias/drogas, nudez, conteúdo sexual e violência sexual. Não recomendado para pessoas sensíveis ou que possam sofrer de instabilidade mental diante desses temas.</p>
+            </div>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>A protagonista, <strong>Natsuki Sakuraba</strong> (nome personalizável), é uma estudante comum do segundo ano na Kirigaya Private Academy. No entanto, ela carrega uma infeliz "maldição": por algum motivo, atrai inevitavelmente apenas homens perigosos, instáveis e obcecados — stalkers, menheras, yanderes e egoístas.</p>
+            <p>Acreditando que sua vida finalmente havia se acalmado e que as coisas estavam sob controle, Natsuki baixa a guarda. Contudo, em uma manhã aparentemente tranquila, ela chega à escola e encontra seu armário de sapatos abarrotado de inúmeras cartas perturbadoras. Conseguirá ela escapar desse trágico destino de ser consumida por homens doentios?</p>
+
+            <h2 id="personagens">Personagens Principais</h2>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/4177c98fa5383de29f696ec0559edc1d.avif?t=1757613632" alt="Sakuraba Natsuki" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Sakuraba Natsuki</h3>
+                    <p style="font-size: 0.9em; margin: 0;">A azarada protagonista (nome personalizável). Estudante do 2º ano da Kirigaya Gakuen High School que inexplicavelmente atrai apenas homens perigosos e instáveis.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/b2f636514f90c8a92798f695ae09974f.avif?t=1757613632" alt="Mashiro Kanae" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Mashiro Kanae</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Membro júnior do comitê de saúde ao qual a protagonista pertence. Apesar da escola ser frequentemente fechada por certas razões, ele possui um lado genial e já criou um aplicativo famoso no 1º ano.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/578fc1e9238c7db6f3a55fa2f2ab5724.avif?t=1757613632" alt="Ushigome Haruki" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Ushigome Haruki</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Colega de classe de Natsuki. Era um atleta talentoso do time de futebol que se aposentou após um acidente. Mantém uma relação estranha com a protagonista desde determinado incidente.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/49b867542577a862a1eb059178d560d1.avif?t=1757613632" alt="Kanda Ren" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Kanda Ren</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Veterano do 3º ano, popular e bem-vestido. Aparenta se dar bem com todos, mas sua fascinação e desvio romântico obsessivo por Natsuki o levam a atitudes devastadoras.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/3946a5f3cc75249459084096f29b4af9.avif?t=1757613632" alt="Hibiya Rito" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Hibiya Rito</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Veterano do 3º ano com comportamento calado e rebelde. Tinha constantes desentendimentos com o irmão de Natsuki. Possui um conhecimento brilhante sobre seres vivos que impressiona até professores.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/e8d71408ccb0e3ba3424d3f21b0c5873.avif?t=1757613632" alt="Sakuraba Fuyuri" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Sakuraba Fuyuri</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Irmão mais velho da protagonista e universitário do 2º ano. Ex-presidente do conselho estudantil, sério e de excelentes notas. Usa uma tiara de orelhas de gato em casa quando está com a irmã.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/8a826ed3e5018806bba80535f4102705.avif?t=1757613632" alt="Mitaka Akina" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <h3 style="margin: 5px 0; font-size: 1.1em;">Mitaka Akina</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Melhor amiga e colega de classe de Natsuki desde o ensino fundamental. Preocupa-se mais do que qualquer pessoa com a infelicidade constante da protagonista.</p>
+                </div>
+            </div>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Elenco Amplo e Múltiplos Finais:</strong> 5 alvos de conquista (<em>capture targets</em>) principais + 1 final extra. Cada personagem possui 3 finais distintos, totalizando diversos desfechos macabros.</li>
+                <li><strong>Duração:</strong> Aproximadamente 8 horas de conteúdo narrativo.</li>
+                <li><strong>Idioma Oficial:</strong> O lançamento oficial na Steam conta com suporte a Japonês e Chinês Simplificado.</li>
+                <li><strong>Suporte a Streaming:</strong> A versão Steam permite transmissões ao vivo (live-streaming) completas.</li>
+                <li><strong>Prequel Relacionado:</strong> Pertence ao universo de <em>Deitsa no Makugire -Chouka no Torikago-</em>.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <p><strong>Windows (Mínimos):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10</li>
+                <li><strong>Processador:</strong> Processador Dual-Core genérico</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Gráficos compatíveis com OpenGL ES 2.0</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>macOS (Mínimos):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> macOS Moderno (64-bit)</li>
+                <li><strong>Processador:</strong> Intel 64-bit ou Apple Silicon (com Rosetta 2)</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Gráficos compatíveis com OpenGL ES 2.0</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+                <li><strong>Observações:</strong> Pacote construído via TyranoStudio sem suporte oficial direto.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_ca762e135c7c3d7e22582d2d3d1e5a5952d0687d.1920x1080.jpg?t=1757613632" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_bb71331bea2620ce73c2cdc436986b6066c2a737.1920x1080.jpg?t=1757613632" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_07ef38d7282b45f19e225d278ef47a2c205864cd.1920x1080.jpg?t=1757613632" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_fb4f4d5ac6ab1ba22a3258474b87ee2ba226bfc7.1920x1080.jpg?t=1757613632" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_bdd6cfb879d7ebd7f125b2e0e4673a48a54f72e2.1920x1080.jpg?t=1757613632" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais, Fan Patch e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais, Lojas e Redes:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2734450/Folie_Fatale/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://kanmidoko.wixsite.com/foliefatale" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Kanmidoko)</a>
+                <a href="https://x.com/kanmidoko_info" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter Oficial</a>
+                <a href="https://weibo.com/u/7787865591" target="_blank"><i class="fa-brands fa-weibo"></i> Weibo Oficial</a>
+                <a href="https://space.bilibili.com/1818289890" target="_blank"><i class="fa-solid fa-tv"></i> Bilibili Oficial</a>
+                <a href="https://www.taptap.io/br/app/33663596" target="_blank"><i class="fa-solid fa-mobile-screen"></i> TapTap</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-book-open"></i> <strong>Bancos de Dados, Análises e Reviews:</strong></p>
+            <div class="play-links">
+                <a href="https://english-otome-games.fandom.com/wiki/Folie_Fatale" target="_blank"><i class="fa-solid fa-globe"></i> English Otome Games Wiki</a>
+                <a href="https://tvtropes.org/pmwiki/pmwiki.php/VisualNovel/FolieFatale" target="_blank"><i class="fa-solid fa-book"></i> TV Tropes Wiki</a>
+                <a href="https://nonbiriotomegame.wordpress.com/2025/10/04/folie-fatale-detour-no-makugire-otome-game-review/" target="_blank"><i class="fa-solid fa-blog"></i> Review (Nonbiri Otome Game)</a>
+                <a href="https://backloggd.com/games/folie-fatale/" target="_blank"><i class="fa-solid fa-gamepad"></i> Backloggd</a>
+                <a href="https://steamdb.info/app/2734450/" target="_blank"><i class="fa-solid fa-database"></i> SteamDB</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-language"></i> <strong>Patch de Tradução em Inglês (Fan Patch):</strong></p>
+            <div class="play-links">
+                <a href="https://eifiedreemurr.itch.io/folie-fatale-english-fan-patch" target="_blank"><i class="fa-solid fa-download"></i> Folie Fatale English Fan Patch (itch.io)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC v1.2):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/V3ccsUwfd" target="_blank"><i class="fa-solid fa-download"></i> Download Folie Fatale v1.2 (UploadHaven - Opção 1)</a>
+                <a href="https://4br.me/v1-2" target="_blank"><i class="fa-solid fa-download"></i> Download Folie Fatale v1.2 (UploadHaven - Opção 2)</a>
+                <a href="https://4br.me/NwWzk2pDLm" target="_blank"><i class="fa-solid fa-download"></i> Download (MegaUp.net)</a>
+                <a href="https://4br.me/SXXfi" target="_blank"><i class="fa-solid fa-download"></i> Download (Mega.nz)</a>
+                <a href="https://4br.me/DM3kvbIE" target="_blank"><i class="fa-solid fa-download"></i> Download (GoFile)</a>
+                <a href="https://4br.me/d9IjIqt7m" target="_blank"><i class="fa-solid fa-download"></i> Download (MixDrop)</a>
+                <a href="https://4br.me/P24v6yNrxP" target="_blank"><i class="fa-solid fa-download"></i> Download (Rapidgator)</a>
+                <a href="https://4br.me/qNbsS" target="_blank"><i class="fa-solid fa-download"></i> Download (SendCM)</a>
+                <a href="https://clicknupload.click/snpdx1m6bj1t" target="_blank"><i class="fa-solid fa-download"></i> Download (Clicknupload)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação: Extraia o arquivo .zip baixado usando o 7-Zip ou WinRAR. Abra a pasta extraída e execute o aplicativo de instalação (setup) ou o executável principal do jogo. Aplique o crack ou patch de tradução se necessário.</em></small></p>
+        `
+    },
+    "mucorales": {
+        title: "Mucorales",
+        addedAt: "2024-09-15",
+        categories: ["Aventura", "Indie", "Terror Psicológico", "Pixel Art", "RPG Maker"],
+        summary: "Um jogo de terror em RPG Maker que traz uma reinterpretação macabra e perturbadora do conto de fadas do Chapeuzinho Vermelho. Acompanhe Blanchette enquanto ela visita a avó e descobre verdades inquietantes na floresta.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2746420/header.jpg?t=1748215282",
+            data: {
+                "Desenvolvedor": "LuN",
+                "Publicadora": "LuN",
+                "Gêneros": "Aventura, Indie, Terror Psicológico",
+                "Plataformas": "PC (Windows)",
+                "Classificação": "18+ (Violência, Temas Sensíveis, Medo)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Lojas" }
+        ],
+        content: `
+            <p><strong>Mucorales</strong> é um jogo independente de terror psicológico e aventura desenvolvido e publicado por <strong>LuN</strong> no motor RPG Maker. O jogo propõe uma reimaginação sombria, interativa e perturbadora do clássico conto de fadas da Chapeuzinho Vermelho.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Acompanhe a jornada de Blanchette, uma jovem garota que se aventura pela floresta a caminho da casa de sua avó.</p>
+            <p>Conforme avança, Blanchette descobre verdades inquietantes sobre si mesma e sobre a misteriosa floresta que a cerca. Enfrente escolhas cruciais que podem levá-la por caminhos de tentação e perdição ou guiá-la para escapar dos perigos ocultos na escuridão dos bosques.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Reinterpretação Macabra:</strong> Uma releitura sombria do clássico Chapeuzinho Vermelho repleta de segredos e reviravoltas psicológicas.</li>
+                <li><strong>Experiência Curta e Intensa:</strong> Uma narrativa envolvente com duração aproximada de 30 minutos a 1 hora por jogada.</li>
+                <li><strong>Escolhas e Múltiplos Finais:</strong> Interaja com objetos e personagens e tome decisões que alteram diretamente o destino da protagonista, oferecendo grande fator replay.</li>
+                <li><strong>Estilo Retrô em Pixel Art:</strong> Apresentação em visão superior (top-down) construída em estética clássica de RPG Maker.</li>
+                <li><strong>Idiomas Suportados:</strong> Disponível com textos e menus em Inglês e Japonês.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> Intel N4100 (ou equivalente) ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Compatível com DirectX 9 ou OpenGL 4.1</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 1 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 ou superior</li>
+                <li><strong>Processador:</strong> Intel Core i3-6100 ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Suporte a driver de hardware OpenGL ES 2.0</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 1 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2746420/ss_b35bed19af91b5c2a3fe5b85f4963d6061f91d14.1920x1080.jpg?t=1748215282" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2746420/ss_1b610cdf336f3b1886543cd7d31d93c046675b91.1920x1080.jpg?t=1748215282" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2746420/ss_71020d4cb60bae353fb030136cb32a403ca4c6ad.1920x1080.jpg?t=1748215282" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2746420/ss_596e400761215c14b365d43f38f1fedfe94578b0.1920x1080.jpg?t=1748215282" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2746420/ss_5ecadee02a394a0998574bbebab09d5dc632cc48.1920x1080.jpg?t=1748215282" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Lojas</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2746420/Mucorales/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.taptap.io/br/app/33655086" target="_blank"><i class="fa-solid fa-mobile-screen"></i> Página no TapTap</a>
+            </div>
+        `
+    },
     "the-sandman": {
         title: "The Sandman (O Homem da Areia)",
         addedAt: "2026-10-12",
