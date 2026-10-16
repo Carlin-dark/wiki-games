@@ -4998,13 +4998,18 @@ const articlesDatabase = {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/483980/header.jpg",
             data: { "Desenvolvedor": "sen", "Gêneros": "RPG, Horror, Exploração", "Lançamento": "2012 / Remake: 2020", "Plataformas": "PC, Switch" }
         },
-        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
+        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" }, { id: "traducoes", text: "3. Traduções e Patches" } ],
         content: `
             <p>Outro pilar do horror no <em>RPG Maker</em>, <strong>Mad Father</strong> coloca você no controle de Aya Drevis, uma garota cuja casa de repente é infestada por cadáveres e espíritos desfigurados buscando vingança contra o pai dela.</p>
             <h2 id="sinopse">Sinopse e Mecânicas</h2>
             <p>É uma exploração sombria de traumas familiares. O jogador resolve puzzles com ferramentas cirúrgicas e deve despistar ou acalmar cadáveres. O jogo lida com temas pesados de lealdade doentia, dissecação humana e abuso, entregando múltiplos finais chocantes.</p>
             <hr><h2 id="links">Links Oficiais</h2>
             <div class="play-links"><a href="https://store.steampowered.com/app/483980/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
+            <h2 id="traducoes">Traduções e Patches</h2>
+            <div class="play-links">
+                <a href="https://4br.me/hJQo" target="_blank"><i class="fa-solid fa-language"></i> Patch de tradução em Português</a>
+                <a href="https://4br.me/FnS4Z" target="_blank"><i class="fa-solid fa-language"></i> Patch em Inglês</a>
+            </div>
         `
     },
     "mtool-downloads": {
