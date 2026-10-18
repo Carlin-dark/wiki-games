@@ -5638,6 +5638,164 @@ const articlesDatabase = {
             </div>
         `
     },
+    "kinkoi-golden-loveriche": {
+        title: "Kinkoi: Golden Loveriche",
+        addedAt: "2026-10-18",
+        categories: ["Visual Novel", "Romance", "Comédia", "Casual", "Simulação", "Anime"],
+        summary: "Premiado romance visual desenvolvido pela Saga Planets e publicado pela NekoNyan. Acompanhe Ichimatsu Ouro enquanto ele é forçado a frequentar a prestigiada Noble Private Academy e acaba morando no dormitório feminino ao lado de uma princesa europeia.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/header.jpg?t=1672207780",
+            data: {
+                "Título Original": "金色ラブリッチェ (Kin'iro Loveriche)",
+                "Desenvolvedor": "Saga Planets",
+                "Publicadora": "NekoNyan Ltd., HIKARI FIELD",
+                "Gêneros": "Visual Novel, Romance, Comédia",
+                "Plataformas": "PC (Windows), PS4, PS Vita, Nintendo Switch, iOS, Android",
+                "Classificação": "12+ (Steam) / 18+ (Com Patch de Conteúdo Adulto)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "personagens", text: "2. Personagens Principais" },
+            { id: "gameplay", text: "3. Características e Jogabilidade" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "equipe", text: "6. Equipe e Elenco de Voz" },
+            { id: "guias", text: "7. Walkthroughs e Guias de Rotas" },
+            { id: "links", text: "8. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Kinkoi: Golden Loveriche</strong> (<em>金色ラブリッチェ / Kin'iro Loveriche</em>) é uma aclamada visual novel japonesa produzida pelo renomado estúdio <strong>Saga Planets</strong> e distribuída no Ocidente pela <strong>NekoNyan Ltd.</strong> e <strong>HIKARI FIELD</strong>. O título conquistou diversos prêmios no Japão por sua arte vibrante, trilha sonora marcante, personagens cativantes e enredo emocionante.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>A <strong>Noble Private Academy</strong> é uma instituição de ensino e internato voltada para a elite, onde jovens de famílias abastadas são educados com rigor e dignidade para o futuro.</p>
+
+            <p>Neste ano, a academia vive um clima de ansiedade e expectativa devido à visita de Sylvia, uma princesa de um reino do norte da Europa. Em uma reviravolta inesperada, a princesa acaba simpatizando com o protagonista <strong>Ichimatsu Ouro</strong>, resultando em sua transferência forçada para a Noble Academy. Sem vagas nos alojamentos masculinos, Ouro é instalado em um quarto vago no canto do dormitório feminino, dando início a uma movimentada comédia romântica.</p>
+
+            <h2 id="personagens">Personagens Principais</h2>
+            <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px;">
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/extras/19dca66086e1920b7180b8b80ee9b4e1.avif?t=1672207780" alt="Sylvia" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Sylvia (Voz: Nekomura Yuki)</h3>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/extras/5f7f6ff5e19cb6881702fcfa53c17a3f.avif?t=1672207780" alt="Reina" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Reina (Voz: Haruka Sora)</h3>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/extras/7a34a7e293a080206ab1dbbf449d7564.avif?t=1672207780" alt="Elle" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Elle (Voz: Aji Sanma)</h3>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/extras/58bc645d1d401fdde2df37f504e69e7c.avif?t=1672207780" alt="Akane" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Akane (Voz: Tsuchiya Sen)</h3>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/extras/479140c4acfd78c3dfbf79121a341866.avif?t=1672207780" alt="Ria" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Ria (Voz: Kazane)</h3>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/extras/e931fa50d25bd55e1f09aab033436646.avif?t=1672207780" alt="Mina" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Mina (Voz: Akino Hana)</h3>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/extras/624eec356e9b8fc9edb42f2d7ceff02d.avif?t=1672207780" alt="Ayaka" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Ayaka</h3>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/extras/5241b08d4a1ec1c8fd15990b5820d258.avif?t=1672207780" alt="Outros Personagens" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Personagens de Suporte</h3>
+                </div>
+            </div>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Narrativa Extensa:</strong> Duração média de 30 horas com múltiplos caminhos e rotas dedicadas a cada uma das heroínas.</li>
+                <li><strong>Premiações de Destaque:</strong> Vencedor de múltiplos prêmios no Getchu Bishoujo Game Awards no Japão em categorias como Melhor Jogo, Música, Design de Personagens e Enredo.</li>
+                <li><strong>Pacote Gráfico em QHD 1440p:</strong> Suporte a DLC oficial com texturas e visuais aprimorados em alta resolução.</li>
+                <li><strong>Dublagem Profissional Completa:</strong> Elenco composto por dubladoras japonesas de grande prestígio no gênero.</li>
+                <li><strong>Conteúdo Opcional 18+:</strong> Patch oficial disponível gratuitamente para desbloquear conteúdo adulto e cenas H sem censura.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> 1.7 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 2 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 1 GB VRAM</li>
+                <li><strong>Armazenamento:</strong> 5 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_6105badc315fdcec58742eedaa4e4ae88e60f6f1.1920x1080.jpg?t=1672207780" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_b5099c4ed2e8011557f6b51ad6c3dabd95bd0a4c.1920x1080.jpg?t=1672207780" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_8c6735e4175baa2c7bc6b27fe9a30ff356e1974b.1920x1080.jpg?t=1672207780" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_aeca3f17f48ac40960153c4ea5184bb69d8f476d.1920x1080.jpg?t=1672207780" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_d2fed395dcccc8e768bcd7cee935dbe60c740a84.1920x1080.jpg?t=1672207780" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_9af07c2531e29391e2524f84edc838ae50ee3790.1920x1080.jpg?t=1672207780" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_8a514ca1574ceff04ac45bed94f84c311847cd57.1920x1080.jpg?t=1672207780" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_50fb1ce4cb1ec73061cc8876705ed61ae0ff3917.1920x1080.jpg?t=1672207780" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1277940/ss_f3ff2bed421b88574bab06fa454a7591999ad4d2.1920x1080.jpg?t=1672207780" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <h2 id="equipe">Staff Principal e Elenco</h2>
+            <ul>
+                <li><strong>Roteiro e Criação:</strong> Sakaki Kasa</li>
+                <li><strong>Direção:</strong> Kuro</li>
+                <li><strong>Arte Principal:</strong> Hontani Kanae, Toranosuke, Arimatsu Tsukasa</li>
+                <li><strong>Composição Musical:</strong> Arte Refact, Matsumoto Shin'ichirou, Higuchi Hideki, Mizutsuki Ryou</li>
+                <li><strong>Música de Abertura:</strong> Kikuta Daisuke (Elements Garden)</li>
+            </ul>
+
+            <h2 id="guias">Walkthroughs e Guias de Rotas</h2>
+            <p>Confira guias completos de escolhas para acessar as rotas de todas as personagens:</p>
+            <ul>
+                <li><a href="https://www.otakulair.com/english-visual-novel-walkthroughs/kinkoi-golden-loveriche-walkthrough-saga-planets-nekonyan/" target="_blank">Guia Completo OtakuLair (EN)</a></li>
+                <li><a href="https://www.nookgaming.com/kinkoi-golden-loveriche-walkthrough-guide/" target="_blank">Guia NookGaming (EN)</a></li>
+                <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2513869928" target="_blank">Guia da Comunidade Steam (EN/CN)</a></li>
+                <li><a href="http://seiya-saiga.com" target="_blank">Seiya Saiga (JP)</a></li>
+            </ul>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Sites Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://kinkoi.nekonyansoft.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (NekoNyan)</a>
+                <a href="https://store.steampowered.com/app/1277940/Kinkoi_Golden_Loveriche/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://blog.mangagamer.org/2021/06/11/kinkoi-golden-loveriche-now-available-on-mangagamer/" target="_blank"><i class="fa-solid fa-store"></i> MangaGamer</a>
+                <a href="https://www.kaguragames.com/product/kinkoi-golden-loveriche/" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Kagura Games</a>
+                <a href="https://denpasoft.com/" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Denpasoft</a>
+                <a href="https://store.steampowered.com/app/1665630/Kinkoi_QHD1440p_Graphics_Pack/" target="_blank"><i class="fa-solid fa-image"></i> DLC QHD 1440p Graphics Pack (Steam)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Patches e Updates:</strong></p>
+            <div class="play-links">
+                <a href="https://nekonyansoft.com/index.php/shop/product/41" target="_blank"><i class="fa-solid fa-unlock"></i> Patch 18+ Uncensored Oficial (Steam - Gratuito)</a>
+                <a href="https://4br.me/mBTfy8Z8" target="_blank"><i class="fa-solid fa-wrench"></i> Download Patch v1.11 (Não-Steam)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-file-zipper"></i> <strong>Downloads do Jogo Completo (18+ Uncensored):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/h65pofrbNa" target="_blank"><i class="fa-solid fa-download"></i> Download Kinkoi: Golden Loveriche 18+ (Servidor 1)</a>
+                <a href="https://4br.me/sMfk5I" target="_blank"><i class="fa-solid fa-download"></i> Download Kinkoi: Golden Loveriche 18+ (Servidor 2)</a>
+            </div>
+            <p><small><em>Senha do arquivo compactado: <code>ryuugames.com</code></em></small></p>
+
+            <br>
+            <p><strong>Instruções de Instalação do Patch 18+ (Steam):</strong></p>
+            <ol>
+                <li>Baixe o arquivo do patch em formato <code>.rar</code> e extraia seu conteúdo usando o 7-Zip ou WinRAR.</li>
+                <li>Na sua biblioteca Steam, clique com o botão direito sobre o jogo -> <strong>Propriedades</strong> -> <strong>Arquivos Locais</strong> -> <strong>Navegar pelos arquivos locais</strong>.</li>
+                <li>Copie o arquivo <code>adult.dat</code> extraído e cole-o diretamente dentro da pasta <code>Kinkoi_Data</code>.</li>
+                <li>Inicie o jogo normalmente.</li>
+            </ol>
+        `
+    },
     "the-sandman": {
         title: "The Sandman (O Homem da Areia)",
         addedAt: "2026-10-12",
