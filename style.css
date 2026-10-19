@@ -216,6 +216,8 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 #content p { margin-bottom: 12px; color: #b8c2cd; }
 #content ul, #content ol { margin: 0 0 15px 20px; color: #b8c2cd; }
 #content li { margin-bottom: 4px; }
+.article-text a { color: #ff5c5c; }
+.article-text a:hover { color: #ff8585; }
 
 .download-warning {
     margin: 25px 0 10px;
