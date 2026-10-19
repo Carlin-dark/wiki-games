@@ -285,14 +285,18 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     border-radius: 4px;
     overflow: hidden;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transform: perspective(900px) rotateX(2deg) rotateY(-2deg);
+    transform-style: preserve-3d;
+    box-shadow: 2px 3px 0 #18283a, 0 8px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     will-change: transform, opacity;
     display: flex;
     flex-direction: column;
 }
-.home-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+.home-card:hover,
+.home-card:focus-visible {
+    transform: perspective(900px) rotateX(-1deg) rotateY(1deg) translateY(-6px) scale(1.02);
+    box-shadow: 4px 8px 0 #18283a, 0 18px 28px rgba(0, 0, 0, 0.55);
     border-color: #4a75a0;
     text-decoration: none;
 }
@@ -301,6 +305,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     height: 100px;
     object-fit: cover;
     border-bottom: 1px solid #202e42;
+    transform: translateZ(12px);
 }
 .home-card span {
     padding: 10px;
@@ -311,6 +316,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateZ(18px);
 }
 .home-card:hover span { color: #fff; }
 .home-game-item { min-width: 0; }
@@ -319,27 +325,40 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 
 .play-links {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3px;
     margin-top: 15px;
     margin-bottom: 20px;
 }
 .play-links a {
-    padding: 8px 12px;
-    background: rgba(28, 43, 62, 0.8);
-    border: 1px solid #283850;
-    border-radius: 3px;
-    color: #a9c5df;
+    width: 100%;
+    min-height: 34px;
+    padding: 8px 10px;
+    background: linear-gradient(90deg, rgba(27, 40, 56, 0.96), rgba(23, 34, 47, 0.96));
+    border: 1px solid rgba(102, 153, 190, 0.12);
+    border-radius: 2px;
+    color: #c7d5e0;
     font-size: 12px;
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, padding 0.18s ease;
+}
+.play-links a::after {
+    content: "↗";
+    margin-left: auto;
+    color: #7a9bb8;
+    font-size: 13px;
+    opacity: 0.75;
 }
 .play-links a:hover {
-    background: #283850;
-    color: #fff;
+    padding-left: 13px;
+    background: linear-gradient(90deg, #2a475e, #22374b);
+    border-color: rgba(102, 192, 244, 0.45);
+    color: #66c0f4;
     text-decoration: none;
 }
+.play-links a:hover::after { color: #c7d5e0; }
 
 .about-page-intro {
     margin: 0 0 18px;
@@ -496,7 +515,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 .joiplay-panel p { margin: 8px 0; }
 .joiplay-panel strong { color: #fff; }
 .joiplay-links { margin-bottom: 0; }
-.joiplay-links a { background: rgba(11, 27, 40, 0.75); }
+.joiplay-links a { background: linear-gradient(90deg, rgba(11, 27, 40, 0.96), rgba(17, 34, 48, 0.96)); }
 
 .infobox {
     float: right;
@@ -527,6 +546,32 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 .infobox th, .infobox td { padding: 6px; border-bottom: 1px solid rgba(22, 32, 46, 0.5); vertical-align: top; }
 .infobox th { text-align: left; background-color: rgba(15, 22, 34, 0.6); width: 38%; color: #8fa3bc; }
 .infobox td { color: #c5c8c6; }
+.infobox td a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    min-height: 28px;
+    margin: 2px 0;
+    padding: 5px 8px;
+    background: linear-gradient(90deg, rgba(27, 40, 56, 0.96), rgba(23, 34, 47, 0.96));
+    border: 1px solid rgba(102, 153, 190, 0.12);
+    border-radius: 2px;
+    color: #c7d5e0;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+.infobox td a::after {
+    content: "↗";
+    margin-left: auto;
+    color: #7a9bb8;
+}
+.infobox td a:hover,
+.infobox td a:focus-visible {
+    background: linear-gradient(90deg, #2a475e, #22374b);
+    border-color: rgba(102, 192, 244, 0.45);
+    color: #66c0f4;
+    text-decoration: none;
+}
 
 .rating-badge {
     display: inline-flex;
@@ -752,12 +797,16 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     border-radius: 4px;
     overflow: hidden;
     color: #c5c8c6;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    transform: perspective(900px) rotateX(2deg) rotateY(-2deg);
+    transform-style: preserve-3d;
+    box-shadow: 2px 3px 0 #18283a, 0 8px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     will-change: transform, opacity;
 }
-.all-game-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+.all-game-card:hover,
+.all-game-card:focus-within {
+    transform: perspective(900px) rotateX(-1deg) rotateY(1deg) translateY(-6px) scale(1.02);
+    box-shadow: 4px 8px 0 #18283a, 0 18px 28px rgba(0, 0, 0, 0.55);
     border-color: #4a75a0;
     text-decoration: none;
 }
@@ -766,9 +815,11 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     height: 120px;
     object-fit: cover;
     border-bottom: 1px solid #202e42;
+    transform: translateZ(12px);
 }
 .all-game-card-content {
     padding: 12px;
+    transform: translateZ(18px);
 }
 .game-card-image-link { display: block; }
 .game-card-heading, .article-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
