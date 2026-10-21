@@ -6493,6 +6493,108 @@ const articlesDatabase = {
             <p><small><em>Instruções do Artbook: Para acessar o livro de arte incluso na Steam, vá até a Biblioteca -> Clique com o botão direito em Corpse Party (2021) -> Propriedades -> Arquivos Locais -> Navegar. O arquivo PDF estará na pasta raiz do jogo.</em></small></p>
         `
     },
+    "corpse-party-sweet-sachikos-hysteric-birthday-bash": {
+        title: "Corpse Party: Sweet Sachiko's Hysteric Birthday Bash",
+        addedAt: "2026-10-21",
+        categories: ["Visual Novel", "Terror", "Comédia", "Aventura", "Anime", "Indie"],
+        summary: "Uma comédia romântica macabra e canônica que serve como midquel para Corpse Party e Book of Shadows. O espírito vingativo de Sachiko Shinozaki decide comemorar seu aniversário concedendo 24 horas de trégua e reunindo as almas condenadas para jogos, encontros e teatro bizarro.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/header.jpg?t=1787116031",
+            data: {
+                "Desenvolvedor": "MAGES. Inc. / Team GrisGris",
+                "Publicadora": "XSEED Games / Marvelous USA, Inc.",
+                "Gêneros": "Visual Novel, Comédia Romântica, Terror",
+                "Plataformas": "PC (Windows), PSP, PS Vita",
+                "Classificação": "18+ (Violência Extrema, Temas Sensíveis, Linguagem Imprópria, Conteúdo Sugestivo)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Destaques" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Corpse Party: Sweet Sachiko's Hysteric Birthday Bash</strong> (originalmente lançado no Japão como <em>Corpse Party 2U</em>) é um spin-off oficial e canônico de comédia romântica / terror desenvolvido pela <strong>Team GrisGris</strong> e <strong>MAGES. Inc.</strong>, publicado no Ocidente pela <strong>XSEED Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Sachiko Shinozaki foi tragicamente assassinada aos 7 anos de idade. Embora tenha se tornado o espírito vingativo e sedento de sangue responsável pela morte e apagamento de inúmeras crianças da história, hoje é seu aniversário de... 7 anos novamente!</p>
+
+            <p>Para comemorar, Sachiko decide conceder 24 horas de anistia aos sofrimentos de suas vítimas, reunindo todos os personagens condenados em Heavenly Host Elementary para uma festa de aniversário histericamente bizarra. O grupo será forçado a participar de concursos de culinária, peças de teatro improvisadas, encontros de casais, corridas e horrores Lovecraftianos para manter a garotinha entretida e sobreviver ao dia.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/extras/322ad071150e6dce63de34f5424d6a64.webm?t=1787116031" type="video/webm">
+                </video>
+            </div>
+
+            <h2 id="gameplay">Características e Destaques</h2>
+            <ul>
+                <li><strong>Midquel Canônico:</strong> A história se passa durante os eventos de <em>Corpse Party</em> e <em>Corpse Party: Book of Shadows</em>, oferecendo novas perspectivas para os personagens da franquia.</li>
+                <li><strong>Comédia Sombria e Fanservice:</strong> Dividido em 8 capítulos principais repleto de paródias, teatro, batalhas de culinária e interações cômicas entre o elenco.</li>
+                <li><strong>28 Finais Diferentes:</strong> As escolhas do jogador determinam os rumos da trama e levam a um dos 28 finais disponíveis, variando de mortes bizarras aos poucos finais verdadeiros.</li>
+                <li><strong>Capítulo Extra de Terror Clássico:</strong> Ao concluir a história principal, um capítulo no estilo tradicional de terror é desbloqueado, detalhando as origens das novas personagens Azusa Takai e Ran Kobayashi.</li>
+                <li><strong>Dublagem Original com Novo Tom:</strong> O elenco de dublagem japonês original reprisa seus papéis, mas leva suas performances a situações absurdamente cômicas e inesperadas.</li>
+            </ul>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/extras/527bf11aec166de387c4bfc9fe4f66ed.webm?t=1787116031" type="video/webm">
+                </video>
+            </div>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO ADULTO:</strong> O jogo contém descrições em texto de mutilação, violência extrema, tortura, assassinatos, sangue, piadas com fetiches/masoquismo, insinuações sexuais cômicas e linguagem com fortes palavrões.</p>
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows XP / Vista / 7 / 8 / 10</li>
+                <li><strong>Processador:</strong> 1.5 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 512 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 64 MB VRAM, aceleradora 3D compatível com DirectX 9.0c</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 7 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Compatível com DirectX 9.0c</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_9b01b6944f6553dad812bce8fc91ec948766e286.1920x1080.jpg?t=1787116031" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_effea6f090bc44d3e0e9d3362765c04bc4c9406c.1920x1080.jpg?t=1787116031" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_7ad54bb3305738a065e3fc79244ee874a070076a.1920x1080.jpg?t=1787116031" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_3d2e40cf4d20865cc9cf2ab3962869316392480c.1920x1080.jpg?t=1787116031" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_f3fba26b8cc66890ecbd14930d29e0f0dfe9e4a6.1920x1080.jpg?t=1787116031" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_de64f35b23cbe9998b8b9e606515c27179002c65.1920x1080.jpg?t=1787116031" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_ad238f483f7dd5ae02847bf991266b0407d26061.1920x1080.jpg?t=1787116031" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_824334abb57d4f44331770e81dd5defbbec03880.1920x1080.jpg?t=1787116031" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_8548cc19088a78dfa68861c38de66d6cf9acfa53.1920x1080.jpg?t=1787116031" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_0af45753c8fa432bbf16c650e318bcb17b76174d.1920x1080.jpg?t=1787116031" alt="Screenshot 10" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_c89140e1fa27658b21fdf7b07429fcbe84b847f7.1920x1080.jpg?t=1787116031" alt="Screenshot 11" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_737dcd0f619ec3723b7490c7b0e455c0875f568b.1920x1080.jpg?t=1787116031" alt="Screenshot 12" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/778400/Corpse_Party_Sweet_Sachikos_Hysteric_Birthday_Bash/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC v2022.07.03):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/kFVXG" target="_blank"><i class="fa-solid fa-download"></i> Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 1)</a>
+                <a href="https://4br.me/P2izeILF" target="_blank"><i class="fa-solid fa-download"></i> Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 2)</a>
+                <a href="https://4br.me/6KyIJp" target="_blank"><i class="fa-solid fa-download"></i> Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 3)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação: Baixe o arquivo .zip pelo link, extraia com o 7-Zip ou WinRAR, execute a aplicação de instalação (setup.exe) dentro da pasta e inicie o jogo através do atalho gerado na sua área de trabalho.</em></small></p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
