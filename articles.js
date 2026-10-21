@@ -5911,6 +5911,588 @@ const articlesDatabase = {
             <p><small><em>Instruções e Solução de Problemas: Extraia sempre o arquivo ZIP para uma pasta separada antes de jogar. Se as imagens não carregarem corretamente, execute o arquivo <code>Game.exe</code> como Administrador. Certifique-se de que o caminho da pasta não contenha caracteres especiais (acentos) para evitar erros de arquivo.</em></small></p>
         `
     },
+    "the-house-in-fata-morgana-reincarnation": {
+        title: "The House in Fata Morgana: Reincarnation",
+        addedAt: "2026-10-21",
+        categories: ["Visual Novel", "Aventura", "Gótico", "Mistério", "Drama", "Anime"],
+        summary: "Capítulo de sequência e spin-off oficial de The House in Fata Morgana. Ambientado nos dias atuais, acompanha os personagens principais vivendo vidas modernas após reencarnarem, contando com dublagem completa em japonês.",
+        infobox: {
+            image: "https://static.wikia.nocookie.net/fata-morgana/images/d/dd/Reincarnation.jpg/revision/latest?cb=20260119232850",
+            data: {
+                "Título Original": "ファタモルガーナの館 現代編 (Fata Morgana no Yakata: Gendai-hen)",
+                "Desenvolvedor": "NOVECT (Novectacle), Mighty Rabbit Studios",
+                "Publicadora": "Limited Run Games",
+                "Gêneros": "Visual Novel, Mistério, Drama",
+                "Plataformas": "PS Vita, PS4, Nintendo Switch (via Dreams of the Revenants Edition)",
+                "Classificação": "16+ (Temas Sensíveis, Drama)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Destaques" },
+            { id: "plataformas", text: "3. Lançamento e Plataformas" },
+            { id: "links", text: "4. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>The House in Fata Morgana: Reincarnation</strong> (<em>ファタモルガーナの館 現代編 / Fata Morgana no Yakata: Gendai-hen</em>) é um capítulo de sequência/spin-off desenvolvido pela <strong>NOVECT</strong> em colaboração com a <strong>Mighty Rabbit Studios</strong> e publicado no Ocidente pela <strong>Limited Run Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Servindo como um epílogo e continuação direta da emblemática saga da mansão amaldiçoada, <em>Reincarnation</em> acompanha os membros do elenco central vivendo no mundo contemporâneo após terem reencarnado nos dias atuais.</p>
+            <p>Longe dos tormentos góticos do passado, os personagens enfrentam novos desafios, reencontros emocionantes e os desdobramentos de seus laços eternos em uma ambientação moderna.</p>
+
+            <h2 id="gameplay">Características e Destaques</h2>
+            <ul>
+                <li><strong>Dublagem Completa (Full Voice Acting):</strong> Diferente do jogo original, este capítulo conta com atuação de voz integral em japonês para todos os personagens principais.</li>
+                <li><strong>Conteúdo Integrado à Edição Consolidada:</strong> Incluído oficialmente no pacote de consoles <em>The House in Fata Morgana: Dreams of the Revenants Edition</em>.</li>
+                <li><strong>Trilha Sonora e Arte Inéditas:</strong> Mantém a identidade visual marcante e emocionante da NOVECT com arranjos musicais exclusivos para a era moderna.</li>
+            </ul>
+
+            <h2 id="plataformas">Lançamento e Plataformas</h2>
+            <p>Datas de lançamento oficial por plataforma (como parte de <em>Dreams of the Revenants Edition</em>):</p>
+            <ul>
+                <li><strong>PlayStation Vita:</strong> 16 de março de 2017</li>
+                <li><strong>PlayStation 4:</strong> 10 de outubro de 2019</li>
+                <li><strong>Nintendo Switch:</strong> 25 de março de 2021</li>
+            </ul>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://mangagamer.org/fatamorgana/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (MangaGamer)</a>
+            </div>
+        `
+    },
+    "the-house-in-fata-morgana-dreams-of-the-revenants-edition": {
+        title: "The House in Fata Morgana: Dreams of the Revenants Edition",
+        addedAt: "2026-10-21",
+        categories: ["Visual Novel", "Aventura", "Gótico", "Mistério", "Drama", "Terror Psicológico", "Anime"],
+        summary: "A coleção definitiva do aclamado romance visual gótico. Acompanha a história principal, a prequela A Requiem for Innocence, a sequência totalmente dublada Reincarnation e diversas histórias curtas adicionais abrangendo quase um milênio de tragédia, insanidade e humanidade.",
+        infobox: {
+            image: "https://www.metacritic.com/a/img/resize/e5e2b19e96aef7a12d89e55f96ea024dd5ce091b/catalog/provider/6/12/6-1-793006-52.jpg?auto=webp&fit=contain&height=480&quality=70",
+            data: {
+                "Desenvolvedor": "NOVECT",
+                "Publicadora": "Clear River Games, Limited Run Games",
+                "Gêneros": "Visual Novel, Mistério, Drama, Gótico",
+                "Plataformas": "Nintendo Switch, PS4, PS Vita",
+                "Classificação": "PEGI 16 / 16+ (Violência, Temas Sensíveis, Insanidade)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "conteudo-incluido", text: "2. Conteúdo e Jogos Incluídos" },
+            { id: "gameplay", text: "3. Características e Destaques" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Lojas" }
+        ],
+        content: `
+            <p><strong>The House in Fata Morgana: Dreams of the Revenants Edition</strong> é a coletânea definitiva e completa da célebre obra-prima de suspense gótico desenvolvida pelo estúdio <strong>NOVECT</strong> e publicada pela <strong>Clear River Games</strong> e <strong>Limited Run Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Você desperta em uma mansão decadente e em ruínas. Uma mulher misteriosa com olhos de jade surge diante de você, revelando que você é o Senhor da casa e ela, sua Criada. No entanto, você não possui memórias, nenhum conceito de identidade ou mesmo a certeza de estar vivo.</p>
+
+            <p>A Criada o convida para uma jornada pelos corredores sem vida da mansão para testemunhar as inúmeras tragédias que assolaram seus antigos residentes ao longo de diferentes épocas:</p>
+            <ul>
+                <li><strong>Ano de 1603 (A Primeira Porta):</strong> Uma era de florescimento artístico onde os inseparáveis irmãos da família Rhodes vivem em meio a rosas, sob a sombra da inveja alheia.</li>
+                <li><strong>Ano de 1707 (A Segunda Porta):</strong> A mansão jaz em ruínas e serve de lar para uma fera que anseia pela paz, mas acaba sucumbindo à sua própria selvageria.</li>
+                <li><strong>Ano de 1869 (A Terceira Porta):</strong> Era de progresso industrial. O mestre da mansão é um empresário obcecado por riquezas que negligencia e maltrata sua esposa.</li>
+                <li><strong>Ano de 1099 (A Quarta Porta):</strong> A última história contada pela Criada traz um jovem que se diz amaldiçoado e uma garota de cabelos brancos chamada Giselle, marcada como bruxa e sentenciada à morte.</li>
+            </ul>
+            <p>Após testemunhar essas quatro tragédias, cabe a você decidir se deseja encerrar sua jornada ou avançar para descobrir a verdade por trás da maldição da mansão.</p>
+
+            <h2 id="conteudo-incluido">Conteúdo e Jogos Incluídos</h2>
+            <p>A edição <em>Dreams of the Revenants Edition</em> reúne em um único pacote todo o universo de Fata Morgana:</p>
+            <ul>
+                <li><strong>1. The House in Fata Morgana:</strong> A linha do tempo e história principal completa.</li>
+                <li><strong>2. A Requiem for Innocence:</strong> Prequela que elucida as origens da terrível maldição da mansão e a história de Jacopo e Morgana.</li>
+                <li><strong>3. Reincarnation:</strong> Sequência ambientada nos dias atuais com os personagens centrais reencarnados no mundo moderno (inclui dublagem completa em japonês).</li>
+                <li><strong>4. Histórias Curtas Adicionais:</strong> Diversos contos extras e cenários paralelos para aprofundar a lore dos personagens.</li>
+            </ul>
+
+            <h2 id="gameplay">Características e Destaques</h2>
+            <ul>
+                <li><strong>Narrativa Épica e Imersiva:</strong> Uma história de mistério e drama que abrange quase um milênio sobre a natureza humana, amor e perda.</li>
+                <li><strong>Trilha Sonora Memorável:</strong> Dezenas de faixas vocais e instrumentais originais produzidas em estilo gótico e clássico europeu.</li>
+                <li><strong>Dublagem em Reincarnation:</strong> Atuação de voz completa para o elenco principal no capítulo de sequência moderna.</li>
+                <li><strong>Suporte a Altas Resoluções:</strong> Gráficos e interface totalmente otimizados para consoles modernos em edições físicas e digitais.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://image.api.playstation.com/cdn/UP0438/CUSA15754_00/FREE_CONTENTRgCBw294hdcsuxp0rnkb/bTTclHaJ_PREVIEW_SCREENSHOT1_177556.jpg?w=440&thumb=false" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://image.api.playstation.com/cdn/UP0438/CUSA15754_00/FREE_CONTENTLuDFkxdatczCOD47y8U3/UJGRrbUw_PREVIEW_SCREENSHOT2_177556.jpg?w=440&thumb=false" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://image.api.playstation.com/cdn/UP0438/CUSA15754_00/FREE_CONTENTMeAG6T2WlkKJlcrJIvdE/yQAPpFuL_PREVIEW_SCREENSHOT3_177556.jpg?w=440&thumb=false" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://image.api.playstation.com/cdn/UP0438/CUSA15754_00/FREE_CONTENTLWyjIn5JCutipjHb4UOw/XtWtdWmL_PREVIEW_SCREENSHOT4_177556.jpg?w=440&thumb=false" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://image.api.playstation.com/cdn/UP0438/CUSA15754_00/FREE_CONTENTUsAmrNnA7ZiokaA3Tsp0/tFsmfTEo_PREVIEW_SCREENSHOT5_177556.jpg?w=440&thumb=false" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://image.api.playstation.com/cdn/UP0438/CUSA15754_00/FREE_CONTENTDkL7hA8Pq4MFy1Gh0QII/pNReTwKL_PREVIEW_SCREENSHOT6_177556.jpg?w=440&thumb=false" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Lojas</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://www.nintendo.com/us/store/products/the-house-in-fata-morgana-dreams-of-the-revenants-edition-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
+                <a href="https://store.playstation.com/en-us/product/UP0438-CUSA15754_00-0000000000000001" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+                <a href="https://www.amazon.com/dp/B07VNK1YB1?psc=1" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Edição Física PS4 (Amazon)</a>
+            </div>
+        `
+    },
+    "steins-gate-my-darlings-embrace": {
+        title: "STEINS;GATE: My Darling's Embrace",
+        addedAt: "2026-10-21",
+        categories: ["Visual Novel", "Aventura", "Comédia Romântica", "Ficção Científica", "Anime"],
+        summary: "Um spin-off oficial de comédia romântica da aclamada franquia STEINS;GATE. Acompanhe Okabe Rintaro e os membros do laboratório em linhas do tempo alternativas pacíficas e divertidas, repletas de cenários do tipo 'What if?' e rotas românticas únicas.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/970560/header.jpg?t=1715703432",
+            data: {
+                "Título Original": "STEINS;GATE 比翼恋理のだーりん (Hiyoku Renri no Darling)",
+                "Desenvolvedor": "MAGES. Inc. / 5pb.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Visual Novel, Comédia Romântica, Ficção Científica",
+                "Plataformas": "PC (Windows), PS4, Nintendo Switch, Xbox 360, PS3, PS Vita, iOS",
+                "Classificação": "12+ (Violência, Conteúdo Sexual Leve)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Mecânicas e Sistema de Rotas" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>STEINS;GATE: My Darling's Embrace</strong> (originalmente lançado no Japão como <em>STEINS;GATE: Hiyoku Renri no Darling</em>) é um romance visual de comédia romântica spin-off desenvolvido pela <strong>MAGES. Inc. / 5pb.</strong> e publicado mundialmente pela <strong>Spike Chunsoft</strong>. O jogo faz parte da aclamada <em>Science Adventure Series</em> e oferece um descanso cômico e afetuoso do tom dramático da obra original.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Em uma linha do tempo pacífica e ligeiramente desviada da história principal, o SERN não representa uma ameaça iminente e a vida dos membros do Future Gadget Lab segue tranquila. O foco principal do grupo agora é arrecadar fundos para pagar as contas da sede, criando e vendendo engenhocas mirabolantes.</p>
+
+            <p>Tudo muda quando Kurisu desenvolve a 12ª invenção do laboratório, batizada de <em>"Darling, You Idiot!"</em> — um par de braceletes projetado para unir casais em conflito. O dispositivo prende fisicamente Okabe Rintaro e Makise Kurisu juntos e emite choques elétricos caso eles se distanciem ou discutam. Ao tentarem usar o Micro-ondas do Tempo (Phone Wave) com D-mails para resolver a situação, Okabe acaba alterando a linha do tempo, desencadeando diversos cenários românticos e engraçados com as garotas do laboratório.</p>
+
+            <h2 id="gameplay">Mecânicas e Sistema de Rotas</h2>
+            <ul>
+                <li><strong>Gatilho de Celular (Phone Trigger System):</strong> Assim como no jogo principal, Okabe interage com o mundo por meio de seu telefone celular. Atender chamadas, ignorar contatos e responder e-mails determinam os rumos da história e o acesso às rotas.</li>
+                <li><strong>Rotas de Personagens Exclusivas:</strong> Possui cenários individuais dedicados para Kurisu, Mayuri, Suzuha, Faris, Luka e Moeka, explorando conflitos pessoais leves e momentos cotidianos com Okabe.</li>
+                <li><strong>Gatilho de D-mails Inicial:</strong> O envio ou retenção das mensagens no epílogo direciona Okabe para as diferentes linhas do tempo, permitindo explorar os caminhos na ordem que o jogador preferir.</li>
+                <li><strong>Glossário de Termos (Tip Menu):</strong> Mantém o leitor informado com explicações detalhadas sobre jargões de ficção científica, cultura otaku e gírias da internet.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10</li>
+                <li><strong>Processador:</strong> Intel Core i3 (Sandy Bridge) ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Intel HD Graphics Series (1 GB de VRAM)</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 9 GB de espaço disponível</li>
+                <li><strong>Resolução de Tela:</strong> Mínimo 1280x720 (Recomendado 1920x1080)</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i5 (Ivy Bridge) ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce (1 GB de VRAM) ou superior</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 9 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/970560/ss_e3813b27dcef261c628b338c250890197f686907.1920x1080.jpg?t=1715703432" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/970560/ss_d101d47844de54ca2749bfeb00dbff626657f234.1920x1080.jpg?t=1715703432" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/970560/ss_5a3e7499835884baaa1226f047f799ff90a0383a.1920x1080.jpg?t=1715703432" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/970560/ss_715ac39f4422b8488b22908a4fa6dc32d18d977a.1920x1080.jpg?t=1715703432" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/970560/ss_c7a9ed7dc2973031ad69c6541011460351c1ae88.1920x1080.jpg?t=1715703432" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/970560/STEINSGATE_My_Darlings_Embrace/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://store.playstation.com/pt-br/product/UP4774-CUSA16680_00-STEINSGATEFD1PS4" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/5eLQtA" target="_blank"><i class="fa-solid fa-download"></i> Download STEINS;GATE: My Darling's Embrace (PC)</a>
+                <a href="https://4br.me/anlJEGG" target="_blank"><i class="fa-solid fa-magnet"></i> Links e Utilitários de Torrent</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação: Extraia o arquivo baixado usando o WinRAR ou 7-Zip (senha: <code>www.gametrex.com</code> se solicitado). Execute o instalador dentro da pasta extraída e inicie o jogo através do atalho gerado na sua área de trabalho.</em></small></p>
+        `
+    },
+    "steins-gate-linear-bounded-phenogram": {
+        title: "STEINS;GATE: Linear Bounded Phenogram",
+        addedAt: "2026-10-21",
+        categories: ["Visual Novel", "Aventura", "Ficção Científica", "Drama", "Anime"],
+        summary: "Uma coleção especial de 10 histórias inéditas do universo de STEINS;GATE. Pela primeira vez, vivencie os acontecimentos e linhas do tempo sob a perspectiva de cada um dos diferentes membros do laboratório, explorando seus pensamentos mais íntimos.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/930910/header.jpg?t=1715703424",
+            data: {
+                "Título Original": "STEINS;GATE 線形拘束のフェノグラム (Senkei Kousoku no Phenogram)",
+                "Desenvolvedor": "MAGES. Inc. / 5pb.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Visual Novel, Ficção Científica, Drama",
+                "Plataformas": "PC (Windows), PS4, Nintendo Switch, Xbox 360, PS3, PS Vita, iOS",
+                "Classificação": "14+ (Linguagem Imprópria, Temas Sensíveis)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Estrutura Narrativa" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>STEINS;GATE: Linear Bounded Phenogram</strong> (originalmente lançado no Japão como <em>STEINS;GATE: Senkei Kousoku no Phenogram</em>) é um spin-off oficial desenvolvido pela <strong>MAGES. Inc. / 5pb.</strong> e publicado mundialmente pela <strong>Spike Chunsoft</strong> como parte da aclamada <em>Science Adventure Series</em>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Enquanto a trama principal de <em>STEINS;GATE</em> desenrola-se quase que exclusivamente sob o ponto de vista do protagonista Okabe Rintaro, <strong>Linear Bounded Phenogram</strong> expande imensamente os horizontes da franquia ao colocar o jogador na mente dos demais membros do Future Gadget Lab.</p>
+
+            <p>A coletânea apresenta 10 cenários e histórias distintas, revelando novas linhas do tempo, motivações ocultas, traumas, dilemas e sentimentos vividos por personagens como Makise Kurisu, Mayuri Shiina, Suzuha Amane, Faris NyanNyan, Itaru "Daru" Hashida, Luka Urushibara, Moeka Kiryu e até mesmo Nae Tenouji.</p>
+
+            <h2 id="gameplay">Características e Estrutura Narrativa</h2>
+            <ul>
+                <li><strong>Múltiplas Perspectivas:</strong> Aprofunde-se nos pensamentos e reflexões internas de cada membro do laboratório em histórias escritas por renomados roteiristas convidados.</li>
+                <li><strong>10 Histórias Inéditas:</strong> Cada cenário explora uma linha do tempo única, variando de momentos cômicos a dramas psicológicos e desfechos emocionantes.</li>
+                <li><strong>Gatilho de Celular (Phone Trigger):</strong> O tradicional sistema de interação via telefone celular permanece ativo, permitindo responder mensagens e alterar o rumo dos diálogos.</li>
+                <li><strong>Inclusão Bônus:</strong> Disponibilizado originalmente na Steam e consoles como um conteúdo bônus especial acompanhando o lançamento de <em>STEINS;GATE ELITE</em>.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10</li>
+                <li><strong>Processador:</strong> Intel Core i3 (Sandy Bridge) ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Intel HD Graphics Series (1 GB de VRAM)</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Rede:</strong> Conexão de internet banda larga</li>
+                <li><strong>Armazenamento:</strong> 9 GB de espaço disponível</li>
+                <li><strong>Resolução de Tela:</strong> Mínimo 1280x720 (Recomendado 1920x1080)</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i5 (Ivy Bridge) ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce (1 GB de VRAM) ou superior</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 9 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/930910/ss_241d0b20ba70780bef2f71bf3406cec3055fc361.1920x1080.jpg?t=1715703424" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/930910/ss_acfa3e38bb4159d9f86f5f49dc7761a3042186c5.1920x1080.jpg?t=1715703424" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/930910/ss_c3716abede7128cf7789359c68cc249d6c6aa073.1920x1080.jpg?t=1715703424" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/930910/ss_81eab5be4f53a05e724977f39dcb4845b5aeee5c.1920x1080.jpg?t=1715703424" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/930910/ss_e6377bb616bb15e5e064890bd5b6f71a69c6650d.1920x1080.jpg?t=1715703424" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/930910/STEINSGATE_Linear_Bounded_Phenogram/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/kfu6kt6Jc0" target="_blank"><i class="fa-solid fa-download"></i> Download STEINS;GATE: Linear Bounded Phenogram (PC)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação: Extraia o arquivo zip/rar baixado usando o WinRAR ou 7-Zip, execute o assistente de instalação e inicie o jogo através do atalho criado na sua área de trabalho.</em></small></p>
+        `
+    },
+    "danganronpa-2x2": {
+        title: "Danganronpa 2x2",
+        addedAt: "2026-10-21",
+        categories: ["Aventura", "Mistério", "Investigação", "Visual Novel", "Ação", "Anime"],
+        summary: "Uma versão expandida e reinventada do clássico Danganronpa 2: Goodbye Despair. Apresenta um cenário inédito completo com novos culpados, vítimas e truques em Jabberwock Island, além da campanha original remasterizada com gráficos aprimorados.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751230/fc422cd5527bbb4a9386edabd75f5280593c164c/header.jpg?t=1789440520",
+            data: {
+                "Desenvolvedor": "Gemdrops, Inc.",
+                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Gêneros": "Aventura, Mistério, Ação, Visual Novel",
+                "Plataformas": "PC (Windows / Steam)",
+                "Classificação": "14+ (Violência, Conteúdo Sexual, Linguagem Imprópria)",
+                "Lançamento": "Previsto para 2027"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Estrutura do Jogo e Fases" },
+            { id: "novo-cenario", text: "3. Novo Cenário e Versão Remasterizada" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "links", text: "6. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Danganronpa 2x2</strong> é um futuro título de aventura e investigação dedutiva da aclamada franquia desenvolvido pela <strong>Gemdrops, Inc.</strong> e publicado pela <strong>Spike Chunsoft</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Jabberwock Island — outrora um movimentado destino turístico, agora uma ilha inabitada e estranhamente bem conservada. Você e seus colegas de classe da prestigiada Hope's Peak Academy visitam o local para uma viagem escolar, mas as férias dos sonhos duram pouco.</p>
+
+            <p>O maquiavélico Monokuma orquestra um novo plano, forçando todos a entrarem em mais um jogo assassino (<em>Killing Game</em>). Para escapar com vida da ilha, os estudantes precisam investigar assassinatos brutais e expor os culpados durante os Julgamentos da Turma (<em>Class Trials</em>). Mas lembre-se: o que aguarda no final da verdade nem sempre é a esperança...</p>
+
+            <h2 id="gameplay">Estrutura do Jogo e Fases</h2>
+            <p>A jogabilidade de ação investigativa em alta velocidade divide cada caso em três partes fundamentais:</p>
+            <ul>
+                <li><strong>Daily Life (Vida Cotidiana):</strong> Explore Jabberwock Island livremente e interaja com os estudantes Ultimates. Quando um assassinato ocorre e o corpo é descoberto, o jogo transiciona para a fase de investigação.</li>
+                <li><strong>Investigation (Investigação):</strong> Examine as cenas do crime, questione os sobreviventes e colete as provas necessárias. Cada pista encontrada se transforma em uma "Truth Bullet" (Bala da Verdade) usada para refutar contradições.</li>
+                <li><strong>Class Trial (Julgamento da Turma):</strong> Debate frenético em tempo real. Dispare as Truth Bullets corretas contra os argumentos e depoimentos falsos ou contraditórios que cruzam a tela para expor o "Blackened" (assassino).</li>
+            </ul>
+
+            <h2 id="novo-cenario">Novo Cenário e Versão Remasterizada</h2>
+            <ul>
+                <li><strong>Cenário Inédito:</strong> Apresenta uma história totalmente nova baseada em <em>Danganronpa 2: Goodbye Despair</em>. Embora o elenco e o cenário sejam os mesmos, um incidente inicial ramifica a trama em uma nova corrente de vítimas, culpados e truques surpreendentes.</li>
+                <li><strong>Cenário Original Aprimorado:</strong> Inclui também a campanha original de <em>Danganronpa 2</em> totalmente otimizada para plataformas modernas, com visuais atualizados e melhorias na qualidade de vida.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> TBD (Requer processador e sistema operacional de 64 bits)</li>
+                <li><strong>Processador:</strong> TBD</li>
+                <li><strong>Observação:</strong> O jogo está em desenvolvimento com lançamento planejado para 2027.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751230/1fdcdd17dd960bb8aa40ecef7795097ee20bd0e9/ss_1fdcdd17dd960bb8aa40ecef7795097ee20bd0e9.1920x1080.jpg?t=1789440520" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751230/96cea1b7ba544c48781c9df4a50e9220d8c0b538/ss_96cea1b7ba544c48781c9df4a50e9220d8c0b538.1920x1080.jpg?t=1789440520" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751230/05e5b0e3d7db3ea731fa1aafece942c08328a30c/ss_05e5b0e3d7db3ea731fa1aafece942c08328a30c.1920x1080.jpg?t=1789440520" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751230/a7a1250201ef399eae0d2f39087647a7c650f3d0/ss_a7a1250201ef399eae0d2f39087647a7c650f3d0.1920x1080.jpg?t=1789440520" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751230/b456f8dfb19b4dec1f10345f8a843332687e48b1/ss_b456f8dfb19b4dec1f10345f8a843332687e48b1.1920x1080.jpg?t=1789440520" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751230/5a7a24e93507c34fb6080623c370316ed51f4bbe/ss_5a7a24e93507c34fb6080623c370316ed51f4bbe.1920x1080.jpg?t=1789440520" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/3751230/Danganronpa_2x2/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.danganronpa.com/pages/2x2/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Danganronpa 2x2)</a>
+                <a href="https://x.com/dangan_official" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter Oficial da Franquia</a>
+            </div>
+        `
+    },
+    "higurashi-when-they-cry-hou-plus": {
+        title: "Higurashi When They Cry Hou+",
+        addedAt: "2026-10-21",
+        categories: ["Visual Novel", "Aventura", "Indie", "Terror", "Mistério", "Sound Novel", "Anime"],
+        summary: "A parcela final da franquia Higurashi When They Cry Hou desenvolvida pela 07th Expansion. Apresenta 4 capítulos e cenários inéditos que exploram fragmentos de mundos nunca antes vistos após a tragédia principal de Hinamizawa.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2491040/header.jpg?t=1725522736",
+            data: {
+                "Desenvolvedor": "07th Expansion",
+                "Publicadora": "MangaGamer",
+                "Gêneros": "Visual Novel, Sound Novel, Mistério, Terror",
+                "Plataformas": "PC (Windows, macOS, Linux)",
+                "Classificação": "16+ (Violência Extrema, Linguagem Imprópria, Medo, Nudez Parcial)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Capítulos" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Higurashi When They Cry Hou+</strong> é o capítulo final e expansão definitiva da célebre franquia de <em>Sound Novels</em> de terror e mistério criada pelo estúdio <strong>07th Expansion</strong> e publicada pela <strong>MangaGamer</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e Capítulos</h2>
+            <p>A tragédia de Hinamizawa chegou ao fim. Aqueles aprisionados em suas garras estão finalmente livres do destino que os mantinha presos a junho de 1983. No entanto, a história de Hinamizawa ainda não está totalmente concluída, pois existem diversos "fragmentos" de mundos ainda não explorados.</p>
+
+            <p><strong>Hou+ reúne 4 capítulos e cenários especiais:</strong></p>
+            <ul>
+                <li><strong>Higurashi When They Cry Outbreak:</strong> Keiichi e os outros enfrentam uma tragédia inédita decorrente do pânico causado por um vírus misterioso que assola a vila.</li>
+                <li><strong>Higurashi When They Cry Kamikashimashi Chapter:</strong> A conclusão de <em>Outbreak</em>. A tragédia se espalha até a cidade vizinha de Okinomiya sem fim à vista. Quem está por trás do surto e com qual propósito?</li>
+                <li><strong>Hinamizawa Bus Stop (Higurashi Origin):</strong> O "fragmento original" e protótipo conceitual a partir do qual toda a franquia <em>Higurashi When They Cry</em> nasceu e evoluiu.</li>
+                <li><strong>Higurashi When They Cry Mehagashi Chapter:</strong> Cenário adicional cômico e absurdo em que Keiichi Maebara precisa ir além dos trajes de banho das garotas para defender não apenas a humanidade, mas o próprio universo.</li>
+            </ul>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Experiência em Sound Novel:</strong> A música, os cenários e os retratos dos personagens trabalham em perfeita harmonia para criar o palco de um romance interativo lido sob o ponto de vista do protagonista.</li>
+                <li><strong>Música e Atmosfera Marcantes:</strong> Trilha sonora envolvente que transita entre momentos de comédia cotidiana e pavor psicológico extremo.</li>
+                <li><strong>Conteúdo Adulto / Sensível:</strong> Apresenta descrições em texto de sangue, violência, humor sexual explícito e trajes de banho/nudez parcial.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <p><strong>Windows (Mínimos):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 8 ou superior (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Pentium III @ 800 MHz</li>
+                <li><strong>Memória RAM:</strong> 512 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 128 MB compatível com DirectX 9.0c (Pixel Shader 2.0+)</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>macOS (Mínimos):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Mac OS X 10.8+ Mountain Lion</li>
+                <li><strong>Processador:</strong> 1.0 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 512 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 128 MB de VRAM</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Linux (Mínimos):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Ubuntu 12.04+</li>
+                <li><strong>Processador:</strong> 1.0 GHz ou superior</li>
+                <li><strong>Memória RAM:</strong> 512 MB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 128 MB de VRAM</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2491040/ss_ee0138f1a9fc5ac2035941989716be0891a0b60b.1920x1080.jpg?t=1725522736" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2491040/ss_5f7eb8830a015fb5ea30c613ca18477bf1aaa977.1920x1080.jpg?t=1725522736" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2491040/ss_bb43102bb0c5030865bb6a3d84dbb82d07f928ca.1920x1080.jpg?t=1725522736" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2491040/ss_b1e79169f5b1a17282717d1686b0640e1beac42c.1920x1080.jpg?t=1725522736" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2491040/ss_aa8563009057129bdda7df9ecee0e1140627e516.1920x1080.jpg?t=1725522736" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2491040/ss_d1fbdbad3bf446093a00505cbe015c5aea7ef8fe.1920x1080.jpg?t=1725522736" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2491040/Higurashi_When_They_Cry_Hou/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/UqSXTu8" target="_blank"><i class="fa-solid fa-download"></i> Download Higurashi When They Cry Hou - Rei (v1.0)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação: Baixe o arquivo .zip pelo link do UploadHaven, extraia com o 7-Zip ou WinRAR, execute o programa de instalação (setup.exe) dentro da pasta e acesse o jogo pelo atalho criado na área de trabalho.</em></small></p>
+        `
+    },
+    "corpse-party-2021": {
+        title: "Corpse Party (2021)",
+        addedAt: "2026-10-21",
+        categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie", "Sobrenatural", "Anime"],
+        summary: "A versão atualizada e expandida do clássico cult do horror. Explore os corredores assombrados da Heavenly Host Elementary com gráficos retro em 16-bit aprimorados, áudio binaural 3D, dublagem em japonês e novos capítulos extras inéditos.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/header.jpg?t=1787119458",
+            data: {
+                "Desenvolvedor": "MAGES. Inc. / Team GrisGris",
+                "Publicadora": "XSEED Games / Marvelous USA, Inc.",
+                "Gêneros": "Terror, Aventura, RPG, Sobrenatural",
+                "Plataformas": "PC (Windows, macOS, Linux/SteamOS), Nintendo Switch, PS4, Xbox One",
+                "Classificação": "18+ (Violência Extrema, Gore, Temas Sensíveis, Medo)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Destaques" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Corpse Party (2021)</strong> é a versão definitiva do aclamado clássico de terror desenvolvido pela <strong>Team GrisGris</strong> e <strong>MAGES. Inc.</strong>, publicado mundialmente pela <strong>XSEED Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Um ritual de amizade aparentemente inofensivo chamado <em>"Sachiko Ever After"</em> dá terrivelmente errado e transporta a estudante Ayumi Shinozaki e seus amigos para uma dimensão alternativa assustadora da <strong>Heavenly Host Elementary</strong> — uma escola primária amaldiçoada que foi demolida há anos após uma série de assassinatos grotescos e que ficava no mesmo local do atual colégio do grupo.</p>
+
+            <p>Enquanto os espíritos vingativos de crianças assassinas ameaçam suas vidas e sua sanidade, a única esperança de sobrevivência e fuga do grupo é desvendar os detalhes aterrorizantes que cercam os crimes do passado e os cadáveres daqueles que ficaram presos antes deles.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/extras/b0ec084ec17a3d3d32c0cbf8a93cf4e2.webm?t=1787119458" type="video/webm">
+                </video>
+            </div>
+
+            <h2 id="gameplay">Características e Destaques</h2>
+            <ul>
+                <li><strong>Visual Retro Atmosférico:</strong> Estética marcante em estilo 16-bit combinada com descrições viscerais e um design de som aterrorizante.</li>
+                <li><strong>Cada Escolha Conta:</strong> Mistura de exploração estilo <em>point-and-click</em> com RPG sem batalhas. Suas decisões afetam diretamente o destino dos personagens, levando a múltiplos Finais Ruins (<em>Wrong Endings</em>) violentos e chocantes.</li>
+                <li><strong>Conteúdo Expandido Inédito:</strong> Além dos 5 capítulos principais originais e 14 Capítulos Extras, esta versão inclui <strong>2 novos Capítulos Extras</strong> focado na relação de Ayumi e Yoshiki, além de introduzir as personagens Miku Shirayume e Ryoka Iwami.</li>
+                <li><strong>Áudio 3D Binaural em Outra Dimensão:</strong> Dublagem completa em japonês gravada com técnicas binaurais 3D, criando uma experiência sombreada de som surround imersivo ao usar fones de ouvido.</li>
+                <li><strong>Bônus de Artbook Incluído:</strong> Acompanha o <em>"Corpse Party Achievements Artbook"</em> em PDF localizado na pasta de arquivos locais do jogo na Steam.</li>
+            </ul>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/extras/59e26cd4bdacc85b9d40380ee521dab1.webm?t=1787119458" type="video/webm">
+                </video>
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <p><strong>Windows (Mínimos):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 8.1</li>
+                <li><strong>Processador:</strong> AMD A8-7600 / Intel Core i3-2105</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> AMD Radeon R7 Graphics / Intel HD Graphics 3000</li>
+                <li><strong>DirectX:</strong> Versão 10</li>
+                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Windows (Recomendados):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
+                <li><strong>Processador:</strong> AMD A8-7600 / Intel Core i3-3225</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> AMD Radeon R7 Graphics / Intel HD Graphics 4000</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>macOS (Mínimos):</strong> macOS 10.12, Processador Intel Core i3-2105 / AMD A8-7600, 4 GB RAM, 3 GB de espaço.</p>
+            <p><strong>SteamOS + Linux (Mínimos):</strong> Ubuntu 14.04 64-bit, Processador Intel Core i3-2105 / AMD A8-7600, 4 GB RAM, 3 GB de espaço.</p>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/ss_c6101789e43370dc77fd8e58575ac704952e429c.1920x1080.jpg?t=1787119458" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/ss_ee9f4cda6e98d82fa3fe64f1cb73c95452f0ce5d.1920x1080.jpg?t=1787119458" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/ss_920f2b30f198c758d98a7ecce64a7a1e27735d99.1920x1080.jpg?t=1787119458" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/ss_09c97648940bd26ad5241cbea2020d0a019a7ca1.1920x1080.jpg?t=1787119458" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/ss_34d9921ce5dc23224ae0a0f1c356c065303b0f47.1920x1080.jpg?t=1787119458" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1273260/ss_71ad398e13a55fa7bac82c96a2ab0827344164b5.1920x1080.jpg?t=1787119458" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1273260/Corpse_Party_2021/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.gog.com/en/game/corpse_party_2021" target="_blank"><i class="fa-solid fa-store"></i> Página na GOG</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/6BHdT" target="_blank"><i class="fa-solid fa-download"></i> Download Corpse Party (2021) PC</a>
+            </div>
+
+            <p><small><em>Instruções do Artbook: Para acessar o livro de arte incluso na Steam, vá até a Biblioteca -> Clique com o botão direito em Corpse Party (2021) -> Propriedades -> Arquivos Locais -> Navegar. O arquivo PDF estará na pasta raiz do jogo.</em></small></p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
