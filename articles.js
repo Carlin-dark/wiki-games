@@ -6595,6 +6595,281 @@ const articlesDatabase = {
             <p><small><em>Instruções de Instalação: Baixe o arquivo .zip pelo link, extraia com o 7-Zip ou WinRAR, execute a aplicação de instalação (setup.exe) dentro da pasta e inicie o jogo através do atalho gerado na sua área de trabalho.</em></small></p>
         `
     },
+    "apollo-justice-ace-attorney-trilogy": {
+        title: "Apollo Justice: Ace Attorney Trilogy",
+        addedAt: "2026-10-22",
+        categories: ["Aventura", "Investigação", "Visual Novel", "Mistério", "Tribunal", "Anime"],
+        summary: "A coleção definitiva da segunda grande era de Ace Attorney. Acompanhe a jornada do advogado novato Apollo Justice, de sua parceira Athena Cykes e de seu mentor Phoenix Wright ao longo de 16 episódios cheios de reviravoltas no tribunal e uma montanha de extras especiais.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/header.jpg?t=1791439477",
+            data: {
+                "Desenvolvedor": "CAPCOM Co., Ltd.",
+                "Publicadora": "CAPCOM Co., Ltd.",
+                "Gêneros": "Aventura, Investigação, Visual Novel, Tribunal",
+                "Plataformas": "PC (Windows), Nintendo Switch, PS4, Xbox One",
+                "Classificação": "12+ (Violência, Drogas Lícitas, Conteúdo Sexual)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Conteúdo da Trilogia" },
+            { id: "gameplay", text: "2. Características e Recursos Extras" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Apollo Justice: Ace Attorney Trilogy</strong> é a coletânea remasterizada em alta definição desenvolvida e publicada pela <strong>CAPCOM Co., Ltd.</strong>, reunindo três títulos fundamentais da icônica franquia de dramas judiciais e investigação.</p>
+
+            <h2 id="sinopse">Sinopse e Conteúdo da Trilogia</h2>
+            <p>Junte-se ao jovem e empolgado advogado de defesa <strong>Apollo Justice</strong>, à especialista em psicologia analítica <strong>Athena Cykes</strong> e ao lendário mestre <strong>Phoenix Wright</strong> enquanto eles enfrentam casos complexos em tribunais reformulados e cheios de perigos.</p>
+
+            <p>A coleção traz um total de <strong>16 episódios</strong> divididos entre os seguintes jogos e DLCs:</p>
+            <ul>
+                <li><strong>Apollo Justice: Ace Attorney:</strong> A estreia do jovem advogado assumindo o escritório e lidando com um Phoenix Wright desprovido de seu broche de advogado.</li>
+                <li><strong>Phoenix Wright: Ace Attorney - Dual Destinies:</strong> A batalha contra a "Era das Trevas da Lei", introduzindo a advogada Athena Cykes e o sistema Mood Matrix. Contém o episódio DLC especial <em>Turnabout Reclaimed</em>.</li>
+                <li><strong>Phoenix Wright: Ace Attorney - Spirit of Justice:</strong> A jornada dupla entre o Reino de Khura'in — onde os julgamentos dependem de sessões espíritas — e os tribunais do Japão/EUA. Contém o episódio DLC especial <em>Turnabout Time Traveler</em>.</li>
+            </ul>
+
+            <h2 id="gameplay">Características e Recursos Extras</h2>
+            <ul>
+                <li><strong>Gráficos Renovados em HD:</strong> Arte, modelos de personagens e planos de fundo totalmente remasterizados para telas de alta resolução.</li>
+                <li><strong>Orchestra Hall (Salão da Orquestra):</strong> Ouça as faixas da trilha sonora original do jogo e selecione arranjos orquestrais especiais.</li>
+                <li><strong>Art Library (Biblioteca de Arte):</strong> Galeria repleta de ilustrações conceituais, detalhes de design, artes promocionais e o prólogo especial em anime de <em>Spirit of Justice</em>.</li>
+                <li><strong>Animation Studio (Estúdio de Animação):</strong> Ferramenta interativa para brincar com animações, expressões e vozes dos personagens para recriar suas cenas favoritas do tribunal.</li>
+                <li><strong>Idiomas Suportados:</strong> Textos e menus disponíveis em Inglês, Francês, Alemão, Japonês, Coreano, Chinês Tradicional e Simplificado.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i3-8350K / AMD Ryzen 3 3200G</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GT 1030 / AMD Radeon RX 550</li>
+                <li><strong>DirectX:</strong> Versão 12</li>
+                <li><strong>Rede:</strong> Conexão de internet banda larga</li>
+                <li><strong>Armazenamento:</strong> 20 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit) / Windows 11</li>
+                <li><strong>Processador:</strong> Intel Core i3-8350K / AMD Ryzen 3 3200G</li>
+                <li><strong>Memória RAM:</strong> 16 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GT 1030 / AMD Radeon RX 550</li>
+                <li><strong>DirectX:</strong> Versão 12</li>
+                <li><strong>Armazenamento:</strong> 20 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_cc89584b7827bf36583460701c615700c7b9ee7f.1920x1080.jpg?t=1791439477" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_743db5af8c61249fafddccc63cba048a8aebf74e.1920x1080.jpg?t=1791439477" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_1e4cc399b1ae1ef2c8fd991057d91c196668b34d.1920x1080.jpg?t=1791439477" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_950ddc05ac554cdb2559f3fc1a6fdb2226b8048e.1920x1080.jpg?t=1791439477" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_55c46472b0aafbb38a421d188bb7ffd764284e58.1920x1080.jpg?t=1791439477" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Tutoriais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.ace-attorney.com/aj-trilogy/en-us/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (AJ Trilogy)</a>
+                <a href="https://game.capcom.com/manual/gyakutensaiban456/" target="_blank"><i class="fa-solid fa-book"></i> Manual e Tutorial Oficial CapCom</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (Build 13820637):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/wZAAmtv" target="_blank"><i class="fa-solid fa-download"></i> Download Apollo Justice Trilogy (UploadHaven)</a>
+                <a href="https://4br.me/71Svkz4Zkl" target="_blank"><i class="fa-solid fa-download"></i> Download Apollo Justice Trilogy (Servidor 1)</a>
+                <a href="https://4br.me/MxAbW" target="_blank"><i class="fa-solid fa-download"></i> Download Apollo Justice Trilogy (Servidor 2)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação: Extraia o arquivo .zip usando o 7-Zip ou WinRAR, execute a aplicação de instalação (setup.exe) dentro da pasta extraída e inicie o jogo pelo atalho em sua área de trabalho.</em></small></p>
+        `
+    },
+    "midnight-syndrome": {
+        title: "Midnight Syndrome (ミッドナイトシンドローム)",
+        addedAt: "2026-10-22",
+        categories: ["RPG Maker", "Terror", "Aventura", "Gratuito para Jogar", "Indie", "Sobrenatural"],
+        summary: "Uma noite de verão consome as garotas em um jogo de aventura e terror focado em exploração. Após aceitarem brincar de Kokkuri-san na escola à noite, Ponzu e suas amigas entram em uma espiral de fenômenos aterrorizantes e inexplicáveis.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2877030/header.jpg?t=1746711295",
+            data: {
+                "Desenvolvedor": "Natsumikan (ナツミカン)",
+                "Publicadora": "Natsumikan (ナツミカン)",
+                "Engine": "RPG Maker MV",
+                "Gêneros": "Aventura, Terror, Gratuito para Jogar",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "31 de maio de 2024",
+                "Classificação": "18+ (Conteúdo Violento, Suicídio, Crimes Sexuais, Ocultismo)",
+                "Idiomas": "Português (BR), Japonês, Chinês, Coreano"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Controles, Duração e Finais" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Midnight Syndrome</strong> (<em>ミッドナイトシンドローム</em>) é um jogo independente de aventura e terror psicológico focado em exploração desenvolvido por <strong>Natsumikan</strong> utilizando o motor RPG Maker MV. O título está disponível gratuitamente na Steam e conta com tradução oficial para o português do Brasil.</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO SENSÍVEL (18+):</strong> O jogo contém representações de sangue, homicídio, terror, suicídio/automutilação, crimes sexuais, religião, ocultismo e elementos sobrenaturais (fantasmas, espíritos e demônios). Discrição altamente recomendada.</p>
+            </div>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Kamimai é uma vila rural isolada, aninhada entre as montanhas e o mar. Lá, uma estudante do ensino médio chamada Ponzu leva uma vida tranquila.</p>
+            <p>Um dia, sua amiga Nekoya a convida para brincar de <em>Kokkuri-san</em> (um ritual tradicional japonês de invocação espiritual semelhante ao tabuleiro Ouija). Relutantemente, Ponzu aceita e vai encontrá-la na escola à noite, acompanhada de outra colega, Mayuka.</p>
+            <p>No entanto, a partir daquela fatídica noite, fenômenos estranhos e inexplicáveis começam a assombrá-las. O que acontecerá de agora em diante? Elas conseguirão sobreviver ao verão? Tudo depende de suas escolhas...</p>
+
+            <h2 id="gameplay">Controles, Duração e Finais</h2>
+            <ul>
+                <li><strong>Tempo de Jogo:</strong> Aproximadamente 4 horas.</li>
+                <li><strong>Mecânicas e Finais:</strong> O jogo possui <strong>3 finais principais</strong> no total, com o próprio sistema guiando o jogador pelas rotas (sem necessidade de guias externos complexos). Além disso, o Capítulo 5 inclui 3 finais extras separados que não alteram o desfecho do último capítulo.</li>
+                <li><strong>Controles Básicos:</strong>
+                    <ul>
+                        <li><code>Setas</code> / <code>Clique Esquerdo</code>: Mover-se</li>
+                        <li><code>Shift</code>: Correr</li>
+                        <li><code>Z</code> / <code>Clique Esquerdo</code>: Investigar / Interagir</li>
+                        <li><code>X</code> / <code>Clique Direito</code>: Abrir o Menu</li>
+                        <li><code>Ctrl</code>: Pular texto</li>
+                        <li><code>Tab</code>: Esconder a janela de diálogo (algumas cenas exigem o uso do mouse).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8 / 8.1 / 10</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> GPU compatível com OpenGL</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 500 MB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8 / 8.1 / 10</li>
+                <li><strong>Processador:</strong> Intel Core m3</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Intel HD Graphics 615</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 500 MB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2877030/ss_c6a8cbba6f2e2f34b7051a80b023400eecf718bb.1920x1080.jpg?t=1746711295" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2877030/ss_2fb1349e94cc4f2c83717d729f2ab7fc270bae10.1920x1080.jpg?t=1746711295" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2877030/ss_35f0b82b51fc2e093b797d2dfe9b7c4cdcf881e8.1920x1080.jpg?t=1746711295" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2877030/ss_f72f8dda282deead240d4af655ba9fb211528758.1920x1080.jpg?t=1746711295" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2877030/ss_98644385c7d4dbf76adcd1ae680bf77eb201ed91.1920x1080.jpg?t=1746711295" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Redes:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2877030/%E3%83%9F%E3%83%83%E3%83%89%E3%83%8A%E3%82%A4%E3%83%88%E3%82%B7%E3%83%B3%E3%83%89%E3%83%AD%E3%83%BC%E3%83%A0/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam (Gratuito)</a>
+                <a href="https://midnight-games.booth.pm/items/5617529" target="_blank"><i class="fa-solid fa-download"></i> Página Oficial no Booth (Download)</a>
+                <a href="https://x.com/Midnight_1222" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter do Criador (Natsumikan)</a>
+                <a href="https://www.youtube.com/watch?v=PFnuAnKjvJk" target="_blank"><i class="fa-brands fa-youtube"></i> Curta em Anime Oficial (Legendado em PT-BR)</a>
+            </div>
+
+            <p><small><em>Diretrizes de Conteúdo Derivado: Criações de fãs e transmissões ao vivo / gameplays são permitidas sem necessidade de permissão prévia, desde que mantidas dentro do bom senso e sem fins maliciosos.</em></small></p>
+        `
+    },
+"umidorino-gaku-no-seishin-kanteiroku": {
+        title: "Umidorino Gaku no Seishin Kanteiroku (海鳥野ガクの精神鑑定録)",
+        addedAt: "2026-10-22",
+        categories: ["Visual Novel", "Aventura", "Indie", "Gratuito para Jogar", "Terror", "Cthulhu Mythos", "Mistério"],
+        summary: "Um jogo de aventura e suspense psicológico com elementos dos Mitos de Cthulhu. No papel do psiquiatra Michishima, você assume o caso de Gaku Umidorino, um jovem internado por esfaquear a própria mãe e que alega ouvir vozes bizarras. Conseguirá você escapar das garras das criaturas míticas?",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3032950/header.jpg?t=1731071489",
+            data: {
+                "Título Original": "海鳥野ガクの精神鑑定録",
+                "Desenvolvedor": "Imochai-ya (いもチャイ屋)",
+                "Publicadora": "Imochai-ya (いもチャイ屋)",
+                "Gêneros": "Aventura, Visual Novel, Terror, Gratuito para Jogar",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "24 de junho de 2024",
+                "Classificação": "14+ (Violência, Linguagem Imprópria, Atos Criminosos)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Controles, Duração e Finais" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Umidorino Gaku no Seishin Kanteiroku</strong> (<em>海鳥野ガクの精神鑑定録 / Registro da Avaliação Psiquiátrica de Gaku Umidorino</em>) é um romance visual de suspense psicológico e horror inspirado nos Mitos de Cthulhu, desenvolvido e publicado de forma independente pelo estúdio <strong>Imochai-ya (いもチャイ屋)</strong>. O jogo está disponível gratuitamente na Steam.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p><em>"Será que ele realmente sofre de uma doença mental? Ou será algo mais...?"</em></p>
+
+            <p>O protagonista, Michishima, é um psiquiatra encarregado de avaliar um novo paciente internado chamado Gaku Umidorino. O jovem foi detido após esfaquear a própria mãe e afirma estar lidando com episódios assustadores de alucinações auditivas e vozes estranhas.</p>
+
+            <p>À medida que a avaliação avança, mistérios sombrios e entidades cósmicas começam a se manifestar. Não é necessário ter conhecimento prévio sobre os Mitos de Cthulhu para aproveitar a narrativa, que apresenta interpretações originais de criaturas e itens míticos.</p>
+
+            <h2 id="gameplay">Controles, Duração e Finais</h2>
+            <ul>
+                <li><strong>Tempo de Jogo:</strong> Cerca de 1 hora para alcançar o desfecho verdadeiro.</li>
+                <li><strong>Múltiplos Finais:</strong> O jogo conta com <strong>1 True End (Final Verdadeiro)</strong> e <strong>8 Bad Ends (Finais Ruins)</strong>.</li>
+                <li><strong>Comandos de Navegação:</strong>
+                    <ul>
+                        <li><code>Enter</code> / <code>Clique Esquerdo</code> / <code>Roda do Mouse (Para Baixo)</code>: Avançar texto</li>
+                        <li><code>Barra de Espaço</code>: Ocultar a caixa de mensagem</li>
+                        <li><code>Ctrl</code>: Manter pressionado para acelerar/pular texto</li>
+                        <li><code>Roda do Mouse (Para Cima)</code>: Abrir o histórico de diálogos (Backlog)</li>
+                        <li><code>Clique no Botão Central do Mouse (Scroll)</code>: Salvar o jogo</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO SENSÍVEL:</strong> Contém representações leves de violência (efeitos de sangue espirrando na tela, mortes de personagens) e flashes de luz na tela. Todos os atos médicos retratados são fictícios.</p>
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos e Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo ou superior</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Armazenamento:</strong> 250 MB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3032950/ss_17c7f4c20d861a679d3a84a01c86c5888732f4be.1920x1080.jpg?t=1731071489" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3032950/ss_3792b54f29ca8430546f66ba44b50eb9c78e718e.1920x1080.jpg?t=1731071489" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3032950/ss_b6944ac92c45ff87424bdad5fcc58b02d4091390.1920x1080.jpg?t=1731071489" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3032950/ss_1557859b2f255b83176c0fd5cc06883388706490.1920x1080.jpg?t=1731071489" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3032950/ss_8dde2d87dd543a5c96dd97565d2a9bcb158bde5c.1920x1080.jpg?t=1731071489" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/3032950/%E6%B5%B7%E9%B3%A5%E9%87%8E%E3%82%AC%E3%82%AF%E3%81%AE%E7%B2%BE%E7%A5%9E%E9%91%91%E5%AE%9A%E9%8C%B2/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam (Gratuito)</a>
+                <a href="https://imochai.wixsite.com/home" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Imochai-ya)</a>
+                <a href="https://imochai.wixsite.com/home/%E6%B5%B7%E9%B3%A5%E9%87%8E%E3%82%AC%E3%82%AF%E3%81%AE%E7%B2%BE%E7%A5%9E%E9%91%91%E5%AE%9A%E9%8C%B2" target="_blank"><i class="fa-solid fa-book"></i> Manual Oficial do Jogo</a>
+            </div>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
