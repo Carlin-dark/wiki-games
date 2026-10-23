@@ -6870,6 +6870,107 @@ const articlesDatabase = {
             </div>
         `
     },
+    "for-the-ghosts": {
+        title: "For the GHOSTs",
+        addedAt: "2026-10-22",
+        categories: ["Visual Novel", "Aventura", "Indie", "Mistério", "Sobrenatural", "Anime"],
+        summary: "Um romance visual instigante onde o mundo virtual dos personagens ficcionais se cruza com a realidade do jogador. Interaja, converse e descubra os segredos e mistérios que cercam garotas presas no limiar entre a presença e a ausência.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/header.jpg?t=1772122321",
+            data: {
+                "Título Original": "For the GHOSTs (幽霊のために、何ができるの)",
+                "Desenvolvedor": "GenSanKoku",
+                "Publicadora": "GenSanKoku",
+                "Gêneros": "Aventura, Visual Novel, Mistério",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "7 de janeiro de 2024",
+                "Classificação": "16+ (Violência, Temas Sensíveis, Uso de Álcool, Menção a Suicídio)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Conceito" },
+            { id: "personagens", text: "2. Personagens Principais" },
+            { id: "gameplay", text: "3. Jogabilidade e Características" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "links", text: "6. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>For the GHOSTs</strong> é um jogo de aventura e romance visual conceitual desenvolvido e publicado pelo estúdio independente <strong>GenSanKoku</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e Conceito</h2>
+            <p><em>"O que se pode fazer pelos fantasmas? Nem mortos, nem vivos — a fronteira entre a presença e a ausência, o visível e o invisível."</em></p>
+
+            <p>Trata-se de uma experiência interativa onde personagens ficcionais se encontram e se cruzam diretamente com você, o jogador na realidade. As garotas desejam coisas simples: conversar, compartilhar o que gostam, tomar uma bebida quente e passar o tempo juntas.</p>
+
+            <p>Ao se aproximar e conversar com elas, você começará a juntar fragmentos de conversas casuais para compreender o que realmente está acontecendo ao redor do grupo e descobrir qual é o seu verdadeiro papel nessa história.</p>
+
+            <h2 id="personagens">Personagens Principais</h2>
+            <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px;">
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/extras/9be05ee1195f69851e605815fc885b21.avif?t=1772122321" alt="Apresentação das Garotas" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <p style="font-size: 0.9em; margin: 0;"><em>No início, tente se aproximar e criar laços com cada uma delas... embora você não seja estritamente obrigado a isso.</em></p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/extras/c20230cdb3e3a07279f416979145d5c9.avif?t=1772122321" alt="Nezumi" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Nezumi (ねずみ)</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Uma garota de cabelos brancos acinzentados e olhos verdes. Ama profundamente seus amigos e adora conversar sobre suas coisas favoritas, ansiando por trocar ideias e momentos com você.</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/extras/2c24c916825c5b1946c97b3b91b55645.avif?t=1772122321" alt="Sakana" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Sakana (さかな)</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Fria e distante. Mantém uma atitude desconfiada em relação a você, questionando o que teria a dizer a alguém que tem o potencial de odiar ou pisotear o mundo deles unilateralmente.</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/extras/c72bb162a31e7879ff75d5bf8b203187.avif?t=1772122321" alt="Acryl e Saido" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Acryl & Saido (彩度)</h3>
+                    <p style="font-size: 0.9em; margin: 0;"><strong>Acryl:</strong> Garota de cabelos prateados e olhos rosa-crocantes. Preocupa-se constantemente com os outros e age de forma descontraída para não sobrecarregar o jogador emotivamente.<br><strong>Saido:</strong> Garota de cabelos cinza-oliva e olhos castanhos. Um pouco desajeitada com as palavras, tenta demonstrar carinho servindo bebidas elaboradas sempre que você a visita.</p>
+                </div>
+            </div>
+
+            <h2 id="gameplay">Jogabilidade e Características</h2>
+            <ul>
+                <li><strong>Interação Meta-Narrativa:</strong> Comunicação direta entre a inteligência dos personagens e a presença do jogador no mundo real.</li>
+                <li><strong>Investigação por Diálogo:</strong> Monte o quebra-cabeça da trama escutando relatos, segredos e detalhes dispersos em conversas informais.</li>
+                <li><strong>Atmosfera Intimista:</strong> Trilhas e visuais focados em construir momentos de conforto interpostos com mistérios profundos.</li>
+            </ul>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO ADULTO:</strong> O jogo contém temas sensíveis, incluindo referências e menções a suicídio, bem como uso de bebidas alcoólicas.</p>
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce 8400 / ATI Radeon HD 2400 / Intel HD Graphics ou superior</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/ss_42e8d4909769f2aa2a6fb3a4382e88562760d22a.1920x1080.jpg?t=1772122321" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/ss_015b93bf9f47470fb5e7cd1447a0126c14449d9c.1920x1080.jpg?t=1772122321" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/ss_a6745978f5bea35abac78e2522784fcff187a2d5.1920x1080.jpg?t=1772122321" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/ss_5a9a7c85bfe5470b36bc0b47bb215811fbab7a40.1920x1080.jpg?t=1772122321" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/ss_49f6a90b5d92a7f98dde146a7b73273c6e7c18c1.1920x1080.jpg?t=1772122321" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/ss_e51822ae02d71b18e69b0dc42222d73caa80d1fc.1920x1080.jpg?t=1772122321" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2487390/ss_d777b0bf1b3fa27db3319664cb645acfd17ae8db.1920x1080.jpg?t=1772122321" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2487390/For_the_GHOSTs/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.houseonhouse.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (House on House)</a>
+                <a href="https://x.com/Gen_San_Koku" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter do Desenvolvedor (GenSanKoku)</a>
+            </div>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
