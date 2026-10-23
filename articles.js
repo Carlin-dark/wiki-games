@@ -6971,6 +6971,494 @@ const articlesDatabase = {
             </div>
         `
     },
+    "shinjuku-anomaly": {
+        title: "Shinjuku Anomaly (新宿異変)",
+        addedAt: "2026-10-23",
+        categories: ["Visual Novel", "Terror", "Aventura", "Indie", "Sobrenatural"],
+        summary: "Um jogo curto de terror e suspense em formato visual novel com múltiplos finais. Aceite um trabalho de meio período noturno para fotografar as anomalias e entidades bizarras que rondam as ruas de Shinjuku, seguindo regras estritas de distância e uso de filme.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3386350/629ea53a26d393a263a14ecb908a8f9e738b1026/header_japanese.jpg?t=1790730086",
+            data: {
+                "Título Original": "新宿異変",
+                "Desenvolvedor": "AMATA Games",
+                "Publicadora": "AMATA Games",
+                "Gêneros": "Aventura, Indie, Visual Novel, Terror",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "29 de setembro de 2026",
+                "Classificação": "14+ (Violência, Drogas Ilícitas, Medo)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Regras do Trabalho" },
+            { id: "gameplay", text: "2. Características e Finais" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Shinjuku Anomaly</strong> (<em>新宿異変</em>) é um jogo indie de terror e aventura em formato de visual novel curta desenvolvido e publicado pela <strong>AMATA Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e Regras do Trabalho</h2>
+            <p>Você aceitou um bico (trabalho de meio período) para fotografar entidades misteriosas e anomalias que se contorcem e vagam pelas ruas escuras da noite de Shinjuku.</p>
+            
+            <p>Para sobreviver ao turno e cumprir sua tarefa, você deve seguir estritamente quatro regras fundamentais:</p>
+            <ul>
+                <li><strong>1.</strong> Encontrou uma anomalia? Tire uma foto dela.</li>
+                <li><strong>2.</strong> Ao fotografar, aproxime-se até uma distância adequada.</li>
+                <li><strong>3.</strong> Mas cuidado: nunca chegue perto demais.</li>
+                <li><strong>4.</strong> Assim que o rolo de filme acabar, retorne imediatamente.</li>
+            </ul>
+
+            <h2 id="gameplay">Características e Finais</h2>
+            <ul>
+                <li><strong>Narrativa com Múltiplos Finais:</strong> Suas decisões, precisão e observação determinam o desfecho de sua noite de trabalho em Shinjuku.</li>
+                <li><strong>Nota sobre Conteúdo de IA:</strong> O desenvolvedor informou que uma porção das imagens de fundo presentes no jogo foi criada utilizando inteligência artificial.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 11 (Requer processador e sistema operacional de 64 bits)</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3386350/b240a68df90cecd1c065f87b18a5ecc2a1bd80c1/ss_b240a68df90cecd1c065f87b18a5ecc2a1bd80c1.1920x1080.jpg?t=1790730086" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3386350/498faeed86fdf1d105797503f466367f37773611/ss_498faeed86fdf1d105797503f466367f37773611.1920x1080.jpg?t=1790730086" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3386350/a6210ccfe694c0de29e146629ba0c3f1d71d42a9/ss_a6210ccfe694c0de29e146629ba0c3f1d71d42a9.1920x1080.jpg?t=1790730086" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3386350/248f9abdbe9a8070089087d87832eebb67e3f778/ss_248f9abdbe9a8070089087d87832eebb67e3f778.1920x1080.jpg?t=1790730086" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3386350/2b06ec6d6cfc37029439a5a539aa9a5ba0cb4be8/ss_2b06ec6d6cfc37029439a5a539aa9a5ba0cb4be8.1920x1080.jpg?t=1790730086" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3386350/0489344ae6fd82512595321a809358bbfd636b9f/ss_0489344ae6fd82512595321a809358bbfd636b9f.1920x1080.jpg?t=1790730086" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Redes:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/3386350/%E6%96%B0%E5%AE%BF%E7%95%B0%E5%A4%89/?l=japanese" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://amata.games/en/game/shinjuku-anomaly/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (AMATA Games)</a>
+                <a href="https://x.com/amatagamesen" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+                <a href="https://bsky.app/profile/amata.games" target="_blank"><i class="fa-solid fa-cloud"></i> Bluesky</a>
+                <a href="https://discord.com/invite/KCD2b6RWrt" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
+                <a href="https://www.youtube.com/@AMATAChannel" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/y5Pe" target="_blank"><i class="fa-solid fa-magnet"></i> Torrent Link (Release P2P — 517.70 MB)</a>
+            </div>
+
+            <p><small><em>Nota de Lançamento: Jogo publicado pela AMATA Games em setembro de 2026.</em></small></p>
+        `
+    },
+    "ruina-remake": {
+        title: "Ruina 廃都の物語 (Remake)",
+        addedAt: "2026-10-23",
+        categories: ["RPG Maker", "RPG", "Aventura", "Estratégia", "Indie", "Gamebook", "TRPG"],
+        summary: "Remake HD do lendário RPG freeware de 2008 criado por Shoukichi Karekusa. Explore um labirinto ancestral cheio de mistérios com estilo visual de GameBook, combates em turno, checagens de habilidade TRPG e 4 origens distintas de protagonista.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/header.jpg?t=1789121374",
+            data: {
+                "Título Original": "Ruina 廃都の物語 Remake",
+                "Desenvolvedor": "Guangzhou Tianwen Kadokawa",
+                "Publicadora": "WhisperGames",
+                "Gêneros": "RPG, Aventura, Estratégia, TRPG",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "Em breve (Previsto para 2026)",
+                "Classificação": "14+ (Violência, Nudez)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Novidades do Remake" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "original", text: "5. Sobre a Versão Original (2008)" },
+            { id: "links", text: "6. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Ruina 廃都の物語 (Remake)</strong> é a versão totalmente remasterizada e expandida do clássico cult dos RPGs de mesa e estilo <em>GameBook</em>, desenvolvida pela <strong>Guangzhou Tianwen Kadokawa</strong> e publicada pela <strong>WhisperGames</strong> com supervisão do autor original, Shoukichi Karekusa.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Em um canto calmo de uma pequena cidade à beira do rio, ruínas ancestrais reapareceram misteriosamente. Em suas profundezas jaz um labirinto vasto e repleto de profecias enigmáticas que atraem aventureiros de todas as partes.</p>
+
+            <p>No entanto, junto a monstros lendários e tesouros inestimáveis, segredos ainda mais sombrios permanecem ocultos. O jogador assume o papel de um herói cuja origem (4 opções disponíveis) moldará a forma como a verdade sobre a cidade caída é revelada.</p>
+
+            <h2 id="gameplay">Características e Novidades do Remake</h2>
+            <p><strong>JRPG com Elementos de TRPG e GameBook:</strong></p>
+            <p>Inspirado nos livros-jogos clássicos, cada cenário é apresentado como um mapa ilustrado à mão. O sistema incorpora mecânicas de checagem de habilidades (Skill Checks) em testes de dados típicos de RPG de mesa.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/extras/c80fd26c0788d56f196a4926952ad76c.webm?t=1789121374" type="video/webm">
+                </video>
+            </div>
+
+            <p><strong>Níveis Temáticos Desafiadores:</strong></p>
+            <p>Viaje por florestas mágicas, picos montanhosos congelados e catacumbas profundas. Colete pistas, resolva puzzles com raciocínio e tome decisões cruciais para superação dos testes.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/extras/1c5abc214275df4f65eba692cd122f1b.webm?t=1789121374" type="video/webm">
+                </video>
+            </div>
+
+            <p><strong>Combate Clássico em Turnos:</strong></p>
+            <p>Enfrente dezenas de criaturas únicas. A vitória depende da combinação estratégica de aliados, armas, habilidades e observação do comportamento dos inimigos.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/extras/636ada5333c8483bf724bf5399266541.webm?t=1789121374" type="video/webm">
+                </video>
+            </div>
+
+            <p><strong>Companheiros e Fator Replay (New Game+):</strong></p>
+            <p>Recrute um elenco diversificado de companheiros com personalidades e histórias próprias. As 4 origens do protagonista oferecem perspectivas totalmente diferentes da trama, com conteúdos e segredos exclusivos revelados no New Game+.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/extras/3ffcc19cca2df0762f5a122ee5092f70.webm?t=1789121374" type="video/webm">
+                </video>
+            </div>
+
+            <p><strong>Melhorias do Remake:</strong></p>
+            <ul>
+                <li>Arte original totalmente remasterizada em alta definição e novas ilustrações.</li>
+                <li>Novos cenários com conteúdo interativo e eventos com ramificações inéditas.</li>
+                <li>Novo sistema de habilidades com mais sinergias e estratégias.</li>
+                <li>Recursos modernos: Auto-save, enciclopédia/bestiário, conquistas e interface do usuário (UI) aprimorada.</li>
+                <li>Suporte a múltiplos idiomas e compatibilidade total com controles.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10 / 11 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i3-380UM @ 1.33 GHz</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Intel HD Graphics</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 20 GB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10 / 11 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i3-4330 @ 3.50 GHz</li>
+                <li><strong>Memória RAM:</strong> 16 GB de RAM</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/ss_fdf367f272e4cf2d7c45e2ead8375dd924ee0f74.1920x1080.jpg?t=1789121374" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/49db1a3da8f28e1786a3dab68c5d3a5077287efd/ss_49db1a3da8f28e1786a3dab68c5d3a5077287efd.1920x1080.jpg?t=1789121374" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/f372a2988e218d2877ee440c5005e54cd71dd8b1/ss_f372a2988e218d2877ee440c5005e54cd71dd8b1.1920x1080.jpg?t=1789121374" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/ss_5f5b46cd8c1f1fcac13e564768d89daee3b68384.1920x1080.jpg?t=1789121374" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3185060/ss_15ae66e4dc32d8cbdcc8a90a627714019565adf3.1920x1080.jpg?t=1789121374" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <h2 id="original">Sobre a Versão Original (2008)</h2>
+            <p>O jogo original, intitulado <strong>Ruina 廃都の物語</strong> (<em>Ruina: Fairy Tale of the Forgotten Ruins</em>), foi lançado gratuitamente em 24 de dezembro de 2008 por <strong>Shoukichi Karekusa (枯草章吉)</strong> utilizando o motor <em>RPG Maker 2000</em>. A obra tornou-se um marco histórico no cenário indie japonês por seu estilo narrativo único, vencendo diversos prêmios freeware.</p>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais do Remake:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/3185060/Ruina_Remake/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam (Remake)</a>
+                <a href="https://weibo.com/u/7791171653" target="_blank"><i class="fa-brands fa-weibo"></i> Weibo Oficial do Desenvolvedor</a>
+                <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/RuinaFairyTaleOfTheForgottenRuins" target="_blank"><i class="fa-solid fa-book-open"></i> TV Tropes Wiki (Ruina)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads da Versão Original (Freeware 2008):</strong></p>
+            <div class="play-links">
+                <a href="https://archive.org/details/ruina-fairy-tale-of-the-forgotten-ruins_202501" target="_blank"><i class="fa-solid fa-box-archive"></i> Internet Archive (Com EasyRPG Incluso)</a>
+                <a href="https://4br.me/gwzHkH3" target="_blank"><i class="fa-solid fa-download"></i> Download Versão em Inglês v1.03 (Uptodown - 23.89 MB)</a>
+                <a href="https://easyrpg.org/player/downloads/" target="_blank"><i class="fa-solid fa-gamepad"></i> Download EasyRPG Player (Executor)</a>
+                <a href="https://dinklations.wordpress.com/2021/01/30/ruina-fairy-tale-of-the-forgotten-ruins-english-version/" target="_blank"><i class="fa-solid fa-language"></i> Blog da Tradução Dinklations</a>
+            </div>
+
+            <p><small><em>Nota: O Remake em alta definição está previsto para ser lançado na Steam. A versão original de 2008 é 100% gratuita e pode ser jogada no PC ou dispositivos móveis utilizando o EasyRPG Player.</em></small></p>
+        `
+    },
+    "ruina-haito-no-monogatari-2008": {
+        title: "Ruina 廃都の物語 (Original, 2008)",
+        addedAt: "2026-10-23",
+        categories: ["RPG Maker", "RPG", "Aventura", "Gamebook", "TRPG", "Gratuito para Jogar", "Indie"],
+        summary: "O clássico e aclamado RPG freeware de 2008 criado por Karekusa Shoukichi no RPG Maker 2000. Fortemente inspirado nos livros-jogos (GameBook) dos anos 80, traz exploração de dungeons por nós, narrador em segunda pessoa, 4 origens de protagonista e combate tático em turnos.",
+        infobox: {
+            image: "https://dn711005.ca.archive.org/0/items/ruina-fairy-tale-of-the-forgotten-ruins_202501/ruina_title.png",
+            data: {
+                "Título Original": "Ruina 廃都の物語 (Ruina: Fairy Tale of the Forgotten Ruins)",
+                "Desenvolvedor": "Karekusa Shoukichi (枯草章吉)",
+                "Publicadora": "Karekusa Shoukichi (Autopublicado / Freem!)",
+                "Engine": "RPG Maker 2000",
+                "Gêneros": "RPG, Aventura, Gamebook, TRPG",
+                "Plataformas": "PC (Windows 98/XP/10/11 via EasyRPG), Steam Deck",
+                "Lançamento": "24 de dezembro de 2008 (v1.21 em 07/07/2009)",
+                "Classificação": "Livre (Todas as idades)",
+                "Licença": "Freeware (100% Gratuito)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Estilo GameBook e Mecânicas" },
+            { id: "origens", text: "3. Origens do Protagonista" },
+            { id: "execucao", text: "4. Como Rodar em Sistemas Modernos" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "livro", text: "6. Adaptação em Livro / Light Novel" },
+            { id: "links", text: "7. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Ruina 廃都の物語</strong> (<em>Ruina: Fairy Tale of the Forgotten Ruins</em>) é uma das obras mais influentes e celebradas da história dos jogos criados no RPG Maker. Desenvolvido de forma independente por <strong>Karekusa Shoukichi (枯草章吉)</strong> e lançado na véspera de Natal de 2008, o título conquistou o Grande Prêmio (Grand Prize) no 4º Concurso Anual do portal japonês Freem!.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Em uma pequena vila pacífica situada à beira do rio, ruínas subterrâneas há muito esquecidas ressurgem do solo. Dentro delas esconde-se um labirinto ancestral repleto de profecias criptografadas, relíquias perdidas e mistérios que atraem aventureiros e estudiosos de várias regiões.</p>
+
+            <p>O protagonista desperta para o seu destino à medida que decide explorar as profundezas da cidade caída, descobrindo segredos sobre a origem do mundo e a maldição que paira sobre a região.</p>
+
+            <h2 id="gameplay">Estilo GameBook e Mecânicas</h2>
+            <ul>
+                <li><strong>Narrativa em Segunda Pessoa estilo Livro-Jogo:</strong> A exploração é conduzida por meio de um mapa baseado em nós (nodes) e pontos de interesse, acompanhado por um narrador que descreve cenários e situações com rica vivacidade descritiva.</li>
+                <li><strong>Testes de Habilidades (Skill Checks):</strong> Inspirado nos RPGs de mesa (TRPGs) e GameBooks dos anos 80, cada ação requer decisões táticas e uso das habilidades da equipe para superar obstáculos.</li>
+                <li><strong>Combate em Turnos Tradicional:</strong> Batalhas estratégicas no estilo clássico do RPG Maker 2000, com foco em fraquezas elementais (Fogo, Gelo, Trovão, Sombra e Sagrado).</li>
+                <li><strong>Gerenciamento de Grupo:</strong> Monte uma equipe de até 3 membros (protagonista + 2 companheiros recrutáveis), cada um oferecendo passivas e habilidades de campo únicas.</li>
+                <li><strong>Fator Replay e Duração:</strong> Cerca de 8 a 12 horas de duração por partida. São necessárias cerca de 5 campanhas (com suporte a New Game+) para experienciar todas as variações e segredos da trama.</li>
+            </ul>
+
+            <h2 id="origens">Origens do Protagonista</h2>
+            <p>O jogador pode escolher entre 4 origens distintas para o personagem principal, alterando diálogos, visões da história e habilidades iniciais:</p>
+            <ul>
+                <li><strong>Órfão do Templo (神殿の孤児):</strong> Criado por sacerdotes religiosos, possui afinidade com magia sagrada e cura.</li>
+                <li><strong>Discípulo do Sábio (賢者の弟子):</strong> Educado por um erudito, possui grande conhecimento de arcana e habilidades analíticas.</li>
+                <li><strong>Filho do Cavaleiro (騎士の子):</strong> Treinado na arte da espada e da defesa, focado em combate físico pesado.</li>
+                <li><strong>Criado por Criminosos (犯罪者たちに育てられた):</strong> Especialista em esquiva, abertura de fechaduras e técnicas furtivas das ruas.</li>
+            </ul>
+
+            <h2 id="execucao">Como Rodar em Sistemas Modernos (Win 10/11 & Steam Deck)</h2>
+            <p>Como o jogo foi desenvolvido em 2008 para Windows 98/XP com o motor <em>RPG Maker 2000</em>, a forma mais estável e recomendada de jogá-lo em computadores modernos e no Steam Deck é através do <strong>EasyRPG Player</strong>:</p>
+            <ol>
+                <li>Baixe o jogo (versão original japonesa ou a tradução em inglês da Dinklations).</li>
+                <li>Baixe o executável portátil do <strong>EasyRPG Player</strong>.</li>
+                <li>Coloque o arquivo do EasyRPG Player dentro da pasta raiz do jogo e execute-o diretamente.</li>
+            </ol>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://blackhat.a.la9.jp/ftotfr/pic/101.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://blackhat.a.la9.jp/ftotfr/pic/102.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://blackhat.a.la9.jp/ftotfr/pic/103.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://blackhat.a.la9.jp/ftotfr/pic/104.jpg" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <h2 id="livro">Adaptação em Livro / Light Novel</h2>
+            <p>Devido ao enorme sucesso de público e crítica, a obra foi adaptada em uma série de romances oficiais publicada pela editora <strong>KADOKAWA</strong>:</p>
+            <ul>
+                <li><strong>Título:</strong> Ruina 廃都の物語 1</li>
+                <li><strong>Autor / Escrito por:</strong> Akihiko Ureshino (嬉野 秋彦) / Supervisão: Karekusa Shoukichi</li>
+                <li><strong>Data de Lançamento:</strong> 5 de março de 2018 (320 páginas)</li>
+                <li><strong>ISBN-13:</strong> 978-4047350243</li>
+            </ul>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Recursos:</strong></p>
+            <div class="play-links">
+                <a href="https://blackhat.a.la9.jp/ftotfr/game.htm" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial do Autor (Karekusa Shoukichi)</a>
+                <a href="https://blackhat.a.la9.jp/ftotfr/ruina/manual.htm" target="_blank"><i class="fa-solid fa-book"></i> Manual Oficial do Jogo</a>
+                <a href="https://forest.watch.impress.co.jp/library/software/ruina/" target="_blank"><i class="fa-solid fa-newspaper"></i> Página na 窓の杜 (MADO no Mori)</a>
+                <a href="https://ruina-rm2k-en.carrd.co/" target="_blank"><i class="fa-solid fa-layer-group"></i> Central de Recursos e Traduções (Carrd)</a>
+                <a href="https://rmarchiv.de/games/2649" target="_blank"><i class="fa-solid fa-database"></i> Ficha no RMArchiv</a>
+                <a href="https://www.indiexpo.net/en/games/ruina" target="_blank"><i class="fa-solid fa-gamepad"></i> Página no IndieExpo</a>
+                <a href="https://www.amazon.co.jp/Ruina-%E5%BB%83%E9%83%BD%E3%81%AE%E7%89%A9%E8%AA%9E-1-%E5%AC%8D%E9%87%8E-%E7%A7%8B%E5%BD%A6/dp/4047350249" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Livro Oficial na Amazon JP</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads Gratuitos e Utilitários:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/QFtDm" target="_blank"><i class="fa-solid fa-box-archive"></i> Download do Jogo Original (Internet Archive — RTP Incluso)</a>
+                <a href="https://www.freem.ne.jp/dl/win/2037" target="_blank"><i class="fa-solid fa-download"></i> Download Oficial na Freem! (ruina121.zip — 12.6 MB)</a>
+                <a href="https://dinklations.wordpress.com/2021/01/30/ruina-fairy-tale-of-the-forgotten-ruins-english-version/" target="_blank"><i class="fa-solid fa-language"></i> Tradução Oficial em Inglês (Dinklations v1.03)</a>
+                <a href="https://4br.me/gwzHkH3" target="_blank"><i class="fa-solid fa-download"></i> Download da Versão em Inglês (Uptodown)</a>
+                <a href="https://4br.me/OzPk" target="_blank"><i class="fa-solid fa-play"></i> Download EasyRPG Player (Executor para Windows 10/11)</a>
+            </div>
+
+            <p><small><em>Licença e Distribuição: O jogo é 100% gratuito (Freeware). O autor autorizou a tradução para o inglês com a condição expressa de manter os créditos intactos e o jogo totalmente gratuito para todos.</em></small></p>
+        `
+    },
+    "the-witchs-house-original-2012": {
+        title: "The Witch's House (魔女の家 - Original, 2012)",
+        addedAt: "2026-10-23",
+        categories: ["RPG Maker", "Terror", "Aventura", "Puzzle", "Gratuito para Jogar", "Gore", "Indie"],
+        summary: "O aclamado clássico de terror psicológico e exploração criado por Fummy no RPG Maker VX. Acompanhe a jovem Viola enquanto ela tenta escapar de uma mansão viva e mutável na floresta, recheada de armadilhas mortais, pavor e um desfecho inesquecível.",
+        infobox: {
+            image: "https://majonoie.karou.jp/img/app.jpg",
+            data: {
+                "Título Original": "魔女の家 (Majo no Ie)",
+                "Desenvolvedor": "Fummy (ふみー)",
+                "Publicadora": "Fummy (Freem! / Autopublicado)",
+                "Engine": "RPG Maker VX",
+                "Gêneros": "Terror, Puzzle, Aventura",
+                "Plataformas": "PC (Windows 2000/XP/Vista/7/10/11)",
+                "Lançamento": "3 de outubro de 2012 (v1.09)",
+                "Classificação": "12+ (Violência, Gore, Terror Psicológico)",
+                "Licença": "Freeware (100% Gratuito)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "personagens", text: "3. Personagens Principais" },
+            { id: "trilha", text: "4. Trilha Sonora e Músicas" },
+            { id: "guia", text: "5. Guia do Jogo e Detonado dos Puzzles" },
+            { id: "finais", text: "6. Condições para os Finais" },
+            { id: "galeria", text: "7. Galeria de Imagens" },
+            { id: "links", text: "8. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>The Witch's House</strong> (<em>魔女の家 / Majo no Ie</em>) é um dos romances visuais e jogos de terror em pixel art mais influentes de todos os tempos. Desenvolvido de forma independente por <strong>Fummy (ふみー)</strong> no motor RPG Maker VX e lançado em outubro de 2012, o jogo tornou-se uma referência do gênero <em>puzzle horror</em>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>A jovem <strong>Viola</strong> visita uma floresta misteriosa e se vê atraída para o interior de uma mansão imponente e sombria. Logo ao entrar, as saídas se fecham e a garota descobre a natureza extremamente perigosa e mutável do local.</p>
+
+            <p>Para sobreviver e encontrar uma forma de retornar para casa, Viola precisa resolver enigmas macabros espalhados por 5 andares, enquanto desvenda os segredos obscuros sobre a verdadeira proprietária da casa: a jovem bruxa Ellen.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Morte Instantânea e Armadilhas (Troll Traps):</strong> O jogo é famoso por seu ritmo punitivo. Qualquer erro de cálculo ou interação descuidada pode levar à morte súbita e sangrenta de Viola.</li>
+                <li><strong>Exploração Top-Down sem Combate:</strong> Foco total em resolver quebra-cabeças, ler pistas, manipular itens do inventário e desviar de perigos em tempo real.</li>
+                <li><strong>Uso Manual de Itens:</strong> Os itens do inventário não são usados automaticamente. É necessário abrir o menu e selecionar o objeto correto diante de cada obstáculo.</li>
+                <li><strong>Salvamento Fixo:</strong> O jogo permite salvar o progresso ao conversar com o misterioso Gato Preto encontrado em determinados pontos do mapa.</li>
+                <li><strong>Movimentação Diagonal e Atmosfera:</strong> Suporta movimentação diagonal para fuga fluida e é altamente recomendado o uso de fones de ouvido para imersão sonora total.</li>
+            </ul>
+
+            <h2 id="personagens">Personagens Principais</h2>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://majonoie.karou.jp/img/viola2.jpg" alt="Viola" style="border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Viola</h3>
+                    <p style="font-size: 0.85em; margin: 0;">A garota loira que adentra a mansão da bruxa na floresta.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://majonoie.karou.jp/img/cat2.jpg" alt="Gato Preto" style="border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Gato Preto (Kuroneko)</h3>
+                    <p style="font-size: 0.85em; margin: 0;">A entidade enigmática que serve como ponto de salvamento na casa.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://majonoie.karou.jp/img/ellen2.jpg" alt="Ellen" style="border-radius: 4px; margin-bottom: 8px;">
+                    <h3 style="margin: 5px 0;">Ellen</h3>
+                    <p style="font-size: 0.85em; margin: 0;">A jovem e misteriosa bruxa doente, dona da mansão.</p>
+                </div>
+            </div>
+
+            <h2 id="trilha">Trilha Sonora e Músicas</h2>
+            <p>O site oficial disponibiliza as faixas originais do jogo em áudio MP3 e partituras em PDF:</p>
+            <ul>
+                <li>
+                    <strong>Teatro de Bonecos / Caixa de Música (4º Andar):</strong> <code>itomaki.mp3</code>
+                    <br>
+                    <audio controls style="margin-top: 5px; height: 30px;"><source src="https://majonoie.karou.jp/muzic/itomaki.mp3" type="audio/mpeg"></audio>
+                    <br><small><a href="https://majonoie.karou.jp/pdf/itomaki.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Partitura em PDF</a></small>
+                </li>
+                <li style="margin-top: 10px;">
+                    <strong>Despertar / Piano (4º Andar):</strong> <code>op2.mp3</code>
+                    <br>
+                    <audio controls style="margin-top: 5px; height: 30px;"><source src="https://majonoie.karou.jp/muzic/op2.mp3" type="audio/mpeg"></audio>
+                    <br><small><a href="https://majonoie.karou.jp/pdf/op2.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Partitura em PDF</a></small>
+                </li>
+                <li style="margin-top: 10px;">
+                    <strong>Ending No. 3 (Faixa Não Utilizada):</strong> <code>ed3.mp3</code>
+                    <br>
+                    <audio controls style="margin-top: 5px; height: 30px;"><source src="https://majonoie.karou.jp/muzic/ed3.mp3" type="audio/mpeg"></audio>
+                    <br><small><a href="https://majonoie.karou.jp/pdf/ed3.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Partitura em PDF</a> | <a href="https://majonoie.karou.jp/muzic/ed3_miku.mp3" target="_blank">Versão Vocaloid Miku MP3</a></small>
+                </li>
+            </ul>
+
+            <blockquote style="background: rgba(255,255,255,0.03); border-left: 3px solid #aaa; padding: 8px 12px; margin: 10px 0; font-style: italic; font-size: 0.9em;">
+                <strong>Letra de Ending No. 3:</strong><br>
+                "Pergunto a mim mesma no espelho: 'Você não tem medo?'<br>
+                Na escuridão, você segue as pegadas de sangue,<br>
+                forçando a abertura dos olhos quebrados.<br>
+                No espelho, estou assustada, chorando baixinho.<br>
+                Na escuridão, você puxa o fio da vida,<br>
+                enrolando-o no pescoço para resistir."
+            </blockquote>
+
+            <h2 id="guia">Guia do Jogo e Detonado dos Puzzles</h2>
+            <details>
+                <summary style="cursor: pointer; font-weight: bold; background: rgba(255,255,255,0.1); padding: 8px; border-radius: 4px;">Clique para expandir as soluções e respostas dos Puzzles (1º ao 5º Andar)</summary>
+                <div style="padding: 10px; border: 1px solid #444; margin-top: 5px; border-radius: 4px;">
+                    <p><strong>Início / Entrada:</strong></p>
+                    <ul>
+                        <li>Para sair do caminho bloqueado, vá para a esquerda do mapa da grande rosa e encontre a passagem secreta para pegar o <strong>Machete</strong>. Use o Machete no menu em frente às pequenas rosas.</li>
+                    </ul>
+
+                    <p><strong>1º Andar:</strong></p>
+                    <ul>
+                        <li><strong>Quarto com manchas de sangue:</strong> Avance sem pisar no sangue, examine o papel de parede e saia da sala.</li>
+                        <li><strong>Urso de Pelúcia:</strong> Use a Tesoura no urso e coloque os "Membros do Urso" na caixa.</li>
+                        <li><strong>Sopa de Crânio:</strong> Mova a cadeira à esquerda na sala de jantar e leia o bilhete na mesa. Use a talher/receptáculo de prata para provar a sopa.</li>
+                    </ul>
+
+                    <p><strong>3º Andar:</strong></p>
+                    <ul>
+                        <li><strong>Facas voadoras:</strong> Corra pelo extremo lado esquerdo para desviar.</li>
+                        <li><strong>Ponte pequena:</strong> Coloque o Sapo na placa de pressão.</li>
+                        <li><strong>Sala de Espelhos:</strong> Faça com que ambos os lados da sala fiquem idênticos e rasgue o papel de parede branco.</li>
+                        <li><strong>Corredor de Não Olhar para o Lado:</strong> Ande reto sem mudar de direção nem olhar para os lados, ignorando as facas.</li>
+                        <li><strong>Porta com olho mágico:</strong> Insira o Sapo na abertura da porta.</li>
+                    </ul>
+
+                    <p><strong>4º Andar:</strong></p>
+                    <ul>
+                        <li><strong>Fazendo som nos 4 quartos:</strong> Toque o piano, ajuste o orquestrião/caixa de música, bata no abóbora 3 vezes e resolva o enigma do relógio para abrir a porta no quarto do piano.</li>
+                        <li><strong>Resposta da Charada:</strong> Relógio.</li>
+                        <li><strong>Ajuste do Orquestrião:</strong> Use a Chave da Rainha.</li>
+                        <li><strong>Anel de Costela:</strong> Devolva os Hashis de Ouro para a costela para poder sair da sala.</li>
+                    </ul>
+
+                    <p><strong>5º Andar:</strong></p>
+                    <ul>
+                        <li><strong>Pó Cinza-Ebranquiçado:</strong> Fale com a flor amarela, ouça a grama vermelha, elimine a flor branca ("Desprender") e volte para a flor amarela.</li>
+                        <li><strong>Garrafa Luminosa:</strong> Pegue a garrafa vazia no armário de veneno e os restos de flor. Arrume os crânios corretamente na sala central e puxe a alavanca para fluir água; encha a garrafa para criar a luz.</li>
+                        <li><strong>Sapatos Vermelhos:</strong> Lave o sangue dos Sapatos Vermelhos na água para obter os Sapatos de Cristal e atravessar o veneno.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <h2 id="finais">Condições para os Finais</h2>
+            <ul>
+                <li><strong>Final Normal (Normal End):</strong> Na fuga final da casa, corra diretamente para a saída e saia da mansão sem pegar nenhum item adicional.</li>
+                <li><strong>Final Verdadeiro (True End):</strong> Durante a perseguição final no 1º andar, corra para a sala superior direita (onde o urso foi encontrado) e abra o armário no canto superior direito para pegar o <strong>Remédio da Ellen (Ellen's xxxxx)</strong> antes de escapar da casa.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://majonoie.karou.jp/img/ss1.png" alt="Screenshot 1" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://majonoie.karou.jp/img/ss15.png" alt="Screenshot 2" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://majonoie.karou.jp/img/ssq3.png" alt="Screenshot 3" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://majonoie.karou.jp/img/ss2.png" alt="Screenshot 4" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://majonoie.karou.jp/img/ss10.png" alt="Screenshot 5" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://majonoie.karou.jp/img/ssq1.png" alt="Screenshot 6" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://majonoie.karou.jp/img/ssq2.png" alt="Screenshot 7" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://majonoie.karou.jp/img/ss9.png" alt="Screenshot 8" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="http://majonoie.karou.jp/index.html" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial de The Witch's House</a>
+                <a href="https://www.freem.ne.jp/" target="_blank"><i class="fa-solid fa-download"></i> Portal Freem! (Hospedeiro Original da v1.09)</a>
+            </div>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
