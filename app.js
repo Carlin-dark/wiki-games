@@ -316,27 +316,27 @@ function getAgeRatingConfig(value) {
         return { label: 'Livre (L)', className: 'rating-badge--green' };
     }
 
-    if (/\+?6\+?/i.test(text)) {
+    if (/(?:^|[^0-9])\+?6(?:\+|$|[^0-9])/i.test(text)) {
         return { label: '+6', className: 'rating-badge--pink' };
     }
 
-    if (/\+?10\+?/i.test(text)) {
+    if (/(?:^|[^0-9])\+?10(?:\+|$|[^0-9])/i.test(text)) {
         return { label: '+10', className: 'rating-badge--blue' };
     }
 
-    if (/\+?12\+?/i.test(text)) {
+    if (/(?:^|[^0-9])\+?12(?:\+|$|[^0-9])/i.test(text)) {
         return { label: '+12', className: 'rating-badge--yellow' };
     }
 
-    if (/\+?14\+?/i.test(text)) {
+    if (/(?:^|[^0-9])\+?14(?:\+|$|[^0-9])/i.test(text)) {
         return { label: '+14', className: 'rating-badge--orange' };
     }
 
-    if (/\+?16\+?/i.test(text)) {
+    if (/(?:^|[^0-9])\+?16(?:\+|$|[^0-9])/i.test(text)) {
         return { label: '+16', className: 'rating-badge--red' };
     }
 
-    if (/\+?18\+?/i.test(text)) {
+    if (/(?:^|[^0-9])\+?18(?:\+|$|[^0-9])/i.test(text)) {
         return { label: '+18', className: 'rating-badge--black' };
     }
 
@@ -346,6 +346,128 @@ function getAgeRatingConfig(value) {
 function renderClassificationBadge(value) {
     const config = getAgeRatingConfig(value);
     return `<span class="rating-badge ${config.className}">${escapeHtml(config.label)}</span>`;
+}
+
+const fallbackAgeRatings = {
+    'alice-in-the-nightmare-land': '16+ (estimativa)',
+    'doki-doki-literature-club': '18+ (Steam/DEJUS) / 17+ (ESRB)',
+    'doki-doki-literature-club-plus': '17+ (ESRB)',
+    'the-house-in-fata-morgana': '16+ (Steam)',
+    'it-gets-so-lonely-here': '18+ (Steam)',
+    'steins-gate': '16+ (estimativa)',
+    'danganronpa': '14+ (Steam/DEJUS) / 17+ (ESRB)',
+    'zero-escape-the-nonary-games': '16+ (Steam/DEJUS) / 17+ (ESRB)',
+    'higurashi-when-they-cry': '16+ (estimativa)',
+    'omori': '18+ (Steam/DEJUS)',
+    'slay-the-princess': '17+ (ESRB)',
+    'corpse-party': '18+ (PEGI)',
+    'umineko-when-they-cry': '16+ (estimativa)',
+    'fate-stay-night-remastered': '16+ (estimativa)',
+    'ace-attorney-trilogy': '12+ (estimativa)',
+    'ai-the-somnium-files': '16+ (estimativa)',
+    'clannad': '12+ (estimativa)',
+    'raging-loop': '16+ (estimativa)',
+    'your-turn-to-die': '16+ (estimativa)',
+    'va-11-hall-a': '16+ (estimativa)',
+    'witch-on-the-holy-night': '14+ (estimativa)',
+    'the-silver-case': '16+ (estimativa)',
+    'chaos-child': '18+ (estimativa)',
+    'class-of-09': '18+ (estimativa)',
+    'milk-inside-a-bag': '16+ (estimativa)',
+    '428-shibuya-scramble': '16+ (estimativa)',
+    'saya-no-uta': '18+ (conteúdo adulto)',
+    'paranormasight-seven-mysteries': '16+ (estimativa)',
+    'zero-escape-999': '16+ (Steam/DEJUS) / 17+ (ESRB)',
+    'death-mark': '18+ (estimativa)',
+    'black-souls': '18+ (conteúdo extremo)',
+    'the-sekimeiya-spun-glass': '16+ (estimativa)',
+    'chaos-head-noah': '18+ (estimativa)',
+    '13-sentinels-aegis-rim': '14+ (estimativa)',
+    'limbo': '12+ (estimativa)',
+    'needy-streamer-overload': '18+ (estimativa)',
+    'the-coffin-of-andy-and-leyley': '18+ (estimativa)',
+    'gnosia': '14+ (estimativa)',
+    'the-zodiac-trial': '16+ (estimativa)',
+    'scarlet-hollow': '16+ (estimativa)',
+    'little-busters': '14+ (estimativa)',
+    'planetarian': '12+ (estimativa)',
+    'summer-pockets': '14+ (estimativa)',
+    'alice-and-the-devils-prison': '18+ (estimativa)',
+    'you-and-me-and-her': '18+ (estimativa)',
+    'kara-no-shoujo': '18+ (conteúdo adulto)',
+    'remember11': '16+ (estimativa)',
+    'ever17': '14+ (estimativa)',
+    'root-double': '16+ (estimativa)',
+    'fatal-twelve': '16+ (estimativa)',
+    'yet-another-killing-game': '16+ (estimativa)',
+    'buried-stars': '16+ (estimativa)',
+    'quantum-suicide': '16+ (estimativa)',
+    'head-as-code': '16+ (estimativa)',
+    'birth-me-code': '16+ (estimativa)',
+    'decide-4-god': '16+ (estimativa)',
+    'the-specters-desire': '18+ (estimativa)',
+    'spirit-hunter-ng': '18+ (estimativa)',
+    'the-letter': '16+ (estimativa)',
+    'buddy-simulator-1984': '14+ (estimativa)',
+    'oneshot': '10+ (estimativa)',
+    'pony-island': '12+ (estimativa)',
+    'inscryption': '16+ (estimativa)',
+    'the-witchs-house-original-2012': '14+ (estimativa)',
+    'yume-nikki': '12+ (estimativa)',
+    'sadistic-blood': '18+ (conteúdo adulto)',
+    'love-angel-syndrome': '18+ (estimativa)',
+    'hoshizora-no-memoria': '16+ (estimativa)',
+    'black-souls-2': '18+ (conteúdo extremo)',
+    'the-end-of-an-obsession': '18+ (estimativa)',
+    'steins-gate-0': '16+ (estimativa)',
+    'steins-gate-elite': '16+ (estimativa)',
+    'steins-gate-reboot': '16+ (estimativa)',
+    'danganronpa-2-goodbye-despair': '17+ (ESRB)',
+    'danganronpa-another-episode-ultra-despair-girls': '17+ (ESRB)',
+    'danganronpa-v3-killing-harmony': '17+ (ESRB)',
+    'danganronpa-s-ultimate-summer-camp': '14+ (estimativa)',
+    'zero-escape-zero-time-dilemma': '17+ (ESRB)',
+    'the-book-of-shadows': '16+ (estimativa)',
+    'corpse-party-2-dead-patient': '18+ (estimativa)',
+    'corpse-party-book-of-shadows': '18+ (estimativa)',
+    'corpse-party-blood-drive': '18+ (estimativa)',
+    'otakus-adventure': '16+ (estimativa)',
+    'fate-hollow-ataraxia-remastered': '16+ (estimativa)',
+    'tomoyo-after-its-a-wonderful-life': '16+ (estimativa)',
+    'ib': '12+ (estimativa)',
+    'misao-2024-hd-remaster': '16+ (estimativa)',
+    'nekopara-vol-1': '16+ (estimativa)',
+    'clannad-side-stories': '12+ (estimativa)',
+    'mad-father': '16+ (estimativa)',
+    'blank-dream': '14+ (estimativa)',
+    'paranoiac': '16+ (estimativa)',
+    'folie-fatale': '18+ (estimativa)',
+    'mucorales': '18+ (estimativa)',
+    'kinkoi-golden-loveriche': '18+ (estimativa)',
+    'the-sandman': '14+ (estimativa)',
+    'trainwreck': '18+ (estimativa)'
+};
+
+function getArticleClassification(route, article) {
+    return article?.infobox?.data?.['Classificação'] || fallbackAgeRatings[route] || '';
+}
+
+function getArticleAgeLabels(route, article) {
+    const classification = getArticleClassification(route, article);
+    const labels = [...classification.matchAll(/(?:^|[^0-9])\+?(\d{1,2})\+/g)].map(match => `+${match[1]}`);
+    if (labels.length) return [...new Set(labels)];
+    return /\blivre\b/i.test(classification) ? [getAgeRatingConfig(classification).label] : [];
+}
+
+function renderArticleClassificationBadges(route, article) {
+    return getArticleAgeLabels(route, article)
+        .map(label => renderClassificationBadge(label))
+        .join(' ');
+}
+
+function renderArticleClassification(route, article, value = getArticleClassification(route, article)) {
+    const details = value.replace(/(?:^|[^0-9])\+?\d{1,2}\+/g, '').replace(/[()]/g, '').trim();
+    return `${renderArticleClassificationBadges(route, article)}${details ? ` <small>(${escapeHtml(details)})</small>` : ''}`;
 }
 
 function gameCoverMarkup(route, game, className = '') {
@@ -789,8 +911,12 @@ function renderJoiplayInfo() {
 function renderAllGamesPage() {
     setPageBackground(null);
     const container = document.getElementById('article-container');
-    const allGames = Object.keys(articlesDatabase).filter(key => key !== 'home');
-    const categories = [...new Set(allGames.flatMap(key => articlesDatabase[key].categories || []))].sort((a, b) => a.localeCompare(b));
+    const allGames = Object.keys(articlesDatabase).filter(key => articlesDatabase[key].infobox?.data);
+    const categories = [...new Set(allGames.flatMap(key => articlesDatabase[key].categories || []))]
+        .filter(category => createSlug(category) !== createSlug('+18'))
+        .sort((a, b) => a.localeCompare(b));
+    const ageRatings = [...new Set(allGames.flatMap(key => getArticleAgeLabels(key, articlesDatabase[key])))]
+        .sort((first, second) => Number(first.match(/\d+/)?.[0] || 0) - Number(second.match(/\d+/)?.[0] || 0));
 
     document.title = 'Todos os Jogos - WikiGames';
     container.innerHTML = `
@@ -805,7 +931,15 @@ function renderAllGamesPage() {
                     <span>Categoria</span>
                     <select id="allGamesCategory">
                         <option value="all">Todas</option>
+                        <option value="rating-18">+18</option>
                         ${categories.map(cat => `<option value="${createSlug(cat)}">${cat}</option>`).join('')}
+                    </select>
+                </label>
+                <label class="filter-field">
+                    <span>Classificação</span>
+                    <select id="allGamesRating">
+                        <option value="all">Todas</option>
+                        ${ageRatings.map(rating => `<option value="${escapeHtml(rating)}">${escapeHtml(rating)}</option>`).join('')}
                     </select>
                 </label>
                 <label class="filter-field">
@@ -823,19 +957,26 @@ function renderAllGamesPage() {
 
     const searchInputEl = document.getElementById('allGamesSearch');
     const categorySelectEl = document.getElementById('allGamesCategory');
+    const ratingSelectEl = document.getElementById('allGamesRating');
     const sortSelectEl = document.getElementById('allGamesSort');
     const resultsContainer = document.getElementById('allGamesResults');
 
     function renderResults() {
         const query = (searchInputEl.value || '').toLowerCase().trim();
         const selectedCategory = categorySelectEl.value;
+        const selectedRating = ratingSelectEl.value;
         const selectedSort = sortSelectEl.value;
 
         let filteredGames = allGames.filter(key => {
             const game = articlesDatabase[key];
             const matchesQuery = !query || game.title.toLowerCase().includes(query) || (game.summary || '').toLowerCase().includes(query);
-            const matchesCategory = selectedCategory === 'all' || (game.categories || []).some(cat => createSlug(cat) === selectedCategory);
-            return matchesQuery && matchesCategory;
+            const classification = getArticleClassification(key, game);
+            const ratingLabels = getArticleAgeLabels(key, game);
+            const matchesCategory = selectedCategory === 'all' || (selectedCategory === 'rating-18'
+                ? ratingLabels.includes('+18')
+                : (game.categories || []).some(cat => createSlug(cat) === selectedCategory));
+            const matchesRating = selectedRating === 'all' || ratingLabels.includes(selectedRating);
+            return matchesQuery && matchesCategory && matchesRating;
         });
 
         if (selectedSort === 'title-desc') {
@@ -863,6 +1004,7 @@ function renderAllGamesPage() {
                     <a href="${buildAppHref(`/${key}`)}" class="game-card-image-link">${gameCoverMarkup(key, game)}</a>
                     <div class="all-game-card-content">
                         <div class="game-card-heading"><h3><a href="${buildAppHref(`/${key}`)}">${game.title}</a></h3>${favoriteButton(key, true)}</div>
+                        ${getArticleClassification(key, game) ? `<div class="game-card-rating">${renderArticleClassificationBadges(key, game)}</div>` : ''}
                         <p>${game.summary}</p>
                     </div>
                 </article>
@@ -872,6 +1014,7 @@ function renderAllGamesPage() {
 
     searchInputEl.addEventListener('input', renderResults);
     categorySelectEl.addEventListener('change', renderResults);
+    ratingSelectEl.addEventListener('change', renderResults);
     sortSelectEl.addEventListener('change', renderResults);
     renderResults();
     window.scrollTo(0, 0);
@@ -1220,7 +1363,7 @@ function renderPage() {
             if (game.categories) {
                 game.categories.forEach(cat => {
                     if (createSlug(cat) === catSlug) {
-                        foundGames.push({ key, title: game.title, summary: game.summary });
+                        foundGames.push({ key, title: game.title, summary: game.summary, classification: getArticleClassification(key, game) });
                         catNameDisplay = cat;
                     }
                 });
@@ -1233,7 +1376,7 @@ function renderPage() {
         if (foundGames.length > 0) {
             html += `<ul class="category-list">`;
             foundGames.forEach(g => {
-                html += `<li><a href="${buildAppHref(`/${g.key}`)}"><h3>${g.title}</h3></a><p>${g.summary}</p></li>`;
+                html += `<li><a href="${buildAppHref(`/${g.key}`)}"><h3>${g.title}${g.classification ? ` ${renderArticleClassificationBadges(g.key, articlesDatabase[g.key])}` : ''}</h3></a><p>${g.summary}</p></li>`;
             });
             html += `</ul>`;
         } else {
@@ -1266,10 +1409,26 @@ function renderPage() {
                     ${gameCoverMarkup(route, article, 'zoomable-image')}
                 <table>`;
             for (const [key, value] of Object.entries(article.infobox.data)) {
-                const cellValue = key === 'Classificação' ? renderClassificationBadge(value) : escapeHtml(value);
+                const cellValue = key === 'Classificação'
+                    ? renderArticleClassification(route, article, value)
+                    : escapeHtml(value);
                 htmlContent += `<tr><th>${escapeHtml(key)}</th><td>${cellValue}</td></tr>`;
             }
+            const classification = getArticleClassification(route, article);
+            if (classification && !article.infobox.data['Classificação']) {
+                htmlContent += `<tr><th>Classificação</th><td>${renderArticleClassification(route, article, classification)}</td></tr>`;
+            }
             htmlContent += `</table></div>`;
+        }
+
+        if (route !== 'home') {
+            htmlContent += `
+                <div class="article-actions">
+                    <button id="sharePageBtn" class="share-page-btn" type="button">
+                        <i class="fa-solid fa-share-nodes"></i> Compartilhar página
+                    </button>
+                </div>
+            `;
         }
 
         if (article.toc && article.toc.length > 0) {
@@ -1312,16 +1471,6 @@ function renderPage() {
             htmlContent += `<hr style="margin: 30px 0 15px;"><p style="font-size:13px;"><i class="fa-solid fa-tags"></i> <strong>Categorias:</strong> `;
             const catLinks = article.categories.map(cat => `<a href="${buildAppHref(`/?route=categoria/${createSlug(cat)}`)}">${cat}</a>`);
             htmlContent += catLinks.join(' | ') + `</p>`;
-        }
-
-        if (route !== 'home') {
-            htmlContent += `
-                <div class="article-actions">
-                    <button id="sharePageBtn" class="share-page-btn" type="button">
-                        <i class="fa-solid fa-share-nodes"></i> Compartilhar página
-                    </button>
-                </div>
-            `;
         }
 
         container.innerHTML = htmlContent;

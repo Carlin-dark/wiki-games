@@ -2567,23 +2567,6 @@ const articlesDatabase = {
             <div class="play-links"><a href="https://store.steampowered.com/app/1092790/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
         `
     },
-    "the-witchs-house": {
-        title: "The Witch's House",
-        categories: ["RPG Maker", "Terror", "Puzzle", "Indie", "Gore"],
-        summary: "Um clássico imortal de terror em RPG Maker. Jogue como Viola, uma garota que fica presa na mansão de uma bruxa cheia de armadilhas mortais brutais.",
-        infobox: {
-            image: "https://cdn.akamai.steamstatic.com/steam/apps/885810/header.jpg",
-            data: { "Desenvolvedor": "Fummy", "Gêneros": "RPG, Horror, Puzzle", "Lançamento": "2012 / MV: 2018", "Plataformas": "PC" }
-        },
-        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" } ],
-        content: `
-            <p>Ao lado de obras como <em>Ib</em> e <em>Ao Oni</em>, <strong>The Witch's House</strong> ajudou a definir a febre de jogos de terror em RPG Maker. Conhecido por seus <em>jumpscares</em> perfeitos e atmosfera pesada.</p>
-            <h2 id="sinopse">Sinopse e Mecânicas</h2>
-            <p>A Casa está viva, e cada cômodo quer te matar de forma imprevisível e sádica (um passo em falso esmaga você sob paredes ou te atira em espinhos). Resolva enigmas macabros envolvendo ursinhos de pelúcia fatiados e espelhos envenenados. O final verdadeiro (True Ending) é considerado um dos mais perturbadores da história dos jogos indies.</p>
-            <hr><h2 id="links">Links Oficiais</h2>
-            <div class="play-links"><a href="https://store.steampowered.com/app/885810/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (Versão MV)</a></div>
-        `
-    },
     "yume-nikki": {
         title: "Yume Nikki",
         categories: ["RPG Maker", "Surreal", "Terror Psicológico", "Indie", "Aventura"],
@@ -7297,7 +7280,7 @@ const articlesDatabase = {
         categories: ["RPG Maker", "Terror", "Aventura", "Puzzle", "Gratuito para Jogar", "Gore", "Indie"],
         summary: "O aclamado clássico de terror psicológico e exploração criado por Fummy no RPG Maker VX. Acompanhe a jovem Viola enquanto ela tenta escapar de uma mansão viva e mutável na floresta, recheada de armadilhas mortais, pavor e um desfecho inesquecível.",
         infobox: {
-            image: "https://majonoie.karou.jp/img/app.jpg",
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/885810/header.jpg",
             data: {
                 "Título Original": "魔女の家 (Majo no Ie)",
                 "Desenvolvedor": "Fummy (ふみー)",
@@ -7454,11 +7437,13 @@ const articlesDatabase = {
             
             <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
             <div class="play-links">
+                <a href="https://store.steampowered.com/app/885810/The_Witchs_House_MV/" target="_blank"><i class="fa-solid fa-house"></i> Steam</a>
                 <a href="http://majonoie.karou.jp/index.html" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial de The Witch's House</a>
                 <a href="https://www.freem.ne.jp/" target="_blank"><i class="fa-solid fa-download"></i> Portal Freem! (Hospedeiro Original da v1.09)</a>
             </div>
         `
     },
+    
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
