@@ -2567,6 +2567,180 @@ const articlesDatabase = {
             <div class="play-links"><a href="https://store.steampowered.com/app/1092790/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
         `
     },
+    "evenicle": {
+        title: "Evenicle",
+        addedAt: "2026-10-25",
+        categories: ["JRPG", "Aventura", "RPG", "Eroge", "Visual Novel", "Anime"],
+        summary: "Um épico e bem-humorado JRPG adulto desenvolvido pela AliceSoft. Em um mundo onde a monogamia e a proibição de matar são obrigatórias pela deusa Mother Eve, o jovem Asterisk parte em busca do título de Cavaleiro para poder ter múltiplas esposas e salvar suas irmãs.",
+        infobox: {
+            image: "https://www.kaguragames.com/wp-content/uploads/2022/11/Evenicle-Twitter_Image-711x400.jpg",
+            data: {
+                "Título Original": "イブニクル (Ibunikuru)",
+                "Desenvolvedor": "AliceSoft",
+                "Publicadora (Ocidente)": "MangaGamer / Kagura Games / JAST USA",
+                "Designer de Personagens": "Nan Yaegashi (Senran Kagura)",
+                "Gêneros": "JRPG, Aventura, Eroge",
+                "Plataformas": "PC (Windows)",
+                "Lançamento JP": "24 de abril de 2015",
+                "Lançamento OC": "27 de junho de 2018",
+                "Classificação": "18+ (Conteúdo Sexual Explícito)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Mecânicas de Jogo" },
+            { id: "personagens", text: "3. Personagens Principais (Party)" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "curiosidades", text: "6. Curiosidades e Wiki" },
+            { id: "links", text: "7. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Evenicle</strong> é um aclamado JRPG adulto desenvolvido pelo renomado estúdio <strong>AliceSoft</strong> e lançado no Ocidente pela <strong>Kagura Games</strong> e <strong>MangaGamer</strong>. A versão ocidental conta com censura por mosaico nas cenas explícitas.</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (EROGE):</strong> Este título contém conteúdo sexual explícito, nudez e temas adultos. Discrição estritamente recomendada.</p>
+            </div>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>No mundo criado pela deusa <strong>Mother Eve</strong> (Mãe Eva), todos os humanos devem seguir rigidamente duas regras fundamentais: a <em>monogamia obrigatória</em> e a <em>proibição absoluta de matar outros humanos</em>. Quem ousa violar tais preceitos perde a bênção de Eve e é transformado em um <em>Outlaw</em> (Fora da Lei), amaldiçoado e incapaz de produzir qualquer coisa por esforço próprio.</p>
+
+            <p>O protagonista, <strong>Asterisk (Aster)</strong>, vive em uma pequena vila de pescadores com suas duas irmãs gêmeas, <strong>Kinou</strong> e <strong>Kyou</strong>. Apaixonado por ambas, Aster deseja se casar com as duas — algo estritamente proibido pelas leis divinas. A única exceção no mundo são os <strong>Cavaleiros (Knights)</strong>, guerreiros de elite que possuem o privilégio de ter múltiplas esposas conforme seu rank. Determinado a mudar seu destino, Aster parte em uma jornada épica.</p>
+
+            <h2 id="gameplay">Mecânicas de Jogo</h2>
+            <ul>
+                <li><strong>Sistema de Combate:</strong> Batalhas por turnos tradicionais baseadas no uso estratégico de <em>Skills</em> equipáveis.</li>
+                <li><strong>Pontos de Batalha (BP):</strong> Regenera 1 ponto por turno até o máximo de 6 stacks. As skills utilizam BP como limite de equipamento (não são consumidas).</li>
+                <li><strong>Customização de Grupo:</strong> As habilidades podem ser realocadas livremente fora de combate para otimizar sinergias.</li>
+                <li><strong>Exploração 3D e Veículos:</strong> Navegue por montanhas, vales, mares (com barco) e céus (com balão).</li>
+                <li><strong>Captura de Monstros:</strong> Determinadas "gal-monsters" podem ser capturadas e conquistadas ao longo da aventura.</li>
+                <li><strong>Megamonsters e Harem System:</strong> Enfrente chefes opcionais avançados e desfrute de múltiplas rotas românticas.</li>
+            </ul>
+
+            <h2 id="personagens">Personagens Principais (Party)</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                <thead>
+                    <tr style="background-color: rgba(255,255,255,0.1);">
+                        <th style="padding: 8px; border: 1px solid #444; text-align: left;">Personagem</th>
+                        <th style="padding: 8px; border: 1px solid #444; text-align: left;">Papel na Party</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #444;"><strong>Asterisk (Aster)</strong></td>
+                        <td style="padding: 8px; border: 1px solid #444;">Protagonista</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #444;"><strong>Ramius Dreissen</strong></td>
+                        <td style="padding: 8px; border: 1px solid #444;">Tank (o "Loner Knight")</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #444;"><strong>Riche Eden</strong></td>
+                        <td style="padding: 8px; border: 1px solid #444;">Mago</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #444;"><strong>Gurigara (Erimo)</strong></td>
+                        <td style="padding: 8px; border: 1px solid #444;">Atacante físico / Assassina</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #444;"><strong>Kathryn Lapucelle</strong></td>
+                        <td style="padding: 8px; border: 1px solid #444;">Tática</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #444;"><strong>Towa</strong></td>
+                        <td style="padding: 8px; border: 1px solid #444;">Personagem recrutável</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #444;"><strong>Kinou & Kyou</strong></td>
+                        <td style="padding: 8px; border: 1px solid #444;">Irmãs gêmeas de Aster</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <details style="margin: 15px 0; border: 1px solid #444; border-radius: 4px; padding: 10px; background: rgba(0,0,0,0.2);">
+                <summary style="cursor: pointer; font-weight: bold; color: #7699d4;">Série Evenicle (Clique para expandir o catálogo da franquia)</summary>
+                <p style="font-size: 0.9em; margin-top: 8px; color: #ccc;"><em>Aviso: Versões futuras da série serão adicionadas ao site em breve.</em></p>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em;">
+                    <thead>
+                        <tr style="background-color: rgba(255,255,255,0.05);">
+                            <th style="padding: 6px; border: 1px solid #444; text-align: left;">Jogo</th>
+                            <th style="padding: 6px; border: 1px solid #444; text-align: left;">Ano</th>
+                            <th style="padding: 6px; border: 1px solid #444; text-align: left;">Observação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle</td><td style="padding: 6px; border: 1px solid #444;">2015</td><td style="padding: 6px; border: 1px solid #444;">Jogo original</td></tr>
+                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle Rance</td><td style="padding: 6px; border: 1px solid #444;">2015</td><td style="padding: 6px; border: 1px solid #444;">Crossover com Rance</td></tr>
+                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle Apocrypha</td><td style="padding: 6px; border: 1px solid #444;">2015</td><td style="padding: 6px; border: 1px solid #444;">Conteúdo extra</td></tr>
+                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle 2</td><td style="padding: 6px; border: 1px solid #444;">2019</td><td style="padding: 6px; border: 1px solid #444;">Sequela; inglês em 22/02/2022</td></tr>
+                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle 2 Rance</td><td style="padding: 6px; border: 1px solid #444;">2019</td><td style="padding: 6px; border: 1px solid #444;">Crossover</td></tr>
+                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle – Next Fragment Medica</td><td style="padding: 6px; border: 1px solid #444;">09/11/2026</td><td style="padding: 6px; border: 1px solid #444;">Edição Steam censurada (all-ages) de Evenicle 2</td></tr>
+                    </tbody>
+                </table>
+            </details>
+
+            <h2 id="requisitos">Requisitos de Sistema (Evenicle 1)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows Vista ou superior</li>
+                <li><strong>Processador:</strong> Intel Core i3 ou superior</li>
+                <li><strong>Memória RAM:</strong> 2 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> 256 MB VRAM / Shader Model 2.0</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 1.400 MB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Compatível com Direct Sound</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://images.gog-statics.com/56eb45afb4282916d709a83e528ceb6ba0b7a70fd5be7360413664b00b5f2b60_product_card_v2_thumbnail_271.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://images.gog-statics.com/39448ebec8721bc99f0036e409bdcd0a2586d83324c7ded5a09b7890ef6d1f61_product_card_v2_thumbnail_271.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://images.gog-statics.com/7fec48ddd7c83f1ec8fa98c3f80a24f1ce7c158b2bac39ad203ce05e8fea5d80_product_card_v2_thumbnail_271.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://images.gog-statics.com/26b4b43f203ec6229248f5b103b4e4a260c1d7a7895fdc46edb4f52517eb9a79_product_card_v2_thumbnail_271.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://images.gog-statics.com/95d9c508e24c5c368e506101f3d78ff0a241ca3cf736a8afd5907e6ca4eca424_product_card_v2_thumbnail_271.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://images.gog-statics.com/d86e0a63ccfab85d04c4dc15f5ac4fabaa67e84a1810802c3dce581619e3e05d_product_card_v2_thumbnail_271.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <h2 id="curiosidades">Curiosidades e Wiki</h2>
+            <ul>
+                <li>É o título não-Rance mais bem-sucedido da AliceSoft desde Daiakuji (2008).</li>
+                <li>A arte de personagens é assinada por Nan Yaegashi (famoso por Senran Kagura).</li>
+                <li>Evenicle 2 apresenta mais de 70 cenas sexuais únicas.</li>
+                <li>A AliceSoft efetivamente encerrou o mercado de jogos em pacote tradicionais após Evenicle 2, focando em novos horizontes digitais.</li>
+                <li>Reconhecido pelo humor autoconsciente em cima do conceito de poligamia e mecânicas sólidas de JRPG.</li>
+            </ul>
+
+            <p><i class="fa-solid fa-book"></i> <strong>Wikis e Guias Externos:</strong></p>
+            <ul>
+                <li><a href="https://alicesoft.miraheze.org/wiki/Evenicle" target="_blank">AliceSoft Wiki</a></li>
+                <li><a href="https://gamefaqs.gamespot.com/pc/116954-evenicle" target="_blank">GameFAQs Walkthrough</a></li>
+                <li><a href="https://moegamer.net/all-games/evenicle" target="_blank">MoeGamer Artigos</a></li>
+                <li><a href="https://pcgamingwiki.com/wiki/Evenicle" target="_blank">PCGamingWiki</a></li>
+                <li><a href="https://rawg.io/games/evenicle" target="_blank">RAWG Database</a></li>
+                <li><a href="https://zerochan.net/Evenicle" target="_blank">Zerochan Fan Arts</a></li>
+                <li><a href="https://mywaifulist.moe/series/evenicle" target="_blank">MyWaifuList Series</a></li>
+            </ul>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://www.gog.com/en/game/evenicle" target="_blank"><i class="fa-solid fa-store"></i> Página na GOG (DRM-free)</a>
+                <a href="https://www.kaguragames.com/product/evenicle" target="_blank"><i class="fa-solid fa-gamepad"></i> Página na Kagura Games</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (v1.04):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/6enSw10n" target="_blank"><i class="fa-solid fa-download"></i> Download Evenicle v1.04 (Servidor 1)</a>
+                <a href="https://4br.me/bEZx1mv5" target="_blank"><i class="fa-solid fa-download"></i> Download Evenicle v1.04 (Servidor 2)</a>
+                <a href="https://4br.me/7vGcAHU" target="_blank"><i class="fa-solid fa-download"></i> Download Evenicle v1.04 (Servidor 3)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação: Clique no link de download e aguarde o redirecionamento. Extraia o arquivo .zip baixado usando o 7-Zip (senha se necessária ou extrator padrão). Execute o instalador (setup.exe) dentro da pasta e jogue através do atalho gerado na sua área de trabalho.</em></small></p>
+        `
+    },
     "yume-nikki": {
         title: "Yume Nikki",
         categories: ["RPG Maker", "Surreal", "Terror Psicológico", "Indie", "Aventura"],
