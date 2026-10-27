@@ -459,6 +459,68 @@ function getArticleAgeLabels(route, article) {
     return /\blivre\b/i.test(classification) ? [getAgeRatingConfig(classification).label] : [];
 }
 
+function getRouteContentWarnings(route) {
+    const article = articlesDatabase[route];
+    if (!article?.infobox) return [];
+
+    const warnings = [];
+    if (getArticleAgeLabels(route, article).includes('+18')) {
+        warnings.push({
+            title: 'Aviso: conteúdo para maiores de 18 anos',
+            message: 'Este jogo tem classificação indicativa para maiores de 18 anos. Confirme que deseja acessar esta página.'
+        });
+    }
+
+    const categories = article.categories || [];
+    if (categories.some(category => /gore|horror|terror|viol[eê]ncia/i.test(category))) {
+        warnings.push({
+            title: 'Aviso: conteúdo potencialmente perturbador',
+            message: 'Este jogo pode conter violência, sangue, gore, horror ou outros temas perturbadores. Recomendamos cautela antes de continuar.'
+        });
+    }
+
+    return warnings;
+}
+
+function showRouteContentWarning(route, anchor, warnings, index = 0) {
+    const warning = warnings[index];
+    if (!warning) {
+        navigateToRoute(route, anchor);
+        return;
+    }
+
+    const modal = document.createElement('div');
+    modal.className = 'content-warning-modal';
+    modal.innerHTML = `
+        <section class="content-warning-dialog" role="alertdialog" aria-modal="true" aria-labelledby="contentWarningTitle" aria-describedby="contentWarningMessage">
+            <div class="content-warning-icon" aria-hidden="true"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <h2 id="contentWarningTitle">${warning.title}</h2>
+            <p id="contentWarningMessage">${warning.message}</p>
+            <div class="content-warning-actions">
+                <button type="button" class="content-warning-exit">Sair</button>
+                <button type="button" class="content-warning-continue">Continuar</button>
+            </div>
+        </section>
+    `;
+    document.body.appendChild(modal);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const close = () => {
+        modal.remove();
+        document.body.style.overflow = previousOverflow;
+    };
+    modal.querySelector('.content-warning-exit').addEventListener('click', () => {
+        close();
+        updateRoute('home');
+    });
+    modal.querySelector('.content-warning-continue').addEventListener('click', () => {
+        close();
+        showRouteContentWarning(route, anchor, warnings, index + 1);
+    });
+    modal.querySelector('.content-warning-continue').focus();
+}
+
 function renderArticleClassificationBadges(route, article) {
     return getArticleAgeLabels(route, article)
         .map(label => renderClassificationBadge(label))
@@ -1839,7 +1901,12 @@ document.addEventListener('click', function (e) {
         renderPage();
     } else {
         const anchor = url.hash.startsWith('#/') ? '' : url.hash.substring(1);
-        navigateToRoute(route, anchor);
+        const warnings = getRouteContentWarnings(route);
+        if (warnings.length) {
+            showRouteContentWarning(route, anchor, warnings);
+        } else {
+            navigateToRoute(route, anchor);
+        }
     }
 });
 

@@ -2188,7 +2188,7 @@ const articlesDatabase = {
         youtubeId: "gIayFt4D91E",
         summary: "Jogo de aventura de fuga. Durante uma festa do chá, Alice e seus amigos ficam presos em um mundo criado por demônios.",
         infobox: {
-            image: "https://www.ryuugames.com/wp-content/uploads/2026/08/Alice-and-the-Devils-Prison.jpg",
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4145350/d5b52eb953acb402c627006b5118b398118b9477/header.jpg?t=1788919095",
             data: {
                 "Desenvolvedor": "Tsukki's Tea Party",
                 "Gêneros": "Aventura, Escape Room, +18",
@@ -7617,7 +7617,232 @@ const articlesDatabase = {
             </div>
         `
     },
-    
+    "rance-01-02": {
+        title: "Rance 01 + 02",
+        addedAt: "2026-10-27",
+        categories: ["JRPG", "RPG", "Aventura", "Eroge", "Visual Novel", "Harem", "Anime"],
+        summary: "Uma coletânea definitiva que reúne os remakes dos dois primeiros clássicos da lendária franquia da AliceSoft. Acompanhe as desventuras do infame guerreiro Rance e de sua companheira Sill Plain no Reino de Leazas e na cidade de Custom.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/6c533ef7da8a8b485c75f86e39053f784f8d6496/header.jpg?t=1784210968",
+            data: {
+                "Desenvolvedor": "AliceSoft",
+                "Publicadora": "Kagura Games / MangaGamer",
+                "Gêneros": "JRPG, Aventura, Eroge, Harem",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "Em breve (Steam)",
+                "Classificação": "18+ (Conteúdo Adulto, Linguagem Imprópria, Violência)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Histórias" },
+            { id: "jogabilidade", text: "2. Características e Mecânicas" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Rance 01 + 02</strong> marca o início épico da icônica franquia de JRPGs adultos da <strong>AliceSoft</strong>, agora reunida em edições remasterizadas com gráficos atualizados, som reformulado e novos sistemas de batalha, publicadas no Ocidente por <strong>Kagura Games</strong> e <strong>MangaGamer</strong>.</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO):</strong> Este jogo contém cenas de conteúdo sexual explícito, linguagem imprópria e temas adultos. Discrição altamente recomendada.</p>
+            </div>
+
+            <h2 id="sinopse">Sinopse e Histórias</h2>
+            
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/83f80660516d5b5780fb11d00e20757f.avif?t=1784210968" alt="Rance 01 & 02 Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+            </div>
+
+            <p><strong>Rance 01 - Quest for Hikari</strong><br>
+            Rance tem viajado por aí com sua fiel companheira maga, Sill Plain, mas agora ele tem um novo objetivo em mente. Seu alvo desta vez — ou melhor, seu destino — é o próspero Reino de Leazas. Hikari, a filha de uma família nobre que frequentava a Academia de Paris, desapareceu, e Rance assumiu a missão de encontrá-la.</p>
+
+            <p><strong>Rance 02 - The Rebellious Maidens</strong><br>
+            O incomparável guerreiro Rance é um grande lutador, um pensador rápido e um homem de sorte formidável. Infelizmente, ele não tem interesse em usar seus talentos para a paz mundial ou justiça, agindo apenas por seus próprios desejos egoístas. Agora a cidade de Custom está em perigo, e quem melhor para salvá-la do que nosso herói Rance (e sua fiel ajudante Sill)? Custom está salva... ou será que não?</p>
+
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/d5e05d0d60fead77b5f28732a22b78d4.avif?t=1784210968" alt="Gameplay Overview" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+            </div>
+
+            <p><strong>Exploração e Combate em Rance 01:</strong><br>
+            Investigue o paradeiro de Hikari no modo aventura e adentre masmorras conforme a história avança. Descubra pistas, tramas secundárias e itens poderosos conversando com todos. As masmorras são representadas por cartas viradas para baixo, exigindo escolhas cuidadosas para encontrar tesouros e evitar armadilhas. O combate utiliza armas, escudos e itens representados como "chips" para realizar ataques e gerenciar combos.</p>
+
+            <p><strong>Exploração e Combate em Rance 02:</strong><br>
+            A cidade de Custom é ameaçada por quatro bruxas. Explore a cidade conversando com os residentes e se preparando para a batalha. Adentre a masmorra em formato de grade (grid), evitando armadilhas, resolvendo quebra-cabeças e derrotando monstros enquanto busca desvendar as origens das bruxas.</p>
+
+            <h2 id="jogabilidade">Características e Diferenciais</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px; margin: 15px 0; align-items: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/910ab5a9bd7edd6ae73f1fcea03bc57c.avif?t=1784210968" alt="Extra 1" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/f17dba3bae9cb57164df3a3889d02e04.avif?t=1784210968" alt="Extra 2" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/1563dad30823e40b010e5ef8df53b14d.avif?t=1784210968" alt="Extra 3" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/4d3e7a16c5d3c709e2b844e443d15963.avif?t=1784210968" alt="Extra 4" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/2467f20e4eb70d2ab6d21f3745944f03.avif?t=1784210968" alt="Extra 5" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/8701d26a6d297fc802256259fa97fd4f.avif?t=1784210968" alt="Extra 6" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://www.mangagamer.com/user_data/free_html/Rance0102_story.jpg" alt="MangaGamer Story Banner" style="max-width: 100%; height: auto; border-radius: 4px;">
+            </div>
+
+            <ul>
+                <li><strong>Remake Completo:</strong> Releitura moderna do clássico <em>Rance: Quest for Hikari</em> de 1989 com história, gráficos, som e sistema de combate reformulados.</li>
+                <li><strong>O Mundo em Cartas (Rance 01):</strong> O chão que você pisa é formado por cartas. Escolha o caminho certo ou encare uma má sorte.</li>
+                <li><strong>Exploração em Grade (Rance 02):</strong> Navegue por uma masmorra massiva, em camadas e labiríntica baseada em grid.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 8 / 8.1 / 10 / 11</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Compatível com DirectX 9 / OpenGL 4.1</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Rede:</strong> Conexão de internet banda larga</li>
+                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
+                <li><strong>Notas Adicionais:</strong> Resolução 1280x768 ou superior. Feche outros programas em execução para evitar lentidão ao carregar mapas ou menus.</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 8 / 10 / 11</li>
+                <li><strong>Processador:</strong> Processador de 2+ GHz</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Suporte a driver de hardware OpenGL ES 2.0 para aceleração WebGL (AMD Catalyst 10.9, NVIDIA 358.50)</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/8978913feca7aa3884838b21d9746b6729a8228c/ss_8978913feca7aa3884838b21d9746b6729a8228c.1920x1080.jpg?t=1784210968" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/b08a274b75ef3a09018105e81151ae0232f22e2f/ss_b08a274b75ef3a09018105e81151ae0232f22e2f.1920x1080.jpg?t=1784210968" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/cbd9cb881a45332313bd6b3c23376f8a811a8120/ss_cbd9cb881a45332313bd6b3c23376f8a811a8120.1920x1080.jpg?t=1784210968" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/a9257a1a1ff830e79e24e34498aac20997dcbf92/ss_a9257a1a1ff830e79e24e34498aac20997dcbf92.1920x1080.jpg?t=1784210968" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/f282c280681a155fa8cb266f6fea223fc52f3828/ss_f282c280681a155fa8cb266f6fea223fc52f3828.1920x1080.jpg?t=1784210968" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Redes Sociais Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/3867130/Rance_01_02/?l=portuguese" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam (Em breve)</a>
+                <a href="https://www.kaguragames.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Kagura Games)</a>
+                <a href="https://x.com/KaguraGames" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter Oficial</a>
+                <a href="https://discord.com/invite/kaguragames" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
+                <a href="https://www.youtube.com/c/KaguraGames" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+                <a href="https://www.facebook.com/KaguraGames/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Oficial</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads Oficiais (Lançamento Antecipado / Versão DRM-free):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/Rp8tH" target="_blank"><i class="fa-solid fa-download"></i> Download Rance 01</a>
+                <a href="https://4br.me/C1oYbXu" target="_blank"><i class="fa-solid fa-download"></i> Download Rance 02</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação:<br>
+            1. Clique no link de download e aguarde o redirecionamento (Vidgazoo / servidor).<br>
+            2. Certifique-se de possuir espaço suficiente em disco.<br>
+            3. Execute o instalador (setup_rance_01_02_*.exe) e siga as instruções na tela.<br>
+            4. Após a conclusão, inicie o jogo pelo atalho gerado.</em></small></p>
+        `
+    },
+    "the-boogie-man": {
+        title: "The Boogie Man — ブギーマン",
+        addedAt: "2026-10-27",
+        categories: ["RPG Maker", "Terror", "Aventura", "Casual", "Indie", "Mistério", "The Strange Man"],
+        summary: "O terceiro título da aclamada série The Strange Man, desenvolvida por Uri Games. Acompanhe o detetive frio Keith em uma viagem de férias forçada a um castelo com sua esposa Helena, onde o misterioso Boogie Man inicia uma onda de assassinatos aterrorizantes.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/header.jpg?t=1786326400",
+            data: {
+                "Desenvolvedor": "Uri Games",
+                "Publicadora": "PLAYISM",
+                "Série": "The Strange Man (Vol. 3)",
+                "Engine": "WOLF RPG Editor",
+                "Gêneros": "Aventura, Casual, Indie, Terror",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "13 de fevereiro de 2018",
+                "Classificação": "12+ (Violência, Terror)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>The Boogie Man</strong> (<em>ブギーマン</em>) é o terceiro título da renomada série de terror psicológico <em>The Strange Man</em>, desenvolvida por <strong>Uri Games</strong> utilizando o WOLF RPG Editor e publicada mundialmente pela <strong>PLAYISM</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p><em>"Você é o jogador e deve perseguir o Boogie Man. Se você o pegar, você vence! E esse é o final feliz, mas se você não conseguir..."</em></p>
+
+            <p>Após o detetive frio <strong>Keith</strong> levar sua esposa, <strong>Helena</strong>, com ele em um feriado obrigatório em um castelo misterioso, Helena faz uma confissão surpreendente. Logo em seguida, o <strong>Boogie Man</strong> aparece e, em seu rastro, assassinatos brutais começam a ocorrer.</p>
+
+            <p>Como Keith é obcecado em proteger as pessoas após a morte tragicômica de seu filho, ele parte em uma perseguição implacável atrás do Boogie Man, na esperança de acabar com os assassinatos e com essa noite aterrorizante de "entretenimento". A versão da Steam conta com adições especiais, como conquistas e localização multilíngue.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/extras/7bc7f6bcfbb8243c29c3336407dc6259.avif?t=1786326400" alt="The Boogie Man Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+            </div>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Aventura de Terror 2D:</strong> Foco em exploração imersiva combinada com elementos dinâmicos de ação e resolução de quebra-cabeças.</li>
+                <li><strong>Expressões Fortes de Violência:</strong> Apresenta uma gama diversificada de cenas viscerais e representações viscerais de terror.</li>
+                <li><strong>Múltiplos Finais:</strong> Suas escolhas durante a caçada determinam se você alcançará o final feliz ou desfechos aterrorizantes.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> Intel Core 2 1.06 GHz</li>
+                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Placa gráfica integrada</li>
+                <li><strong>DirectX:</strong> Versão 9.0</li>
+                <li><strong>Armazenamento:</strong> 200 MB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_adb99a68bd6844f8e2d1912e20ddc68ee5ab2d22.1920x1080.jpg?t=1786326400" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_774d5afc73e21f6a7a6c13e475bffaddf5cc95f6.1920x1080.jpg?t=1786326400" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_c957f2955b43fccc57ac3416e4b37fcb4c8382ab.1920x1080.jpg?t=1786326400" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_389ca8868eb569eaf3ea0e7a82c50efcd09b43fa.1920x1080.jpg?t=1786326400" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_3e4f70a0d3519071ec58aca77509036f8929a658.1920x1080.jpg?t=1786326400" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Redes Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/749840/The_Boogie_Man/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/manuals/03ff27dc0b147f89b4c97b60c1d606cd8a91ff9f/The_Boogie_Man_Manual.pdf?t=1786326400" target="_blank"><i class="fa-solid fa-book"></i> Manual Oficial do Jogo (PDF)</a>
+                <a href="https://www.facebook.com/PLAYISM/" target="_blank"><i class="fa-brands fa-facebook"></i> PLAYISM Facebook</a>
+                <a href="https://x.com/playismEN" target="_blank"><i class="fa-brands fa-x-twitter"></i> PLAYISM X / Twitter</a>
+                <a href="https://www.youtube.com/ActiveGamingMedia" target="_blank"><i class="fa-brands fa-youtube"></i> Canal YouTube (Active Gaming Media)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/IOUj9qvc" target="_blank"><i class="fa-solid fa-download"></i> Download MegaUp</a>
+                <a href="https://4br.me/nuxMjco" target="_blank"><i class="fa-solid fa-download"></i> Download Mega.nz</a>
+                <a href="https://1fichier.com/?wk9u20v25vxl8ok3k6qt" target="_blank"><i class="fa-solid fa-download"></i> Download 1Fichier</a>
+                <a href="https://gofile.io/d/zh1oEZ" target="_blank"><i class="fa-solid fa-download"></i> Download GoFile</a>
+                <a href="https://4br.me/vIbT1iDyr" target="_blank"><i class="fa-solid fa-download"></i> Download AnonFiles</a>
+                <a href="https://4br.me/zsvN" target="_blank"><i class="fa-solid fa-download"></i> Download Rapidgator</a>
+                <a href="https://clicknupload.club/m45z40cxqm37" target="_blank"><i class="fa-solid fa-download"></i> Download Clicknupload</a>
+                <a href="https://4br.me/Q0mFB720" target="_blank"><i class="fa-solid fa-download"></i> Download Google Drive</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação:<br>
+            1. Extraia o arquivo compactado.<br>
+            2. Aplique o crack se necessário.<br>
+            3. Execute o jogo e divirta-se!</em></small></p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],

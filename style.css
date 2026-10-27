@@ -1266,6 +1266,42 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     padding: 20px;
     background: rgba(0, 0, 0, 0.9);
 }
+.content-warning-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100002;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.88);
+    animation: context-menu-in 0.18s ease-out;
+}
+.content-warning-dialog {
+    width: min(460px, 100%);
+    padding: 28px;
+    border: 1px solid #ff2a85;
+    border-radius: 6px;
+    background: rgba(18, 14, 28, 0.98);
+    color: #eee;
+    box-shadow: 0 0 32px rgba(255, 42, 133, 0.22);
+}
+.content-warning-icon { color: #ff7ab2; font-size: 25px; }
+.content-warning-dialog h2 { margin: 12px 0 8px; color: #fff; font-family: Georgia, serif; font-size: 21px; }
+.content-warning-dialog p { margin: 0; color: #c9c1ce; line-height: 1.6; }
+.content-warning-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; }
+.content-warning-actions button {
+    min-width: 108px;
+    padding: 10px 16px;
+    border: 1px solid #594354;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #eee;
+    font: inherit;
+    cursor: pointer;
+}
+.content-warning-actions button:hover, .content-warning-actions button:focus-visible { border-color: #ff7ab2; outline: none; }
+.content-warning-actions .content-warning-continue { border-color: #ff2a85; background: #ff2a85; color: #fff; }
+.content-warning-actions .content-warning-continue:hover, .content-warning-actions .content-warning-continue:focus-visible { background: #df176b; }
 .game-media-dialog, .share-dialog {
     position: relative;
     width: min(900px, 100%);
