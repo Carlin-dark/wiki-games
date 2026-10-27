@@ -11,6 +11,38 @@ function createSlug(text) {
 const ADMIN_EMAIL = 'konozuba1k@gmail.com';
 let favoriteRoutes = [];
 let favoritesLoadedFor = null;
+const SITE_SETTINGS_STORAGE_KEY = 'wikigames-site-settings';
+const defaultSiteSettings = {
+    allowAdultContent: false,
+    allowDisturbingContent: false,
+    language: 'pt',
+    wishlist: [],
+    completedGames: [],
+    favoriteGenres: [],
+    largerText: false,
+    highContrast: false
+};
+
+function loadSiteSettings() {
+    try {
+        const savedSettings = JSON.parse(localStorage.getItem(SITE_SETTINGS_STORAGE_KEY) || '{}');
+        return {
+            ...defaultSiteSettings,
+            ...savedSettings,
+            wishlist: Array.isArray(savedSettings.wishlist) ? savedSettings.wishlist : [],
+            completedGames: Array.isArray(savedSettings.completedGames) ? savedSettings.completedGames : [],
+            favoriteGenres: Array.isArray(savedSettings.favoriteGenres) ? savedSettings.favoriteGenres : []
+        };
+    } catch (error) {
+        return { ...defaultSiteSettings };
+    }
+}
+
+let siteSettings = loadSiteSettings();
+
+function saveSiteSettings() {
+    localStorage.setItem(SITE_SETTINGS_STORAGE_KEY, JSON.stringify(siteSettings));
+}
 
 function logFirebaseError(context, error) {
     console.error(`[Firebase] ${context}`, error);
@@ -145,6 +177,266 @@ function renderMyListPage() {
         </div>
     `;
     window.scrollTo(0, 0);
+}
+
+const interfaceTranslations = {
+    'Página Inicial': { en: 'Home', ja: 'ホーム' },
+    'Página Aleatória': { en: 'Random Page', ja: 'ランダムページ' },
+    'Todos os Jogos': { en: 'All Games', ja: 'すべてのゲーム' },
+    'Minha Lista': { en: 'My List', ja: 'マイリスト' },
+    'Configurações': { en: 'Settings', ja: '設定' },
+    'Listas públicas': { en: 'Public Lists', ja: '公開リスト' },
+    'Todos os Mods': { en: 'All Mods', ja: 'すべてのMOD' },
+    'Sobre o Site / Aviso Legal': { en: 'About / Legal Notice', ja: 'サイトについて / 法的通知' },
+    'Navegação': { en: 'Navigation', ja: 'ナビゲーション' },
+    'Categorias': { en: 'Categories', ja: 'カテゴリ' },
+    'Comunidade': { en: 'Community', ja: 'コミュニティ' },
+    'Servidor oficial da comunidade.': { en: 'Official community server.', ja: '公式コミュニティサーバー。' },
+    'Discord Oficial': { en: 'Official Discord', ja: '公式Discord' },
+    'WikiGames © 2026. Desenvolvido por': { en: 'WikiGames © 2026. Developed by', ja: 'WikiGames © 2026. 制作:' },
+    '. Todos os direitos reservados.': { en: '. All rights reserved.', ja: '. 全著作権所有。' },
+    'Pesquisar banco de dados...': { en: 'Search the database...', ja: 'データベースを検索...' },
+    'Entrar': { en: 'Sign in', ja: 'ログイン' },
+    'Buscar': { en: 'Search', ja: '検索' },
+    'Categoria': { en: 'Category', ja: 'カテゴリ' },
+    'Classificação': { en: 'Rating', ja: 'レーティング' },
+    'Ordenar': { en: 'Sort by', ja: '並べ替え' },
+    'Todas': { en: 'All', ja: 'すべて' },
+    'Nome do jogo...': { en: 'Game title...', ja: 'ゲーム名...' },
+    'Nome, autor ou descrição...': { en: 'Name, author, or description...', ja: '名前、作者、説明...' },
+    'Todos os gêneros': { en: 'All genres', ja: 'すべてのジャンル' },
+    'Todos os jogos': { en: 'All games', ja: 'すべてのゲーム' },
+    'Título A-Z': { en: 'Title A-Z', ja: 'タイトル A-Z' },
+    'Título Z-A': { en: 'Title Z-A', ja: 'タイトル Z-A' },
+    'Nenhum jogo encontrado com esses filtros.': { en: 'No games match these filters.', ja: '条件に一致するゲームはありません。' },
+    'Nenhum jogo encontrado.': { en: 'No games found.', ja: 'ゲームが見つかりません。' },
+    'Adicionado recentemente': { en: 'Recently Added', ja: '最近追加' },
+    'Nenhum jogo foi adicionado nos últimos 7 dias.': { en: 'No games were added in the last 7 days.', ja: '過去7日間に追加されたゲームはありません。' },
+    'Para Android': { en: 'For Android', ja: 'Android向け' },
+    'Nenhum jogo com versão para Android foi catalogado ainda.': { en: 'No games with an Android version have been cataloged yet.', ja: 'Android版のゲームはまだ登録されていません。' },
+    'Mais Curtido': { en: 'Most Liked', ja: '人気' },
+    'Nenhum jogo recebeu notas ainda.': { en: 'No games have been rated yet.', ja: '評価されたゲームはまだありません。' },
+    'nota': { en: 'rating', ja: '件の評価' },
+    'notas': { en: 'ratings', ja: '件の評価' },
+    'Favoritar': { en: 'Add to favorites', ja: 'お気に入りに追加' },
+    'Favoritado': { en: 'Favorited', ja: 'お気に入り済み' },
+    'Remover dos favoritos': { en: 'Remove from favorites', ja: 'お気に入りから削除' },
+    'Adicionar aos favoritos': { en: 'Add to favorites', ja: 'お気に入りに追加' },
+    'Compartilhar página': { en: 'Share page', ja: 'ページを共有' },
+    'Entre na sua conta para acessar sua lista global.': { en: 'Sign in to access your synced list.', ja: '同期リストを利用するにはログインしてください。' },
+    'Você ainda não favoritou nenhum jogo.': { en: 'You have not favorited any games yet.', ja: 'お気に入りのゲームはまだありません。' },
+    'Todos os Jogos - WikiGames': { en: 'All Games - WikiGames', ja: 'すべてのゲーム - WikiGames' },
+    'Todos os Mods - WikiGames': { en: 'All Mods - WikiGames', ja: 'すべてのMOD - WikiGames' },
+    'Listas Criadas': { en: 'Created Lists', ja: '作成したリスト' },
+    'Jogos Avaliados': { en: 'Rated Games', ja: '評価したゲーム' },
+    'Configurações e biblioteca': { en: 'Settings and Library', ja: '設定とライブラリ' },
+    'Preferências salvas neste dispositivo.': { en: 'Preferences are saved on this device.', ja: '設定はこの端末に保存されます。' },
+    'Preferências de conteúdo': { en: 'Content Preferences', ja: 'コンテンツ設定' },
+    'Permitir conteúdo +18': { en: 'Allow 18+ content', ja: '18歳以上のコンテンツを許可' },
+    'Quando ativado, o aviso de conteúdo +18 não será exibido.': { en: 'When enabled, the 18+ content warning will be hidden.', ja: '有効にすると、18歳以上の警告は表示されません。' },
+    'Permitir conteúdo perturbador': { en: 'Allow disturbing content', ja: '不快なコンテンツを許可' },
+    'Quando ativado, o aviso de conteúdo perturbador não será exibido.': { en: 'When enabled, the disturbing-content warning will be hidden.', ja: '有効にすると、不快なコンテンツの警告は表示されません。' },
+    'Idioma': { en: 'Language', ja: '言語' },
+    'Alterar idioma': { en: 'Change language', ja: '言語を変更' },
+    'A interface muda; textos e informações dos jogos permanecem no idioma original.': { en: 'The interface changes; game articles and information stay in their original language.', ja: 'インターフェースのみ変更され、ゲーム記事や情報は元の言語のままです。' },
+    'Interface do site; artigos e informações dos jogos não serão traduzidos.': { en: 'Site interface only; game articles and information will not be translated.', ja: 'サイトのインターフェースのみ変更され、ゲーム記事や情報は翻訳されません。' },
+    'Acessibilidade': { en: 'Accessibility', ja: 'アクセシビリティ' },
+    'Aumentar o tamanho do texto': { en: 'Increase text size', ja: '文字を大きくする' },
+    'Melhorar o contraste': { en: 'Increase contrast', ja: 'コントラストを高める' },
+    'Biblioteca e preferências': { en: 'Library and Preferences', ja: 'ライブラリと設定' },
+    'Lista de desejos': { en: 'Wishlist', ja: 'ウィッシュリスト' },
+    'Jogos que pretende conhecer': { en: 'Games to discover', ja: 'これから遊びたいゲーム' },
+    'Jogos que pretende conhecer.': { en: 'Games you want to discover.', ja: 'これから遊びたいゲーム。' },
+    'Adicionar jogo': { en: 'Add game', ja: 'ゲームを追加' },
+    'Jogos já jogados': { en: 'Played Games', ja: 'プレイ済みゲーム' },
+    'Marque os títulos que você concluiu ou já jogou.': { en: 'Mark titles you have completed or played.', ja: 'プレイ済み、またはクリアしたタイトルを記録します。' },
+    'Gêneros favoritos': { en: 'Favorite Genres', ja: 'お気に入りジャンル' },
+    'Selecione os gêneros que deseja acompanhar.': { en: 'Choose the genres you want to follow.', ja: 'チェックしたいジャンルを選択してください。' },
+    'Exportar dados em JSON': { en: 'Export data as JSON', ja: 'JSONでデータをエクスポート' },
+    'Baixar uma cópia das suas preferências e listas.': { en: 'Download a copy of your preferences and lists.', ja: '設定とリストのコピーをダウンロードします。' },
+    'Selecione um jogo': { en: 'Select a game', ja: 'ゲームを選択' },
+    'Nenhum jogo adicionado ainda.': { en: 'No games added yet.', ja: 'ゲームはまだ追加されていません。' },
+    'Remover': { en: 'Remove', ja: '削除' },
+    'Português': { en: 'Portuguese', ja: 'ポルトガル語' },
+    'Inglês': { en: 'English', ja: '英語' },
+    'Japonês': { en: 'Japanese', ja: '日本語' },
+    'Escolha o idioma da interface': { en: 'Choose the interface language', ja: 'インターフェースの言語を選択' },
+    'Aviso: conteúdo para maiores de 18 anos': { en: 'Warning: content for adults 18+', ja: '警告: 18歳以上向けのコンテンツ' },
+    'Este jogo tem classificação indicativa para maiores de 18 anos. Confirme que deseja acessar esta página.': { en: 'This game is rated for ages 18 and up. Confirm that you want to view this page.', ja: 'このゲームは18歳以上向けです。このページを表示するか確認してください。' },
+    'Aviso: conteúdo potencialmente perturbador': { en: 'Warning: potentially disturbing content', ja: '警告: 不快な内容が含まれる可能性があります' },
+    'Este jogo pode conter violência, sangue, gore, horror ou outros temas perturbadores. Recomendamos cautela antes de continuar.': { en: 'This game may contain violence, blood, gore, horror, or other disturbing themes. Viewer discretion is advised.', ja: '暴力、流血、ゴア、ホラーなど、不快なテーマが含まれる可能性があります。ご注意ください。' },
+    'Continuar': { en: 'Continue', ja: '続行' },
+    'Sair': { en: 'Leave', ja: '戻る' }
+};
+
+function translateInterfaceText(text, language = siteSettings.language) {
+    const cleanText = String(text || '').trim();
+    const match = Object.entries(interfaceTranslations).find(([portuguese, translations]) =>
+        cleanText === portuguese || Object.values(translations).includes(cleanText)
+    );
+    if (!match || language === 'pt') return match ? match[0] : text;
+    return match[1][language] || match[0];
+}
+
+function translateInterfaceNode(textNode) {
+    const element = textNode.parentElement;
+    if (!element || element.closest('.article-text, .infobox, .article-title-row h1, .all-game-card, .home-game-item, .category-list, .mod-card, script, style')) return;
+    const originalText = textNode.nodeValue;
+    const trimmedText = originalText.trim();
+    if (!trimmedText) return;
+    const translatedText = translateInterfaceText(trimmedText);
+    if (translatedText !== trimmedText) {
+        const start = originalText.indexOf(trimmedText);
+        textNode.nodeValue = `${originalText.slice(0, start)}${translatedText}${originalText.slice(start + trimmedText.length)}`;
+    }
+}
+
+function applyInterfaceLanguage(root = document) {
+    const language = siteSettings.language;
+    document.documentElement.lang = language === 'pt' ? 'pt-BR' : language;
+    document.title = translateInterfaceText(document.title, language);
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let textNode;
+    while ((textNode = walker.nextNode())) translateInterfaceNode(textNode);
+
+    const elements = root.querySelectorAll ? root.querySelectorAll('[placeholder], [aria-label]') : [];
+    elements.forEach(element => {
+        if (element.closest('.article-text, .infobox, .all-game-card, .home-game-item, .category-list, .mod-card')) return;
+        ['placeholder', 'aria-label'].forEach(attribute => {
+            const value = element.getAttribute(attribute);
+            if (value) element.setAttribute(attribute, translateInterfaceText(value));
+        });
+    });
+}
+
+function applySiteAccessibilityPreferences() {
+    document.body.classList.toggle('larger-site-text', siteSettings.largerText);
+    document.body.classList.toggle('high-contrast-mode', siteSettings.highContrast);
+}
+
+function renderSettingsGameList(routes, listName) {
+    const validRoutes = routes.filter(route => articlesDatabase[route]?.infobox);
+    if (!validRoutes.length) return '<li class="settings-empty-list">Nenhum jogo adicionado ainda.</li>';
+    return validRoutes.map(route => `
+        <li>
+            <a href="${buildAppHref(`/${route}`)}">${escapeHtml(articlesDatabase[route].title)}</a>
+            <button type="button" class="settings-remove-button" data-library-remove="${listName}" data-game-route="${escapeHtml(route)}" aria-label="Remover ${escapeHtml(articlesDatabase[route].title)}"><i class="fa-solid fa-xmark"></i></button>
+        </li>
+    `).join('');
+}
+
+function renderSettingsPage() {
+    setPageBackground(null);
+    const container = document.getElementById('article-container');
+    const gameRoutes = Object.keys(articlesDatabase).filter(route => articlesDatabase[route].infobox?.data);
+    const gameOptions = gameRoutes.map(route => `<option value="${escapeHtml(route)}">${escapeHtml(articlesDatabase[route].title)}</option>`).join('');
+    const genres = [...new Set(gameRoutes.flatMap(route => articlesDatabase[route].categories || []))]
+        .filter(genre => !['Institucional', 'Sobre', 'Aviso Legal'].includes(genre))
+        .sort((first, second) => first.localeCompare(second));
+
+    document.title = `${translateInterfaceText('Configurações')} - WikiGames`;
+    container.innerHTML = `
+        <h1><i class="fa-solid fa-sliders"></i> Configurações e biblioteca</h1>
+        <p class="settings-intro">${translateInterfaceText('Preferências salvas neste dispositivo.')} ${translateInterfaceText('A interface muda; textos e informações dos jogos permanecem no idioma original.')}</p>
+
+        <section class="settings-section" aria-labelledby="contentPreferencesTitle">
+            <h2 id="contentPreferencesTitle">Preferências de conteúdo</h2>
+            <label class="settings-toggle-row">
+                <span><strong>Permitir conteúdo +18</strong><small>Quando ativado, o aviso de conteúdo +18 não será exibido.</small></span>
+                <input type="checkbox" data-setting-toggle="allowAdultContent" ${siteSettings.allowAdultContent ? 'checked' : ''}>
+            </label>
+            <label class="settings-toggle-row">
+                <span><strong>Permitir conteúdo perturbador</strong><small>Quando ativado, o aviso de conteúdo perturbador não será exibido.</small></span>
+                <input type="checkbox" data-setting-toggle="allowDisturbingContent" ${siteSettings.allowDisturbingContent ? 'checked' : ''}>
+            </label>
+            <div class="settings-language-row">
+                <div><strong>Idioma</strong><small>${translateInterfaceText('Interface do site; artigos e informações dos jogos não serão traduzidos.')}</small></div>
+                <button class="settings-secondary-button" type="button" data-open-language><i class="fa-solid fa-globe"></i> ${translateInterfaceText('Alterar idioma')} (${siteSettings.language.toUpperCase()})</button>
+            </div>
+        </section>
+
+        <section class="settings-section" aria-labelledby="accessibilityTitle">
+            <h2 id="accessibilityTitle">Acessibilidade</h2>
+            <label class="settings-toggle-row"><span><strong>Aumentar o tamanho do texto</strong></span><input type="checkbox" data-setting-toggle="largerText" ${siteSettings.largerText ? 'checked' : ''}></label>
+            <label class="settings-toggle-row"><span><strong>Melhorar o contraste</strong></span><input type="checkbox" data-setting-toggle="highContrast" ${siteSettings.highContrast ? 'checked' : ''}></label>
+        </section>
+
+        <section class="settings-section" aria-labelledby="libraryTitle">
+            <h2 id="libraryTitle">Biblioteca e preferências</h2>
+            <div class="settings-library-group">
+                <h3>Lista de desejos</h3>
+                <p>Jogos que pretende conhecer.</p>
+                <div class="settings-add-row"><select id="wishlistGameSelect" aria-label="Selecione um jogo"><option value="">Selecione um jogo</option>${gameOptions}</select><button type="button" class="settings-primary-button" data-library-add="wishlist">Adicionar jogo</button></div>
+                <ul class="settings-library-list">${renderSettingsGameList(siteSettings.wishlist, 'wishlist')}</ul>
+            </div>
+            <div class="settings-library-group">
+                <h3>Jogos já jogados</h3>
+                <p>Marque os títulos que você concluiu ou já jogou.</p>
+                <div class="settings-add-row"><select id="completedGameSelect" aria-label="Selecione um jogo"><option value="">Selecione um jogo</option>${gameOptions}</select><button type="button" class="settings-primary-button" data-library-add="completedGames">Adicionar jogo</button></div>
+                <ul class="settings-library-list">${renderSettingsGameList(siteSettings.completedGames, 'completedGames')}</ul>
+            </div>
+            <div class="settings-library-group">
+                <h3>Gêneros favoritos</h3>
+                <p>Selecione os gêneros que deseja acompanhar.</p>
+                <div class="settings-genre-grid">${genres.map(genre => `<label><input type="checkbox" data-favorite-genre="${escapeHtml(genre)}" ${siteSettings.favoriteGenres.includes(genre) ? 'checked' : ''}> ${escapeHtml(genre)}</label>`).join('')}</div>
+            </div>
+        </section>
+
+        <section class="settings-section settings-export-section" aria-labelledby="exportTitle">
+            <div><h2 id="exportTitle">Exportar dados em JSON</h2><p>Baixar uma cópia das suas preferências e listas.</p></div>
+            <button type="button" class="settings-secondary-button" data-export-settings><i class="fa-solid fa-download"></i> Exportar dados em JSON</button>
+        </section>
+    `;
+    applyInterfaceLanguage(container);
+    window.scrollTo(0, 0);
+}
+
+function openLanguagePicker() {
+    const modal = document.createElement('div');
+    modal.className = 'settings-language-modal';
+    modal.innerHTML = `
+        <section class="settings-language-dialog" role="dialog" aria-modal="true" aria-labelledby="languagePickerTitle">
+            <button type="button" class="settings-modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+            <h2 id="languagePickerTitle">Escolha o idioma da interface</h2>
+            <div class="settings-language-options">
+                <button type="button" data-language-choice="pt">Português</button>
+                <button type="button" data-language-choice="en">Inglês</button>
+                <button type="button" data-language-choice="ja">Japonês</button>
+            </div>
+        </section>
+    `;
+    document.body.appendChild(modal);
+    applyInterfaceLanguage(modal);
+    const close = () => modal.remove();
+    modal.addEventListener('click', event => {
+        if (event.target === modal || event.target.closest('.settings-modal-close')) close();
+        const languageButton = event.target.closest('[data-language-choice]');
+        if (!languageButton) return;
+        siteSettings.language = languageButton.dataset.languageChoice;
+        saveSiteSettings();
+        close();
+        applyInterfaceLanguage();
+        if (getRouteInfo().route === 'configuracoes') renderSettingsPage();
+    });
+    modal.querySelector('[data-language-choice]').focus();
+}
+
+function exportSiteSettings() {
+    const exportData = {
+        format: 'wikigames-settings',
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        settings: siteSettings
+    };
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const downloadUrl = URL.createObjectURL(blob);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = downloadUrl;
+    downloadLink.download = 'wikigames-preferencias.json';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    downloadLink.remove();
+    window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
 }
 
 async function renderProfilePage() {
@@ -464,7 +756,7 @@ function getRouteContentWarnings(route) {
     if (!article?.infobox) return [];
 
     const warnings = [];
-    if (getArticleAgeLabels(route, article).includes('+18')) {
+    if (!siteSettings.allowAdultContent && getArticleAgeLabels(route, article).includes('+18')) {
         warnings.push({
             title: 'Aviso: conteúdo para maiores de 18 anos',
             message: 'Este jogo tem classificação indicativa para maiores de 18 anos. Confirme que deseja acessar esta página.'
@@ -472,7 +764,7 @@ function getRouteContentWarnings(route) {
     }
 
     const categories = article.categories || [];
-    if (categories.some(category => /gore|horror|terror|viol[eê]ncia/i.test(category))) {
+    if (!siteSettings.allowDisturbingContent && categories.some(category => /gore|horror|terror|viol[eê]ncia/i.test(category))) {
         warnings.push({
             title: 'Aviso: conteúdo potencialmente perturbador',
             message: 'Este jogo pode conter violência, sangue, gore, horror ou outros temas perturbadores. Recomendamos cautela antes de continuar.'
@@ -869,7 +1161,7 @@ function isInternalAppLink(href) {
         const cleanQuery = url.searchParams.get('route');
 
         if (cleanQuery) return true;
-        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath === 'mods' || cleanPath.startsWith('categoria/') || cleanPath.startsWith('mods/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
+        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath === 'mods' || cleanPath === 'configuracoes' || cleanPath.startsWith('categoria/') || cleanPath.startsWith('mods/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
     } catch (error) {
         return false;
     }
@@ -1394,6 +1686,11 @@ function renderPage() {
         return;
     }
 
+    if (route === 'configuracoes') {
+        renderSettingsPage();
+        return;
+    }
+
     if (route === 'perfil') {
         setPageBackground(null);
         const profileId = new URLSearchParams(window.location.search).get('uid');
@@ -1814,6 +2111,15 @@ applyProfileBackground(localStorage.getItem('wikigames-profile-background'));
 const articleObserver = new MutationObserver(() => enhanceGameCovers(document.getElementById('article-container') || document));
 articleObserver.observe(document.getElementById('article-container') || document.body, { childList: true, subtree: true });
 enhanceGameCovers();
+applySiteAccessibilityPreferences();
+applyInterfaceLanguage();
+const interfaceObserver = new MutationObserver(records => {
+    records.forEach(record => record.addedNodes.forEach(node => {
+        if (node.nodeType === Node.ELEMENT_NODE) applyInterfaceLanguage(node);
+        else if (node.nodeType === Node.TEXT_NODE) translateInterfaceNode(node);
+    }));
+});
+interfaceObserver.observe(document.body, { childList: true, subtree: true });
 
 document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
@@ -1908,6 +2214,56 @@ document.addEventListener('click', function (e) {
             navigateToRoute(route, anchor);
         }
     }
+});
+
+document.addEventListener('change', event => {
+    const preferenceToggle = event.target.closest('[data-setting-toggle]');
+    if (preferenceToggle) {
+        siteSettings[preferenceToggle.dataset.settingToggle] = preferenceToggle.checked;
+        saveSiteSettings();
+        applySiteAccessibilityPreferences();
+        return;
+    }
+
+    const genreToggle = event.target.closest('[data-favorite-genre]');
+    if (genreToggle) {
+        const genre = genreToggle.dataset.favoriteGenre;
+        siteSettings.favoriteGenres = genreToggle.checked
+            ? [...new Set([...siteSettings.favoriteGenres, genre])]
+            : siteSettings.favoriteGenres.filter(item => item !== genre);
+        saveSiteSettings();
+    }
+});
+
+document.addEventListener('click', event => {
+    if (event.target.closest('[data-open-language]')) {
+        openLanguagePicker();
+        return;
+    }
+
+    const addButton = event.target.closest('[data-library-add]');
+    if (addButton) {
+        const listName = addButton.dataset.libraryAdd;
+        const select = document.getElementById(listName === 'wishlist' ? 'wishlistGameSelect' : 'completedGameSelect');
+        const route = select?.value;
+        if (!route || !['wishlist', 'completedGames'].includes(listName)) return;
+        siteSettings[listName] = [...new Set([...siteSettings[listName], route])];
+        saveSiteSettings();
+        renderSettingsPage();
+        return;
+    }
+
+    const removeButton = event.target.closest('[data-library-remove]');
+    if (removeButton) {
+        const listName = removeButton.dataset.libraryRemove;
+        if (!['wishlist', 'completedGames'].includes(listName)) return;
+        siteSettings[listName] = siteSettings[listName].filter(route => route !== removeButton.dataset.gameRoute);
+        saveSiteSettings();
+        renderSettingsPage();
+        return;
+    }
+
+    if (event.target.closest('[data-export-settings]')) exportSiteSettings();
 });
 
 const randomPageBtn = document.getElementById('randomPageBtn');
