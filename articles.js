@@ -7843,6 +7843,137 @@ const articlesDatabase = {
             3. Execute o jogo e divirta-se!</em></small></p>
         `
     },
+    "pocket-mirror-goldener-traum": {
+        title: "Pocket Mirror ~ GoldenerTraum",
+        addedAt: "2026-10-30",
+        categories: ["RPG Maker", "Terror Gótico", "Aventura", "Indie", "RPG", "Mistério", "Visual Novel"],
+        summary: "Uma remasterização aclamada e expandida do clássico RPG Maker de terror gótico. Acorde em uma mansão misteriosa com apenas um espelho de bolso, explore corredores tortuosos, resolva quebra-cabeças e embarque em uma jornada inesquecível de autodescoberta e verdade.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/4cd657ef5427bd85ed5101366b4ebdc1a7853828/header.jpg?t=1791968163",
+            data: {
+                "Desenvolvedor": "AstralShift, VisuStella",
+                "Publicadora": "KOMODO",
+                "Série Relacionada": "Little Goody Two Shoes",
+                "Gêneros": "Aventura, Casual, Indie, RPG",
+                "Plataformas": "PC (Windows), Android (APK)",
+                "Lançamento": "19 de maio de 2023",
+                "Classificação": "14+ (Violência, Terror, Temas Sombrios)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Recursos" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Pocket Mirror ~ GoldenerTraum</strong> é a versão definitiva, totalmente remasterizada e expandida do aclamado jogo indie de terror gótico desenvolvido por <strong>AstralShift</strong> em colaboração com a <strong>VisuStella</strong>, e publicado pela <strong>KOMODO</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/5e4ab5ceb520c6f2f9aaea214ce5ebdc.avif?t=1791968163" alt="Pocket Mirror Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+            </div>
+
+            <p>Bem-vindo a um mundo de maravilhas e escuridão, onde a realidade e os sonhos se entrelaçam e segredos espreitam em cada esquina. <em>Pocket Mirror</em> é uma aventura surreal que leva você por um reino misterioso onde nada é o que parece e tudo está conectado.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/53f6f6004abd716186518138545e5ff8.webm?t=1791968163" type="video/webm">
+                </video>
+            </div>
+
+            <p>Como uma jovem garota com um passado encoberto por nuvens de dúvida, você acorda em uma mansão estranha e assustadora tendo apenas o seu espelho de bolso em mãos. Em busca de suas memórias, você deve explorar corredores e cômodos retorcidos, resolver enigmas complexos, interagir com personagens únicos e desvendar a verdade por trás de sua verdadeira identidade e das forças sinistras em jogo.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/050896abe675c9a9653daee917c9d182.webm?t=1791968163" type="video/webm">
+                </video>
+            </div>
+
+            <p style="text-align: center; font-style: italic;">Will you be able to face the truth?</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/6323859fc56357c87f9b288b87e40496.webm?t=1791968163" type="video/webm">
+                </video>
+            </div>
+
+            <h2 id="gameplay">Características e Recursos</h2>
+            
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/eb67db360804814e53a654b997850f0f.webm?t=1791968163" type="video/webm">
+                </video>
+            </div>
+
+            <ul>
+                <li><strong>Mundo Surreal e Atmosférico:</strong> Um universo repleto de mistérios, maravilhas e perigos a serem descobertos.</li>
+                <li><strong>Enigmas Desafiadores:</strong> Puzzles engenhosos que testam sua lógica, dedução e habilidades de exploração.</li>
+                <li><strong>Elenco Complexo de Personagens:</strong> Interaja com figuras memoráveis em caminhos ramificados que conduzem a múltiplos finais com base em suas escolhas.</li>
+                <li><strong>Trilha Sonora Cativante:</strong> Melodias belas e assustadoras que submergem o jogador na atmosfera gótica da obra.</li>
+                <li><strong>Lore Profunda:</strong> Um enredo ricamente construído que recompensa a curiosidade e a investigação detalhada de cada canto.</li>
+            </ul>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/04dfdaf315d9d58f663b38c3258434f7.webm?t=1791968163" type="video/webm">
+                </video>
+            </div>
+
+            <p style="text-align: center; font-style: italic;">"You shouldn't ever let it go, do you understand?"</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO:</strong> O jogo não é recomendado para pessoas sensíveis a temas de horror gráfico, sangue, mortes brutais e atmosferas de forte tensão psicológica.</p>
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos (Windows):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Microsoft Windows 10 (64-bit)</li>
+                <li><strong>Processador:</strong> Intel Core i3-4340 ou superior</li>
+                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Compatível com OpenGL / VRAM 1 GB ou superior</li>
+                <li><strong>Resolução:</strong> 1280x768 ou superior</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_95fd9fe1edd5c80ebab5f716de0bfb2323ff23bf.1920x1080.jpg?t=1791968163" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_6edcabc14b35bb69a81c393781303716529e8a0c.1920x1080.jpg?t=1791968163" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_d4f2ae1c1369b427e21c83ba15de507bcbc60aca.1920x1080.jpg?t=1791968163" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_4d1a64827b25322acb25e745b1f9703a5b7a968c.1920x1080.jpg?t=1791968163" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_7682e15b672e8d270bc06e48bf00e7ce0d3b26ac.1920x1080.jpg?t=1791968163" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_9fe0b5fcd291d75a2b26a98052c2c432346bbb5b.1920x1080.jpg?t=1791968163" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Redes Sociais Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/1899060/Pocket_Mirror_GoldenerTraum/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://x.com/AstralShiftPro" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter (AstralShift)</a>
+                <a href="https://www.facebook.com/KomodoHawaii" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook (Komodo)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC & Android):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/qYusf2n24" target="_blank"><i class="fa-brands fa-android"></i> Download Pocket Mirror APK (v1.0.1 - Android)</a>
+                <a href="https://4br.me/EQEi25eMYx" target="_blank"><i class="fa-solid fa-download"></i> Download Pocket Mirror ~ GoldenerTraum (Servidor 1)</a>
+                <a href="https://4br.me/OSC6iQP" target="_blank"><i class="fa-solid fa-download"></i> Download Pocket Mirror ~ GoldenerTraum v1.1.5 (UploadHaven)</a>
+                <a href="https://4br.me/abilcfhrA" target="_blank"><i class="fa-solid fa-download"></i> Download Versão Ativada (Senha descompactação: 123)</a>
+                <a href="https://4br.me/tWqyKq" target="_blank"><i class="fa-solid fa-arrow-rotate-right"></i> Patch de Atualização 1</a>
+                <a href="https://4br.me/hSFRW" target="_blank"><i class="fa-solid fa-arrow-rotate-right"></i> Patch de Atualização 2</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação para PC:<br>
+            1. Baixe o arquivo compactado e certifique-se de ter o WinRAR ou 7-Zip instalados.<br>
+            2. Descompacte o arquivo (use a senha <code>123</code> caso seja solicitada na versão ativada).<br>
+            3. Execute o instalador ou abra o executável diretamente e divirta-se!</em></small></p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
