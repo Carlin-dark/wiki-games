@@ -7977,7 +7977,7 @@ const articlesDatabase = {
     "our-wonderland": {
         title: "Our Wonderland",
         addedAt: "2026-11-02",
-        youtubeId: "rvrjerxfja8"
+        youtubeId: "rvrjerxfja8",
         categories: ["Visual Novel", "Terror Psicológico", "Romance", "Fantasia Sombria", "Indie", "LGBTQIA+", "Gratuito para Jogar"],
         summary: "Uma visual novel de terror, fantasia e romance sobre cinco amigos de infância arrastados de volta ao país das maravilhas de sua juventude, vinte anos depois. O que antes era um sonho infantil deformou-se em uma terra de horror, onde precisam encarar seus traumas e conflitos — ou morrer de formas violentas repetidas vezes.",
         infobox: {
