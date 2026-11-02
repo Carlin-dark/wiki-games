@@ -7974,6 +7974,317 @@ const articlesDatabase = {
             3. Execute o instalador ou abra o executável diretamente e divirta-se!</em></small></p>
         `
     },
+    "our-wonderland": {
+        title: "Our Wonderland",
+        addedAt: "2026-11-02",
+        youtubeId: "rvrjerxfja8"
+        categories: ["Visual Novel", "Terror Psicológico", "Romance", "Fantasia Sombria", "Indie", "LGBTQIA+", "Gratuito para Jogar"],
+        summary: "Uma visual novel de terror, fantasia e romance sobre cinco amigos de infância arrastados de volta ao país das maravilhas de sua juventude, vinte anos depois. O que antes era um sonho infantil deformou-se em uma terra de horror, onde precisam encarar seus traumas e conflitos — ou morrer de formas violentas repetidas vezes.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/eed5116d379fdde4541137fbbc7fb699be13b0a4/header.jpg?t=1786640334",
+            data: {
+                "Desenvolvedor": "Carrot",
+                "Publicadora": "Project Ensō",
+                "Gêneros": "Aventura, Casual, Indie, Simulação, Visual Novel",
+                "Plataformas": "PC (Windows, macOS, Linux/SteamOS)",
+                "Lançamento": "9 de julho de 2026",
+                "Classificação": "16+ (Violência, Temas Sensíveis, Linguagem Imprópria, Gore Cartoon)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Recursos da Remasterização" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais" }
+        ],
+        content: `
+            <p><strong>Our Wonderland</strong> é uma visual novel de terror psicológico e fantasia sombria desenvolvida por <strong>Carrot</strong> e publicada pela <strong>Project Ensō</strong>. Lançada originalmente de forma episódica no itch.io entre 2021 e 2024, esta edição remasterizada para a Steam traz gráficos totalmente reformulados, novos recursos de qualidade de vida e melhorias visuais.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/extras/d399c49a8b1e09bdbc653b952bb53a72.avif?t=1786640334" alt="Our Wonderland Banner 1" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+            </div>
+
+            <p>Aos onze anos, Iggy não sabia o que esperar ao arrastar seus amigos para a floresta para tentar um ritual estranho encontrado em um livro na lixeira da escola. No entanto, sua imaginação mais selvagem não o prepararia para a terra de magia e maravilhas que os aguardava na base daquele velho salgueiro.</p>
+
+            <p>Agora, vinte anos se passaram, e ele e seus amigos já passaram da idade do faz de conta. O país das maravilhas de sua juventude havia se tornado apenas uma lembrança distante — até que, em uma noite, Bucks e sua filha recém-nascida desaparecem sem deixar rastros. Logo, Iggy e seus amigos encontram-se puxados de volta para aquele mundo de alegria infantil. Contudo, os desejos deles já não são tão inocentes, e o mundo se distorceu em uma terra de horror e depravação quase irreconhecível.</p>
+
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/extras/a897bc8934a1f4e2352387588bcdb5de.avif?t=1786640334" alt="Our Wonderland Banner 2" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+            </div>
+
+            <p>Focado nas lutas, problemas e no apodrecimento das relações entre cinco amigos de infância, o jogo funciona como um drama de personagens exagerado que inclui elementos fantásticos e grotescos. A história aborda fortemente temas LGBTQIA+ e possui cinco arcos distintos, onde suas escolhas determinam o nível de perigo enfrentado pelo protagonista (incluindo quantas vezes Iggy morre violentamente) e o desfecho romântico final.</p>
+
+            <h2 id="gameplay">Características e Recursos da Remasterização</h2>
+            
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 15px 0;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/extras/21ab649310c0f3f6de35f85700bfbc7f.avif?t=1786640334" alt="Art 1" style="max-width: 31%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/extras/d33ec8f0b355ef640610c27394e3e8b7.avif?t=1786640334" alt="Art 2" style="max-width: 31%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/extras/5338aaee81d126fe69c71170d06f0e9a.avif?t=1786640334" alt="Art 3" style="max-width: 31%; height: auto; border-radius: 4px;">
+            </div>
+
+            <ul>
+                <li><strong>Narrativa Dividida em 5 Arcos:</strong> Cada arco possui seu próprio final dramático e emocional.</li>
+                <li><strong>Múltiplos Epílogos:</strong> 4 desfechos possíveis com base em suas escolhas (1 neutro e 3 rotas românticas).</li>
+                <li><strong>Duração Extensa:</strong> 20 a 25 horas de tempo de jogo (cerca de 288 mil palavras de leitura).</li>
+                <li><strong>Estilo Visual Único:</strong> Gráficos inspirados em livros de histórias combinados com uma estética colorida e peculiar.</li>
+                <li><strong>Mais de 570 CGs e Ilustrações:</strong> Um catálogo massivo de artes conceituais e CGs.</li>
+                <li><strong>Cenas em Animatic:</strong> Sequências animadas especiais para momentos cruciais e marcantes da história.</li>
+                <li><strong>Morte e Perigo:</strong> 12 formas diferentes de ver Iggy morrer violentamente, se assim você desejar.</li>
+                <li><strong>Trilha Sonora Cinematográfica:</strong> Efeitos sonoros dramáticos e trilha imersiva.</li>
+                <li><strong>Modo Censurado:</strong> Inclui uma opção de pixelização para elementos de gore nas CGs para jogadores sensíveis.</li>
+            </ul>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO ADULTO:</strong> Contém linguagem imprópria, violência forte, gore cômico/cartoon, humor crasso, sugestões de violência sexual e situações desconfortáveis de aliciamento ou drogas, além de conteúdos perturbadores.</p>
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos (Windows):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 ou superior (64-bit)</li>
+                <li><strong>Processador:</strong> 2.0 GHz compatível com 64-bit</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> OpenGL 3.0 ou DirectX 11</li>
+                <li><strong>Armazenamento:</strong> 750 MB de espaço disponível</li>
+            </ul>
+
+            <p><strong>Requisitos Recomendados (Windows):</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 ou superior (64-bit)</li>
+                <li><strong>Processador:</strong> 2.0 GHz compatível com 64-bit</li>
+                <li><strong>Memória RAM:</strong> 6 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> OpenGL 3.0 ou DirectX 11</li>
+                <li><strong>Armazenamento:</strong> 750 MB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/5e01629eb32a40e6516b411e02e2cd89f84633b3/ss_5e01629eb32a40e6516b411e02e2cd89f84633b3.1920x1080.jpg?t=1786640334" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/4d1bb17924e77f5179d3538287ef9237ec64368c/ss_4d1bb17924e77f5179d3538287ef9237ec64368c.1920x1080.jpg?t=1786640334" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/0efc52913ea6473dcd91ac5d61e5b076a1dce9f9/ss_0efc52913ea6473dcd91ac5d61e5b076a1dce9f9.1920x1080.jpg?t=1786640334" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/cf0ea192aa430bc0eedd7e1260d9f0762e1e2b8a/ss_cf0ea192aa430bc0eedd7e1260d9f0762e1e2b8a.1920x1080.jpg?t=1786640334" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/3f31fcb7b71a40981978b777ee55a8d49802eaf2/ss_3f31fcb7b71a40981978b777ee55a8d49802eaf2.1920x1080.jpg?t=1786640334" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/432a4bf77e764452336f05aed5e96c1a57a7a0f2/ss_432a4bf77e764452336f05aed5e96c1a57a7a0f2.1920x1080.jpg?t=1786640334" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/7047c3bef57d54e2eddb7debe1dd6514ce1ef518/ss_7047c3bef57d54e2eddb7debe1dd6514ce1ef518.1920x1080.jpg?t=1786640334" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/c9827fc28117bc9f4be4ca5b707c51d9623eda11/ss_c9827fc28117bc9f4be4ca5b707c51d9623eda11.1920x1080.jpg?t=1786640334" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329100/ce21184e90361160357f658f8a0406489c60c490/ss_ce21184e90361160357f658f8a0406489c60c490.1920x1080.jpg?t=1786640334" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas e Redes Oficiais:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/4329100/Our_Wonderland/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://justacarrot.itch.io/our-wonderland" target="_blank"><i class="fa-brands fa-itch-io"></i> Página no Itch.io</a>
+                <a href="https://just-a-carrot.tumblr.com/" target="_blank"><i class="fa-brands fa-tumblr"></i> Tumblr Oficial</a>
+                <a href="https://just-a-carrot.carrd.co/" target="_blank"><i class="fa-solid fa-link"></i> Carrd Principal</a>
+                <a href="https://bsky.app/profile/justacarrot.bsky.social" target="_blank"><i class="fa-solid fa-cloud"></i> Bluesky</a>
+                <a href="https://www.instagram.com/just__a__carrot/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.youtube.com/@just-a-carrot" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+            </div>
+        `
+    },
+    "ginka": {
+        title: "GINKA",
+        addedAt: "2023-11-02",
+        categories: ["Visual Novel", "Aventura", "Casual", "Indie", "Drama", "Romance"],
+        summary: "Uma emocionante visual novel dos mesmos criadores de 'ATRI -My Dear Moments-'. Cinco anos após o misterioso desaparecimento de sua amiga de infância Ginka em uma ilha isolada, Ryusei retorna ao local e se depara com uma jovem idêntica a ela, que não se lembra do próprio nome, mas o ama profundamente.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/0c0a4659b40d956fd81c9d82ca81c3ba04c7c4a8/header.jpg?t=1789631738",
+            data: {
+                "Desenvolvedor": "Frontwing",
+                "Publicadora": "Frontwing USA, Bushiroad Inc.",
+                "Roteiro": "Asta Konno (ATRI)",
+                "Arte e Design": "Yusano & Akio Watanabe",
+                "Gêneros": "Visual Novel, Aventura, Casual",
+                "Plataformas": "PC (Windows), Nintendo Switch",
+                "Lançamento": "25 de outubro de 2023",
+                "Classificação": "Livre (Todas as idades)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "equipe", text: "2. Equipe de Produção e Elenco" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>GINKA</strong> é uma visual novel de drama e mistério desenvolvida pela <strong>Frontwing</strong>. Criada pelo talentoso duo por trás de <em>ATRI -My Dear Moments-</em> (Asta Konno e Yusano), a obra combina uma atmosfera nostálgica de verão com uma narrativa emocionante de reencontro e segredos sobrenaturais.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Cinco anos atrás, na noite de um festival de verão, a amiga de infância de Aoba Ryusei, <strong>Shinomiya Ginka</strong>, desapareceu sem deixar vestígios. Os supersticiosos moradores da ilha acreditaram que aquilo foi obra de um deus e que ela havia sido "levada pelos espíritos".</p>
+
+            <p>Agora no ensino médio, Ryusei decide visitar a ilha durante as férias de verão com uma pergunta em mente: Ginka teria voltado? Poderia ela estar vivendo uma vida normal de estudante?</p>
+
+            <p>Infelizmente, suas esperanças desmoronam ao descobrir que Ginka nunca mais foi vista desde aquela noite. Desolado, ele se prepara para partir, quando encontra uma jovem garota idêntica à sua amiga desaparecida — Ginka.</p>
+            <p><em>"Bem-vinda de volta, Ryusei."</em></p>
+            <p>A garota não se lembra do próprio nome. Tudo o que ela sabe é que ama Ryusei. Onde ela esteve? Por que não envelheceu? Reunidos após tanto tempo, Ryusei jura ter a melhor temporada de férias de sua vida na pacata ilha de sua infância.</p>
+
+            <h2 id="equipe">Equipe de Produção e Elenco</h2>
+            <ul>
+                <li><strong>Planejamento e História:</strong> Konno Asta</li>
+                <li><strong>Arte e Design de Personagens:</strong> Yusano</li>
+                <li><strong>Design de Personagens (Key):</strong> Akio Watanabe</li>
+                <li><strong>Arte SD:</strong> Nanaca Mai</li>
+                <li><strong>Trilha Sonora (BGM):</strong> Fuminori Matsumoto</li>
+                <li><strong>Elenco de Voz:</strong> Ikumi Hasegawa como Ginka</li>
+                <li><strong>Tema de Abertura:</strong> "Star Trail" (Interpretado por Ikumi Hasegawa)</li>
+            </ul>
+
+            <div style="background-color: rgba(255,255,255,0.05); border-left: 4px solid #7699d4; padding: 10px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; font-size: 0.9em;"><strong>Nota de Conteúdo de IA:</strong> Os desenvolvedores informam que as vozes sintéticas em inglês do jogo foram desenvolvidas com o uso de tecnologia de inteligência artificial.</p>
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 10 / 11</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo 2.0 GHz</li>
+                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> VRAM de 320 MB, resolução 1280x720</li>
+                <li><strong>DirectX:</strong> Versão 9.0c</li>
+                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Suporte a reprodução PCM via DirectSound</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_835988408a43d8ac2f5c16edcfd5a877d35bea2d.1920x1080.jpg?t=1789631738" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_09ab156b0b93b3f47b12b829f4012b3e84caf412.1920x1080.jpg?t=1789631738" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_5ce83a5a29ae12894af12a698ed843db7c3f2283.1920x1080.jpg?t=1789631738" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_07e1eb4021bd85a23513fa06390baeb1fa39eebf.1920x1080.jpg?t=1789631738" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_5522daf28f6b7a7b2f3b85d81dae7b1bc5779323.1920x1080.jpg?t=1789631738" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_2c2d1c22b9664074817d0c8642ff5b2c55f7756e.1920x1080.jpg?t=1789631738" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Redes:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/2536840/GINKA/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="http://ginka.frontwing.jp/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Frontwing)</a>
+                <a href="https://store-jp.nintendo.com/item/software/D70010000080524" target="_blank"><i class="fa-solid fa-gamepad"></i> Versão para Nintendo Switch (JP)</a>
+                <a href="https://www.dlsite.com/soft/work/=/product_id/VJ01000949.html" target="_blank"><i class="fa-solid fa-store"></i> Página na DLsite</a>
+                <a href="https://x.com/ginka_fw" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter Oficial</a>
+                <a href="https://www.youtube.com/@frontwing_1999" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (v1.06):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/FLbF" target="_blank"><i class="fa-solid fa-download"></i> Download GINKA v1.06 (UploadHaven)</a>
+                <a href="https://seulink.digital/FLbF" target="_blank"><i class="fa-solid fa-download"></i> Download GINKA v1.06 (Servidor Alternativo 1)</a>
+                <a href="https://seulink.digital/ntGbIhBo" target="_blank"><i class="fa-solid fa-download"></i> Download GINKA v1.06 (Servidor Alternativo 2)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação:<br>
+            1. Clique no link de download e aguarde o redirecionamento.<br>
+            2. Extraia o arquivo .zip baixado usando o 7-Zip.<br>
+            3. Execute o instalador (setup.exe) dentro da pasta e jogue através do atalho gerado.</em></small></p>
+        `
+    },
+    "fran-bow": {
+        title: "Fran Bow",
+        addedAt: "2023-11-02",
+        categories: ["Point and Click", "Terror Psicológico", "Aventura", "Indie", "Gore", "Surreal"],
+        summary: "Uma aclamada aventura de terror psicológico point-and-click que acompanha Fran, uma jovem garota lidando com transtornos mentais e um destino cruel após testemunhar a morte misteriosa de seus pais. Administre medicação para revelar um mundo oculto aterrorizante, resolver quebra-cabeças e encontrar seu gato de estimação, Sr. Meia-Noite.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/header.jpg?t=1693287362",
+            data: {
+                "Desenvolvedor": "Killmonday Games AB",
+                "Publicadora": "Killmonday Games AB",
+                "Gêneros": "Aventura, Indie, Terror Point-and-Click",
+                "Plataformas": "PC, Mac, Linux, iOS, Android, Nintendo Switch, PlayStation, Xbox",
+                "Lançamento PC": "27 de agosto de 2015",
+                "Classificação": "17+ / 16+ (Violência Extrema, Gore, Temas Sensíveis)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Recursos" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Fran Bow</strong> é um jogo de aventura e terror psicológico macabro desenvolvido e publicado pela <strong>Killmonday Games AB</strong>. A obra é amplamente reconhecida por seu estilo de arte desenhado à mão em 2D e sua narrativa visceral que explora traumas infantis e universos surreais.</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO ADULTO:</strong> O jogo contém imagens perturbadoras, cenas de violência explícita, gore, automutilação, assédio sexual, crueldade contra animais, horror corporal, transtornos mentais, luzes piscantes e uso de drogas. Discrição estritamente recomendada.</p>
+            </div>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Fran Bow é uma garota que luta contra um transtorno mental e um destino injusto. Após testemunhar a perda horrível e misteriosa de seus pais — encontrados esquartejados em sua própria casa —, Fran entra em choque e foge para a floresta junto com seu único amigo: o Sr. Meia-Noite, um gato preto que ela havia recebido de presente de seus pais.</p>
+
+            <p>Ao recuperar a consciência, Fran se vê internada no Asilo Oswald, uma instituição psiquiátrica opressiva para crianças, e o Sr. Meia-Noite desapareceu. Após ter um sonho vívido com seu amado gato, ela decide escapar do asilo para encontrá-lo e retornar para casa, onde sua Tia Grace, sua única parente viva, a aguarda.</p>
+
+            <h2 id="gameplay">Características e Recursos</h2>
+            <ul>
+                <li><strong>Terror Psicológico Narrativo:</strong> Uma aventura envolvente guiada por uma história profunda e sombria.</li>
+                <li><strong>Estilo de Arte Único:</strong> Visuais e animações 2D exclusivos, inteiramente desenhados à mão.</li>
+                <li><strong>Sistema de Medicação:</strong> Administre remédios para abrir um mundo oculto aterrizante que ajuda a desvendar enigmas e encontrar itens.</li>
+                <li><strong>Puzzles Diversificados:</strong> Uma grande variedade de quebra-cabeças com diferentes níveis de dificuldade integrados à história.</li>
+                <li><strong>Mini-jogos Estilizados:</strong> Três mini-jogos inspirados em arcades com direções artísticas distintas que atuam nas transições da trama.</li>
+                <li><strong>Personagens Marcantes:</strong> Mais de 50 personagens interativos e únicos.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC / Windows)</h2>
+            <p><strong>Requisitos Mínimos:</strong></p>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
+                <li><strong>Processador:</strong> 1.7 GHz Dual Core</li>
+                <li><strong>Memória RAM:</strong> 2 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 260, ATI Radeon 4870 HD ou equivalente com pelo menos 512 MB de VRAM</li>
+                <li><strong>Armazenamento:</strong> 5 GB de espaço disponível</li>
+                <li><strong>Placa de Som:</strong> Compatível com DirectX</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_bcdd843d50cea0d8f6ba4d1eb9b1a4006a2dbc9a.1920x1080.jpg?t=1693287362" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_a4b9506830322508c19cd4ce4bd4b9138a5f3bad.1920x1080.jpg?t=1693287362" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_987bf12caa85a82380293c2036c828bf42fdeec7.1920x1080.jpg?t=1693287362" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_ed7e5ae7e60a9a24f1ce3b2494e107d6b09e5b81.1920x1080.jpg?t=1693287362" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_164729ca8a6148387211cf8e1577628d90e6089a.1920x1080.jpg?t=1693287362" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_aa59c6a08df075002dd7220fd7d2da74f5486cdd.1920x1080.jpg?t=1693287362" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/362680/Fran_Bow/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://killmondaygames.com/fran-bow/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Killmonday)</a>
+                <a href="https://www.gog.com/en/game/fran_bow" target="_blank"><i class="fa-solid fa-store"></i> Página na GOG</a>
+                <a href="https://www.nintendo.com/us/store/products/fran-bow-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo Switch</a>
+                <a href="https://store.playstation.com/en-us/concept/10007382" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
+                <a href="https://www.xbox.com/en-us/games/store/fran-bow/9n3ncmm6nk7s" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
+                <a href="https://apps.apple.com/se/app/fran-bow/id6445911052" target="_blank"><i class="fa-brands fa-app-store"></i> App Store (iOS)</a>
+                <a href="https://play.google.com/store/apps/details?id=com.KillmondayGamesAB.FranBow&hl=en&gl=US&pli=1" target="_blank"><i class="fa-brands fa-google-play"></i> Google Play (Android)</a>
+                <a href="https://x.com/Killmondaygames" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+                <a href="https://www.youtube.com/Killmondaygames" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
+                <a href="https://www.facebook.com/officialfranbow/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Oficial</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (v1.0.1 DRM-free):</strong></p>
+            <div class="play-links">
+                <a href="https://seulink.digital/ANiA" target="_blank"><i class="fa-solid fa-download"></i> Download Fran Bow v1.0.1 (Servidor 1)</a>
+                <a href="https://seulink.digital/Nao4w" target="_blank"><i class="fa-solid fa-download"></i> Download Fran Bow v1.0.1 (Servidor 2)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação:<br>
+            1. Clique no link de download e aguarde o redirecionamento.<br>
+            2. Extraia o arquivo compactado usando o 7-Zip ou extrator padrão.<br>
+            3. Execute o instalador (setup.exe) dentro da pasta e jogue através do atalho gerado na área de trabalho.</em></small></p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
