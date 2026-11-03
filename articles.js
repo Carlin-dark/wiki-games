@@ -8291,7 +8291,7 @@ const articlesDatabase = {
         categories: ["RPG Tático", "Ficção Científica", "Cyberpunk", "Investigação", "Visual Novel", "Indie"],
         summary: "Um RPG narrativo de investigação e combate tático em turnos (TRPG) com estética Gothic Cyberpunk e Dystopian Y2K. Após a aparição global de 'The Last Angel', a humanidade híbrida e totalmente dependente de tecnologia tem apenas 90 dias antes de um desligamento total que significará a extinção.",
         infobox: {
-            image: "https://cdn.discordapp.com/attachments/1389264031726043158/1565750964973993994/Captura_de_tela_2026-10-28_111015.png",
+            image: "https://i.8upload.com/image/f9d191e1fed22705/captura-de-tela-2026-10-28-111015.png",
             data: {
                 "Desenvolvedor": "004-B (naoeraoazir)",
                 "Gêneros": "RPG Narrativo, Investigação, Tactical RPG, Cyberpunk",
@@ -8338,11 +8338,9 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://cdn.discordapp.com/attachments/1544510936516268102/1562816647176257757/Captura_de_tela_2026-10-22_072907.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://media.discordapp.net/attachments/1544510936516268102/1562816647566467112/Captura_de_tela_2026-10-22_072927.png" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://media.discordapp.net/attachments/1544510936516268102/1562816648035958874/Captura_de_tela_2026-10-22_072937.png" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://media.discordapp.net/attachments/1544510936516268102/1562816649302773850/Captura_de_tela_2026-10-22_093508.png" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://media.discordapp.net/attachments/1544510936516268102/1562816649751568454/Captura_de_tela_2026-10-22_093957.png" alt="Screenshot 5" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://i.8upload.com/image/cdd7a87a8d4d5282/captura-de-tela-2026-10-22-072907.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://i.8upload.com/image/8e016e3c67779398/captura-de-tela-2026-10-22-072927.webp" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://i.8upload.com/image/b5afd88dc0c33f8d/captura-de-tela-2026-10-22-093957.webp" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
             </div>
 
             <hr>
