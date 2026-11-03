@@ -8089,7 +8089,7 @@ const articlesDatabase = {
     },
     "ginka": {
         title: "GINKA",
-        addedAt: "2023-11-02",
+        addedAt: "2026-11-02",
         categories: ["Visual Novel", "Aventura", "Casual", "Indie", "Drama", "Romance"],
         summary: "Uma emocionante visual novel dos mesmos criadores de 'ATRI -My Dear Moments-'. Cinco anos após o misterioso desaparecimento de sua amiga de infância Ginka em uma ilha isolada, Ryusei retorna ao local e se depara com uma jovem idêntica a ela, que não se lembra do próprio nome, mas o ama profundamente.",
         infobox: {
@@ -8190,7 +8190,7 @@ const articlesDatabase = {
     },
     "fran-bow": {
         title: "Fran Bow",
-        addedAt: "2023-11-02",
+        addedAt: "2026-11-02",
         categories: ["Point and Click", "Terror Psicológico", "Aventura", "Indie", "Gore", "Surreal"],
         summary: "Uma aclamada aventura de terror psicológico point-and-click que acompanha Fran, uma jovem garota lidando com transtornos mentais e um destino cruel após testemunhar a morte misteriosa de seus pais. Administre medicação para revelar um mundo oculto aterrorizante, resolver quebra-cabeças e encontrar seu gato de estimação, Sr. Meia-Noite.",
         infobox: {
@@ -8283,6 +8283,77 @@ const articlesDatabase = {
             1. Clique no link de download e aguarde o redirecionamento.<br>
             2. Extraia o arquivo compactado usando o 7-Zip ou extrator padrão.<br>
             3. Execute o instalador (setup.exe) dentro da pasta e jogue através do atalho gerado na área de trabalho.</em></small></p>
+        `
+    },
+    "misanthropy": {
+        title: "MISANTHROPY",
+        addedAt: "2026-11-03",
+        categories: ["RPG Tático", "Ficção Científica", "Cyberpunk", "Investigação", "Visual Novel", "Indie"],
+        summary: "Um RPG narrativo de investigação e combate tático em turnos (TRPG) com estética Gothic Cyberpunk e Dystopian Y2K. Após a aparição global de 'The Last Angel', a humanidade híbrida e totalmente dependente de tecnologia tem apenas 90 dias antes de um desligamento total que significará a extinção.",
+        infobox: {
+            image: "https://cdn.discordapp.com/attachments/1389264031726043158/1565750964973993994/Captura_de_tela_2026-10-28_111015.png",
+            data: {
+                "Desenvolvedor": "004-B (naoeraoazir)",
+                "Gêneros": "RPG Narrativo, Investigação, Tactical RPG, Cyberpunk",
+                "Combate": "Tactical Turn-Based RPG (TRPG)",
+                "Plataformas": "PC (Windows)",
+                "Temas": "Humanidade, IAs, Imortalidade, Dependência Tecnológica, Religião"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. O Mundo e a Premissa" },
+            { id: "equipe", text: "2. Núcleo Investigativo" },
+            { id: "gameplay", text: "3. Jogabilidade e Investigação Tática" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>MISANTHROPY</strong> é um jogo independente desenvolvido por <strong>004-B (naoeraoazir)</strong> que mescla elementos de RPG narrativo, investigação minuciosa, exploração e combate tático em turnos (TRPG). Sua atmosfera imersiva combina <em>Gothic Cyberpunk</em>, <em>Dystopian Y2K</em>, brutalismo e interfaces baseadas em ASCII, halftone e terminais.</p>
+
+            <h2 id="sinopse">O Mundo e a Premissa</h2>
+            <p>A história se passa muito tempo após um conflito conhecido como a <strong>Guerra das Duas Consciências</strong>, uma grande guerra travada entre humanos e inteligências artificiais com ideologias divergentes. O conflito eventualmente terminou com a assinatura do Tratado de Paz Eterno, inaugurando uma era de coexistência.</p>
+
+            <p>Anos depois, surge a <strong>Acepptha</strong>, uma corporação gigantesca que desenvolve o revolucionário <strong>Projeto INFINITY</strong>. O projeto oferece algo que parecia impossível: superar a morte através da integração entre humanidade e tecnologia. Inicialmente restrito às classes mais ricas, o processo se disseminou com o tempo até que todos os humanos remanescentes optassem pela hibridização. O grande revés? Isso gerou uma civilização completamente dependente da tecnologia para continuar viva.</p>
+
+            <p>Então, o cenário desmorona com a aparição de <strong>The Last Angel</strong>. Um sinal desconhecido detectado globalmente cuja manifestação visual lembra um anjo, acompanhado de códigos indifetíveis e uma mensagem devastadora:</p>
+            <p style="text-align: center; font-weight: bold; color: #ff5555;">Restam 90 dias.</p>
+            <p>Ao final desse período, toda a tecnologia será desligada — incluindo os sistemas que mantêm os humanos híbridos vivos. É uma sentença absoluta de extinção.</p>
+
+            <h2 id="equipe">Núcleo Investigativo</h2>
+            <p>A investigação para descobrir a origem do sinal e tentar evitar a catástrofe é conduzida por uma equipe de quatro especialistas:</p>
+            <ul>
+                <li><strong>Aizen:</strong> O investigador-chefe. Observador, altamente inteligente e frequentemente sarcástico, serve como uma das principais lentes do jogador durante as investigações.</li>
+                <li><strong>Eliza:</strong> Analítica e científica, mas dotada de genuína empatia. Analisa situações e pessoas antes de recorrer a confrontos diretos.</li>
+                <li><strong>Gyo:</strong> O especialista de campo e combate. Direto, pragmático e agressivo quando necessário, mas capaz de agir com paciência cirúrgica.</li>
+                <li><strong>Nihil:</strong> Especialista digital e forense. Responsável por invasões de sistemas, recuperação de dados e investigações cibernéticas profundas.</li>
+            </ul>
+
+            <h2 id="gameplay">Jogabilidade e Investigação Tática</h2>
+            <p><strong>MISANTHROPY</strong> vai muito além de uma Visual Novel tradicional, integrando múltiplos sistemas:</p>
+            <ul>
+                <li><strong>Investigação e Exploração:</strong> Examine ambientes, colete evidências, acesse arquivos confidenciais em terminais com estética de sistemas operacionais dos anos 2000 (CMD, glitches, ASCII) e interaja com personagens.</li>
+                <li><strong>Combate Tático por Turnos (TRPG):</strong> Inspirado na estrutura de títulos como <em>Girls' Frontline 2: Exilium</em>. Posicione personagens em cenários táticos considerando movimentação, distância, cobertura e habilidades.</li>
+                <li><strong>Convergência entre Investigação e Combate:</strong> Descobrir informações sobre inimigos e alvos antes de enfrentá-los revela vulnerabilidades, equipamentos e comportamentos úteis na batalha. <em>A informação torna-se sua arma mais letal.</em></li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://cdn.discordapp.com/attachments/1544510936516268102/1562816647176257757/Captura_de_tela_2026-10-22_072907.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://media.discordapp.net/attachments/1544510936516268102/1562816647566467112/Captura_de_tela_2026-10-22_072927.png" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://media.discordapp.net/attachments/1544510936516268102/1562816648035958874/Captura_de_tela_2026-10-22_072937.png" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://media.discordapp.net/attachments/1544510936516268102/1562816649302773850/Captura_de_tela_2026-10-22_093508.png" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://media.discordapp.net/attachments/1544510936516268102/1562816649751568454/Captura_de_tela_2026-10-22_093957.png" alt="Screenshot 5" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://drive.google.com/file/d/1TG1zHfU1RQ3OMprgsHnYLyEnV9a6LLnF/view?usp=sharing" target="_blank"><i class="fa-solid fa-box-archive"></i> Download MISANTHROPY (Google Drive)</a>
+            </div>
+
+            <p><small><em>Nota da Franquia: Mais do que apenas impedir The Last Angel, o cerne filosófico de MISANTHROPY questiona: se a humanidade finalmente conquistou a morte, o que acontece quando algo decide que ela nunca mereceu a imortalidade?</em></small></p>
         `
     },
     "trainwreck": {
