@@ -8354,6 +8354,72 @@ const articlesDatabase = {
             <p><small><em>Nota da Franquia: Mais do que apenas impedir The Last Angel, o cerne filosófico de MISANTHROPY questiona: se a humanidade finalmente conquistou a morte, o que acontece quando algo decide que ela nunca mereceu a imortalidade?</em></small></p>
         `
     },
+    "musume": {
+        title: "Musume (娘)",
+        addedAt: "2026-11-05",
+        categories: ["RPG Maker", "Dating Sim", "Terror", "Visual Novel", "Indie", "Curto"],
+        summary: "Um aclamado jogo indie de terror e dating sim desenvolvido por Darksummer no RPG Maker MV. Abordado por um homem chamado Itaru que insiste em casar você com sua 'filha' Musume, o jogo esconde uma atmosfera sombria, mistérios sobre a vila, múltiplos finais e até a opção de flertar com o pai.",
+        infobox: {
+            image: "https://img.itch.zone/aW1nLzE5MTgzNTY2LmpwZw==/original/l0x8RR.jpg",
+            data: {
+                "Desenvolvedor": "Darksummer",
+                "Engine": "RPG Maker MV",
+                "Gêneros": "Dating Sim, Horror, RPG, Curto",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "31 de dezembro de 2024",
+                "Idiomas": "Inglês, Japonês, Russo, Ucraniano, Espanhol",
+                "Uso de IA": "Assistido por IA (Texto)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Jogabilidade, Finais e Atualizações" },
+            { id: "bonus", text: "3. Conteúdo Bônus (Musume Comic)" },
+            { id: "requisitos", text: "4. Requisitos e Informações" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "links", text: "6. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>Musume</strong> (<em>娘</em>) é o jogo de estreia da desenvolvedora <strong>Darksummer</strong>, lançado originalmente no itch.io no final de 2024. A obra combina elementos de simulação de namoro (dating sim) com uma atmosfera marcante de terror psicológico e mistério.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>Você é abordado por um homem chamado <strong>Itaru</strong>, que insiste em lhe apresentar sua "filha" — <strong>Musume</strong> — com o objetivo inusitado de arrumar um casamento para ela. No entanto, à medida que você interage com Musume e seu pai, a narrativa revela elementos profundamente sombrios sobre a vila e os eventos bizarros que a cercam. Há também a opção de flertar com o próprio pai, o que conduz a rotas e finais alternativos (incluindo o famoso "daddy ending").</p>
+
+            <h2 id="gameplay">Jogabilidade, Finais e Atualizações</h2>
+            <ul>
+                <li><strong>Duração e Enigmas:</strong> Apesar de ser um jogo curto (em formato visual novel / RPG Maker), a história apresenta uma profundidade surpreendente com mistérios a serem desvendados.</li>
+                <li><strong>Múltiplos Finais:</strong> O título conta com pelo menos <strong>3 finais diferentes</strong>, dependendo das suas escolhas de diálogo e interações.</li>
+                <li><strong>Histórico de Atualizações:</strong> A desenvolvedora manteve suporte contínuo ao jogo, adicionando a versão em japonês (17/01/2025), correções de save/load (24/04/2025), versão russa com correções de áudio/tela preta (25/05/2025) e as traduções em ucraniano e espanhol (23/06/2025).</li>
+            </ul>
+
+            <h2 id="bonus">Conteúdo Bônus (Musume Comic)</h2>
+            <p>A criadora também lançou um quadrinho curto oficial intitulado <strong>Musume Comic</strong>, focado no passado e na relação entre Itaru (o pai) e seu antigo amigo, Satoshi Ichikawa. <em>Nota: Nenhum conteúdo gerado por IA foi utilizado na criação dos quadrinhos.</em></p>
+
+            <h2 id="requisitos">Requisitos e Informações</h2>
+            <ul>
+                <li><strong>Tamanho do Arquivo:</strong> Varia de ~127 MB (versão japonesa) até ~403 MB (versão em ucraniano).</li>
+                <li><strong>Aviso de IA:</strong> O jogo possui divulgação oficial de uso de assistência de inteligência artificial na criação de textos ("AI Assisted, Text").</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzIxMjI4OC8xOTE4MzQ5OS5wbmc=/original/sw%2BbYH.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzIxMjI4OC8xOTE4MzQ5OC5wbmc=/original/Tb927W.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzIxMjI4OC8xOTE4MzQ5Ni5wbmc=/original/j7k4rA.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzIxMjI4OC8xOTE4MzQ5NC5wbmc=/original/XwDTox.png" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzIxMjI4OC8xOTE4MzQ5Mi5wbmc=/original/PfJC%2FS.png" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Downloads no Itch.io:</strong></p>
+            <div class="play-links">
+                <a href="https://darksummer0953.itch.io/musume" target="_blank"><i class="fa-solid fa-gamepad"></i> Página Oficial de Musume no Itch.io (Download Gratuito)</a>
+                <a href="https://darksummer0953.itch.io/musume-comic" target="_blank"><i class="fa-solid fa-book-open"></i> Página do Quadrinho (Musume Comic) no Itch.io</a>
+            </div>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
