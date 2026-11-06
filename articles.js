@@ -19,78 +19,94 @@ const articlesDatabase = {
     },
     "print-i-love-u": {
         title: "Print I Love U",
-        addedAt: "2026-11-06",
-        categories: ["Visual Novel", "Indie", "Romance", "Terror Psicológico"],
-        summary: "Uma visual novel curta sobre um jogo misterioso encontrado em um computador usado, uma dedicatória para Alice e uma história com mais de um desfecho.",
+        categories: ["Visual Novel", "Terror Psicológico", "Romance", "Indie", "Suspense", "Curto"],
+        summary: "Um jogo de romance curto e enigmático descoberto em um laptop usado cujo dono anterior desapareceu. Dedicado a uma garota chamada Alice, o jogo mistura minijogos simples, visuais desenhados à mão, trilha sonora marcante e temas psicológicos profundos com múltiplos finais.",
         infobox: {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/3dd47ea7113f34c01e6301639cc11ec9b6f58019/header.jpg?t=1791545817",
             data: {
                 "Desenvolvedor": "Unknown",
                 "Distribuidora": "Claudio Moltedo, Red Hog Studio",
-                "Gêneros": "Indie, Visual Novel, Horror Psicológico, Romance",
+                "Gêneros": "Visual Novel, Terror Psicológico, Indie",
+                "Plataformas": "PC (Windows)",
                 "Lançamento": "21 de agosto de 2026",
-                "Plataforma": "PC (Windows)",
-                "Duração": "Aproximadamente 15 a 20 minutos",
-                "Jogadores": "Um jogador",
-                "Classificação": "16+ (Coordenação de Classificação Indicativa)"
+                "Duração": "~15 a 20 minutos por run",
+                "Classificação": "16+ (Violência, Temas Sensíveis, Medo, Saúde Mental)"
             }
         },
         toc: [
-            { id: "sinopse", text: "1. Sinopse" },
-            { id: "conteudo", text: "2. Conteúdo e Características" },
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Características e Recursos" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Página Oficial" }
+            { id: "links", text: "5. Links Oficiais e Downloads" }
         ],
         content: `
-            <p><strong>Print I Love U</strong> é uma visual novel independente e breve que mistura romance com horror psicológico. A história acompanha o mistério de um jogo encontrado em um computador de segunda mão: ele traz uma dedicatória a alguém chamada Alice, mas não revela quem o criou nem se Alice chegou a encontrá-lo.</p>
-            <p>A experiência dura cerca de 15 a 20 minutos e combina personagens desenhados à mão, trilha sonora original e três minijogos. Suas escolhas podem levar a finais diferentes, incluindo desfechos bons e ruins.</p>
+            <p><strong>Print I Love U</strong> é uma narrativa curta e imersiva de suspense psicológico que simula a descoberta de um arquivo misterioso em um computador usado. O jogo transita entre o romance e o horror psicológico, deixando uma marca duradoura em quem o conclui.</p>
 
-            <h2 id="sinopse">Sinopse</h2>
-            <p>Após comprar um computador usado pela internet, alguém encontra nele uma pequena visual novel chamada <em>Print I Love U</em>. O jogo parece ter sido feito para uma pessoa específica, Alice. A dedicatória e a atmosfera da obra deixam perguntas no ar: quem criou o jogo, quem era Alice e por que aquela mensagem ainda parece tão pessoal?</p>
-            <p>O mistério em torno da origem do jogo faz parte da apresentação da obra. Os finais também deixam espaço para interpretação, e nem todos parecem encerrar completamente a história.</p>
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>Há algumas semanas, encontrei um laptop usado. O dono anterior havia desaparecido. Nele, encontrei este jogo: <em>Print I Love U</em>. É uma visual novel curta com três minijogos simples. Chegar ao fim leva cerca de 15 minutos.</p>
 
-            <h2 id="conteudo">Conteúdo e Características</h2>
-            <p><strong>Aviso de conteúdo:</strong> o jogo é classificado para maiores de 16 anos e pode abordar violência, medo, saúde mental, obsessão romântica e alusão ao suicídio. Considere esses temas antes de jogar.</p>
+            <p>No início, há um bilhete dizendo que o jogo foi feito para alguém chamada Alice: <em>"Espero que você encontre isto."</em> Eu tenho tentado encontrá-la também. Não sei quem fez este jogo nem quem é Alice, mas algo nele permanece com você, quer você queira ou não. Existem múltiplos finais... e nem todos parecem finais de verdade.</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO:</strong> Contém discussões sobre saúde mental, obsessão romântica e alusões ao suicídio. Discrição recomendada.</p>
+            </div>
+
+            <h2 id="gameplay">Características e Recursos</h2>
             <ul>
-                <li>Visual novel curta, com uma duração aproximada de 15 a 20 minutos;</li>
-                <li>Três minijogos integrados à narrativa;</li>
-                <li>Personagens desenhados à mão e trilha sonora original;</li>
-                <li>Múltiplos finais, incluindo finais bom e ruim;</li>
-                <li>Seis conquistas;</li>
-                <li>Experiência para um jogador.</li>
+                <li><strong>História Emocionante e Curta:</strong> Uma narrativa concisa focada em mistério psicológico (~15-20 minutos por jogada).</li>
+                <li><strong>Múltiplos Finais:</strong> Vários desfechos possíveis (incluindo finais bons e ruins) baseados em suas escolhas.</li>
+                <li><strong>Minijogos Integrados:</strong> Três desafios simples que acompanham o desenrolar da trama.</li>
+                <li><strong>Estilo Artístico Único:</strong> Personagens inteiramente desenhados à mão.</li>
+                <li><strong>Trilha Sonora Marcante:</strong> Músicas originais imersivas.</li>
             </ul>
-            <p><strong>Descrição de conteúdo dos desenvolvedores:</strong> saúde mental, obsessão romântica e alusão ao suicídio.</p>
 
-            <h2 id="requisitos">Requisitos de Sistema</h2>
-            <p><strong>Requisitos mínimos para Windows:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <p><strong>Requisitos Mínimos (Windows):</strong></p>
             <ul>
-                <li><strong>Sistema operacional:</strong> Windows 10 ou 11 (64 bits)</li>
-                <li><strong>Processador:</strong> dual-core de 2,0 GHz</li>
-                <li><strong>Memória:</strong> 1 GB de RAM</li>
-                <li><strong>Placa de vídeo:</strong> placa gráfica integrada</li>
-                <li><strong>DirectX:</strong> versão 11</li>
-                <li><strong>Armazenamento:</strong> 210 MB disponíveis</li>
+                <li><strong>Sistema Operacional:</strong> Windows 10 / 11 (64-bit)</li>
+                <li><strong>Processador:</strong> Dual core 2.0 GHz</li>
+                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Placa gráfica integrada</li>
+                <li><strong>DirectX:</strong> Versão 11</li>
+                <li><strong>Armazenamento:</strong> 210 MB de espaço disponível</li>
             </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
-            <div class="image-gallery">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/6a2f1d24df84559f12d2b47e2ff3d37ee710fc3a/ss_6a2f1d24df84559f12d2b47e2ff3d37ee710fc3a.1920x1080.jpg?t=1791545817" alt="Cena 1 de Print I Love U" loading="lazy">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/4bf8fb87af301b315a8d384ee3db65b31aba9786/ss_4bf8fb87af301b315a8d384ee3db65b31aba9786.1920x1080.jpg?t=1791545817" alt="Cena 2 de Print I Love U" loading="lazy">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/8fe1d5ffc943262fc8e64df4670f9362dc147ce2/ss_8fe1d5ffc943262fc8e64df4670f9362dc147ce2.1920x1080.jpg?t=1791545817" alt="Cena 3 de Print I Love U" loading="lazy">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/443656cd8314611e36a847b5807afa9075abcf60/ss_443656cd8314611e36a847b5807afa9075abcf60.1920x1080.jpg?t=1791545817" alt="Cena 4 de Print I Love U" loading="lazy">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/12aa79fad6ddaa1993e7454e58f0b34f9020703d/ss_12aa79fad6ddaa1993e7454e58f0b34f9020703d.1920x1080.jpg?t=1791545817" alt="Cena 5 de Print I Love U" loading="lazy">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/631c028103be5e3ce9a2cf6d62e101c68472728e/ss_631c028103be5e3ce9a2cf6d62e101c68472728e.1920x1080.jpg?t=1791545817" alt="Cena 6 de Print I Love U" loading="lazy">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/a6609afe786e0a390bd4ef1a62d93af364a48d39/ss_a6609afe786e0a390bd4ef1a62d93af364a48d39.1920x1080.jpg?t=1791545817" alt="Cena 7 de Print I Love U" loading="lazy">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/6f700ad5412736971aa076be28570d02228a8ea0/ss_6f700ad5412736971aa076be28570d02228a8ea0.1920x1080.jpg?t=1791545817" alt="Cena 8 de Print I Love U" loading="lazy">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/6a2f1d24df84559f12d2b47e2ff3d37ee710fc3a/ss_6a2f1d24df84559f12d2b47e2ff3d37ee710fc3a.1920x1080.jpg?t=1791545817" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/4bf8fb87af301b315a8d384ee3db65b31aba9786/ss_4bf8fb87af301b315a8d384ee3db65b31aba9786.1920x1080.jpg?t=1791545817" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/8fe1d5ffc943262fc8e64df4670f9362dc147ce2/ss_8fe1d5ffc943262fc8e64df4670f9362dc147ce2.1920x1080.jpg?t=1791545817" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/443656cd8314611e36a847b5807afa9075abcf60/ss_443656cd8314611e36a847b5807afa9075abcf60.1920x1080.jpg?t=1791545817" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/12aa79fad6ddaa1993e7454e58f0b34f9020703d/ss_12aa79fad6ddaa1993e7454e58f0b34f9020703d.1920x1080.jpg?t=1791545817" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/631c028103be5e3ce9a2cf6d62e101c68472728e/ss_631c028103be5e3ce9a2cf6d62e101c68472728e.1920x1080.jpg?t=1791545817" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
             </div>
 
             <hr>
-            <h2 id="links">Página Oficial</h2>
-            <p>Consulte a página oficial para obter informações atualizadas e acessar o jogo pela loja:</p>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Página Oficial:</strong></p>
             <div class="play-links">
-                <a href="https://store.steampowered.com/app/4796160/Print_I_Love_U/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-steam"></i> Ver na Steam</a>
+                <a href="https://store.steampowered.com/app/4796160/Print_I_Love_U/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
             </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/xZybsjz" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 1)</a>
+                <a href="https://4br.me/YfmyRpC" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 2)</a>
+                <a href="https://4br.me/WNaOdgJb" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 3)</a>
+                <a href="https://4br.me/EAl39sg" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 4)</a>
+                <a href="https://4br.me/o7ea" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 5)</a>
+                <a href="https://4br.me/XtDh95vnui" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 6)</a>
+                <a href="https://4br.me/v6uyQ8" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 7)</a>
+            </div>
+
+            <p><small><em>Instruções de Instalação:<br>
+            1. Clique em um dos links de download e você será redirecionado (UploadHaven).<br>
+            2. Aguarde 5 segundos e clique no botão azul 'download now' (recomenda-se o uso de gerenciadores como FDM ou 7-Zip).<br>
+            3. Extraia o arquivo .zip baixado.<br>
+            4. Execute o aplicativo de instalação (setup) dentro da pasta e jogue através do atalho.</em></small></p>
         `
     },
     "sobre": {
