@@ -19,6 +19,7 @@ const articlesDatabase = {
     },
     "print-i-love-u": {
         title: "Print I Love U",
+        addedAt: "2026-11-06",
         categories: ["Visual Novel", "Indie", "Romance", "Terror Psicológico"],
         summary: "Uma visual novel curta sobre um jogo misterioso encontrado em um computador usado, uma dedicatória para Alice e uma história com mais de um desfecho.",
         infobox: {
