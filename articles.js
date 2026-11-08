@@ -8512,6 +8512,104 @@ const articlesDatabase = {
             </div>
         `
     },
+    "college-brawl": {
+        title: "College Brawl",
+        addedAt: "2026-11-08",
+        categories: ["Beat 'em up", "Ação", "Luta", "Eroge", "Indie", "Adulto", "Side-scroller"],
+        summary: "Um popular e polêmico beat 'em up 2D lateral com conteúdo adulto desenvolvido em Unity por ingeniusstudios (Crimson Bird / LAGS). Controle Ken para enfrentar a Red Kat Gang no campus universitário ou jogue na rota da irmã Anko.",
+        infobox: {
+            image: "https://gamefabrique.com/i/pc/college-brawl.jpg",
+            data: {
+                "Desenvolvedor": "ingeniusstudios (Crimson Bird / LAGS)",
+                "Engine": "Unity",
+                "Gêneros": "Beat 'em up, Ação, Adulto",
+                "Plataformas": "PC (Windows), macOS, Android",
+                "Lançamento": "21 de janeiro de 2020 (v1.4.2)",
+                "Classificação": "18+ (Conteúdo Explícito)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "jogabilidade", text: "2. Jogabilidade e Conteúdo" },
+            { id: "requisitos", text: "3. Requisitos e Compatibilidade" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <p><strong>College Brawl</strong> é um jogo independente de ação e beat 'em up lateral desenvolvido por <strong>ingeniusstudios</strong> (conhecido pelo criador Crimson Bird / LAGS). O título gerou imensa repercussão nas redes sociais como TikTok e YouTube, acumulando milhões de downloads.</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (EROGE):</strong> Este jogo contém conteúdo sexual explícito, nudez e animações impróprias para menores de idade. Discrição estritamente recomendada.</p>
+            </div>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>Você assume o controle de <strong>Ken</strong>, um universitário decidido a enfrentar a <em>Red Kat Gang</em> — uma gangue de garotas que domina o campus — para recuperar itens roubados de seus amigos. O jogo combina combate side-scroller ágil com escolhas táticas e narrativas adultas.</p>
+
+            <h2 id="jogabilidade">Jogabilidade e Conteúdo</h2>
+            <ul>
+                <li><strong>Mecânica de Combate:</strong> Ao derrotar inimigas pelo caminho, o jogador pode escolher entre restaurar pontos de HP ou interagir com elas para recuperar KI.</li>
+                <li><strong>Rota do Ken:</strong> Composta por 5 fases e 5 chefes, contando com 26 animações sexuais e 6 imagens dedicadas.</li>
+                <li><strong>Rota da Anko:</strong> Controle a irmã mais nova de Ken em uma campanha side-scroller de 3 fases e 4 chefes, onde ela transporta comida como drop e pode ser nocauteada caso receba 3 golpes em sequência. Inclui 10 animações e 5 imagens.</li>
+                <li><strong>Galeria de Extras:</strong> Permite revisitar todas as cenas desbloqueadas após a conclusão.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Compatibilidade</h2>
+            <ul>
+                <li><strong>Plataformas:</strong> Windows, macOS e Android.</li>
+                <li><strong>Android:</strong> Requer Android 4.4 ou superior. <em>Nota técnica:</em> O APK utiliza arquitetura de 32-bit, podendo não rodar nativamente em aparelhos Android recentes (como a linha Galaxy S24).</li>
+                <li><strong>Segurança:</strong> A página original no Itch.io está marcada com aviso de cautela devido a falhas de segurança conhecidas em versões antigas do motor Unity.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://gamefabrique.com/storage/screenshots/pc/college-brawl-03.webp" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://kotaku.com/igdb/image/upload/t_original/sckr9y.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://kotaku.com/igdb/image/upload/t_original/sckr9w.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gamefabrique.com/storage/screenshots/pc/college-brawl-14.webp" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Comunidade:</strong></p>
+            <div class="play-links">
+                <a href="https://ingeniusstudios.itch.io/high-scho" target="_blank"><i class="fa-solid fa-house"></i> Página Oficial no Itch.io</a>
+                <a href="https://ingeniusstudios.itch.io/" target="_blank"><i class="fa-solid fa-user"></i> Perfil do Desenvolvedor (ingeniusstudios)</a>
+                <a href="https://college-brawl.com/" target="_blank"><i class="fa-solid fa-desktop"></i> Site de Fã / Comunidade</a>
+                <a href="https://x.com/collegebrawlcom" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter Oficial</a>
+                <a href="https://www.facebook.com/collegebrawlcom" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Oficial</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads Oficiais / Espelhos (v1.4.1 / v1.4.2):</strong></p>
+            
+            <p><strong>Android (APK — com.IngeniusStudios.CollegeBrawlAndroid):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/81M2acnnc" target="_blank"><i class="fa-brands fa-android"></i> Download APK (Servidor 1)</a>
+                <a href="https://4br.me/OWuZd1w" target="_blank"><i class="fa-brands fa-android"></i> Download APK (Servidor 2)</a>
+                <a href="https://4br.me/NrS1B" target="_blank"><i class="fa-brands fa-android"></i> Download APK (Servidor 3)</a>
+                <a href="https://4br.me/ifSIkH" target="_blank"><i class="fa-brands fa-android"></i> Download APK (Servidor 4)</a>
+                <a href="https://4br.me/aOqOm04cw" target="_blank"><i class="fa-brands fa-android"></i> Download APK (Servidor 5)</a>
+            </div>
+
+            <p style="margin-top: 10px;"><strong>PC (Windows — Uncensored x86):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/SgoKyj" target="_blank"><i class="fa-brands fa-windows"></i> Download PC (Servidor 1)</a>
+                <a href="https://4br.me/5g9Lu" target="_blank"><i class="fa-brands fa-windows"></i> Download PC (Servidor 2)</a>
+                <a href="https://4br.me/lWNJscXpq" target="_blank"><i class="fa-brands fa-windows"></i> Download PC (Servidor 3)</a>
+                <a href="https://4br.me/a4NrH" target="_blank"><i class="fa-brands fa-windows"></i> Download PC (Servidor 4)</a>
+            </div>
+
+            <p style="margin-top: 10px;"><strong>macOS (Uncensored):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/hSXlFsm2" target="_blank"><i class="fa-brands fa-apple"></i> Download Mac (Servidor 1)</a>
+                <a href="https://4br.me/42eR" target="_blank"><i class="fa-brands fa-apple"></i> Download Mac (Servidor 2)</a>
+                <a href="https://4br.me/6vIcUEACi" target="_blank"><i class="fa-brands fa-apple"></i> Download Mac (Servidor 3)</a>
+            </div>
+
+            <p><small><em>Nota de Segurança: O desenvolvedor Crimson Bird / LAGS informou que planeja futuros remakes de seus projetos após finalizar outros títulos (como Hailey's Treasure Adventure e Lustful Spirit Hunt).</em></small></p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
