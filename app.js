@@ -11,6 +11,7 @@ function createSlug(text) {
 const ADMIN_EMAIL = 'konozuba1k@gmail.com';
 let favoriteRoutes = [];
 let favoritesLoadedFor = null;
+let gtaViCountdownTimer = null;
 const SITE_SETTINGS_STORAGE_KEY = 'wikigames-site-settings';
 const defaultSiteSettings = {
     allowAdultContent: false,
@@ -1196,6 +1197,48 @@ function setPageBackground(article) {
     }
 }
 
+function setupGtaViCountdown(container) {
+    if (gtaViCountdownTimer) {
+        window.clearInterval(gtaViCountdownTimer);
+        gtaViCountdownTimer = null;
+    }
+
+    const message = container.querySelector('[data-gta-vi-countdown]');
+    if (!message) return;
+
+    const updateCountdown = () => {
+        const now = new Date();
+        const dateParts = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/Sao_Paulo',
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric'
+        }).formatToParts(now);
+        const year = Number(dateParts.find(part => part.type === 'year').value);
+        const month = Number(dateParts.find(part => part.type === 'month').value);
+        const day = Number(dateParts.find(part => part.type === 'day').value);
+        const todayUtc = Date.UTC(year, month - 1, day);
+        const launchUtc = Date.UTC(2026, 10, 19);
+        const daysRemaining = Math.round((launchUtc - todayUtc) / 86400000);
+
+        if (daysRemaining <= 0) {
+            message.textContent = 'O jogo já foi lançado!';
+            return;
+        }
+
+        const today = new Intl.DateTimeFormat('pt-BR', {
+            timeZone: 'America/Sao_Paulo',
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        }).format(now);
+        message.textContent = `O jogo ainda não foi lançado. Hoje é ${today} e o lançamento está marcado para 19/11/2026, ou seja, daqui a ${daysRemaining} ${daysRemaining === 1 ? 'dia' : 'dias'}.`;
+    };
+
+    updateCountdown();
+    gtaViCountdownTimer = window.setInterval(updateCountdown, 60000);
+}
+
 function getTrailerData(article) {
     if (!article) return null;
 
@@ -1233,7 +1276,6 @@ function getTrailerData(article) {
 
     return null;
 }
-
 function renderDownloadWarning() {
     return `
         <div class="download-warning">
@@ -1833,6 +1875,7 @@ function renderPage() {
         }
 
         container.innerHTML = htmlContent;
+        setupGtaViCountdown(container);
         markArticleGalleryImages(container);
         if (route === 'home') loadPopularHomeSection();
 

@@ -8636,6 +8636,10 @@ const articlesDatabase = {
         content: `
             <p><strong>Grand Theft Auto VI (GTA 6)</strong> é o aguardado oitavo título principal da lendária franquia da Rockstar Games. Ambientado no estado fictício de <strong>Leonida</strong> (inspirado na Flórida) e na icônica <strong>Vice City</strong>, o jogo promete redefinir os padrões de mundos abertos nos consoles de nova geração.</p>
 
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>Aviso importante de contexto:</strong> <span data-gta-vi-countdown></span> Tudo abaixo é informação oficial da Rockstar, exceto onde indicado.</p>
+            </div>
+
             <h2 id="sinopse">Sinopse e Premissa</h2>
             <p>A história acompanha <strong>Jason Duval</strong> e <strong>Lucia Caminos</strong>, um casal de criminosos que sempre soube que o jogo estava armado contra eles. Quando um golpe "fácil" dá errado, os dois se encontram no lado mais sombrio da América, presos em uma conspiração criminosa que atravessa todo o estado de Leonida e forçados a depender um do outro para sobreviver.</p>
 
