@@ -8610,6 +8610,67 @@ const articlesDatabase = {
             <p><small><em>Nota de Segurança: O desenvolvedor Crimson Bird / LAGS informou que planeja futuros remakes de seus projetos após finalizar outros títulos (como Hailey's Treasure Adventure e Lustful Spirit Hunt).</em></small></p>
         `
     },
+    "grand-theft-auto-vi": {
+        title: "Grand Theft Auto VI (GTA 6)",
+        addedAt: "2026-11-08",
+        youtubeId: "IpSDW3Mq-7E",
+        categories: ["Ação-Aventura", "Mundo Aberto", "Crime", "Tiro em Terceira Pessoa", "AAA"],
+        summary: "O oitavo jogo principal da franquia Grand Theft Auto e continuação direta de GTA V. Acompanhe a jornada de Jason Duval e Lucia Caminos em Vice City e no estado fictício de Leonida enquanto enfrentam uma conspiração criminosa em uma contagem regressiva para o lançamento.",
+        infobox: {
+            image: "https://imgs.search.brave.com/jDGzerS5aQSFpdJ-zW5g82HFt1-G_uHC1r-hNcwWxXE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHNpby5nbndjZG4u/Y29tL2ltYWdlMDAx/X0tRUGJpUmguanBn/P3dpZHRoPTIwNDgm/aGVpZ2h0PTIwNDgm/Zml0PWJvdW5kcyZx/dWFsaXR5PTg1JmZv/cm1hdD1qcGcmYXV0/bz13ZWJw",
+            data: {
+                "Desenvolvedor": "Rockstar Games (Rockstar North)",
+                "Publicadora": "Rockstar Games / Take-Two Interactive",
+                "Gêneros": "Ação-aventura, Mundo aberto, Crime",
+                "Plataformas": "PlayStation 5, Xbox Series X|S",
+                "Lançamento": "19 de novembro de 2026",
+                "Classificação": "M (Mature 17+) / PEGI 18"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "detalhes", text: "2. Detalhes de Produção e Conteúdo" },
+            { id: "requisitos", text: "3. Especificações e Requisitos" },
+            { id: "links", text: "4. Links Oficiais e Alertas de Golpes" }
+        ],
+        content: `
+            <p><strong>Grand Theft Auto VI (GTA 6)</strong> é o aguardado oitavo título principal da lendária franquia da Rockstar Games. Ambientado no estado fictício de <strong>Leonida</strong> (inspirado na Flórida) e na icônica <strong>Vice City</strong>, o jogo promete redefinir os padrões de mundos abertos nos consoles de nova geração.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>A história acompanha <strong>Jason Duval</strong> e <strong>Lucia Caminos</strong>, um casal de criminosos que sempre soube que o jogo estava armado contra eles. Quando um golpe "fácil" dá errado, os dois se encontram no lado mais sombrio da América, presos em uma conspiração criminosa que atravessa todo o estado de Leonida e forçados a depender um do outro para sobreviver.</p>
+
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>ALERTA DE GOLPES:</strong> O jogo NÃO possui versão anunciada para PC ou dispositivos móveis até o momento (apenas PS5 e Xbox Series X|S). Qualquer site oferecendo "GTA 6 APK para Android" ou "GTA 6 PC" antes do lançamento é golpe ou mod malicioso.</p>
+            </div>
+
+            <h2 id="detalhes">Detalhes de Produção e Conteúdo</h2>
+            <ul>
+                <li><strong>Mundo Aberto Expansivo:</strong> O mapa engloba Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia e Mount Kalaga.</li>
+                <li><strong>Elenco de Apoio:</strong> Conta com personagens confirmados como Cal Hampton, Boobie Boike, Dre'Quan Priest, Real Dimez, Raul Bautista e Brian Heder.</li>
+                <li><strong>Trilha Sonora Exclusiva:</strong> Assinada pelo duo francês Justice, incluindo o single "Flower in a Hurricane" com Tame Impala, SZA e King Gizzard & The Lizard Wizard.</li>
+                <li><strong>Histórico de Desenvolvimento:</strong> Passou por dois adiamentos públicos (inicialmente previsto para o outono de 2025, depois para 26/05/2026, com lançamento final agendado para 19/11/2026).</li>
+            </ul>
+
+            <h2 id="requisitos">Especificações Técnicas</h2>
+            <ul>
+                <li><strong>Plataformas:</strong> Exclusivo temporário/inicial para PlayStation 5 e Xbox Series X|S.</li>
+                <li><strong>Espaço em Disco:</strong> 212 GB livres necessários.</li>
+                <li><strong>Preços Oficiais no Brasil:</strong> R$ 349,90 (Standard) e R$ 439,90 (Ultimate Edition, exclusivamente digital).</li>
+            </ul>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Canais</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais da Rockstar:</strong></p>
+            <div class="play-links">
+                <a href="https://www.rockstargames.com/VI" target="_blank"><i class="fa-solid fa-desktop"></i> Página Oficial de GTA VI</a>
+                <a href="https://www.rockstargames.com/newswire" target="_blank"><i class="fa-solid fa-newspaper"></i> Rockstar Newswire (Anúncios)</a>
+                <a href="https://store.rockstargames.com/" target="_blank"><i class="fa-solid fa-store"></i> Loja Oficial / Pré-venda</a>
+                <a href="https://www.gtavi-thealbum.com/" target="_blank"><i class="fa-solid fa-music"></i> Álbum Oficial da Trilha Sonora</a>
+                <a href="https://x.com/RockstarGames" target="_blank"><i class="fa-brands fa-x-twitter"></i> Rockstar no X (Twitter)</a>
+            </div>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
