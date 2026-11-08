@@ -8610,71 +8610,6 @@ const articlesDatabase = {
             <p><small><em>Nota de Segurança: O desenvolvedor Crimson Bird / LAGS informou que planeja futuros remakes de seus projetos após finalizar outros títulos (como Hailey's Treasure Adventure e Lustful Spirit Hunt).</em></small></p>
         `
     },
-    "grand-theft-auto-vi": {
-        title: "Grand Theft Auto VI (GTA 6)",
-        addedAt: "2026-11-08",
-        youtubeId: "IpSDW3Mq-7E",
-        categories: ["Ação-Aventura", "Mundo Aberto", "Crime", "Tiro em Terceira Pessoa", "AAA"],
-        summary: "O oitavo jogo principal da franquia Grand Theft Auto e continuação direta de GTA V. Acompanhe a jornada de Jason Duval e Lucia Caminos em Vice City e no estado fictício de Leonida enquanto enfrentam uma conspiração criminosa em uma contagem regressiva para o lançamento.",
-        infobox: {
-            image: "https://imgs.search.brave.com/jDGzerS5aQSFpdJ-zW5g82HFt1-G_uHC1r-hNcwWxXE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHNpby5nbndjZG4u/Y29tL2ltYWdlMDAx/X0tRUGJpUmguanBn/P3dpZHRoPTIwNDgm/aGVpZ2h0PTIwNDgm/Zml0PWJvdW5kcyZx/dWFsaXR5PTg1JmZv/cm1hdD1qcGcmYXV0/bz13ZWJw",
-            data: {
-                "Desenvolvedor": "Rockstar Games (Rockstar North)",
-                "Publicadora": "Rockstar Games / Take-Two Interactive",
-                "Gêneros": "Ação-aventura, Mundo aberto, Crime",
-                "Plataformas": "PlayStation 5, Xbox Series X|S",
-                "Lançamento": "19 de novembro de 2026",
-                "Classificação": "M (Mature 17+) / PEGI 18"
-            }
-        },
-        toc: [
-            { id: "sinopse", text: "1. Sinopse e Premissa" },
-            { id: "detalhes", text: "2. Detalhes de Produção e Conteúdo" },
-            { id: "requisitos", text: "3. Especificações e Requisitos" },
-            { id: "links", text: "4. Links Oficiais e Alertas de Golpes" }
-        ],
-        content: `
-            <p><strong>Grand Theft Auto VI (GTA 6)</strong> é o aguardado oitavo título principal da lendária franquia da Rockstar Games. Ambientado no estado fictício de <strong>Leonida</strong> (inspirado na Flórida) e na icônica <strong>Vice City</strong>, o jogo promete redefinir os padrões de mundos abertos nos consoles de nova geração.</p>
-
-            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
-                <p style="margin: 0; color: #ff8888;"><strong>Aviso importante de contexto:</strong> <span data-gta-vi-countdown></span> Tudo abaixo é informação oficial da Rockstar, exceto onde indicado.</p>
-            </div>
-
-            <h2 id="sinopse">Sinopse e Premissa</h2>
-            <p>A história acompanha <strong>Jason Duval</strong> e <strong>Lucia Caminos</strong>, um casal de criminosos que sempre soube que o jogo estava armado contra eles. Quando um golpe "fácil" dá errado, os dois se encontram no lado mais sombrio da América, presos em uma conspiração criminosa que atravessa todo o estado de Leonida e forçados a depender um do outro para sobreviver.</p>
-
-            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin: 15px 0; border-radius: 4px;">
-                <p style="margin: 0; color: #ff8888;"><strong>ALERTA DE GOLPES:</strong> O jogo NÃO possui versão anunciada para PC ou dispositivos móveis até o momento (apenas PS5 e Xbox Series X|S). Qualquer site oferecendo "GTA 6 APK para Android" ou "GTA 6 PC" antes do lançamento é golpe ou mod malicioso.</p>
-            </div>
-
-            <h2 id="detalhes">Detalhes de Produção e Conteúdo</h2>
-            <ul>
-                <li><strong>Mundo Aberto Expansivo:</strong> O mapa engloba Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia e Mount Kalaga.</li>
-                <li><strong>Elenco de Apoio:</strong> Conta com personagens confirmados como Cal Hampton, Boobie Boike, Dre'Quan Priest, Real Dimez, Raul Bautista e Brian Heder.</li>
-                <li><strong>Trilha Sonora Exclusiva:</strong> Assinada pelo duo francês Justice, incluindo o single "Flower in a Hurricane" com Tame Impala, SZA e King Gizzard & The Lizard Wizard.</li>
-                <li><strong>Histórico de Desenvolvimento:</strong> Passou por dois adiamentos públicos (inicialmente previsto para o outono de 2025, depois para 26/05/2026, com lançamento final agendado para 19/11/2026).</li>
-            </ul>
-
-            <h2 id="requisitos">Especificações Técnicas</h2>
-            <ul>
-                <li><strong>Plataformas:</strong> Exclusivo temporário/inicial para PlayStation 5 e Xbox Series X|S.</li>
-                <li><strong>Espaço em Disco:</strong> 212 GB livres necessários.</li>
-                <li><strong>Preços Oficiais no Brasil:</strong> R$ 349,90 (Standard) e R$ 439,90 (Ultimate Edition, exclusivamente digital).</li>
-            </ul>
-
-            <hr>
-            <h2 id="links">Links Oficiais e Canais</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais da Rockstar:</strong></p>
-            <div class="play-links">
-                <a href="https://www.rockstargames.com/VI" target="_blank"><i class="fa-solid fa-desktop"></i> Página Oficial de GTA VI</a>
-                <a href="https://www.rockstargames.com/newswire" target="_blank"><i class="fa-solid fa-newspaper"></i> Rockstar Newswire (Anúncios)</a>
-                <a href="https://store.rockstargames.com/" target="_blank"><i class="fa-solid fa-store"></i> Loja Oficial / Pré-venda</a>
-                <a href="https://www.gtavi-thealbum.com/" target="_blank"><i class="fa-solid fa-music"></i> Álbum Oficial da Trilha Sonora</a>
-                <a href="https://x.com/RockstarGames" target="_blank"><i class="fa-brands fa-x-twitter"></i> Rockstar no X (Twitter)</a>
-            </div>
-        `
-    },
     "karryns-prison": {
         title: "Karryn's Prison",
         addedAt: "2026-11-08",
@@ -8871,6 +8806,202 @@ const articlesDatabase = {
                 <a href="https://4br.me/MqLJIdWp6S" target="_blank"><i class="fa-brands fa-android"></i> Download Android (Arquivo 1 / APK)</a>
                 <a href="https://4br.me/6ayuv6jjl" target="_blank"><i class="fa-brands fa-android"></i> Download Android (Arquivo 2 / .RPA)</a>
             </div>
+        `
+    },
+    "treasure-hunter-claire": {
+        title: "Treasure Hunter Claire",
+        addedAt: "2026-11-08",
+        categories: ["RPG", "Aventura", "Indie", "JRPG", "Eroge", "Adulto", "Fantasia"],
+        summary: "Um aclamado JRPG adulto de fantasia desenvolvido pelo círculo Acerola e publicado pela Kagura Games. Acompanhe a caçadora de tesouros Claire na lendária ilha de Alstroemeria em busca de um tesouro capaz de realizar qualquer desejo, evoluindo suas habilidades através de energias vitais coletadas em combate.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/capsule_616x353.jpg",
+            data: {
+                "Desenvolvedor": "Acerola (あせろら)",
+                "Publicadora": "Acerola / Kagura Games",
+                "Engine": "WOLF RPG Editor (32-bit)",
+                "Gêneros": "RPG, Aventura, Eroge, Fantasia",
+                "Plataformas": "PC (Windows). Sem versão oficial mobile/Android",
+                "Lançamento": "7 de julho de 2017 (JP) / 19 de julho de 2018 (Mundial)",
+                "Classificação": "18+ (Conteúdo Adulto Explícito sem Mosaico na versão ocidental)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Jogabilidade e Características" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém cenas adultas explícitas, nudez, monstros, tentáculos e elementos temáticos maduros. Discrição estritamente recomendada para maiores de 18 anos.</p>
+            </div>
+
+            <p><strong>Treasure Hunter Claire</strong> (título original japonês: <em>トレジャーハンタークレア～精液を集める冒険家～</em>) é amplamente considerado o carro-chefe do desenvolvedor <strong>Acerola</strong> e uma das referências do gênero JRPG adulto no ocidente, compartindo fórmulas semelhantes a títulos como <em>Brave Alchemist Colette</em>.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/6e999b96181ef5cd5f6882ce45a64f9c.avif" alt="Treasure Hunter Claire Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+            </div>
+
+            <p>A guerra entre o Herói e o Rei Demônio terminou, e o mundo vive em uma aparente paz. Contudo, monstros continuam a causar estragos, forçando os humanos a se aliarem a demônios para contê-los. Nesse cenário vive <strong>Claire</strong>, uma caçadora de tesouros ambiciosa.</p>
+            <p>Ouvindo rumores sobre um tesouro lendário capaz de realizar qualquer desejo, ela viaja para a remota ilha de Alstroemeria. No local, acidentalmente invoca a Deusa local, que revela uma verdade alarmante: Claire carrega o sangue do Herói, e um vilão perigoso busca o mesmo tesouro para arruinar o mundo. Claire precisa encontrá-lo primeiro com a ajuda de suas aliadas, evoluindo suas habilidades por meio de essências coletadas em combate e encontros íntimos.</p>
+
+            <h2 id="gameplay">Jogabilidade e Características</h2>
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/bcb3a50e306612b6117a0b0073369946.avif" alt="Treasure Hunter Claire Gameplay" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+            </div>
+
+            <ul>
+                <li><strong>Elenco e Missões:</strong> Dezenas de quests na Guilda e um amplo elenco de personagens recrutáveis, cada um com eventos próprios que alteram o rumo da história.</li>
+                <li><strong>Sistema de Roupas:</strong> Roupas coletáveis e aprimoráveis que mudam dinamicamente tanto no mapa quanto durante as batalhas.</li>
+                <li><strong>Dublagem Completa:</strong> Elenco principal totalmente dublado em japonês.</li>
+                <li><strong>Combate Clássico:</strong> Sistema de combate por turnos em visão isométrica com menus tradicionais de JRPG.</li>
+            </ul>
+
+            <div style="margin: 15px 0; display: flex; flex-direction: column; gap: 10px; align-items: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/b0d3fdbe83946705817f74628cdb5f96.avif" alt="Extra 1" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/b8e28270ba375d0d1f416a01c96cd20c.avif" alt="Extra 2" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/f07738fdf76651c8f310612e54fba7a9.avif" alt="Extra 3" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/6418787123d1ee33252e5d8ec0518187.avif" alt="Extra 4" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/658ebd97ee2fe169653fd6a0b7432180.avif" alt="Extra 5" style="max-width: 100%; height: auto; border-radius: 4px;">
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <ul>
+                <li><strong>SO:</strong> Windows 7 / 8 / 8.1 / 10</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo ou superior</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Compatível com DirectX 9 / OpenGL 4.1</li>
+                <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
+                <li><strong>Resolução:</strong> 1280x768 ou superior</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-1.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-2.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-3.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-4.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-5.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-6.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-7.jpg" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-8.jpg" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-9.jpg" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://store.steampowered.com/app/828070/Treasure_Hunter_Claire/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.gog.com/game/treasure_hunter_claire" target="_blank"><i class="fa-solid fa-store"></i> Página na GOG</a>
+                <a href="https://www.gog.com/game/treasure_hunter_claire_unrated" target="_blank"><i class="fa-solid fa-store"></i> GOG (Versão Unrated)</a>
+                <a href="https://www.kaguragames.com/product/treasure-hunter-claire/" target="_blank"><i class="fa-solid fa-store"></i> Loja Oficial Kagura Games</a>
+                <a href="https://www.kaguragames.com/product/treasure-hunter-claire-steam-patch/" target="_blank"><i class="fa-solid fa-wrench"></i> Patch Oficial v8 (Necessário para Steam/GOG)</a>
+                <a href="https://www.dlsite.com/maniax/work/=/product_id/RJ195774.html" target="_blank"><i class="fa-solid fa-store"></i> DLsite (Versão Original JP)</a>
+                <a href="https://discord.gg/kaguragames" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial Kagura Games</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC):</strong></p>
+            
+            <p><strong>Versão v1.07 (Sem Censura):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/jHASki" target="_blank"><i class="fa-solid fa-download"></i> Download Servidor 1</a>
+                <a href="https://4br.me/jMOy" target="_blank"><i class="fa-solid fa-download"></i> Download Servidor 2</a>
+            </div>
+
+            <p style="margin-top: 10px;"><strong>Pacote com GOG + Patch v8 (Senha: kimochi.info):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/MbT9TRS" target="_blank"><i class="fa-solid fa-download"></i> Download Pacote Completo (Kimochi)</a>
+                <a href="https://4br.me/sOulLidi" target="_blank"><i class="fa-solid fa-download"></i> Download GOG + v8 (Servidor 1)</a>
+                <a href="https://4br.me/t2nk6B2w6i" target="_blank"><i class="fa-solid fa-download"></i> Download GOG + v8 (Servidor 2)</a>
+            </div>
+
+            <p><small><em>Nota de Instalação: Se adquirir pela Steam ou GOG padrão, lembre-se de aplicar o patch oficial v8 para restaurar o conteúdo adulto, já que as lojas exigem arquivos adicionais. No celular, não há versão APK nativa; é necessário o uso de emuladores como Winlator/ExaGear ou jogar diretamente no PC.</em></small></p>
+        `
+    },
+    "bible-black": {
+        title: "Bible Black —La Noche de Walpurgis—",
+        addedAt: "2026-11-08",
+        categories: ["Visual Novel", "Eroge", "Terror", "Ocultismo", "Horror", "Adulto"],
+        summary: "Um dos eroges de horror oculto mais famosos e vendidos de todos os tempos, desenvolvido pela ActiveSoft. Acompanhe Taki Minase após encontrar um livro de magia negra em uma sala isolada de sua escola, desencadeando eventos sombrios, rituais e corrupção que envolvem estudantes e professoras.",
+        infobox: {
+            image: "https://www.bibleblackwiki.com/w/images/f/f8/Logo_game.png",
+            data: {
+                "Desenvolvedor": "ActiveSoft (Active Software)",
+                "Publicadora": "ActiveSoft / Kitty Media",
+                "Criador / Roteiro": "Sei Shoujo",
+                "Gêneros": "Eroge, Visual Novel, Terror, Ocultismo",
+                "Plataformas": "PC (Windows), DVD-PG, UMD-PSP",
+                "Lançamento": "14 de julho de 2000",
+                "Classificação": "18+ (Conteúdo Adulto Explícito)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Características e Franquia" },
+            { id: "requisitos", text: "3. Requisitos e Plataformas" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge clássico que contém temas de horror oculto, magia negra, nudez e atos sexuais explícitos. Discrição estritamente recomendada para maiores de 18 anos.</p>
+            </div>
+
+            <p><strong>Bible Black —La Noche de Walpurgis—</strong> (バイブルブラック) é uma obra icônica e um marco histórico entre os jogos eroge de terror e ocultismo, criada por <strong>Sei Shoujo</strong> e lançada pela ActiveSoft no ano 2000.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>O protagonista é <strong>Taki Minase</strong>, um estudante comum que encontra, em uma sala isolada do colégio, o livro de magia negra utilizado por um clube de ocultismo. Doze anos antes, cinco alunas foram assassinadas em um ritual satânico no subsolo da escola, e a maldição resultante permaneceu acorrentada no local.</p>
+            <p>Ao começar a usar o grimório, Taki se aprofunda cada vez mais nas artes ocultas, arrastando amigos, colegas e professoras para uma espiral de corrupção e perversão, até desvendar a verdadeira origem do volume e o mistério por trás da Noite de Walpurgis.</p>
+
+            <h2 id="gameplay">Características e Franquia</h2>
+            <ul>
+                <li><strong>Estrutura de Visual Novel:</strong> Leitura linear pontuada por escolhas que conduzem a ramificações de enredo e múltiplos finais.</li>
+                <li><strong>Duração:</strong> Campanhas profundas que variam de 10 a 30 horas de jogo.</li>
+                <li><strong>Impacto Cultural:</strong> O sucesso do jogo gerou sequências diretas como <em>Bible Black –The Infection–</em> (2008), o spin-off <em>Discipline</em> e uma famosa adaptação em anime pela Milky Studio/Museum Pictures (OVA, Prequelas e New Testament).</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Plataformas</h2>
+            <ul>
+                <li><strong>Plataforma Original:</strong> Windows (compatível com sistemas clássicos da época, com versões posteriores em DVD-PG e PSP UMD).</li>
+                <li><strong>Status Comercial:</strong> Esgotado comercialmente há anos, sendo amplamente tratado como abandonware e preservado pela comunidade de fãs.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e015b_400.avif" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e018b_400.avif" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e020_400.avif" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e021b_400.avif" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e021c_400.avif" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzU1OTI1MS8yMTE5ODc4My5wbmc=/original/Fj83bN.png" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Bases de Dados e Referências:</strong></p>
+            <div class="play-links">
+                <a href="https://en.wikipedia.org/wiki/Bible_Black" target="_blank"><i class="fa-brands fa-wikipedia-w"></i> Wikipedia (EN)</a>
+                <a href="https://vndb.org/v9" target="_blank"><i class="fa-solid fa-database"></i> VNDB (Jogo Original)</a>
+                <a href="https://vndb.org/v1030" target="_blank"><i class="fa-solid fa-database"></i> VNDB (Sequência: The Infection)</a>
+                <a href="https://www.bibleblackwiki.com/wiki/Bible_Black:_La_Noche_de_Walpurgis_(game)" target="_blank"><i class="fa-solid fa-book"></i> Bible Black Wiki</a>
+                <a href="https://myanimelist.net/anime/368/Bible_Black" target="_blank"><i class="fa-solid fa-tv"></i> MyAnimeList (Anime)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads e Arquivos (PC / Community Ports):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/hI62BbZ" target="_blank"><i class="fa-solid fa-download"></i> Download Bible Black PC (Servidor 1)</a>
+                <a href="https://4br.me/Pxnkr" target="_blank"><i class="fa-solid fa-download"></i> Download Bible Black PC (Servidor 2)</a>
+                <a href="https://eroge-developer.itch.io/bible-black-remake" target="_blank"><i class="fa-solid fa-gamepad"></i> Página Remake / Port Itch.io (com APK)</a>
+            </div>
+
+            <p><small><em>Nota de Compatibilidade: Por se tratar de um título de 2000, versões modernas do Windows podem exigir o uso de modo de compatibilidade ou patches comunitários para execução correta.</em></small></p>
         `
     },
     "trainwreck": {
