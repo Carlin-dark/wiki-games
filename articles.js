@@ -8675,6 +8675,204 @@ const articlesDatabase = {
             </div>
         `
     },
+    "karryns-prison": {
+        title: "Karryn's Prison",
+        addedAt: "2026-11-08",
+        categories: ["RPG", "Simulação", "Estratégia", "Eroge", "Adulto", "Combate por Turnos", "Gestão"],
+        summary: "Um aclamado RPG adulto de gestão e combate tático desenvolvido pela Remtairy. Você controla Karryn, secretária e guarda-costas nomeada Chefe de Guarda para reprimir uma revolta em uma prisão masculina. Enfrente presidiários em combates diretos onde o conteúdo adulto ocorre em tempo real durante as batalhas através do sistema de Vontade, Desejo e mais de 400 Passivas de corrupção.",
+        infobox: {
+            image: "https://img.itch.zone/aW1nLzE3OTEzODA0LnBuZw==/original/tpgfWS.png",
+            data: {
+                "Desenvolvedor": "Remtairy (Rem + Sachinama)",
+                "Publicadora": "Remtairy",
+                "Engine": "RPG Maker MV",
+                "Gêneros": "RPG, Simulação, Estratégia, Eroge",
+                "Plataformas": "PC (Windows). Ports de fãs para Android (APK)",
+                "Lançamento": "15 de dezembro de 2021 (v1.3.1.69 em jan/2026)",
+                "Classificação": "18+ (Conteúdo Adulto Explícito)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Mecânicas de Jogo e Recursos" },
+            { id: "requisitos", text: "3. Especificações e Plataformas" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém nudez total, atos sexuais explícitos, linguagem imprópria e temas de corrupção. Discrição estritamente recomendada para maiores de 18 anos.</p>
+            </div>
+
+            <p><strong>Karryn's Prison</strong> é um dos títulos mais populares e aclamados do gênero eroge/RPG de estratégia, desenvolvido pela dupla <strong>Remtairy</strong> (formada por Rem na programação e localização e Sachinama na arte). O jogo se destaca por integrar todo o seu conteúdo adulto diretamente nas mecânicas do combate por turnos, sem recorrer a sequências estáticas de visual novel.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>No fictício Império de Xanados, você assume o papel de <strong>Karryn</strong>, a imponente secretária pessoal e guarda-costas do Imperador. Quando uma penitenciária masculina de segurança máxima entra em rebelião generalizada, Karryn é enviada como a nova Chefe de Guarda com a missão de restaurar a ordem. O objetivo é subjugar a população carcerária pela força bruta — ou sucumbir às investidas constantes dos detentos à medida que sua resistência física e mental é testada.</p>
+
+            <h2 id="gameplay">Mecânicas de Jogo e Recursos</h2>
+            <ul>
+                <li><strong>Combate em Tempo Real na Batalha:</strong> Todas as interações adultas acontecem diretamente na tela de combate através de mecânicas de ataque, agarre e rendição.</li>
+                <li><strong>Sistema de Vontade e Desejo:</strong> Equilibre a barra de Vontade de Karryn para manter o controle e resistir às investidas ou veja sua barra de Desejo aumentar, tornando-a incapaz de lutar.</li>
+                <li><strong>Mais de 400 Passivas:</strong> As ações tomadas e os ataques sofridos desbloqueiam passivas permanentes que alteram o comportamento, as estatísticas e as vulnerabilidades de Karryn a cada nova batalha.</li>
+                <li><strong>Gestão por Decretos:</strong> Como Chefe de Guarda, emita decretos administrativos para gerenciar os recursos da prisão, melhorar os equipamentos de segurança ou alterar as regras de confinamento.</li>
+                <li><strong>Rejogabilidade Extensa:</strong> Oferece múltiplos finais, modo New Game Plus, 60 conquistas e 3 níveis de dificuldade (Secretary, Warden e Prisoner). Inclui suporte para integração com brinquedos Lovense.</li>
+            </ul>
+
+            <h2 id="requisitos">Especificações e Plataformas</h2>
+            <ul>
+                <li><strong>Plataforma Oficial:</strong> PC (Windows 64 bits). Tamanho aproximado: ~1,5 GB.</li>
+                <li><strong>Versões Mobile:</strong> Não há versão Android oficial desenvolvida pela Remtairy; os APKs disponíveis são ports adaptados por fãs.</li>
+                <li><strong>DLCs Disponíveis:</strong> <em>Gym Trainer Side Job</em>, <em>Stray Pubes</em> e <em>P Cup</em>.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4MC5wbmc=/original/SV0qRt.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4MS5wbmc=/original/iuVFET.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4Mi5wbmc=/original/%2FpwpZ6.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4My5wbmc=/original/t2YElt.png" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4Ny5wbmc=/original/NNffVs.png" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4OS5wbmc=/original/hoDO0M.png" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114151.jpg" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114319.jpg" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114822.jpg" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://remtairy.com/karryns-prison/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial</a>
+                <a href="https://store.steampowered.com/app/1619750/Karryns_Prison/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://remtairy.itch.io/karryns-prison" target="_blank"><i class="fa-brands fa-itch-io"></i> Página no Itch.io</a>
+                <a href="https://www.dlsite.com/maniax/work/=/product_id/RJ331590.html" target="_blank"><i class="fa-solid fa-store"></i> DLsite (Censura Mosaico)</a>
+                <a href="https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_259704/" target="_blank"><i class="fa-solid fa-store"></i> Fanza</a>
+                <a href="https://www.patreon.com/remtairy" target="_blank"><i class="fa-brands fa-patreon"></i> Patreon do Desenvolvedor</a>
+                <a href="https://discord.gg/Zb7gG3u" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
+                <a href="https://twitter.com/Remtairy" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter / X Oficial</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo e Mídia:</strong></p>
+            
+            <p><strong>PC (Windows — v1.3.1.69 FULL + DLCs):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/Mrreua13" target="_blank"><i class="fa-brands fa-windows"></i> Download PC v1.3.1.69 (Servidor 1)</a>
+                <a href="https://4br.me/CNv0pG4yB" target="_blank"><i class="fa-brands fa-windows"></i> Download PC v1.3.1.69 (Servidor 2)</a>
+                <a href="https://4br.me/LHMDOYdZOj" target="_blank"><i class="fa-brands fa-windows"></i> Download PC v1.3.1.21 (Servidor Alternativo)</a>
+            </div>
+
+            <p style="margin-top: 10px;"><strong>Android (APK Port — v1.3.1.21 FULL + DLCs):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/Pbdm4ZVu" target="_blank"><i class="fa-brands fa-android"></i> Download APK Port (Servidor 1)</a>
+                <a href="https://4br.me/NwrymJ" target="_blank"><i class="fa-brands fa-android"></i> Download APK Port (Servidor 2)</a>
+            </div>
+
+            <p style="margin-top: 10px;"><strong>Pacote de Galeria & Mídia (CG Rip Collection):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/tZUHkAs" target="_blank"><i class="fa-solid fa-images"></i> Download CG Rip (Servidor 1)</a>
+                <a href="https://4br.me/KUOovii2B" target="_blank"><i class="fa-solid fa-images"></i> Download CG Rip (Servidor 2)</a>
+            </div>
+        `
+    },
+    "meltys-quest": {
+        title: "Meltys Quest",
+        addedAt: "2026-11-08",
+        trailers: [
+            {
+                title: "Demo Play",
+                url: "https://video.akamai.steamstatic.com/store_trailers/723090/127341/09b72dc5b1b8a4a8d984c509710843d24a474ee3/1750575575/hls_264_master.m3u8"
+            },
+            {
+                title: "Trailer japonês",
+                url: "https://video.akamai.steamstatic.com/store_trailers/723090/185013/82dafbda04470ab7503cb5b115299ca3f3cb635c/1750575583/hls_264_master.m3u8"
+            }
+        ],
+        categories: ["RPG", "JRPG", "Eroge", "Adulto", "Fantasia", "Protagonista Feminina", "Indie"],
+        summary: "Um RPG adulto de humor leve desenvolvido pelo círculo japonês Happy Life (Sachinama) com localização de Remtairy. Acompanhe a princesa Meltys — uma gyaru preguiçosa e hedonista — em sua jornada para resgatar suas três irmãs e restaurar o reino após a invasão do Império Monstro de Grolido, acumulando níveis de 'Slut Level' pelo caminho.",
+        infobox: {
+            image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/723090/header.jpg",
+            data: {
+                "Desenvolvedor": "Happy Life (Sachinama)",
+                "Publicadora": "Remtairy / Kagura Games",
+                "Engine": "RPG Maker MV",
+                "Gêneros": "RPG, JRPG, Eroge, Fantasia",
+                "Plataformas": "PC (Windows, Linux, macOS). Ports de fãs para Android",
+                "Lançamento": "22 de outubro de 2017",
+                "Classificação": "18+ (Conteúdo Adulto Explícito)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Mecânicas e Recursos" },
+            { id: "requisitos", text: "3. Requisitos e Desempenho" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém nudez, conteúdo sexual explícito, temas de corrupção e elementos adultos variados. Discrição estritamente recomendada para maiores de 18 anos.</p>
+            </div>
+
+            <p><strong>Meltys Quest</strong> é um JRPG adulto de destaque criado pelo desenvolvedor japonês <strong>Happy Life</strong> (Sachinama), marcando historicamente a primeira colaboração entre um criador indie nipônico e a localizadora ocidental Remtairy. O título combina uma narrativa cômica e leve com um sistema de progressão profunda e artes detalhadas.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>A princesa <strong>Meltys</strong> passou toda a sua vida entregue aos luxos e à preguiça, agindo como uma verdadeira gyaru da realeza. No entanto, tudo muda quando seu reino é invadido e destruído pelo maligno Império Monstro de Grolido, que sequestra suas três irmãs. Sem castelo, sem dinheiro e sem aliados, ela é forçada a pegar em armas, desbravar o mundo e resgatar sua família — enquanto lida com as tentações e as mecânicas de corrupção que aumentam seu "Slut Level".</p>
+
+            <h2 id="gameplay">Mecânicas e Recursos</h2>
+            <ul>
+                <li><strong>Conteúdo Extenso:</strong> Mais de 60 cenas sexuais ilustradas, ultrapassando 800 CGs no total (com 80 artes base em formato widescreen).</li>
+                <li><strong>Customização:</strong> Mais de 20 fantasias e roupas diferentes que alteram a aparência e atributos da protagonista.</li>
+                <li><strong>Sistemas de RPG:</strong> Sistema completo de crafting de itens, múltiplos finais baseados em escolhas, modo New Game Plus e 3 dificuldades distintas (Kogal, Princess e True Princess).</li>
+                <li><strong>Idiomas:</strong> Suporte oficial a vários idiomas, incluindo legendas em português do Brasil.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Desempenho</h2>
+            <ul>
+                <li><strong>Plataformas Oficiais:</strong> PC (Windows, Linux, Mac via Steam, DLsite e JAST).</li>
+                <li><strong>Versões Mobile:</strong> Não há versão Android oficial; os arquivos disponíveis na comunidade são ports de fãs criados em 2 arquivos (APK + .RPA) que exigem aparelhos intermediários/avançados para rodar sem travamentos no RPG Maker MV.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/6.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/7.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/8.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/1.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/2.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/3.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <hr>
+            <h2 id="links">Links Oficiais e Downloads</h2>
+            
+            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
+            <div class="play-links">
+                <a href="https://remtairy.com/meltys-quest/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial</a>
+                <a href="https://store.steampowered.com/app/723090/Meltys_Quest/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="https://www.dlsite.com/maniax/work/=/product_id/RJ304594.html" target="_blank"><i class="fa-solid fa-store"></i> DLsite (Inglês)</a>
+                <a href="https://denpasoft.com/products/meltys-quest" target="_blank"><i class="fa-solid fa-store"></i> Denpasoft</a>
+                <a href="https://jaststore.com/games/rmtry001/meltys-quest" target="_blank"><i class="fa-solid fa-store"></i> JAST USA</a>
+                <a href="https://www.fakku.net/games/meltys-quest-english" target="_blank"><i class="fa-solid fa-store"></i> Fakku</a>
+                <a href="https://ci-en.dlsite.com/creator/2068/article/34385" target="_blank"><i class="fa-solid fa-book"></i> Guia Oficial do Desenvolvedor (Ci-en)</a>
+            </div>
+
+            <br>
+            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
+            
+            <p><strong>PC (Windows — Versão Completa):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/nhBcoFe" target="_blank"><i class="fa-brands fa-windows"></i> Download PC Meltys Quest</a>
+            </div>
+
+            <p style="margin-top: 10px;"><strong>Android (Port de Fã — Requer instalação em 2 arquivos: APK + .RPA):</strong></p>
+            <div class="play-links">
+                <a href="https://4br.me/MqLJIdWp6S" target="_blank"><i class="fa-brands fa-android"></i> Download Android (Arquivo 1 / APK)</a>
+                <a href="https://4br.me/6ayuv6jjl" target="_blank"><i class="fa-brands fa-android"></i> Download Android (Arquivo 2 / .RPA)</a>
+            </div>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],

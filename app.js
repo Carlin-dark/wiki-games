@@ -12,6 +12,8 @@ const ADMIN_EMAIL = 'konozuba1k@gmail.com';
 let favoriteRoutes = [];
 let favoritesLoadedFor = null;
 let gtaViCountdownTimer = null;
+let hlsLibraryPromise = null;
+let activeHlsPlayers = [];
 const SITE_SETTINGS_STORAGE_KEY = 'wikigames-site-settings';
 const defaultSiteSettings = {
     allowAdultContent: false,
@@ -1276,6 +1278,58 @@ function getTrailerData(article) {
 
     return null;
 }
+
+function loadHlsLibrary() {
+    if (window.Hls) return Promise.resolve(window.Hls);
+    if (hlsLibraryPromise) return hlsLibraryPromise;
+
+    hlsLibraryPromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/hls.js@1.5.18/dist/hls.min.js';
+        script.async = true;
+        script.onload = () => window.Hls ? resolve(window.Hls) : reject(new Error('HLS.js indisponível'));
+        script.onerror = () => reject(new Error('Falha ao carregar HLS.js'));
+        document.head.appendChild(script);
+    }).catch(error => {
+        hlsLibraryPromise = null;
+        throw error;
+    });
+
+    return hlsLibraryPromise;
+}
+
+function setupHlsPlayers(container) {
+    activeHlsPlayers.forEach(player => player.destroy());
+    activeHlsPlayers = [];
+
+    const videos = [...container.querySelectorAll('video[data-hls-src]')];
+    const hlsVideos = [];
+    videos.forEach(video => {
+        if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = video.dataset.hlsSrc;
+        } else {
+            hlsVideos.push(video);
+        }
+    });
+    if (!hlsVideos.length) return;
+
+    loadHlsLibrary().then(Hls => {
+        if (!Hls.isSupported()) throw new Error('HLS não suportado neste navegador');
+        hlsVideos.forEach(video => {
+            const player = new Hls();
+            player.loadSource(video.dataset.hlsSrc);
+            player.attachMedia(video);
+            activeHlsPlayers.push(player);
+        });
+    }).catch(() => {
+        hlsVideos.forEach(video => {
+            const message = document.createElement('p');
+            message.textContent = 'Não foi possível carregar o player HLS. Use o link externo para abrir o trailer.';
+            video.insertAdjacentElement('afterend', message);
+        });
+    });
+}
+
 function renderDownloadWarning() {
     return `
         <div class="download-warning">
@@ -1868,6 +1922,20 @@ function renderPage() {
             `;
         }
 
+        if (Array.isArray(article.trailers) && article.trailers.length) {
+            htmlContent += article.trailers.map(trailer => `
+                <div class="trailer-panel">
+                    <div class="trailer-header"><i class="fa-brands fa-youtube"></i> ${escapeHtml(trailer.title || 'Trailer')}</div>
+                    <div class="video-frame">
+                        <video data-hls-src="${escapeHtml(trailer.url)}" title="${escapeHtml(trailer.title || article.title)}" controls preload="metadata"></video>
+                    </div>
+                    <div class="trailer-actions">
+                        <a href="${escapeHtml(trailer.url)}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir trailer</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
         if (article.categories) {
             htmlContent += `<hr style="margin: 30px 0 15px;"><p style="font-size:13px;"><i class="fa-solid fa-tags"></i> <strong>Categorias:</strong> `;
             const catLinks = article.categories.map(cat => `<a href="${buildAppHref(`/?route=categoria/${createSlug(cat)}`)}">${cat}</a>`);
@@ -1876,6 +1944,7 @@ function renderPage() {
 
         container.innerHTML = htmlContent;
         setupGtaViCountdown(container);
+        setupHlsPlayers(container);
         markArticleGalleryImages(container);
         if (route === 'home') loadPopularHomeSection();
 
