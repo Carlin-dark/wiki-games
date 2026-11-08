@@ -8518,7 +8518,7 @@ const articlesDatabase = {
         categories: ["Beat 'em up", "Ação", "Luta", "Eroge", "Indie", "Adulto", "Side-scroller"],
         summary: "Um popular e polêmico beat 'em up 2D lateral com conteúdo adulto desenvolvido em Unity por ingeniusstudios (Crimson Bird / LAGS). Controle Ken para enfrentar a Red Kat Gang no campus universitário ou jogue na rota da irmã Anko.",
         infobox: {
-            image: "https://gamefabrique.com/i/pc/college-brawl.jpg",
+            image: "https://img.itch.zone/aW1nLzI5ODAwMjQucG5n/original/yayHCB.png",
             data: {
                 "Desenvolvedor": "ingeniusstudios (Crimson Bird / LAGS)",
                 "Engine": "Unity",
@@ -8562,7 +8562,7 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://gamefabrique.com/storage/screenshots/pc/college-brawl-03.webp" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvNTU0NTI3LzI5MDQ2NzMucG5n/original/XXRsB1.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
                 <img src="https://kotaku.com/igdb/image/upload/t_original/sckr9y.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
                 <img src="https://kotaku.com/igdb/image/upload/t_original/sckr9w.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
                 <img src="https://gamefabrique.com/storage/screenshots/pc/college-brawl-14.webp" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
