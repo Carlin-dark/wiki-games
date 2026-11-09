@@ -1,17 +1,3 @@
-/* 
-==========================================================================
- COMO ADICIONAR UM NOVO JOGO NA WIKI:
- 1. Crie uma nova chave dentro do objeto 'articlesDatabase' (ex: "nome-do-jogo").
- 2. Preencha 'title', 'categories' e 'summary'. As categorias atualizam automaticamente os filtros e coleções temáticas; use 'Múltiplos Finais' somente quando confirmado no jogo.
- 3. No 'infobox', coloque a URL da imagem e os dados técnicos.
- 4. No 'toc' (Índice), coloque o 'id' e o 'text' de cada título da sua página.
- 5. No 'content', escreva o texto em HTML. Todos os links dentro do conteúdo ficam vermelhos automaticamente.
-    DICA: Para criar um link para outro jogo, use <a href="#/nome-da-chave-do-jogo">Texto</a>.
- 6. O painel com informações e download do JoiPlay é adicionado automaticamente a todas as páginas de jogos.
- 7. Para a página de downloads, adicione ao jogo: downloads: { officialLinks: [{ label, url }], files: [{ label, url, details, verified: true }], installation: { title, steps: [] } }.
-     A página é aberta em downloads/index.html?game=chave-do-jogo. Use somente links autorizados.
-==========================================================================
-*/
 
 const articlesDatabase = {
     "home": {
