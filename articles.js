@@ -8,6 +8,8 @@
  5. No 'content', escreva o texto em HTML. Todos os links dentro do conteúdo ficam vermelhos automaticamente.
     DICA: Para criar um link para outro jogo, use <a href="#/nome-da-chave-do-jogo">Texto</a>.
  6. O painel com informações e download do JoiPlay é adicionado automaticamente a todas as páginas de jogos.
+ 7. Para a página de downloads, adicione ao jogo: downloads: { officialLinks: [{ label, url }], files: [{ label, url, details }], installation: { title, steps: [] } }.
+     A página é aberta em downloads/index.html?game=chave-do-jogo. Use somente links autorizados.
 ==========================================================================
 */
 
@@ -40,6 +42,23 @@ const articlesDatabase = {
             { id: "galeria", text: "4. Galeria de Imagens" },
             { id: "links", text: "5. Links Oficiais e Downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                { label: "Página oficial (exemplo)", url: "https://exemplo.invalid/print-i-love-u" }
+            ],
+            files: [
+                { label: "Download traduzido (exemplo)", url: "https://exemplo.invalid/download-traduzido", details: "Link ilustrativo; substitua por um link autorizado." },
+                { label: "Servidor alternativo (exemplo)", url: "https://exemplo.invalid/download-alternativo", details: "Link ilustrativo; substitua por um link autorizado." }
+            ],
+            installation: {
+                title: "Instalação (exemplo)",
+                steps: [
+                    "Baixe o arquivo usando um link autorizado.",
+                    "Extraia o arquivo compactado para uma pasta de sua preferência.",
+                    "Consulte as instruções oficiais do jogo para iniciar ou aplicar uma tradução."
+                ]
+            }
+        },
         content: `
             <p><strong>Print I Love U</strong> é uma narrativa curta e imersiva de suspense psicológico que simula a descoberta de um arquivo misterioso em um computador usado. O jogo transita entre o romance e o horror psicológico, deixando uma marca duradoura em quem o conclui.</p>
 
@@ -84,29 +103,10 @@ const articlesDatabase = {
 
             <hr>
             <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Página Oficial:</strong></p>
+            <p>Consulte os links disponíveis e as instruções de instalação na página dedicada do jogo.</p>
             <div class="play-links">
-                <a href="https://store.steampowered.com/app/4796160/Print_I_Love_U/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
+                <a href="../downloads/index.html?game=print-i-love-u" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Página de downloads</a>
             </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/xZybsjz" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 1)</a>
-                <a href="https://4br.me/YfmyRpC" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 2)</a>
-                <a href="https://4br.me/WNaOdgJb" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 3)</a>
-                <a href="https://4br.me/EAl39sg" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 4)</a>
-                <a href="https://4br.me/o7ea" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 5)</a>
-                <a href="https://4br.me/XtDh95vnui" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 6)</a>
-                <a href="https://4br.me/v6uyQ8" target="_blank"><i class="fa-solid fa-download"></i> Download Print I Love U (Servidor 7)</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação:<br>
-            1. Clique em um dos links de download e você será redirecionado (UploadHaven).<br>
-            2. Aguarde 5 segundos e clique no botão azul 'download now' (recomenda-se o uso de gerenciadores como FDM ou 7-Zip).<br>
-            3. Extraia o arquivo .zip baixado.<br>
-            4. Execute o aplicativo de instalação (setup) dentro da pasta e jogue através do atalho.</em></small></p>
         `
     },
     "sobre": {

@@ -1761,6 +1761,54 @@ function setupRating(route, panel) {
     }));
 }
 
+function isArticleDownloadLink(link) {
+    const label = (link.textContent || '').trim().toLowerCase();
+    const href = link.getAttribute('href') || '';
+    const fileHostPattern = /(?:^|\.)(?:4br\.me|mega\.nz|mega\.co\.nz|mediafire\.com|rapidgator\.net|megaup\.net|1fichier\.com|pixeldrain\.com|gofile\.io|workupload\.com)$/i;
+    const downloadLabelPattern = /download|baixar|espelho|mirror/i;
+    const serverLabel = /servidor/i.test(label) && !/discord/i.test(label);
+
+    try {
+        const hostname = new URL(href, window.location.origin).hostname;
+        return downloadLabelPattern.test(label) || serverLabel || fileHostPattern.test(hostname);
+    } catch (error) {
+        return downloadLabelPattern.test(label) || serverLabel;
+    }
+}
+
+function renderArticleContentWithDownloads(route, article) {
+    const template = document.createElement('template');
+    template.innerHTML = article.content || '';
+    const downloadLinks = [...template.content.querySelectorAll('a')].filter(isArticleDownloadLink);
+    const downloadHref = `../downloads/index.html?game=${encodeURIComponent(route)}`;
+
+    function createDownloadLink() {
+        const link = document.createElement('a');
+        link.href = downloadHref;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.innerHTML = '<i class="fa-solid fa-download"></i> Página de downloads';
+        return link;
+    }
+
+    if (downloadLinks.length) {
+        downloadLinks[0].replaceWith(createDownloadLink());
+        downloadLinks.slice(1).forEach(link => link.remove());
+    } else {
+        const heading = [...template.content.querySelectorAll('h2, h3')].find(element => /links?|downloads?/i.test(element.textContent));
+        const buttonContainer = document.createElement('div');
+        buttonContainer.className = 'play-links';
+        buttonContainer.append(createDownloadLink());
+        if (heading) {
+            heading.after(buttonContainer);
+        } else {
+            template.content.append(buttonContainer);
+        }
+    }
+
+    return template.innerHTML;
+}
+
 function renderPage() {
     const { route, anchor } = getRouteInfo();
     const container = document.getElementById('article-container');
@@ -1894,7 +1942,7 @@ function renderPage() {
             htmlContent += `</ul></div>`;
         }
 
-        htmlContent += `<div class="article-text">${article.content}</div>`;
+        htmlContent += `<div class="article-text">${isGamePage ? renderArticleContentWithDownloads(route, article) : article.content}</div>`;
 
         if (isGamePage) {
             htmlContent += renderJoiplayInfo();
