@@ -1785,7 +1785,6 @@ function renderArticleContentWithDownloads(route, article) {
     function createDownloadLink() {
         const link = document.createElement('a');
         link.href = downloadHref;
-        link.target = '_blank';
         link.rel = 'noopener noreferrer';
         link.innerHTML = '<i class="fa-solid fa-download"></i> Página de downloads';
         return link;
