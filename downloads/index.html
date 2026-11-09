@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171a16">
+    <title>Downloads - WikiGames</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            color-scheme: dark;
+            --page: #171a16;
+            --surface: #222720;
+            --surface-raised: #2a3028;
+            --text: #f0f1e9;
+            --muted: #b0b7a9;
+            --line: #444c40;
+            --accent: #c9ef74;
+            --accent-ink: #1c2611;
+            --warm: #e6a980;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--text);
+            background-color: var(--page);
+            background-image: repeating-linear-gradient(135deg, transparent 0 34px, rgb(255 255 255 / 2%) 35px 36px);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+        }
+        a { color: inherit; }
+        .page { width: min(940px, calc(100% - 36px)); margin: 0 auto; padding: 28px 0 64px; }
+        .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+        .brand { color: var(--accent); font: 700 18px "Space Grotesk", sans-serif; text-decoration: none; }
+        .back-link { color: var(--muted); font-size: 14px; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+        .back-link:hover { color: var(--text); }
+        .hero { display: grid; grid-template-columns: 1fr minmax(180px, 280px); gap: 32px; align-items: center; padding: 44px 0 34px; }
+        .eyebrow { margin: 0 0 8px; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+        h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
+        h1 { margin: 0; font-size: clamp(32px, 5vw, 48px); }
+        .summary { max-width: 620px; margin: 14px 0 0; color: var(--muted); }
+        .cover { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+        .section { padding: 26px 0; border-top: 1px solid var(--line); }
+        .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+        h2 { margin: 0; font-size: 23px; }
+        .section-note { margin: 0; color: var(--muted); font-size: 13px; }
+        .link-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+        .download-link { display: flex; min-height: 72px; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 16px; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease; }
+        .download-link:hover { background: var(--surface-raised); border-color: var(--accent); transform: translateY(-2px); }
+        .download-link strong { display: block; font-size: 15px; }
+        .download-link small { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+        .download-link .arrow { flex: 0 0 auto; color: var(--accent); font-size: 20px; }
+        .steps { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: install-step; }
+        .steps li { position: relative; min-height: 44px; padding: 9px 12px 9px 48px; color: var(--muted); background: rgb(34 39 32 / 78%); border-left: 2px solid var(--warm); counter-increment: install-step; }
+        .steps li::before { position: absolute; left: 15px; color: var(--warm); font: 700 14px "Space Grotesk", sans-serif; content: counter(install-step, decimal-leading-zero); }
+        .notice { margin: 24px 0 0; padding: 12px 14px; color: var(--muted); background: rgb(230 169 128 / 8%); border-left: 3px solid var(--warm); font-size: 13px; }
+        .empty-state { margin: 38px 0; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 5px; }
+        .empty-state h1 { font-size: 30px; }
+        .empty-state p { color: var(--muted); }
+        footer { padding-top: 20px; color: var(--muted); border-top: 1px solid var(--line); font-size: 12px; }
+        @media (max-width: 620px) {
+            .page { width: min(100% - 28px, 940px); padding-top: 18px; }
+            .hero { grid-template-columns: 1fr; gap: 20px; padding-top: 30px; }
+            .cover { max-width: 420px; }
+            .section-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+<body>
+    <main class="page" id="downloads-page" aria-live="polite">
+        <header class="topbar">
+            <a class="brand" href="../">WikiGames</a>
+            <a class="back-link" id="back-link" href="../">Voltar ao jogo</a>
+        </header>
+        <div id="downloads-content"></div>
+        <footer>WikiGames · Consulte as páginas oficiais e os requisitos antes de instalar.</footer>
+    </main>
+
+    <script src="../articles.js"></script>
+    <script>
+        (function () {
+            const content = document.getElementById('downloads-content');
+            const gameKey = new URLSearchParams(window.location.search).get('game');
+            const database = typeof articlesDatabase !== 'undefined' ? articlesDatabase : null;
+            const game = gameKey && database ? database[gameKey] : null;
+
+            function escapeHtml(value) {
+                return String(value ?? '').replace(/[&<>"']/g, character => ({
+                    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+                })[character]);
+            }
+
+            function safeUrl(value) {
+                try {
+                    const url = new URL(value);
+                    return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
+                } catch (error) {
+                    return '';
+                }
+            }
+
+            function discoverOfficialLinks(article) {
+                const trustedDomains = ['store.steampowered.com', 'itch.io', 'gog.com', 'microsoft.com', 'playstation.com', 'nintendo.com', 'xbox.com', 'epicgames.com'];
+                const articleDocument = new DOMParser().parseFromString(article.content || '', 'text/html');
+                const links = [...articleDocument.querySelectorAll('a[href]')];
+                const officialLinks = [];
+                const files = [];
+                const seen = new Set();
+
+                links.forEach(link => {
+                    const url = safeUrl(link.getAttribute('href'));
+                    if (!url || seen.has(url)) return;
+                    const hostname = new URL(url).hostname.toLowerCase();
+                    if (!trustedDomains.some(domain => hostname === domain || hostname.endsWith(`.${domain}`))) return;
+                    seen.add(url);
+                    const item = { label: link.textContent.trim() || hostname, url };
+                    if (/download|baixar/i.test(item.label)) files.push(item);
+                    else officialLinks.push(item);
+                });
+
+                return { officialLinks, files };
+            }
+
+            function renderLinks(items, emptyMessage) {
+                const validItems = (Array.isArray(items) ? items : []).filter(item => item && safeUrl(item.url));
+                if (!validItems.length) return `<p class="section-note">${escapeHtml(emptyMessage)}</p>`;
+                return `<div class="link-list">${validItems.map(item => `
+                    <a class="download-link" href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener noreferrer">
+                        <span><strong>${escapeHtml(item.label || 'Abrir link')}</strong>${item.details ? `<small>${escapeHtml(item.details)}</small>` : ''}</span>
+                        <span class="arrow" aria-hidden="true">↗</span>
+                    </a>
+                `).join('')}</div>`;
+            }
+
+            if (!game) {
+                document.title = 'Jogo não encontrado - WikiGames';
+                content.innerHTML = `
+                    <section class="empty-state">
+                        <p class="eyebrow">Downloads</p>
+                        <h1>Jogo não encontrado</h1>
+                        <p>Confira o endereço ou volte ao catálogo da WikiGames.</p>
+                        <a class="back-link" href="../">Ir para a página inicial</a>
+                    </section>
+                `;
+                return;
+            }
+
+            const configuredDownloads = game.downloads || {};
+            const discoveredDownloads = discoverOfficialLinks(game);
+            const downloads = {
+                officialLinks: Array.isArray(configuredDownloads.officialLinks) ? configuredDownloads.officialLinks : discoveredDownloads.officialLinks,
+                files: Array.isArray(configuredDownloads.files) ? configuredDownloads.files : discoveredDownloads.files,
+                installation: configuredDownloads.installation || {
+                    title: 'Orientações de instalação',
+                    steps: [
+                        'Acesse uma das páginas oficiais indicadas e escolha a edição compatível com seu dispositivo.',
+                        'Instale ou execute o jogo seguindo as instruções da loja ou do desenvolvedor.',
+                        'Para traduções e patches, consulte a documentação do projeto responsável e confirme a compatibilidade com sua versão.'
+                    ]
+                }
+            };
+            const installation = downloads.installation;
+            const imageUrl = safeUrl(game.infobox?.image);
+            const steps = Array.isArray(installation.steps) ? installation.steps : [];
+            const backLink = document.getElementById('back-link');
+            backLink.href = `../?route=${encodeURIComponent(gameKey)}`;
+
+            document.title = `Downloads de ${game.title} - WikiGames`;
+            content.innerHTML = `
+                <section class="hero">
+                    <div>
+                        <p class="eyebrow">Downloads do jogo</p>
+                        <h1>${escapeHtml(game.title)}</h1>
+                        <p class="summary">${escapeHtml(game.summary || '')}</p>
+                    </div>
+                    ${imageUrl ? `<img class="cover" src="${escapeHtml(imageUrl)}" alt="Capa de ${escapeHtml(game.title)}">` : ''}
+                </section>
+                <section class="section">
+                    <div class="section-heading"><h2>Links oficiais</h2><p class="section-note">Páginas e lojas do jogo</p></div>
+                    ${renderLinks(downloads.officialLinks, 'Nenhum link oficial foi cadastrado.')}
+                </section>
+                <section class="section">
+                    <div class="section-heading"><h2>Downloads</h2><p class="section-note">Escolha uma opção disponível</p></div>
+                    ${renderLinks(downloads.files, 'Nenhum download foi cadastrado para este jogo.')}
+                </section>
+                <section class="section">
+                    <div class="section-heading"><h2>${escapeHtml(installation.title || 'Como instalar')}</h2></div>
+                    ${steps.length ? `<ol class="steps">${steps.map(step => `<li>${escapeHtml(step)}</li>`).join('')}</ol>` : '<p class="section-note">As instruções de instalação ainda não foram cadastradas.</p>'}
+                </section>
+                <p class="notice">Os links são fornecidos pelas fontes indicadas em cada opção. Verifique a origem dos arquivos e siga as instruções oficiais do jogo.</p>
+            `;
+        })();
+    </script>
+</body>
+</html>
