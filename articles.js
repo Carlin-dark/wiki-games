@@ -10145,6 +10145,420 @@ const articlesDatabase = {
             <p>Consulte as bases de dados, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
+    "ikusa-megami-zero": {
+        title: "Ikusa Megami Zero",
+        addedAt: "2026-11-09",
+        categories: ["RPG", "JRPG", "Eroge", "Adulto", "Fantasia", "Visual Novel", "Dungeon Crawler", "Combate por Turnos", "Protagonista Masculino", "Harém", "Monstergirl", "Monstros", "Múltiplos Finais"],
+        summary: "RPG de fantasia adulto com forte componente de visual novel. Após batalhas ferozes entre deuses, dois mundos se fundiram num só. Celica nasceu nesse mundo novo e, para proteger inocentes, combate monstros como paladino de Barouhart, deus das tempestades. Com senso de justiça claro e grande habilidade com a lâmina, alguns o chamam de Herói. Depois de conhecer um andarilho em busca de conhecimento e receber a tarefa de purificar um artefato maligno ancestral, ele começa a duvidar da própria fé e é arrastado para profecias antigas, deuses antigos e deuses demônios. É a prequela da série e cobre os eventos que fizeram Celica ser conhecido como Deicida (God Slayer).",
+        infobox: {
+            image: "https://static.wikia.nocookie.net/eushully/images/6/61/Battle_Goddess_Episode-0_package.jpg",
+            data: {
+                "Título Original": "戦女神ZERO (Ikusa Megami Zero)",
+                "Aliases": "Battle Goddess Episode-0, BG0, IMZ",
+                "Desenvolvedor": "Eushully (エウシュリー) — Sapporo, Japão",
+                "Publicadora": "Eushully (autopublicado)",
+                "Direção de arte / 原画": "鳩月つみき (Tsuki Hatsuki)",
+                "Roteiro / 脚本": "矢田影見, 松江旺來",
+                "Gêneros": "RPG de fantasia, eroge, visual novel, masmorra (dungeon crawler), combate por turnos, protagonista masculino, harém, monstergirl, monstros, múltiplos finais",
+                "Plataformas": "PC (Windows 2000/XP/Vista). Sem versão oficial para Android ou consoles",
+                "Lançamento": "13 de junho de 2008 (edição em caixa) · 5 de março de 2010 (edição digital)",
+                "Classificação etária": "18禁 (18+)",
+                "Preço de lançamento": "¥9.870 com imposto (¥9.400 sem)",
+                "Duração": "Longo — 30 a 50 horas",
+                "Vozes": "Japonês",
+                "Censura": "Sim (mosaico japonês); patch EN mantém mosaico",
+                "Numeração": "9º título da Eushully",
+                "Situação": "Esgotado em loja; preservado em arquivo e abandonware"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página oficial",
+                    url: "https://www.eukleia.co.jp/eushully/eu009.html"
+                },
+                {
+                    label: "Página oficial do jogo (sub-página)",
+                    url: "https://www.eukleia.co.jp/eushully/eu09/eu009_01.html"
+                },
+                {
+                    label: "Galeria oficial de sample CG",
+                    url: "https://www.eukleia.co.jp/eushully/eu09/eu009_05.html"
+                },
+                {
+                    label: "Página especial da versão download",
+                    url: "https://www.eukleia.co.jp/eushully/eu09dl/index.html"
+                },
+                {
+                    label: "Suporte/patches oficiais (v2.01)",
+                    url: "http://eukleia.co.jp/eushully/support/html/spdl_e09.html"
+                },
+                {
+                    label: "Portal Eushully/Anastasia",
+                    url: "https://www.eukleia.co.jp/eushully/"
+                },
+                {
+                    label: "VNDB",
+                    url: "https://vndb.org/v768"
+                },
+                {
+                    label: "Eushully Wiki",
+                    url: "https://eushully.fandom.com/wiki/Battle_Goddess_Episode-0"
+                },
+                {
+                    label: "Wikipedia (Eushully)",
+                    url: "https://en.wikipedia.org/wiki/Eushully"
+                },
+                {
+                    label: "Getchu (loja JP)",
+                    url: "http://www.getchu.com/soft.phtml?id=488325"
+                },
+                {
+                    label: "UVL",
+                    url: "https://www.uvlist.net/game-186710-Ikusa+Megami+Zero"
+                },
+                {
+                    label: "HowLongToBeat",
+                    url: "https://howlongtobeat.com/game?id=19029"
+                }
+            ],
+            files: [
+                {
+                    label: "Tradução inglesa (Patch completo EN v1.2)",
+                    url: "https://4br.me/gz84ih21",
+                    details: "ZAP & nekoHen (Tools: Asmodean, SaintLouisX | Main Story Dialog & Terminology: ushoran | Extra Story Dialog: zoltanar, essenial | All Other Text: zoltanar, alinelrene, essenial | Image Editing: er0gamr, alinelrene, zoltanar | Feedback: nekoHen and Hongfire communities)"
+                },
+                {
+                    label: "Download Jogo (Servidor 1)",
+                    url: "https://4br.me/W0Yp36iE",
+                    details: "PC (Espelho de upload)"
+                },
+                {
+                    label: "Download Jogo (Servidor 2)",
+                    url: "https://4br.me/tCDZZ9",
+                    details: "PC (Espelho de upload)"
+                },
+                {
+                    label: "Mirror adicional 1",
+                    url: "https://4br.me/bM9to",
+                    details: "PC (Espelho de upload)"
+                },
+                {
+                    label: "Mirror adicional 2",
+                    url: "https://4br.me/G7CRNuB",
+                    details: "PC (Espelho de upload)"
+                }
+            ],
+            installation: {
+                title: "Como instalar e configurar",
+                steps: [
+                    "Ordem de instalação de arquivos oficiais (se aplicável): Ikusa Megami Zero -> Append 1 -> Append 2/V2.00 -> V2.01 update.",
+                    "Backup any BIN/AGF files on the games folder (just in case).",
+                    "Unpack all files to the games folder. (If you don't want translated dialog, don't copy the files starting with SC/SP and $1$SC/SP).",
+                    "You Need To Change Locale To Japanese.",
+                    "No Need To Install. Run AGE.exe and play.",
+                    "Use patch file to run the game, it'll fix the issue in which the game crashes after a few minutes. Don't run the game from the game.exe. Run it from Age patch."
+                ]
+            }
+        },
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém cenas de violência extrema, cenas de corrupção, pureza e romance, além de cenas de凌辱 (estupro/abuso) e conteúdo adulto explícito com mosaico japonês. Discrição estritamente recomendada para maiores de 18 anos.</p>
+            </div>
+
+            <p><strong>Ikusa Megami Zero</strong> (<em>戦女神ZERO / Battle Goddess Episode-0</em>) é um RPG de fantasia adulto com forte componente de visual novel desenvolvido pela <strong>Eushully</strong>. Após batalhas ferozes entre deuses, dois mundos se fundiram num só. Celica nasceu nesse mundo novo e, para proteger inocentes, combate monstros como paladino de Barouhart, deus das tempestades. Com senso de justiça claro e grande habilidade com a lâmina, alguns o chamam de Herói. Depois de conhecer um andarilho em busca de conhecimento e receber a tarefa de purificar um artefato maligno ancestral, ele começa a duvidar da própria fé e é arrastado para profecias antigas, deuses antigos e deuses demônios. É a prequela da série e cobre os eventos que fizeram Celica ser conhecido como Deicida (God Slayer).</p>
+            <p><strong>Estrutura:</strong> Exploração de masmorras em grade, combate por turnos com party, crafting, múltiplas rotas e 1 final (fora game over). Extras: disco append vendido com o guia oficial adiciona itens e a área extra "Corredor dos Sonhos" (夢幻回廊), elevando o jogo à v2.0.</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/sysm01.gif" alt="System Info 1" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <p>Este jogo é o 9º título da Eushully. O mesmo compartilha o mesmo mundo de cenografia da série <em>Brave Goddess (War Goddess / Senmegami)</em> e <em>Hime Shogun</em>, servindo como prequela direta. Oferece uma interface intuitiva em ADV e um escopo colossal de conteúdo com dezenas de horas de jogo.</p>
+
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg01.jpg" alt="Screenshot CG 1" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/sysm02.gif" alt="System Info 2" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <p>O enredo principal cobre dez capítulos (全十章の物語) onde Celica lida com vários inimigos poderosos e heróis que desejam sua carne, tentando descobrir a verdade por trás das engrenagens distorcidas do destino.</p>
+
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg02.jpg" alt="Screenshot CG 2" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <h2 id="gameplay">Mecânicas, Exploração e Combate</h2>
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/sysm03.gif" alt="System Info 3" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <p>O jogo possui 36 tipos de terrenos naturais e campos de masmorras, incluindo grandes labirintos. A movimentação agora ocorre em 4 direções diagonais em formato de rede, garantindo fluidez semelhante a jogos online.</p>
+
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg03.jpg" alt="Screenshot CG 3" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/sysm04.gif" alt="System Info 4" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <p>O sistema de combate baseia-se em turnos e espera (wait time), herdando elementos de <em>Senmegami II</em> com melhorias na usabilidade, manuseio de magias e habilidades.</p>
+            <ul>
+                <li><strong>War Spirit (FS / 戦意):</strong> Permite reduzir o moral ou espírito de luta de inimigos resistentes.</li>
+                <li><strong>Charge (チャージ):</strong> Consome mais MP para amplificar o poder de magias e técnicas.</li>
+                <li><strong>Formations (陣形):</strong> Posicione personagens em formações de ataque ou defesa.</li>
+                <li><strong>Novo recurso AUTO:</strong> Facilita a rotina de grinding e ganho de proficiência.</li>
+            </ul>
+
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg04.jpg" alt="Screenshot CG 4" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/sysm05.gif" alt="System Info 5" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <p>O menu de gerenciamento unifica magias, habilidades, inventário geral compartilhado e status dos personagens de forma prática.</p>
+
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg05.jpg" alt="Screenshot CG 5" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/sysm06.gif" alt="System Info 6" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <div style="margin: 15px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg06.jpg" alt="Screenshot CG 6" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/sysm10.gif" alt="System Info 10" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 2000 / XP / Vista (PC)</li>
+                <li><strong>Processador:</strong> Dual Core Pentium ou equivalente</li>
+                <li><strong>Placa de Vídeo:</strong> Intel HD 2000 ou equivalente</li>
+                <li><strong>Espaço em Disco:</strong> 2.53 GB de espaço livre (recomenda-se o dobro para instalação confortável)</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens Adicionais</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg10.jpg" alt="Screenshot 10" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg12.jpg" alt="Screenshot 11" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg11.jpg" alt="Screenshot 12" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg14.jpg" alt="Screenshot 13" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg15.jpg" alt="Screenshot 14" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.eukleia.co.jp/eushully/eu09/syscg13.jpg" alt="Screenshot 15" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as páginas oficiais da Eushully, bases de dados de VN, patch de tradução e os servidores de download na seção acima.</p>
+        `
+    },
+    "ikusa-megami-verita": {
+        title: "Ikusa Megami Verita",
+        addedAt: "2026-11-09",
+        categories: ["RPG", "Estratégia", "Eroge", "Visual Novel", "Fantasia", "Protagonistas Masculinos", "Harém", "Monstergirl", "Group Sex", "Múltiplos Finais", "Adulto"],
+        summary: "Sequência direta e cruzamento das séries Battle Goddess e Princess General (Genrin no Kishougun). Dois protagonistas: Serika, o God-Slayer andarilho que ainda procura um propósito, e Loui, o rei meio-demônio de Menfill que acabou de vencer a guerra — mas perdeu a esposa nela. A história acompanha como os caminhos dos dois heróis infames inevitavelmente se cruzam e o conflito que isso gera, com forças ancestrais despertando ao fundo e o templo de Marsterrie entrando em movimento. Muito longo (mais de 50 horas), com áudio japonês, combate por turnos e múltiplos finais.",
+        infobox: {
+            image: "https://images.gog.com/ce4ab7a5769bcbda7ceb646c7ede11e9389e8f247a98a0dddcb26f622ecd4382_glx_vertical_cover.webp",
+            data: {
+                "Título Original": "戦女神VERITA (Ikusa Megami Verita)",
+                "Aliases": "Battle Goddess Episode-4, IMV",
+                "Desenvolvedor / Publicadora": "Eushully (autopublicado)",
+                "Gêneros": "RPG de estratégia por turnos, eroge, visual novel, fantasia, protagonistas masculinos, harém, monstergirl, group sex, múltiplos finais",
+                "Plataformas": "Windows (PC)",
+                "Lançamento": "23 de abril de 2010",
+                "Classificação etária": "18+",
+                "Duração": "Muito longo — mais de 50 horas",
+                "Censura": "Sim (mosaico); patch de interface/diálogo EN",
+                "Numeração": "11º título da Eushully",
+                "Versões": "Base + Append Disk 1 e 2 (v2.0)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "requisitos", text: "3. Requisitos e Observações Técnicas" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página oficial",
+                    url: "https://www.eukleia.co.jp/eushully/eu011.html"
+                },
+                {
+                    label: "Portal Eushully",
+                    url: "https://www.eukleia.co.jp/eushully/"
+                },
+                {
+                    label: "VNDB",
+                    url: "https://vndb.org/v2836"
+                },
+                {
+                    label: "Eushully Wiki",
+                    url: "https://eushully.fandom.com/wiki/Battle_Goddess_Verita"
+                },
+                {
+                    label: "GOG Dreamlist",
+                    url: "https://www.gog.com/dreamlist/game/ikusa-megami-verita"
+                },
+                {
+                    label: "SmutGamer (ficha)",
+                    url: "https://smutgamer.com/games/ikusa-megami-verita-eushully"
+                },
+                {
+                    label: "xGames",
+                    url: "https://xgames.to/hentai/ikusa-megami-verita-completed/"
+                }
+            ],
+            files: [
+                {
+                    label: "Tradução (ZAP — patch de interface v1.01)",
+                    url: "https://4br.me/H0YYjZli",
+                    details: "Everything except dialog and fishing instructions is translated to English. (Credits: Asmodean & SaintLouisX: Tools | zoltanar, alinelrene, essenial: Translation | zoltanar, alinelrene: Image Editing)"
+                },
+                {
+                    label: "Patches antigos",
+                    url: "https://4br.me/FJmKZTD",
+                    details: "Patch alternativo/antigo"
+                },
+                {
+                    label: "Patches antigos (Servidor 2)",
+                    url: "https://4br.me/dSs6jocp2",
+                    details: "Patch alternativo/antigo"
+                },
+                {
+                    label: "Download Jogo (Servidor 1)",
+                    url: "https://4br.me/dLc4563",
+                    details: "PC (Espelho de upload)"
+                },
+                {
+                    label: "Download Jogo (Parte 1)",
+                    url: "https://4br.me/gx2SAoHL4",
+                    details: "PC (Espelho de upload - Parte 1)"
+                },
+                {
+                    label: "Download Jogo (Parte 2)",
+                    url: "https://4br.me/bAYFWeU",
+                    details: "PC (Espelho de upload - Parte 2)"
+                },
+                {
+                    label: "Download Jogo (Parte 3)",
+                    url: "https://4br.me/yOPQ1pafth",
+                    details: "PC (Espelho de upload - Parte 3)"
+                },
+                {
+                    label: "Mediafire (Update Patches Appends 1 & 2)",
+                    url: "https://4br.me/rXkHFlQo",
+                    details: "Atualização oficial"
+                },
+                {
+                    label: "Mediafire (Update PatAppend 3)",
+                    url: "https://4br.me/lzhL4ahR",
+                    details: "Atualização oficial"
+                },
+                {
+                    label: "Mediafire (2.0 Update Patch)",
+                    url: "https://4br.me/v473Tx2j",
+                    details: "Atualização para versão 2.0"
+                },
+                {
+                    label: "Mediafire (Interface Patch)",
+                    url: "https://4br.me/8u6aHivXe",
+                    details: "Patch de interface adicional"
+                },
+                {
+                    label: "Mediafire (NekoHen TL)",
+                    url: "https://4br.me/sZXx",
+                    details: "Tradução/arquivos complementares NekoHen"
+                },
+                {
+                    label: "Mediafire (Manual JP)",
+                    url: "https://4br.me/r5OhCUM58P",
+                    details: "Manual original em japonês"
+                },
+                {
+                    label: "Mediafire (DC Fix)",
+                    url: "https://4br.me/ZO0HQPGd",
+                    details: "Correção de conteúdo/No-CD"
+                },
+                {
+                    label: "Mediafire (Wall Map)",
+                    url: "https://6VZTIkh8EZ",
+                    details: "Mapa de parede oficial em alta resolução"
+                },
+                {
+                    label: "Mediafire (BGTrilogy JP)",
+                    url: "https://4br.me/miwZrW",
+                    details: "Arquivos da trilogia Battle Goddess em japonês"
+                }
+            ],
+            installation: {
+                title: "Como Instalar e Configurar",
+                steps: [
+                    "É preciso locale japonês no Windows (ou Locale Emulator) para instalar/rodar; instale em pasta sem caracteres especiais.",
+                    "Após instalar o jogo base, Append Disks 1-3 e/ou patch 2.0, faça backup de todos os arquivos .AGF e .BIN na pasta do jogo.",
+                    "Aplique os patches oficiais antes dos patches de tradução.",
+                    "Descompacte o conteúdo do patch de interface na pasta do jogo.",
+                    "Nota importante: Verita precisa dos Append Disks para a v2.0 completa; sem eles, não copie SO017.AGF/SO018.AGF do patch (se não estiver rodando a versão 2.0, não coloque SO018.AGF e coloque SO017-1.0.AGF renomeado para SO017.AGF)."
+                ]
+            }
+        },
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém cenas adultas explícitas, nudez, harém, group sex, monstergirls e temas maduros com mosaico japonês. Discrição estritamente recomendada para maiores de 18 anos. Todos os personagens são maiores de 18 anos na ficção.</p>
+            </div>
+
+            <p><strong>Ikusa Megami Verita</strong> (<em>戦女神VERITA / Battle Goddess Episode-4</em>) é a sequência direta e o cruzamento definitivo das aclamadas franquias <em>Battle Goddess</em> e <em>Princess General (Genrin no Kishougun)</em>, desenvolvido pela <strong>Eushully</strong>. O jogo apresenta dois protagonistas: <strong>Serika</strong>, o God-Slayer andarilho que ainda procura um propósito, e <strong>Loui</strong>, o rei meio-demônio de Menfill que acabou de vencer a guerra — mas perdeu a esposa nela. A história acompanha como os caminhos dos dois heróis infames inevitavelmente se cruzam e o conflito que isso gera, com forças ancestrais despertando ao fundo e o templo de Marsterrie entrando em movimento. É uma obra épica de longa duração (mais de 50 horas), com áudio inteiramente em japonês, combate estratégico por turnos e múltiplos finais.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>O enredo une os universos da Eushully em uma escala sem precedentes. Enquanto Serika continua sua jornada solitária como divindade da espada e deicida, o rei Loui lida com as consequências políticas e emocionais de sua recente vitória em Menfill. Conforme o templo de Marsterrie inicia maquinações divinas e perigos antigos emergem das sombras, os destinos de ambos se entrelaçam em uma narrativa profunda de fantasia sombria, estratégia e drama político.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Dois Protagonistas:</strong> Alterne entre as perspectivas e campanhas de Serika e Loui, experimentando pontos de vista distintos no mesmo conflito mundial.</li>
+                <li><strong>Combate Estratégico por Turnos:</strong> Sistema tático aprofundado herdado e refinado dos títulos anteriores da Eushully, exigindo posicionamento, gerenciamento de magias e sinergia de grupo.</li>
+                <li><strong>Conteúdo Extenso:</strong> Mais de 50 horas de jogo, múltiplos finais, missões secundárias complexas, recrutamento de dezenas de aliados e eventos íntimos detalhados.</li>
+                <li><strong>Versão v2.0:</strong> Suporte completo aos Append Disks 1, 2 e 3, adicionando novos conteúdos, itens, ajustes de jogabilidade e melhorias técnicas.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Observações Técnicas</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows (PC). Requer configuração de Locale japonês (ou uso do Locale Emulator) para instalação e execução sem erros de codificação de texto.</li>
+                <li><strong>Censura:</strong> O jogo possui censura por mosaico japonês nativa; não existem patches oficiais de remoção de censura, apenas patches de tradução de interface e diálogos.</li>
+                <li><strong>Instalação de Patches:</strong> Certifique-se de aplicar os patches e Append Disks na ordem correta conforme especificado nas instruções para evitar falhas ou travamentos.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://lewdzone.com/wp-content/uploads/2022/04/Ikusa-Megami-VERITA-Adult-Game-Screenshot-2.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://lewdzone.com/wp-content/uploads/2022/04/Ikusa-Megami-VERITA-Adult-Game-Screenshot-3.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://lewdzone.com/wp-content/uploads/2022/04/Ikusa-Megami-VERITA-Adult-Game-Screenshot-4.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://smutgamer.com/wp-content/uploads/2020/05/531410_VJ007036_img_smpa6.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://smutgamer.com/wp-content/uploads/2020/05/531409_VJ007036_img_smpa4.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://smutgamer.com/wp-content/uploads/2020/05/531338_8357.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as páginas oficiais da Eushully, bases de dados, patch de tradução em inglês, servidores de upload e os guias de instalação detalhados na seção acima.</p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
