@@ -8,6 +8,134 @@ function createSlug(text) {
         .replace(/\s+/g, '-');
 }
 
+const editorialCategories = [
+    {
+        slug: 'visual-novels',
+        title: 'Visual Novels',
+        description: 'Histórias interativas em que texto, personagens e escolhas conduzem a experiência. Compare obras com rotas ramificadas, narrativas lineares e diferentes estilos de apresentação.',
+        matches: [/visual novel|sound novel|kinetic novel|ficção interativa/i]
+    },
+    {
+        slug: 'jogos-de-terror',
+        title: 'Jogos de Terror',
+        description: 'Jogos que criam tensão por meio de atmosfera, ameaça e desconforto. A seleção inclui abordagens psicológicas, sobrenaturais e de horror explícito; confira a classificação e os temas de cada página.',
+        matches: [/terror|horror|gore/i]
+    },
+    {
+        slug: 'jogos-indie',
+        title: 'Jogos Indie',
+        description: 'Projetos independentes com propostas e escalas variadas. Explore jogos que se destacam por escolhas autorais de narrativa, arte ou mecânicas e compare as informações de cada produção.',
+        matches: [/indie/i]
+    },
+    {
+        slug: 'rpgs',
+        title: 'RPGs',
+        description: 'Jogos com elementos de interpretação e progressão de personagens. Encontre aventuras com combate, exploração, atributos ou sistemas híbridos e consulte os detalhes de jogabilidade em cada artigo.',
+        matches: [/\brpg\b/i]
+    },
+    {
+        slug: 'jogos-de-misterio',
+        title: 'Jogos de Mistério',
+        description: 'Investigações em que pistas, depoimentos e dedução ajudam a reconstruir o que aconteceu. Compare histórias de suspense, investigação e quebra-cabeças sem revelar seus principais segredos.',
+        matches: [/mist[eé]rio|investiga[cç][aã]o|dedu[cç][aã]o/i]
+    },
+    {
+        slug: 'jogos-com-multiplos-finais',
+        title: 'Jogos com Múltiplos Finais',
+        description: 'Histórias com mais de um desfecho confirmado. Veja quais jogos variam conforme escolhas ou caminhos e consulte cada artigo para entender o impacto das decisões, evitando spoilers.',
+        matches: [/^m[uú]ltiplos finais$/i]
+    }
+];
+
+function getEditorialCategoryForTag(tag) {
+    return editorialCategories.find(category => category.matches.some(pattern => pattern.test(String(tag || '')))) || null;
+}
+
+function getEditorialCategoryBySlug(slug) {
+    return editorialCategories.find(category => category.slug === slug) || null;
+}
+
+function getEditorialCategoryGameKeys(category) {
+    return Object.keys(articlesDatabase).filter(key => {
+        const game = articlesDatabase[key];
+        return game.infobox?.data && (game.categories || []).some(tag => category.matches.some(pattern => pattern.test(String(tag))));
+    });
+}
+
+function setMetaProperty(property, content) {
+    let meta = document.head.querySelector(`meta[property="${property}"]`);
+    if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+}
+
+function updatePageSeoMetadata(route = getRouteInfo().route, overrides = {}) {
+    const article = articlesDatabase[route];
+    let category = route.startsWith('categoria/') ? getEditorialCategoryBySlug(route.split('/')[1]) : null;
+    let categoryGames = [];
+
+    if (route.startsWith('categoria/') && !category) {
+        const categorySlug = route.split('/')[1];
+        const matchingGameKey = Object.keys(articlesDatabase).find(key =>
+            (articlesDatabase[key].categories || []).some(tag => createSlug(tag) === categorySlug)
+        );
+        const categoryName = matchingGameKey
+            ? articlesDatabase[matchingGameKey].categories.find(tag => createSlug(tag) === categorySlug)
+            : 'Categoria';
+        category = {
+            title: categoryName,
+            description: `Consulte os jogos associados a ${categoryName} e compare suas sinopses, classificações e informações antes de escolher o que explorar.`
+        };
+        categoryGames = Object.keys(articlesDatabase).filter(key =>
+            articlesDatabase[key].infobox?.data && (articlesDatabase[key].categories || []).some(tag => createSlug(tag) === categorySlug)
+        );
+    } else if (category) {
+        categoryGames = getEditorialCategoryGameKeys(category);
+    }
+
+    const pageDetails = {
+        all: { title: 'Todos os Jogos - WikiGames', description: 'Pesquise e filtre o catálogo de jogos por nome, categoria e classificação.' },
+        categorias: { title: 'Categorias de Jogos - WikiGames', description: 'Explore coleções de jogos organizadas por formato, gênero e características narrativas. Cada seleção é atualizada a partir das categorias cadastradas nos artigos.' },
+        'minha-lista': { title: 'Minha Lista - WikiGames', description: 'Consulte os jogos salvos na sua lista pessoal da WikiGames.' },
+        configuracoes: { title: 'Configurações - WikiGames', description: 'Configure suas preferências de conteúdo e organize sua biblioteca da WikiGames.' },
+        listas: { title: 'Listas públicas - WikiGames', description: 'Explore e compartilhe listas de jogos criadas pela comunidade WikiGames.' },
+        mods: { title: 'Todos os Mods - WikiGames', description: 'Pesquise mods de jogos reunidos no catálogo da WikiGames.' },
+        perfil: { title: 'Perfil - WikiGames', description: 'Perfil público da comunidade WikiGames.' }
+    };
+    const modPage = route.startsWith('mods/') ? modsDatabase[route.split('/')[1]] : null;
+    const defaultDetails = pageDetails[route] || (modPage
+        ? { title: `Mods de ${modPage.gameTitle} - WikiGames`, description: `Explore mods reunidos para ${modPage.gameTitle} na WikiGames.` }
+        : { title: 'Página não encontrada - WikiGames', description: 'A página solicitada não foi encontrada no catálogo WikiGames.' });
+    const title = overrides.title || (article ? `${article.title} - WikiGames` : category ? `${category.title} - WikiGames` : defaultDetails.title);
+    const description = overrides.description || article?.summary || category?.description || defaultDetails.description;
+    const image = overrides.image || article?.infobox?.image || categoryGames.map(key => articlesDatabase[key].infobox?.image).find(Boolean);
+    const canonicalUrl = new URL(buildRoutePath(route), window.location.origin);
+    const currentParams = new URLSearchParams(window.location.search);
+
+    if (route === 'perfil' && currentParams.has('uid')) canonicalUrl.searchParams.set('uid', currentParams.get('uid'));
+    if (route === 'listas' && currentParams.has('list')) canonicalUrl.searchParams.set('list', currentParams.get('list'));
+
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.rel = 'canonical';
+        document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl.href;
+
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    if (descriptionMeta) descriptionMeta.setAttribute('content', description);
+    document.title = title;
+    setMetaProperty('og:url', canonicalUrl.href);
+    setMetaProperty('og:title', title);
+    setMetaProperty('og:description', description);
+    setMetaProperty('og:image', image ? new URL(image, window.location.href).href : new URL(`${getSiteBasePath()}/favicon.ico.jpg`, window.location.origin).href);
+    setMetaProperty('og:image:alt', article?.title || category?.title || 'WikiGames');
+}
+
 const ADMIN_EMAIL = 'konozuba1k@gmail.com';
 let favoriteRoutes = [];
 let favoritesLoadedFor = null;
@@ -566,6 +694,7 @@ async function renderPublicProfilePage(userId) {
         const createdLists = await getCreatedListsMarkup(services, userId);
         container.innerHTML = `<section class="public-profile"><div class="public-profile-heading">${avatar}<div><h1>${escapeHtml(name)}</h1><p>Perfil da comunidade WikiGames</p></div></div><div class="public-profile-bio"><h2>Sobre</h2><p>${escapeHtml(profile.bio || 'Este usuário ainda não adicionou uma biografia.')}</p>${socials}<h2>Jogos Avaliados</h2><div id="profileRatings">${ratedGames}</div><h2>Listas Criadas</h2><div id="profileLists">${createdLists}</div></div></section>`;
         document.title = `${name} - WikiGames`;
+        updatePageSeoMetadata('perfil', { title: document.title, description: `Perfil público de ${name} na comunidade WikiGames.`, image: profile.photoURL });
     } catch (error) {
         logFirebaseError(`Falha ao carregar perfil ${userId}`, error);
         const errorCode = error?.code ? ` (${escapeHtml(error.code)})` : '';
@@ -1164,7 +1293,7 @@ function isInternalAppLink(href) {
         const cleanQuery = url.searchParams.get('route');
 
         if (cleanQuery) return true;
-        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath === 'mods' || cleanPath === 'configuracoes' || cleanPath.startsWith('categoria/') || cleanPath.startsWith('mods/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
+        return cleanPath === '' || cleanPath === 'home' || cleanPath === 'all' || cleanPath === 'categorias' || cleanPath === 'mods' || cleanPath === 'configuracoes' || cleanPath.startsWith('categoria/') || cleanPath.startsWith('mods/') || Object.prototype.hasOwnProperty.call(articlesDatabase, cleanPath);
     } catch (error) {
         return false;
     }
@@ -1371,6 +1500,7 @@ function renderAllGamesPage() {
     document.title = 'Todos os Jogos - WikiGames';
     container.innerHTML = `
         <h1><i class="fa-solid fa-list"></i> Todos os Jogos</h1>
+        <p class="category-directory-link"><a href="${buildAppHref('/categorias')}"><i class="fa-solid fa-tags"></i> Explorar categorias</a></p>
         <div class="advanced-filters">
             <div class="filter-row">
                 <label class="filter-field">
@@ -1812,6 +1942,7 @@ function renderPage() {
     const { route, anchor } = getRouteInfo();
     const container = document.getElementById('article-container');
 
+    updatePageSeoMetadata(route);
     setPageBackground(null);
 
     if (route === 'all') {
@@ -1855,30 +1986,53 @@ function renderPage() {
         if (renderModsPage(route.split('/')[1])) return;
     }
 
+    if (route === 'categorias') {
+        const availableCategories = editorialCategories.map(category => ({
+            ...category,
+            gameCount: getEditorialCategoryGameKeys(category).length
+        })).filter(category => category.gameCount > 0);
+        const metaDescription = document.querySelector('meta[name="description"]');
+        const description = 'Explore coleções de jogos organizadas por formato, gênero e características narrativas. Cada seleção é atualizada a partir das categorias cadastradas nos artigos.';
+
+        document.title = 'Categorias de Jogos - WikiGames';
+        if (metaDescription) metaDescription.setAttribute('content', description);
+        container.innerHTML = `
+            <h1><i class="fa-solid fa-tags"></i> Categorias de Jogos</h1>
+            <p class="category-intro">${description}</p>
+            <ul class="category-list">
+                ${availableCategories.map(category => `
+                    <li>
+                        <a href="${buildAppHref(`/categoria/${category.slug}`)}"><h2>${escapeHtml(category.title)}</h2></a>
+                        <p>${escapeHtml(category.description)}</p>
+                        <small>${category.gameCount} ${category.gameCount === 1 ? 'jogo nesta seleção' : 'jogos nesta seleção'}</small>
+                    </li>
+                `).join('')}
+            </ul>
+        `;
+        window.scrollTo(0, 0);
+        return;
+    }
+
     if (route.startsWith('categoria/')) {
         const catSlug = route.split('/')[1];
-        let foundGames = [];
-        let catNameDisplay = 'Categoria';
+        const editorialCategory = getEditorialCategoryBySlug(catSlug);
+        const foundGames = editorialCategory
+            ? getEditorialCategoryGameKeys(editorialCategory).map(key => ({ key, ...articlesDatabase[key] }))
+            : Object.keys(articlesDatabase)
+                .filter(key => articlesDatabase[key].infobox?.data && (articlesDatabase[key].categories || []).some(category => createSlug(category) === catSlug))
+                .map(key => ({ key, ...articlesDatabase[key] }));
+        const catNameDisplay = editorialCategory?.title || foundGames[0]?.categories?.find(category => createSlug(category) === catSlug) || 'Categoria';
+        const description = editorialCategory?.description || `Consulte os jogos associados a ${catNameDisplay} e compare suas sinopses, classificações e informações antes de escolher o que explorar.`;
+        const metaDescription = document.querySelector('meta[name="description"]');
 
-        for (const key in articlesDatabase) {
-            const game = articlesDatabase[key];
-            if (game.categories) {
-                game.categories.forEach(cat => {
-                    if (createSlug(cat) === catSlug) {
-                        foundGames.push({ key, title: game.title, summary: game.summary, classification: getArticleClassification(key, game) });
-                        catNameDisplay = cat;
-                    }
-                });
-            }
-        }
-
-        document.title = `Categoria: ${catNameDisplay} - WikiGames`;
-        let html = `<h1><i class="fa-solid fa-tag"></i> Categoria: ${catNameDisplay}</h1>`;
+        document.title = `${catNameDisplay} - WikiGames`;
+        if (metaDescription) metaDescription.setAttribute('content', description);
+        let html = `<h1><i class="fa-solid fa-tag"></i> ${escapeHtml(catNameDisplay)}</h1><p class="category-intro">${escapeHtml(description)}</p><p class="category-result-count">${foundGames.length} ${foundGames.length === 1 ? 'jogo encontrado' : 'jogos encontrados'}</p>`;
 
         if (foundGames.length > 0) {
             html += `<ul class="category-list">`;
-            foundGames.forEach(g => {
-                html += `<li><a href="${buildAppHref(`/${g.key}`)}"><h3>${g.title}${g.classification ? ` ${renderArticleClassificationBadges(g.key, articlesDatabase[g.key])}` : ''}</h3></a><p>${g.summary}</p></li>`;
+            foundGames.sort((first, second) => first.title.localeCompare(second.title)).forEach(game => {
+                html += `<li><a href="${buildAppHref(`/${game.key}`)}"><h2>${escapeHtml(game.title)}${game.infobox?.data && getArticleClassification(game.key, game) ? ` ${renderArticleClassificationBadges(game.key, game)}` : ''}</h2></a><p>${escapeHtml(game.summary || '')}</p></li>`;
             });
             html += `</ul>`;
         } else {
@@ -1985,7 +2139,12 @@ function renderPage() {
 
         if (article.categories) {
             htmlContent += `<hr style="margin: 30px 0 15px;"><p style="font-size:13px;"><i class="fa-solid fa-tags"></i> <strong>Categorias:</strong> `;
-            const catLinks = article.categories.map(cat => `<a href="${buildAppHref(`/?route=categoria/${createSlug(cat)}`)}">${cat}</a>`);
+            const linkedCategories = [...new Map(article.categories.map(tag => {
+                const editorialCategory = getEditorialCategoryForTag(tag);
+                const slug = editorialCategory?.slug || createSlug(tag);
+                return [slug, { slug, title: editorialCategory?.title || tag }];
+            })).values()];
+            const catLinks = linkedCategories.map(category => `<a href="${buildAppHref(`/categoria/${category.slug}`)}">${escapeHtml(category.title)}</a>`);
             htmlContent += catLinks.join(' | ') + `</p>`;
         }
 

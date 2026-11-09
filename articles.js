@@ -2,7 +2,7 @@
 ==========================================================================
  COMO ADICIONAR UM NOVO JOGO NA WIKI:
  1. Crie uma nova chave dentro do objeto 'articlesDatabase' (ex: "nome-do-jogo").
- 2. Preencha 'title', 'categories' (use nomes exatos para o filtro funcionar), e 'summary'.
+ 2. Preencha 'title', 'categories' e 'summary'. As categorias atualizam automaticamente os filtros e coleções temáticas; use 'Múltiplos Finais' somente quando confirmado no jogo.
  3. No 'infobox', coloque a URL da imagem e os dados técnicos.
  4. No 'toc' (Índice), coloque o 'id' e o 'text' de cada título da sua página.
  5. No 'content', escreva o texto em HTML. Todos os links dentro do conteúdo ficam vermelhos automaticamente.
@@ -21,7 +21,7 @@ const articlesDatabase = {
     },
     "print-i-love-u": {
         title: "Print I Love U",
-        categories: ["Visual Novel", "Terror Psicológico", "Romance", "Indie", "Suspense", "Curto"],
+        categories: ["Visual Novel", "Terror Psicológico", "Romance", "Indie", "Suspense", "Curto", "Múltiplos Finais"],
         summary: "Um jogo de romance curto e enigmático descoberto em um laptop usado cujo dono anterior desapareceu. Dedicado a uma garota chamada Alice, o jogo mistura minijogos simples, visuais desenhados à mão, trilha sonora marcante e temas psicológicos profundos com múltiplos finais.",
         infobox: {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/3dd47ea7113f34c01e6301639cc11ec9b6f58019/header.jpg?t=1791545817",
@@ -2261,7 +2261,7 @@ const articlesDatabase = {
     },
     "the-zodiac-trial": {
         title: "The Zodiac Trial",
-        categories: ["Visual Novel", "Mistério", "Death Game", "Quebra-Cabeças", "Indie"],
+        categories: ["Visual Novel", "Mistério", "Death Game", "Quebra-Cabeças", "Indie", "Múltiplos Finais"],
         summary: "O Julgamento do Zodíaco começou e a vida de 12 jurados está em jogo! Um jogo de mistério, traição e quebra-cabeças com mais de 52 finais.",
         infobox: {
             image: "https://igg-games.com/wp-content/uploads/2026/01/The-Zodiac-Trial-PC-Crack.jpg",

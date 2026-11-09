@@ -220,25 +220,25 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 .article-text a:hover { color: #ff8585; }
 
 .download-warning {
-    margin: 25px 0 10px;
-    padding: 16px 18px;
-    border: 1px solid rgba(255, 193, 7, 0.45);
-    background: rgba(49, 40, 15, 0.72);
-    border-radius: 8px;
-    color: #f5e5aa;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 18px 0 10px;
+    padding: 12px 14px;
+    border: 1px solid rgba(210, 178, 89, 0.24);
+    background: rgba(35, 32, 23, 0.5);
+    border-radius: 4px;
+    color: #d7cdac;
 }
 
 .download-warning h3 {
     margin: 0 0 12px;
-    color: #ffd76a;
-    font-size: 15px;
+    color: #d9c477;
+    font-size: 13px;
     font-weight: 700;
 }
 
 .download-warning p {
     margin: 0 0 10px;
-    color: #f2df9a;
+    color: #c9c1a8;
+    font-size: 12px;
 }
 
 .download-warning a {
@@ -247,7 +247,7 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 }
 
 .download-warning em {
-    color: #ffe8a3;
+    color: #d5cba9;
     font-style: italic;
 }
 
@@ -484,13 +484,13 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 
 .joiplay-panel {
     clear: both;
-    margin: 25px 0 18px;
-    padding: 16px 18px;
-    background: linear-gradient(135deg, rgba(24, 52, 70, 0.88), rgba(17, 28, 43, 0.92));
-    border: 1px solid #3e7894;
-    border-left: 4px solid #51c2d5;
+    margin: 18px 0 14px;
+    padding: 12px 14px;
+    background: rgba(18, 30, 39, 0.58);
+    border: 1px solid rgba(91, 126, 145, 0.38);
+    border-left: 2px solid #607c8b;
     border-radius: 4px;
-    color: #d9e8ee;
+    color: #c1cdd2;
 }
 .joiplay-heading {
     display: flex;
@@ -501,23 +501,23 @@ a:hover { color: #80bcd8; text-decoration: underline; }
 }
 .joiplay-heading h2 {
     margin: 0;
-    color: #f1fbff;
-    font-size: 18px;
+    color: #dbe5e8;
+    font-size: 15px;
 }
-.joiplay-heading h2 i { color: #51c2d5; }
+.joiplay-heading h2 i { color: #7cabb7; }
 .joiplay-heading span {
     padding: 4px 8px;
-    border: 1px solid rgba(81, 194, 213, 0.5);
+    border: 1px solid rgba(124, 171, 183, 0.32);
     border-radius: 3px;
-    color: #9de4ec;
+    color: #a9c2c9;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-.joiplay-panel p { margin: 8px 0; }
-.joiplay-panel strong { color: #fff; }
+.joiplay-panel p { margin: 6px 0; font-size: 12px; }
+.joiplay-panel strong { color: #e0e7e9; }
 .joiplay-links { margin-bottom: 0; }
-.joiplay-links a { background: linear-gradient(90deg, rgba(11, 27, 40, 0.96), rgba(17, 34, 48, 0.96)); }
+.joiplay-links a { background: rgba(11, 27, 40, 0.48); }
 
 .infobox {
     float: right;
@@ -679,7 +679,11 @@ a:hover { color: #80bcd8; text-decoration: underline; }
     padding-bottom: 12px;
 }
 .category-list h3, .all-games-list h3 { font-size: 16px; margin-bottom: 4px; font-family: Georgia, serif; }
+.category-list h2 { font-size: 16px; margin-bottom: 4px; font-family: Georgia, serif; }
 .category-list p, .all-games-list p { font-size: 12px; color: #8fa3bc; margin: 0; }
+.category-intro { max-width: 760px; margin: 8px 0 16px; color: #c5c8c6; }
+.category-result-count, .category-list small { display: block; margin: 0 0 12px; color: #8fa3bc; font-size: 12px; }
+.category-directory-link { margin: 0 0 14px; }
 
 #sidebar {
     width: 240px;
@@ -922,15 +926,15 @@ body.high-contrast-mode .settings-genre-grid { border-color: #fff; }
     justify-content: center;
     gap: 7px;
     flex-shrink: 0;
-    padding: 9px 12px;
-    border: 1px solid #376d80;
-    border-radius: 4px;
-    background: rgba(20, 58, 70, .75);
-    color: #a9e9f1;
-    font-size: 12px;
-    font-weight: bold;
+    padding: 6px 9px;
+    border: 1px solid rgba(105, 139, 151, .42);
+    border-radius: 3px;
+    background: rgba(20, 36, 44, .42);
+    color: #b4c7cc;
+    font-size: 11px;
+    font-weight: 600;
 }
-.mtool-downloads-button:hover { background: #235d6d; color: #fff; text-decoration: none; }
+.mtool-downloads-button:hover { background: rgba(37, 61, 70, .72); color: #e5eff1; text-decoration: none; }
 .mtool-engine-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
