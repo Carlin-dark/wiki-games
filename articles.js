@@ -8,7 +8,7 @@
  5. No 'content', escreva o texto em HTML. Todos os links dentro do conteúdo ficam vermelhos automaticamente.
     DICA: Para criar um link para outro jogo, use <a href="#/nome-da-chave-do-jogo">Texto</a>.
  6. O painel com informações e download do JoiPlay é adicionado automaticamente a todas as páginas de jogos.
- 7. Para a página de downloads, adicione ao jogo: downloads: { officialLinks: [{ label, url }], files: [{ label, url, details }], installation: { title, steps: [] } }.
+ 7. Para a página de downloads, adicione ao jogo: downloads: { officialLinks: [{ label, url }], files: [{ label, url, details, verified: true }], installation: { title, steps: [] } }.
      A página é aberta em downloads/index.html?game=chave-do-jogo. Use somente links autorizados.
 ==========================================================================
 */
@@ -44,18 +44,61 @@ const articlesDatabase = {
         ],
         downloads: {
             officialLinks: [
-                { label: "Página oficial (exemplo)", url: "https://exemplo.invalid/print-i-love-u" }
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/4796160/Print_I_Love_U/"
+                }
             ],
             files: [
-                { label: "Download traduzido (exemplo)", url: "https://exemplo.invalid/download-traduzido", details: "Link ilustrativo; substitua por um link autorizado." },
-                { label: "Servidor alternativo (exemplo)", url: "https://exemplo.invalid/download-alternativo", details: "Link ilustrativo; substitua por um link autorizado." }
+                {
+                    label: "Download Print I Love U (Traduzido em Português / MEGA)",
+                    url: "https://4br.me/BTzpT20MH",
+                    details: "Versão completa traduzida para o português com ícone verificado.",
+                    verified: true
+                },
+                {
+                    label: "Download Print I Love U (Servidor 1)",
+                    url: "https://4br.me/xZybsjz",
+                    details: "Mirror alternativo de download."
+                },
+                {
+                    label: "Download Print I Love U (Servidor 2)",
+                    url: "https://4br.me/YfmyRpC",
+                    details: "Mirror alternativo de download."
+                },
+                {
+                    label: "Download Print I Love U (Servidor 3)",
+                    url: "https://4br.me/WNaOdgJb",
+                    details: "Mirror alternativo de download."
+                },
+                {
+                    label: "Download Print I Love U (Servidor 4)",
+                    url: "https://4br.me/EAl39sg",
+                    details: "Mirror alternativo de download."
+                },
+                {
+                    label: "Download Print I Love U (Servidor 5)",
+                    url: "https://4br.me/o7ea",
+                    details: "Mirror alternativo de download."
+                },
+                {
+                    label: "Download Print I Love U (Servidor 6)",
+                    url: "https://4br.me/XtDh95vnui",
+                    details: "Mirror alternativo de download."
+                },
+                {
+                    label: "Download Print I Love U (Servidor 7)",
+                    url: "https://4br.me/v6uyQ8",
+                    details: "Mirror alternativo de download."
+                }
             ],
             installation: {
-                title: "Instalação (exemplo)",
+                title: "Como instalar a versão traduzida",
                 steps: [
-                    "Baixe o arquivo usando um link autorizado.",
-                    "Extraia o arquivo compactado para uma pasta de sua preferência.",
-                    "Consulte as instruções oficiais do jogo para iniciar ou aplicar uma tradução."
+                    "Baixe o jogo através do link do MEGA.",
+                    "Após o download, clique com o botão direito no arquivo compactado e escolha a opção 'Extrair aqui' (você pode colocar esta pasta em qualquer lugar do seu computador sem problemas).",
+                    "Abra a pasta extraída, localize e abra o executável 'pilu.exe'.",
+                    "Dentro do jogo, selecione o idioma 'inglês' nas configurações/opções (que é onde se encontra aplicada a tradução em português)."
                 ]
             }
         },
@@ -80,33 +123,28 @@ const articlesDatabase = {
                 <li><strong>Trilha Sonora Marcante:</strong> Músicas originais imersivas.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos (Windows):</strong></p>
+            <h2 id="requisitos">Requisitos de sistema</h2>
             <ul>
-                <li><strong>Sistema Operacional:</strong> Windows 10 / 11 (64-bit)</li>
+                <li><strong>Sistema operacional:</strong> Windows 10 / 11 (64-bit)</li>
                 <li><strong>Processador:</strong> Dual core 2.0 GHz</li>
-                <li><strong>Memória RAM:</strong> 1 GB de RAM</li>
-                <li><strong>Placa de Vídeo:</strong> Placa gráfica integrada</li>
+                <li><strong>Memória:</strong> 1 GB de RAM</li>
+                <li><strong>Placa de vídeo:</strong> Placa gráfica integrada</li>
                 <li><strong>DirectX:</strong> Versão 11</li>
                 <li><strong>Armazenamento:</strong> 210 MB de espaço disponível</li>
             </ul>
 
-            <h2 id="galeria">Galeria de Imagens</h2>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/6a2f1d24df84559f12d2b47e2ff3d37ee710fc3a/ss_6a2f1d24df84559f12d2b47e2ff3d37ee710fc3a.1920x1080.jpg?t=1791545817" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/4bf8fb87af301b315a8d384ee3db65b31aba9786/ss_4bf8fb87af301b315a8d384ee3db65b31aba9786.1920x1080.jpg?t=1791545817" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/8fe1d5ffc943262fc8e64df4670f9362dc147ce2/ss_8fe1d5ffc943262fc8e64df4670f9362dc147ce2.1920x1080.jpg?t=1791545817" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/443656cd8314611e36a847b5807afa9075abcf60/ss_443656cd8314611e36a847b5807afa9075abcf60.1920x1080.jpg?t=1791545817" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/12aa79fad6ddaa1993e7454e58f0b34f9020703d/ss_12aa79fad6ddaa1993e7454e58f0b34f9020703d.1920x1080.jpg?t=1791545817" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/631c028103be5e3ce9a2cf6d62e101c68472728e/ss_631c028103be5e3ce9a2cf6d62e101c68472728e.1920x1080.jpg?t=1791545817" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            <h2 id="galeria">Galeria de imagens</h2>
+            <div class="image-gallery">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/6a2f1d24df84559f12d2b47e2ff3d37ee710fc3a/ss_6a2f1d24df84559f12d2b47e2ff3d37ee710fc3a.1920x1080.jpg?t=1791545817" alt="Screenshot 1 de Print I Love U" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/4bf8fb87af301b315a8d384ee3db65b31aba9786/ss_4bf8fb87af301b315a8d384ee3db65b31aba9786.1920x1080.jpg?t=1791545817" alt="Screenshot 2 de Print I Love U" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/8fe1d5ffc943262fc8e64df4670f9362dc147ce2/ss_8fe1d5ffc943262fc8e64df4670f9362dc147ce2.1920x1080.jpg?t=1791545817" alt="Screenshot 3 de Print I Love U" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/443656cd8314611e36a847b5807afa9075abcf60/ss_443656cd8314611e36a847b5807afa9075abcf60.1920x1080.jpg?t=1791545817" alt="Screenshot 4 de Print I Love U" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/12aa79fad6ddaa1993e7454e58f0b34f9020703d/ss_12aa79fad6ddaa1993e7454e58f0b34f9020703d.1920x1080.jpg?t=1791545817" alt="Screenshot 5 de Print I Love U" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4796160/631c028103be5e3ce9a2cf6d62e101c68472728e/ss_631c028103be5e3ce9a2cf6d62e101c68472728e.1920x1080.jpg?t=1791545817" alt="Screenshot 6 de Print I Love U" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            <p>Consulte os links disponíveis e as instruções de instalação na página dedicada do jogo.</p>
-            <div class="play-links">
-                <a href="../downloads/index.html?game=print-i-love-u" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Página de downloads</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links e as instruções na página de downloads.</p>
         `
     },
     "sobre": {
@@ -255,23 +293,56 @@ const articlesDatabase = {
     "alice-in-the-nightmare-land": {
         title: "Alice in the Nightmare Land",
         categories: ["Escape Room", "Aventura", "Puzzle"],
-        youtubeId: "N37uMETPRoM",
         summary: "Jogo indie de escape e exploração onde Alice procura sua irmã desaparecida em uma mansão cheia de armadilhas mortais.",
         infobox: {
             image: "https://midia.hentaijogos.com/file/midia-site-traducoes/wp-content/uploads/2024/09/Alice-in-the-Nightmare-Land-hentaijogos.com-1-1024x771.webp",
             data: {
                 "Desenvolvedor": "Tsukki's Tea Party",
-                "Publicadora": "OTAKU Plan",
-                "Lançamento": "7 de Junho de 2024",
-                "Plataformas": "PC (Steam)",
-                "Idiomas": "Inglês, Japonês, Chinês"
+                "Distribuidora": "OTAKU Plan",
+                "Gêneros": "Escape Room, Aventura, Puzzle",
+                "Plataformas": "PC (Steam), Android",
+                "Lançamento": "7 de Junho de 2024"
             }
         },
         toc: [
             { id: "jogabilidade", text: "1. Jogabilidade e Puzzles" },
             { id: "historia", text: "2. Enredo" },
-            { id: "mortes", text: "3. Armadilhas e Finais" }
+            { id: "mortes", text: "3. Armadilhas e Finais" },
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/2583430/Alice_in_the_Nightmare_land/"
+                },
+                {
+                    label: "DLsite",
+                    url: "https://www.dlsite.com/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download APK (Android)",
+                    url: "https://4br.me/xdAd9CCE",
+                    details: "Versão Android; atenção ao problema conhecido ao carregar o save."
+                },
+                {
+                    label: "Download para PC Windows",
+                    url: "https://4br.me/bYdRQ7Q",
+                    details: "Senha para extração: hentaijogos.com"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o arquivo correspondente à sua plataforma (APK para Android ou Windows para PC).",
+                    "A versão Android já está descompactada no formato APK e não requer senha.",
+                    "Para a versão de PC, utilize a senha 'hentaijogos.com' para extrair o arquivo compactado.",
+                    "Se encontrar problemas de save no Android, utilize a versão de PC rodando através do JoiPlay."
+                ]
+            }
+        },
         content: `
             <p>Desenvolvido pelo estúdio independente <a href="https://twitter.com/tsukkiteaparty" target="_blank">Tsukki's Tea Party</a>, <strong>Alice in the Nightmare Land</strong> é um jogo de aventura e resolução de quebra-cabeças com fortes mecânicas de <em>escape room</em>, usando um estilo clássico de exploração e coleta de itens.</p>
             
@@ -284,44 +355,61 @@ const articlesDatabase = {
             <h2 id="mortes">Armadilhas e Finais</h2>
             <p>O título flerta intensamente com o horror. Decisões precipitadas ou erros na combinação de itens ativam as brutais cenas de <em>Dead Ends</em> (Finais Mortais), punindo severamente a falta de atenção aos mínimos detalhes do ambiente.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/2583430/Alice_in_the_Nightmare_land/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://www.dlsite.com/" target="_blank"><i class="fa-solid fa-globe"></i> DLsite</a>
-            </div>
-
-            <h2>Versões para Download</h2>
-            <p><strong>Versão Android (APK):</strong> A versão para Android pode apresentar problemas devido à adaptação para dispositivos móveis. Se uma falha impedir sua progressão, recomendamos baixar a versão para PC e jogar pelo JoiPlay.</p>
-            <p><strong>Atenção:</strong> o arquivo Android já está descompactado no formato APK, portanto não é necessário inserir uma senha. Se uma senha for solicitada, você baixou a versão para PC por engano.</p>
-            <p><strong>Versão em PT-BR (APK) - 75,51 MB:</strong> há um problema conhecido ao carregar o save. Será necessário jogar tudo de uma vez ou usar a versão de PC pelo JoiPlay.</p>
-            <div class="play-links">
-                <a href="https://4br.me/xdAd9CCE" target="_blank"><i class="fa-brands fa-android"></i> Download APK</a>
-                <a href="https://4br.me/bYdRQ7Q" target="_blank"><i class="fa-solid fa-desktop"></i> Download para PC Windows</a>
-            </div>
-            <p><strong>Senha da versão para PC:</strong> hentaijogos.com</p>
-            <p><strong>Aviso:</strong> Caso algum dos links esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "doki-doki-literature-club": {
         title: "Doki Doki Literature Club!",
         categories: ["Visual Novel", "Terror Psicológico", "Metaficção"],
-        youtubeId: "kB1663FTpzU",
         summary: "Visual Novel de terror psicológico disfarçada de um simulador de encontros fofo.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/698780/header.jpg",
             data: {
                 "Desenvolvedor": "Team Salvato",
-                "Gêneros": "Visual Novel, Terror Psicológico",
-                "Lançamento": "22 de Setembro de 2017",
-                "Plataformas": "PC, macOS, Linux"
+                "Distribuidora": "Team Salvato",
+                "Gêneros": "Visual Novel, Terror Psicológico, Metaficção",
+                "Plataformas": "PC, macOS, Linux, Android",
+                "Lançamento": "22 de Setembro de 2017"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse" },
             { id: "mecanicas", text: "2. Mecânicas e Poemas" },
-            { id: "personagens", text: "3. Personagens" }
+            { id: "personagens", text: "3. Personagens" },
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Site Oficial",
+                    url: "https://ddlc.moe/"
+                },
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/"
+                },
+                {
+                    label: "Itch.io",
+                    url: "https://teamsalvato.itch.io/ddlc"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Tradução PT-BR e Instalação",
+                    url: "https://4br.me/nWP4mQb5",
+                    details: "Versão Windows / Android; Tradução, revisão e RomHacking por Vinicius Dias (~220,50 MB)."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira ou instale o jogo pelas páginas oficiais (Steam, Itch.io ou site oficial).",
+                    "Baixe o arquivo de tradução/instalação em Português Brasileiro.",
+                    "Execute o instalador e aponte para o diretório correto do jogo (ex: C:\\SekaiVN\\ ou o diretório de instalação da Steam)."
+                ]
+            }
+        },
         content: `
             <p><strong>Doki Doki Literature Club! (DDLC)</strong> é uma aclamada visual novel gratuita desenvolvida por Dan Salvato através do estúdio <a href="https://teamsalvato.com/" target="_blank">Team Salvato</a>. Apresentando-se como um simulador de romance amador repleto de clichês fofos de animes, a obra subverte drasticamente as expectativas a partir de seu segundo ato, transformando-se em horror metaficcional puro que interage de forma agressiva com o computador do jogador.</p>
 
@@ -345,49 +433,58 @@ const articlesDatabase = {
                 <li><strong>Yuri:</strong> Fascinada por literatura de terror, ela esconde compulsões autodestrutivas que se agravam no Ato 2.</li>
             </ul>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue de graça:</strong></p>
-            <div class="play-links">
-                <a href="https://ddlc.moe/" target="_blank"><i class="fa-solid fa-globe"></i> Site Oficial</a>
-                <a href="https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://teamsalvato.itch.io/ddlc" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
-            </div>
-
-            <h2>Tradução em Português Brasileiro</h2>
-            <p><strong>Ano de lançamento:</strong> 2017<br>
-            <strong>Ano de tradução:</strong> 2017<br>
-            <strong>Tradutores, revisão e RomHacking:</strong> Vinicius Dias<br>
-            <strong>Classificação:</strong> +13<br>
-            <strong>Duração:</strong> 7 horas<br>
-            <strong>Tamanho:</strong> 220,50 MB<br>
-            <strong>Formato:</strong> .exe<br>
-            <strong>Local de instalação:</strong> C:\\SekaiVN\\<br>
-            <strong>Aplicativo:</strong> versão oficial na Play Store<br>
-            <strong>Dispositivo testado:</strong> Moto G30 (Android 11)</p>
-            <div class="play-links">
-                <a href="https://4br.me/nWP4mQb5" target="_blank"><i class="fa-solid fa-download"></i> Download</a>
-            </div>
-            <p><strong>Aviso:</strong> Caso o link esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais, arquivos de tradução e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "doki-doki-literature-club-plus": {
         title: "Doki Doki Literature Club Plus!",
         categories: ["Visual Novel", "Terror Psicológico", "Metaficção"],
-        youtubeId: "j__NPsUxR5Q",
         summary: "Versão definitiva de DDLC com Side Stories e lore focado em simulações de I.A.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1388880/header.jpg",
             data: {
                 "Desenvolvedor": "Team Salvato, Serenity Forge",
-                "Lançamento": "30 de Junho de 2021",
-                "Plataformas": "PC, macOS, PS4, PS5, Xbox One, Switch"
+                "Distribuidora": "Serenity Forge",
+                "Gêneros": "Visual Novel, Terror Psicológico, Metaficção",
+                "Plataformas": "PC, macOS, PS4, PS5, Xbox One, Switch",
+                "Lançamento": "30 de Junho de 2021"
             }
         },
         toc: [
             { id: "novidades", text: "1. Novidades e Remasterização" },
             { id: "side-stories", text: "2. Side Stories (Histórias Secundárias)" },
-            { id: "metaverse", text: "3. Metaverse Enterprise Solutions" }
+            { id: "metaverse", text: "3. Metaverse Enterprise Solutions" },
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1388880/Doki_Doki_Literature_Club_Plus/"
+                },
+                {
+                    label: "Epic Games Store",
+                    url: "https://store.epicgames.com/"
+                },
+                {
+                    label: "Nintendo eShop",
+                    url: "https://www.nintendo.com/"
+                },
+                {
+                    label: "PlayStation Store",
+                    url: "https://store.playstation.com/"
+                }
+            ],
+            files: [],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo através de uma das lojas oficiais listadas acima.",
+                    "Baixe e instale o jogo diretamente pela plataforma escolhida."
+                ]
+            }
+        },
         content: `
             <p>Com a distribuição encabeçada pela <a href="https://serenityforge.com/" target="_blank">Serenity Forge</a>, <strong>DDLC Plus!</strong> é a versão comercial que levou a experiência original aos consoles modernos. Para isso, recriou a manipulação de arquivos do Windows dentro de um "Sistema Operacional" simulado no próprio jogo.</p>
             
@@ -400,14 +497,8 @@ const articlesDatabase = {
             <h2 id="metaverse">Metaverse Enterprise Solutions (MES)</h2>
             <p>O terror cósmico foi expandido: e-mails secretos revelam que DDLC é uma máquina virtual rodando nos servidores da corporação MES. O objetivo real das simulações é estudar o comportamento imprevisível de Inteligências Artificiais quando expostas a epifanias existenciais.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/1388880/Doki_Doki_Literature_Club_Plus/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://store.epicgames.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Epic Games</a>
-                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
-                <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais e adquira o jogo através das lojas parceiras na seção de downloads acima.</p>
         `
     },
     "the-house-in-fata-morgana": {
@@ -457,36 +548,59 @@ const articlesDatabase = {
             image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2386250/header.jpg",
             data: {
                 "Desenvolvedor": "ebi-hime",
-                "Gêneros": "Visual Novel, Yandere, Yuri, Horror",
-                "Lançamento": "25 de Maio de 2023",
-                "Plataformas": "PC (Windows, macOS, Linux)"
+                "Distribuidora": "ebi-hime",
+                "Gêneros": "Visual Novel, Yandere, Yuri, Horror, Indie",
+                "Plataformas": "PC (Windows, macOS, Linux)",
+                "Lançamento": "25 de Maio de 2023"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse" },
             { id: "mecanicas", text: "2. Múltiplos Finais e Consequências" },
-            { id: "narrativa", text: "3. Conto de Fadas Macabro e Narrativa" }
+            { id: "narrativa", text: "3. Conto de Fadas Macabro e Narrativa" },
+            { id: "traducao", text: "4. Tradução em Português Brasileiro" },
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Steam (PC)",
+                    url: "https://store.steampowered.com/app/2386250/It_gets_so_lonely_here/"
+                },
+                {
+                    label: "Itch.io (PC)",
+                    url: "https://ebihime.itch.io/lonely"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Tradução PT-BR",
+                    url: "https://4br.me/6DbpPe",
+                    details: "Traduzido e adaptado por Fepulo (Formato .exe; 126 MB; Classificação +18)."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira ou instale o jogo pelas páginas oficiais (Steam ou Itch.io).",
+                    "Baixe o arquivo de tradução em Português Brasileiro.",
+                    "Execute o instalador .exe e aponte o diretório de instalação para a pasta correta do jogo (ex: C:\\SekaiVN\\)."
+                ]
+            }
+        },
         content: `
             <p><strong>It gets so lonely here</strong> é uma <em>visual novel</em> indie de terror psicológico focada em relacionamentos sáficos (yuri) e no arquétipo <em>yandere</em>, desenvolvida e publicada pela criadora <a href="https://ebihime.itch.io/" target="_blank">ebi-hime</a> originalmente para a Yandere Game Jam de 2023. A obra é elogiada por transformar uma premissa simples de perseguição em uma exploração angustiante sobre obsessão, solidão e relacionamentos destrutivos.</p>
             
             <h2 id="sinopse">Sinopse</h2>
-            <p>O jogador assume o papel de uma adolescente sem nome de um colégio interno prestigiado, que corre desesperadamente durante a noite por uma floresta escura. Seu único instinto é fugir de um perseguidor desconhecido. Ao encontrar uma bifurcação, ela deve escolher entre fugir para a praia, para a vila ou para o castelo [cite: 1.1.2]. Em cada um desses refúgios, ela conhece garotas misteriosas (uma sereia, uma coveira ou uma princesa) por quem se sente atraída, mas o perigo está longe de ter acabado [cite: 1.1.2].</p>
+            <p>O jogador assume o papel de uma adolescente sem nome de um colégio interno prestigiado, que corre desesperadamente durante a noite por uma floresta escura. Seu único instinto é fugir de um perseguidor desconhecido. Ao encontrar uma bifurcação, ela deve escolher entre fugir para a praia, para a vila ou para o castelo. Em cada um desses refúgios, ela conhece garotas misteriosas (uma sereia, uma coveira ou uma princesa) por quem se sente atraída, mas o perigo está longe de ter acabado.</p>
 
             <h2 id="mecanicas">Múltiplos Finais e Consequências</h2>
-            <p>O jogo possui cerca de 50.000 palavras e oferece uma estrutura ramificada baseada nas escolhas do jogador [cite: 1.1.3]. A premissa central de jogabilidade brinca com a ideia de ilusão de segurança: dependendo da rota e das decisões tomadas, a protagonista invariavelmente encontra finais fatídicos e sombrios, que envolvem destinos brutais nas mãos das garotas que supostamente a acolheram. Um dos destaques é a presença de um narrador irônico, que constantemente julga e repreende as péssimas decisões do jogador [cite: 1.1.3].</p>
+            <p>O jogo possui cerca de 50.000 palavras e oferece uma estrutura ramificada baseada nas escolhas do jogador. A premissa central de jogabilidade brinca com a ideia de ilusão de segurança: dependendo da rota e das decisões tomadas, a protagonista invariavelmente encontra finais fatídicos e sombrios, que envolvem destinos brutais nas mãos das garotas que supostamente a acolheram. Um dos destaques é a presença de um narrador irônico, que constantemente julga e repreende as péssimas decisões do jogador.</p>
 
             <h2 id="narrativa">Conto de Fadas Macabro e Narrativa</h2>
-            <p>A direção de arte utiliza cores suaves e propositalmente limitadas em uma resolução nostálgica de 800x600, remetendo a livros de contos de fadas antigos [cite: 1.1.3]. Esse contraste entre o design fofo e os temas extremamente sombrios do jogo (como relacionamentos abusivos, ciúmes, luto e obsessão) cria uma atmosfera de constante desconforto. A trilha sonora original complementa perfeitamente a tensão psicológica das diferentes rotas [cite: 1.1.3].</p>
+            <p>A direção de arte utiliza cores suaves e propositalmente limitadas em uma resolução nostálgica de 800x600, remetendo a livros de contos de fadas antigos. Esse contraste entre o design fofo e os temas extremamente sombrios do jogo (como relacionamentos abusivos, ciúmes, luto e obsessão) cria uma atmosfera de constante desconforto. A trilha sonora original complementa perfeitamente a tensão psicológica das diferentes rotas.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/2386250/It_gets_so_lonely_here/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (PC)</a>
-                <a href="https://ebihime.itch.io/lonely" target="_blank"><i class="fa-solid fa-gamepad"></i> itch.io (PC)</a>
-            </div>
-
-            <h2>Tradução em Português Brasileiro</h2>
+            <h2 id="traducao">Tradução em Português Brasileiro</h2>
             <p><strong>Ano de lançamento:</strong> 2023<br>
             <strong>Ano de tradução:</strong> 2024<br>
             <strong>Tradutores, revisão e RomHacking:</strong> <a href="https://fepulo.itch.io/" target="_blank">Fepulo</a><br>
@@ -495,10 +609,9 @@ const articlesDatabase = {
             <strong>Tamanho:</strong> 126 MB<br>
             <strong>Formato:</strong> .exe<br>
             <strong>Local de instalação:</strong> C:\\SekaiVN\\</p>
-            <div class="play-links">
-                <a href="https://4br.me/6DbpPe" target="_blank"><i class="fa-solid fa-download"></i> Download</a>
-            </div>
-            <p><strong>Aviso:</strong> Caso algum dos links esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais, arquivos de tradução e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "steins-gate": {
@@ -622,21 +735,85 @@ const articlesDatabase = {
     "higurashi-when-they-cry": {
         title: "Higurashi When They Cry",
         categories: ["Sound Novel", "Terror Psicológico", "Suspense"],
-        youtubeId: "kMU-DBtNBOQ",
         summary: "Um mistério macabro e circular numa vila pacata japonesa, onde um festival sagrado sempre culmina em morte e paranoia.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310360/header.jpg",
             data: {
                 "Desenvolvedor": "07th Expansion",
-                "Lançamento": "Agosto de 2002",
-                "Plataformas": "PC, PS2, PS3, PS4, Switch, iOS, Android"
+                "Distribuidora": "MangaGamer, 07th Expansion",
+                "Gêneros": "Sound Novel, Terror Psicológico, Suspense",
+                "Plataformas": "PC, PS2, PS3, PS4, Switch, iOS, Android",
+                "Lançamento": "Agosto de 2002"
             }
         },
         toc: [
             { id: "sinopse", text: "1. O Ciclo de Hinamizawa" },
             { id: "estrutura", text: "2. Formato Sound Novel e Arcos" },
-            { id: "legado", text: "3. O Legado Doujin" }
+            { id: "legado", text: "3. O Legado Doujin" },
+            { id: "versoes-android-pc", text: "4. Versões para Android e PC" },
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Steam (Episódio 1 Gratuito)",
+                    url: "https://store.steampowered.com/app/310360/Higurashi_When_They_Cry_Hou__Ch1_Onikakushi/"
+                },
+                {
+                    label: "GOG",
+                    url: "https://www.gog.com/"
+                },
+                {
+                    label: "MangaGamer",
+                    url: "https://mangagamer.com/"
+                }
+            ],
+            files: [
+                {
+                    label: "Higurashi no Naku Koro ni Hou - Capítulo 1 (PT-BR)",
+                    url: "https://4br.me/2JVIOEkjQY",
+                    details: "Tradução de Higurashi Eternal e 0Mateus; Windows (.exe), 1,71 GB, compatível com Winlator."
+                },
+                {
+                    label: "Higurashi no Naku Koro ni Hou - Capítulo 2 (PT-BR)",
+                    url: "https://4br.me/XZEdKxtcAV",
+                    details: "Tradução brasileira em formato .exe."
+                },
+                {
+                    label: "Higurashi no Naku Koro ni Hou - Capítulo 3 (PT-BR)",
+                    url: "https://4br.me/1jmLJ",
+                    details: "Tradução brasileira em formato .exe."
+                },
+                {
+                    label: "Higurashi no Naku Koro ni Hou - Capítulo 4 (PT-BR)",
+                    url: "https://4br.me/GftiXyDUF",
+                    details: "Tradução brasileira em formato .exe."
+                },
+                {
+                    label: "Higurashi no Naku Koro ni Hou - Capítulo 5 (PT-BR)",
+                    url: "https://4br.me/gHNWzD80N7",
+                    details: "Tradução brasileira em formato .exe."
+                },
+                {
+                    label: "Higurashi no Naku Koro ni Hou - Capítulo 6 (PT-BR)",
+                    url: "https://4br.me/Xgqha",
+                    details: "Tradução brasileira em formato .exe."
+                },
+                {
+                    label: "Higurashi no Naku Koro ni Hou - Todos os Capítulos (PT-BR Completo)",
+                    url: "https://4br.me/S8u5kFHZcW",
+                    details: "Tradução da Miracle Translations, compatível com o 07th-Mod."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira ou baixe o jogo base através das plataformas oficiais (Steam, GOG ou MangaGamer).",
+                    "Baixe os arquivos de tradução em Português Brasileiro correspondentes aos capítulos desejados.",
+                    "Execute os instaladores e aponte para o diretório correto do jogo (ex: C:\\SekaiVN\\ ou na pasta de instalação da Steam/Winlator)."
+                ]
+            }
+        },
         content: `
             <p>Totalmente roteirizado pelo renomado escritor Ryukishi07 através do famoso estúdio indie de doujinshi <a href="https://07th-expansion.net/" target="_blank">07th Expansion</a>, <strong>Higurashi</strong> constrói o medo absoluto de forma passiva, enganando o leitor com uma doce comédia colegial.</p>
 
@@ -649,15 +826,7 @@ const articlesDatabase = {
             <h2 id="legado">O Legado Doujin</h2>
             <p>Surgido de origens super-humildes, o texto impecável elevou Higurashi ao patamar de fenômeno cultural que resultou em expansões massivas para os consoles modernos, mangás de sucesso e animes globais.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/310360/Higurashi_When_They_Cry_Hou__Ch1_Onikakushi/" target="_blank"><i class="fa-brands fa-steam"></i> Steam (Episódio 1 Gratuito)</a>
-                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
-                <a href="https://mangagamer.com/" target="_blank"><i class="fa-solid fa-globe"></i> MangaGamer</a>
-            </div>
-
-            <h2>Versões para Android e PC</h2>
+            <h2 id="versoes-android-pc">Versões para Android e PC</h2>
             <p><strong>Aviso sobre a versão Android:</strong> esta é uma versão não oficial de <em>Higurashi no Naku Koro ni</em> para Android, com gráficos atualizados, dublagem e músicas do jogo original e das versões de console.</p>
             <ol>
                 <li>Sprites do PS3: <a href="https://4br.me/Yg7Fqss6P" target="_blank">Espelho 1</a> | <a href="https://4br.me/atl3qK" target="_blank">Espelho 2</a></li>
@@ -672,38 +841,62 @@ const articlesDatabase = {
             </ul>
             <p><strong>Créditos:</strong> versão baseada na versão Ren'Py do jogo original de <a href="https://vndb.org/p4052" target="_blank">-07-</a>, nos gráficos e no mod de voz do <a href="https://07th-mod.com/" target="_blank">07th-Mod</a> para PC. Crédito adicional: darwin07.</p>
 
-            <h3>Higurashi no Naku Koro ni Hou em português</h3>
-            <p><strong>Capítulo 1:</strong> tradução de Higurashi Eternal e 0Mateus; revisão e RomHacking pelos mesmos tradutores. Windows (.exe), 1,71 GB, compatível com Winlator. <a href="https://4br.me/2JVIOEkjQY" target="_blank">Download do capítulo 1</a></p>
-            <p><strong>Capítulos 2 a 6:</strong> tradução de Higurashi Eternal; formato .exe, instalação em <code>C:\\SekaiVN\\</code>.</p>
-            <div class="play-links">
-                <a href="https://4br.me/XZEdKxtcAV" target="_blank">Capítulo 2</a>
-                <a href="https://4br.me/1jmLJ" target="_blank">Capítulo 3</a>
-                <a href="https://4br.me/GftiXyDUF" target="_blank">Capítulo 4</a>
-                <a href="https://4br.me/gHNWzD80N7" target="_blank">Capítulo 5</a>
-                <a href="https://4br.me/Xgqha" target="_blank">Capítulo 6</a>
-            </div>
-            <p><strong>Todos os capítulos:</strong> tradução brasileira de <em>Higurashi no Naku Koro ni Hou</em>, da Miracle Translations, compatível com o <a href="https://07th-mod.com/" target="_blank">07th-Mod</a>. <a href="https://4br.me/S8u5kFHZcW" target="_blank">Download completo</a></p>
-            <p><strong>Aviso:</strong> Caso algum dos links esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, patches de tradução em Português Brasileiro e arquivos complementares na seção de downloads acima.</p>
         `
     },
     "omori": {
         title: "OMORI",
         categories: ["RPG", "Terror Psicológico", "Surrealismo"],
-        youtubeId: "CyVv-jFJiJ8",
         summary: "Um RPG psicológico aclamado focado no luto, depressão e nos coloridos mecanismos de defesa da mente.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1150690/header.jpg",
             data: {
                 "Desenvolvedor": "OMOCAT, LLC",
-                "Lançamento": "25 de Dezembro de 2020",
-                "Plataformas": "PC, macOS, PS4, Xbox One, Switch"
+                "Distribuidora": "OMOCAT, LLC",
+                "Gêneros": "RPG, Terror Psicológico, Surrealismo",
+                "Plataformas": "PC, macOS, PS4, Xbox One, Switch, Android (Port não oficial)",
+                "Lançamento": "25 de Dezembro de 2020"
             }
         },
         toc: [
             { id: "sinopse", text: "1. O Espaço em Branco e a Realidade" },
             { id: "combate", text: "2. Sistema de Emoções" },
-            { id: "horror", text: "3. O Terror Escondido" }
+            { id: "horror", text: "3. O Terror Escondido" },
+            { id: "versao-mobile", text: "4. Versão Mobile" },
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1150690/OMORI/"
+                },
+                {
+                    label: "Nintendo eShop",
+                    url: "https://www.nintendo.com/"
+                },
+                {
+                    label: "Xbox Store",
+                    url: "https://www.xbox.com/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download OMORI (Port Android não oficial)",
+                    url: "https://4br.me/S4zfF",
+                    details: "Versão OMORI-br-1.0.8.1 portada por fã; pode apresentar instabilidade dependendo do dispositivo."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Para PC e consoles, adquira o jogo através das lojas oficiais listadas.",
+                    "Para a versão Android (port de fã), baixe o arquivo APK através do link fornecido.",
+                    "Instale o APK em seu dispositivo móvel, ciente de que o desempenho e a compatibilidade podem variar."
+                ]
+            }
+        },
         content: `
             <p>Criado, ilustrado e dirigido pela artista independente norte-americana <a href="https://www.omori-game.com/" target="_blank">OMOCAT</a>, <strong>OMORI</strong> utiliza inspirações visuais da série EarthBound e o terror atmosférico de Yume Nikki para traçar um mergulho corajoso e profundo na culpa insuportável de um adolescente traumatizado.</p>
             
@@ -716,20 +909,11 @@ const articlesDatabase = {
             <h2 id="horror">O Terror Escondido</h2>
             <p>Sempre que o trauma bate à porta, o jogo desce à loucura, adicionando horrores sombrios no fundo de fotografias ou inserindo chefes macabros formados pelos medos reais e mais sombrios da vida do protagonista.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/1150690/OMORI/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
-                <a href="https://www.xbox.com/" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
-            </div>
-
-            <h2>Versão Mobile (portabilidade feita por fã)</h2>
+            <h2 id="versao-mobile">Versão Mobile</h2>
             <p><strong>AVISO:</strong> O jogo possui uma portabilidade feita por um fã. Ela pode não funcionar em todos os celulares e pode não oferecer um desempenho satisfatório.</p>
-            <div class="play-links">
-                <a href="https://4br.me/S4zfF" target="_blank"><i class="fa-brands fa-android"></i> Download OMORI-br-1.0.8.1</a>
-            </div>
-            <p><strong>Aviso:</strong> Caso o link esteja quebrado ou fora do ar, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">entre no servidor do Discord</a> para mais informações.</p>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, o arquivo da versão mobile e as instruções na seção de downloads acima.</p>
         `
     },
     "slay-the-princess": {
@@ -966,20 +1150,51 @@ const articlesDatabase = {
     "clannad": {
         title: "CLANNAD",
         categories: ["Visual Novel", "Romance", "Drama", "Slice of Life"],
-        youtubeId: "Z1ShQMEXHAo",
         summary: "Uma lendária e emocionante história sobre a vida, laços familiares, amor e superação de trauma na vida adulta.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/324160/header.jpg",
             data: {
                 "Desenvolvedor": "Key",
-                "Lançamento": "23 de Novembro de 2015 (Steam)",
-                "Plataformas": "PC, PS2, PS3, PS4, PSP, Switch, Android"
+                "Distribuidora": "VisualArts",
+                "Gêneros": "Visual Novel, Romance, Drama, Slice of Life",
+                "Plataformas": "PC, PS2, PS3, PS4, PSP, Switch, Android",
+                "Lançamento": "23 de Novembro de 2015 (Steam)"
             }
         },
         toc: [
             { id: "historia", text: "1. Uma História Sobre Família" },
-            { id: "after-story", text: "2. O Impacto de After Story" }
+            { id: "after-story", text: "2. O Impacto de After Story" },
+            { id: "traducao", text: "3. Tradução e Versão Android" },
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/324160/CLANNAD/"
+                },
+                {
+                    label: "Nintendo eShop",
+                    url: "https://www.nintendo.com/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download CLANNAD (PT-BR / RLVM)",
+                    url: "https://4br.me/oAeH5G",
+                    details: "Tradução por ZeroForce; formato .exe; tamanho de 3,26 GB; compatível com PC e Android via RLVM."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o arquivo de instalação do jogo traduzido.",
+                    "Ao instalar no Windows, se solicitado, instale a fonte recomendada.",
+                    "Configure o sistema para suportar caracteres não Unicode em japonês (Japão) nas configurações administrativas do Windows, caso necessário.",
+                    "Na primeira inicialização, acesse as configurações, selecione a fonte Open Sans Light e clique em OK."
+                ]
+            }
+        },
         content: `
             <p>Sendo a magnum opus da veterana desenvolvedora japonesa <a href="https://key.visualarts.gr.jp/" target="_blank">Key</a>, <strong>CLANNAD</strong> consolidou dezenas de tropos modernos no gênero, mostrando ao mundo como contar um longo e devastador romance de puro sofrimento, sacrifício mas também cura suprema.</p>
 
@@ -987,28 +1202,14 @@ const articlesDatabase = {
             <p>O conformista e vazio estudante Okazaki sente que a vida no colégio cinzento falhou com as mortes em sua família. Reviver clubes esquecidos ajudando Nagisa e garotas misteriosas a quebrarem suas muralhas não apenas salva a escola, mas traz a cor ao universo triste dele.</p>
 
             <h2 id="after-story">O Impacto de After Story</h2>
-            <p>Fugindo do felizes para sempre do ensino médio padrão, esta gigantesca obra (mais de 300h) dedica uma enorme e insubstituível campanha à vida conjugal: desempregos reais, exaustivas horas no trabalho de construção civil, e uma crua visão sobre mortalidade, filhos e perda madura do amor.</p>
+            <p>Fugindo do felizes para sempre do ensino médio padrão, esta gigantesca obra dedica uma enorme e insubstituível campanha à vida conjugal: desempregos reais, exaustivas horas no trabalho de construção civil, e uma crua visão sobre mortalidade, filhos e perda madura do amor.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/324160/CLANNAD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
-            </div>
+            <h2 id="traducao">Tradução e Versão Android</h2>
+            <p><strong>Créditos de localização:</strong> ZeroForce.<br>
+            <strong>Informações:</strong> Lançamento original em 2004; tradução em 2021; formato .exe; 3,26 GB; duração média de 77 horas; motor RLVM; diretório padrão de instalação em <code>C:\\SekaiVN\\</code>. Dispositivo de teste: Moto G30 (Android 11).</p>
 
-            <h2>Tradução e versão para Android</h2>
-            <p><strong>Créditos de localização:</strong> ZeroForce.</p>
-            <p><strong>Avisos de instalação:</strong></p>
-            <ul>
-                <li>Ao instalar o jogo, uma janela do Windows solicitará a instalação de uma fonte. Instale-a.</li>
-                <li>Configure programas não Unicode para japonês (Japão) nas configurações administrativas do Windows.</li>
-                <li>Na primeira inicialização, abra as configurações, escolha a fonte <em>Open Sans Ligth</em> e clique em OK.</li>
-            </ul>
-            <p><strong>Informações:</strong> lançamento em 2004; tradução em 2021; formato .exe; 3,26 GB; duração de 77 horas; programa: RLVM; instalação em <code>C:\\SekaiVN\\</code>. Dispositivo testado: Moto G30 (Android 11).</p>
-            <div class="play-links">
-                <a href="https://4br.me/oAeH5G" target="_blank"><i class="fa-solid fa-download"></i> Download</a>
-            </div>
-            <p><strong>Aviso:</strong> Caso o link esteja com problemas, fora do ar ou não seja possível acessar o servidor, <a href="https://discord.gg/T2gZfXMCAm" target="_blank">avisem no servidor do Discord</a>.</p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, o arquivo de download da versão traduzida e as instruções na seção de downloads acima.</p>
         `
     },
     "raging-loop": {
@@ -1049,20 +1250,42 @@ const articlesDatabase = {
     "your-turn-to-die": {
         title: "Your Turn To Die -Death Game By Majority-",
         categories: ["Death Game", "Terror Psicológico", "Mistério", "Aventura"],
-        youtubeId: "TLDU18zO1EM",
         summary: "Um brutal jogo de sobrevivência por voto majoritário onde escolhas difíceis ditam quem vive e quem morre.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/2067780/header.jpg",
             data: {
                 "Desenvolvedor": "Nankidai",
-                "Lançamento": "20 de Fevereiro de 2023 (Steam)",
-                "Plataformas": "PC (Steam), Web Browser"
+                "Distribuidora": "Nankidai, Vgperson",
+                "Gêneros": "Death Game, Terror Psicológico, Mistério, Aventura",
+                "Plataformas": "PC (Steam), Web Browser",
+                "Lançamento": "20 de Fevereiro de 2023 (Steam)"
             }
         },
         toc: [
             { id: "jogo-mortal", text: "1. Um Jogo Mortal de Voto Majoritário" },
-            { id: "mecanicas", text: "2. Puzzles, Ação e Debates" }
+            { id: "mecanicas", text: "2. Puzzles, Ação e Debates" },
+            { id: "links", text: "3. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/2067780/Your_Turn_To_Die_Death_Game_By_Majority/"
+                },
+                {
+                    label: "Versão Web Browser (Grátis)",
+                    url: "https://vgperson.com/games/yourturntodie.htm"
+                }
+            ],
+            files: [],
+            installation: {
+                title: "Como jogar",
+                steps: [
+                    "Acesse a página na Steam para adquirir e instalar o jogo no PC.",
+                    "Ou jogue gratuitamente direto pelo navegador através da versão em Web Browser."
+                ]
+            }
+        },
         content: `
             <p>Empreendido com paixão absurda pelas mãos exatas de um único mangaká e artista de código, <a href="https://twitter.com/nannkizum" target="_blank">Nankidai</a>, <strong>Your Turn To Die</strong> superou e chocou orçamentos imensos, gerando cultos devotos por todo planeta em sites obscuros graças às mortes cruéis e escolhas brutais da narrativa em grupo.</p>
 
@@ -1072,12 +1295,8 @@ const articlesDatabase = {
             <h2 id="mecanicas">Puzzles, Ação e Debates</h2>
             <p>Desenhado usando RPG Maker e lógicas geniais interativas, os longos duelos mesclam conversas intensas, quebra-cabeças temporais baseados em ação e alianças de votos frágeis alterando severa e dinamicamente quais companheiros centrais chegam vivos ao desfecho real da série.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/2067780/Your_Turn_To_Die_Death_Game_By_Majority/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://vgperson.com/games/yourturntodie.htm" target="_blank"><i class="fa-solid fa-globe"></i> Web Browser (Grátis)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de acesso e jogabilidade na seção de downloads acima.</p>
         `
     },
     "va-11-hall-a": {
@@ -1324,20 +1543,57 @@ const articlesDatabase = {
     "saya-no-uta": {
         title: "The Song of Saya (Saya no Uta)",
         categories: ["Terror Cósmico", "Visual Novel", "Eroge", "Drama"],
-        youtubeId: "zsBGP1SZnPc",
         summary: "Um estudante cuja mente percebe o mundo como carne em decomposição se apaixona por uma misteriosa garota angelical.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/702050/header.jpg",
             data: {
                 "Desenvolvedor": "Nitroplus",
-                "Lançamento": "12 de Agosto de 2019 (Steam)",
-                "Plataformas": "PC, Android"
+                "Distribuidora": "Nitroplus, JAST USA",
+                "Gêneros": "Terror Cósmico, Visual Novel, Eroge, Drama",
+                "Plataformas": "PC, Android",
+                "Lançamento": "12 de Agosto de 2019 (Steam)"
             }
         },
         toc: [
             { id: "percepcao", text: "1. Um Romance no Fim do Mundo" },
-            { id: "horror", text: "2. Horror Cósmico e Acontecimentos Bizarros" }
+            { id: "horror", text: "2. Horror Cósmico e Acontecimentos Bizarros" },
+            { id: "links", text: "3. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/702050/The_Song_of_Saya/"
+                },
+                {
+                    label: "JAST USA",
+                    url: "https://jastusa.com/"
+                },
+                {
+                    label: "GOG",
+                    url: "https://www.gog.com/"
+                },
+                {
+                    label: "Página Oficial (Nitroplus)",
+                    url: "https://www.nitroplus.co.jp/game/saya/"
+                }
+            ],
+            files: [
+                {
+                    label: "Patch/Tradução em Português (Completo)",
+                    url: "https://4br.me/spFDKyl7Iv",
+                    details: "Patch de tradução completo para Português."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira ou instale o jogo através das plataformas oficiais (Steam, JAST USA ou GOG).",
+                    "Baixe o patch de tradução em Português completo.",
+                    "Siga as instruções do instalador para aplicar a tradução no diretório do jogo."
+                ]
+            }
+        },
         content: `
             <p>Imerso no imenso desespero romântico sangrento e alienígena forjado e rascunhado pela lenda do horror gráfico <a href="https://en.wikipedia.org/wiki/Gen_Urobuchi" target="_blank">Gen Urobuchi</a> da publicadora visceral <a href="https://www.nitroplus.co.jp/" target="_blank">Nitroplus</a>, <strong>Saya no Uta</strong> desmembra todo o moralismo visual e biológico da fundação humana ocidental numa obra pesadíssima.</p>
 
@@ -1347,15 +1603,8 @@ const articlesDatabase = {
             <h2 id="horror">Horror Cósmico e Acontecimentos Bizarros</h2>
             <p>O preço de permanecer ileso nos braços carinhosos de sua amante interdimensional cruza sacrifícios doentios violentos que dissolvem rapidamente todas as suas concepções éticas em abismos aterrorizantes onde a razão não encontra moradia perante um final macabro perverso.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/702050/The_Song_of_Saya/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://jastusa.com/" target="_blank"><i class="fa-solid fa-globe"></i> JAST USA</a>
-                <a href="https://www.gog.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> GOG</a>
-                <a href="https://www.nitroplus.co.jp/game/saya/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i> Página oficial (Android)</a>
-                <a href="https://4br.me/spFDKyl7Iv" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Patch/Tradução em Português (Completo)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, o patch de tradução em Português e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "paranormasight-seven-mysteries": {
@@ -1539,18 +1788,62 @@ const articlesDatabase = {
                 "Desenvolvedor": "Eeny, meeny, miny, moe?",
                 "Distribuidora": "OTAKU Plan, NEWS",
                 "Gêneros": "RPG, Aventura, Indie, Fantasia Sombria",
-                "Lançamento (Steam)": "15 de Agosto de 2025",
-                "Plataformas": "PC (Windows) e Android"
+                "Plataformas": "PC (Windows) e Android",
+                "Lançamento": "15 de Agosto de 2025"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse" },
             { id: "mecanicas", text: "2. Mecânicas e Exploração" },
             { id: "personagens", text: "3. Personagens e Heroínas" },
-            { id: "download", text: "4. Download para PC" },
-            { id: "requisitos", text: "5. Requisitos do Sistema" },
-            { id: "galeria", text: "6. Galeria de Imagens" }
+            { id: "requisitos", text: "4. Requisitos do Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "links", text: "6. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Steam Store",
+                    url: "https://store.steampowered.com/app/3755860/BLACK_SOULS/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download para PC (Servidor 1)",
+                    url: "https://4br.me/Pa8lPv19",
+                    details: "BLACK SOULS.rar (561,42 MB)"
+                },
+                {
+                    label: "Download para PC (Servidor 2)",
+                    url: "https://4br.me/CS4sdDbhG",
+                    details: "BLACK SOULS.rar (561,42 MB)"
+                },
+                {
+                    label: "Download para Android (Servidor 1)",
+                    url: "https://4br.me/Black-Souls-APK",
+                    details: "Versão Android"
+                },
+                {
+                    label: "Download para Android (Servidor 2)",
+                    url: "https://4br.me/Black-Souls-APK2",
+                    details: "Versão Android"
+                },
+                {
+                    label: "Download para Android (Servidor 3)",
+                    url: "https://4br.me/Black-Souls-APK3",
+                    details: "Versão Android"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o arquivo compactado para PC ou o instalador APK para Android através dos servidores disponíveis.",
+                    "Para PC, extraia o conteúdo do arquivo .rar e execute o jogo.",
+                    "Para Android, instale o aplicativo APK no seu dispositivo móvel.",
+                    "Recomendamos apoiar os desenvolvedores adquirindo a versão oficial na Steam."
+                ]
+            }
+        },
         content: `
             <p><strong>BLACK SOULS</strong> é um RPG indie de fantasia sombria e exploração profunda publicado na Steam pela <a href="https://store.steampowered.com/publisher/OTAKUPlan" target="_blank">OTAKU Plan</a>. O jogo combina a atmosfera melancólica, o combate punitivo e o design de mundo interconectado no estilo <em>Souls-like</em> com o universo perturbador dos contos de fadas clássicos subvertidos em horror psicológico.</p>
             
@@ -1566,23 +1859,6 @@ const articlesDatabase = {
                 <li><strong>Heroínas de Contos de Fadas:</strong> O jogo conta com mais de 20 heroínas inspiradas em clássicos da literatura (como Alice no País das Maravilhas, Chapeuzinho Vermelho e Branca de Neve), cada uma com arcos, intenções e segredos trágicos.</li>
                 <li><strong>Habitantes do Império:</strong> Cavaleiros, cortesãs e entidades corrompidas pela névoa que habitam os cantos e jardins secretos do reino destruído.</li>
             </ul>
-
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogar / Comprar (Steam):</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/3755860/BLACK_SOULS/" target="_blank"><i class="fa-brands fa-steam"></i> Steam Store</a>
-            </div>
-
-            <h2 id="download">Download para PC e Android</h2>
-            <p><strong>BLACK SOULS.rar</strong> (561,42 MB)</p>
-            <p>Este download é totalmente gratuito. Se você gosta do jogo, apoie os desenvolvedores adquirindo a versão oficial na <a href="https://store.steampowered.com/app/3755860/BLACK_SOULS/" target="_blank">Steam</a>.</p>
-            <div class="play-links">
-                <a href="https://4br.me/Pa8lPv19" target="_blank"><i class="fa-solid fa-download"></i> Download para PC (Servidor 1)</a>
-                <a href="https://4br.me/CS4sdDbhG" target="_blank"><i class="fa-solid fa-download"></i> Download para PC (Servidor 2)</a>
-                <a href="https://4br.me/Black-Souls-APK" target="_blank"><i class="fa-solid fa-download"></i> Download para Android (Servidor 1)</a>
-                <a href="https://4br.me/Black-Souls-APK2" target="_blank"><i class="fa-solid fa-download"></i> Download para Android (Servidor 2)</a>
-                <a href="https://4br.me/Black-Souls-APK3" target="_blank"><i class="fa-solid fa-download"></i> Download para Android (Servidor 3)</a>
-            </div>
 
             <h2 id="requisitos">Requisitos do Sistema</h2>
             <ul>
@@ -1601,6 +1877,9 @@ const articlesDatabase = {
                 <img src="https://pdalife.com/app/6868f862c9d19/screen-4.jpg" alt="Cena de BLACK SOULS para Android" loading="lazy">
                 <img src="https://pdalife.com/app/6868f862c9d19/screen-5.jpg" alt="Cena de BLACK SOULS para Android" loading="lazy">
             </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "the-sekimeiya-spun-glass": {
@@ -1767,21 +2046,52 @@ const articlesDatabase = {
     "needy-streamer-overload": {
         title: "Needy Streamer Overload",
         categories: ["Visual Novel", "Terror Psicológico", "Simulação"],
-        youtubeId: "e-3pEF_NBT0",
         summary: "Transforme sua namorada instável no maior Anjo da Internet. Gerencie seus remédios, streams e surtos de saúde mental.",
         infobox: {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451940/header.jpg",
             data: {
                 "Desenvolvedor": "WSS playground",
-                "Lançamento": "21 de Janeiro de 2022",
+                "Distribuidora": "WSS playground, Publisher",
+                "Gêneros": "Visual Novel, Terror Psicológico, Simulação",
                 "Plataformas": "PC (Steam), macOS, Nintendo Switch, PS4, PS5",
-                "Idiomas": "Inglês, Japonês, Chinês, Português do Brasil"
+                "Lançamento": "21 de Janeiro de 2022"
             }
         },
         toc: [
             { id: "sinopse", text: "1. A Premissa da Fama Virtual" },
-            { id: "mecanicas", text: "2. Gestão de Estresse e Pílulas" }
+            { id: "mecanicas", text: "2. Gestão de Estresse e Pílulas" },
+            { id: "links", text: "3. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1451940/NEEDY_STREAMER_OVERLOAD/"
+                },
+                {
+                    label: "Nintendo eShop",
+                    url: "https://www.nintendo.com/"
+                },
+                {
+                    label: "PlayStation Store",
+                    url: "https://store.playstation.com/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Direct",
+                    url: "https://4br.me/EpB9ZHYhYN",
+                    details: "Arquivo de download alternativo."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo através das plataformas oficiais listadas ou utilize o link de download alternativo.",
+                    "Siga as instruções de instalação da plataforma escolhida para jogar."
+                ]
+            }
+        },
         content: `
             <p>Escrito de forma brutal e honesta pelas mentes japonesas modernas do estúdio indie de denúncia web <a href="https://whysoserious.jp/" target="_blank">WSS playground</a>, <strong>Needy Streamer Overload</strong> pinta maravilhosamente as trevas profundas dos transtornos cibernéticos atuais disfarçados nas cores angelicais de uma adorável VTuber e-girl retro.</p>
             
@@ -1791,36 +2101,57 @@ const articlesDatabase = {
             <h2 id="mecanicas">Gestão de Estresse e Pílulas</h2>
             <p>As drogas controladas, saídas para afago nas madrugadas solitárias urbanas e longas leituras tristes de tópicos amargos nos fóruns anônimos destroem gradualmente todo o equilíbrio entre um carinho afetuoso perigoso que mergulha aos vinte abissais finais de cancelamento digital tóxico e caos psicológico sem redenção.</p>
 
-            <hr>
-            <p><i class="fa-solid fa-link"></i> <strong>Jogue agora:</strong></p>
-          <div class="play-links">
-             <a href="https://store.steampowered.com/app/1451940/NEEDY_STREAMER_OVERLOAD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-             <a href="https://www.nintendo.com/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
-             <a href="https://store.playstation.com/" target="_blank"><i class="fa-brands fa-playstation"></i> PS Store</a>
-             <a href="https://4br.me/EpB9ZHYhYN" target="_blank"><i class="fa-solid fa-download"></i> Download Direct</a>
-         </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "the-coffin-of-andy-and-leyley": {
         title: "The Coffin of Andy and Leyley",
         categories: ["RPG", "Terror Psicológico", "Indie", "Sobrevivência"],
-        youtubeId: "qlBkkewJM0c",
         summary: "Navegue pela realidade sombria de Andy e Leyley, irmãos presos em um mundo abominável onde o terror psicológico e o espectro do canibalismo se agigantam.",
         infobox: {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_211eee43e3663cff98c3661fdeb99099229f9679.1920x1080.jpg?t=1774434375",
             data: {
                 "Desenvolvedor": "Kit9 Studio",
-                "Gêneros": "Simulação, RPG, Terror Psicológico",
-                "Lançamento": "13 de Outubro de 2023",
-                "Plataformas": "PC (Windows), Android"
+                "Distribuidora": "Kit9 Studio",
+                "Gêneros": "Simulação, RPG, Terror Psicológico, Indie",
+                "Plataformas": "PC (Windows), Android",
+                "Lançamento": "13 de Outubro de 2023"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "caracteristicas", text: "2. Características Sombrias" },
             { id: "galeria", text: "3. Galeria de Imagens" },
-            { id: "downloads", text: "4. Links e Downloads" }
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/2378900/The_Coffin_of_Andy_and_Leyley/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download PC (Multi-language / PT-BR)",
+                    url: "https://4br.me/BtAtxfwYrg",
+                    details: "Versão v2.0.8; tamanho de 334.1 MB; senha de extração: hentaijogos.com"
+                },
+                {
+                    label: "Download Android (APK)",
+                    url: "https://4br.me/DesaHlfd",
+                    details: "Instalação nativa via APK ou via emulador JoiPlay."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Para PC, baixe o arquivo de download, utilize a senha 'hentaijogos.com' para extrair o conteúdo e execute o jogo.",
+                    "Para Android, baixe o APK e instale diretamente no dispositivo ou utilize o JoiPlay conforme preferir."
+                ]
+            }
+        },
         content: `
             <p>Entre na jornada de <strong>The Coffin of Andy and Leyley</strong> (<em>O Caixão de Andy e Leyley: Shadows of Descent</em>), onde o terror de sobrevivência assume uma forma nova e distorcida. Desenvolvido pela <strong>Kit9 Studio</strong>, o jogo foca em uma narrativa densa e escolhas morais perturbadoras.</p>
             
@@ -1841,36 +2172,13 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_46e4c8758c065bfd1da33bd02b0290fcdadb18e7.1920x1080.jpg?t=1774434375" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_3b636d075e491a1c1e9bda943e08c3cfbe06aa34.1920x1080.jpg?t=1774434375" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_f1371c9cc91cd6d1cbb26e2786cdf59a8b1f3059.1920x1080.jpg?t=1774434375" alt="Screenshot 3" style="max-width: 98%; height: auto; border-radius: 4px; border: 1px solid #ccc; margin-top: 10px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_46e4c8758c065bfd1da33bd02b0290fcdadb18e7.1920x1080.jpg?t=1774434375" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_3b636d075e491a1c1e9bda943e08c3cfbe06aa34.1920x1080.jpg?t=1774434375" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2378900/ss_f1371c9cc91cd6d1cbb26e2786cdf59a8b1f3059.1920x1080.jpg?t=1774434375" alt="Screenshot 3" style="max-width: 98%; height: auto; border-radius: 4px; border: 1px solid #ccc; margin-top: 10px;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="downloads">Links e Downloads</h2>
-            
-            <p><i class="fa-solid fa-link"></i> <strong>Página Oficial:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/2378900/The_Coffin_of_Andy_and_Leyley/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-            </div>
-
-            <h3>Informações da Versão</h3>
-            <p><strong>Versão do Jogo:</strong> v2.0.8<br>
-            <strong>Idiomas:</strong> Inglês, Japonês, Chinês e <strong>Português</strong><br>
-            <em>(OBS: A tradução em Português foi feita por Shinra Kun e seu amigo)</em></p>
-
-            <h3>Download (PC - Multi-language)</h3>
-            <p><strong>Tamanho:</strong> 334.1 MB<br>
-            <strong>Senha de extração:</strong> hentaijogos.com</p>
-            <div class="play-links">
-                <a href="https://4br.me/BtAtxfwYrg" target="_blank"><i class="fa-solid fa-download"></i> Download PC</a>
-            </div>
-
-            <h3>Download (Android - APK)</h3>
-            <p>Pode ser jogado nativamente instalando o APK ou via emulador JoiPlay.</p>
-            <div class="play-links">
-                <a href="https://4br.me/DesaHlfd" target="_blank"><i class="fa-brands fa-android"></i> Download APK</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, arquivos de download para PC e Android e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "gnosia": {
@@ -1881,9 +2189,10 @@ const articlesDatabase = {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1608290/header.jpg",
             data: {
                 "Desenvolvedor": "Petit Depotto",
-                "Gêneros": "RPG, Dedução Social, Sci-Fi",
-                "Lançamento": "23 de Janeiro de 2022 (PC)",
-                "Plataformas": "PC (Windows), Nintendo Switch"
+                "Distribuidora": "Petit Depotto, Playism",
+                "Gêneros": "RPG, Dedução Social, Sci-Fi, Indie, Visual Novel",
+                "Plataformas": "PC (Windows), Nintendo Switch",
+                "Lançamento": "23 de Janeiro de 2022 (PC)"
             }
         },
         toc: [
@@ -1891,8 +2200,31 @@ const articlesDatabase = {
             { id: "mecanicas", text: "2. Mecânicas e Loops" },
             { id: "requisitos", text: "3. Requisitos do Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "downloads", text: "5. Links e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1608290/GNOSIA/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download PC (Versão v2022.03.03)",
+                    url: "https://4br.me/cBGR6uD",
+                    details: "Tamanho: 727,21 MB"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o arquivo de download para PC através do link fornecido.",
+                    "Extraia o conteúdo compactado e execute o jogo no seu computador.",
+                    "Recomendamos adquirir e apoiar os desenvolvedores através da página oficial na Steam."
+                ]
+            }
+        },
         content: `
             <p><strong>Gnosia</strong> é um aclamado RPG de ficção científica focado em dedução social, desenvolvido pelo estúdio indie japonês <strong>Petit Depotto</strong>. O jogo mistura elementos clássicos de jogos de tabuleiro (como <em>Máfia</em> ou <em>Lobisomem</em>) com uma narrativa profunda estilo <em>Visual Novel</em> baseada em viagens no tempo.</p>
             
@@ -1919,38 +2251,26 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/GNOSIA-gog-639x361.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/GNOSIA-crack-639x361.png" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/GNOSIA-gog-639x361.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/GNOSIA-crack-639x361.png" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="downloads">Links e Downloads</h2>
-            
-            <p><i class="fa-solid fa-link"></i> <strong>Página Oficial:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/1608290/GNOSIA/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-            </div>
-
-            <h3>Download (Grátis)</h3>
-            <p><strong>Versão do Jogo:</strong> v2022.03.03<br>
-            <strong>Tamanho:</strong> 727,21 MB</p>
-            <div class="play-links">
-                <a href="https://4br.me/cBGR6uD" target="_blank"><i class="fa-solid fa-download"></i> Download PC</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "the-zodiac-trial": {
         title: "The Zodiac Trial",
         categories: ["Visual Novel", "Mistério", "Death Game", "Quebra-Cabeças", "Indie"],
-        youtubeId: "duXpCP0qVE4",
         summary: "O Julgamento do Zodíaco começou e a vida de 12 jurados está em jogo! Um jogo de mistério, traição e quebra-cabeças com mais de 52 finais.",
         infobox: {
             image: "https://igg-games.com/wp-content/uploads/2026/01/The-Zodiac-Trial-PC-Crack.jpg",
             data: {
                 "Desenvolvedor": "Themis",
-                "Gêneros": "Visual Novel, Mistério, Sobrevivência",
-                "Lançamento": "2021",
-                "Plataformas": "PC (Windows), macOS"
+                "Distribuidora": "Themis",
+                "Gêneros": "Visual Novel, Mistério, Death Game, Quebra-Cabeças, Indie",
+                "Plataformas": "PC (Windows), macOS",
+                "Lançamento": "2021"
             }
         },
         toc: [
@@ -1958,8 +2278,49 @@ const articlesDatabase = {
             { id: "mecanicas", text: "2. Rotas, Finais e Quebra-Cabeças" },
             { id: "recursos", text: "3. Recursos Adicionais" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "downloads", text: "5. Links e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1513120/The_Zodiac_Trial/"
+                },
+                {
+                    label: "Itch.io",
+                    url: "https://themis729.itch.io/the-zodiac-trial"
+                },
+                {
+                    label: "GG.deals",
+                    url: "https://gg.deals/game/the-zodiac-trial/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download MegaUp.net",
+                    url: "https://4br.me/tuil",
+                    details: "Versão para PC (Windows) e macOS"
+                },
+                {
+                    label: "Download Mega.nz",
+                    url: "https://4br.me/r0tCLbrt",
+                    details: "Versão para PC (Windows) e macOS"
+                },
+                {
+                    label: "Download Rapidgator",
+                    url: "https://4br.me/mAAbC3Z",
+                    details: "Versão para PC (Windows) e macOS"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo nas plataformas oficiais ou utilize uma das opções de download disponíveis.",
+                    "Extraia o conteúdo compactado e execute o jogo no seu sistema operacional compatível (Windows ou macOS).",
+                    "Recomendamos apoiar o desenvolvedor independente adquirindo o título na Steam ou Itch.io."
+                ]
+            }
+        },
         content: `
             <p><strong>The Zodiac Trial</strong> é uma intrigante Visual Novel de mistério e sobrevivência (<em>Death Game</em>). O Julgamento do Zodíaco começou e a vida de todos está em jogo! Será que esses 12 jurados conseguirão resolver os mistérios e cooperar, ou recorrerão à traição, ao engano e à violência?</p>
             
@@ -1978,28 +2339,13 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDMuanBn/original/%2BrXMrm.jpg" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDEuanBn/original/8pCpYJ.jpg" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDIuanBn/original/WW2MHE.jpg" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDMuanBn/original/%2BrXMrm.jpg" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDEuanBn/original/8pCpYJ.jpg" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvODkxNDEzLzUwMjkwMDIuanBn/original/WW2MHE.jpg" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="downloads">Links e Downloads</h2>
-            
-            <p><i class="fa-solid fa-link"></i> <strong>Páginas Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/1513120/The_Zodiac_Trial/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://themis729.itch.io/the-zodiac-trial" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
-                <a href="https://gg.deals/game/the-zodiac-trial/" target="_blank"><i class="fa-solid fa-tag"></i> GG.deals</a>
-            </div>
-
-            <h3>Download (Grátis)</h3>
-            <p><strong>Plataformas:</strong> Windows, macOS</p>
-            <div class="play-links">
-                <a href="https://4br.me/tuil" target="_blank"><i class="fa-solid fa-download"></i> MegaUp.net</a>
-                <a href="https://4br.me/r0tCLbrt" target="_blank"><i class="fa-solid fa-download"></i> Mega.nz</a>
-                <a href="https://4br.me/mAAbC3Z" target="_blank"><i class="fa-solid fa-download"></i> Rapidgator</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra e acesso, as opções de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "scarlet-hollow": {
@@ -2007,24 +2353,57 @@ const articlesDatabase = {
         categories: ["Visual Novel", "Mistério", "Ficção Interativa", "RPG", "Terror Psicológico"],
         summary: "Dos criadores de Slay the Princess. Sobreviva a uma semana em uma cidade mineira assombrada por criptídeos e horrores onde suas decisões alteram drasticamente a história.",
         infobox: {
-            image: "https://img.itch.zone/aW1nLzI1NTY5NDc4LnBuZw==/original/o4tjkg.png",
+            image: "https://img.itch.zone/aW1nLzI1NTY5NDc4LnpuZw==/original/o4tjkg.png",
             data: {
                 "Desenvolvedor": "Black Tabby Games",
+                "Distribuidora": "Black Tabby Games",
                 "Gêneros": "Visual Novel, Interativa, RPG, Horror",
-                "Lançamento": "11 de Junho de 2021",
                 "Plataformas": "PC (Windows), macOS, Linux",
-                "Engine": "Ren'Py"
+                "Lançamento": "11 de Junho de 2021"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
-            { id: "caracteristicas", text: "2. Características e RPG" },
+            { id: "caracteristicas", text: "2. Características e Elementos de RPG" },
             { id: "requisitos", text: "3. Requisitos do Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "downloads", text: "5. Links, Instruções e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1609230/Scarlet_Hollow/"
+                },
+                {
+                    label: "Itch.io",
+                    url: "https://blacktabbygames.itch.io/scarlet-hollow"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Demonstração (Itch.io Mirror)",
+                    url: "https://itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com/upload2/game/1012280/13071527?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3edfcce40115d057d0b5606758e7e9ee%2F20260906%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260906T094250Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=6066491405bdca9d73f4d3469fc9e9583e63250ecbd64b0ca9db5a6f5054ffd2",
+                    details: "Contém o primeiro episódio inteiro; saves transferem para o jogo completo."
+                },
+                {
+                    label: "Download Completo (v1.0g)",
+                    url: "https://4br.me/2MOmICVAT7",
+                    details: "Versão completa compactada (requer extração e instalação)."
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o arquivo de instalação ou a demonstração através dos links fornecidos.",
+                    "Se utilizar o arquivo compactado ZIP, extraia o conteúdo utilizando um programa como o 7-Zip ou o extrator nativo do Windows.",
+                    "Abra a pasta extraída, execute o instalador (Setup) e siga as instruções na tela.",
+                    "Inicie o jogo através do atalho gerado na sua área de trabalho."
+                ]
+            }
+        },
         content: `
-            <p><strong>Scarlet Hollow</strong> é um mistério de terror envolvente com escrita afiada e escolhas incrivelmente impactantes, desenvolvido pela <strong>Black Tabby Games</strong> (o mesmo estúdio por trás do aclamado <a href="#/slay-the-princess">Slay the Princess</a>). Totalmente desenhado à mão e focado na tensão narrativa, o jogo é estruturado de forma episódica, com 7 capítulos planejados no total (sendo que os 5 primeiros já estão disponíveis).</p>
+            <p><strong>Scarlet Hollow</strong> é um mistério de terror envolvente com escrita afiada e escolhas incrivelmente impactantes, desenvolvido pela <strong>Black Tabby Games</strong> (o mesmo estúdio por trás do aclamado <em>Slay the Princess</em>). Totalmente desenhado à mão e focado na tensão narrativa, o jogo é estruturado de forma episódica, com 7 capítulos planejados no total (sendo que os 5 primeiros já estão disponíveis).</p>
             
             <h2 id="sinopse">Sinopse e História</h2>
             <p>O que deveria ser um retiro tranquilo nas montanhas rurais da Carolina do Norte, focado em conhecer sua prima distante e confortá-la no funeral de sua tia, rapidamente se transforma em um pesadelo implacável. Você chega à decadente cidade mineira de Scarlet Hollow apenas para descobrir que o local despertou para o horror: minas de carvão desabadas, gado sendo mutilado por criaturas bizarras e casas infestadas por espíritos.</p>
@@ -2049,41 +2428,13 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5My5qcGc=/347x500/SFRrfy.jpg" alt="Screenshot 1" style="max-width: 30%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5NS5qcGc=/original/rUBeRq.jpg" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5Mi5qcGc=/original/qUCTYR.jpg" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5My5qcGc=/347x500/SFRrfy.jpg" alt="Screenshot 1" style="max-width: 30%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5NS5qcGc=/original/rUBeRq.jpg" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMTAxMjI4MC8yMDExOTE5Mi5qcGc=/original/qUCTYR.jpg" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="downloads">Links, Instruções e Downloads</h2>
-            
-            <p><i class="fa-solid fa-link"></i> <strong>Páginas Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/1609230/Scarlet_Hollow/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://blacktabbygames.itch.io/scarlet-hollow" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
-            </div>
-
-            <h3>Download da Demonstração (Link Direto)</h3>
-            <p>Contém o primeiro episódio inteiro, e seus arquivos de salvamento serão transferidos automaticamente para o jogo completo caso decida comprar depois.</p>
-            <div class="play-links">
-                <a href="https://itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com/upload2/game/1012280/13071527?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3edfcce40115d057d0b5606758e7e9ee%2F20260906%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260906T094250Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=6066491405bdca9d73f4d3469fc9e9583e63250ecbd64b0ca9db5a6f5054ffd2" target="_blank"><i class="fa-solid fa-download"></i> Baixar Demo (Itch.io Mirror)</a>
-            </div>
-
-            <h3>Download Completo - Grátis (v1.0g)</h3>
-            <div class="play-links">
-                <a href="https://4br.me/2MOmICVAT7" target="_blank"><i class="fa-solid fa-download"></i> Download Scarlet Hollow (v1.0g)</a>
-            </div>
-            
-            <blockquote>
-                <strong>Instruções de Download e Instalação:</strong>
-                <ol>
-                    <li>Após clicar no link e passar pelo encurtador, você será redirecionado para a página do <em>UploadHaven</em>.</li>
-                    <li>Aguarde 5 segundos e clique no botão azul <strong>"Download Now"</strong>. (É recomendado utilizar um gerenciador de downloads, como o <a href="https://www.freedownloadmanager.org/pt/" target="_blank">FDM</a>, para velocidades mais rápidas).</li>
-                    <li>Quando o download do arquivo ZIP terminar, clique com o botão direito do mouse no arquivo e selecione <strong>“Extrair para Scarlet Hollow v1.0g”</strong>. Você precisará do extrator do Windows ou de um programa como o <a href="https://www.7-zip.org/" target="_blank">7-Zip</a>.</li>
-                    <li>Abra a pasta extraída, execute o aplicativo de instalação (Setup), aceite os termos e instale o jogo.</li>
-                    <li>Inicie o jogo através do atalho gerado na sua área de trabalho e divirta-se!</li>
-                </ol>
-            </blockquote>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, arquivos de demonstração e completo, além das instruções de instalação na seção de downloads acima.</p>
         `
     },
     "little-busters": {
@@ -2094,17 +2445,65 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/635940/header.jpg?t=1732683318",
             data: {
                 "Desenvolvedor": "VisualArts/Key",
-                "Gêneros": "Visual Novel, Aventura, Escolar",
-                "Lançamento": "1 de Novembro de 2017",
-                "Plataformas": "PC (Windows)"
+                "Distribuidora": "VisualArts",
+                "Gêneros": "Visual Novel, Aventura, Escolar, Drama",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "1 de Novembro de 2017"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "mecanicas", text: "2. Mecânicas e Recursos" },
             { id: "galeria", text: "3. Galeria de Imagens" },
-            { id: "downloads", text: "4. Links Oficiais, Anime e Downloads" }
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/635940/Little_Busters_English_Edition/?l=brazilian"
+                },
+                {
+                    label: "Site Oficial do Anime",
+                    url: "https://www.litbus-anime.com/"
+                }
+            ],
+            files: [
+                {
+                    label: "Servidor Multiup",
+                    url: "https://4br.me/puDjlUSfNU",
+                    details: "Versão v1.2.4 - English Edition"
+                },
+                {
+                    label: "Servidor MyPikPak",
+                    url: "https://4br.me/YAC3f",
+                    details: "Versão v1.2.4 - English Edition"
+                },
+                {
+                    label: "Servidor DL",
+                    url: "https://4br.me/dFGn",
+                    details: "Versão v1.2.4 - English Edition"
+                },
+                {
+                    label: "Servidor MEGA",
+                    url: "https://4br.me/HmTggmcI4",
+                    details: "Versão v1.2.4 - English Edition"
+                },
+                {
+                    label: "Servidor Alternativo",
+                    url: "https://4br.me/PWZJRTiy",
+                    details: "Versão v1.2.4 - English Edition"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos servidores de download alternativos.",
+                    "Baixe o arquivo de instalação do jogo.",
+                    "Extraia o conteúdo compactado se necessário e execute o instalador ou aplicativo do jogo no seu PC com Windows."
+                ]
+            }
+        },
         content: `
             <p>Mergulhe em uma história emocionante que mistura amizade, nostalgia e um toque de fantasia. Uma obra clássica do renomado estúdio <strong>Key</strong> (conhecido por obras como <em>Clannad</em> e <em>Angel Beats!</em>).</p>
             
@@ -2122,37 +2521,12 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Little-Busters-Ecstasy-Edition-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Little-Busters-Ecstasy-Edition-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Little-Busters-Ecstasy-Edition-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Little-Busters-Ecstasy-Edition-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="downloads">Links e Downloads</h2>
-            
-            <p><i class="fa-solid fa-link"></i> <strong>Página Oficial:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/635940/Little_Busters_English_Edition/?l=brazilian" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-            </div>
-
-            <p><i class="fa-solid fa-film"></i> <strong>Adaptação em Anime:</strong></p>
-            <div class="play-links">
-                <a href="https://www.litbus-anime.com/" target="_blank"><i class="fa-solid fa-globe"></i> Site oficial do anime</a>
-            </div>
-
-            <h3>Download (Grátis)</h3>
-            <p><strong>Versão do Jogo:</strong> v1.2.4 (GameDrive) - English Edition</p>
-            
-            <blockquote style="border-left: 4px solid #ff4c4c; padding-left: 15px; color: #cc0000; background-color: #ffe6e6; margin-bottom: 15px;">
-                <strong><i class="fa-solid fa-triangle-exclamation"></i> AVISO DE SEGURANÇA:</strong> Ignore coisas falsas em anúncios — feche-os e retorne à página original. Os arquivos reais do jogo são grandes. Anúncios costumam baixar arquivos minúsculos disfarçados. Não usamos arquivos muito pequenos!
-            </blockquote>
-
-            <div class="play-links">
-                <a href="https://4br.me/puDjlUSfNU" target="_blank"><i class="fa-solid fa-download"></i> Servidor Multiup</a>
-                <a href="https://4br.me/YAC3f" target="_blank"><i class="fa-solid fa-download"></i> Servidor MyPikPak</a>
-                <a href="https://4br.me/dFGn" target="_blank"><i class="fa-solid fa-download"></i> Servidor DL</a>
-                <a href="https://4br.me/HmTggmcI4" target="_blank"><i class="fa-solid fa-download"></i> Servidor MEGA</a>
-                <a href="https://4br.me/PWZJRTiy" target="_blank"><i class="fa-solid fa-download"></i> Servidor Alternativo</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, links do anime, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "planetarian": {
@@ -2163,17 +2537,45 @@ const articlesDatabase = {
             image: "https://dn710006.ca.archive.org/0/items/planetarianHD-EN/planetarian%20HD.jpg",
             data: {
                 "Desenvolvedor": "VisualArts/Key",
-                "Gêneros": "Visual Novel, Ficção Científica, Drama",
-                "Lançamento": "Original: 2004 / HD: 2017",
-                "Plataformas": "PC (Windows)"
+                "Distribuidora": "VisualArts, Sekai Project",
+                "Gêneros": "Visual Novel, Ficção Científica, Pós-apocalíptico, Drama",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "Original: 2004 / HD: 2017"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "experiencia", text: "2. Experiência e Narrativa" },
             { id: "galeria", text: "3. Galeria de Imagens" },
-            { id: "downloads", text: "4. Links Oficiais, Anime e Downloads" }
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/623080/planetarian_HD/"
+                },
+                {
+                    label: "Assistir ao Anime (Crunchyroll)",
+                    url: "https://www.crunchyroll.com/pt-br/series/G5PHNM7M1/planetarian"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Planetarian HD",
+                    url: "https://4br.me/rNNHg",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize o link de download direto fornecido.",
+                    "Baixe o arquivo de instalação para PC.",
+                    "Extraia o conteúdo compactado se necessário e execute o jogo no seu computador."
+                ]
+            }
+        },
         content: `
             <p><strong>Planetarian: The Reverie of a Little Planet</strong> (ou em sua versão remasterizada <em>Planetarian HD</em>) é uma aclamada visual novel cinética desenvolvida pelo icônico estúdio <strong>Key</strong>. Conhecida por entregar narrativas curtas, mas de impacto profundo, a obra mistura um cenário desolador com uma delicada humanidade.</p>
             
@@ -2191,24 +2593,12 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Planetarian-the-Reverie-Of-A-Little-Planet-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Planetarian-the-Reverie-Of-A-Little-Planet-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Planetarian-the-Reverie-Of-A-Little-Planet-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/Planetarian-the-Reverie-Of-A-Little-Planet-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="downloads">Links e Downloads</h2>
-            
-            <p><i class="fa-solid fa-link"></i> <strong>Páginas Oficiais, Anime e Mídia:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/623080/planetarian_HD/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://www.crunchyroll.com/pt-br/series/G5PHNM7M1/planetarian" target="_blank"><i class="fa-solid fa-film"></i> Assistir ao Anime (Crunchyroll)</a>
-            </div>
-
-            <h3>Download (Grátis)</h3>
-            <p><strong>Plataforma:</strong> PC (Windows)</p>
-            <div class="play-links">
-                <a href="https://4br.me/rNNHg" target="_blank"><i class="fa-solid fa-download"></i> Download Planetarian HD</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, plataformas de streaming do anime, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "summer-pockets": {
@@ -2277,22 +2667,96 @@ const articlesDatabase = {
     "alice-and-the-devils-prison": {
         title: "Alice and the Devil's Prison",
         categories: ["Aventura", "Escape", "Indie", "+18"],
-        youtubeId: "gIayFt4D91E",
         summary: "Jogo de aventura de fuga. Durante uma festa do chá, Alice e seus amigos ficam presos em um mundo criado por demônios.",
         infobox: {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4145350/d5b52eb953acb402c627006b5118b398118b9477/header.jpg?t=1788919095",
             data: {
                 "Desenvolvedor": "Tsukki's Tea Party",
-                "Gêneros": "Aventura, Escape Room, +18",
-                "Lançamento": "08 de Agosto de 2026",
-                "Plataformas": "PC (Windows)"
+                "Distribuidora": "Tsukki's Tea Party",
+                "Gêneros": "Aventura, Escape Room, Indie, +18",
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "08 de Agosto de 2026"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse" },
             { id: "galeria", text: "2. Galeria de Imagens" },
-            { id: "downloads", text: "3. Links e Downloads" }
+            { id: "links", text: "3. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/4145350/Alice_and_the_Devils_Prison/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Versão Uncensored (Inglês) - Servidor 1",
+                    url: "https://4br.me/JQK8vz",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Download Versão Uncensored (Inglês) - Servidor 2",
+                    url: "https://4br.me/BQo1W",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Download Versão Uncensored (Inglês) - Servidor 3",
+                    url: "https://4br.me/ie0P",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Download Versão Japonesa - Servidor 1",
+                    url: "https://4br.me/fN9V",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Download Versão Japonesa - Servidor 2",
+                    url: "https://4br.me/FEmE0Dpg",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Patch EN (Inglês) - Servidor 1",
+                    url: "https://4br.me/Ofdee",
+                    details: "Patch de idioma"
+                },
+                {
+                    label: "Patch EN (Inglês) - Servidor 2",
+                    url: "https://4br.me/oh9eu9Cyho",
+                    details: "Patch de idioma"
+                },
+                {
+                    label: "Patch EN (Inglês) - Servidor 3",
+                    url: "https://4br.me/jP2QAnWtP",
+                    details: "Patch de idioma"
+                },
+                {
+                    label: "Patch TCN (Chinês Tradicional) - Servidor 1",
+                    url: "https://4br.me/YbIQx",
+                    details: "Patch de idioma"
+                },
+                {
+                    label: "Patch TCN (Chinês Tradicional) - Servidor 2",
+                    url: "https://4br.me/uEZhIcum2o",
+                    details: "Patch de idioma"
+                },
+                {
+                    label: "Patch TCN (Chinês Tradicional) - Servidor 3",
+                    url: "https://4br.me/As8EURj8",
+                    details: "Patch de idioma"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam ou utilize uma das opções de download disponibilizadas.",
+                    "Caso utilize os arquivos compactados, utilize a senha 'ryuugames.com' para extrair o conteúdo.",
+                    "Se necessário, aplique os patches de tradução em inglês ou chinês copiando-os para o diretório de instalação do jogo.",
+                    "Execute o aplicativo do jogo para começar a jogar."
+                ]
+            }
+        },
         content: `
             <p><strong>Alice and the Devil's Prison</strong> (título original: <em>アリスと悪魔の牢獄</em>) é um jogo de aventura e escape desenvolvido pelo estúdio indie <strong>Tsukki's Tea Party</strong>. O jogo foca em quebra-cabeças e sobrevivência, mesclando temas de fantasia clássica com elementos sombrios e maduros.</p>
 
@@ -2306,44 +2770,8 @@ const articlesDatabase = {
                 <img src="https://otaku-plan.net/images/games/AliceandtheDevilsPrison/des.avif" alt="Screenshot 3" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="downloads">Links e Downloads</h2>
-            <p><i class="fa-solid fa-link"></i> <strong>Página Oficial:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/4145350/Alice_and_the_Devils_Prison/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-            </div>
-
-            <h3>Download (Versão Uncensored)</h3>
-            <p><strong>Idioma:</strong> Inglês (Oficial)<br>
-            <strong>Senha de extração:</strong> ryuugames.com</p>
-            <div class="play-links">
-                <a href="https://4br.me/JQK8vz" target="_blank"><i class="fa-solid fa-download"></i> Servidor 1</a>
-                <a href="https://4br.me/BQo1W" target="_blank"><i class="fa-solid fa-download"></i> Servidor 2</a>
-                <a href="https://4br.me/ie0P" target="_blank"><i class="fa-solid fa-download"></i> Servidor 3</a>
-            </div>
-
-            <h3>Download (Versão Japonesa)</h3>
-            <p><strong>Idioma:</strong> Japonês<br>
-            <strong>Senha de extração:</strong> ryuugames.com</p>
-            <div class="play-links">
-                <a href="https://4br.me/fN9V" target="_blank"><i class="fa-solid fa-download"></i> Servidor 1</a>
-                <a href="https://4br.me/FEmE0Dpg" target="_blank"><i class="fa-solid fa-download"></i> Servidor 2</a>
-            </div>
-
-            <h3>Patches Adicionais</h3>
-            <p><strong>Patch EN (Inglês):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/Ofdee" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 1</a>
-                <a href="https://4br.me/oh9eu9Cyho" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 2</a>
-                <a href="https://4br.me/jP2QAnWtP" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 3</a>
-            </div>
-
-            <p><strong>Patch TCN (Chinês Tradicional):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/YbIQx" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 1</a>
-                <a href="https://4br.me/uEZhIcum2o" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 2</a>
-                <a href="https://4br.me/As8EURj8" target="_blank"><i class="fa-solid fa-file-zipper"></i> Servidor 3</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, servidores de download para as versões e patches, além das instruções na seção de downloads acima.</p>
         `
     },
     "you-and-me-and-her": {
@@ -2661,32 +3089,64 @@ const articlesDatabase = {
     },
     "evenicle": {
         title: "Evenicle",
-        addedAt: "2026-10-25",
         categories: ["JRPG", "Aventura", "RPG", "Eroge", "Visual Novel", "Anime"],
         summary: "Um épico e bem-humorado JRPG adulto desenvolvido pela AliceSoft. Em um mundo onde a monogamia e a proibição de matar são obrigatórias pela deusa Mother Eve, o jovem Asterisk parte em busca do título de Cavaleiro para poder ter múltiplas esposas e salvar suas irmãs.",
         infobox: {
             image: "https://www.kaguragames.com/wp-content/uploads/2022/11/Evenicle-Twitter_Image-711x400.jpg",
             data: {
-                "Título Original": "イブニクル (Ibunikuru)",
                 "Desenvolvedor": "AliceSoft",
-                "Publicadora (Ocidente)": "MangaGamer / Kagura Games / JAST USA",
-                "Designer de Personagens": "Nan Yaegashi (Senran Kagura)",
-                "Gêneros": "JRPG, Aventura, Eroge",
+                "Distribuidora": "Kagura Games, MangaGamer, JAST USA",
+                "Gêneros": "JRPG, Aventura, RPG, Eroge",
                 "Plataformas": "PC (Windows)",
-                "Lançamento JP": "24 de abril de 2015",
-                "Lançamento OC": "27 de junho de 2018",
-                "Classificação": "18+ (Conteúdo Sexual Explícito)"
+                "Lançamento": "24 de Abril de 2015"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "gameplay", text: "2. Mecânicas de Jogo" },
-            { id: "personagens", text: "3. Personagens Principais (Party)" },
-            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "personagens", text: "3. Personagens Principais" },
+            { id: "requisitos", text: "4. Requisitos do Sistema" },
             { id: "galeria", text: "5. Galeria de Imagens" },
-            { id: "curiosidades", text: "6. Curiosidades e Wiki" },
-            { id: "links", text: "7. Links Oficiais e Downloads" }
+            { id: "links", text: "6. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na GOG (DRM-free)",
+                    url: "https://www.gog.com/en/game/evenicle"
+                },
+                {
+                    label: "Página na Kagura Games",
+                    url: "https://www.kaguragames.com/product/evenicle"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Evenicle v1.04 (Servidor 1)",
+                    url: "https://4br.me/6enSw10n",
+                    details: "Instalador do jogo para PC"
+                },
+                {
+                    label: "Download Evenicle v1.04 (Servidor 2)",
+                    url: "https://4br.me/bEZx1mv5",
+                    details: "Instalador do jogo para PC"
+                },
+                {
+                    label: "Download Evenicle v1.04 (Servidor 3)",
+                    url: "https://4br.me/7vGcAHU",
+                    details: "Instalador do jogo para PC"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o instalador através de um dos servidores disponíveis.",
+                    "Extraia o arquivo baixado utilizando o 7-Zip ou o descompactador nativo do seu sistema.",
+                    "Execute o arquivo setup.exe dentro da pasta extraída e siga as instruções na tela.",
+                    "Inicie o jogo através do atalho criado na área de trabalho."
+                ]
+            }
+        },
         content: `
             <p><strong>Evenicle</strong> é um aclamado JRPG adulto desenvolvido pelo renomado estúdio <strong>AliceSoft</strong> e lançado no Ocidente pela <strong>Kagura Games</strong> e <strong>MangaGamer</strong>. A versão ocidental conta com censura por mosaico nas cenas explícitas.</p>
 
@@ -2696,20 +3156,18 @@ const articlesDatabase = {
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>No mundo criado pela deusa <strong>Mother Eve</strong> (Mãe Eva), todos os humanos devem seguir rigidamente duas regras fundamentais: a <em>monogamia obrigatória</em> e a <em>proibição absoluta de matar outros humanos</em>. Quem ousa violar tais preceitos perde a bênção de Eve e é transformado em um <em>Outlaw</em> (Fora da Lei), amaldiçoado e incapaz de produzir qualquer coisa por esforço próprio.</p>
-
             <p>O protagonista, <strong>Asterisk (Aster)</strong>, vive em uma pequena vila de pescadores com suas duas irmãs gêmeas, <strong>Kinou</strong> e <strong>Kyou</strong>. Apaixonado por ambas, Aster deseja se casar com as duas — algo estritamente proibido pelas leis divinas. A única exceção no mundo são os <strong>Cavaleiros (Knights)</strong>, guerreiros de elite que possuem o privilégio de ter múltiplas esposas conforme seu rank. Determinado a mudar seu destino, Aster parte em uma jornada épica.</p>
 
             <h2 id="gameplay">Mecânicas de Jogo</h2>
             <ul>
                 <li><strong>Sistema de Combate:</strong> Batalhas por turnos tradicionais baseadas no uso estratégico de <em>Skills</em> equipáveis.</li>
-                <li><strong>Pontos de Batalha (BP):</strong> Regenera 1 ponto por turno até o máximo de 6 stacks. As skills utilizam BP como limite de equipamento (não são consumidas).</li>
+                <li><strong>Pontos de Batalha (BP):</strong> Regenera 1 ponto por turno até o máximo de 6 stacks. As skills utilizam BP como limite de equipamento.</li>
                 <li><strong>Customização de Grupo:</strong> As habilidades podem ser realocadas livremente fora de combate para otimizar sinergias.</li>
                 <li><strong>Exploração 3D e Veículos:</strong> Navegue por montanhas, vales, mares (com barco) e céus (com balão).</li>
                 <li><strong>Captura de Monstros:</strong> Determinadas "gal-monsters" podem ser capturadas e conquistadas ao longo da aventura.</li>
-                <li><strong>Megamonsters e Harem System:</strong> Enfrente chefes opcionais avançados e desfrute de múltiplas rotas românticas.</li>
             </ul>
 
-            <h2 id="personagens">Personagens Principais (Party)</h2>
+            <h2 id="personagens">Personagens Principais</h2>
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
                 <thead>
                     <tr style="background-color: rgba(255,255,255,0.1);">
@@ -2724,7 +3182,7 @@ const articlesDatabase = {
                     </tr>
                     <tr>
                         <td style="padding: 8px; border: 1px solid #444;"><strong>Ramius Dreissen</strong></td>
-                        <td style="padding: 8px; border: 1px solid #444;">Tank (o "Loner Knight")</td>
+                        <td style="padding: 8px; border: 1px solid #444;">Tank</td>
                     </tr>
                     <tr>
                         <td style="padding: 8px; border: 1px solid #444;"><strong>Riche Eden</strong></td>
@@ -2734,103 +3192,27 @@ const articlesDatabase = {
                         <td style="padding: 8px; border: 1px solid #444;"><strong>Gurigara (Erimo)</strong></td>
                         <td style="padding: 8px; border: 1px solid #444;">Atacante físico / Assassina</td>
                     </tr>
-                    <tr>
-                        <td style="padding: 8px; border: 1px solid #444;"><strong>Kathryn Lapucelle</strong></td>
-                        <td style="padding: 8px; border: 1px solid #444;">Tática</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 8px; border: 1px solid #444;"><strong>Towa</strong></td>
-                        <td style="padding: 8px; border: 1px solid #444;">Personagem recrutável</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 8px; border: 1px solid #444;"><strong>Kinou & Kyou</strong></td>
-                        <td style="padding: 8px; border: 1px solid #444;">Irmãs gêmeas de Aster</td>
-                    </tr>
                 </tbody>
             </table>
 
-            <details style="margin: 15px 0; border: 1px solid #444; border-radius: 4px; padding: 10px; background: rgba(0,0,0,0.2);">
-                <summary style="cursor: pointer; font-weight: bold; color: #7699d4;">Série Evenicle (Clique para expandir o catálogo da franquia)</summary>
-                <p style="font-size: 0.9em; margin-top: 8px; color: #ccc;"><em>Aviso: Versões futuras da série serão adicionadas ao site em breve.</em></p>
-                <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em;">
-                    <thead>
-                        <tr style="background-color: rgba(255,255,255,0.05);">
-                            <th style="padding: 6px; border: 1px solid #444; text-align: left;">Jogo</th>
-                            <th style="padding: 6px; border: 1px solid #444; text-align: left;">Ano</th>
-                            <th style="padding: 6px; border: 1px solid #444; text-align: left;">Observação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle</td><td style="padding: 6px; border: 1px solid #444;">2015</td><td style="padding: 6px; border: 1px solid #444;">Jogo original</td></tr>
-                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle Rance</td><td style="padding: 6px; border: 1px solid #444;">2015</td><td style="padding: 6px; border: 1px solid #444;">Crossover com Rance</td></tr>
-                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle Apocrypha</td><td style="padding: 6px; border: 1px solid #444;">2015</td><td style="padding: 6px; border: 1px solid #444;">Conteúdo extra</td></tr>
-                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle 2</td><td style="padding: 6px; border: 1px solid #444;">2019</td><td style="padding: 6px; border: 1px solid #444;">Sequela; inglês em 22/02/2022</td></tr>
-                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle 2 Rance</td><td style="padding: 6px; border: 1px solid #444;">2019</td><td style="padding: 6px; border: 1px solid #444;">Crossover</td></tr>
-                        <tr><td style="padding: 6px; border: 1px solid #444;">Evenicle – Next Fragment Medica</td><td style="padding: 6px; border: 1px solid #444;">09/11/2026</td><td style="padding: 6px; border: 1px solid #444;">Edição Steam censurada (all-ages) de Evenicle 2</td></tr>
-                    </tbody>
-                </table>
-            </details>
-
-            <h2 id="requisitos">Requisitos de Sistema (Evenicle 1)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos do Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows Vista ou superior</li>
                 <li><strong>Processador:</strong> Intel Core i3 ou superior</li>
                 <li><strong>Memória RAM:</strong> 2 GB de RAM</li>
                 <li><strong>Placa de Vídeo:</strong> 256 MB VRAM / Shader Model 2.0</li>
-                <li><strong>DirectX:</strong> Versão 9.0c</li>
                 <li><strong>Armazenamento:</strong> 1.400 MB de espaço disponível</li>
-                <li><strong>Placa de Som:</strong> Compatível com Direct Sound</li>
             </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://images.gog-statics.com/56eb45afb4282916d709a83e528ceb6ba0b7a70fd5be7360413664b00b5f2b60_product_card_v2_thumbnail_271.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://images.gog-statics.com/39448ebec8721bc99f0036e409bdcd0a2586d83324c7ded5a09b7890ef6d1f61_product_card_v2_thumbnail_271.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://images.gog-statics.com/7fec48ddd7c83f1ec8fa98c3f80a24f1ce7c158b2bac39ad203ce05e8fea5d80_product_card_v2_thumbnail_271.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://images.gog-statics.com/26b4b43f203ec6229248f5b103b4e4a260c1d7a7895fdc46edb4f52517eb9a79_product_card_v2_thumbnail_271.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://images.gog-statics.com/95d9c508e24c5c368e506101f3d78ff0a241ca3cf736a8afd5907e6ca4eca424_product_card_v2_thumbnail_271.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://images.gog-statics.com/d86e0a63ccfab85d04c4dc15f5ac4fabaa67e84a1810802c3dce581619e3e05d_product_card_v2_thumbnail_271.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://images.gog-statics.com/56eb45afb4282916d709a83e528ceb6ba0b7a70fd5be7360413664b00b5f2b60_product_card_v2_thumbnail_271.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://images.gog-statics.com/39448ebec8721bc99f0036e409bdcd0a2586d83324c7ded5a09b7890ef6d1f61_product_card_v2_thumbnail_271.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://images.gog-statics.com/7fec48ddd7c83f1ec8fa98c3f80a24f1ce7c158b2bac39ad203ce05e8fea5d80_product_card_v2_thumbnail_271.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <h2 id="curiosidades">Curiosidades e Wiki</h2>
-            <ul>
-                <li>É o título não-Rance mais bem-sucedido da AliceSoft desde Daiakuji (2008).</li>
-                <li>A arte de personagens é assinada por Nan Yaegashi (famoso por Senran Kagura).</li>
-                <li>Evenicle 2 apresenta mais de 70 cenas sexuais únicas.</li>
-                <li>A AliceSoft efetivamente encerrou o mercado de jogos em pacote tradicionais após Evenicle 2, focando em novos horizontes digitais.</li>
-                <li>Reconhecido pelo humor autoconsciente em cima do conceito de poligamia e mecânicas sólidas de JRPG.</li>
-            </ul>
-
-            <p><i class="fa-solid fa-book"></i> <strong>Wikis e Guias Externos:</strong></p>
-            <ul>
-                <li><a href="https://alicesoft.miraheze.org/wiki/Evenicle" target="_blank">AliceSoft Wiki</a></li>
-                <li><a href="https://gamefaqs.gamespot.com/pc/116954-evenicle" target="_blank">GameFAQs Walkthrough</a></li>
-                <li><a href="https://moegamer.net/all-games/evenicle" target="_blank">MoeGamer Artigos</a></li>
-                <li><a href="https://pcgamingwiki.com/wiki/Evenicle" target="_blank">PCGamingWiki</a></li>
-                <li><a href="https://rawg.io/games/evenicle" target="_blank">RAWG Database</a></li>
-                <li><a href="https://zerochan.net/Evenicle" target="_blank">Zerochan Fan Arts</a></li>
-                <li><a href="https://mywaifulist.moe/series/evenicle" target="_blank">MyWaifuList Series</a></li>
-            </ul>
-
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Lojas Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://www.gog.com/en/game/evenicle" target="_blank"><i class="fa-solid fa-store"></i> Página na GOG (DRM-free)</a>
-                <a href="https://www.kaguragames.com/product/evenicle" target="_blank"><i class="fa-solid fa-gamepad"></i> Página na Kagura Games</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (v1.04):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/6enSw10n" target="_blank"><i class="fa-solid fa-download"></i> Download Evenicle v1.04 (Servidor 1)</a>
-                <a href="https://4br.me/bEZx1mv5" target="_blank"><i class="fa-solid fa-download"></i> Download Evenicle v1.04 (Servidor 2)</a>
-                <a href="https://4br.me/7vGcAHU" target="_blank"><i class="fa-solid fa-download"></i> Download Evenicle v1.04 (Servidor 3)</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação: Clique no link de download e aguarde o redirecionamento. Extraia o arquivo .zip baixado usando o 7-Zip (senha se necessária ou extrator padrão). Execute o instalador (setup.exe) dentro da pasta e jogue através do atalho gerado na sua área de trabalho.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "yume-nikki": {
@@ -2842,17 +3224,50 @@ const articlesDatabase = {
             data: {
                 "Desenvolvedor": "kikiyama",
                 "Distribuidora": "PLAYISM",
-                "Gêneros": "Aventura, Casual, Indie",
-                "Lançamento": "10 de Janeiro de 2018 (Steam)",
-                "Plataformas": "PC (Windows), Web"
+                "Gêneros": "Aventura, Casual, Indie, RPG Maker",
+                "Plataformas": "PC (Windows), Web",
+                "Lançamento": "10 de Janeiro de 2018 (Steam)"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Visão Geral e Mecânicas" },
             { id: "faq", text: "2. Perguntas Frequentes e Requisitos" },
             { id: "galeria", text: "3. Galeria de Imagens" },
-            { id: "links", text: "4. Links Oficiais e Downloads" }
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/650700/Yume_Nikki/"
+                },
+                {
+                    label: "YNOproject (Versão Web/Multiplayer)",
+                    url: "https://ynoproject.net/"
+                }
+            ],
+            files: [
+                {
+                    label: "RTP do RPG Maker 2003",
+                    url: "https://4br.me/RTP-2003",
+                    details: "Run Time Package necessário para execução"
+                },
+                {
+                    label: "Yume Nikki PT-BR",
+                    url: "https://4br.me/Yume-Nikki-PT-BR",
+                    details: "Tradução em Português do Brasil"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam ou utilize os arquivos de download alternativos.",
+                    "Instale o RTP do RPG Maker 2003, caso necessário para a execução correta da engine.",
+                    "Aplique a tradução em PT-BR na pasta raiz do jogo se estiver utilizando a versão modificada.",
+                    "Execute o jogo pelo atalho ou executável correspondente."
+                ]
+            }
+        },
         content: `
             <p><strong>Yume Nikki</strong> é um <em>tour de force</em> do RPG Maker e um trabalho divisivamente controverso para os fãs, tendo se tornado um dos jogos indie mais conhecidos do Japão por sua atmosfera profundamente sombria e agourenta.</p>
             
@@ -2872,33 +3287,13 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_94eb3eadcaa3371228499e9efa23062a5ba0c" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_6e99025af2f6669b7f08f35d9174bfdb925dc4c9.1920x1080.jpg?t=1779843132" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_bb41ccd5905753fe86f7d10527c9e2808d2efb8e.1920x1080.jpg?t=1779843132" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_94eb3eadcaa3371228499e9efa23062a5ba0c" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_6e99025af2f6669b7f08f35d9174bfdb925dc4c9.1920x1080.jpg?t=1779843132" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/650700/ss_bb41ccd5905753fe86f7d10527c9e2808d2efb8e.1920x1080.jpg?t=1779843132" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-link"></i> <strong>Lojas e Plataformas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/650700/Yume_Nikki/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-                <a href="https://ynoproject.net/" target="_blank"><i class="fa-solid fa-globe"></i> YNOproject (Versão Web/Multiplayer)</a>
-            </div>
-
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads e Traduções:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/RTP-2003" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> RTP do RPG Maker 2003</a>
-                <a href="https://4br.me/Yume-Nikki-PT-BR" target="_blank"><i class="fa-solid fa-language"></i> Yume Nikki PT-BR</a>
-            </div>
-
-            <p><i class="fa-solid fa-share-nodes"></i> <strong>Redes Sociais da Distribuidora (PLAYISM):</strong></p>
-            <div class="play-links">
-                <a href="https://x.com/playismEN" target="_blank"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a>
-                <a href="https://bsky.app/profile/playismen.bsky.social" target="_blank"><i class="fa-solid fa-cloud"></i> Bluesky</a>
-                <a href="https://www.instagram.com/playism_jp/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.youtube.com/@ActiveGamingMedia/videos" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, versão web, arquivos de tradução e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "sadistic-blood": {
@@ -2909,18 +3304,98 @@ const articlesDatabase = {
             image: "https://gogunlocked.com/wp-content/uploads/2026/06/SaDistic-BlooD-Free-Download-1-639x361.jpg",
             data: {
                 "Desenvolvedor": "B-Cyc / Cyc-Soft",
+                "Distribuidora": "B-Cyc / Cyc-Soft",
                 "Gêneros": "Visual Novel, Terror, Eroge, Sobrevivência",
-                "Lançamento": "2020",
-                "Plataformas": "PC (Windows)"
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "2020"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "aviso", text: "2. Conteúdo Adulto e Aviso de Sensibilidade" },
-            { id: "requisitos", text: "3. Requisitos do Sistema e Instalação" },
+            { id: "requisitos", text: "3. Requisitos do Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Website Oficial (Cyc-Soft)",
+                    url: "https://cyc-soft.com/b-cyc-pro/sadisticblood/"
+                }
+            ],
+            files: [
+                {
+                    label: "Servidor 1 (Sem Censura)",
+                    url: "https://4br.me/2u347F",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 2",
+                    url: "https://seulink.net/SaDistic-BlooD",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 3 (Sem Censura)",
+                    url: "https://seulink.net/O5fPkgKJG7",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Servidor 4 (TeraBox)",
+                    url: "https://seulink.net/O3HZr7Z7vB",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Servidor 5",
+                    url: "https://seulink.net/Lo79V1EuMN",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Servidor 6 (Sem Censura)",
+                    url: "https://seulink.net/Sc22eD",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 7",
+                    url: "https://seulink.net/JOtgC",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 8 (Sem Censura)",
+                    url: "https://seulink.net/Sc22eD",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 9",
+                    url: "https://seulink.digital/JOtgC",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 10 (Japonês - Versão Teste)",
+                    url: "https://4br.me/SaDistic-BlooD-jp",
+                    details: "Versão original em japonês"
+                },
+                {
+                    label: "Servidor 11 (Japonês - Versão Teste)",
+                    url: "https://4br.me/SaDistic-BlooD-jp2",
+                    details: "Versão original em japonês"
+                },
+                {
+                    label: "Servidor 12 (Japonês - Patch)",
+                    url: "https://4br.me/Patch-Correcao",
+                    details: "Patch de correção"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o arquivo de instalação através de um dos servidores disponíveis.",
+                    "Se necessário, utilize a senha 'ryuugames.com' para descompactar os arquivos dos servidores indicados.",
+                    "Extraia o conteúdo utilizando o 7-Zip ou WinRAR.",
+                    "Execute o arquivo executável do jogo dentro da pasta extraída para começar a jogar."
+                ]
+            }
+        },
         content: `
             <p><strong>SaDistic BlooD</strong> é uma <em>visual novel</em> de terror e suspense sombrio desenvolvida pela <strong>B-Cyc / Cyc-Soft</strong>, focada na luta desesperada de duas vampiras contra hordas de caçadores e armas biológicas mortais.</p>
             
@@ -2931,8 +3406,7 @@ const articlesDatabase = {
             <h2 id="aviso">Conteúdo Adulto e Aviso de Sensibilidade</h2>
             <p><strong>⚠️ AVISO IMPORTANTE:</strong> Este jogo contém temas extremamente sensíveis, violência gráfica, gore, tortura e conteúdo adulto explícito (18+). Não é recomendado para pessoas sensíveis ou menores de idade.</p>
 
-            <h2 id="requisitos">Requisitos do Sistema e Instalação</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos do Sistema</h2>
             <ul>
                 <li><strong>SO:</strong> Windows XP ou mais recente</li>
                 <li><strong>Processador:</strong> 2 GHz</li>
@@ -2941,59 +3415,29 @@ const articlesDatabase = {
                 <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
             </ul>
 
-            <p><strong>Instruções de Instalação (Servidor 1):</strong></p>
-            <ol>
-                <li>Acesse o link do servidor e aguarde a contagem regressiva no UploadHaven para realizar o download.</li>
-                <li>Após concluir o download, extraia o arquivo baixado para uma pasta usando o <strong>7-Zip</strong> ou <strong>WinRAR</strong>.</li>
-                <li>Abra a pasta extraída e execute o arquivo principal do jogo normalmente.</li>
-            </ol>
-
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/sadistic-blood-screen1.png" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/sadistic-blood-screen5.png" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/no579.png" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/sadistic-blood-screen1.png" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/sadistic-blood-screen5.png" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.ryuugames.com/wp-content/uploads/2020/10/no579.png" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Site Oficial:</strong></p>
-            <div class="play-links">
-                <a href="https://cyc-soft.com/b-cyc-pro/sadisticblood/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Cyc-Soft)</a>
-            </div>
-
-            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download (PC):</strong></p>
-            <p><em>Nota: Para os Servidores 3 ao 5, utilize a senha <code>ryuugames.com</code> caso seja solicitada na descompactação.</em></p>
-            <div class="play-links">
-                <a href="https://4br.me/2u347F" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 (Sem Censura)</a>
-                <a href="https://seulink.net/SaDistic-BlooD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2</a>
-                <a href="https://seulink.net/O5fPkgKJG7" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 3 (Sem Censura - Senha)</a>
-                <a href="https://seulink.net/O3HZr7Z7vB" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 4 (TeraBox - Senha)</a>
-                <a href="https://seulink.net/Lo79V1EuMN" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 5 (Senha)</a>
-                <a href="https://seulink.net/Sc22eD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 6 (Sem Censura)</a>
-                <a href="https://seulink.net/JOtgC" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 7</a>
-                <a href="https://seulink.net/Sc22eD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 8 (Sem Censura)</a>
-                <a href="https://seulink.digital/JOtgC" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 9</a>
-                <a href="https://4br.me/SaDistic-BlooD-jp" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 10 (Japonês - Versão Teste)</a>
-                <a href="https://4br.me/SaDistic-BlooD-jp2" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 11 (Japonês - Versão Teste)</a>
-                <a href="https://4br.me/Patch-Correcao" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 12 (Japonês - Versão Patch)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte o site oficial, as múltiplas opções de servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "love-angel-syndrome": {
         title: "Love Angel Syndrome",
-        addedAt: "2026-09-18",
-        youtubeId: "RBZ6mzYB62k",
         categories: ["Visual Novel", "Terror Psicológico", "Yuri", "Indie", "Romance Dark"],
         summary: "Uma visual novel de terror psicológico e yuri sobre Yuuna, uma garota hikikomori que baixa um assistente virtual de sua personagem de anime favorita, desencadeando um relacionamento obsessivo e perturbador.",
         infobox: {
             image: "https://i.8upload.com/image/3d3ffa60e8999f06/dzsisl.png",
             data: {
                 "Desenvolvedor": "♡ Ofélia ♡ (LilyByte Studios)",
+                "Distribuidora": "LilyByte Studios",
                 "Gêneros": "Visual Novel, Terror Psicológico, Yuri, Indie",
-                "Lançamento": "2024 (Yuri Game Jam)",
-                "Plataformas": "Windows, macOS, Android, Web Browser"
+                "Plataformas": "Windows, macOS, Android, Web Browser",
+                "Lançamento": "2024 (Yuri Game Jam)"
             }
         },
         toc: [
@@ -3003,8 +3447,44 @@ const articlesDatabase = {
             { id: "recursos", text: "4. Características do Jogo" },
             { id: "creditos", text: "5. Créditos e Desenvolvimento" },
             { id: "galeria", text: "6. Galeria de Imagens" },
-            { id: "links", text: "7. Links Oficiais e Downloads" }
+            { id: "links", text: "7. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página Oficial no Itch.io",
+                    url: "https://ladyoph3lia.itch.io/loveangelsyndrome"
+                },
+                {
+                    label: "Jogar no Navegador",
+                    url: "https://loveangelsyndrome.org/"
+                },
+                {
+                    label: "Comunidade Steam",
+                    url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3385804366"
+                }
+            ],
+            files: [
+                {
+                    label: "Servidor 1 (Android APK)",
+                    url: "https://4br.me/D9OExzRK",
+                    details: "Versão para dispositivos Android"
+                },
+                {
+                    label: "Servidor 2 (Android APK)",
+                    url: "https://4br.me/k0dvJ8h",
+                    details: "Versão para dispositivos Android"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Acesse a página oficial no Itch.io para baixar as versões de PC/Mac ou jogue diretamente pelo navegador.",
+                    "Para dispositivos Android, baixe o arquivo APK através de um dos servidores de download disponíveis.",
+                    "Permita a instalação de fontes desconhecidas no seu aparelho e instale o APK para jogar."
+                ]
+            }
+        },
         content: `
             <p><strong>Love Angel Syndrome</strong> é uma <em>visual novel</em> curta de terror psicológico e yuri desenvolvida pela <strong>LilyByte Studios</strong> para a <em>Yuri Game Jam 2024</em>. O jogo aborda temas profundos de saúde mental, isolamento social e dependência emocional através do relacionamento de uma garota com uma IA inspirada em seu anime favorito.</p>
 
@@ -3013,8 +3493,7 @@ const articlesDatabase = {
             <p>Incapaz de resistir ao fascínio de conversar com sua personagem favorita, Yuuna baixa o programa. Ai-chan acaba sendo a namorada com quem Yuuna sempre sonhou — mas será que um relacionamento sem limites pode realmente florescer? Um programa de IA pode realmente sentir amor humano real?</p>
 
             <h2 id="aviso">Avisos de Conteúdo e Demonstração</h2>
-            <p><strong>📢 NOTA IMPORTANTE:</strong> ESTE JOGO É APENAS UMA DEMONSTRAÇÃO! O jogo completo está em andamento e será lançado em atualizações futuras. PRÓXIMA ATUALIZAÇÃO: ?? / ?? / 2027
-</p>
+            <p><strong>📢 NOTA IMPORTANTE:</strong> ESTE JOGO É APENAS UMA DEMONSTRAÇÃO! O jogo completo está em andamento e será lançado em atualizações futuras.</p>
             <p><strong>⚠️ AVISOS DE CONTEÚDO:</strong> Este jogo contém representações de sangue, automutilação, imagens de suicídio, conversas pesadas sobre saúde mental, depressão e questões familiares. Elementos do jogo podem induzir paranoia e potencialmente desencadear convulsões em pessoas com epilepsia fotossensível. Recomenda-se extrema discrição ao jogar.</p>
 
             <h2 id="personagens">Personagens Principais</h2>
@@ -3038,7 +3517,7 @@ const articlesDatabase = {
             <ul>
                 <li><strong>Direção do Jogo:</strong> <a href="https://ladyoph3lia.itch.io/" target="_blank">@oph3liaa__</a></li>
                 <li><strong>Escritor:</strong> <a href="https://x.com/UsagichanP" target="_blank">@Usagichan</a></li>
-                <li><strong>PArtist:</strong> <a href="https://fluffyblessing.itch.io/" target="_blank">@fluffyblessing</a></li>
+                <li><strong>Artist:</strong> <a href="https://fluffyblessing.itch.io/" target="_blank">@fluffyblessing</a></li>
                 <li><strong>Artista de GUI e Cenários:</strong> <a href="https://x.com/peach_pxl" target="_blank">@peach_pxl</a></li>
                 <li><strong>Programação, Bug Fixes e QA:</strong> <a href="https://canislatransed.itch.io/" target="_blank">@canislatransed</a></li>
                 <li><strong>Compositor e Sound Design:</strong> <a href="https://www.youtube.com/@DuplEx_Music/videos" target="_blank">@DuplEx</a></li>
@@ -3047,55 +3526,89 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://i.8upload.com/image/3d3ffa60e8999f06/dzsisl.png" alt="Love Angel Syndrome Cover" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE2MC5wbmc=/original/gqLHzf.png" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE3My5wbmc=/original/miUJwP.png" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE4OC5wbmc=/original/ZX9cHo.png" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDEzMS5wbmc=/original/xSedA8.png" alt="Screenshot 4" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://i.8upload.com/image/3d3ffa60e8999f06/dzsisl.png" alt="Love Angel Syndrome Cover" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE2MC5wbmc=/original/gqLHzf.png" alt="Screenshot 1" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE3My5wbmc=/original/miUJwP.png" alt="Screenshot 2" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDE4OC5wbmc=/original/ZX9cHo.png" alt="Screenshot 3" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMzA0MzUyOS8yOTMxNDEzMS5wbmc=/original/xSedA8.png" alt="Screenshot 4" style="max-width: 32%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Sites Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://ladyoph3lia.itch.io/loveangelsyndrome" target="_blank"><i class="fa-solid fa-house"></i> Página Oficial no Itch.io (PC / MAC / APK Demo)</a>
-                <a href="https://loveangelsyndrome.org/" target="_blank"><i class="fa-solid fa-window-restore"></i> Jogar Diretamente no Navegador</a>
-                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3385804366" target="_blank"><i class="fa-brands fa-steam"></i> Comunidade Steam</a>
-            </div>
-
-            <p><i class="fa-brands fa-android"></i> <strong>Servidores de Download (Android APK):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/D9OExzRK" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 (Android APK)</a>
-                <a href="https://4br.me/k0dvJ8h" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 (Android APK)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de acesso, servidores de download para Android APK e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "aokana-four-rhythms-across-the-blue": {
         title: "Aokana: Four Rhythms Across the Blue",
-        addedAt: "2026-09-19",
-        trailerUrl: "https://video.akamai.steamstatic.com/store_trailers/256753501/movie480.mp4",
         categories: ["Visual Novel", "Romance", "Ficção Científica", "Esportes", "Escolar"],
         summary: "Em um mundo onde voar é tão simples quanto andar de bicicleta, Masaya Hinata retorna ao esporte Flying Circus como treinador para guiar quatro garotas rumo aos céus em uma emocionante história de superação e romance.",
         infobox: {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/7e9682047fc6f1b558f0d4ddee8e5cdb2e844dd2/header.jpg?t=1747952729",
             data: {
                 "Desenvolvedor": "Sprite",
-                "Publicadora": "NekoNyan Ltd.",
+                "Distribuidora": "NekoNyan Ltd.",
                 "Gêneros": "Visual Novel, Romance, Sci-Fi, Esportes",
-                "Lançamento": "27 de setembro de 2019 (Steam)",
                 "Plataformas": "Windows, Nintendo Switch, PlayStation 4",
-                "Classificação": "18+ (Conteúdo Adulto Leve)"
+                "Lançamento": "27 de Setembro de 2019 (Steam)"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "personagens", text: "2. Personagens" },
             { id: "guia", text: "3. Guia do Jogo e Rotas" },
-            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "requisitos", text: "4. Requisitos do Sistema" },
             { id: "galeria", text: "5. Galeria de Imagens" },
-            { id: "links", text: "6. Links Oficiais e Downloads" }
+            { id: "links", text: "6. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Website Oficial",
+                    url: "https://aokanaweb.com/"
+                },
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1044620/Aokana__Four_Rhythms_Across_the_Blue/"
+                },
+                {
+                    label: "Comprar Versão Nutaku",
+                    url: "https://www.nutaku.net/games/aokana/?ats=eyJhIjoxMTE0NTU4LCJjIjo2Mjc3NzU3OCwibiI6MSwicyI6MSwiZSI6MTA5NDMsInAiOjJ9"
+                },
+                {
+                    label: "Assistir ao Anime (Crunchyroll)",
+                    url: "https://www.crunchyroll.com/pt-br/series/GYMGPXKVY/aokana-four-rhythm-across-the-blue"
+                }
+            ],
+            files: [
+                {
+                    label: "Servidor 1",
+                    url: "https://4br.me/aiQ81",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 2 (Parte 1)",
+                    url: "https://4br.me/cYTWmcHp0",
+                    details: "Senha de extração: kimochi.info"
+                },
+                {
+                    label: "Servidor 2 (Parte 2)",
+                    url: "https://4br.me/73G5covf2W",
+                    details: "Senha de extração: kimochi.info"
+                },
+                {
+                    label: "Servidor 3",
+                    url: "https://4br.me/bvYOEZ",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe os arquivos do jogo através de um dos servidores disponíveis.",
+                    "Caso utilize servidores compactados em partes ou RAR/7z, utilize a senha 'kimochi.info' para extrair os arquivos.",
+                    "Execute o instalador ou aplicativo do jogo na pasta extraída e jogue através do atalho gerado."
+                ]
+            }
+        },
         content: `
             <p><strong>Aokana: Four Rhythms Across the Blue</strong> é uma premiada <em>visual novel</em> romântica com elementos de ficção científica e esportes, desenvolvida pela <strong>Sprite</strong> e publicada pela <strong>NekoNyan Ltd.</strong> A história se passa em um mundo onde sapatos antigravitacionais conhecidos como <em>Grav-Shoes</em> permitem que as pessoas voem livremente pelos céus, dando origem a um esporte competitivo popular chamado <strong>Flying Circus</strong>.</p>
 
@@ -3179,7 +3692,7 @@ const articlesDatabase = {
 
             <p><em>Nota: Se você não se comprometer com nenhuma rota de heroína durante as escolhas, o jogo resultará em um Final Ruim (Bad Ending). Ao completar todas as rotas, o cenário final é liberado automaticamente.</em></p>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos do Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 ou mais recente</li>
                 <li><strong>Processador:</strong> 1.3 GHz</li>
@@ -3191,58 +3704,116 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_55fcdb0f1bd4df2cc182f6fcd076e94f92299941.1920x1080.jpg?t=1747952729" alt="Aokana Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_e518a1137fb91d4b6f71cebe48bb2839994b5f1c.1920x1080.jpg?t=1747952729" alt="Aokana Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_9045ca808284302464020ed4fe17d30abda54182.116x65.jpg?t=1747952729" alt="Aokana Screenshot 3" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_3ab4d1c088fdf65192688e5eea5cb4e5c5c968b7.116x65.jpg?t=1747952729" alt="Aokana Screenshot 4" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_d5fa9b48a9d212b574cf48b5c42537f1872397e9.116x65.jpg?t=1747952729" alt="Aokana Screenshot 5" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_0c1a0cebfb761e498408285cc1ce1121c24b52d2.116x65.jpg?t=1747952729" alt="Aokana Screenshot 6" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_55fcdb0f1bd4df2cc182f6fcd076e94f92299941.1920x1080.jpg?t=1747952729" alt="Aokana Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_e518a1137fb91d4b6f71cebe48bb2839994b5f1c.1920x1080.jpg?t=1747952729" alt="Aokana Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_9045ca808284302464020ed4fe17d30abda54182.116x65.jpg?t=1747952729" alt="Aokana Screenshot 3" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_3ab4d1c088fdf65192688e5eea5cb4e5c5c968b7.116x65.jpg?t=1747952729" alt="Aokana Screenshot 4" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_d5fa9b48a9d212b574cf48b5c42537f1872397e9.116x65.jpg?t=1747952729" alt="Aokana Screenshot 5" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1044620/ss_0c1a0cebfb761e498408285cc1ce1121c24b52d2.116x65.jpg?t=1747952729" alt="Aokana Screenshot 6" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://aokanaweb.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial</a>
-                <a href="https://store.steampowered.com/app/1044620/Aokana__Four_Rhythms_Across_the_Blue/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://www.nutaku.net/games/aokana/?ats=eyJhIjoxMTE0NTU4LCJjIjo2Mjc3NzU3OCwibiI6MSwicyI6MSwiZSI6MTA5NDMsInAiOjJ9" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Comprar Versão Nutaku</a>
-                <a href="https://www.crunchyroll.com/pt-br/series/GYMGPXKVY/aokana-four-rhythm-across-the-blue" target="_blank"><i class="fa-solid fa-tv"></i> Assistir ao Anime no Crunchyroll</a>
-            </div>
-
-            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download (PC):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/aiQ81" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1</a>
-                <a href="https://4br.me/cYTWmcHp0" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 (Parte 1)</a>
-                <a href="https://4br.me/73G5covf2W" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 (Parte 2)</a>
-                <a href="https://4br.me/bvYOEZ" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 3</a>
-            </div>
-            <p>🔑 <em>Senha para descompactar os arquivos RAR/7z dos servidores 2/1 e 2/2:</em> <code>kimochi.info</code></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, streaming do anime, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "hoshizora-no-memoria": {
         title: "Hoshizora no Memoria - Wish upon a Shooting Star HD",
-        addedAt: "2026-09-19",
-        youtubeId: "lw4aET29N1Q",
         categories: ["Visual Novel", "Romance", "Comédia", "Sobrenatural", "Eroge"],
         summary: "Após a morte repentina de sua mãe, You Kogasaka e sua irmã retornam à sua cidade natal para cumprir uma antiga promessa de infância, deparando-se com uma misteriosa Ceifadora de almas e segredos do passado.",
         infobox: {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/715580/header.jpg?t=1726607068",
             data: {
                 "Desenvolvedor": "Favorite",
-                "Publicadora": "Sekai Project",
+                "Distribuidora": "Sekai Project",
                 "Gêneros": "Visual Novel, Romance, Sobrenatural, Comédia",
-                "Lançamento": "18 de Dezembro de 2017 (Steam)",
-                "Plataformas": "PC (Windows)"
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "18 de Dezembro de 2017 (Steam)"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "instalacao", text: "2. Ordem de Rotas e Guia de Instalação" },
-            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "requisitos", text: "3. Requisitos do Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais, Patches e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam (HD)",
+                    url: "https://store.steampowered.com/app/715580/Hoshizora_no_Memoria_Wish_upon_a_Shooting_Star_HD/"
+                },
+                {
+                    label: "Sekai Project",
+                    url: "https://sekaiproject.com/products/hoshizora-no-memoria-wish-upon-a-shooting-star/?v=dc634e207282"
+                },
+                {
+                    label: "Guia do Jogo em Espanhol (Sharin-sub)",
+                    url: "https://sharin-sub.blogspot.com/2018/04/hoshizora-no-memoria-wish-upon-shooting.html"
+                }
+            ],
+            files: [
+                {
+                    label: "English Patch v1.0",
+                    url: "https://4br.me/english_patch_1_0",
+                    details: "Patch de tradução para inglês"
+                },
+                {
+                    label: "English Patch v1.2",
+                    url: "https://4br.me/english_patch_1_2",
+                    details: "Patch de tradução para inglês (versão 1.2)"
+                },
+                {
+                    label: "Patch Espanhol (Mega)",
+                    url: "https://4br.me/kLXaOj",
+                    details: "Patch de tradução em espanhol"
+                },
+                {
+                    label: "Patch Espanhol (Mediafire)",
+                    url: "https://4br.me/KoIAwAV",
+                    details: "Patch de tradução em espanhol"
+                },
+                {
+                    label: "Servidor 1 - Mega (Partes 1 a 7 - ES)",
+                    url: "https://4br.me/C3H5S",
+                    details: "Senha de extração: animegame"
+                },
+                {
+                    label: "Servidor 2 - Mediafire (Partes 1 a 7 - ES)",
+                    url: "https://4br.me/QDRlMyL03",
+                    details: "Senha de extração: animegame"
+                },
+                {
+                    label: "Servidor 3 - Torrent (ES)",
+                    url: "https://4br.me/English-torrent",
+                    details: "Senha de extração: animegame"
+                },
+                {
+                    label: "Servidor 4",
+                    url: "https://4br.me/0ygZm",
+                    details: "Senha de extração: otomi-games.com"
+                },
+                {
+                    label: "Servidor 5",
+                    url: "https://4br.me/faUgG",
+                    details: "Senha de extração: otomi-games.com"
+                },
+                {
+                    label: "Servidor 6",
+                    url: "https://4br.me/XCeHMRedI",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Se necessário, altere a localidade do sistema (Unicode) para Japonês nas configurações administrativas do Windows e reiniba o PC.",
+                    "Monte a imagem ISO do jogo ou extraia os arquivos baixados utilizando a senha indicada para o servidor correspondente.",
+                    "Instale o jogo e aplique os patches de tradução colando os arquivos na pasta raiz.",
+                    "Instale a fonte fornecida com os arquivos do jogo e selecione-a nas configurações internas para evitar erros de texto."
+                ]
+            }
+        },
         content: `
             <p><strong>Hoshizora no Memoria - Wish upon a Shooting Star HD</strong> é uma aclamada <em>visual novel</em> de romance e fantasia sobrenatural desenvolvida pelo estúdio <strong>Favorite</strong> e publicada ocidentalmente pela <strong>Sekai Project</strong>.</p>
 
@@ -3259,23 +3830,13 @@ const articlesDatabase = {
                 <li>Duração estimada de 30 a 50 horas de leitura.</li>
             </ul>
 
-            <p><strong>🔞 Conteúdo Adulto:</strong> O jogo contém nudez e cenas adultas não específicas em sua versão original com patch eroge.</p>
+            <p><strong>🔞 Conteúdo Adulto:</strong> O jogo contém nudez e cenas adultas em sua versão original com patch eroge.</p>
 
             <h2 id="instalacao">Ordem de Rotas e Guia de Instalação</h2>
-            
             <p><strong>Ordem Recomendada das Rotas:</strong></p>
             <p><code>Asuho</code> ➔ <code>Komomo</code> ➔ <code>Kosame</code> ➔ <code>Isuzu</code> ➔ <code>Chinami</code> ➔ <code>Garota Misteriosa</code> ➔ <code>Mare</code></p>
 
-            <p><strong>Instruções de Instalação (Versão ISO / Clássica):</strong></p>
-            <ol>
-                <li>Altere a Localidade do Sistema (Unicode) para <strong>Japonês</strong> (Painel de Controle > Relógio e Região > Administrativo > Alterar localidade do sistema) e reinicie o PC.</li>
-                <li>Monte a imagem ISO do jogo utilizando o programa <strong>Daemon Tools Lite</strong> ou similar e realize a instalação.</li>
-                <li>Extraia os arquivos do Patch de Tradução e cole-os diretamente dentro da pasta raiz onde o jogo foi instalado.</li>
-                <li>Instale a fonte fornecida com o arquivo do jogo.</li>
-                <li>Execute o jogo e selecione a fonte instalada nas configurações do jogo.</li>
-            </ol>
-
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos do Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 10</li>
                 <li><strong>Processador:</strong> Pentium 4 1,3 GHz</li>
@@ -3287,39 +3848,12 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigTaDTn3J4UCiW5dZ1SeGTq2aR70EgP6cTU79-1Z1vPy1ORct8auQKR_UePjldcirxmlcnvmKtr3ln2TVcSLlUgDKNUeHLufQzVJkAvTlnt1rp3lijpZsnKKjCyhgt_rrBRWPNQZ7sRDA/s1600/10.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizEzRgrEYzQCAlNQI1pZcQi_ieVHWI9c7qu_GWia7YrP1-x2YAmdMD6iOw9M7HgMCdCP3lHjfo7d0Uo0nr8ZJgyLfQ6xTDpGbUDjv0GHkkNr7Pvi5pbEmPTSu9z3f_cAJPFNAd87sBnW4/s1600/11.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigTaDTn3J4UCiW5dZ1SeGTq2aR70EgP6cTU79-1Z1vPy1ORct8auQKR_UePjldcirxmlcnvmKtr3ln2TVcSLlUgDKNUeHLufQzVJkAvTlnt1rp3lijpZsnKKjCyhgt_rrBRWPNQZ7sRDA/s1600/10.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizEzRgrEYzQCAlNQI1pZcQi_ieVHWI9c7qu_GWia7YrP1-x2YAmdMD6iOw9M7HgMCdCP3lHjfo7d0Uo0nr8ZJgyLfQ6xTDpGbUDjv0GHkkNr7Pvi5pbEmPTSu9z3f_cAJPFNAd87sBnW4/s1600/11.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais, Patches e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Guias Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/715580/Hoshizora_no_Memoria_Wish_upon_a_Shooting_Star_HD/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam (HD)</a>
-                <a href="https://sekaiproject.com/products/hoshizora-no-memoria-wish-upon-a-shooting-star/?v=dc634e207282" target="_blank"><i class="fa-solid fa-shop"></i> Sekai Project</a>
-                <a href="https://sharin-sub.blogspot.com/2018/04/hoshizora-no-memoria-wish-upon-shooting.html" target="_blank"><i class="fa-solid fa-book"></i> Guia do Jogo em Espanhol (Sharin-sub)</a>
-            </div>
-
-            <p><i class="fa-solid fa-gears"></i> <strong>Patches de Tradução:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/english_patch_1_0" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch v1.0</a>
-                <a href="https://4br.me/english_patch_1_2" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch v1.2</a>
-                <a href="https://4br.me/kLXaOj" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Patch Espanhol (Mega)</a>
-                <a href="https://4br.me/KoIAwAV" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Patch Espanhol (Mediafire)</a>
-            </div>
-
-            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download:</strong></p>
-            <p>🔑 <em>Senha dos Servidores 1 ao 3:</em> <code>animegame</code><br>
-            🔑 <em>Senha dos Servidores 4 e 5:</em> <code>otomi-games.com</code></p>
-            <div class="play-links">
-                <a href="https://4br.me/C3H5S" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 - Mega (Partes 1 a 7 - ES)</a>
-                <a href="https://4br.me/QDRlMyL03" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 - Mediafire (Partes 1 a 7 - ES)</a>
-                <a href="https://4br.me/English-torrent" target="_blank"><i class="fa-solid fa-download"></i> Servidor 3 - Torrent (ES)</a>
-                <a href="https://4br.me/0ygZm" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 4</a>
-                <a href="https://4br.me/faUgG" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 5</a>
-                <a href="https://4br.me/XCeHMRedI" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 6</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, patches de tradução, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "black-souls-2": {
@@ -3331,9 +3865,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3855540/b1a169268bb89754248da4fded96ebda8f2f283a/header.jpg?t=1788921850",
             data: {
                 "Desenvolvedor": "Sushi-Arai",
-                "Publicadora": "Otaku Plan",
+                "Distribuidora": "Otaku Plan",
                 "Gêneros": "RPG, Terror Psicológico, Fantasia Sombria, Eroge",
-                "Plataformas": "PC (Windows)"
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -3341,8 +3876,90 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Jogabilidade e Sistema SEN" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais, Patches e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/3855540/BLACK_SOULS_II/"
+                },
+                {
+                    label: "Otaku Plan (EN)",
+                    url: "https://otaku-plan.com/en/blacksouls2_en/"
+                },
+                {
+                    label: "Otaku Plan Net",
+                    url: "https://otaku-plan.net/games/3855540"
+                }
+            ],
+            files: [
+                {
+                    label: "English Patch 1",
+                    url: "https://4br.me/QmjcMY",
+                    details: "Patch de tradução para inglês"
+                },
+                {
+                    label: "English Patch 2",
+                    url: "https://4br.me/6WyGZZDG",
+                    details: "Patch de tradução para inglês"
+                },
+                {
+                    label: "English Patch 3",
+                    url: "https://4br.me/DGyL",
+                    details: "Patch de tradução para inglês"
+                },
+                {
+                    label: "English Patch 4",
+                    url: "https://4br.me/Is2bjsD",
+                    details: "Patch de tradução para inglês"
+                },
+                {
+                    label: "Servidor RJ237469 (627 MB)",
+                    url: "https://4br.me/4YbM",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 1 (v1.1 & Uncensored)",
+                    url: "https://4br.me/4pdLMG7s",
+                    details: "Versão atualizada sem censura"
+                },
+                {
+                    label: "Servidor 2 (v1.1 & All DLC)",
+                    url: "https://4br.me/a28SUEKSxZ",
+                    details: "Inclui todas as DLCs lançadas"
+                },
+                {
+                    label: "Servidor 3",
+                    url: "https://4br.me/kIZkG",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor 4 (EN/JP)",
+                    url: "https://4br.me/uMWL8j",
+                    details: "Senha de extração: 123"
+                },
+                {
+                    label: "Servidor 5",
+                    url: "https://4br.me/7mCRf",
+                    details: "Senha de extração: 2026"
+                },
+                {
+                    label: "Download Torrent",
+                    url: "https://4br.me/eRDkRc1K0",
+                    details: "Arquivo torrent para download"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos servidores de download alternativos.",
+                    "Se utilizar arquivos compactados dos servidores indicados, utilize a senha correspondente (como '123' ou '2026') para extrair o conteúdo.",
+                    "Aplique os patches de tradução em inglês na pasta raiz do jogo, se necessário.",
+                    "Execute o jogo através do executável correspondente na pasta instalada."
+                ]
+            }
+        },
         content: `
             <p><strong>BLACK SOULS II</strong> é um RPG de fantasia sombria e terror psicológico desenvolvido pela <strong>Sushi-Arai</strong> e publicado pela <strong>Otaku Plan</strong>, fortemente inspirado nos clássicos contos <em>"As Aventuras de Alice no País das Maravilhas"</em> e <em>"Através do Espelho"</em> de Lewis Carroll.</p>
 
@@ -3386,54 +4003,16 @@ const articlesDatabase = {
                 <li><strong>Armazenamento:</strong> 2 GB de espaço disponível</li>
             </ul>
 
-            <p><strong>Requisitos Recomendados:</strong></p>
-            <ul>
-                <li><strong>Sistema Operacional:</strong> Windows 11</li>
-                <li><strong>Processador:</strong> Processador de 3+ GHz</li>
-                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
-                <li><strong>Placa de Vídeo:</strong> Suporte ao driver de hardware OpenGL ES 2.0 (AMD Catalyst 10.9, nVidia 358.50)</li>
-                <li><strong>DirectX:</strong> Versão 11</li>
-                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
-            </ul>
-
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-II-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-II-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://steamonfire.com/wp-content/uploads/2025/12/BLACK-SOULS-II-direct-download.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://steamonfire.com/wp-content/uploads/2025/12/BLACK-SOULS-II-pc.jpg" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-II-gog-639x361.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://gogunlocked.com/wp-content/uploads/2026/06/BLACK-SOULS-II-crack-639x361.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://steamonfire.com/wp-content/uploads/2025/12/BLACK-SOULS-II-direct-download.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://steamonfire.com/wp-content/uploads/2025/12/BLACK-SOULS-II-pc.jpg" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais, Patches e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Páginas Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/3855540/BLACK_SOULS_II/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://otaku-plan.com/en/blacksouls2_en/" target="_blank"><i class="fa-solid fa-house"></i> Otaku Plan (EN)</a>
-                <a href="https://otaku-plan.net/games/3855540" target="_blank"><i class="fa-solid fa-shop"></i> Otaku Plan Net</a>
-            </div>
-
-            <p><i class="fa-solid fa-gears"></i> <strong>Patches em Inglês:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/QmjcMY" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch 1</a>
-                <a href="https://4br.me/6WyGZZDG" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch 2</a>
-                <a href="https://4br.me/DGyL" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch 3</a>
-                <a href="https://4br.me/Is2bjsD" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> English Patch 4</a>
-            </div>
-
-            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/4YbM" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor RJ237469 (627 MB)</a>
-                <a href="https://4br.me/4pdLMG7s" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 (v1.1 & Uncensored)</a>
-                <a href="https://4br.me/a28SUEKSxZ" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 2 (v1.1 & All DLC)</a>
-                <a href="https://4br.me/kIZkG" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 3</a>
-                <a href="https://4br.me/uMWL8j" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 4 (EN/JP)</a>
-                <a href="https://4br.me/7mCRf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 5</a>
-                <a href="https://4br.me/eRDkRc1K0" target="_blank"><i class="fa-solid fa-download"></i> Download Torrent</a>
-            </div>
-            <p>🔑 <em>Senha do arquivo Servidor 4:</em> <code>123</code><br>
-            🔑 <em>Senha do arquivo Servidor 5:</em> <code>2026</code></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, patches de tradução, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "the-house-in-fata-morgana-a-requiem-for-innocence": {
@@ -3445,19 +4024,54 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/804700/header.jpg?t=1725518745",
             data: {
                 "Desenvolvedor": "NOVECT",
-                "Publicadora": "MangaGamer",
+                "Distribuidora": "MangaGamer",
                 "Gêneros": "Visual Novel, Drama, Gótico, Tragédia",
-                "Lançamento": "17 de Maio de 2018 (Steam)",
                 "Plataformas": "PC (Windows)",
-                "Classificação": "16+ (Violência Extrema, Linguagem Imprópria)"
+                "Lançamento": "17 de Maio de 2018 (Steam)"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "requisitos", text: "2. Requisitos de Sistema" },
             { id: "galeria", text: "3. Galeria de Imagens" },
-            { id: "links", text: "4. Links Oficiais e Downloads" }
+            { id: "links", text: "4. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Website Oficial (Novect)",
+                    url: "https://novect.net/"
+                },
+                {
+                    label: "Página da Série Fata Morgana",
+                    url: "https://novect.net/fatamorgana/"
+                },
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/804700/The_House_in_Fata_Morgana_A_Requiem_for_Innocence/"
+                }
+            ],
+            files: [
+                {
+                    label: "Servidor MegaUp",
+                    url: "https://4br.me/phDFyLKbu5",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Servidor Mega",
+                    url: "https://4br.me/4C9H52",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos servidores de download alternativos.",
+                    "Extraia o arquivo compactado baixado utilizando um programa como o 7-Zip ou WinRAR.",
+                    "Execute o arquivo executável dentro da pasta extraída para começar a jogar."
+                ]
+            }
+        },
         content: `
             <p><strong>The House in Fata Morgana: A Requiem for Innocence</strong> é uma <em>visual novel</em> dramática e de suspense gótico desenvolvida pela <strong>NOVECT</strong> (anteriormente Novectacle) e publicada pela <strong>MangaGamer</strong>. O jogo atua como a prequela oficial e companheira do aclamado <em>The House in Fata Morgana</em>.</p>
 
@@ -3482,29 +4096,15 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://aseriaa.wordpress.com/wp-content/uploads/2018/05/7.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://i0.wp.com/aseriaa.wordpress.com/wp-content/uploads/2018/05/6.png?w=2000&h=&ssl=1" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://i0.wp.com/aseriaa.wordpress.com/wp-content/uploads/2018/05/12.jpg?w=2000&h=&ssl=1" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://igg-games.com/wp-content/uploads/2018/05/The-House-in-Fata-Morgana-A-Requiem-for-Torrent-Download.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://igg-games.com/wp-content/uploads/2018/05/The-House-in-Fata-Morgana-A-Requiem-for-PC-Crack.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://aseriaa.wordpress.com/wp-content/uploads/2018/05/7.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://i0.wp.com/aseriaa.wordpress.com/wp-content/uploads/2018/05/6.png?w=2000&h=&ssl=1" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://i0.wp.com/aseriaa.wordpress.com/wp-content/uploads/2018/05/12.jpg?w=2000&h=&ssl=1" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://igg-games.com/wp-content/uploads/2018/05/The-House-in-Fata-Morgana-A-Requiem-for-Torrent-Download.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://igg-games.com/wp-content/uploads/2018/05/The-House-in-Fata-Morgana-A-Requiem-for-PC-Crack.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://novect.net/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Novect)</a>
-                <a href="https://novect.net/fatamorgana/" target="_blank"><i class="fa-solid fa-book"></i> Página da Série Fata Morgana</a>
-                <a href="https://store.steampowered.com/app/804700/The_House_in_Fata_Morgana_A_Requiem_for_Innocence/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-            </div>
-
-            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download (PC):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/phDFyLKbu5" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor MegaUp</a>
-                <a href="https://4br.me/4C9H52" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor Mega</a>
-            </div>
-            <p>ℹ️ <em>Instruções: Extraia os arquivos do jogo, instale ou aplique o crack caso necessário, e execute o arquivo executável para jogar.</em></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "the-end-of-an-obsession": {
@@ -3585,19 +4185,58 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/header.jpg?t=1715703408",
             data: {
                 "Desenvolvedor": "MAGES. / 5pb.",
-                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Distribuidora": "Spike Chunsoft Co., Ltd.",
                 "Gêneros": "Visual Novel, Sci-Fi, Viagem no Tempo, Mistério",
-                "Lançamento": "8 de Maio de 2018 (Steam)",
-                "Plataformas": "Windows, Nintendo Switch, PlayStation 4, PS Vita"
+                "Plataformas": "Windows, Nintendo Switch, PlayStation 4, PS Vita",
+                "Lançamento": "8 de Maio de 2018 (Steam)"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "gameplay", text: "2. Características e Jogabilidade" },
-            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "requisitos", text: "3. Requisitos do Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Website Oficial (Spike Chunsoft)",
+                    url: "https://www.spike-chunsoft.com/games/steinsgate-0/"
+                },
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/825630/STEINSGATE_0/"
+                },
+                {
+                    label: "Nintendo eShop",
+                    url: "https://nintendo.com/pt-br/store/products/steins-gate-0-switch/"
+                },
+                {
+                    label: "PlayStation Store",
+                    url: "https://store.playstation.com/pt-br/product/UP4293-CUSA05894_00-STEINSGATEZEROP4"
+                },
+                {
+                    label: "Assistir ao Anime (Crunchyroll)",
+                    url: "https://www.crunchyroll.com/series/GYW4D15K6/steinsgate-0"
+                }
+            ],
+            files: [
+                {
+                    label: "Servidor 1 (Download Direto)",
+                    url: "https://4br.me/7RvmAUfM",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam ou nas lojas oficiais de console para apoiar os desenvolvedores, ou utilize o link de download fornecido.",
+                    "Baixe e extraia o arquivo do jogo utilizando o 7-Zip ou WinRAR.",
+                    "Execute o arquivo executável dentro da pasta extraída para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>STEINS;GATE 0</strong> é a aclamada continuação e linha do tempo alternativa da lendária <em>visual novel</em> de ficção científica <strong>STEINS;GATE</strong>, desenvolvida pela <strong>MAGES. / 5pb.</strong> e publicada pela <strong>Spike Chunsoft</strong>.</p>
 
@@ -3613,7 +4252,7 @@ const articlesDatabase = {
                 <li><strong>Atmosfera Envolvente:</strong> Trilha sonora marcante, arte deslumbrante e uma narrativa dramática e emocional do início ao fim.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos do Sistema (PC)</h2>
             <p><strong>Requisitos Mínimos:</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 / 8.1 / 10</li>
@@ -3636,30 +4275,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_a57fc097c43dc5a1a235835fe092c4fd688f3e6d.1920x1080.jpg?t=1715703408" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_9cd655261bc4ff2c583545aa0a822ad9696eb1c1.1920x1080.jpg?t=1715703408" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_28e5bd4b8c232259a26aed0d83224c8bf023c7bd.1920x1080.jpg?t=1715703408" alt="Screenshot 3" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_10a4925d86dac7163d813c528840e46b555fec7b.1920x1080.jpg?t=1715703408" alt="Screenshot 4" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_f5481057a227455d98fa37aa63a89db780368319.1920x1080.jpg?t=1715703408" alt="Screenshot 5" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_2d45fbed3ff71662f73b69c06f9cb5d054854d0b.1920x1080.jpg?t=1715703408" alt="Screenshot 6" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_a57fc097c43dc5a1a235835fe092c4fd688f3e6d.1920x1080.jpg?t=1715703408" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_9cd655261bc4ff2c583545aa0a822ad9696eb1c1.1920x1080.jpg?t=1715703408" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_28e5bd4b8c232259a26aed0d83224c8bf023c7bd.1920x1080.jpg?t=1715703408" alt="Screenshot 3" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_10a4925d86dac7163d813c528840e46b555fec7b.1920x1080.jpg?t=1715703408" alt="Screenshot 4" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_f5481057a227455d98fa37aa63a89db780368319.1920x1080.jpg?t=1715703408" alt="Screenshot 5" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/825630/ss_2d45fbed3ff71662f73b69c06f9cb5d054854d0b.1920x1080.jpg?t=1715703408" alt="Screenshot 6" style="max-width: 23%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://www.spike-chunsoft.com/games/steinsgate-0/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Spike Chunsoft)</a>
-                <a href="https://store.steampowered.com/app/825630/STEINSGATE_0/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://nintendo.com/pt-br/store/products/steins-gate-0-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
-                <a href="https://store.playstation.com/pt-br/product/UP4293-CUSA05894_00-STEINSGATEZEROP4" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
-                <a href="https://www.crunchyroll.com/series/GYW4D15K6/steinsgate-0" target="_blank"><i class="fa-solid fa-tv"></i> Assistir ao Anime no Crunchyroll</a>
-            </div>
-
-            <p><i class="fa-solid fa-download"></i> <strong>Servidores de Download (PC):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/7RvmAUfM" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Servidor 1 (Download Direto)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, streaming do anime, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "steins-gate-elite": {
@@ -4128,10 +4753,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/header.jpg?t=1715700046",
             data: {
                 "Desenvolvedor": "Spike Chunsoft Co., Ltd.",
-                "Publicadora": "Spike Chunsoft Co., Ltd.",
+                "Distribuidora": "Spike Chunsoft Co., Ltd.",
                 "Gêneros": "Aventura, Mistério, Ficção Científica, Quebra-cabeça",
                 "Plataformas": "PC (Windows), PlayStation 4, PS Vita, Xbox One, Nintendo 3DS",
-                "Classificação": "18+ (Violência, Temas Adultos)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -4140,8 +4765,49 @@ const articlesDatabase = {
             { id: "gameplay", text: "3. Características e Jogabilidade" },
             { id: "requisitos", text: "4. Requisitos de Sistema" },
             { id: "galeria", text: "5. Galeria de Imagens" },
-            { id: "links", text: "6. Links Oficiais e Downloads" }
+            { id: "links", text: "6. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/311240/Zero_Escape_Zero_Time_Dilemma/"
+                },
+                {
+                    label: "PlayStation Store",
+                    url: "https://store.playstation.com/pt-br/product/UP1024-CUSA07593_00-ZEROESCAPE000000"
+                },
+                {
+                    label: "Xbox Store",
+                    url: "https://www.xbox.com/pt-BR/games/store/zero-escape-zero-time-dilemma/9p3lcdlhwnms"
+                }
+            ],
+            files: [
+                {
+                    label: "Download (Opção 1)",
+                    url: "https://4br.me/ICqigmC",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download (Opção 2)",
+                    url: "https://4br.me/Hqu9rlw",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download (Opção 3)",
+                    url: "https://4br.me/z2MUSmZ",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam, PlayStation Store ou Xbox Store para apoiar os desenvolvedores, ou utilize uma das opções de download direto.",
+                    "Extraia o arquivo compactado baixado utilizando um programa como o 7-Zip ou WinRAR.",
+                    "Execute o arquivo executável dentro da pasta extraída para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>Zero Escape: Zero Time Dilemma</strong> é o terceiro e conclusivo capítulo da aclamada série de suspense e ficção científica criada por Kotaro Uchikoshi e desenvolvida pela <strong>Spike Chunsoft</strong>.</p>
 
@@ -4166,7 +4832,7 @@ const articlesDatabase = {
                 <li><strong>Conclusão Épica:</strong> Reúne personagens marcantes de <em>Nine Hours, Nine Persons, Nine Doors (999)</em> e <em>Virtue's Last Reward</em> para encerrar os mistérios da franquia.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <p><strong>Requisitos Mínimos:</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7</li>
@@ -4175,40 +4841,18 @@ const articlesDatabase = {
                 <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 650 (1 GB) ou AMD Radeon HD 7700 (1 GB) [Compatível com DirectX 11]</li>
                 <li><strong>DirectX:</strong> Versão 11</li>
                 <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
-                <li><strong>Placa de Som:</strong> Placa compatível com DirectX 9.0c</li>
-            </ul>
-
-            <p><strong>Requisitos Recomendados:</strong></p>
-            <ul>
-                <li><strong>Sistema Operacional:</strong> Windows 7</li>
-                <li><strong>Processador:</strong> Intel Core i5-3570K (3.40 GHz) ou superior</li>
-                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
-                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 650 (1 GB) ou AMD Radeon HD 7700 (1 GB) [Compatível com DirectX 11]</li>
-                <li><strong>DirectX:</strong> Versão 11</li>
-                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
-                <li><strong>Placa de Som:</strong> Placa compatível com DirectX 9.0c</li>
             </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_f71e31f1cd405a613a48764f4d75fc5646cc0d46.1920x1080.jpg?t=1715700046" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_580244bb4ffb4979803347a9e5707fc8a09bd09c.1920x1080.jpg?t=1715700046" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_455ea843113b192abddabcec738ca0970f7df9af.1920x1080.jpg?t=1715700046" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_2e363c88dabd6013051489ee93845f29e9be6319.1920x1080.jpg?t=1715700046" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_f71e31f1cd405a613a48764f4d75fc5646cc0d46.1920x1080.jpg?t=1715700046" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_580244bb4ffb4979803347a9e5707fc8a09bd09c.1920x1080.jpg?t=1715700046" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_455ea843113b192abddabcec738ca0970f7df9af.1920x1080.jpg?t=1715700046" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311240/ss_2e363c88dabd6013051489ee93845f29e9be6319.1920x1080.jpg?t=1715700046" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/311240/Zero_Escape_Zero_Time_Dilemma/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://store.playstation.com/pt-br/product/UP1024-CUSA07593_00-ZEROESCAPE000000" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
-                <a href="https://www.xbox.com/pt-BR/games/store/zero-escape-zero-time-dilemma/9p3lcdlhwnms" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
-                <a href="https://4br.me/ICqigmC" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 1)</a>
-                <a href="https://4br.me/Hqu9rlw" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 2)</a>
-                <a href="https://4br.me/z2MUSmZ" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 3)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "slay-the-princess-the-pristine-cut": {
@@ -4368,10 +5012,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/header.jpg?t=1732213819",
             data: {
                 "Desenvolvedor": "Team GrisGris",
-                "Publicadora": "XSEED Games, Marvelous USA, Inc.",
+                "Distribuidora": "XSEED Games, Marvelous USA, Inc.",
                 "Gêneros": "Terror, Aventura, Indie",
                 "Plataformas": "PC (Windows)",
-                "Classificação": "18+ (Violência Extrema, Medo, Linguagem Imprópria)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -4379,8 +5023,70 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/940310/Corpse_Party_2_Dead_Patient/"
+                },
+                {
+                    label: "Website Oficial da Série",
+                    url: "https://www.corpsepartyseries.com/"
+                },
+                {
+                    label: "Discord Oficial",
+                    url: "https://discord.com/invite/xseedgames"
+                },
+                {
+                    label: "X / Twitter",
+                    url: "https://x.com/xseedgames"
+                },
+                {
+                    label: "Canal no YouTube",
+                    url: "https://www.youtube.com/xseedgames"
+                },
+                {
+                    label: "Instagram",
+                    url: "https://www.instagram.com/xseedgames"
+                },
+                {
+                    label: "Facebook",
+                    url: "https://www.facebook.com/XSEEDGames/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download (Opção 1)",
+                    url: "https://4br.me/6d1mkmu",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download (Opção 2)",
+                    url: "https://4br.me/IopNTHpCw",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download (Opção 3)",
+                    url: "https://4br.me/MYPwFAB90",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download Torrent",
+                    url: "https://4br.me/rR1FQ",
+                    details: "Arquivo torrent para download"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize uma das opções de download direto ou torrent.",
+                    "Extraia o arquivo compactado baixado utilizando um programa como o 7-Zip ou WinRAR.",
+                    "Execute o arquivo executável dentro da pasta extraída para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>Corpse Party 2: Dead Patient</strong> é o início de um novo capítulo episódico na renomada e aterrorizante franquia de terror japonesa, desenvolvido pelo estúdio indie <strong>Team GrisGris</strong> e publicado pela <strong>XSEED Games</strong>.</p>
 
@@ -4397,7 +5103,7 @@ const articlesDatabase = {
                 <li><strong>Edição Aprimorada (NEUES):</strong> Conta com batalhas de chefes reformuladas, cenas de história adicionais e melhorias de jogabilidade sugeridas pela comunidade.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <p><strong>Requisitos Mínimos:</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
@@ -4420,31 +5126,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_c6e46782089ad6e0031277411db9658e74fc3b6b.1920x1080.jpg?t=1732213819" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_2041d2c5c3446e5a4898c5f990b842e629453ce8.1920x1080.jpg?t=1732213819" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_e327a66d1a6d53e283f93b14a7ed85a8a2d73df1.1920x1080.jpg?t=1732213819" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_bbd6b17bd18e3d58aa9112ba868b4941302bfd8d.1920x1080.jpg?t=1732213819" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_e75a5621d72db3d797b1cff19f4b9830cd13b00c.1920x1080.jpg?t=1732213819" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_8889ad962d9789b74856cb051cb84b14c4aa0caf.1920x1080.jpg?t=1732213819" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_c6e46782089ad6e0031277411db9658e74fc3b6b.1920x1080.jpg?t=1732213819" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_2041d2c5c3446e5a4898c5f990b842e629453ce8.1920x1080.jpg?t=1732213819" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_e327a66d1a6d53e283f93b14a7ed85a8a2d73df1.1920x1080.jpg?t=1732213819" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_bbd6b17bd18e3d58aa9112ba868b4941302bfd8d.1920x1080.jpg?t=1732213819" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_e75a5621d72db3d797b1cff19f4b9830cd13b00c.1920x1080.jpg?t=1732213819" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/940310/ss_8889ad962d9789b74856cb051cb84b14c4aa0caf.1920x1080.jpg?t=1732213819" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/940310/Corpse_Party_2_Dead_Patient/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://www.corpsepartyseries.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial da Série</a>
-                <a href="https://discord.com/invite/xseedgames" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
-                <a href="https://x.com/xseedgames" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
-                <a href="https://www.youtube.com/xseedgames" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
-                <a href="https://www.instagram.com/xseedgames" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/XSEEDGames/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                <a href="https://4br.me/6d1mkmu" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 1)</a>
-                <a href="https://4br.me/IopNTHpCw" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 2)</a>
-                <a href="https://4br.me/MYPwFAB90" target="_blank"><i class="fa-solid fa-download"></i> Download (Opção 3)</a>
-                <a href="https://4br.me/rR1FQ" target="_blank"><i class="fa-solid fa-magnet"></i> Download Torrent</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "corpse-party-book-of-shadows": {
@@ -4525,10 +5216,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/header.jpg?t=1787116099",
             data: {
                 "Desenvolvedor": "Team GrisGris, MAGES., 5pb.",
-                "Publicadora": "XSEED Games, Marvelous USA, Inc.",
+                "Distribuidora": "XSEED Games, Marvelous USA, Inc.",
                 "Gêneros": "Terror, Aventura, Sobrevivência",
                 "Plataformas": "PC (Windows), PS Vita, Nintendo Switch, iOS, Android",
-                "Classificação": "16+ (Violência Extrema, Medo, Conteúdo Sensível)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -4536,8 +5227,32 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/824830/Corpse_Party_Blood_Drive/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download do Jogo",
+                    url: "https://4br.me/5mbKMzsw",
+                    details: "Versão para PC (Windows)",
+                    verified: true
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize o link de download direto fornecido.",
+                    "Extraia o arquivo compactado baixado utilizando um programa como o 7-Zip ou WinRAR.",
+                    "Execute o arquivo executável dentro da pasta extraída para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>Corpse Party: Blood Drive</strong> é a conclusão definitiva e eletrizante do longo arco da escola Heavenly Host, desenvolvido pela <strong>Team GrisGris</strong> em parceria com a <strong>MAGES. / 5pb.</strong> e publicado pela <strong>XSEED Games</strong>.</p>
 
@@ -4554,8 +5269,7 @@ const articlesDatabase = {
                 <li><strong>Visual Remasterizado em HD:</strong> Gráficos completamente repaginados em alta definição para PC, taxa de quadros aprimorada e o retorno do temido <em>Darkening System</em> (Sistema de Obscurecimento).</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
                 <li><strong>Processador:</strong> Intel Core i3 Dual Core @ 2.5 GHz</li>
@@ -4567,22 +5281,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_bdd3a4e2748f88ca6a4b284afa0eb3e3e00d11ca.1920x1080.jpg?t=1787116099" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_94d06fe9e47512dc8cd0a51523a51bdf61f32df6.1920x1080.jpg?t=1787116099" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_d6e98dc37c16945bcc2952bec9fa944ad83fdaee.1920x1080.jpg?t=1787116099" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_12709259e788fa697a8c7f45b54cf4fb568aa77e.1920x1080.jpg?t=1787116099" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_48c14e693e67862b9cddb2b8a8b47a57d9aba59e.1920x1080.jpg?t=1787116099" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_9baf7a43385558e5aac584a7cc9d13f1b61a154d.1920x1080.jpg?t=1787116099" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_bdd3a4e2748f88ca6a4b284afa0eb3e3e00d11ca.1920x1080.jpg?t=1787116099" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_94d06fe9e47512dc8cd0a51523a51bdf61f32df6.1920x1080.jpg?t=1787116099" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_d6e98dc37c16945bcc2952bec9fa944ad83fdaee.1920x1080.jpg?t=1787116099" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_12709259e788fa697a8c7f45b54cf4fb568aa77e.1920x1080.jpg?t=1787116099" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_48c14e693e67862b9cddb2b8a8b47a57d9aba59e.1920x1080.jpg?t=1787116099" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/824830/ss_9baf7a43385558e5aac584a7cc9d13f1b61a154d.1920x1080.jpg?t=1787116099" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/824830/Corpse_Party_Blood_Drive/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://4br.me/5mbKMzsw" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "corpse-party": {
@@ -4661,10 +5369,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/header.jpg?t=1667193086",
             data: {
                 "Desenvolvedor": "Spacelight Studio",
-                "Publicadora": "Spacelight Studio",
+                "Distribuidora": "Spacelight Studio",
                 "Gêneros": "Aventura, Indie, RPG, Visual Novel",
                 "Plataformas": "PC (Windows), iOS, Android",
-                "Classificação": "10+ (Violência Fantasiosa)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -4672,14 +5380,48 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/937170/Otakus_Adventure/"
+                },
+                {
+                    label: "Comunidade Steam",
+                    url: "https://steamcommunity.com/app/937170"
+                },
+                {
+                    label: "App Store (iOS)",
+                    url: "https://apps.apple.com/br/app/otakus-adventure/id1614795077"
+                },
+                {
+                    label: "TapTap (Demo)",
+                    url: "https://www.taptap.io/br/app/233165"
+                }
+            ],
+            files: [
+                {
+                    label: "Download APK v1.2.3",
+                    url: "https://4br.me/MUFHD",
+                    details: "Versão para dispositivos Android"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam ou na App Store para apoiar os desenvolvedores, ou utilize o link de download direto do APK.",
+                    "Para a versão de PC, extraia o arquivo compactado e execute o instalador ou aplicativo.",
+                    "Para dispositivos Android, baixe o APK, permita a instalação de fontes desconhecidas e instale o aplicativo."
+                ]
+            }
+        },
         content: `
             <p><strong>Otaku's Adventure</strong> é um jogo de aventura e navegação no estilo AVG bastante peculiar, desenvolvido e publicado pela <strong>Spacelight Studio</strong>. O título conta com localização oficial em Português do Brasil realizada em parceria com o grupo <em>Zero Force Translations</em>.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>A trama acompanha um jovem otaku que passou anos solteiro e deseja desesperadamente encontrar o amor verdadeiro. Quando ele inadvertidamente embarca em uma jornada inacreditável e fantástica, surge a oportunidade de conquistar o afeto de diferentes garotas.</p>
-
             <p>Cada uma das garotas possui uma linha narrativa completamente distinta, levando o protagonista a enfrentar situações absurdas, batalhas inesperadas, viagens espaciais e mistérios bizarros. O destino de seu relacionamento dependerá das escolhas e habilidades do jogador em meio a um humor único e imprevisível.</p>
 
             <h2 id="gameplay">Características e Jogabilidade</h2>
@@ -4692,8 +5434,7 @@ const articlesDatabase = {
                 <li><strong>Localização em Português (PT-BR):</strong> Tradução completa para o português do Brasil.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 / 8 / 8.1 / 10 (32/64-bit)</li>
                 <li><strong>Processador:</strong> Intel Core 2 Duo ou superior</li>
@@ -4705,24 +5446,15 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_950229ece5c025549f5c3914ae9b958585f1aae3.1920x1080.jpg?t=1667193086" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_2379ca120d654a34019c48bf5a0d8f658bebb300.1920x1080.jpg?t=1667193086" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_790f7c74dba613aacf0c7233b27693f13838114e.1920x1080.jpg?t=1667193086" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_fb40d534300ce0d55c594009b848a8842455aa6f.1920x1080.jpg?t=1667193086" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_57727121e8b22948854174992a7cdfdd36d9b350.1920x1080.jpg?t=1667193086" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_950229ece5c025549f5c3914ae9b958585f1aae3.1920x1080.jpg?t=1667193086" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_2379ca120d654a34019c48bf5a0d8f658bebb300.1920x1080.jpg?t=1667193086" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_790f7c74dba613aacf0c7233b27693f13838114e.1920x1080.jpg?t=1667193086" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_fb40d534300ce0d55c594009b848a8842455aa6f.1920x1080.jpg?t=1667193086" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/937170/ss_57727121e8b22948854174992a7cdfdd36d9b350.1920x1080.jpg?t=1667193086" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/937170/Otakus_Adventure/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://steamcommunity.com/app/937170" target="_blank"><i class="fa-brands fa-steam"></i> Comunidade Steam</a>
-                <a href="https://apps.apple.com/br/app/otakus-adventure/id1614795077" target="_blank"><i class="fa-brands fa-apple"></i> App Store (iOS)</a>
-                <a href="https://www.taptap.io/br/app/233165" target="_blank"><i class="fa-solid fa-mobile-screen"></i> TapTap (Demo)</a>
-                <a href="https://4br.me/MUFHD" target="_blank"><i class="fa-solid fa-download"></i> Download APK v1.2.3</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, versões móveis, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "fate-hollow-ataraxia-remastered": {
@@ -4734,10 +5466,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/3f9699f3c1b9ac8519f89f46c1ab6f7db9e48fe8/header.jpg?t=1771568121",
             data: {
                 "Desenvolvedor": "TYPE-MOON, fuzz Inc.",
-                "Publicadora": "Aniplex Inc.",
+                "Distribuidora": "Aniplex Inc.",
                 "Gêneros": "Aventura, Visual Novel, Anime",
                 "Plataformas": "PC (Windows), Nintendo Switch",
-                "Classificação": "14+ (Violência)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -4745,8 +5477,57 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/2396990/Fatehollow_ataraxia_REMASTERED/"
+                },
+                {
+                    label: "Nintendo eShop",
+                    url: "https://www.nintendo.com/pt-br/store/products/fate-hollow-ataraxia-remastered-switch/"
+                },
+                {
+                    label: "Website Oficial (TYPE-MOON)",
+                    url: "https://typemoon.com/products/f-ha/"
+                },
+                {
+                    label: "X / Twitter",
+                    url: "https://x.com/Fate_SN_Game"
+                },
+                {
+                    label: "Canal no YouTube",
+                    url: "https://www.youtube.com/@TYPE-MOON_GAMES"
+                }
+            ],
+            files: [
+                {
+                    label: "Download (SteamRIP)",
+                    url: "https://4br.me/YaJr0f8nB",
+                    details: "Senha de extração: 123"
+                },
+                {
+                    label: "Download Torrent",
+                    url: "https://4br.me/9pGz4o9ph5",
+                    details: "Arquivo torrent para download"
+                },
+                {
+                    label: "Download Direto",
+                    url: "https://4br.me/UiJCAiZek",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam ou Nintendo eShop para apoiar os desenvolvedores, ou utilize uma das opções de download alternativas.",
+                    "Caso utilize arquivos compactados, insira a senha indicada ('123') para extrair o conteúdo.",
+                    "Execute o arquivo executável dentro da pasta extraída para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>Fate/hollow ataraxia REMASTERED</strong> é a versão remasterizada em alta definição do renomado romance visual desenvolvido pela <strong>TYPE-MOON</strong> em colaboração com a <strong>fuzz Inc.</strong> e publicado pela <strong>Aniplex Inc.</strong></p>
 
@@ -4769,7 +5550,7 @@ const articlesDatabase = {
                 </li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <p><strong>Requisitos Mínimos:</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
@@ -4780,40 +5561,18 @@ const articlesDatabase = {
                 <li><strong>Armazenamento:</strong> 16 GB de espaço disponível</li>
             </ul>
 
-            <p><strong>Requisitos Recomendados:</strong></p>
-            <ul>
-                <li><strong>Sistema Operacional:</strong> Windows 10 / 11 (64-bit)</li>
-                <li><strong>Processador:</strong> Intel Core de 6ª geração ou AMD Ryzen</li>
-                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
-                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 660 / GTX 760 / GTX 950 / GTX 1050 / GTX 1650 ou superior (3 GB VRAM)</li>
-                <li><strong>DirectX:</strong> Versão 11</li>
-                <li><strong>Armazenamento:</strong> 16 GB de espaço disponível</li>
-            </ul>
-
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/e5e04301bdfa0804a8aafc68022ec7dd6f1dc325/ss_e5e04301bdfa0804a8aafc68022ec7dd6f1dc325.1920x1080.jpg?t=1771568121" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/9e77082d504a83e85e8a90a037018dabff4e312f/ss_9e77082d504a83e85e8a90a037018dabff4e312f.1920x1080.jpg?t=1771568121" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/3cddd7138501374b18af32149dbef4287e9c85c4/ss_3cddd7138501374b18af32149dbef4287e9c85c4.1920x1080.jpg?t=1771568121" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/7a7edd8d877077856f8af17141766e0faf4975f3/ss_7a7edd8d877077856f8af17141766e0faf4975f3.1920x1080.jpg?t=1771568121" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/f6b85fe10689343e3161bda16481b3022c547f93/ss_f6b85fe10689343e3161bda16481b3022c547f93.1920x1080.jpg?t=1771568121" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/0a3c1fdda02634c18b5955014939bfe2b4cc97bd/ss_0a3c1fdda02634c18b5955014939bfe2b4cc97bd.1920x1080.jpg?t=1771568121" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/e5e04301bdfa0804a8aafc68022ec7dd6f1dc325/ss_e5e04301bdfa0804a8aafc68022ec7dd6f1dc325.1920x1080.jpg?t=1771568121" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/9e77082d504a83e85e8a90a037018dabff4e312f/ss_9e77082d504a83e85e8a90a037018dabff4e312f.1920x1080.jpg?t=1771568121" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/3cddd7138501374b18af32149dbef4287e9c85c4/ss_3cddd7138501374b18af32149dbef4287e9c85c4.1920x1080.jpg?t=1771568121" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/7a7edd8d877077856f8af17141766e0faf4975f3/ss_7a7edd8d877077856f8af17141766e0faf4975f3.1920x1080.jpg?t=1771568121" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/f6b85fe10689343e3161bda16481b3022c547f93/ss_f6b85fe10689343e3161bda16481b3022c547f93.1920x1080.jpg?t=1771568121" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2396990/0a3c1fdda02634c18b5955014939bfe2b4cc97bd/ss_0a3c1fdda02634c18b5955014939bfe2b4cc97bd.1920x1080.jpg?t=1771568121" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/2396990/Fatehollow_ataraxia_REMASTERED/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://www.nintendo.com/pt-br/store/products/fate-hollow-ataraxia-remastered-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</a>
-                <a href="https://typemoon.com/products/f-ha/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (TYPE-MOON)</a>
-                <a href="https://x.com/Fate_SN_Game" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
-                <a href="https://www.youtube.com/@TYPE-MOON_GAMES" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
-                <a href="https://4br.me/YaJr0f8nB" target="_blank"><i class="fa-solid fa-download"></i> Download (SteamRIP - Senha: 123)</a>
-                <a href="https://4br.me/9pGz4o9ph5" target="_blank"><i class="fa-solid fa-magnet"></i> Download Torrent</a>
-                <a href="https://4br.me/UiJCAiZek" target="_blank"><i class="fa-solid fa-download"></i> Download Direto</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "tomoyo-after-its-a-wonderful-life": {
@@ -4825,10 +5584,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/header.jpg",
             data: {
                 "Desenvolvedor": "VisualArts / Key",
-                "Publicadora": "VisualArts",
+                "Distribuidora": "VisualArts",
                 "Gêneros": "Aventura, Casual, RPG, Estratégia, Visual Novel",
                 "Plataformas": "PC (Windows)",
-                "Classificação": "12+ (Nudez, Violência)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -4836,14 +5595,41 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/462990/Tomoyo_After_Its_a_Wonderful_Life_English_Edition/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download do Jogo (Opção 1)",
+                    url: "https://4br.me/q7gkSY3P",
+                    details: "Senha de extração: ryuugames.com"
+                },
+                {
+                    label: "Download do Jogo (Opção 2)",
+                    url: "https://4br.me/u59JcNigsY",
+                    details: "Senha de extração: ryuublogger.com"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize uma das opções de download direto.",
+                    "Utilize a senha indicada (ryuugames.com ou ryuublogger.com) para descompactar o arquivo baixado.",
+                    "Extraia o conteúdo utilizando o 7-Zip ou WinRAR e execute o arquivo executável para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>Tomoyo After ~It's a Wonderful Life~</strong> é uma visual novel dramática desenvolvida pelo estúdio <strong>Key</strong> (autores de <em>CLANNAD</em>, <em>Air</em> e <em>Kanon</em>) e publicada pela <strong>VisualArts</strong>, servindo como uma sequência direta da rota de Tomoyo no clássico <em>CLANNAD</em>.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>Após se formar no ensino médio, Tomoya Okazaki começa a trabalhar em uma empresa de coleta de resíduos na periferia da cidade. Vivendo de forma independente em seu próprio apartamento, ele desfruta de uma rotina calma e feliz ao lado de sua namorada, Tomoyo Sakagami.</p>
-
             <p>A tranquilidade do casal é interrompida quando Takafumi, irmão de Tomoyo, traz até o apartamento a jovem Tomo, uma criança ilegítima de seu pai que foi abandonada pela mãe. Relutantes, Tomoya e Tomoyo concordam em cuidar da garota. Para complicar ainda mais a convivência, Kanako, a ex-namorada de Takafumi, foge de casa antes das férias de verão e também passa a morar no local. Assim começa o primeiro e último verão que os cinco passarão juntos.</p>
 
             <h2 id="gameplay">Características e Jogabilidade</h2>
@@ -4855,7 +5641,7 @@ const articlesDatabase = {
                 <li><strong>Trilha Sonora Emocionante:</strong> Produzida por Shinji Orito, Magome Togoshi e Jun Maeda, incluindo o tema principal "Light colors" interpretado pela cantora Lia.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <p><strong>Requisitos Mínimos:</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 / 8 / Vista</li>
@@ -4866,36 +5652,18 @@ const articlesDatabase = {
                 <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
             </ul>
 
-            <p><strong>Requisitos Recomendados:</strong></p>
-            <ul>
-                <li><strong>Sistema Operacional:</strong> Windows 10</li>
-                <li><strong>Processador:</strong> Pentium 4 2.0 GHz ou superior</li>
-                <li><strong>Memória RAM:</strong> 256 MB de RAM</li>
-                <li><strong>Placa de Vídeo:</strong> Resolução 800 x 600, 24-bit / 32-bit</li>
-                <li><strong>DirectX:</strong> Versão 9.0</li>
-                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
-            </ul>
-
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_3817862f76315f7e9b207cb26c68f1c7822fc889.1920x1080.jpg?t=1732683261" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_6656b4951a4f4989505c06e30b4c1e52abe2d5b9.1920x1080.jpg?t=1732683261" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_7e2d74a20c4025386a87bfc43c06f54817d001ca.1920x1080.jpg?t=1732683261" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_2e895580271dda0427a76b6b2a9d9f349af5a7eb.1920x1080.jpg?t=1732683261" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_5522d84cf2a87cdb0e52030333c90ece24b5ee35.1920x1080.jpg?t=1732683261" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_c1f636de08c99ab9a0923059b0df6939772245dd.1920x1080.jpg?t=1732683261" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_3817862f76315f7e9b207cb26c68f1c7822fc889.1920x1080.jpg?t=1732683261" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_6656b4951a4f4989505c06e30b4c1e52abe2d5b9.1920x1080.jpg?t=1732683261" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_7e2d74a20c4025386a87bfc43c06f54817d001ca.1920x1080.jpg?t=1732683261" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_2e895580271dda0427a76b6b2a9d9f349af5a7eb.1920x1080.jpg?t=1732683261" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_5522d84cf2a87cdb0e52030333c90ece24b5ee35.1920x1080.jpg?t=1732683261" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/462990/ss_c1f636de08c99ab9a0923059b0df6939772245dd.1920x1080.jpg?t=1732683261" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/462990/Tomoyo_After_Its_a_Wonderful_Life_English_Edition/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://4br.me/q7gkSY3P" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo (Opção 1)</a>
-                <a href="https://4br.me/u59JcNigsY" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo (Opção 2)</a>
-            </div>
-            <p><small><em>Nota: Senha do arquivo compactado: <code>ryuugames.com</code> ou <code>ryuublogger.com</code></em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "ib": {
@@ -4907,10 +5675,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/header.jpg?t=1779842056",
             data: {
                 "Desenvolvedor": "kouri",
-                "Publicadora": "PLAYISM",
+                "Distribuidora": "PLAYISM",
                 "Gêneros": "Aventura, Indie, Terror, Puzzle",
                 "Plataformas": "PC (Windows)",
-                "Classificação": "12+ (Violência, Temas Perturbadores)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -4918,8 +5686,75 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1901370/Ib/"
+                },
+                {
+                    label: "Site Oficial (PLAYISM)",
+                    url: "https://playism.com/game/ib/"
+                },
+                {
+                    label: "X / Twitter do Autor (kouri)",
+                    url: "https://x.com/monomu_kouri"
+                },
+                {
+                    label: "Bluesky (PLAYISM)",
+                    url: "https://bsky.app/profile/playismen.bsky.social"
+                },
+                {
+                    label: "Instagram",
+                    url: "https://www.instagram.com/playism_jp/"
+                },
+                {
+                    label: "TikTok",
+                    url: "https://www.tiktok.com/@playism_plays"
+                },
+                {
+                    label: "Canal no YouTube",
+                    url: "https://www.youtube.com/ActiveGamingMedia"
+                },
+                {
+                    label: "Facebook",
+                    url: "https://www.facebook.com/PLAYISM/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download do Jogo (Geral)",
+                    url: "https://4br.me/LJX5rNdXRU",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download Ib Full Game v1.07 (Servidor 1)",
+                    url: "https://4br.me/jsU5Tbqf",
+                    details: "Versão completa atualizada v1.07"
+                },
+                {
+                    label: "Download Versão em Inglês",
+                    url: "https://4br.me/xkPVPBHM",
+                    details: "Versão localizada em inglês"
+                },
+                {
+                    label: "Download Versão em Português (v1.05)",
+                    url: "https://4br.me/e7lU77q",
+                    details: "Tradução em Português do Brasil"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar o desenvolvedor ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo .rar compactado baixado utilizando o WinRAR, 7-Zip ou similar.",
+                    "Caso não possua o RPG Maker 2003 RTP instalado no sistema, execute o arquivo RTPMaker.exe.",
+                    "Consulte o arquivo Ib Manual.txt para instruções adicionais e execute o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>Ib</strong> é um aclamado jogo de aventura, exploração e terror psicológico em 2D criado pelo desenvolvedor independente <strong>kouri</strong> e publicado pela <strong>PLAYISM</strong>. Lançado originalmente em 2012, este remake completo em HD traz visuais totalmente refeitos, novas mecânicas e enigmas inéditos.</p>
 
@@ -4937,8 +5772,7 @@ const articlesDatabase = {
                 <li><strong>Conteúdo Pós-Jogo:</strong> Ao finalizar a história, desbloqueie a <em>Exibição Real de Guertena</em> para colecionar as obras encontradas e acessar um calabouço extra exclusivo.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
                 <li><strong>Processador:</strong> Intel Core 2 Duo ou superior</li>
@@ -4949,39 +5783,15 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_71cedf44435f49b2c2a7f4d5a02292946771d69f.1920x1080.jpg?t=1779842056" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_5473896ce73dc06677b961e7a58db453c91e4217.1920x1080.jpg?t=1779842056" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_c28c54a2203dc08216e95fb801f61f498cec0898.1920x1080.jpg?t=1779842056" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_2398c511ff38332d84cefb338d8887341a25aac3.1920x1080.jpg?t=1779842056" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_7b378d48514f5b651dbe743e28814768b1ab9c47.1920x1080.jpg?t=1779842056" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_71cedf44435f49b2c2a7f4d5a02292946771d69f.1920x1080.jpg?t=1779842056" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_5473896ce73dc06677b961e7a58db453c91e4217.1920x1080.jpg?t=1779842056" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_c28c54a2203dc08216e95fb801f61f498cec0898.1920x1080.jpg?t=1779842056" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_2398c511ff38332d84cefb338d8887341a25aac3.1920x1080.jpg?t=1779842056" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1901370/ss_7b378d48514f5b651dbe743e28814768b1ab9c47.1920x1080.jpg?t=1779842056" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/1901370/Ib/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://playism.com/game/ib/" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial (PLAYISM)</a>
-                <a href="https://x.com/monomu_kouri" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter do Autor (kouri)</a>
-                <a href="https://bsky.app/profile/playismen.bsky.social" target="_blank"><i class="fa-solid fa-square-rss"></i> Bluesky (PLAYISM)</a>
-                <a href="https://www.instagram.com/playism_jp/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.tiktok.com/@playism_plays" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-                <a href="https://www.youtube.com/ActiveGamingMedia" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
-                <a href="https://www.facebook.com/PLAYISM/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/LJX5rNdXRU" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo (Geral)</a>
-                <a href="https://4br.me/jsU5Tbqf" target="_blank"><i class="fa-solid fa-download"></i> Download Ib Full Game v1.07 (Servidor 1)</a>
-                <a href="https://4br.me/xkPVPBHM" target="_blank"><i class="fa-solid fa-language"></i> Download Versão em Inglês</a>
-                <a href="https://4br.me/e7lU77q" target="_blank"><i class="fa-solid fa-language"></i> Download Versão em Português (v1.05)</a>
-            </div>
-
-            <p><small><em>Nota de instalação: Extraia o arquivo .rar usando o WinRAR ou similar. Caso não possua o RPG Maker 2003 RTP instalado, execute o arquivo <code>RTPMaker.exe</code>. Consulte o arquivo <code>Ib Manual.txt</code> para instruções adicionais.</em></small></p>
-            <p><small><em>Direitos autorais: O criador kouri solicita que as imagens e músicas do jogo não sejam modificadas, desviadas ou redistribuídas sem autorização prévia.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "misao-2024-hd-remaster": {
@@ -4993,10 +5803,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/header.jpg?t=1735191987",
             data: {
                 "Desenvolvedor": "sen",
-                "Publicadora": "PLAYISM",
+                "Distribuidora": "PLAYISM",
                 "Gêneros": "Aventura, Casual, Indie, Terror",
                 "Plataformas": "PC (Windows)",
-                "Classificação": "12+ (Violência)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -5004,14 +5814,46 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/691450/Misao__2024_HD_Remaster/"
+                },
+                {
+                    label: "Site Oficial (PLAYISM)",
+                    url: "https://playism.com/game/misao-2024/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Misao - 2024 HD Remaster (v2024.08.15)",
+                    url: "https://4br.me/RjXf9zB",
+                    details: "Versão atualizada para PC (Windows)"
+                },
+                {
+                    label: "Download Misao: Definitive Edition (v1.06)",
+                    url: "https://4br.me/JiUrID",
+                    details: "Versão clássica definitiva"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo .zip baixado utilizando o 7-Zip ou o descompactador nativo do seu sistema.",
+                    "Execute o arquivo de instalação (setup) dentro da pasta extraída e siga as instruções na tela.",
+                    "Inicie o jogo através do atalho criado na área de trabalho."
+                ]
+            }
+        },
         content: `
             <p><strong>Misao - 2024 HD Remaster</strong> é a versão aprimorada em alta definição do clássico jogo de aventura e terror desenvolvido por <strong>sen</strong> e publicado pela <strong>PLAYISM</strong>. A remasterização atualiza os visuais, a interface e a apresentação em geral da edição <em>Definitive Edition</em> de 2017, adicionando novos recursos e conteúdos inéditos.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>Misao era uma garota quieta, discreta e reclusa que frequentemente se tornava alvo de bullying por parte de seus colegas. Três meses atrás, ela desapareceu misteriosamente sem deixar vestígios.</p>
-
             <p>Desde aquele dia, diversos eventos sobrenaturais e não naturais começaram a assombrar o campus da escola. Rumores diziam tratar-se da "maldição de Misao". Quando o colégio é subitamente arrastado para uma dimensão bizarra e aterrorizante conhecida como "Outro Mundo" (<em>Otherworld</em>), o boato se confirma. Agora, você precisará explorar os corredores macabros e descobrir o que realmente aconteceu com sua colega de classe.</p>
 
             <h2 id="gameplay">Características e Jogabilidade</h2>
@@ -5023,8 +5865,7 @@ const articlesDatabase = {
                 <li><strong>Inclusão da Versão Clássica:</strong> Ao iniciar o jogo, os jogadores têm a opção de escolher jogar também a versão <em>Misao: Definitive Edition</em> de 2017.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 10 / 11 (64-bit)</li>
                 <li><strong>Processador:</strong> Intel Core i3 ou superior</li>
@@ -5035,30 +5876,15 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_3afb8c43bd0d77674a7cd499acaa4caf3e112ee0.1920x1080.jpg?t=1735191987" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_bac5ef98a79a733cbfcb5e59db724f7ead9e105f.1920x1080.jpg?t=1735191987" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_a011a3149b2a23db4c99fd573640f095f99e534f.1920x1080.jpg?t=1735191987" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_d3f20331e17ecac9d1cce374832f69930fd5bb65.1920x1080.jpg?t=1735191987" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_caff5adb50f54bf275fa41d39cbcb023810ac63b.1920x1080.jpg?t=1735191987" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_3afb8c43bd0d77674a7cd499acaa4caf3e112ee0.1920x1080.jpg?t=1735191987" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_bac5ef98a79a733cbfcb5e59db724f7ead9e105f.1920x1080.jpg?t=1735191987" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_a011a3149b2a23db4c99fd573640f095f99e534f.1920x1080.jpg?t=1735191987" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_d3f20331e17ecac9d1cce374832f69930fd5bb65.1920x1080.jpg?t=1735191987" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/691450/ss_caff5adb50f54bf275fa41d39cbcb023810ac63b.1920x1080.jpg?t=1735191987" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/691450/Misao__2024_HD_Remaster/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://playism.com/game/misao-2024/" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial (PLAYISM)</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/RjXf9zB" target="_blank"><i class="fa-solid fa-download"></i> Download Misao - 2024 HD Remaster (v2024.08.15)</a>
-                <a href="https://4br.me/JiUrID" target="_blank"><i class="fa-solid fa-download"></i> Download Misao: Definitive Edition (v1.06)</a>
-            </div>
-
-            <p><small><em>Instruções de instalação: Extraia o arquivo .zip baixado usando o 7-Zip ou extrator do Windows. Execute o instalador (setup) dentro da pasta extraída, aceite os termos e instale o jogo. Execute através do atalho criado na área de trabalho.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "nekopara-vol-1": {
@@ -5071,10 +5897,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/header.jpg?t=1656892670",
             data: {
                 "Desenvolvedor": "NEKO WORKs",
-                "Publicadora": "Sekai Project",
+                "Distribuidora": "Sekai Project",
                 "Gêneros": "Casual, Indie, Visual Novel",
                 "Plataformas": "PC (Windows), PS4, Nintendo Switch, Android, iOS",
-                "Classificação": "14+ (Conteúdo Sexual / +18 via Patch)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -5082,14 +5908,71 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais, Adaptações e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/333600/NEKOPARA_Vol_1/"
+                },
+                {
+                    label: "Site Oficial (NEKOPARA)",
+                    url: "https://nekopara.com/en/introduction_en"
+                },
+                {
+                    label: "PlayStation Store",
+                    url: "https://store.playstation.com/pt-br/product/UP0287-CUSA12297_00-NEKOPARA010000US"
+                },
+                {
+                    label: "Nintendo eShop (US)",
+                    url: "https://www.nintendo.com/us/store/products/nekopara-vol-1-switch/"
+                },
+                {
+                    label: "Google Play Store",
+                    url: "https://play.google.com/store/apps/details?id=jp.goodsmile.nekoparavol1&hl=pt"
+                },
+                {
+                    label: "TapTap",
+                    url: "https://www.taptap.io/br/app/285204"
+                }
+            ],
+            files: [
+                {
+                    label: "Download NEKOPARA Vol. 1 (v1.0 & Uncensored)",
+                    url: "https://4br.me/bzTslJ50k",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download NEKOPARA Vol. 1 (GameTrex)",
+                    url: "https://4br.me/9hGl",
+                    details: "Senha de extração: www.gametrex.com"
+                },
+                {
+                    label: "Download Port Android (+18 Cenas)",
+                    url: "https://4br.me/KM1i9",
+                    details: "Versão para dispositivos Android"
+                },
+                {
+                    label: "Download Emulador Kirikiroid2 v1.3.9 Premium",
+                    url: "https://4br.me/rktlx",
+                    details: "Necessário para rodar o port no Android"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo nas lojas oficiais para apoiar os desenvolvedores ou utilize as opções de download alternativas.",
+                    "Para PC, descompacte o arquivo baixado utilizando o WinRAR ou 7-Zip, insira a senha se necessário e execute o instalador.",
+                    "Para Android, instale o aplicativo Kirikiroid2, extraia os arquivos do jogo no armazenamento interno e selecione o arquivo data.xp3 através do emulador."
+                ]
+            }
+        },
         content: `
             <p><strong>NEKOPARA Vol. 1</strong> é uma renomada <em>Visual Novel</em> de comédia romântica desenvolvida pela <strong>NEKO WORKs</strong> e publicada pela <strong>Sekai Project</strong>. O jogo apresenta as icônicas personagens desenhadas pela artista Sayori em uma narrativa envolvente e cheia de simpatia.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>Kashou Minaduki, filho de uma tradicional família de confeiteiros japoneses, decide sair de casa para abrir sua própria patisserie chamada <strong>"La Soleil"</strong>.</p>
-
             <p>No entanto, ao desembalar suas caixas na nova loja, ele descobre duas <em>catgirls</em> (humanóides felinas) que sua família criou esconderam-se entre seus pertences: <strong>Chocola</strong> e <strong>Vanilla</strong>. Embora Kashou tente enviá-las de volta no início, a insistência e o afeto incondicional das garotas o convencem a deixá-las ficar. Juntos, eles abrem a La Soleil e dão início a uma acolhedora e divertida rotina de trabalho e convivência.</p>
 
             <h2 id="gameplay">Características e Jogabilidade</h2>
@@ -5097,12 +5980,11 @@ const articlesDatabase = {
                 <li><strong>Sistema E-mote de Animação:</strong> Os retratos das personagens se movimentam suavemente na tela, alterando expressões, poses e reações em tempo real.</li>
                 <li><strong>Dublagem Completa:</strong> Todas as garotas felinas possuem dublagem profissional integral em japonês.</li>
                 <li><strong>Ilustrações por Sayori:</strong> Design de personagens e ilustrações marcantes do famoso estúdio NEKO WORKs.</li>
-                <li><strong>Narrativa Confortável (Slice of Life):** Foco em diálogos divertidos, momentos cotidianos e o desenvolvimento dos laços entre Kashou e as catgirls.</li>
+                <li><strong>Narrativa Confortável (Slice of Life):</strong> Foco em diálogos divertidos, momentos cotidianos e o desenvolvimento dos laços entre Kashou e as catgirls.</li>
                 <li><strong>Física e Opções Personalizáveis:</strong> Inclui opções para alternar a movimentação dos cenários/gráficos e personalização de exibição.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows Vista ou superior</li>
                 <li><strong>Processador:</strong> Intel Pentium 4 a 1.8 GHz ou superior</li>
@@ -5114,61 +5996,15 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_a41e06f39ef50377dd1a04398578f5018de5d064.1920x1080.jpg?t=1656892670" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_3433d14f96ebcd1b3cd7d3c1d79170eecdeb0577.1920x1080.jpg?t=1656892670" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_8d26d27426fdfe46b252cb21bcdcbde64c44fb3d.1920x1080.jpg?t=1656892670" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_4bfd66ccc83135641d5aba3a72227bd4d533333e.1920x1080.jpg?t=1656892670" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_d89a81cf861b81c1d9b51206cccd0f7efbbf58b5.1920x1080.jpg?t=1656892670" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_a41e06f39ef50377dd1a04398578f5018de5d064.1920x1080.jpg?t=1656892670" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_3433d14f96ebcd1b3cd7d3c1d79170eecdeb0577.1920x1080.jpg?t=1656892670" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_8d26d27426fdfe46b252cb21bcdcbde64c44fb3d.1920x1080.jpg?t=1656892670" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_4bfd66ccc83135641d5aba3a72227bd4d533333e.1920x1080.jpg?t=1656892670" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/333600/ss_d89a81cf861b81c1d9b51206cccd0f7efbbf58b5.1920x1080.jpg?t=1656892670" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais, Adaptações e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Sites Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/333600/NEKOPARA_Vol_1/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://nekopara.com/en/introduction_en" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial (NEKOPARA)</a>
-                <a href="https://store.playstation.com/pt-br/product/UP0287-CUSA12297_00-NEKOPARA010000US" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
-                <a href="https://www.nintendo.com/us/store/products/nekopara-vol-1-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo eShop (US)</a>
-                <a href="https://play.google.com/store/apps/details?id=jp.goodsmile.nekoparavol1&hl=pt" target="_blank"><i class="fa-brands fa-google-play"></i> Google Play Store</a>
-                <a href="https://www.taptap.io/br/app/285204" target="_blank"><i class="fa-solid fa-mobile-screen"></i> TapTap</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-tv"></i> <strong>Adaptações em Anime:</strong></p>
-            <div class="play-links">
-                <a href="https://www.crunchyroll.com/pt-br/series/GVDHX8J8Z/nekopara" target="_blank"><i class="fa-solid fa-video"></i> Assistir na Crunchyroll</a>
-                <a href="https://www.primevideo.com/-/pt/detail/0RQ6FHX26PWFIQMXCLENCT1IN5" target="_blank"><i class="fa-solid fa-film"></i> Assistir no Prime Video</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-share-nodes"></i> <strong>Redes Sociais da Publisher (Sekai Project):</strong></p>
-            <div class="play-links">
-                <a href="https://x.com/sekaiproject" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter / X</a>
-                <a href="https://www.facebook.com/SekaiProject/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                <a href="https://www.youtube.com/sekaiproject" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
-                <a href="https://www.twitch.tv/sekaiproject" target="_blank"><i class="fa-brands fa-twitch"></i> Twitch</a>
-                <a href="https://discord.com/invite/sekai-project" target="_blank"><i class="fa-brands fa-discord"></i> Discord</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC & Port Android):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/bzTslJ50k" target="_blank"><i class="fa-solid fa-download"></i> Download NEKOPARA Vol. 1 (v1.0 & Uncensored)</a>
-                <a href="https://4br.me/9hGl" target="_blank"><i class="fa-solid fa-download"></i> Download NEKOPARA Vol. 1 (GameTrex - Senha: www.gametrex.com)</a>
-                <a href="https://4br.me/KM1i9" target="_blank"><i class="fa-brands fa-android"></i> Download Port Android (+18 Cenas)</a>
-                <a href="https://4br.me/rktlx" target="_blank"><i class="fa-solid fa-file-zipper"></i> Download Emulador Kirikiroid2 v1.3.9 Premium (Android)</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-star"></i> <strong>Bônus - Tradução PT-BR (NEKOPARA Vol. 0):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/snmgGKp1" target="_blank"><i class="fa-solid fa-download"></i> Download Vol. 0 Traduzido em PT-BR (Mediafire)</a>
-                <a href="https://4br.me/S0eLboof" target="_blank"><i class="fa-solid fa-download"></i> Download Vol. 0 Traduzido em PT-BR (Pixeldrain)</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação (PC): Extraia o arquivo .zip com WinRAR ou 7-Zip, execute o instalador dentro da pasta extraída e inicie o jogo pelo atalho gerado na área de trabalho.</em></small></p>
-            <p><small><em>Instruções (Android / Kirikiroid2): Instale o Kirikiroid2 APK, extraia o jogo na memória interna (fora da pasta de dados do sistema), abra o Kirikiroid2 e selecione o arquivo <code>data.xp3</code> na pasta do jogo.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, plataformas de streaming, redes sociais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "clannad-side-stories": {
@@ -5180,10 +6016,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/d6ccf871e353f99c0bab14f27fe33bbcab9b99ad/header.jpg?t=1770346311",
             data: {
                 "Desenvolvedor": "VisualArts / Key",
-                "Publicadora": "Sekai Project",
+                "Distribuidora": "Sekai Project",
                 "Gêneros": "Casual, Visual Novel, Anime",
                 "Plataformas": "PC (Windows), PSP",
-                "Classificação": "Livre"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -5191,8 +6027,31 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/420100/CLANNAD_Side_Stories/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download do Jogo",
+                    url: "https://4br.me/ywLilECD",
+                    details: "Senha de extração: ryuugames.com / ryuublogger.com"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize a opção de download direto fornecida.",
+                    "Utilize a senha indicada (ryuugames.com ou ryuublogger.com) para descompactar o arquivo baixado com o WinRAR ou 7-Zip.",
+                    "Execute o arquivo executável dentro da pasta extraída para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>CLANNAD Side Stories</strong> (originalmente conhecido no Japão como <em>CLANNAD Hikari Mimamoru Sakamichi de</em>) é uma coletânea de contos narrativos em formato de visual novel desenvolvida pelo lendário estúdio <strong>VisualArts / Key</strong> e publicada no Ocidente pela <strong>Sekai Project</strong>.</p>
 
@@ -5209,7 +6068,7 @@ const articlesDatabase = {
                 <li><strong>Atmosfera Original do Estúdio Key:</strong> Mantém a trilha sonora emocionante e a sensibilidade narrativa características da franquia.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <p><strong>Requisitos Mínimos:</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows XP / Vista / 7 / 8 (32-bit ou 64-bit)</li>
@@ -5222,43 +6081,71 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_04faef38d701308b089a7dda41a32be5a80974ff.1920x1080.jpg?t=1770346311" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_c277ac6e14a102a8d9f535ea64280db79ca233a4.1920x1080.jpg?t=1770346311" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_46d1f3c8e77d46159d25b877b50efbd6dd876b97.1920x1080.jpg?t=1770346311" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_0ccbdbcb9f2d799cc72e37372d3e609778836748.1920x1080.jpg?t=1770346311" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_04faef38d701308b089a7dda41a32be5a80974ff.1920x1080.jpg?t=1770346311" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_c277ac6e14a102a8d9f535ea64280db79ca233a4.1920x1080.jpg?t=1770346311" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_46d1f3c8e77d46159d25b877b50efbd6dd876b97.1920x1080.jpg?t=1770346311" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420100/ss_0ccbdbcb9f2d799cc72e37372d3e609778836748.1920x1080.jpg?t=1770346311" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/420100/CLANNAD_Side_Stories/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://4br.me/ywLilECD" target="_blank"><i class="fa-solid fa-download"></i> Download do Jogo</a>
-            </div>
-            <p><small><em>Nota: Senha do arquivo compactado: <code>ryuugames.com</code> ou <code>ryuublogger.com</code></em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "mad-father": {
         title: "Mad Father",
+        addedAt: "2026-11-09",
         categories: ["RPG Maker", "Terror", "Aventura", "Gore", "Indie"],
         summary: "Descubra os segredos perturbadores do laboratório de seu pai na noite do aniversário da morte de sua mãe. Nem toda loucura pode ser contida.",
         infobox: {
             image: "https://cdn.akamai.steamstatic.com/steam/apps/483980/header.jpg",
-            data: { "Desenvolvedor": "sen", "Gêneros": "RPG, Horror, Exploração", "Lançamento": "2012 / Remake: 2020", "Plataformas": "PC, Switch" }
+            data: {
+                "Desenvolvedor": "sen",
+                "Distribuidora": "PLAYISM",
+                "Gêneros": "RPG, Horror, Exploração",
+                "Plataformas": "PC, Switch",
+                "Lançamento": "2012 / Remake: 2020"
+            }
         },
-        toc: [ { id: "sinopse", text: "1. Sinopse e Mecânicas" }, { id: "links", text: "2. Links Oficiais" }, { id: "traducoes", text: "3. Traduções e Patches" } ],
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Mecânicas" },
+            { id: "links", text: "2. Links oficiais e downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Steam",
+                    url: "https://store.steampowered.com/app/483980/"
+                }
+            ],
+            files: [
+                {
+                    label: "Patch de tradução em Português",
+                    url: "https://4br.me/hJQo",
+                    details: "Tradução para PT-BR"
+                },
+                {
+                    label: "Patch em Inglês",
+                    url: "https://4br.me/FnS4Z",
+                    details: "Patch de tradução para inglês"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize os links de patch disponíveis.",
+                    "Baixe e extraia o patch de tradução desejado utilizando o 7-Zip ou WinRAR.",
+                    "Cole os arquivos do patch na pasta raiz do jogo instalada no computador e execute o jogo."
+                ]
+            }
+        },
         content: `
             <p>Outro pilar do horror no <em>RPG Maker</em>, <strong>Mad Father</strong> coloca você no controle de Aya Drevis, uma garota cuja casa de repente é infestada por cadáveres e espíritos desfigurados buscando vingança contra o pai dela.</p>
+            
             <h2 id="sinopse">Sinopse e Mecânicas</h2>
             <p>É uma exploração sombria de traumas familiares. O jogador resolve puzzles com ferramentas cirúrgicas e deve despistar ou acalmar cadáveres. O jogo lida com temas pesados de lealdade doentia, dissecação humana e abuso, entregando múltiplos finais chocantes.</p>
-            <hr><h2 id="links">Links Oficiais</h2>
-            <div class="play-links"><a href="https://store.steampowered.com/app/483980/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a></div>
-            <h2 id="traducoes">Traduções e Patches</h2>
-            <div class="play-links">
-                <a href="https://4br.me/hJQo" target="_blank"><i class="fa-solid fa-language"></i> Patch de tradução em Português</a>
-                <a href="https://4br.me/FnS4Z" target="_blank"><i class="fa-solid fa-language"></i> Patch em Inglês</a>
-            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte a página oficial de compra, patches de tradução e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "mtool-downloads": {
@@ -5386,19 +6273,62 @@ const articlesDatabase = {
                 "Gêneros": "Aventura, Terror, RPG, Puzzle",
                 "Plataformas": "PC (Windows)",
                 "Classificação": "18+ (Suicídio, Morte, Temas Extremamente Sensíveis)",
-                "Lançamento": "24 de agosto de 2015"
+                "Lançamento": "2015"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "personagens", text: "2. Personagens Principais" },
             { id: "gameplay", text: "3. Características e Jogabilidade" },
-            { id: "requisitos", text: "4. Requisitos de Sistema e Solução de Problemas" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
             { id: "galeria", text: "5. Galeria de Imagens" },
-            { id: "light-novel", text: "6. Light Novel Oficial" },
-            { id: "detonado", text: "7. Passo a Passo / Guia de Finais (Spoilers)" },
-            { id: "links", text: "8. Links Oficiais e Downloads" }
+            { id: "links", text: "6. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Site Oficial do Desenvolvedor (Kanawo)",
+                    url: "https://www.teritoma.com/kohaku"
+                },
+                {
+                    label: "Blog Oficial do Autor",
+                    url: "http://teritoma.blog.fc2.com/"
+                },
+                {
+                    label: "Página no Facebook",
+                    url: "https://www.facebook.com/BlankDreamGame/"
+                },
+                {
+                    label: "RPG Maker VX Ace RTP (Obrigatório)",
+                    url: "https://www.rpgmakerweb.com/run-time-package"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Blank Dream em Português BR (Zero Corpse)",
+                    url: "https://4br.me/GLHD",
+                    details: "Versão localizada em PT-BR"
+                },
+                {
+                    label: "Download Blank Dream v1.05 (Inglês - Opção 1)",
+                    url: "https://4br.me/cDOdVZJLow",
+                    details: "Versão em inglês"
+                },
+                {
+                    label: "Download Blank Dream v1.05 (Inglês - Mirror)",
+                    url: "https://4br.me/SzYBYy4p",
+                    details: "Mirror alternativo em inglês"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Certifique-se de que o RPG Maker VX Ace RTP esteja instalado em seu computador para evitar erros de arquivos ausentes.",
+                    "Baixe e extraia o arquivo ZIP completamente para uma pasta antes de executar o jogo (isso garante que os arquivos de salvamento funcionem corretamente).",
+                    "Se o texto do jogo apresentar caracteres estranhos, instale a fonte Cinecaption localizada na pasta de fontes do jogo e execute o aplicativo."
+                ]
+            }
+        },
         content: `
             <p><strong>Blank Dream</strong> (<em>Kouhaku no Yume / 虚白の夢</em>) é um aclamado jogo freeware de aventura, exploração e terror psicológico desenvolvido no RPG Maker VX Ace por <strong>Kanawo</strong> (Teriyaki Tomato).</p>
 
@@ -5413,22 +6343,22 @@ const articlesDatabase = {
             <h2 id="personagens">Personagens Principais</h2>
             <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
                 <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0giHQUMb7BE-jvyi7kw6iTYu5hnoLDyM9-MKYaZwp0pI3CvBq38SSI593CTKuoPO-Lp4chDU81wcGLsLj43SYASdOyfVQItn7iD5HN-_9CNzSUkqHDTbzKoPNObV6DiCHJQ65o5f93ro/s1600/Mishiro.png" alt="Mishiro Usui" style="max-height: 150px; margin-bottom: 8px;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0giHQUMb7BE-jvyi7kw6iTYu5hnoLDyM9-MKYaZwp0pI3CvBq38SSI593CTKuoPO-Lp4chDU81wcGLsLj43SYASdOyfVQItn7iD5HN-_9CNzSUkqHDTbzKoPNObV6DiCHJQ65o5f93ro/s1600/Mishiro.png" alt="Mishiro Usui" style="max-height: 150px; margin-bottom: 8px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Mishiro Usui</h3>
                     <p style="font-size: 0.9em; margin: 0;">A protagonista da história. Uma garota quieta, introvertida e tímida cujas atitudes e escolhas são moldadas pelo jogador.</p>
                 </div>
                 <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq6LPqoCZqjgWhWh_CKFVzdmLTnQv4MEBLRUtVRkDfPzDEqN6nZg2sDR2RUHGBOciePIKJfnPOQxLSvGABEe4leV6wZWx5YoSImzw7vRqvi6ihCHNqRow-kVsmeGseaMPcuRDagQBgv8Q/s1600/Ayato.png" alt="Ayato Hinohara" style="max-height: 150px; margin-bottom: 8px;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq6LPqoCZqjgWhWh_CKFVzdmLTnQv4MEBLRUtVRkDfPzDEqN6nZg2sDR2RUHGBOciePIKJfnPOQxLSvGABEe4leV6wZWx5YoSImzw7vRqvi6ihCHNqRow-kVsmeGseaMPcuRDagQBgv8Q/s1600/Ayato.png" alt="Ayato Hinohara" style="max-height: 150px; margin-bottom: 8px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Ayato Hinohara</h3>
                     <p style="font-size: 0.9em; margin: 0;">Um garoto gentil, calmo e generoso com uma forte apreciação por arte e pintura.</p>
                 </div>
                 <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcnhp5H14cJXqOQqoNzqIYicOS0PY7p0V3cj3pKDHLtLtbWxgwBVRrgDH_IB1o4EyigUOxUPBHgdATtRbaZRZ1PefgPZ5YAGDEEO4wRM-wi9JoLyNR3xtlPps5MvHlYIDoBSWCUIt9qdA/s1600/Yuzu.png" alt="Yuzu Hanasaki" style="max-height: 150px; margin-bottom: 8px;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcnhp5H14cJXqOQqoNzqIYicOS0PY7p0V3cj3pKDHLtLtbWxgwBVRrgDH_IB1o4EyigUOxUPBHgdATtRbaZRZ1PefgPZ5YAGDEEO4wRM-wi9JoLyNR3xtlPps5MvHlYIDoBSWCUIt9qdA/s1600/Yuzu.png" alt="Yuzu Hanasaki" style="max-height: 150px; margin-bottom: 8px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Yuzu Hanasaki</h3>
                     <p style="font-size: 0.9em; margin: 0;">Uma garota animada e hiperativa, embora se mostre um pouco tímida perto de quem gosta.</p>
                 </div>
                 <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX3ngWmLX89Yeff5NVzHwhFNcrEmLdB_YAcvgTNLJgYzt2ow7uM2tXgbRyTTJJVbvcgLffGBmuQNTd5BqBD0QK6QaLiYnsGebqGJYVU43AQxpji2CcvJ798fXYMmGCElb55woLYOybcyI/s1600/Ryotaro.png" alt="Ryotaro Sengoku" style="max-height: 150px; margin-bottom: 8px;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX3ngWmLX89Yeff5NVzHwhFNcrEmLdB_YAcvgTNLJgYzt2ow7uM2tXgbRyTTJJVbvcgLffGBmuQNTd5BqBD0QK6QaLiYnsGebqGJYVU43AQxpji2CcvJ798fXYMmGCElb55woLYOybcyI/s1600/Ryotaro.png" alt="Ryotaro Sengoku" style="max-height: 150px; margin-bottom: 8px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Ryotaro Sengoku</h3>
                     <p style="font-size: 0.9em; margin: 0;">Um homem peculiar e reservado que aparenta não compreender totalmente a dimensão em que está preso.</p>
                 </div>
@@ -5442,89 +6372,22 @@ const articlesDatabase = {
                 <li><strong>Significado do Título:</strong> O nome do jogo e da pintura de Ayato une os kanjis 虚 (<em>utsuro</em>, oco) e 白 (<em>shiro</em>, branco), representando a ideia de "vazio e branco".</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema e Solução de Problemas</h2>
-            <p><strong>Requisitos:</strong> Sistema Operacional Windows (PC) e instalação do <strong>RPG Maker VX Ace RTP (Runtime Package)</strong>.</p>
-            <p><strong>Dicas para Execução:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
-                <li>Certifique-se de extrair o arquivo ZIP completamente para uma pasta antes de executar, caso contrário seus arquivos de salvamento serão perdidos ao fechar o jogo.</li>
-                <li>Se o jogo não salvar seu progresso mesmo após extraído, execute o aplicativo como Administrador.</li>
-                <li>Se o texto do jogo apresentar caracteres estranhos ou quadrados, instale a fonte <code>Cinecaption</code> localizada na pasta de fontes do jogo.</li>
+                <li><strong>Sistema Operacional:</strong> Windows (PC)</li>
+                <li><strong>Componente Obrigatório:</strong> RPG Maker VX Ace RTP (Runtime Package)</li>
+                <li><strong>Armazenamento:</strong> 200 MB de espaço disponível</li>
             </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://vgperson.com/graphics/BlankDreamScreen1.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://vgperson.com/graphics/BlankDreamScreen2.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://vgperson.com/graphics/BlankDreamScreen3.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://vgperson.com/graphics/BlankDreamScreen1.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://vgperson.com/graphics/BlankDreamScreen2.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://vgperson.com/graphics/BlankDreamScreen3.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <h2 id="light-novel">Light Novel Oficial</h2>
-            <p>Devido ao enorme sucesso do jogo, uma adaptação oficial em Light Novel foi lançada no Japão pela editora KADOKAWA:</p>
-            <ul>
-                <li><strong>Título:</strong> 虚白ノ夢 (Kouhaku no Yume)</li>
-                <li><strong>Autor:</strong> Masami Morokuchi | <strong>Ilustrações:</strong> Nozaki Tsubata | <strong>Original:</strong> Kanawo</li>
-                <li><strong>ISBN:</strong> 978-4-047340-47-3 (344 páginas)</li>
-                <li><strong>Links da Novel:</strong> <a href="https://www.kadokawa.co.jp/product/321601000623/" target="_blank">Página KADOKAWA</a> | <a href="https://bookwalker.jp/series/64473/" target="_blank">BookWalker (Ebook)</a> | <a href="https://www.amazon.co.jp/%E8%99%9A%E7%99%BD%E3%83%8E%E5%A4%A2-%E8%AB%B8%E5%8F%A3%E6%AD%A3%E5%B7%B3-ebook/dp/B01DJX81H8" target="_blank">Amazon Kindle</a></li>
-            </ul>
-
-            <h2 id="detonado">Passo a Passo / Guia de Finais (Spoilers)</h2>
-            <details style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #444; border-radius: 6px; padding: 12px; margin-bottom: 20px;">
-                <summary style="cursor: pointer; font-weight: bold; color: #ffaa00; font-size: 1.1em;">⚠️ Clique aqui para exibir o Detonado e Guia de Finais (Aviso de Spoilers)</summary>
-                <div style="margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
-                    <h3>Introdução</h3>
-                    <p>Suba e verifique o espelho. Afaste-se, verifique novamente e converse com o reflexo. No espelho, verifique a bolsa na mesa duas vezes para pegar a faca. Use a faca no menu de itens.</p>
-
-                    <h3>Reino do Verde</h3>
-                    <p>Pegue o Machado Decorativo na primeira sala. Entre na porta superior, pegue um machado na caixa e coloque o Machado Decorativo para substituí-lo. Na sala principal, corte a árvore morta no canto para obter lenha. Entre pela porta inferior, pegue a Lanterna perto da lareira e saia. Queime a árvore grande com a Lanterna e a Lenha. No espelho, vá até o píer e pule no lago. Ao se aproximar de onde estava a árvore, você será atacado; vire-se imediatamente e passe pela porta para escapar. Com a Chave de Bronze, você pode entrar no Reino da Beleza ou no Reino do Amor (qualquer ordem).</p>
-
-                    <h3>Reino da Beleza</h3>
-                    <p>Não pise no sangue embaixo do lustre. Você precisa trazer três tipos de tinta para o artista na sala principal. Duas necessitam de garrafas para armazenar.</p>
-                    <ul>
-                        <li><strong>Garrafa 1:</strong> Porta superior esquerda -> porta superior. Evite o corredor central. Pegue a Garrafa Vazia nas prateleiras do meio à direita.</li>
-                        <li><strong>Garrafa 2:</strong> Porta superior direita -> porta inferior. Use a Tábua de Madeira na fenda. Atravesse a ponte, pegue a Garrafa Vazia nas prateleiras. Antes de sair, recoloque a Tábua de Madeira na caixa do meio.</li>
-                        <li><strong>Tinta Azul:</strong> Porta inferior esquerda. Evite que a sombra veja ou ouça você. Pegue a tinta nos sacos na sala do fundo e retorne sem ser visto.</li>
-                        <li><strong>Tinta Vermelha:</strong> Porta superior esquerda -> porta inferior. Use a Faca na pintura e colete o sangue na Garrafa Vazia.</li>
-                        <li><strong>Tinta Preta:</strong> Porta superior direita -> porta superior. Encha a Garrafa Vazia com Água no recipiente e apague a lareira. Saia rapidamente quando as estátuas atacarem. Reentre, pegue a Tinta Preta e corra ao retornar à sala principal. No espelho, verifique o extintor de incêndio duas vezes.</li>
-                    </ul>
-
-                    <h3>Reino do Amor</h3>
-                    <p>Na sala de entulho à direita, não pise diretamente na frente da boneca. Dê a volta pelo buraco para pegar o Martelo. Entre na sala abaixo do ponto de salvamento. Afague a cabeça da boneca, leve-a até o banco e mande-a parar. Com a boneca posicionada, use o Martelo para tocar "mi-do-ré-do-mi" (topo, baixo, meio, baixo, topo). Pegue os Doces na abóbora esmagada. Saia pela esquerda e corra pelo longo corredor. Entregue os Doces ao guarda. Diga "sim" para a Alma Sorridente até escolher "Já chega" no final. Fale com a recepcionista e entre na sala de festa. Converse com o convidado distante no canto inferior direito e escolha "...". Fuja pela porta inferior esquerda. No espelho, pegue a Pinça nas gavetas perto da TV, lave as mãos e verifique a tomada elétrica duas vezes.</p>
-
-                    <h3>Reino dos Espíritos</h3>
-                    <p>Requer vivenciar os mistérios das histórias da escola. Com a Chave de Prata, entre no reino. Cuidado com a sombra nos corredores (quando a música parar, saia e reentre na sala).</p>
-
-                    <h3>Reino do Sangue e Reino da Morte</h3>
-                    <p>Com a Chave de Ouro, acesse ambos os reinos. No Reino do Sangue, siga o caminho e escolha "Cravar a faca" no espelho para evitar um final ruim. No Reino da Morte, resolva os enigmas das estantes de livros (data 0612), ajuste a luz da lanterna para fraca e forte nos momentos certos para acessar passagens secretas nas lareiras.</p>
-
-                    <h3>Guia de Finais</h3>
-                    <ul>
-                        <li><strong>Final 5 (Ruim):</strong> Escolha "Não, ainda não" no espelho do Reino do Sangue.</li>
-                        <li><strong>Final 4 (Normal):</strong> Entre na porta final central sem encontrar espelhos suficientes dos outros personagens, ou atenda aos requisitos dos finais bons mas escolha realizar o desejo.</li>
-                        <li><strong>Final 3 (Bom - Rinzou):</strong> Veja todos os três espelhos de Ryotaro, mas não todos os de Yuzu. Entre na porta final e escolha "Eu não posso".</li>
-                        <li><strong>Final 2 (Bom - Tamaki):</strong> Veja todos os três espelhos de Yuzu, mas não todos os de Ryotaro. Entre na porta final e escolha "Não realizarei meu desejo".</li>
-                        <li><strong>Final 1 (Melhor Final):</strong> Veja todos os 3 espelhos de Yuzu e todos os 3 de Ryotaro. Certifique-se de não visitar Tamaki ou Rinzou até mostrar ambos os seus espelhos finais. Após ambos verem o terceiro espelho, visite Tamaki e Rinzou. Entre pela porta final e escolha "Não realizarei meu desejo".</li>
-                    </ul>
-                </div>
-            </details>
-
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://www.teritoma.com/kohaku" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial do Desenvolvedor (Kanawo / Teriyaki Tomato)</a>
-                <a href="http://teritoma.blog.fc2.com/" target="_blank"><i class="fa-solid fa-blog"></i> Blog Oficial do Autor</a>
-                <a href="https://www.facebook.com/BlankDreamGame/" target="_blank"><i class="fa-brands fa-facebook"></i> Página no Facebook</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo e Componentes:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/GLHD" target="_blank"><i class="fa-solid fa-language"></i> Download Blank Dream em Português BR (Zero Corpse)</a>
-                <a href="https://4br.me/cDOdVZJLow" target="_blank"><i class="fa-solid fa-download"></i> Download Blank Dream v1.05 (Inglês - Opção 1)</a>
-                <a href="https://4br.me/SzYBYy4p" target="_blank"><i class="fa-solid fa-download"></i> Download Blank Dream v1.05 (Inglês - Mirror)</a>
-                <a href="https://www.rpgmakerweb.com/run-time-package" target="_blank"><i class="fa-solid fa-gear"></i> RPG Maker VX Ace Runtime Package (RTP Obrigatório)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais do desenvolvedor, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "paranoiac": {
@@ -5540,22 +6403,59 @@ const articlesDatabase = {
                 "Gêneros": "Horror, Mistério, Puzzle, Sobrenatural",
                 "Plataformas": "Windows (Mac via WineBottler)",
                 "Classificação": "18+ (Doenças Mentais, Suicídio, Perseguição, Jumpscares)",
-                "Lançamento": "2011 (Original) · 10 de junho de 2019 (Remake)",
-                "Engine": "Wolf RPG Editor",
-                "Preço": "Freeware (gratuito)",
-                "Idiomas": "Japonês, Inglês, Espanhol, Polonês, Coreano, Chinês, Português"
+                "Lançamento": "2019"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "personagens", text: "2. Personagens Principais" },
-            { id: "finais", text: "3. Enredos e Finalizações (Spoilers)" },
-            { id: "conteudo-sensivel", text: "4. Conteúdo Sensível" },
-            { id: "trivia", text: "5. Trivia" },
-            { id: "requisitos", text: "6. Requisitos de Sistema e Solução de Problemas" },
-            { id: "galeria", text: "7. Galeria de Imagens" },
-            { id: "links", text: "8. Links Oficiais e Downloads" }
+            { id: "finais", text: "3. Enredos e Finalizações" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens" },
+            { id: "links", text: "6. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página Oficial no Facebook",
+                    url: "https://www.facebook.com/ParanoiacGame/"
+                },
+                {
+                    label: "Regras oficiais (Japonês)",
+                    url: "https://urigames.web.fc2.com/rules.html"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Paranoiac em Português",
+                    url: "https://4br.me/QvH4GJ7I",
+                    details: "Versão localizada em PT-BR"
+                },
+                {
+                    label: "Download em Inglês (Parte 1)",
+                    url: "https://4br.me/yTVL",
+                    details: "Versão em inglês - Parte 1"
+                },
+                {
+                    label: "Download em Inglês (Parte 2)",
+                    url: "https://4br.me/s6MZG1W",
+                    details: "Versão em inglês - Parte 2"
+                },
+                {
+                    label: "Download em Japonês",
+                    url: "https://4br.me/fFtVe31M",
+                    details: "Versão original em japonês"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Certifique-se de extrair o arquivo compactado para uma pasta própria antes de executar o jogo para não perder seus saves.",
+                    "Caso as imagens apresentem falhas de exibição, execute o arquivo executável como Administrador.",
+                    "Abra o jogo através do inicializador principal e inicie sua jornada."
+                ]
+            }
+        },
         content: `
             <p><strong>Paranoiac</strong> é um jogo freeware de aventura e terror psicológico desenvolvido por <strong>Uri</strong> no <strong>Wolf RPG Editor</strong>. Originalmente lançado em 2011, recebeu um remake completo em 10 de junho de 2019.</p>
             
@@ -5570,12 +6470,12 @@ const articlesDatabase = {
             <h2 id="personagens">Personagens Principais</h2>
             <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
                 <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiX1_vzN7DkG5l-9tRD5eFzHTI3gYrc_ne6QzGqAMwpSDizkOF5IyOWu51FEp4Gl4Okddoa5BiNpJMvE90S7-GwoaGnkxngLsxdrvYg6SDKAwqXFl4nRVnyzpTCL2iMxh4NUcdJP97oHbo/s1600/Miki_Takamura.jpg" alt="Miki Takamura" style="max-height: 150px; margin-bottom: 8px;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiX1_vzN7DkG5l-9tRD5eFzHTI3gYrc_ne6QzGqAMwpSDizkOF5IyOWu51FEp4Gl4Okddoa5BiNpJMvE90S7-GwoaGnkxngLsxdrvYg6SDKAwqXFl4nRVnyzpTCL2iMxh4NUcdJP97oHbo/s1600/Miki_Takamura.jpg" alt="Miki Takamura" style="max-height: 150px; margin-bottom: 8px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Miki Takamura</h3>
                     <p style="font-size: 0.9em; margin: 0;">Protagonista. Se muda para a casa da tia falecida em busca de recuperação, mas logo se vê envolvida em eventos sobrenaturais e paranóicos.</p>
                 </div>
                 <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3ha6Tw7BSVtrof42boBfA04gjFgb7ys7mpJT2x19K3Cj75BcaNnMEpFaaFQYmUVhvjod2pcCvP_ESfTmOagD45h5jgf0Yl0B-KD2wk_YnAY9vD83g_pw4T4d0BovdU4QFXO_ZemO1NNM/s1600/Paropariasdfg.jpg" alt="Shinji Miura" style="max-height: 150px; margin-bottom: 8px;">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3ha6Tw7BSVtrof42boBfA04gjFgb7ys7mpJT2x19K3Cj75BcaNnMEpFaaFQYmUVhvjod2pcCvP_ESfTmOagD45h5jgf0Yl0B-KD2wk_YnAY9vD83g_pw4T4d0BovdU4QFXO_ZemO1NNM/s1600/Paropariasdfg.jpg" alt="Shinji Miura" style="max-height: 150px; margin-bottom: 8px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Shinji Miura</h3>
                     <p style="font-size: 0.9em; margin: 0;">Vizinho de Miki. Um jovem prestativo que a ajuda ao longo do jogo e se torna uma figura importante em sua jornada.</p>
                 </div>
@@ -5585,71 +6485,35 @@ const articlesDatabase = {
                 </div>
             </div>
 
-            <h2 id="finais">Enredos e Finalizações (Spoilers)</h2>
+            <h2 id="finais">Enredos e Finalizações</h2>
             <details style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #444; border-radius: 6px; padding: 12px; margin-bottom: 20px;">
-                <summary style="cursor: pointer; font-weight: bold; color: #ffaa00; font-size: 1.1em;">⚠️ Clique aqui para exibir os Finais (Aviso de Spoilers Pesados)</summary>
+                <summary style="cursor: pointer; font-weight: bold; color: #ffaa00; font-size: 1.1em;">⚠️ Clique aqui para exibir os Finais (Aviso de Spoilers)</summary>
                 <div style="margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
                     <h3>Good Ending</h3>
                     <p>Miki escolhe <strong>"There's really a monster"</strong> → descobre que a monstra é a tia Yuriko, se reconcilia com ela e desmaia. Acorda no dia seguinte, é diagnosticada com esquizofrenia e deixa a casa para se tratar.</p>
                     <p><em>No remake:</em> há uma cena bônus em que Miki retorna à casa 2 anos depois e se reencontra com Shinji.</p>
 
                     <h3>Bad Ending</h3>
-                    <p>Miki escolhe <strong>"It's just a delusion"</strong> → se recusa a fugir da monstra e é "matada".</p>
-                    <p><em>No remake:</em> revela-se que seu corpo tinha ferimentos autoinfligidos (suicídio) e Shinji, consumido pela culpa, começa a ver a monstra também.</p>
+                    <p>Miki escolhe <strong>"It's just a delusion"</strong> → se recusa a fugir da monstra e é morta.</p>
+                    <p><em>No remake:</em> revela-se que seu corpo tinha ferimentos autoinfligidos e Shinji, consumido pela culpa, começa a ver a monstra também.</p>
                 </div>
             </details>
 
-            <h2 id="conteudo-sensivel">Conteúdo Sensível</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
-                <li>Doenças mentais (especialmente esquizofrenia e delírios)</li>
-                <li>Abuso</li>
-                <li>Linguagem capacitista</li>
-                <li>Cenas de perseguição e jumpscares</li>
-                <li>Suicídio (incluindo por enforcamento e autoinflição)</li>
-            </ul>
-            <p><em>Nota:</em> A gravidade de algumas cenas de perseguição e assaltos foi melhorada/reduzida na versão remake.</p>
-
-            <h2 id="trivia">Trivia</h2>
-            <ul>
-                <li>O nome "Miki" homenageia a atriz <strong>Miki Nakatani</strong>, do filme japonês de horror <em>Loft</em>.</li>
-                <li>A aparência original da monstra é baseada em um <strong>teke-teke</strong> (fantasma sem a metade inferior do corpo).</li>
-                <li>É um dos poucos jogos da Uri com CGs de personagens ao lado das caixas de diálogo (junto com <em>Pedestal</em>).</li>
-            </ul>
-
-            <h2 id="requisitos">Requisitos de Sistema e Solução de Problemas</h2>
-            <p><strong>Plataforma:</strong> Windows nativo. No Mac é possível jogar usando ferramentas como <strong>WineBottler</strong>.</p>
-            
-            <p><strong>Dicas importantes:</strong></p>
-            <ul>
-                <li>Certifique-se de <strong>extrair o jogo para uma pasta própria</strong> em vez de executá-lo diretamente do arquivo ZIP. Caso contrário, todos os saves serão perdidos na próxima execução.</li>
-                <li>Se as imagens não aparecerem corretamente, execute o jogo como administrador: clique com o botão direito em <code>Game.exe</code> → Propriedades → Compatibilidade → marque "Executar este programa como administrador".</li>
+                <li><strong>Plataforma:</strong> Windows nativo (Mac via ferramentas como WineBottler)</li>
+                <li><strong>Armazenamento:</strong> 300 MB de espaço disponível</li>
             </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://www.vgperson.com/graphics/ParanoiacScreen1.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://www.vgperson.com/graphics/ParanoiacScreen2.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://www.vgperson.com/graphics/ParanoiacScreen3.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://www.vgperson.com/graphics/ParanoiacScreen1.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.vgperson.com/graphics/ParanoiacScreen2.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://www.vgperson.com/graphics/ParanoiacScreen3.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://www.facebook.com/ParanoiacGame/" target="_blank"><i class="fa-brands fa-facebook"></i> Página Oficial no Facebook</a>
-                <a href="https://urigames.web.fc2.com/rules.html" target="_blank"><i class="fa-solid fa-scroll"></i> Regras oficiais (Japonês)</a>
-            </div>
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/QvH4GJ7I" target="_blank"><i class="fa-solid fa-language"></i> Download Paranoiac em Português</a>
-                <a href="https://4br.me/yTVL" target="_blank"><i class="fa-solid fa-download"></i> Download em Inglês (Parte 1)</a>
-                <a href="https://4br.me/s6MZG1W" target="_blank"><i class="fa-solid fa-download"></i> Download em Inglês (Parte 2)</a>
-                <a href="https://4br.me/fFtVe31M" target="_blank"><i class="fa-solid fa-download"></i> Download em Japonês</a>
-            </div>
-            <br>
-            <p style="font-size: 0.9em; color: #aaa;"><em>Nota:</em> O Chrome pode sinalizar falsamente o download como malicioso, mas é seguro ignorar. Vídeos e fanworks são permitidos (com algumas restrições de monetização e uso de assets).</p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as páginas oficiais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "folie-fatale": {
@@ -5661,10 +6525,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/header.jpg?t=1757613632",
             data: {
                 "Desenvolvedor": "Kanmidoko (神海処)",
-                "Publicadora": "Kanmidoko, 346lab Localization",
+                "Distribuidora": "Kanmidoko, 346lab Localization",
                 "Gêneros": "Aventura, Indie, Simulação, Visual Novel, Terror Psicológico",
                 "Plataformas": "PC (Windows), macOS",
-                "Classificação": "18+ (Automutilação, Suicídio, Violência, Assassinato, Abuso de Drogas, Violência Sexual)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -5673,8 +6537,54 @@ const articlesDatabase = {
             { id: "gameplay", text: "3. Características e Jogabilidade" },
             { id: "requisitos", text: "4. Requisitos de Sistema" },
             { id: "galeria", text: "5. Galeria de Imagens" },
-            { id: "links", text: "6. Links Oficiais, Fan Patch e Downloads" }
+            { id: "links", text: "6. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/2734450/Folie_Fatale/"
+                },
+                {
+                    label: "Website Oficial (Kanmidoko)",
+                    url: "https://kanmidoko.wixsite.com/foliefatale"
+                },
+                {
+                    label: "X / Twitter Oficial",
+                    url: "https://x.com/kanmidoko_info"
+                },
+                {
+                    label: "Patch de Tradução em Inglês (Fan Patch)",
+                    url: "https://eifiedreemurr.itch.io/folie-fatale-english-fan-patch"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Folie Fatale v1.2 (UploadHaven)",
+                    url: "https://4br.me/V3ccsUwfd",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download (Mega.nz)",
+                    url: "https://4br.me/SXXfi",
+                    details: "Mirror alternativo via Mega"
+                },
+                {
+                    label: "Download (GoFile)",
+                    url: "https://4br.me/DM3kvbIE",
+                    details: "Mirror alternativo via GoFile"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o instalador (setup) ou o executável principal dentro da pasta extraída e instale o jogo.",
+                    "Caso utilize a versão alternativa, aplique o fan patch de tradução para inglês se necessário e execute o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>Folie Fatale</strong> (<em>Folie Fatale ～病ンデレ男に堕とされる～ / Folie Fatale ~Yandere Otoko ni Otosareru~ / Folie Fatale 致命至爱</em>) é uma visual novel de terror psicológico e romance dark para o público feminino (Otome / Psycho Love Horror ADV), desenvolvida pelo estúdio <strong>Kanmidoko (神海処)</strong> e publicada em parceria com a <strong>346lab Localization</strong>.</p>
 
@@ -5689,37 +6599,37 @@ const articlesDatabase = {
             <h2 id="personagens">Personagens Principais</h2>
             <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
                 <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/4177c98fa5383de29f696ec0559edc1d.avif?t=1757613632" alt="Sakuraba Natsuki" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/4177c98fa5383de29f696ec0559edc1d.avif?t=1757613632" alt="Sakuraba Natsuki" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Sakuraba Natsuki</h3>
                     <p style="font-size: 0.9em; margin: 0;">A azarada protagonista (nome personalizável). Estudante do 2º ano da Kirigaya Gakuen High School que inexplicavelmente atrai apenas homens perigosos e instáveis.</p>
                 </div>
                 <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/b2f636514f90c8a92798f695ae09974f.avif?t=1757613632" alt="Mashiro Kanae" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/b2f636514f90c8a92798f695ae09974f.avif?t=1757613632" alt="Mashiro Kanae" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Mashiro Kanae</h3>
                     <p style="font-size: 0.9em; margin: 0;">Membro júnior do comitê de saúde ao qual a protagonista pertence. Apesar da escola ser frequentemente fechada por certas razões, ele possui um lado genial e já criou um aplicativo famoso no 1º ano.</p>
                 </div>
                 <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/578fc1e9238c7db6f3a55fa2f2ab5724.avif?t=1757613632" alt="Ushigome Haruki" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/578fc1e9238c7db6f3a55fa2f2ab5724.avif?t=1757613632" alt="Ushigome Haruki" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Ushigome Haruki</h3>
                     <p style="font-size: 0.9em; margin: 0;">Colega de classe de Natsuki. Era um atleta talentoso do time de futebol que se aposentou após um acidente. Mantém uma relação estranha com a protagonista desde determinado incidente.</p>
                 </div>
                 <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/49b867542577a862a1eb059178d560d1.avif?t=1757613632" alt="Kanda Ren" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/49b867542577a862a1eb059178d560d1.avif?t=1757613632" alt="Kanda Ren" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Kanda Ren</h3>
                     <p style="font-size: 0.9em; margin: 0;">Veterano do 3º ano, popular e bem-vestido. Aparenta se dar bem com todos, mas sua fascinação e desvio romântico obsessivo por Natsuki o levam a atitudes devastadoras.</p>
                 </div>
                 <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/3946a5f3cc75249459084096f29b4af9.avif?t=1757613632" alt="Hibiya Rito" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/3946a5f3cc75249459084096f29b4af9.avif?t=1757613632" alt="Hibiya Rito" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Hibiya Rito</h3>
                     <p style="font-size: 0.9em; margin: 0;">Veterano do 3º ano com comportamento calado e rebelde. Tinha constantes desentendimentos com o irmão de Natsuki. Possui um conhecimento brilhante sobre seres vivos que impressiona até professores.</p>
                 </div>
                 <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/e8d71408ccb0e3ba3424d3f21b0c5873.avif?t=1757613632" alt="Sakuraba Fuyuri" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/e8d71408ccb0e3ba3424d3f21b0c5873.avif?t=1757613632" alt="Sakuraba Fuyuri" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Sakuraba Fuyuri</h3>
                     <p style="font-size: 0.9em; margin: 0;">Irmão mais velho da protagonista e universitário do 2º ano. Ex-presidente do conselho estudantil, sério e de excelentes notas. Usa uma tiara de orelhas de gato em casa quando está com a irmã.</p>
                 </div>
                 <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; text-align: center;">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/8a826ed3e5018806bba80535f4102705.avif?t=1757613632" alt="Mitaka Akina" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/extras/8a826ed3e5018806bba80535f4102705.avif?t=1757613632" alt="Mitaka Akina" style="max-height: 180px; margin-bottom: 8px; border-radius: 4px;" loading="lazy">
                     <h3 style="margin: 5px 0; font-size: 1.1em;">Mitaka Akina</h3>
                     <p style="font-size: 0.9em; margin: 0;">Melhor amiga e colega de classe de Natsuki desde o ensino fundamental. Preocupa-se mais do que qualquer pessoa com a infelicidade constante da protagonista.</p>
                 </div>
@@ -5727,15 +6637,13 @@ const articlesDatabase = {
 
             <h2 id="gameplay">Características e Jogabilidade</h2>
             <ul>
-                <li><strong>Elenco Amplo e Múltiplos Finais:</strong> 5 alvos de conquista (<em>capture targets</em>) principais + 1 final extra. Cada personagem possui 3 finais distintos, totalizando diversos desfechos macabros.</li>
+                <li><strong>Elenco Amplo e Múltiplos Finais:</strong> 5 alvos de conquista principais + 1 final extra. Cada personagem possui 3 finais distintos, totalizando diversos desfechos macabros.</li>
                 <li><strong>Duração:</strong> Aproximadamente 8 horas de conteúdo narrativo.</li>
-                <li><strong>Idioma Oficial:</strong> O lançamento oficial na Steam conta com suporte a Japonês e Chinês Simplificado.</li>
-                <li><strong>Suporte a Streaming:</strong> A versão Steam permite transmissões ao vivo (live-streaming) completas.</li>
-                <li><strong>Prequel Relacionado:</strong> Pertence ao universo de <em>Deitsa no Makugire -Chouka no Torikago-</em>.</li>
+                <li><strong>Idioma Oficial:</strong> Suporte nativo a Japonês e Chinês Simplificado (com fan patch em inglês disponível).</li>
             </ul>
 
             <h2 id="requisitos">Requisitos de Sistema</h2>
-            <p><strong>Windows (Mínimos):</strong></p>
+            <p><strong>Requisitos Mínimos (PC):</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 10</li>
                 <li><strong>Processador:</strong> Processador Dual-Core genérico</li>
@@ -5744,69 +6652,17 @@ const articlesDatabase = {
                 <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
             </ul>
 
-            <p><strong>macOS (Mínimos):</strong></p>
-            <ul>
-                <li><strong>Sistema Operacional:</strong> macOS Moderno (64-bit)</li>
-                <li><strong>Processador:</strong> Intel 64-bit ou Apple Silicon (com Rosetta 2)</li>
-                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
-                <li><strong>Placa de Vídeo:</strong> Gráficos compatíveis com OpenGL ES 2.0</li>
-                <li><strong>Armazenamento:</strong> 3 GB de espaço disponível</li>
-                <li><strong>Observações:</strong> Pacote construído via TyranoStudio sem suporte oficial direto.</li>
-            </ul>
-
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_ca762e135c7c3d7e22582d2d3d1e5a5952d0687d.1920x1080.jpg?t=1757613632" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_bb71331bea2620ce73c2cdc436986b6066c2a737.1920x1080.jpg?t=1757613632" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_07ef38d7282b45f19e225d278ef47a2c205864cd.1920x1080.jpg?t=1757613632" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_fb4f4d5ac6ab1ba22a3258474b87ee2ba226bfc7.1920x1080.jpg?t=1757613632" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_bdd6cfb879d7ebd7f125b2e0e4673a48a54f72e2.1920x1080.jpg?t=1757613632" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_ca762e135c7c3d7e22582d2d3d1e5a5952d0687d.1920x1080.jpg?t=1757613632" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_bb71331bea2620ce73c2cdc436986b6066c2a737.1920x1080.jpg?t=1757613632" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_07ef38d7282b45f19e225d278ef47a2c205864cd.1920x1080.jpg?t=1757613632" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_fb4f4d5ac6ab1ba22a3258474b87ee2ba226bfc7.1920x1080.jpg?t=1757613632" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2734450/ss_bdd6cfb879d7ebd7f125b2e0e4673a48a54f72e2.1920x1080.jpg?t=1757613632" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais, Fan Patch e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais, Lojas e Redes:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/2734450/Folie_Fatale/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://kanmidoko.wixsite.com/foliefatale" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Kanmidoko)</a>
-                <a href="https://x.com/kanmidoko_info" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter Oficial</a>
-                <a href="https://weibo.com/u/7787865591" target="_blank"><i class="fa-brands fa-weibo"></i> Weibo Oficial</a>
-                <a href="https://space.bilibili.com/1818289890" target="_blank"><i class="fa-solid fa-tv"></i> Bilibili Oficial</a>
-                <a href="https://www.taptap.io/br/app/33663596" target="_blank"><i class="fa-solid fa-mobile-screen"></i> TapTap</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-book-open"></i> <strong>Bancos de Dados, Análises e Reviews:</strong></p>
-            <div class="play-links">
-                <a href="https://english-otome-games.fandom.com/wiki/Folie_Fatale" target="_blank"><i class="fa-solid fa-globe"></i> English Otome Games Wiki</a>
-                <a href="https://tvtropes.org/pmwiki/pmwiki.php/VisualNovel/FolieFatale" target="_blank"><i class="fa-solid fa-book"></i> TV Tropes Wiki</a>
-                <a href="https://nonbiriotomegame.wordpress.com/2025/10/04/folie-fatale-detour-no-makugire-otome-game-review/" target="_blank"><i class="fa-solid fa-blog"></i> Review (Nonbiri Otome Game)</a>
-                <a href="https://backloggd.com/games/folie-fatale/" target="_blank"><i class="fa-solid fa-gamepad"></i> Backloggd</a>
-                <a href="https://steamdb.info/app/2734450/" target="_blank"><i class="fa-solid fa-database"></i> SteamDB</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-language"></i> <strong>Patch de Tradução em Inglês (Fan Patch):</strong></p>
-            <div class="play-links">
-                <a href="https://eifiedreemurr.itch.io/folie-fatale-english-fan-patch" target="_blank"><i class="fa-solid fa-download"></i> Folie Fatale English Fan Patch (itch.io)</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC v1.2):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/V3ccsUwfd" target="_blank"><i class="fa-solid fa-download"></i> Download Folie Fatale v1.2 (UploadHaven - Opção 1)</a>
-                <a href="https://4br.me/v1-2" target="_blank"><i class="fa-solid fa-download"></i> Download Folie Fatale v1.2 (UploadHaven - Opção 2)</a>
-                <a href="https://4br.me/NwWzk2pDLm" target="_blank"><i class="fa-solid fa-download"></i> Download (MegaUp.net)</a>
-                <a href="https://4br.me/SXXfi" target="_blank"><i class="fa-solid fa-download"></i> Download (Mega.nz)</a>
-                <a href="https://4br.me/DM3kvbIE" target="_blank"><i class="fa-solid fa-download"></i> Download (GoFile)</a>
-                <a href="https://4br.me/d9IjIqt7m" target="_blank"><i class="fa-solid fa-download"></i> Download (MixDrop)</a>
-                <a href="https://4br.me/P24v6yNrxP" target="_blank"><i class="fa-solid fa-download"></i> Download (Rapidgator)</a>
-                <a href="https://4br.me/qNbsS" target="_blank"><i class="fa-solid fa-download"></i> Download (SendCM)</a>
-                <a href="https://clicknupload.click/snpdx1m6bj1t" target="_blank"><i class="fa-solid fa-download"></i> Download (Clicknupload)</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação: Extraia o arquivo .zip baixado usando o 7-Zip ou WinRAR. Abra a pasta extraída e execute o aplicativo de instalação (setup) ou o executável principal do jogo. Aplique o crack ou patch de tradução se necessário.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, fan patch de tradução, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "mucorales": {
@@ -6054,11 +6910,11 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/header.jpg?t=1786327326",
             data: {
                 "Desenvolvedor": "Uri Games",
-                "Publicadora": "PLAYISM / Active Gaming Media",
+                "Distribuidora": "PLAYISM / Active Gaming Media",
                 "Gêneros": "Terror, Aventura, Mistério, Puzzle",
                 "Plataformas": "PC (Windows)",
                 "Classificação": "18+ (Violência Extrema, Terror Psicológico)",
-                "Lançamento": "30 de janeiro de 2018 (Steam) / 2014 (Original)"
+                "Lançamento": "2018"
             }
         },
         toc: [
@@ -6066,11 +6922,55 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "detonado", text: "5. Passo a Passo / Guia (Spoiler)" },
-            { id: "links", text: "6. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/741250/The_Sandman/"
+                },
+                {
+                    label: "Site Oficial (PLAYISM)",
+                    url: "https://playism.com/en/game/the-sand-man/"
+                },
+                {
+                    label: "TV Tropes",
+                    url: "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/TheSandman2014"
+                },
+                {
+                    label: "Manual Oficial (PDF)",
+                    url: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/manuals/add8475ee4aa4fcab848b336529690b99fb133c7/The_Sand_Man_Manual.pdf?t=1786327326"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Versão em Inglês (Opção 1)",
+                    url: "https://4br.me/ABGQX",
+                    details: "Versão localizada em inglês"
+                },
+                {
+                    label: "Download Versão em Inglês (Opção 2)",
+                    url: "https://4br.me/iCfb9io",
+                    details: "Mirror alternativo em inglês"
+                },
+                {
+                    label: "Download Tradução PT-BR (Zero Corpse)",
+                    url: "https://4br.me/bEZNr",
+                    details: "Tradução em Português do Brasil"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize os links de download alternativos.",
+                    "Extraia o arquivo compactado para uma pasta separada antes de executar o jogo para garantir que o salvamento funcione.",
+                    "Caso ocorram falhas de exibição, execute o arquivo Game.exe como Administrador."
+                ]
+            }
+        },
         content: `
-            <p><strong>The Sandman</strong> (conhecido no Japón como <em>The Sand Man</em> ou <em>O Homem da Areia</em>) é um jogo de aventura e terror psicológico desenvolvido pela criadora japonesa <strong>Uri (Uri Games)</strong> utilizando o motor WOLF RPG Editor, sendo o segundo capítulo da famosa série <em>Strange Man</em>.</p>
+            <p><strong>The Sandman</strong> (conhecido no Japão como <em>The Sand Man</em> ou <em>O Homem da Areia</em>) é um jogo de aventura e terror psicológico desenvolvido pela criadora japonesa <strong>Uri (Uri Games)</strong> utilizando o motor WOLF RPG Editor, sendo o segundo capítulo da famosa série <em>Strange Man</em>.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>Incapaz de dormir e exausta devido a uma insônia crônica severa, Sophie Grundler decide vagar pelas ruas da cidade durante a madrugada. No entanto, ela logo descobre algo aterrorizante: todos os habitantes e conhecidos da cidade caíram em um sono profundo do qual simplesmente não conseguem acordar.</p>
@@ -6081,11 +6981,10 @@ const articlesDatabase = {
                 <li><strong>Aventura de Terror 2D:</strong> Exploração detalhada de ambientes sombrios combinada com quebra-cabeças desafiadores e momentos de ação tensos.</li>
                 <li><strong>Múltiplos Finais:</strong> O jogo apresenta 6 finais diferentes moldados pelas escolhas da protagonista ao longo da jornada.</li>
                 <li><strong>Violência Estilizada:</strong> Apresenta uma atmosfera madura com cenas fortes e representações viscerais de terror.</li>
-                <li><strong>Versão Aprimorada na Steam:</strong> Inclui conquistas, suporte a múltiplos idiomas (incluindo inglês, japonês e chinês) e melhorias visuais.</li>
+                <li><strong>Versão Aprimorada na Steam:</strong> Inclui conquistas, suporte a múltiplos idiomas e melhorias visuais.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
                 <li><strong>Processador:</strong> Intel Core 2 de 1.06 GHz</li>
@@ -6097,67 +6996,15 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_fdc15b31b8bd6d86b3476615d84f438630fd7039.1920x1080.jpg?t=1786327326" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_9b8f6e36a84cfd293f15505927e8d0c746cb7b22.1920x1080.jpg?t=1786327326" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_fdd49e6891c3c597e0f50b4a6bf00a3857aa41b9.1920x1080.jpg?t=1786327326" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_b2cb7b3cc0264a642fb871eb7a81534503d2fbca.1920x1080.jpg?t=1786327326" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_53fefa8ec035d9eb6928c78b76107c9141ffe6d5.1920x1080.jpg?t=1786327326" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_fdc15b31b8bd6d86b3476615d84f438630fd7039.1920x1080.jpg?t=1786327326" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_9b8f6e36a84cfd293f15505927e8d0c746cb7b22.1920x1080.jpg?t=1786327326" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_fdd49e6891c3c597e0f50b4a6bf00a3857aa41b9.1920x1080.jpg?t=1786327326" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_b2cb7b3cc0264a642fb871eb7a81534503d2fbca.1920x1080.jpg?t=1786327326" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/ss_53fefa8ec035d9eb6928c78b76107c9141ffe6d5.1920x1080.jpg?t=1786327326" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <h2 id="detonado">Passo a Passo / Guia de Finais</h2>
-            <details style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #444; border-radius: 6px; padding: 12px; margin-bottom: 20px;">
-                <summary style="cursor: pointer; font-weight: bold; color: #ffaa00; font-size: 1.1em;">(aviso de spoiler)</summary>
-                <div style="margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
-                    <h3>Escola Católica Loren</h3>
-                    <p>Depois de sair de casa, pegue o mapa da cidade no quadro próximo (logo após o café à direita do apartamento de Sophie). Caminhe até encontrar alguém no parque central. Vá para sudoeste para encontrar a escola. Verifique o portão trancado. Suba uma tela e entre no barraco à direita para pegar uma escada. Retorne e use-a (no menu de itens enquanto estiver perto da parede) para escalar o muro. Verifique a frente da porta e o ponto brilhante à esquerda para pegar uma pá. Use-a para abrir a porta. Vá para o leste até os dormitórios e suba para o segundo andar para encontrar o quarto de Anne. Como ela não está lá, vá até a capela (em frente à escada no 2º andar). Para achar Anne: vá até a cafeteria (à direita da escada no 1º andar) e entre na cozinha. Empurre a caixa que bloqueia a entrada inferior.</p>
-
-                    <h3>Shopping Blumberg</h3>
-                    <p>Vá ao shopping, ao sul do parque central. Verifique a porta e o painel de segurança. Vá para a esquerda, suba uma tela e verifique o carro na estrada para entrar nele e obter o cartão de segurança. Abra o inventário e examine o cartão. Retorne ao painel de segurança e insira o código (dica baseada nos números do cartão): <strong>241917</strong>. Suba até o último andar e entre no Teatro B à direita. Abra levemente a porta para olhar para dentro. Pegue a entrada dos fundos para falar com Regan. Pegue os cortadores na mesa da extrema direita (dois cômodos atrás) e use-os para cortar as cordas. Pegue a caixa de papelão que cai e vista-a. Desça os andares observando os padrões dos inimigos: fique agachado e parado a maior parte do tempo, movendo-se apenas quando eles não estiverem olhando. No primeiro andar, use a boneca para distrair os soldados e corra para fora. Encontre David no parque ao norte.</p>
-
-                    <h3>JP Gordon & Chase</h3>
-                    <p>Vá a JP Gordon & Chase no nordeste. Verifique o leitor de cartão e o pôster de funcionários. Vá ao metrô a sudeste da cidade e abra o portão com a senha (verifique o celular): <strong>120000</strong>. Verifique a pessoa dormindo atrás do portão para pegar o passe de funcionário e use-o na JP Gordon & Chase. Suba ao terceiro andar, entre na sala aberta e examine a foto na escrivaninha. Suba ao topo e fuja do prédio. Após ser derrubada, volte para dentro, saia novamente e pegue o dente do lado de fora. Vá ao parque central, siga a sombra até o apartamento e suba as escadas.</p>
-
-                    <h3>Indo para a Casa do Homem da Areia</h3>
-                    <p>Navegue pela floresta (caminhos errados levam à mesma área). Ao chegar ao pântano, fique o mais distante possível ao caminhar para não ser puxado; fale com Nixie em seguida. Volte uma tela e entre na casa. Mostre o dente de Sophie à Fada dos Dentes (ela recusará). Vá a Nixie perguntar sobre a grama Tibbyoung. Retorne à floresta para encontrá-la, use o orvalho na grama sobre o dente e dê o dente de leite à Fada dos Dentes para receber uma moeda para Nixie. Continue e verifique a pequena casa. Volte à clareira, entre no tronco (Littlogrow), saia, verifique-o novamente para levá-lo e coloque-o em frente à pequena casa.</p>
-
-                    <h3>A Casa do Homem da Areia</h3>
-                    <p>Suba as escadas e pegue a porta do meio. Atravesse o labirinto de pisos (da entrada: cima, cima, direita) e aperte o interruptor no final para desativá-los. Na sala seguinte, tente abrir a porta ao fundo e caminhe de volta; deixe-se pegar e recuse repetidamente comer a comida. Pegue o memorando na entrada. Continue além de onde encontrou o Homem da Areia. Na sala esquerda, pegue a nota na parede. Vá à sala direita e fale com Lullaby, mostrando o memorando e o aviso para que ela os leia. Atravesse a sala das estátuas cuspidoras de fogo (note que as chamas disparam 6 vezes antes de haver uma pausa). Puxe a alavanca na sala seguinte para desativá-las. Navegue pelo labirinto de paredes de vidro transparente (o objetivo é a porta esquerda, sem bifurcações). Pegue a garrafa vermelha na próxima sala e use-a no labirinto para marcar o caminho. Entre na porta inferior na pequena sala de remédios e corra para fazer o Homem da Areia cair no buraco. Pegue o espelho na mesa. Continue pelo corredor espelhado (comandos invertidos). Quando a estátua começar a cantar, execute quatro de cinco ações para acordar: bater a cabeça na estátua, tocar música com o celular, jogar água na cara com o balde, gritar pela janela ou usar o bastão (se já o tiver). Não use o espelho aqui.</p>
-
-                    <h3>Trabalhando com o Unicórnio</h3>
-                    <p>Saia da casa (use o Espelho Mágico para voltar à entrada) e vá para o leste encontrar o Unicórnio. De volta à casa, vá à direita para achar uma Poeira e um quadro caído; fale com ele para ver o código escondido atrás. Vá ao Armazém de Remédios e use o código na porta esquerda (numerando as joias de 1 a 8 da esquerda para a direita: <strong>32754168</strong>). Na sala de areia com prateleiras, pegue o bastão e um saco na parede, escondendo-se no armário quando solicitado. Vá para a direita do Armazém de Remédios até o labirinto de vidro, encoste-se nas escadas inalcançáveis e use o bastão para quebrar a parede, pegando um caco de vidro. Suba até a sala de joias e pegue a joia rosa (levar diretamente ao Unicórnio causará morte). Obtenha o Aviso 2 na parede da sala dos fundos e mostre-o a Lullaby para traduzir. Lave a joia no balde d'água e use a máquina para forjar uma joia rosa verdadeira, entregando-a ao Unicórnio.</p>
-                    <p><em>Escolha Crítica:</em> Após dar a joia ao Unicórnio, decidir pedir de volta ou deixá-la com ele define os caminhos para finais ruins ou bons.</p>
-                    <p>Vá para o oeste até a caverna e fale com o Anão (Dwarf). Pegue a gaiola à esquerda, capture os Glimmers na tela à esquerda e entre na caverna. Retorne à sala de estátuas de fogo na casa do Homem da Areia e use o bastão para ajudar a Poeira a obter as Lentes de Tradução. Vá para a sala do mapa-múndi (ao sul do Armazém de Remédios), desça pelo buraco no canto inferior esquerdo para pegar a Chave de "Somewhere". Colete os ingredientes para a areia do sono: coloque um pedaço de Crygel na garrafa vazia, pegue a fruta Snora e corte o rabo do lagarto Caterlizard na cozinha com o caco de vidro. Use a Chave de Somewhere para abrir a porta atrás da estátua que canta. Na sala de fabricação de areia, pegue as luvas de couro no balcão, use-as na vela vermelha para carregar a chama até o caldeirão. Triture a fruta Snora no moinho. Suba a escada, coloque o pó da fruta Snora e o fluido Crygel no caldeirão; quando o caldo ficar azul (4 mudanças de cor a partir do branco), adicione o rabo de Caterlizard para deixá-lo amarelo. Use a tigela no caldeirão para despejar no funil, aperte o botão e guarde a areia do sono no saco. Suba a alavanca na Sala da Chama Esmeralda, use as luvas de couro para pegar a chama e acenda as velas na sala pequena com velas (à esquerda do corredor das estátuas de fogo). Na sala secreta, vista as Lentes de Tradução e leia o diário. Vá ao longo corredor e entre na porta do meio, desviando dos buracos na subida.</p>
-
-                    <h3>Finais</h3>
-                    <ul>
-                        <li><strong>Final Ruim 1:</strong> Deixe o Unicórnio ficar com a joia e derrote/mate o Homem da Areia.</li>
-                        <li><strong>Final Ruim 2:</strong> Pegue a joia de volta e derrote/mate o Homem da Areia.</li>
-                        <li><strong>Final Ruim 3:</strong> Pegue a joia de volta e use a Areia do Sono quando o Homem da Areia estiver com 10 de HP.</li>
-                        <li><strong>Final Feliz (Happy Ending):</strong> Deixe o Unicórnio ficar com a joia e use a Areia do Sono quando o Homem da Areia estiver com 10 de HP.</li>
-                    </ul>
-                </div>
-            </details>
-
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/741250/The_Sandman/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://playism.com/en/game/the-sand-man/" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial (PLAYISM)</a>
-                <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/TheSandman2014" target="_blank"><i class="fa-solid fa-book"></i> TV Tropes</a>
-                <a href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/741250/manuals/add8475ee4aa4fcab848b336529690b99fb133c7/The_Sand_Man_Manual.pdf?t=1786327326" target="_blank"><i class="fa-solid fa-file-pdf"></i> Manual Oficial (PDF)</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo e Traduções:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/ABGQX" target="_blank"><i class="fa-solid fa-language"></i> Download Versão em Inglês (Opção 1)</a>
-                <a href="https://4br.me/iCfb9io" target="_blank"><i class="fa-solid fa-language"></i> Download Versão em Inglês (Opção 2)</a>
-                <a href="https://4br.me/bEZNr" target="_blank"><i class="fa-solid fa-language"></i> Download Tradução PT-BR (Zero Corpse)</a>
-            </div>
-
-            <p><small><em>Instruções e Solução de Problemas: Extraia sempre o arquivo ZIP para uma pasta separada antes de jogar. Se as imagens não carregarem corretamente, execute o arquivo <code>Game.exe</code> como Administrador. Certifique-se de que o caminho da pasta não contenha caracteres especiais (acentos) para evitar erros de arquivo.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, manuais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "the-house-in-fata-morgana-reincarnation": {
@@ -6751,10 +7598,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/header.jpg?t=1787116031",
             data: {
                 "Desenvolvedor": "MAGES. Inc. / Team GrisGris",
-                "Publicadora": "XSEED Games / Marvelous USA, Inc.",
+                "Distribuidora": "XSEED Games / Marvelous USA, Inc.",
                 "Gêneros": "Visual Novel, Comédia Romântica, Terror",
                 "Plataformas": "PC (Windows), PSP, PS Vita",
-                "Classificação": "18+ (Violência Extrema, Temas Sensíveis, Linguagem Imprópria, Conteúdo Sugestivo)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -6762,18 +7609,51 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Destaques" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/778400/Corpse_Party_Sweet_Sachikos_Hysteric_Birthday_Bash/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 1)",
+                    url: "https://4br.me/kFVXG",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 2)",
+                    url: "https://4br.me/P2izeILF",
+                    details: "Mirror alternativo de download"
+                },
+                {
+                    label: "Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 3)",
+                    url: "https://4br.me/6KyIJp",
+                    details: "Mirror alternativo de download"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o instalador (setup.exe) dentro da pasta extraída e siga as instruções na tela.",
+                    "Inicie o jogo através do atalho gerado na área de trabalho."
+                ]
+            }
+        },
         content: `
             <p><strong>Corpse Party: Sweet Sachiko's Hysteric Birthday Bash</strong> (originalmente lançado no Japão como <em>Corpse Party 2U</em>) é um spin-off oficial e canônico de comédia romântica / terror desenvolvido pela <strong>Team GrisGris</strong> e <strong>MAGES. Inc.</strong>, publicado no Ocidente pela <strong>XSEED Games</strong>.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>Sachiko Shinozaki foi tragicamente assassinada aos 7 anos de idade. Embora tenha se tornado o espírito vingativo e sedento de sangue responsável pela morte e apagamento de inúmeras crianças da história, hoje é seu aniversário de... 7 anos novamente!</p>
-
             <p>Para comemorar, Sachiko decide conceder 24 horas de anistia aos sofrimentos de suas vítimas, reunindo todos os personagens condenados em Heavenly Host Elementary para uma festa de aniversário histericamente bizarra. O grupo será forçado a participar de concursos de culinária, peças de teatro improvisadas, encontros de casais, corridas e horrores Lovecraftianos para manter a garotinha entretida e sobreviver ao dia.</p>
 
             <div style="margin: 20px 0; text-align: center;">
-                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
                     <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/extras/322ad071150e6dce63de34f5424d6a64.webm?t=1787116031" type="video/webm">
                 </video>
             </div>
@@ -6788,7 +7668,7 @@ const articlesDatabase = {
             </ul>
 
             <div style="margin: 20px 0; text-align: center;">
-                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
                     <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/extras/527bf11aec166de387c4bfc9fe4f66ed.webm?t=1787116031" type="video/webm">
                 </video>
             </div>
@@ -6797,8 +7677,7 @@ const articlesDatabase = {
                 <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO ADULTO:</strong> O jogo contém descrições em texto de mutilação, violência extrema, tortura, assassinatos, sangue, piadas com fetiches/masoquismo, insinuações sexuais cômicas e linguagem com fortes palavrões.</p>
             </div>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows XP / Vista / 7 / 8 / 10</li>
                 <li><strong>Processador:</strong> 1.5 GHz ou superior</li>
@@ -6806,42 +7685,20 @@ const articlesDatabase = {
                 <li><strong>Placa de Vídeo:</strong> 64 MB VRAM, aceleradora 3D compatível com DirectX 9.0c</li>
                 <li><strong>DirectX:</strong> Versão 9.0c</li>
                 <li><strong>Armazenamento:</strong> 7 GB de espaço disponível</li>
-                <li><strong>Placa de Som:</strong> Compatível com DirectX 9.0c</li>
             </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_9b01b6944f6553dad812bce8fc91ec948766e286.1920x1080.jpg?t=1787116031" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_effea6f090bc44d3e0e9d3362765c04bc4c9406c.1920x1080.jpg?t=1787116031" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_7ad54bb3305738a065e3fc79244ee874a070076a.1920x1080.jpg?t=1787116031" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_3d2e40cf4d20865cc9cf2ab3962869316392480c.1920x1080.jpg?t=1787116031" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_f3fba26b8cc66890ecbd14930d29e0f0dfe9e4a6.1920x1080.jpg?t=1787116031" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_de64f35b23cbe9998b8b9e606515c27179002c65.1920x1080.jpg?t=1787116031" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_ad238f483f7dd5ae02847bf991266b0407d26061.1920x1080.jpg?t=1787116031" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_824334abb57d4f44331770e81dd5defbbec03880.1920x1080.jpg?t=1787116031" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_8548cc19088a78dfa68861c38de66d6cf9acfa53.1920x1080.jpg?t=1787116031" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_0af45753c8fa432bbf16c650e318bcb17b76174d.1920x1080.jpg?t=1787116031" alt="Screenshot 10" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_c89140e1fa27658b21fdf7b07429fcbe84b847f7.1920x1080.jpg?t=1787116031" alt="Screenshot 11" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_737dcd0f619ec3723b7490c7b0e455c0875f568b.1920x1080.jpg?t=1787116031" alt="Screenshot 12" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_9b01b6944f6553dad812bce8fc91ec948766e286.1920x1080.jpg?t=1787116031" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_effea6f090bc44d3e0e9d3362765c04bc4c9406c.1920x1080.jpg?t=1787116031" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_7ad54bb3305738a065e3fc79244ee874a070076a.1920x1080.jpg?t=1787116031" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_3d2e40cf4d20865cc9cf2ab3962869316392480c.1920x1080.jpg?t=1787116031" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_f3fba26b8cc66890ecbd14930d29e0f0dfe9e4a6.1920x1080.jpg?t=1787116031" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/778400/ss_de64f35b23cbe9998b8b9e606515c27179002c65.1920x1080.jpg?t=1787116031" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Lojas Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/778400/Corpse_Party_Sweet_Sachikos_Hysteric_Birthday_Bash/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC v2022.07.03):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/kFVXG" target="_blank"><i class="fa-solid fa-download"></i> Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 1)</a>
-                <a href="https://4br.me/P2izeILF" target="_blank"><i class="fa-solid fa-download"></i> Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 2)</a>
-                <a href="https://4br.me/6KyIJp" target="_blank"><i class="fa-solid fa-download"></i> Download Corpse Party: Sweet Sachiko's Hysteric Birthday Bash (Servidor 3)</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação: Baixe o arquivo .zip pelo link, extraia com o 7-Zip ou WinRAR, execute a aplicação de instalação (setup.exe) dentro da pasta e inicie o jogo através do atalho gerado na sua área de trabalho.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "apollo-justice-ace-attorney-trilogy": {
@@ -6853,10 +7710,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/header.jpg?t=1791439477",
             data: {
                 "Desenvolvedor": "CAPCOM Co., Ltd.",
-                "Publicadora": "CAPCOM Co., Ltd.",
+                "Distribuidora": "CAPCOM Co., Ltd.",
                 "Gêneros": "Aventura, Investigação, Visual Novel, Tribunal",
                 "Plataformas": "PC (Windows), Nintendo Switch, PS4, Xbox One",
-                "Classificação": "12+ (Violência, Drogas Lícitas, Conteúdo Sexual)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -6864,14 +7721,55 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Recursos Extras" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/"
+                },
+                {
+                    label: "Website Oficial (AJ Trilogy)",
+                    url: "https://www.ace-attorney.com/aj-trilogy/en-us/"
+                },
+                {
+                    label: "Manual e Tutorial Oficial Capcom",
+                    url: "https://game.capcom.com/manual/gyakutensaiban456/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Apollo Justice Trilogy (UploadHaven)",
+                    url: "https://4br.me/wZAAmtv",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download Apollo Justice Trilogy (Servidor 1)",
+                    url: "https://4br.me/71Svkz4Zkl",
+                    details: "Mirror alternativo de download"
+                },
+                {
+                    label: "Download Apollo Justice Trilogy (Servidor 2)",
+                    url: "https://4br.me/MxAbW",
+                    details: "Mirror alternativo de download"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o arquivo de instalação (setup.exe) dentro da pasta extraída e siga as instruções na tela.",
+                    "Inicie o jogo através do atalho gerado na área de trabalho."
+                ]
+            }
+        },
         content: `
             <p><strong>Apollo Justice: Ace Attorney Trilogy</strong> é a coletânea remasterizada em alta definição desenvolvida e publicada pela <strong>CAPCOM Co., Ltd.</strong>, reunindo três títulos fundamentais da icônica franquia de dramas judiciais e investigação.</p>
 
             <h2 id="sinopse">Sinopse e Conteúdo da Trilogia</h2>
             <p>Junte-se ao jovem e empolgado advogado de defesa <strong>Apollo Justice</strong>, à especialista em psicologia analítica <strong>Athena Cykes</strong> e ao lendário mestre <strong>Phoenix Wright</strong> enquanto eles enfrentam casos complexos em tribunais reformulados e cheios de perigos.</p>
-
             <p>A coleção traz um total de <strong>16 episódios</strong> divididos entre os seguintes jogos e DLCs:</p>
             <ul>
                 <li><strong>Apollo Justice: Ace Attorney:</strong> A estreia do jovem advogado assumindo o escritório e lidando com um Phoenix Wright desprovido de seu broche de advogado.</li>
@@ -6888,7 +7786,7 @@ const articlesDatabase = {
                 <li><strong>Idiomas Suportados:</strong> Textos e menus disponíveis em Inglês, Francês, Alemão, Japonês, Coreano, Chinês Tradicional e Simplificado.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <p><strong>Requisitos Mínimos:</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit)</li>
@@ -6896,48 +7794,20 @@ const articlesDatabase = {
                 <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
                 <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GT 1030 / AMD Radeon RX 550</li>
                 <li><strong>DirectX:</strong> Versão 12</li>
-                <li><strong>Rede:</strong> Conexão de internet banda larga</li>
-                <li><strong>Armazenamento:</strong> 20 GB de espaço disponível</li>
-            </ul>
-
-            <p><strong>Requisitos Recomendados:</strong></p>
-            <ul>
-                <li><strong>Sistema Operacional:</strong> Windows 10 (64-bit) / Windows 11</li>
-                <li><strong>Processador:</strong> Intel Core i3-8350K / AMD Ryzen 3 3200G</li>
-                <li><strong>Memória RAM:</strong> 16 GB de RAM</li>
-                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GT 1030 / AMD Radeon RX 550</li>
-                <li><strong>DirectX:</strong> Versão 12</li>
                 <li><strong>Armazenamento:</strong> 20 GB de espaço disponível</li>
             </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_cc89584b7827bf36583460701c615700c7b9ee7f.1920x1080.jpg?t=1791439477" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_743db5af8c61249fafddccc63cba048a8aebf74e.1920x1080.jpg?t=1791439477" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_1e4cc399b1ae1ef2c8fd991057d91c196668b34d.1920x1080.jpg?t=1791439477" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_950ddc05ac554cdb2559f3fc1a6fdb2226b8048e.1920x1080.jpg?t=1791439477" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_55c46472b0aafbb38a421d188bb7ffd764284e58.1920x1080.jpg?t=1791439477" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_cc89584b7827bf36583460701c615700c7b9ee7f.1920x1080.jpg?t=1791439477" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_743db5af8c61249fafddccc63cba048a8aebf74e.1920x1080.jpg?t=1791439477" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_1e4cc399b1ae1ef2c8fd991057d91c196668b34d.1920x1080.jpg?t=1791439477" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_950ddc05ac554cdb2559f3fc1a6fdb2226b8048e.1920x1080.jpg?t=1791439477" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/ss_55c46472b0aafbb38a421d188bb7ffd764284e58.1920x1080.jpg?t=1791439477" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Tutoriais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://www.ace-attorney.com/aj-trilogy/en-us/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (AJ Trilogy)</a>
-                <a href="https://game.capcom.com/manual/gyakutensaiban456/" target="_blank"><i class="fa-solid fa-book"></i> Manual e Tutorial Oficial CapCom</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (Build 13820637):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/wZAAmtv" target="_blank"><i class="fa-solid fa-download"></i> Download Apollo Justice Trilogy (UploadHaven)</a>
-                <a href="https://4br.me/71Svkz4Zkl" target="_blank"><i class="fa-solid fa-download"></i> Download Apollo Justice Trilogy (Servidor 1)</a>
-                <a href="https://4br.me/MxAbW" target="_blank"><i class="fa-solid fa-download"></i> Download Apollo Justice Trilogy (Servidor 2)</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação: Extraia o arquivo .zip usando o 7-Zip ou WinRAR, execute a aplicação de instalação (setup.exe) dentro da pasta extraída e inicie o jogo pelo atalho em sua área de trabalho.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, manuais, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "midnight-syndrome": {
@@ -7444,30 +8314,70 @@ const articlesDatabase = {
             data: {
                 "Título Original": "Ruina 廃都の物語 (Ruina: Fairy Tale of the Forgotten Ruins)",
                 "Desenvolvedor": "Karekusa Shoukichi (枯草章吉)",
-                "Publicadora": "Karekusa Shoukichi (Autopublicado / Freem!)",
-                "Engine": "RPG Maker 2000",
+                "Distribuidora": "Karekusa Shoukichi (Autopublicado / Freem!)",
                 "Gêneros": "RPG, Aventura, Gamebook, TRPG",
                 "Plataformas": "PC (Windows 98/XP/10/11 via EasyRPG), Steam Deck",
-                "Lançamento": "24 de dezembro de 2008 (v1.21 em 07/07/2009)",
-                "Classificação": "Livre (Todas as idades)",
-                "Licença": "Freeware (100% Gratuito)"
+                "Lançamento": "2008"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
             { id: "gameplay", text: "2. Estilo GameBook e Mecânicas" },
             { id: "origens", text: "3. Origens do Protagonista" },
-            { id: "execucao", text: "4. Como Rodar em Sistemas Modernos" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
             { id: "galeria", text: "5. Galeria de Imagens" },
-            { id: "livro", text: "6. Adaptação em Livro / Light Novel" },
-            { id: "links", text: "7. Links Oficiais e Downloads" }
+            { id: "links", text: "6. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Site Oficial do Autor (Karekusa Shoukichi)",
+                    url: "https://blackhat.a.la9.jp/ftotfr/game.htm"
+                },
+                {
+                    label: "Manual Oficial do Jogo",
+                    url: "https://blackhat.a.la9.jp/ftotfr/ruina/manual.htm"
+                },
+                {
+                    label: "Download Oficial na Freem!",
+                    url: "https://www.freem.ne.jp/dl/win/2037"
+                },
+                {
+                    label: "Tradução Oficial em Inglês (Dinklations)",
+                    url: "https://dinklations.wordpress.com/2021/01/30/ruina-fairy-tale-of-the-forgotten-ruins-english-version/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download do Jogo Original (Internet Archive)",
+                    url: "https://4br.me/QFtDm",
+                    details: "RTP incluso"
+                },
+                {
+                    label: "Download da Versão em Inglês (Uptodown)",
+                    url: "https://4br.me/gwzHkH3",
+                    details: "Versão localizada em inglês"
+                },
+                {
+                    label: "Download EasyRPG Player",
+                    url: "https://4br.me/OzPk",
+                    details: "Executor necessário para rodar em Windows 10/11"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o jogo original ou a versão traduzida para o inglês através dos links de download.",
+                    "Como o jogo utiliza o RPG Maker 2000, baixe o executável portátil do EasyRPG Player para garantir compatibilidade com sistemas modernos.",
+                    "Coloque o arquivo do EasyRPG Player dentro da pasta raiz do jogo e execute-o diretamente para jogar."
+                ]
+            }
+        },
         content: `
             <p><strong>Ruina 廃都の物語</strong> (<em>Ruina: Fairy Tale of the Forgotten Ruins</em>) é uma das obras mais influentes e celebradas da história dos jogos criados no RPG Maker. Desenvolvido de forma independente por <strong>Karekusa Shoukichi (枯草章吉)</strong> e lançado na véspera de Natal de 2008, o título conquistou o Grande Prêmio (Grand Prize) no 4º Concurso Anual do portal japonês Freem!.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>Em uma pequena vila pacífica situada à beira do rio, ruínas subterrâneas há muito esquecidas ressurgem do solo. Dentro delas esconde-se um labirinto ancestral repleto de profecias criptografadas, relíquias perdidas e mistérios que atraem aventureiros e estudiosos de várias regiões.</p>
-
             <p>O protagonista desperta para o seu destino à medida que decide explorar as profundezas da cidade caída, descobrindo segredos sobre a origem do mundo e a maldição que paira sobre a região.</p>
 
             <h2 id="gameplay">Estilo GameBook e Mecânicas</h2>
@@ -7488,56 +8398,22 @@ const articlesDatabase = {
                 <li><strong>Criado por Criminosos (犯罪者たちに育てられた):</strong> Especialista em esquiva, abertura de fechaduras e técnicas furtivas das ruas.</li>
             </ul>
 
-            <h2 id="execucao">Como Rodar em Sistemas Modernos (Win 10/11 & Steam Deck)</h2>
-            <p>Como o jogo foi desenvolvido em 2008 para Windows 98/XP com o motor <em>RPG Maker 2000</em>, a forma mais estável e recomendada de jogá-lo em computadores modernos e no Steam Deck é através do <strong>EasyRPG Player</strong>:</p>
-            <ol>
-                <li>Baixe o jogo (versão original japonesa ou a tradução em inglês da Dinklations).</li>
-                <li>Baixe o executável portátil do <strong>EasyRPG Player</strong>.</li>
-                <li>Coloque o arquivo do EasyRPG Player dentro da pasta raiz do jogo e execute-o diretamente.</li>
-            </ol>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 98 / XP / 10 / 11 (via EasyRPG Player) ou Steam Deck</li>
+                <li><strong>Armazenamento:</strong> 50 MB de espaço disponível</li>
+            </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://blackhat.a.la9.jp/ftotfr/pic/101.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://blackhat.a.la9.jp/ftotfr/pic/102.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://blackhat.a.la9.jp/ftotfr/pic/103.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://blackhat.a.la9.jp/ftotfr/pic/104.jpg" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://blackhat.a.la9.jp/ftotfr/pic/101.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://blackhat.a.la9.jp/ftotfr/pic/102.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://blackhat.a.la9.jp/ftotfr/pic/103.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://blackhat.a.la9.jp/ftotfr/pic/104.jpg" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <h2 id="livro">Adaptação em Livro / Light Novel</h2>
-            <p>Devido ao enorme sucesso de público e crítica, a obra foi adaptada em uma série de romances oficiais publicada pela editora <strong>KADOKAWA</strong>:</p>
-            <ul>
-                <li><strong>Título:</strong> Ruina 廃都の物語 1</li>
-                <li><strong>Autor / Escrito por:</strong> Akihiko Ureshino (嬉野 秋彦) / Supervisão: Karekusa Shoukichi</li>
-                <li><strong>Data de Lançamento:</strong> 5 de março de 2018 (320 páginas)</li>
-                <li><strong>ISBN-13:</strong> 978-4047350243</li>
-            </ul>
-
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Recursos:</strong></p>
-            <div class="play-links">
-                <a href="https://blackhat.a.la9.jp/ftotfr/game.htm" target="_blank"><i class="fa-solid fa-house"></i> Site Oficial do Autor (Karekusa Shoukichi)</a>
-                <a href="https://blackhat.a.la9.jp/ftotfr/ruina/manual.htm" target="_blank"><i class="fa-solid fa-book"></i> Manual Oficial do Jogo</a>
-                <a href="https://forest.watch.impress.co.jp/library/software/ruina/" target="_blank"><i class="fa-solid fa-newspaper"></i> Página na 窓の杜 (MADO no Mori)</a>
-                <a href="https://ruina-rm2k-en.carrd.co/" target="_blank"><i class="fa-solid fa-layer-group"></i> Central de Recursos e Traduções (Carrd)</a>
-                <a href="https://rmarchiv.de/games/2649" target="_blank"><i class="fa-solid fa-database"></i> Ficha no RMArchiv</a>
-                <a href="https://www.indiexpo.net/en/games/ruina" target="_blank"><i class="fa-solid fa-gamepad"></i> Página no IndieExpo</a>
-                <a href="https://www.amazon.co.jp/Ruina-%E5%BB%83%E9%83%BD%E3%81%AE%E7%89%A9%E8%AA%9E-1-%E5%AC%8D%E9%87%8E-%E7%A7%8B%E5%BD%A6/dp/4047350249" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Livro Oficial na Amazon JP</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads Gratuitos e Utilitários:</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/QFtDm" target="_blank"><i class="fa-solid fa-box-archive"></i> Download do Jogo Original (Internet Archive — RTP Incluso)</a>
-                <a href="https://www.freem.ne.jp/dl/win/2037" target="_blank"><i class="fa-solid fa-download"></i> Download Oficial na Freem! (ruina121.zip — 12.6 MB)</a>
-                <a href="https://dinklations.wordpress.com/2021/01/30/ruina-fairy-tale-of-the-forgotten-ruins-english-version/" target="_blank"><i class="fa-solid fa-language"></i> Tradução Oficial em Inglês (Dinklations v1.03)</a>
-                <a href="https://4br.me/gwzHkH3" target="_blank"><i class="fa-solid fa-download"></i> Download da Versão em Inglês (Uptodown)</a>
-                <a href="https://4br.me/OzPk" target="_blank"><i class="fa-solid fa-play"></i> Download EasyRPG Player (Executor para Windows 10/11)</a>
-            </div>
-
-            <p><small><em>Licença e Distribuição: O jogo é 100% gratuito (Freeware). O autor autorizou a tradução para o inglês com a condição expressa de manter os créditos intactos e o jogo totalmente gratuito para todos.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os sites oficiais do autor, utilitários para sistemas modernos, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "the-witchs-house-original-2012": {
@@ -7718,11 +8594,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/6c533ef7da8a8b485c75f86e39053f784f8d6496/header.jpg?t=1784210968",
             data: {
                 "Desenvolvedor": "AliceSoft",
-                "Publicadora": "Kagura Games / MangaGamer",
+                "Distribuidora": "Kagura Games / MangaGamer",
                 "Gêneros": "JRPG, Aventura, Eroge, Harem",
                 "Plataformas": "PC (Windows)",
-                "Lançamento": "Em breve (Steam)",
-                "Classificação": "18+ (Conteúdo Adulto, Linguagem Imprópria, Violência)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -7730,8 +8605,49 @@ const articlesDatabase = {
             { id: "jogabilidade", text: "2. Características e Mecânicas" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/3867130/Rance_01_02/?l=portuguese"
+                },
+                {
+                    label: "Website Oficial (Kagura Games)",
+                    url: "https://www.kaguragames.com/"
+                },
+                {
+                    label: "X / Twitter Oficial",
+                    url: "https://x.com/KaguraGames"
+                },
+                {
+                    label: "Discord Oficial",
+                    url: "https://discord.com/invite/kaguragames"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Rance 01",
+                    url: "https://4br.me/Rp8tH",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download Rance 02",
+                    url: "https://4br.me/C1oYbXu",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize as opções de download alternativas.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o instalador dentro da pasta extraída e siga as instruções na tela para concluir a instalação.",
+                    "Inicie o jogo através do atalho gerado na área de trabalho."
+                ]
+            }
+        },
         content: `
             <p><strong>Rance 01 + 02</strong> marca o início épico da icônica franquia de JRPGs adultos da <strong>AliceSoft</strong>, agora reunida em edições remasterizadas com gráficos atualizados, som reformulado e novos sistemas de batalha, publicadas no Ocidente por <strong>Kagura Games</strong> e <strong>MangaGamer</strong>.</p>
 
@@ -7740,9 +8656,8 @@ const articlesDatabase = {
             </div>
 
             <h2 id="sinopse">Sinopse e Histórias</h2>
-            
             <div style="margin: 15px 0; text-align: center;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/83f80660516d5b5780fb11d00e20757f.avif?t=1784210968" alt="Rance 01 & 02 Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/83f80660516d5b5780fb11d00e20757f.avif?t=1784210968" alt="Rance 01 & 02 Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
             </div>
 
             <p><strong>Rance 01 - Quest for Hikari</strong><br>
@@ -7752,7 +8667,7 @@ const articlesDatabase = {
             O incomparável guerreiro Rance é um grande lutador, um pensador rápido e um homem de sorte formidável. Infelizmente, ele não tem interesse em usar seus talentos para a paz mundial ou justiça, agindo apenas por seus próprios desejos egoístas. Agora a cidade de Custom está em perigo, e quem melhor para salvá-la do que nosso herói Rance (e sua fiel ajudante Sill)? Custom está salva... ou será que não?</p>
 
             <div style="margin: 15px 0; text-align: center;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/d5e05d0d60fead77b5f28732a22b78d4.avif?t=1784210968" alt="Gameplay Overview" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/d5e05d0d60fead77b5f28732a22b78d4.avif?t=1784210968" alt="Gameplay Overview" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
             </div>
 
             <p><strong>Exploração e Combate em Rance 01:</strong><br>
@@ -7762,24 +8677,13 @@ const articlesDatabase = {
             A cidade de Custom é ameaçada por quatro bruxas. Explore a cidade conversando com os residentes e se preparando para a batalha. Adentre a masmorra em formato de grade (grid), evitando armadilhas, resolvendo quebra-cabeças e derrotando monstros enquanto busca desvendar as origens das bruxas.</p>
 
             <h2 id="jogabilidade">Características e Diferenciais</h2>
-            
-            <div style="display: flex; flex-direction: column; gap: 10px; margin: 15px 0; align-items: center;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/910ab5a9bd7edd6ae73f1fcea03bc57c.avif?t=1784210968" alt="Extra 1" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/f17dba3bae9cb57164df3a3889d02e04.avif?t=1784210968" alt="Extra 2" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/1563dad30823e40b010e5ef8df53b14d.avif?t=1784210968" alt="Extra 3" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/4d3e7a16c5d3c709e2b844e443d15963.avif?t=1784210968" alt="Extra 4" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/2467f20e4eb70d2ab6d21f3745944f03.avif?t=1784210968" alt="Extra 5" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/extras/8701d26a6d297fc802256259fa97fd4f.avif?t=1784210968" alt="Extra 6" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://www.mangagamer.com/user_data/free_html/Rance0102_story.jpg" alt="MangaGamer Story Banner" style="max-width: 100%; height: auto; border-radius: 4px;">
-            </div>
-
             <ul>
                 <li><strong>Remake Completo:</strong> Releitura moderna do clássico <em>Rance: Quest for Hikari</em> de 1989 com história, gráficos, som e sistema de combate reformulados.</li>
                 <li><strong>O Mundo em Cartas (Rance 01):</strong> O chão que você pisa é formado por cartas. Escolha o caminho certo ou encare uma má sorte.</li>
                 <li><strong>Exploração em Grade (Rance 02):</strong> Navegue por uma masmorra massiva, em camadas e labiríntica baseada em grid.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <p><strong>Requisitos Mínimos:</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 8 / 8.1 / 10 / 11</li>
@@ -7787,55 +8691,20 @@ const articlesDatabase = {
                 <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
                 <li><strong>Placa de Vídeo:</strong> Compatível com DirectX 9 / OpenGL 4.1</li>
                 <li><strong>DirectX:</strong> Versão 9.0</li>
-                <li><strong>Rede:</strong> Conexão de internet banda larga</li>
-                <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
-                <li><strong>Notas Adicionais:</strong> Resolução 1280x768 ou superior. Feche outros programas em execução para evitar lentidão ao carregar mapas ou menus.</li>
-            </ul>
-
-            <p><strong>Requisitos Recomendados:</strong></p>
-            <ul>
-                <li><strong>Sistema Operacional:</strong> Windows 8 / 10 / 11</li>
-                <li><strong>Processador:</strong> Processador de 2+ GHz</li>
-                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
-                <li><strong>Placa de Vídeo:</strong> Suporte a driver de hardware OpenGL ES 2.0 para aceleração WebGL (AMD Catalyst 10.9, NVIDIA 358.50)</li>
-                <li><strong>DirectX:</strong> Versão 9.0</li>
                 <li><strong>Armazenamento:</strong> 4 GB de espaço disponível</li>
             </ul>
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/8978913feca7aa3884838b21d9746b6729a8228c/ss_8978913feca7aa3884838b21d9746b6729a8228c.1920x1080.jpg?t=1784210968" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/b08a274b75ef3a09018105e81151ae0232f22e2f/ss_b08a274b75ef3a09018105e81151ae0232f22e2f.1920x1080.jpg?t=1784210968" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/cbd9cb881a45332313bd6b3c23376f8a811a8120/ss_cbd9cb881a45332313bd6b3c23376f8a811a8120.1920x1080.jpg?t=1784210968" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/a9257a1a1ff830e79e24e34498aac20997dcbf92/ss_a9257a1a1ff830e79e24e34498aac20997dcbf92.1920x1080.jpg?t=1784210968" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/f282c280681a155fa8cb266f6fea223fc52f3828/ss_f282c280681a155fa8cb266f6fea223fc52f3828.1920x1080.jpg?t=1784210968" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/8978913feca7aa3884838b21d9746b6729a8228c/ss_8978913feca7aa3884838b21d9746b6729a8228c.1920x1080.jpg?t=1784210968" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/b08a274b75ef3a09018105e81151ae0232f22e2f/ss_b08a274b75ef3a09018105e81151ae0232f22e2f.1920x1080.jpg?t=1784210968" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/cbd9cb881a45332313bd6b3c23376f8a811a8120/ss_cbd9cb881a45332313bd6b3c23376f8a811a8120.1920x1080.jpg?t=1784210968" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/a9257a1a1ff830e79e24e34498aac20997dcbf92/ss_a9257a1a1ff830e79e24e34498aac20997dcbf92.1920x1080.jpg?t=1784210968" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3867130/f282c280681a155fa8cb266f6fea223fc52f3828/ss_f282c280681a155fa8cb266f6fea223fc52f3828.1920x1080.jpg?t=1784210968" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Redes Sociais Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/3867130/Rance_01_02/?l=portuguese" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam (Em breve)</a>
-                <a href="https://www.kaguragames.com/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Kagura Games)</a>
-                <a href="https://x.com/KaguraGames" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter Oficial</a>
-                <a href="https://discord.com/invite/kaguragames" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
-                <a href="https://www.youtube.com/c/KaguraGames" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
-                <a href="https://www.facebook.com/KaguraGames/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Oficial</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads Oficiais (Lançamento Antecipado / Versão DRM-free):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/Rp8tH" target="_blank"><i class="fa-solid fa-download"></i> Download Rance 01</a>
-                <a href="https://4br.me/C1oYbXu" target="_blank"><i class="fa-solid fa-download"></i> Download Rance 02</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação:<br>
-            1. Clique no link de download e aguarde o redirecionamento (Vidgazoo / servidor).<br>
-            2. Certifique-se de possuir espaço suficiente em disco.<br>
-            3. Execute o instalador (setup_rance_01_02_*.exe) e siga as instruções na tela.<br>
-            4. Após a conclusão, inicie o jogo pelo atalho gerado.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, arquivos de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "the-boogie-man": {
@@ -7847,13 +8716,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/header.jpg?t=1786326400",
             data: {
                 "Desenvolvedor": "Uri Games",
-                "Publicadora": "PLAYISM",
-                "Série": "The Strange Man (Vol. 3)",
-                "Engine": "WOLF RPG Editor",
+                "Distribuidora": "PLAYISM",
                 "Gêneros": "Aventura, Casual, Indie, Terror",
                 "Plataformas": "PC (Windows)",
-                "Lançamento": "13 de fevereiro de 2018",
-                "Classificação": "12+ (Violência, Terror)"
+                "Lançamento": "2018"
             }
         },
         toc: [
@@ -7861,31 +8727,75 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Jogabilidade" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/749840/The_Boogie_Man/"
+                },
+                {
+                    label: "Manual Oficial do Jogo (PDF)",
+                    url: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/manuals/03ff27dc0b147f89b4c97b60c1d606cd8a91ff9f/The_Boogie_Man_Manual.pdf?t=1786326400"
+                }
+            ],
+            files: [
+                {
+                    label: "Download (MegaUp)",
+                    url: "https://4br.me/IOUj9qvc",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download (Mega.nz)",
+                    url: "https://4br.me/nuxMjco",
+                    details: "Mirror alternativo via Mega"
+                },
+                {
+                    label: "Download (1Fichier)",
+                    url: "https://1fichier.com/?wk9u20v25vxl8ok3k6qt",
+                    details: "Mirror alternativo"
+                },
+                {
+                    label: "Download (GoFile)",
+                    url: "https://gofile.io/d/zh1oEZ",
+                    details: "Mirror alternativo via GoFile"
+                },
+                {
+                    label: "Download (Google Drive)",
+                    url: "https://4br.me/Q0mFB720",
+                    details: "Mirror alternativo via Google Drive"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o arquivo principal dentro da pasta extraída e inicie o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>The Boogie Man</strong> (<em>ブギーマン</em>) é o terceiro título da renomada série de terror psicológico <em>The Strange Man</em>, desenvolvida por <strong>Uri Games</strong> utilizando o WOLF RPG Editor e publicada mundialmente pela <strong>PLAYISM</strong>.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p><em>"Você é o jogador e deve perseguir o Boogie Man. Se você o pegar, você vence! E esse é o final feliz, mas se você não conseguir..."</em></p>
-
             <p>Após o detetive frio <strong>Keith</strong> levar sua esposa, <strong>Helena</strong>, com ele em um feriado obrigatório em um castelo misterioso, Helena faz uma confissão surpreendente. Logo em seguida, o <strong>Boogie Man</strong> aparece e, em seu rastro, assassinatos brutais começam a ocorrer.</p>
-
             <p>Como Keith é obcecado em proteger as pessoas após a morte tragicômica de seu filho, ele parte em uma perseguição implacável atrás do Boogie Man, na esperança de acabar com os assassinatos e com essa noite aterrorizante de "entretenimento". A versão da Steam conta com adições especiais, como conquistas e localização multilíngue.</p>
 
             <div style="margin: 20px 0; text-align: center;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/extras/7bc7f6bcfbb8243c29c3336407dc6259.avif?t=1786326400" alt="The Boogie Man Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/extras/7bc7f6bcfbb8243c29c3336407dc6259.avif?t=1786326400" alt="The Boogie Man Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
             </div>
 
             <h2 id="gameplay">Características e Jogabilidade</h2>
             <ul>
                 <li><strong>Aventura de Terror 2D:</strong> Foco em exploração imersiva combinada com elementos dinâmicos de ação e resolução de quebra-cabeças.</li>
-                <li><strong>Expressões Fortes de Violência:</strong> Apresenta uma gama diversificada de cenas viscerais e representações viscerais de terror.</li>
+                <li><strong>Expressões Fortes de Violência:</strong> Apresenta uma gama diversificada de cenas viscerais e representações fortes de terror.</li>
                 <li><strong>Múltiplos Finais:</strong> Suas escolhas durante a caçada determinam se você alcançará o final feliz ou desfechos aterrorizantes.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
                 <li><strong>Processador:</strong> Intel Core 2 1.06 GHz</li>
@@ -7897,42 +8807,15 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_adb99a68bd6844f8e2d1912e20ddc68ee5ab2d22.1920x1080.jpg?t=1786326400" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_774d5afc73e21f6a7a6c13e475bffaddf5cc95f6.1920x1080.jpg?t=1786326400" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_c957f2955b43fccc57ac3416e4b37fcb4c8382ab.1920x1080.jpg?t=1786326400" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_389ca8868eb569eaf3ea0e7a82c50efcd09b43fa.1920x1080.jpg?t=1786326400" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_3e4f70a0d3519071ec58aca77509036f8929a658.1920x1080.jpg?t=1786326400" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_adb99a68bd6844f8e2d1912e20ddc68ee5ab2d22.1920x1080.jpg?t=1786326400" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_774d5afc73e21f6a7a6c13e475bffaddf5cc95f6.1920x1080.jpg?t=1786326400" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_c957f2955b43fccc57ac3416e4b37fcb4c8382ab.1920x1080.jpg?t=1786326400" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_389ca8868eb569eaf3ea0e7a82c50efcd09b43fa.1920x1080.jpg?t=1786326400" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/ss_3e4f70a0d3519071ec58aca77509036f8929a658.1920x1080.jpg?t=1786326400" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Lojas e Redes Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/749840/The_Boogie_Man/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/749840/manuals/03ff27dc0b147f89b4c97b60c1d606cd8a91ff9f/The_Boogie_Man_Manual.pdf?t=1786326400" target="_blank"><i class="fa-solid fa-book"></i> Manual Oficial do Jogo (PDF)</a>
-                <a href="https://www.facebook.com/PLAYISM/" target="_blank"><i class="fa-brands fa-facebook"></i> PLAYISM Facebook</a>
-                <a href="https://x.com/playismEN" target="_blank"><i class="fa-brands fa-x-twitter"></i> PLAYISM X / Twitter</a>
-                <a href="https://www.youtube.com/ActiveGamingMedia" target="_blank"><i class="fa-brands fa-youtube"></i> Canal YouTube (Active Gaming Media)</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/IOUj9qvc" target="_blank"><i class="fa-solid fa-download"></i> Download MegaUp</a>
-                <a href="https://4br.me/nuxMjco" target="_blank"><i class="fa-solid fa-download"></i> Download Mega.nz</a>
-                <a href="https://1fichier.com/?wk9u20v25vxl8ok3k6qt" target="_blank"><i class="fa-solid fa-download"></i> Download 1Fichier</a>
-                <a href="https://gofile.io/d/zh1oEZ" target="_blank"><i class="fa-solid fa-download"></i> Download GoFile</a>
-                <a href="https://4br.me/vIbT1iDyr" target="_blank"><i class="fa-solid fa-download"></i> Download AnonFiles</a>
-                <a href="https://4br.me/zsvN" target="_blank"><i class="fa-solid fa-download"></i> Download Rapidgator</a>
-                <a href="https://clicknupload.club/m45z40cxqm37" target="_blank"><i class="fa-solid fa-download"></i> Download Clicknupload</a>
-                <a href="https://4br.me/Q0mFB720" target="_blank"><i class="fa-solid fa-download"></i> Download Google Drive</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação:<br>
-            1. Extraia o arquivo compactado.<br>
-            2. Aplique o crack se necessário.<br>
-            3. Execute o jogo e divirta-se!</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, manuais, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "pocket-mirror-goldener-traum": {
@@ -7944,12 +8827,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/4cd657ef5427bd85ed5101366b4ebdc1a7853828/header.jpg?t=1791968163",
             data: {
                 "Desenvolvedor": "AstralShift, VisuStella",
-                "Publicadora": "KOMODO",
-                "Série Relacionada": "Little Goody Two Shoes",
+                "Distribuidora": "KOMODO",
                 "Gêneros": "Aventura, Casual, Indie, RPG",
                 "Plataformas": "PC (Windows), Android (APK)",
-                "Lançamento": "19 de maio de 2023",
-                "Classificação": "14+ (Violência, Terror, Temas Sombrios)"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -7957,20 +8838,62 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Recursos" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1899060/Pocket_Mirror_GoldenerTraum/"
+                },
+                {
+                    label: "X / Twitter (AstralShift)",
+                    url: "https://x.com/AstralShiftPro"
+                },
+                {
+                    label: "Facebook (Komodo)",
+                    url: "https://www.facebook.com/KomodoHawaii"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Pocket Mirror APK (v1.0.1 - Android)",
+                    url: "https://4br.me/qYusf2n24",
+                    details: "Versão para dispositivos móveis Android"
+                },
+                {
+                    label: "Download Pocket Mirror ~ GoldenerTraum (Servidor 1)",
+                    url: "https://4br.me/EQEi25eMYx",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download Pocket Mirror ~ GoldenerTraum v1.1.5 (UploadHaven)",
+                    url: "https://4br.me/OSC6iQP",
+                    details: "Mirror alternativo para PC"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR (senha se necessária: 123).",
+                    "Execute o instalador ou arquivo executável dentro da pasta extraída e inicie o jogo.",
+                    "Para a versão Android, transfira o arquivo APK para o seu dispositivo móvel e instale permitindo fontes desconhecidas."
+                ]
+            }
+        },
         content: `
             <p><strong>Pocket Mirror ~ GoldenerTraum</strong> é a versão definitiva, totalmente remasterizada e expandida do aclamado jogo indie de terror gótico desenvolvido por <strong>AstralShift</strong> em colaboração com a <strong>VisuStella</strong>, e publicado pela <strong>KOMODO</strong>.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <div style="margin: 15px 0; text-align: center;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/5e4ab5ceb520c6f2f9aaea214ce5ebdc.avif?t=1791968163" alt="Pocket Mirror Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/5e4ab5ceb520c6f2f9aaea214ce5ebdc.avif?t=1791968163" alt="Pocket Mirror Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
             </div>
 
             <p>Bem-vindo a um mundo de maravilhas e escuridão, onde a realidade e os sonhos se entrelaçam e segredos espreitam em cada esquina. <em>Pocket Mirror</em> é uma aventura surreal que leva você por um reino misterioso onde nada é o que parece e tudo está conectado.</p>
 
             <div style="margin: 20px 0; text-align: center;">
-                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
                     <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/53f6f6004abd716186518138545e5ff8.webm?t=1791968163" type="video/webm">
                 </video>
             </div>
@@ -7978,7 +8901,7 @@ const articlesDatabase = {
             <p>Como uma jovem garota com um passado encoberto por nuvens de dúvida, você acorda em uma mansão estranha e assustadora tendo apenas o seu espelho de bolso em mãos. Em busca de suas memórias, você deve explorar corredores e cômodos retorcidos, resolver enigmas complexos, interagir com personagens únicos e desvendar a verdade por trás de sua verdadeira identidade e das forças sinistras em jogo.</p>
 
             <div style="margin: 20px 0; text-align: center;">
-                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
                     <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/050896abe675c9a9653daee917c9d182.webm?t=1791968163" type="video/webm">
                 </video>
             </div>
@@ -7986,15 +8909,14 @@ const articlesDatabase = {
             <p style="text-align: center; font-style: italic;">Will you be able to face the truth?</p>
 
             <div style="margin: 20px 0; text-align: center;">
-                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
                     <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/6323859fc56357c87f9b288b87e40496.webm?t=1791968163" type="video/webm">
                 </video>
             </div>
 
             <h2 id="gameplay">Características e Recursos</h2>
-            
             <div style="margin: 20px 0; text-align: center;">
-                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
                     <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/eb67db360804814e53a654b997850f0f.webm?t=1791968163" type="video/webm">
                 </video>
             </div>
@@ -8008,7 +8930,7 @@ const articlesDatabase = {
             </ul>
 
             <div style="margin: 20px 0; text-align: center;">
-                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <video autoplay loop muted playsinline style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
                     <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/extras/04dfdaf315d9d58f663b38c3258434f7.webm?t=1791968163" type="video/webm">
                 </video>
             </div>
@@ -8019,7 +8941,7 @@ const articlesDatabase = {
                 <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO:</strong> O jogo não é recomendado para pessoas sensíveis a temas de horror gráfico, sangue, mortes brutais e atmosferas de forte tensão psicológica.</p>
             </div>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <p><strong>Requisitos Mínimos (Windows):</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Microsoft Windows 10 (64-bit)</li>
@@ -8031,39 +8953,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_95fd9fe1edd5c80ebab5f716de0bfb2323ff23bf.1920x1080.jpg?t=1791968163" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_6edcabc14b35bb69a81c393781303716529e8a0c.1920x1080.jpg?t=1791968163" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_d4f2ae1c1369b427e21c83ba15de507bcbc60aca.1920x1080.jpg?t=1791968163" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_4d1a64827b25322acb25e745b1f9703a5b7a968c.1920x1080.jpg?t=1791968163" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_7682e15b672e8d270bc06e48bf00e7ce0d3b26ac.1920x1080.jpg?t=1791968163" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_9fe0b5fcd291d75a2b26a98052c2c432346bbb5b.1920x1080.jpg?t=1791968163" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_95fd9fe1edd5c80ebab5f716de0bfb2323ff23bf.1920x1080.jpg?t=1791968163" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_6edcabc14b35bb69a81c393781303716529e8a0c.1920x1080.jpg?t=1791968163" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_d4f2ae1c1369b427e21c83ba15de507bcbc60aca.1920x1080.jpg?t=1791968163" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_4d1a64827b25322acb25e745b1f9703a5b7a968c.1920x1080.jpg?t=1791968163" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_7682e15b672e8d270bc06e48bf00e7ce0d3b26ac.1920x1080.jpg?t=1791968163" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1899060/ss_9fe0b5fcd291d75a2b26a98052c2c432346bbb5b.1920x1080.jpg?t=1791968163" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Redes Sociais Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/1899060/Pocket_Mirror_GoldenerTraum/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://x.com/AstralShiftPro" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter (AstralShift)</a>
-                <a href="https://www.facebook.com/KomodoHawaii" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook (Komodo)</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC & Android):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/qYusf2n24" target="_blank"><i class="fa-brands fa-android"></i> Download Pocket Mirror APK (v1.0.1 - Android)</a>
-                <a href="https://4br.me/EQEi25eMYx" target="_blank"><i class="fa-solid fa-download"></i> Download Pocket Mirror ~ GoldenerTraum (Servidor 1)</a>
-                <a href="https://4br.me/OSC6iQP" target="_blank"><i class="fa-solid fa-download"></i> Download Pocket Mirror ~ GoldenerTraum v1.1.5 (UploadHaven)</a>
-                <a href="https://4br.me/abilcfhrA" target="_blank"><i class="fa-solid fa-download"></i> Download Versão Ativada (Senha descompactação: 123)</a>
-                <a href="https://4br.me/tWqyKq" target="_blank"><i class="fa-solid fa-arrow-rotate-right"></i> Patch de Atualização 1</a>
-                <a href="https://4br.me/hSFRW" target="_blank"><i class="fa-solid fa-arrow-rotate-right"></i> Patch de Atualização 2</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação para PC:<br>
-            1. Baixe o arquivo compactado e certifique-se de ter o WinRAR ou 7-Zip instalados.<br>
-            2. Descompacte o arquivo (use a senha <code>123</code> caso seja solicitada na versão ativada).<br>
-            3. Execute o instalador ou abra o executável diretamente e divirta-se!</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "our-wonderland": {
@@ -8188,35 +9087,76 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/0c0a4659b40d956fd81c9d82ca81c3ba04c7c4a8/header.jpg?t=1789631738",
             data: {
                 "Desenvolvedor": "Frontwing",
-                "Publicadora": "Frontwing USA, Bushiroad Inc.",
-                "Roteiro": "Asta Konno (ATRI)",
-                "Arte e Design": "Yusano & Akio Watanabe",
+                "Distribuidora": "Frontwing USA, Bushiroad Inc.",
                 "Gêneros": "Visual Novel, Aventura, Casual",
                 "Plataformas": "PC (Windows), Nintendo Switch",
-                "Lançamento": "25 de outubro de 2023",
-                "Classificação": "Livre (Todas as idades)"
+                "Lançamento": "2026"
             }
         },
         toc: [
             { id: "sinopse", text: "1. Sinopse e História" },
-            { id: "equipe", text: "2. Equipe de Produção e Elenco" },
+            { id: "gameplay", text: "2. Equipe de Produção e Elenco" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/2536840/GINKA/"
+                },
+                {
+                    label: "Website Oficial (Frontwing)",
+                    url: "http://ginka.frontwing.jp/"
+                },
+                {
+                    label: "X / Twitter Oficial",
+                    url: "https://x.com/ginka_fw"
+                },
+                {
+                    label: "Canal no YouTube",
+                    url: "https://www.youtube.com/@frontwing_1999"
+                }
+            ],
+            files: [
+                {
+                    label: "Download GINKA v1.06 (UploadHaven)",
+                    url: "https://4br.me/FLbF",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download GINKA v1.06 (Servidor Alternativo 1)",
+                    url: "https://seulink.digital/FLbF",
+                    details: "Mirror alternativo de download"
+                },
+                {
+                    label: "Download GINKA v1.06 (Servidor Alternativo 2)",
+                    url: "https://seulink.digital/ntGbIhBo",
+                    details: "Mirror alternativo de download"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam para apoiar os desenvolvedores ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o instalador (setup.exe) dentro da pasta extraída e siga as instruções na tela.",
+                    "Inicie o jogo através do atalho gerado na área de trabalho."
+                ]
+            }
+        },
         content: `
             <p><strong>GINKA</strong> é uma visual novel de drama e mistério desenvolvida pela <strong>Frontwing</strong>. Criada pelo talentoso duo por trás de <em>ATRI -My Dear Moments-</em> (Asta Konno e Yusano), a obra combina uma atmosfera nostálgica de verão com uma narrativa emocionante de reencontro e segredos sobrenaturais.</p>
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>Cinco anos atrás, na noite de um festival de verão, a amiga de infância de Aoba Ryusei, <strong>Shinomiya Ginka</strong>, desapareceu sem deixar vestígios. Os supersticiosos moradores da ilha acreditaram que aquilo foi obra de um deus e que ela havia sido "levada pelos espíritos".</p>
-
             <p>Agora no ensino médio, Ryusei decide visitar a ilha durante as férias de verão com uma pergunta em mente: Ginka teria voltado? Poderia ela estar vivendo uma vida normal de estudante?</p>
-
             <p>Infelizmente, suas esperanças desmoronam ao descobrir que Ginka nunca mais foi vista desde aquela noite. Desolado, ele se prepara para partir, quando encontra uma jovem garota idêntica à sua amiga desaparecida — Ginka.</p>
             <p><em>"Bem-vinda de volta, Ryusei."</em></p>
             <p>A garota não se lembra do próprio nome. Tudo o que ela sabe é que ama Ryusei. Onde ela esteve? Por que não envelheceu? Reunidos após tanto tempo, Ryusei jura ter a melhor temporada de férias de sua vida na pacata ilha de sua infância.</p>
 
-            <h2 id="equipe">Equipe de Produção e Elenco</h2>
+            <h2 id="gameplay">Equipe de Produção e Elenco</h2>
             <ul>
                 <li><strong>Planejamento e História:</strong> Konno Asta</li>
                 <li><strong>Arte e Design de Personagens:</strong> Yusano</li>
@@ -8231,8 +9171,7 @@ const articlesDatabase = {
                 <p style="margin: 0; font-size: 0.9em;"><strong>Nota de Conteúdo de IA:</strong> Os desenvolvedores informam que as vozes sintéticas em inglês do jogo foram desenvolvidas com o uso de tecnologia de inteligência artificial.</p>
             </div>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 10 / 11</li>
                 <li><strong>Processador:</strong> Intel Core 2 Duo 2.0 GHz</li>
@@ -8245,39 +9184,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_835988408a43d8ac2f5c16edcfd5a877d35bea2d.1920x1080.jpg?t=1789631738" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_09ab156b0b93b3f47b12b829f4012b3e84caf412.1920x1080.jpg?t=1789631738" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_5ce83a5a29ae12894af12a698ed843db7c3f2283.1920x1080.jpg?t=1789631738" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_07e1eb4021bd85a23513fa06390baeb1fa39eebf.1920x1080.jpg?t=1789631738" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_5522daf28f6b7a7b2f3b85d81dae7b1bc5779323.1920x1080.jpg?t=1789631738" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_2c2d1c22b9664074817d0c8642ff5b2c55f7756e.1920x1080.jpg?t=1789631738" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_835988408a43d8ac2f5c16edcfd5a877d35bea2d.1920x1080.jpg?t=1789631738" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_09ab156b0b93b3f47b12b829f4012b3e84caf412.1920x1080.jpg?t=1789631738" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_5ce83a5a29ae12894af12a698ed843db7c3f2283.1920x1080.jpg?t=1789631738" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_07e1eb4021bd85a23513fa06390baeb1fa39eebf.1920x1080.jpg?t=1789631738" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_5522daf28f6b7a7b2f3b85d81dae7b1bc5779323.1920x1080.jpg?t=1789631738" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2536840/ss_2c2d1c22b9664074817d0c8642ff5b2c55f7756e.1920x1080.jpg?t=1789631738" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Redes:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/2536840/GINKA/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="http://ginka.frontwing.jp/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Frontwing)</a>
-                <a href="https://store-jp.nintendo.com/item/software/D70010000080524" target="_blank"><i class="fa-solid fa-gamepad"></i> Versão para Nintendo Switch (JP)</a>
-                <a href="https://www.dlsite.com/soft/work/=/product_id/VJ01000949.html" target="_blank"><i class="fa-solid fa-store"></i> Página na DLsite</a>
-                <a href="https://x.com/ginka_fw" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter Oficial</a>
-                <a href="https://www.youtube.com/@frontwing_1999" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (v1.06):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/FLbF" target="_blank"><i class="fa-solid fa-download"></i> Download GINKA v1.06 (UploadHaven)</a>
-                <a href="https://seulink.digital/FLbF" target="_blank"><i class="fa-solid fa-download"></i> Download GINKA v1.06 (Servidor Alternativo 1)</a>
-                <a href="https://seulink.digital/ntGbIhBo" target="_blank"><i class="fa-solid fa-download"></i> Download GINKA v1.06 (Servidor Alternativo 2)</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação:<br>
-            1. Clique no link de download e aguarde o redirecionamento.<br>
-            2. Extraia o arquivo .zip baixado usando o 7-Zip.<br>
-            3. Execute o instalador (setup.exe) dentro da pasta e jogue através do atalho gerado.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "fran-bow": {
@@ -8289,11 +9205,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/header.jpg?t=1693287362",
             data: {
                 "Desenvolvedor": "Killmonday Games AB",
-                "Publicadora": "Killmonday Games AB",
+                "Distribuidora": "Killmonday Games AB",
                 "Gêneros": "Aventura, Indie, Terror Point-and-Click",
                 "Plataformas": "PC, Mac, Linux, iOS, Android, Nintendo Switch, PlayStation, Xbox",
-                "Lançamento PC": "27 de agosto de 2015",
-                "Classificação": "17+ / 16+ (Violência Extrema, Gore, Temas Sensíveis)"
+                "Lançamento": "2015"
             }
         },
         toc: [
@@ -8301,8 +9216,45 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Recursos" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/362680/Fran_Bow/"
+                },
+                {
+                    label: "Website Oficial (Killmonday)",
+                    url: "https://killmondaygames.com/fran-bow/"
+                },
+                {
+                    label: "Página na GOG",
+                    url: "https://www.gog.com/en/game/fran_bow"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Fran Bow v1.0.1 (Servidor 1)",
+                    url: "https://seulink.digital/ANiA",
+                    details: "Versão DRM-free para PC"
+                },
+                {
+                    label: "Download Fran Bow v1.0.1 (Servidor 2)",
+                    url: "https://seulink.digital/Nao4w",
+                    details: "Mirror alternativo de download"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam ou GOG para apoiar os desenvolvedores, ou utilize um dos links de download alternativos.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o instalador (setup.exe) dentro da pasta extraída e siga as instruções na tela.",
+                    "Inicie o jogo através do atalho gerado na área de trabalho."
+                ]
+            }
+        },
         content: `
             <p><strong>Fran Bow</strong> é um jogo de aventura e terror psicológico macabro desenvolvido e publicado pela <strong>Killmonday Games AB</strong>. A obra é amplamente reconhecida por seu estilo de arte desenhado à mão em 2D e sua narrativa visceral que explora traumas infantis e universos surreais.</p>
 
@@ -8312,21 +9264,20 @@ const articlesDatabase = {
 
             <h2 id="sinopse">Sinopse e História</h2>
             <p>Fran Bow é uma garota que luta contra um transtorno mental e um destino injusto. Após testemunhar a perda horrível e misteriosa de seus pais — encontrados esquartejados em sua própria casa —, Fran entra em choque e foge para a floresta junto com seu único amigo: o Sr. Meia-Noite, um gato preto que ela havia recebido de presente de seus pais.</p>
-
             <p>Ao recuperar a consciência, Fran se vê internada no Asilo Oswald, uma instituição psiquiátrica opressiva para crianças, e o Sr. Meia-Noite desapareceu. Após ter um sonho vívido com seu amado gato, ela decide escapar do asilo para encontrá-lo e retornar para casa, onde sua Tia Grace, sua única parente viva, a aguarda.</p>
 
             <h2 id="gameplay">Características e Recursos</h2>
             <ul>
                 <li><strong>Terror Psicológico Narrativo:</strong> Uma aventura envolvente guiada por uma história profunda e sombria.</li>
                 <li><strong>Estilo de Arte Único:</strong> Visuais e animações 2D exclusivos, inteiramente desenhados à mão.</li>
-                <li><strong>Sistema de Medicação:</strong> Administre remédios para abrir um mundo oculto aterrizante que ajuda a desvendar enigmas e encontrar itens.</li>
+                <li><strong>Sistema de Medicação:</strong> Administre remédios para abrir um mundo oculto aterrorizante que ajuda a desvendar enigmas e encontrar itens.</li>
                 <li><strong>Puzzles Diversificados:</strong> Uma grande variedade de quebra-cabeças com diferentes níveis de dificuldade integrados à história.</li>
                 <li><strong>Mini-jogos Estilizados:</strong> Três mini-jogos inspirados em arcades com direções artísticas distintas que atuam nas transições da trama.</li>
                 <li><strong>Personagens Marcantes:</strong> Mais de 50 personagens interativos e únicos.</li>
             </ul>
 
-            <h2 id="requisitos">Requisitos de Sistema (PC / Windows)</h2>
-            <p><strong>Requisitos Mínimos:</strong></p>
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <p><strong>Requisitos Mínimos (PC / Windows):</strong></p>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Windows 7 ou superior</li>
                 <li><strong>Processador:</strong> 1.7 GHz Dual Core</li>
@@ -8338,43 +9289,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_bcdd843d50cea0d8f6ba4d1eb9b1a4006a2dbc9a.1920x1080.jpg?t=1693287362" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_a4b9506830322508c19cd4ce4bd4b9138a5f3bad.1920x1080.jpg?t=1693287362" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_987bf12caa85a82380293c2036c828bf42fdeec7.1920x1080.jpg?t=1693287362" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_ed7e5ae7e60a9a24f1ce3b2494e107d6b09e5b81.1920x1080.jpg?t=1693287362" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_164729ca8a6148387211cf8e1577628d90e6089a.1920x1080.jpg?t=1693287362" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_aa59c6a08df075002dd7220fd7d2da74f5486cdd.1920x1080.jpg?t=1693287362" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_bcdd843d50cea0d8f6ba4d1eb9b1a4006a2dbc9a.1920x1080.jpg?t=1693287362" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_a4b9506830322508c19cd4ce4bd4b9138a5f3bad.1920x1080.jpg?t=1693287362" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_987bf12caa85a82380293c2036c828bf42fdeec7.1920x1080.jpg?t=1693287362" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_ed7e5ae7e60a9a24f1ce3b2494e107d6b09e5b81.1920x1080.jpg?t=1693287362" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_164729ca8a6148387211cf8e1577628d90e6089a.1920x1080.jpg?t=1693287362" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362680/ss_aa59c6a08df075002dd7220fd7d2da74f5486cdd.1920x1080.jpg?t=1693287362" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/362680/Fran_Bow/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://killmondaygames.com/fran-bow/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial (Killmonday)</a>
-                <a href="https://www.gog.com/en/game/fran_bow" target="_blank"><i class="fa-solid fa-store"></i> Página na GOG</a>
-                <a href="https://www.nintendo.com/us/store/products/fran-bow-switch/" target="_blank"><i class="fa-solid fa-gamepad"></i> Nintendo Switch</a>
-                <a href="https://store.playstation.com/en-us/concept/10007382" target="_blank"><i class="fa-brands fa-playstation"></i> PlayStation Store</a>
-                <a href="https://www.xbox.com/en-us/games/store/fran-bow/9n3ncmm6nk7s" target="_blank"><i class="fa-brands fa-xbox"></i> Xbox Store</a>
-                <a href="https://apps.apple.com/se/app/fran-bow/id6445911052" target="_blank"><i class="fa-brands fa-app-store"></i> App Store (iOS)</a>
-                <a href="https://play.google.com/store/apps/details?id=com.KillmondayGamesAB.FranBow&hl=en&gl=US&pli=1" target="_blank"><i class="fa-brands fa-google-play"></i> Google Play (Android)</a>
-                <a href="https://x.com/Killmondaygames" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
-                <a href="https://www.youtube.com/Killmondaygames" target="_blank"><i class="fa-brands fa-youtube"></i> Canal no YouTube</a>
-                <a href="https://www.facebook.com/officialfranbow/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Oficial</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (v1.0.1 DRM-free):</strong></p>
-            <div class="play-links">
-                <a href="https://seulink.digital/ANiA" target="_blank"><i class="fa-solid fa-download"></i> Download Fran Bow v1.0.1 (Servidor 1)</a>
-                <a href="https://seulink.digital/Nao4w" target="_blank"><i class="fa-solid fa-download"></i> Download Fran Bow v1.0.1 (Servidor 2)</a>
-            </div>
-
-            <p><small><em>Instruções de Instalação:<br>
-            1. Clique no link de download e aguarde o redirecionamento.<br>
-            2. Extraia o arquivo compactado usando o 7-Zip ou extrator padrão.<br>
-            3. Execute o instalador (setup.exe) dentro da pasta e jogue através do atalho gerado na área de trabalho.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "misanthropy": {
@@ -8387,9 +9311,8 @@ const articlesDatabase = {
             data: {
                 "Desenvolvedor": "004-B (naoeraoazir)",
                 "Gêneros": "RPG Narrativo, Investigação, Tactical RPG, Cyberpunk",
-                "Combate": "Tactical Turn-Based RPG (TRPG)",
                 "Plataformas": "PC (Windows)",
-                "Temas": "Humanidade, IAs, Imortalidade, Dependência Tecnológica, Religião"
+                "Lançamento": "2026"
             }
         },
         toc: [
@@ -8397,16 +9320,32 @@ const articlesDatabase = {
             { id: "equipe", text: "2. Núcleo Investigativo" },
             { id: "gameplay", text: "3. Jogabilidade e Investigação Tática" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [],
+            files: [
+                {
+                    label: "Download MISANTHROPY (Google Drive)",
+                    url: "https://drive.google.com/file/d/1TG1zHfU1RQ3OMprgsHnYLyEnV9a6LLnF/view?usp=sharing",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o jogo através do link de download fornecido.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o arquivo executável dentro da pasta extraída para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <p><strong>MISANTHROPY</strong> é um jogo independente desenvolvido por <strong>004-B (naoeraoazir)</strong> que mescla elementos de RPG narrativo, investigação minuciosa, exploração e combate tático em turnos (TRPG). Sua atmosfera imersiva combina <em>Gothic Cyberpunk</em>, <em>Dystopian Y2K</em>, brutalismo e interfaces baseadas em ASCII, halftone e terminais.</p>
 
             <h2 id="sinopse">O Mundo e a Premissa</h2>
             <p>A história se passa muito tempo após um conflito conhecido como a <strong>Guerra das Duas Consciências</strong>, uma grande guerra travada entre humanos e inteligências artificiais com ideologias divergentes. O conflito eventualmente terminou com a assinatura do Tratado de Paz Eterno, inaugurando uma era de coexistência.</p>
-
             <p>Anos depois, surge a <strong>Acepptha</strong>, uma corporação gigantesca que desenvolve o revolucionário <strong>Projeto INFINITY</strong>. O projeto oferece algo que parecia impossível: superar a morte através da integração entre humanidade e tecnologia. Inicialmente restrito às classes mais ricas, o processo se disseminou com o tempo até que todos os humanos remanescentes optassem pela hibridização. O grande revés? Isso gerou uma civilização completamente dependente da tecnologia para continuar viva.</p>
-
             <p>Então, o cenário desmorona com a aparição de <strong>The Last Angel</strong>. Um sinal desconhecido detectado globalmente cuja manifestação visual lembra um anjo, acompanhado de códigos indifetíveis e uma mensagem devastadora:</p>
             <p style="text-align: center; font-weight: bold; color: #ff5555;">Restam 90 dias.</p>
             <p>Ao final desse período, toda a tecnologia será desligada — incluindo os sistemas que mantêm os humanos híbridos vivos. É uma sentença absoluta de extinção.</p>
@@ -8430,20 +9369,13 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://i.8upload.com/image/cdd7a87a8d4d5282/captura-de-tela-2026-10-22-072907.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://i.8upload.com/image/8e016e3c67779398/captura-de-tela-2026-10-22-072927.webp" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://i.8upload.com/image/b5afd88dc0c33f8d/captura-de-tela-2026-10-22-093957.webp" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://i.8upload.com/image/cdd7a87a8d4d5282/captura-de-tela-2026-10-22-072907.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://i.8upload.com/image/8e016e3c67779398/captura-de-tela-2026-10-22-072927.webp" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://i.8upload.com/image/b5afd88dc0c33f8d/captura-de-tela-2026-10-22-093957.webp" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
-            <div class="play-links">
-                <a href="https://drive.google.com/file/d/1TG1zHfU1RQ3OMprgsHnYLyEnV9a6LLnF/view?usp=sharing" target="_blank"><i class="fa-solid fa-box-archive"></i> Download MISANTHROPY (Google Drive)</a>
-            </div>
-
-            <p><small><em>Nota da Franquia: Mais do que apenas impedir The Last Angel, o cerne filosófico de MISANTHROPY questiona: se a humanidade finalmente conquistou a morte, o que acontece quando algo decide que ela nunca mereceu a imortalidade?</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte o link de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "musume": {
@@ -8535,6 +9467,100 @@ const articlesDatabase = {
             { id: "galeria", text: "4. Galeria de Imagens" },
             { id: "links", text: "5. Links Oficiais e Downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página Oficial no Itch.io",
+                    url: "https://ingeniusstudios.itch.io/high-scho"
+                },
+                {
+                    label: "Perfil do Desenvolvedor (ingeniusstudios)",
+                    url: "https://ingeniusstudios.itch.io/"
+                },
+                {
+                    label: "Site de Fã / Comunidade",
+                    url: "https://college-brawl.com/"
+                },
+                {
+                    label: "X / Twitter Oficial",
+                    url: "https://x.com/collegebrawlcom"
+                },
+                {
+                    label: "Facebook Oficial",
+                    url: "https://www.facebook.com/collegebrawlcom"
+                }
+            ],
+            files: [
+                {
+                    label: "Download APK (Servidor 1)",
+                    url: "https://4br.me/81M2acnnc",
+                    details: "Android (APK — com.IngeniusStudios.CollegeBrawlAndroid)"
+                },
+                {
+                    label: "Download APK (Servidor 2)",
+                    url: "https://4br.me/OWuZd1w",
+                    details: "Android (APK — com.IngeniusStudios.CollegeBrawlAndroid)"
+                },
+                {
+                    label: "Download APK (Servidor 3)",
+                    url: "https://4br.me/NrS1B",
+                    details: "Android (APK — com.IngeniusStudios.CollegeBrawlAndroid)"
+                },
+                {
+                    label: "Download APK (Servidor 4)",
+                    url: "https://4br.me/ifSIkH",
+                    details: "Android (APK — com.IngeniusStudios.CollegeBrawlAndroid)"
+                },
+                {
+                    label: "Download APK (Servidor 5)",
+                    url: "https://4br.me/aOqOm04cw",
+                    details: "Android (APK — com.IngeniusStudios.CollegeBrawlAndroid)"
+                },
+                {
+                    label: "Download PC (Servidor 1)",
+                    url: "https://4br.me/SgoKyj",
+                    details: "PC (Windows — Uncensored x86)"
+                },
+                {
+                    label: "Download PC (Servidor 2)",
+                    url: "https://4br.me/5g9Lu",
+                    details: "PC (Windows — Uncensored x86)"
+                },
+                {
+                    label: "Download PC (Servidor 3)",
+                    url: "https://4br.me/lWNJscXpq",
+                    details: "PC (Windows — Uncensored x86)"
+                },
+                {
+                    label: "Download PC (Servidor 4)",
+                    url: "https://4br.me/a4NrH",
+                    details: "PC (Windows — Uncensored x86)"
+                },
+                {
+                    label: "Download Mac (Servidor 1)",
+                    url: "https://4br.me/hSXlFsm2",
+                    details: "macOS (Uncensored)"
+                },
+                {
+                    label: "Download Mac (Servidor 2)",
+                    url: "https://4br.me/42eR",
+                    details: "macOS (Uncensored)"
+                },
+                {
+                    label: "Download Mac (Servidor 3)",
+                    url: "https://4br.me/6vIcUEACi",
+                    details: "macOS (Uncensored)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Acesse o link oficial ou utilize um dos servidores de download fornecidos.",
+                    "Para Android, baixe o arquivo APK, permita a instalação de fontes desconhecidas e instale-o.",
+                    "Para PC ou macOS, extraia o arquivo compactado e execute o executável."
+                ]
+            }
+        },
         content: `
             <p><strong>College Brawl</strong> é um jogo independente de ação e beat 'em up lateral desenvolvido por <strong>ingeniusstudios</strong> (conhecido pelo criador Crimson Bird / LAGS). O título gerou imensa repercussão nas redes sociais como TikTok e YouTube, acumulando milhões de downloads.</p>
 
@@ -8562,10 +9588,10 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://img.itch.zone/aW1hZ2UvNTU0NTI3LzI5MDQ2NzMucG5n/original/XXRsB1.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://kotaku.com/igdb/image/upload/t_original/sckr9y.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://kotaku.com/igdb/image/upload/t_original/sckr9w.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://gamefabrique.com/storage/screenshots/pc/college-brawl-14.webp" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvNTU0NTI3LzI5MDQ2NzMucG5n/original/XXRsB1.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://kotaku.com/igdb/image/upload/t_original/sckr9y.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://kotaku.com/igdb/image/upload/t_original/sckr9w.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://gamefabrique.com/storage/screenshots/pc/college-brawl-14.webp" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
             <hr>
@@ -8619,12 +9645,10 @@ const articlesDatabase = {
             image: "https://img.itch.zone/aW1nLzE3OTEzODA0LnBuZw==/original/tpgfWS.png",
             data: {
                 "Desenvolvedor": "Remtairy (Rem + Sachinama)",
-                "Publicadora": "Remtairy",
-                "Engine": "RPG Maker MV",
+                "Distribuidora": "Remtairy",
                 "Gêneros": "RPG, Simulação, Estratégia, Eroge",
-                "Plataformas": "PC (Windows). Ports de fãs para Android (APK)",
-                "Lançamento": "15 de dezembro de 2021 (v1.3.1.69 em jan/2026)",
-                "Classificação": "18+ (Conteúdo Adulto Explícito)"
+                "Plataformas": "PC (Windows), Android (APK Port)",
+                "Lançamento": "2021"
             }
         },
         toc: [
@@ -8632,8 +9656,89 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Mecânicas de Jogo e Recursos" },
             { id: "requisitos", text: "3. Especificações e Plataformas" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Website Oficial",
+                    url: "https://remtairy.com/karryns-prison/"
+                },
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/1619750/Karryns_Prison/"
+                },
+                {
+                    label: "Página no Itch.io",
+                    url: "https://remtairy.itch.io/karryns-prison"
+                },
+                {
+                    label: "DLsite (Censura Mosaico)",
+                    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ331590.html"
+                },
+                {
+                    label: "Fanza",
+                    url: "https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_259704/"
+                },
+                {
+                    label: "Patreon do Desenvolvedor",
+                    url: "https://www.patreon.com/remtairy"
+                },
+                {
+                    label: "Discord Oficial",
+                    url: "https://discord.gg/Zb7gG3u"
+                },
+                {
+                    label: "Twitter / X Oficial",
+                    url: "https://twitter.com/Remtairy"
+                }
+            ],
+            files: [
+                {
+                    label: "Download PC v1.3.1.69 (Servidor 1)",
+                    url: "https://4br.me/Mrreua13",
+                    details: "PC (Windows — v1.3.1.69 FULL + DLCs)"
+                },
+                {
+                    label: "Download PC v1.3.1.69 (Servidor 2)",
+                    url: "https://4br.me/CNv0pG4yB",
+                    details: "PC (Windows — v1.3.1.69 FULL + DLCs)"
+                },
+                {
+                    label: "Download PC v1.3.1.21 (Servidor Alternativo)",
+                    url: "https://4br.me/LHMDOYdZOj",
+                    details: "PC (Windows — Versão alternativa)"
+                },
+                {
+                    label: "Download APK Port (Servidor 1)",
+                    url: "https://4br.me/Pbdm4ZVu",
+                    details: "Android (APK Port — v1.3.1.21 FULL + DLCs)"
+                },
+                {
+                    label: "Download APK Port (Servidor 2)",
+                    url: "https://4br.me/NwrymJ",
+                    details: "Android (APK Port — v1.3.1.21 FULL + DLCs)"
+                },
+                {
+                    label: "Download CG Rip (Servidor 1)",
+                    url: "https://4br.me/tZUHkAs",
+                    details: "Pacote de Galeria & Mídia"
+                },
+                {
+                    label: "Download CG Rip (Servidor 2)",
+                    url: "https://4br.me/KUOovii2B",
+                    details: "Pacote de Galeria & Mídia"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam, Itch.io ou DLsite para apoiar a desenvolvedora, ou utilize os servidores de download alternativos fornecidos.",
+                    "Para PC (Windows), extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR e execute o arquivo executável para iniciar.",
+                    "Para a versão Android (APK Port), transfira o arquivo APK para o seu dispositivo móvel, permita a instalação de fontes desconhecidas e instale-o."
+                ]
+            }
+        },
         content: `
             <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
                 <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém nudez total, atos sexuais explícitos, linguagem imprópria e temas de corrupção. Discrição estritamente recomendada para maiores de 18 anos.</p>
@@ -8662,53 +9767,19 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4MC5wbmc=/original/SV0qRt.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4MS5wbmc=/original/iuVFET.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4Mi5wbmc=/original/%2FpwpZ6.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4My5wbmc=/original/t2YElt.png" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4Ny5wbmc=/original/NNffVs.png" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4OS5wbmc=/original/hoDO0M.png" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114151.jpg" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114319.jpg" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114822.jpg" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4MC5wbmc=/original/SV0qRt.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4MS5wbmc=/original/iuVFET.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4Mi5wbmc=/original/%2FpwpZ6.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4My5wbmc=/original/t2YElt.png" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4Ny5wbmc=/original/NNffVs.png" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk2ODg3Ni8xNzkxMzc4OS5wbmc=/original/hoDO0M.png" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114151.jpg" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114319.jpg" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://remtairy.com/wp-content/uploads/2020/03/2020-03-12_114822.jpg" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://remtairy.com/karryns-prison/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial</a>
-                <a href="https://store.steampowered.com/app/1619750/Karryns_Prison/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://remtairy.itch.io/karryns-prison" target="_blank"><i class="fa-brands fa-itch-io"></i> Página no Itch.io</a>
-                <a href="https://www.dlsite.com/maniax/work/=/product_id/RJ331590.html" target="_blank"><i class="fa-solid fa-store"></i> DLsite (Censura Mosaico)</a>
-                <a href="https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_259704/" target="_blank"><i class="fa-solid fa-store"></i> Fanza</a>
-                <a href="https://www.patreon.com/remtairy" target="_blank"><i class="fa-brands fa-patreon"></i> Patreon do Desenvolvedor</a>
-                <a href="https://discord.gg/Zb7gG3u" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial</a>
-                <a href="https://twitter.com/Remtairy" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter / X Oficial</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo e Mídia:</strong></p>
-            
-            <p><strong>PC (Windows — v1.3.1.69 FULL + DLCs):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/Mrreua13" target="_blank"><i class="fa-brands fa-windows"></i> Download PC v1.3.1.69 (Servidor 1)</a>
-                <a href="https://4br.me/CNv0pG4yB" target="_blank"><i class="fa-brands fa-windows"></i> Download PC v1.3.1.69 (Servidor 2)</a>
-                <a href="https://4br.me/LHMDOYdZOj" target="_blank"><i class="fa-brands fa-windows"></i> Download PC v1.3.1.21 (Servidor Alternativo)</a>
-            </div>
-
-            <p style="margin-top: 10px;"><strong>Android (APK Port — v1.3.1.21 FULL + DLCs):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/Pbdm4ZVu" target="_blank"><i class="fa-brands fa-android"></i> Download APK Port (Servidor 1)</a>
-                <a href="https://4br.me/NwrymJ" target="_blank"><i class="fa-brands fa-android"></i> Download APK Port (Servidor 2)</a>
-            </div>
-
-            <p style="margin-top: 10px;"><strong>Pacote de Galeria & Mídia (CG Rip Collection):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/tZUHkAs" target="_blank"><i class="fa-solid fa-images"></i> Download CG Rip (Servidor 1)</a>
-                <a href="https://4br.me/KUOovii2B" target="_blank"><i class="fa-solid fa-images"></i> Download CG Rip (Servidor 2)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "meltys-quest": {
@@ -8730,12 +9801,10 @@ const articlesDatabase = {
             image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/723090/header.jpg",
             data: {
                 "Desenvolvedor": "Happy Life (Sachinama)",
-                "Publicadora": "Remtairy / Kagura Games",
-                "Engine": "RPG Maker MV",
+                "Distribuidora": "Remtairy / Kagura Games",
                 "Gêneros": "RPG, JRPG, Eroge, Fantasia",
-                "Plataformas": "PC (Windows, Linux, macOS). Ports de fãs para Android",
-                "Lançamento": "22 de outubro de 2017",
-                "Classificação": "18+ (Conteúdo Adulto Explícito)"
+                "Plataformas": "PC (Windows, Linux, macOS), Android (APK)",
+                "Lançamento": "2017"
             }
         },
         toc: [
@@ -8743,8 +9812,65 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Mecânicas e Recursos" },
             { id: "requisitos", text: "3. Requisitos e Desempenho" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Website Oficial",
+                    url: "https://remtairy.com/meltys-quest/"
+                },
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/723090/Meltys_Quest/"
+                },
+                {
+                    label: "DLsite (Inglês)",
+                    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ304594.html"
+                },
+                {
+                    label: "Denpasoft",
+                    url: "https://denpasoft.com/products/meltys-quest"
+                },
+                {
+                    label: "JAST USA",
+                    url: "https://jaststore.com/games/rmtry001/meltys-quest"
+                },
+                {
+                    label: "Fakku",
+                    url: "https://www.fakku.net/games/meltys-quest-english"
+                },
+                {
+                    label: "Guia Oficial do Desenvolvedor (Ci-en)",
+                    url: "https://ci-en.dlsite.com/creator/2068/article/34385"
+                }
+            ],
+            files: [
+                {
+                    label: "Download PC Meltys Quest",
+                    url: "https://4br.me/nhBcoFe",
+                    details: "PC (Windows — Versão Completa)"
+                },
+                {
+                    label: "Download Android (Arquivo 1 / APK)",
+                    url: "https://4br.me/MqLJIdWp6S",
+                    details: "Android (Port de Fã — Requer instalação em 2 arquivos: APK + .RPA)"
+                },
+                {
+                    label: "Download Android (Arquivo 2 / .RPA)",
+                    url: "https://4br.me/6ayuv6jjl",
+                    details: "Android (Port de Fã — Requer instalação em 2 arquivos: APK + .RPA)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam, DLsite ou outras lojas oficiais para apoiar os desenvolvedores, ou utilize os links de download alternativos fornecidos.",
+                    "Para PC (Windows), extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR e execute o arquivo executável para iniciar.",
+                    "Para a versão Android (Port de Fã), baixe ambos os arquivos (APK e .RPA), instale o aplicativo APK e certifique-se de posicionar o arquivo .RPA corretamente conforme o procedimento do port."
+                ]
+            }
+        },
         content: `
             <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
                 <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém nudez, conteúdo sexual explícito, temas de corrupção e elementos adultos variados. Discrição estritamente recomendada para maiores de 18 anos.</p>
@@ -8771,41 +9897,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://remtairy.com/wp-content/uploads/2019/02/6.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://remtairy.com/wp-content/uploads/2019/02/7.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://remtairy.com/wp-content/uploads/2019/02/8.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://remtairy.com/wp-content/uploads/2019/02/1.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://remtairy.com/wp-content/uploads/2019/02/2.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://remtairy.com/wp-content/uploads/2019/02/3.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/6.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/7.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/8.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/1.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/2.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://remtairy.com/wp-content/uploads/2019/02/3.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://remtairy.com/meltys-quest/" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial</a>
-                <a href="https://store.steampowered.com/app/723090/Meltys_Quest/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://www.dlsite.com/maniax/work/=/product_id/RJ304594.html" target="_blank"><i class="fa-solid fa-store"></i> DLsite (Inglês)</a>
-                <a href="https://denpasoft.com/products/meltys-quest" target="_blank"><i class="fa-solid fa-store"></i> Denpasoft</a>
-                <a href="https://jaststore.com/games/rmtry001/meltys-quest" target="_blank"><i class="fa-solid fa-store"></i> JAST USA</a>
-                <a href="https://www.fakku.net/games/meltys-quest-english" target="_blank"><i class="fa-solid fa-store"></i> Fakku</a>
-                <a href="https://ci-en.dlsite.com/creator/2068/article/34385" target="_blank"><i class="fa-solid fa-book"></i> Guia Oficial do Desenvolvedor (Ci-en)</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo:</strong></p>
-            
-            <p><strong>PC (Windows — Versão Completa):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/nhBcoFe" target="_blank"><i class="fa-brands fa-windows"></i> Download PC Meltys Quest</a>
-            </div>
-
-            <p style="margin-top: 10px;"><strong>Android (Port de Fã — Requer instalação em 2 arquivos: APK + .RPA):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/MqLJIdWp6S" target="_blank"><i class="fa-brands fa-android"></i> Download Android (Arquivo 1 / APK)</a>
-                <a href="https://4br.me/6ayuv6jjl" target="_blank"><i class="fa-brands fa-android"></i> Download Android (Arquivo 2 / .RPA)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, redes sociais, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "treasure-hunter-claire": {
@@ -8817,12 +9918,10 @@ const articlesDatabase = {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/capsule_616x353.jpg",
             data: {
                 "Desenvolvedor": "Acerola (あせろら)",
-                "Publicadora": "Acerola / Kagura Games",
-                "Engine": "WOLF RPG Editor (32-bit)",
+                "Distribuidora": "Acerola / Kagura Games",
                 "Gêneros": "RPG, Aventura, Eroge, Fantasia",
-                "Plataformas": "PC (Windows). Sem versão oficial mobile/Android",
-                "Lançamento": "7 de julho de 2017 (JP) / 19 de julho de 2018 (Mundial)",
-                "Classificação": "18+ (Conteúdo Adulto Explícito sem Mosaico na versão ocidental)"
+                "Plataformas": "PC (Windows)",
+                "Lançamento": "2018"
             }
         },
         toc: [
@@ -8830,8 +9929,75 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Jogabilidade e Características" },
             { id: "requisitos", text: "3. Requisitos de Sistema" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/828070/Treasure_Hunter_Claire/"
+                },
+                {
+                    label: "Página na GOG",
+                    url: "https://www.gog.com/game/treasure_hunter_claire"
+                },
+                {
+                    label: "GOG (Versão Unrated)",
+                    url: "https://www.gog.com/game/treasure_hunter_claire_unrated"
+                },
+                {
+                    label: "Loja Oficial Kagura Games",
+                    url: "https://www.kaguragames.com/product/treasure-hunter-claire/"
+                },
+                {
+                    label: "Patch Oficial v8 (Necessário para Steam/GOG)",
+                    url: "https://www.kaguragames.com/product/treasure-hunter-claire-steam-patch/"
+                },
+                {
+                    label: "DLsite (Versão Original JP)",
+                    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ195774.html"
+                },
+                {
+                    label: "Discord Oficial Kagura Games",
+                    url: "https://discord.gg/kaguragames"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Servidor 1",
+                    url: "https://4br.me/jHASki",
+                    details: "Versão v1.07 (Sem Censura)"
+                },
+                {
+                    label: "Download Servidor 2",
+                    url: "https://4br.me/jMOy",
+                    details: "Versão v1.07 (Sem Censura)"
+                },
+                {
+                    label: "Download Pacote Completo (Kimochi)",
+                    url: "https://4br.me/MbT9TRS",
+                    details: "Pacote com GOG + Patch v8 (Senha: kimochi.info)"
+                },
+                {
+                    label: "Download GOG + v8 (Servidor 1)",
+                    url: "https://4br.me/sOulLidi",
+                    details: "Pacote GOG + Patch v8"
+                },
+                {
+                    label: "Download GOG + v8 (Servidor 2)",
+                    url: "https://4br.me/t2nk6B2w6i",
+                    details: "Pacote GOG + Patch v8"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na Steam, GOG ou Kagura Games para apoiar os desenvolvedores, ou utilize os links de download alternativos fornecidos.",
+                    "Caso adquira a versão padrão na Steam ou GOG, lembre-se de baixar e aplicar o patch oficial v8 para restaurar o conteúdo adulto.",
+                    "Para PC (Windows), extraia o arquivo compactado e execute o executável para iniciar o jogo."
+                ]
+            }
+        },
         content: `
             <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
                 <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém cenas adultas explícitas, nudez, monstros, tentáculos e elementos temáticos maduros. Discrição estritamente recomendada para maiores de 18 anos.</p>
@@ -8841,7 +10007,7 @@ const articlesDatabase = {
 
             <h2 id="sinopse">Sinopse e História</h2>
             <div style="margin: 15px 0; text-align: center;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/6e999b96181ef5cd5f6882ce45a64f9c.avif" alt="Treasure Hunter Claire Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/6e999b96181ef5cd5f6882ce45a64f9c.avif" alt="Treasure Hunter Claire Banner" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
             </div>
 
             <p>A guerra entre o Herói e o Rei Demônio terminou, e o mundo vive em uma aparente paz. Contudo, monstros continuam a causar estragos, forçando os humanos a se aliarem a demônios para contê-los. Nesse cenário vive <strong>Claire</strong>, uma caçadora de tesouros ambiciosa.</p>
@@ -8849,7 +10015,7 @@ const articlesDatabase = {
 
             <h2 id="gameplay">Jogabilidade e Características</h2>
             <div style="margin: 15px 0; text-align: center;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/bcb3a50e306612b6117a0b0073369946.avif" alt="Treasure Hunter Claire Gameplay" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/bcb3a50e306612b6117a0b0073369946.avif" alt="Treasure Hunter Claire Gameplay" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
             </div>
 
             <ul>
@@ -8858,14 +10024,6 @@ const articlesDatabase = {
                 <li><strong>Dublagem Completa:</strong> Elenco principal totalmente dublado em japonês.</li>
                 <li><strong>Combate Clássico:</strong> Sistema de combate por turnos em visão isométrica com menus tradicionais de JRPG.</li>
             </ul>
-
-            <div style="margin: 15px 0; display: flex; flex-direction: column; gap: 10px; align-items: center;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/b0d3fdbe83946705817f74628cdb5f96.avif" alt="Extra 1" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/b8e28270ba375d0d1f416a01c96cd20c.avif" alt="Extra 2" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/f07738fdf76651c8f310612e54fba7a9.avif" alt="Extra 3" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/6418787123d1ee33252e5d8ec0518187.avif" alt="Extra 4" style="max-width: 100%; height: auto; border-radius: 4px;">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/828070/extras/658ebd97ee2fe169653fd6a0b7432180.avif" alt="Extra 5" style="max-width: 100%; height: auto; border-radius: 4px;">
-            </div>
 
             <h2 id="requisitos">Requisitos de Sistema</h2>
             <ul>
@@ -8879,48 +10037,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-1.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-2.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-3.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-4.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-5.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-6.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-7.jpg" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-8.jpg" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-9.jpg" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-1.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-2.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-3.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-4.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-5.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://lewdzone.com/wp-content/uploads/2021/09/Treasure-Hunter-Claire-Adult-Game-Screenshot-6.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais e Lojas:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/828070/Treasure_Hunter_Claire/" target="_blank"><i class="fa-brands fa-steam"></i> Página na Steam</a>
-                <a href="https://www.gog.com/game/treasure_hunter_claire" target="_blank"><i class="fa-solid fa-store"></i> Página na GOG</a>
-                <a href="https://www.gog.com/game/treasure_hunter_claire_unrated" target="_blank"><i class="fa-solid fa-store"></i> GOG (Versão Unrated)</a>
-                <a href="https://www.kaguragames.com/product/treasure-hunter-claire/" target="_blank"><i class="fa-solid fa-store"></i> Loja Oficial Kagura Games</a>
-                <a href="https://www.kaguragames.com/product/treasure-hunter-claire-steam-patch/" target="_blank"><i class="fa-solid fa-wrench"></i> Patch Oficial v8 (Necessário para Steam/GOG)</a>
-                <a href="https://www.dlsite.com/maniax/work/=/product_id/RJ195774.html" target="_blank"><i class="fa-solid fa-store"></i> DLsite (Versão Original JP)</a>
-                <a href="https://discord.gg/kaguragames" target="_blank"><i class="fa-brands fa-discord"></i> Discord Oficial Kagura Games</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads do Jogo (PC):</strong></p>
-            
-            <p><strong>Versão v1.07 (Sem Censura):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/jHASki" target="_blank"><i class="fa-solid fa-download"></i> Download Servidor 1</a>
-                <a href="https://4br.me/jMOy" target="_blank"><i class="fa-solid fa-download"></i> Download Servidor 2</a>
-            </div>
-
-            <p style="margin-top: 10px;"><strong>Pacote com GOG + Patch v8 (Senha: kimochi.info):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/MbT9TRS" target="_blank"><i class="fa-solid fa-download"></i> Download Pacote Completo (Kimochi)</a>
-                <a href="https://4br.me/sOulLidi" target="_blank"><i class="fa-solid fa-download"></i> Download GOG + v8 (Servidor 1)</a>
-                <a href="https://4br.me/t2nk6B2w6i" target="_blank"><i class="fa-solid fa-download"></i> Download GOG + v8 (Servidor 2)</a>
-            </div>
-
-            <p><small><em>Nota de Instalação: Se adquirir pela Steam ou GOG padrão, lembre-se de aplicar o patch oficial v8 para restaurar o conteúdo adulto, já que as lojas exigem arquivos adicionais. No celular, não há versão APK nativa; é necessário o uso de emuladores como Winlator/ExaGear ou jogar diretamente no PC.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais de compra, patches, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "bible-black": {
@@ -8932,12 +10058,10 @@ const articlesDatabase = {
             image: "https://www.bibleblackwiki.com/w/images/f/f8/Logo_game.png",
             data: {
                 "Desenvolvedor": "ActiveSoft (Active Software)",
-                "Publicadora": "ActiveSoft / Kitty Media",
-                "Criador / Roteiro": "Sei Shoujo",
+                "Distribuidora": "ActiveSoft / Kitty Media",
                 "Gêneros": "Eroge, Visual Novel, Terror, Ocultismo",
                 "Plataformas": "PC (Windows), DVD-PG, UMD-PSP",
-                "Lançamento": "14 de julho de 2000",
-                "Classificação": "18+ (Conteúdo Adulto Explícito)"
+                "Lançamento": "2000"
             }
         },
         toc: [
@@ -8945,8 +10069,58 @@ const articlesDatabase = {
             { id: "gameplay", text: "2. Características e Franquia" },
             { id: "requisitos", text: "3. Requisitos e Plataformas" },
             { id: "galeria", text: "4. Galeria de Imagens" },
-            { id: "links", text: "5. Links Oficiais e Downloads" }
+            { id: "links", text: "5. Links oficiais e downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Wikipedia (EN)",
+                    url: "https://en.wikipedia.org/wiki/Bible_Black"
+                },
+                {
+                    label: "VNDB (Jogo Original)",
+                    url: "https://vndb.org/v9"
+                },
+                {
+                    label: "VNDB (Sequência: The Infection)",
+                    url: "https://vndb.org/v1030"
+                },
+                {
+                    label: "Bible Black Wiki",
+                    url: "https://www.bibleblackwiki.com/wiki/Bible_Black:_La_Noche_de_Walpurgis_(game)"
+                },
+                {
+                    label: "MyAnimeList (Anime)",
+                    url: "https://myanimelist.net/anime/368/Bible_Black"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Bible Black PC (Servidor 1)",
+                    url: "https://4br.me/hI62BbZ",
+                    details: "Versão para PC (Windows)"
+                },
+                {
+                    label: "Download Bible Black PC (Servidor 2)",
+                    url: "https://4br.me/Pxnkr",
+                    details: "Mirror alternativo de download"
+                },
+                {
+                    label: "Página Remake / Port Itch.io (com APK)",
+                    url: "https://eroge-developer.itch.io/bible-black-remake",
+                    details: "Versão alternativa e port para dispositivos móveis"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Utilize um dos links de download fornecidos para obter os arquivos do jogo.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Para PC, execute o arquivo executável (ou configure o modo de compatibilidade caso utilize sistemas Windows modernos).",
+                    "Para a versão mobile/port, siga as instruções específicas fornecidas na página do projeto."
+                ]
+            }
+        },
         content: `
             <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
                 <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge clássico que contém temas de horror oculto, magia negra, nudez e atos sexuais explícitos. Discrição estritamente recomendada para maiores de 18 anos.</p>
@@ -8973,35 +10147,16 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://img1th.hentaigamecg.com/bible-black/e015b_400.avif" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img1th.hentaigamecg.com/bible-black/e018b_400.avif" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img1th.hentaigamecg.com/bible-black/e020_400.avif" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img1th.hentaigamecg.com/bible-black/e021b_400.avif" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img1th.hentaigamecg.com/bible-black/e021c_400.avif" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://img.itch.zone/aW1hZ2UvMzU1OTI1MS8yMTE5ODc4My5wbmc=/original/Fj83bN.png" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e015b_400.avif" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e018b_400.avif" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e020_400.avif" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e021b_400.avif" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img1th.hentaigamecg.com/bible-black/e021c_400.avif" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMzU1OTI1MS8yMTE5ODc4My5wbmc=/original/Fj83bN.png" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Bases de Dados e Referências:</strong></p>
-            <div class="play-links">
-                <a href="https://en.wikipedia.org/wiki/Bible_Black" target="_blank"><i class="fa-brands fa-wikipedia-w"></i> Wikipedia (EN)</a>
-                <a href="https://vndb.org/v9" target="_blank"><i class="fa-solid fa-database"></i> VNDB (Jogo Original)</a>
-                <a href="https://vndb.org/v1030" target="_blank"><i class="fa-solid fa-database"></i> VNDB (Sequência: The Infection)</a>
-                <a href="https://www.bibleblackwiki.com/wiki/Bible_Black:_La_Noche_de_Walpurgis_(game)" target="_blank"><i class="fa-solid fa-book"></i> Bible Black Wiki</a>
-                <a href="https://myanimelist.net/anime/368/Bible_Black" target="_blank"><i class="fa-solid fa-tv"></i> MyAnimeList (Anime)</a>
-            </div>
-
-            <br>
-            <p><i class="fa-solid fa-download"></i> <strong>Downloads e Arquivos (PC / Community Ports):</strong></p>
-            <div class="play-links">
-                <a href="https://4br.me/hI62BbZ" target="_blank"><i class="fa-solid fa-download"></i> Download Bible Black PC (Servidor 1)</a>
-                <a href="https://4br.me/Pxnkr" target="_blank"><i class="fa-solid fa-download"></i> Download Bible Black PC (Servidor 2)</a>
-                <a href="https://eroge-developer.itch.io/bible-black-remake" target="_blank"><i class="fa-solid fa-gamepad"></i> Página Remake / Port Itch.io (com APK)</a>
-            </div>
-
-            <p><small><em>Nota de Compatibilidade: Por se tratar de um título de 2000, versões modernas do Windows podem exigir o uso de modo de compatibilidade ou patches comunitários para execução correta.</em></small></p>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as bases de dados, servidores de download e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "trainwreck": {
