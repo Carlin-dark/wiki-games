@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#171a16">
+    <meta name="description" id="page-description" content="Links oficiais, downloads autorizados e instruções de instalação de jogos na WikiGames.">
+    <meta name="robots" id="page-robots" content="index,follow">
     <title>Downloads - WikiGames</title>
+    <link rel="canonical" id="page-canonical" href="">
+    <link rel="icon" id="page-favicon" href="../favicon.ico.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="WikiGames">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" id="og-title" content="Downloads - WikiGames">
+    <meta property="og:description" id="og-description" content="Links oficiais, downloads autorizados e instruções de instalação de jogos na WikiGames.">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:image" id="og-image" content="">
+    <meta property="og:image:alt" id="og-image-alt" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="Downloads - WikiGames">
+    <meta name="twitter:description" id="twitter-description" content="Links oficiais, downloads autorizados e instruções de instalação de jogos na WikiGames.">
+    <meta name="twitter:image" id="twitter-image" content="">
+    <script type="application/ld+json" id="page-structured-data"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             color-scheme: dark;
@@ -52,6 +70,7 @@
         .download-link { display: flex; min-height: 72px; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 16px; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease; }
         .download-link:hover { background: var(--surface-raised); border-color: var(--accent); transform: translateY(-2px); }
         .download-link strong { display: block; font-size: 15px; }
+        .verified-badge { margin-left: 7px; color: #0095f6; font-size: 15px; vertical-align: middle; }
         .download-link small { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
         .download-link .arrow { flex: 0 0 auto; color: var(--accent); font-size: 20px; }
         .steps { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: install-step; }
@@ -88,8 +107,8 @@
         (function () {
             const content = document.getElementById('downloads-content');
             const gameKey = new URLSearchParams(window.location.search).get('game');
-            const database = typeof articlesDatabase !== 'undefined' ? articlesDatabase : null;
-            const game = gameKey && database ? database[gameKey] : null;
+            const database = typeof articlesDatabase !== 'undefined' ? articlesDatabase : {};
+            const game = gameKey ? database[gameKey] : null;
 
             function escapeHtml(value) {
                 return String(value ?? '').replace(/[&<>"']/g, character => ({
@@ -100,29 +119,43 @@
             function safeUrl(value) {
                 try {
                     const url = new URL(value);
-                    return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
+                    const hostname = url.hostname.toLowerCase();
+                    const isPlaceholder = hostname === 'example.com' || hostname.endsWith('.example') || hostname.endsWith('.invalid');
+                    return ['http:', 'https:'].includes(url.protocol) && !isPlaceholder ? url.href : '';
                 } catch (error) {
                     return '';
                 }
             }
 
-            function discoverOfficialLinks(article) {
+            function mergeLinks(...groups) {
+                const seen = new Set();
+                return groups.flatMap(group => Array.isArray(group) ? group : []).filter(item => {
+                    const url = item && safeUrl(item.url);
+                    if (!url || seen.has(url)) return false;
+                    seen.add(url);
+                    return true;
+                });
+            }
+
+            function discoverOfficialLinks(...articles) {
                 const trustedDomains = ['store.steampowered.com', 'itch.io', 'gog.com', 'microsoft.com', 'playstation.com', 'nintendo.com', 'xbox.com', 'epicgames.com'];
-                const articleDocument = new DOMParser().parseFromString(article.content || '', 'text/html');
-                const links = [...articleDocument.querySelectorAll('a[href]')];
                 const officialLinks = [];
                 const files = [];
                 const seen = new Set();
 
-                links.forEach(link => {
-                    const url = safeUrl(link.getAttribute('href'));
-                    if (!url || seen.has(url)) return;
-                    const hostname = new URL(url).hostname.toLowerCase();
-                    if (!trustedDomains.some(domain => hostname === domain || hostname.endsWith(`.${domain}`))) return;
-                    seen.add(url);
-                    const item = { label: link.textContent.trim() || hostname, url };
-                    if (/download|baixar/i.test(item.label)) files.push(item);
-                    else officialLinks.push(item);
+                articles.forEach(article => {
+                    if (!article) return;
+                    const articleDocument = new DOMParser().parseFromString(article.content || '', 'text/html');
+                    articleDocument.querySelectorAll('a[href]').forEach(link => {
+                        const url = safeUrl(link.getAttribute('href'));
+                        if (!url || seen.has(url)) return;
+                        const hostname = new URL(url).hostname.toLowerCase();
+                        if (!trustedDomains.some(domain => hostname === domain || hostname.endsWith(`.${domain}`))) return;
+                        seen.add(url);
+                        const item = { label: link.textContent.trim() || hostname, url };
+                        if (/download|baixar/i.test(item.label)) files.push(item);
+                        else officialLinks.push(item);
+                    });
                 });
 
                 return { officialLinks, files };
@@ -133,14 +166,55 @@
                 if (!validItems.length) return `<p class="section-note">${escapeHtml(emptyMessage)}</p>`;
                 return `<div class="link-list">${validItems.map(item => `
                     <a class="download-link" href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener noreferrer">
-                        <span><strong>${escapeHtml(item.label || 'Abrir link')}</strong>${item.details ? `<small>${escapeHtml(item.details)}</small>` : ''}</span>
+                        <span><strong>${escapeHtml(item.label || 'Abrir link')}${item.verified === true ? '<i class="fa-solid fa-circle-check verified-badge" role="img" aria-label="Link verificado" title="Link verificado"></i>' : ''}</strong>${item.details ? `<small>${escapeHtml(item.details)}</small>` : ''}</span>
                         <span class="arrow" aria-hidden="true">↗</span>
                     </a>
                 `).join('')}</div>`;
             }
 
+            function setMeta(selector, value) {
+                const element = document.querySelector(selector);
+                if (element) element.setAttribute('content', value || '');
+            }
+
+            function updatePageMetadata({ title, description, url, image, imageAlt, robots = 'index,follow', structuredData }) {
+                document.title = title;
+                setMeta('#page-description', description);
+                setMeta('#page-robots', robots);
+                setMeta('#og-title', title);
+                setMeta('#og-description', description);
+                setMeta('#og-url', url);
+                setMeta('#og-image', image);
+                setMeta('#og-image-alt', imageAlt);
+                setMeta('#twitter-title', title);
+                setMeta('#twitter-description', description);
+                setMeta('#twitter-image', image);
+
+                const canonical = document.getElementById('page-canonical');
+                if (canonical) canonical.href = url;
+
+                if (image) {
+                    const favicon = document.getElementById('page-favicon');
+                    if (favicon) favicon.href = image;
+                }
+
+                const structuredDataElement = document.getElementById('page-structured-data');
+                if (structuredDataElement && structuredData) {
+                    structuredDataElement.textContent = JSON.stringify(structuredData);
+                }
+            }
+
             if (!game) {
-                document.title = 'Jogo não encontrado - WikiGames';
+                const missingTitle = 'Jogo não encontrado - WikiGames';
+                const missingDescription = 'O jogo solicitado não foi encontrado no catálogo da WikiGames.';
+                updatePageMetadata({
+                    title: missingTitle,
+                    description: missingDescription,
+                    url: window.location.href,
+                    image: '',
+                    imageAlt: '',
+                    robots: 'noindex,follow'
+                });
                 content.innerHTML = `
                     <section class="empty-state">
                         <p class="eyebrow">Downloads</p>
@@ -155,8 +229,8 @@
             const configuredDownloads = game.downloads || {};
             const discoveredDownloads = discoverOfficialLinks(game);
             const downloads = {
-                officialLinks: Array.isArray(configuredDownloads.officialLinks) ? configuredDownloads.officialLinks : discoveredDownloads.officialLinks,
-                files: Array.isArray(configuredDownloads.files) ? configuredDownloads.files : discoveredDownloads.files,
+                officialLinks: mergeLinks(configuredDownloads.officialLinks, discoveredDownloads.officialLinks),
+                files: mergeLinks(configuredDownloads.files, discoveredDownloads.files),
                 installation: configuredDownloads.installation || {
                     title: 'Orientações de instalação',
                     steps: [
@@ -172,7 +246,32 @@
             const backLink = document.getElementById('back-link');
             backLink.href = `../?route=${encodeURIComponent(gameKey)}`;
 
-            document.title = `Downloads de ${game.title} - WikiGames`;
+            const pageTitle = `Downloads de ${game.title} | WikiGames`;
+            const pageDescription = `Links oficiais, downloads autorizados e instruções de instalação de ${game.title}. ${game.summary || ''}`.trim();
+            const canonicalUrl = new URL(window.location.pathname, window.location.origin);
+            canonicalUrl.searchParams.set('game', gameKey);
+            updatePageMetadata({
+                title: pageTitle,
+                description: pageDescription,
+                url: canonicalUrl.href,
+                image: imageUrl,
+                imageAlt: `Capa de ${game.title}`,
+                structuredData: {
+                    '@context': 'https://schema.org',
+                    '@type': 'WebPage',
+                    name: pageTitle,
+                    description: pageDescription,
+                    url: canonicalUrl.href,
+                    ...(imageUrl ? { primaryImageOfPage: { '@type': 'ImageObject', url: imageUrl } } : {}),
+                    about: {
+                        '@type': 'VideoGame',
+                        name: game.title,
+                        description: game.summary || '',
+                        ...(imageUrl ? { image: imageUrl } : {}),
+                        ...(Array.isArray(game.categories) && game.categories.length ? { genre: game.categories } : {})
+                    }
+                }
+            });
             content.innerHTML = `
                 <section class="hero">
                     <div>
@@ -188,7 +287,7 @@
                 </section>
                 <section class="section">
                     <div class="section-heading"><h2>Downloads</h2><p class="section-note">Escolha uma opção disponível</p></div>
-                    ${renderLinks(downloads.files, 'Nenhum download foi cadastrado para este jogo.')}
+                    ${renderLinks(downloads.files, 'Nenhum download direto autorizado foi cadastrado; use as páginas oficiais acima.')}
                 </section>
                 <section class="section">
                     <div class="section-heading"><h2>${escapeHtml(installation.title || 'Como instalar')}</h2></div>
