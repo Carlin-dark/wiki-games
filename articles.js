@@ -10559,6 +10559,169 @@ const articlesDatabase = {
             <p>Consulte as páginas oficiais da Eushully, bases de dados, patch de tradução em inglês, servidores de upload e os guias de instalação detalhados na seção acima.</p>
         `
     },
+    "ao-oni": {
+        title: "AO ONI (青鬼 / Aooni)",
+        addedAt: "2026-11-10",
+        trailers: [
+            {
+                title: "Trailer oficial EN",
+                url: "https://video.akamai.steamstatic.com/store_trailers/2934190/722225/142fe8578b89f11dea430d25b794ecc7484167fd/1750821926/hls_264_master.m3u8"
+            }
+        ],
+        categories: ["Terror", "Quebra-cabeça", "Aventura", "RPG", "Indie", "Fuga", "Survival Horror"],
+        summary: "Jogo de terror e quebra-cabeça japonês, gratuito, feito em RPG Maker XP. Quatro adolescentes — Hiroshi (protagonista), Takuro, Takeshi e Mika — entram numa mansão abandonada nos arredores da cidade, sobre a qual circulam rumores de um monstro azul. Lá dentro, ficam presos e passam a ser caçados pela criatura. O loop é de fuga e resolução de puzzles: correr, se esconder, encontrar chaves e itens e escapar da mansão. O jogo é conhecido pela dificuldade em escapar, pelos sustos e pelas inúmeras versões com finais diferentes.",
+        infobox: {
+            image: "https://i.namu.wiki/i/wufM_jIiWW-lo8legu7V9mPYgRFKjdyr6RwhRxJ5r8OLxBDKrfBmkbarryuEyjqn6P_bSLTdlhHS79Z1xYtbiQ.webp",
+            data: {
+                "Título Original": "青鬼 (Aooni / Ao Oni)",
+                "Desenvolvedor": "noprops (criador solo, Japão)",
+                "Publicadora": "noprops (distribuição própria, gratuita) / LiTMUS (Remaster 2024)",
+                "Motor": "RPG Maker XP (exige o RTP do XP instalado)",
+                "Gêneros": "Terror, quebra-cabeça, aventura, RPG, indie, fuga (escape)",
+                "Plataformas": "Windows (original), Steam, Nintendo Switch (Remaster 2024)",
+                "Lançamento": "Novembro de 2008 (v1.0) · Versão final 6.23, novembro de 2011",
+                "Classificação etária": "Livre (sem rating oficial no original; conteúdo de susto, sem gore)",
+                "Preço": "Gratuito (original) / US$ 9,99 (Remaster 2024)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Sobre a Franquia e Expansão" },
+            { id: "requisitos", text: "3. Requisitos e Observações Práticas" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Site oficial do noprops",
+                    url: "https://mygames888.info/"
+                },
+                {
+                    label: "Página oficial do jogo",
+                    url: "https://mygames888.info/aooni.html"
+                },
+                {
+                    label: "Guia oficial (攻略)",
+                    url: "https://mygames888.info/aooni_kouryaku1.html"
+                },
+                {
+                    label: "RTP do RPG Maker XP (Necessário)",
+                    url: "https://www.rpgmakerweb.com/download/run-time-package#xp"
+                },
+                {
+                    label: "Página oficial do Remaster (JP)",
+                    url: "https://www.gamestudio.co.jp/Aooni/"
+                },
+                {
+                    label: "Página oficial do Remaster (EN)",
+                    url: "https://www.gamestudio.co.jp/Aooni/index_en.html"
+                },
+                {
+                    label: "Página na Steam (Remaster 2024)",
+                    url: "https://store.steampowered.com/app/2934190/Aooni/"
+                },
+                {
+                    label: "Nintendo Switch (US)",
+                    url: "https://www.nintendo.com/us/store/products/aooni-switch/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Versão Japonesa (Original - 15 MB)",
+                    url: "https://4br.me/TveBGe",
+                    details: "Versão freeware original (noprops)"
+                },
+                {
+                    label: "Download Versão Inglesa (Original)",
+                    url: "https://4br.me/xnKQ2K",
+                    details: "Versão freeware original traduzida"
+                },
+                {
+                    label: "Download Versão Italiana (Original)",
+                    url: "https://4br.me/EvMFid",
+                    details: "Versão freeware original traduzida"
+                },
+                {
+                    label: "Internet Archive — JP 6.23",
+                    url: "https://4br.me/UKB4NEhmf",
+                    details: "Arquivo e preservação"
+                },
+                {
+                    label: "Internet Archive — EN 6.23",
+                    url: "https://4br.me/SyBR",
+                    details: "Arquivo e preservação"
+                },
+                {
+                    label: "Internet Archive — Versão PT-BR",
+                    url: "https://4br.me/fJwqCxKs",
+                    details: "Tradução comunitária em português"
+                },
+                {
+                    label: "Internet Archive — Port Mobile",
+                    url: "https://4br.me/GeeHC0mM",
+                    details: "Versão adaptada para dispositivos móveis"
+                },
+                {
+                    label: "ModDB (Diversas versões e traduções)",
+                    url: "https://4br.me/OaTShd8M",
+                    details: "Repositório de mods (EN, PT-BR, IT, JP, CN, TH + v1, v3, v4.23, v5.2)"
+                },
+                {
+                    label: "APKPure — Ao Oni (Android / jp.uuum.blueman1)",
+                    url: "https://4br.me/bsx4pivm72",
+                    details: "Remake oficial mobile (v1.2.10, 66.2 MB)"
+                }
+            ],
+            installation: {
+                title: "Como instalar e orientações práticas",
+                steps: [
+                    "O original é gratuito e legal — o autor libera os idiomas oficiais em seu site.",
+                    "Instale o RTP do RPG Maker XP antes de executar o jogo original, caso contrário ele não abrirá.",
+                    "Para preservação e arquivo de longo prazo, utilize os links do Internet Archive (que não dependem do site do autor).",
+                    "Note que o aplicativo Android oficial é um remake com gráficos novos desenvolvido pela UUUM/LiTMUS, e não o jogo original de PC.",
+                    "Os remakes comerciais de 2024 alteram o visual; a experiência clássica de 2008 permanece intacta na versão freeware de PC."
+                ]
+            }
+        },
+        content: `
+            <p><strong>AO ONI</strong> (<em>青鬼 / Aooni</em>) é um lendário jogo de terror e quebra-cabeça japonês desenvolvido de forma independente por <strong>noprops</strong> em 2004 e publicado em novembro de 2008 utilizando o motor <em>RPG Maker XP</em>. O título viralizou rapidamente no <em>Nico Nico Douga</em> e nos primórdios do YouTube, tornando-se um fenômeno de massa no Japão e inspirando toda uma geração de jogos indies de fuga.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>A história acompanha quatro adolescentes — <strong>Hiroshi</strong> (o protagonista analítico), <strong>Takuro</strong>, <strong>Takeshi</strong> e <strong>Mika</strong> — que decidem explorar uma mansão abandonada nos arredores da cidade, alvo de fortes rumores sobre a presença de um monstro azul aterrorizante. Uma vez lá dentro, as portas se fecham e eles ficam presos, passando a ser implacavelmente caçados pela criatura.</p>
+            <p>O loop de jogabilidade baseia-se em exploração de cômodos, resolução de quebra-cabeças complexos, busca por chaves e itens ocultos, além de momentos tensos de fuga e perseguição onde o jogador precisa correr ou se esconder para sobreviver.</p>
+
+            <h2 id="gameplay">Sobre a Franquia e Expansão</h2>
+            <p>O enorme sucesso da obra original impulsionou a expansão da propriedade intelectual para diversas mídias e plataformas:</p>
+            <ul>
+                <li><strong>Anime:</strong> Série de TV produzida pelo <em>Studio DEEN</em> (2016) com 13 episódios curtos de 4 minutos e foco cômico.</li>
+                <li><strong>Filmes Live-Action:</strong> Dois longas-metragens japoneses lançados em 2014 e 2015.</li>
+                <li><strong>Literatura e Mangá:</strong> Séries de light novels escritas por Kenji Kuroda (com ilustrações de Karin Suzuragi), além de mangás e guias oficiais.</li>
+                <li><strong>Jogos Derivados e Mobile:</strong> Sequências como <em>Ao Oni 2</em>, <em>青鬼3</em>, <em>青鬼X</em>, o battle royale <em>青鬼オンライン</em> (para 100 jogadores), <em>aooni.io</em> e o spin-off <em>Aooni The Horror of Blueberry Onsen</em> na Steam. A franquia mobile acumulou mais de 35 milhões de downloads, enquanto os jogos de console ultrapassaram 250–300 mil unidades.</li>
+                <li><strong>Comunidade e Mods:</strong> A cena conta com inúmeros fan games, modificações e o célebre meme "Blockman Oni".</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Observações Práticas</h2>
+            <ul>
+                <li><strong>Requisitos Técnicos (Original):</strong> Sistema Windows, motor RPG Maker XP e a instalação obrigatória do <em>RTP do RPG Maker XP</em> para funcionamento correto.</li>
+                <li><strong>Disponibilidade:</strong> A versão clássica final (v6.23 de novembro de 2011) é distribuída gratuitamente pelo criador.</li>
+                <li><strong>Versões Comerciais:</strong> O remake comercial para Steam e Nintendo Switch (lançado em 25 de julho de 2024 pela Game Studio e LiTMUS) traz novos recursos, suporte total a controle, modo de alta velocidade e conteúdo inédito como <em>"Ao Oni – Ai's Story –"</em>.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2934190/ss_4381ede4751a050e779dd70ca1c7f8f72cd25dd2.1920x1080.jpg" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2934190/ss_3571087212ef5f4b3ec352cbfe558d016213baaf.1920x1080.jpg" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2934190/ss_3bea0f69887087b69f63500cd35910590ff57d24.1920x1080.jpg" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2934190/ss_3ecf79138f7892ea3545b702d0d5a4ba3c0aac45.1920x1080.jpg" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2934190/ss_01e3ac9ee71b0007eb18ffb43765e193c0557a1e.1920x1080.jpg" alt="Screenshot 5" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2934190/ss_2a3624c6ad043919da2a6f24e7d4674a41046ab5.1920x1080.jpg" alt="Screenshot 6" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte os links oficiais do autor, páginas da Steam e Nintendo Switch, espelhos de preservação no Internet Archive e os pacotes de download na seção acima.</p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
