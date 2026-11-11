@@ -314,6 +314,12 @@ const articlesDatabase = {
                     details: "Versão Android; atenção ao problema conhecido ao carregar o save."
                 },
                 {
+                    label: "Download para PC Windows (PT-BR)",
+                    url: "https://4br.me/cbDrsf",
+                    details: "Versão Windows em PT-BR feita pela Equipe (WikiGames)",
+                    verified: true
+                },
+                {
                     label: "Download para PC Windows",
                     url: "https://4br.me/bYdRQ7Q",
                     details: "Senha para extração: hentaijogos.com"
