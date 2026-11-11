@@ -10722,6 +10722,100 @@ const articlesDatabase = {
             <p>Consulte os links oficiais do autor, páginas da Steam e Nintendo Switch, espelhos de preservação no Internet Archive e os pacotes de download na seção acima.</p>
         `
     },
+    "human-construction-site": {
+        title: "Human Construction Site",
+        addedAt: "2026-11-10",
+        categories: ["Survival Horror", "Terror Psicológico", "Pós-apocalíptico", "RPG Maker", "Indie", "Fuga", "Visual Novel", "Suspense"],
+        summary: "Um jogo de survival horror com múltiplos finais inspirado em clássicos do RPG Maker como Ao Oni, Ib e Angels of Death. Desenvolvido por Faesu, o jogo conta com 5 finais diferentes, duração estimada de 2 a 3 horas e explora temas viscerais de horror corporal e suspense psicológico em um cenário pós-apocalíptico.",
+        infobox: {
+            image: "https://img.itch.zone/aW1nLzI0MDUxMzI3LnBuZw==/original/3FINzS.png",
+            data: {
+                "Desenvolvedor / Autor": "Faesu",
+                "Gêneros": "Survival Horror, Terror, Pós-apocalíptico, Indie, RPG Maker",
+                "Plataformas": "PC (Windows), HTML5, Android (port comunitário)",
+                "Duração": "2 a 3 horas (5 finais)",
+                "Classificação": "Conteúdo Sensível (Body Horror, Tripofobia, Temas Sombrios)",
+                "Avaliação": "4.8 / 5 estrelas (189+ avaliações no Itch.io)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Características e Avisos Importantes" },
+            { id: "requisitos", text: "3. Requisitos e Compatibilidade" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página Oficial no Itch.io",
+                    url: "https://faesu.itch.io/humanconstructionsite"
+                },
+                {
+                    label: "Ko-fi da Desenvolvedora (Faesu)",
+                    url: "https://ko-fi.com/faesu"
+                },
+                {
+                    label: "Loja de Merch Oficial",
+                    url: "https://artiststore.com/store/faesu"
+                }
+            ],
+    "files": [
+        {
+            "label": "Download Versão PT-BR",
+            "url": "https://4br.me/PKOz",
+            "details": "Versão completa traduzida para português brasileiro (patch traduzido por mim)."
+        }
+    ],
+    "installation": {
+        "title": "Instruções de Instalação e Avisos",
+        "steps": [
+            "Faça o download do arquivo 'patch' (que na verdade já é o jogo completo com a tradução inclusa).",
+            "Extraia o arquivo baixado em qualquer lugar do seu PC.",
+            "Abra a pasta do jogo extraída e procure a pasta 'Human Construction Site_Windows'.",
+            "Localize o arquivo executável dentro dela, dê dois cliques e o jogo iniciará automaticamente.",
+            "Atenção para usuários do app Itch.io: instale especificamente o arquivo 'Human Construction Site Windows.zip', e não o genérico de compilação.",
+            "Atenção para usuários mobile (Android): a versão foi enviada a pedido, mas as cenas de perseguição (chase scenes) são extremamente difíceis ou impossíveis de vencer em dispositivos touch.",
+            "Atenção para usuários de Mac: atualizações recentes do macOS podem impedir a execução nativa de jogos em RPG Maker, sendo recomendado o uso de ferramentas de suporte comunitárias.",
+            "Suporte: caso aconteça algum erro, tradução incompleta ou problema semelhante, entre em contato comigo no servidor."
+        ]
+    }
+},
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO (CONTENT WARNING):</strong> O jogo contém cenas de horror corporal (body horror), tripofobia e elementos psicológicos sombrios. Discrição estritamente recomendada.</p>
+            </div>
+
+            <p><strong>Human Construction Site</strong> é um aclamado jogo indie de survival horror desenvolvido por <strong>Faesu</strong>, fortemente inspirado em clássicos atemporais do RPG Maker como <em>Ao Oni</em>, <em>Ib</em> e <em>Angels of Death</em>. Oferecendo uma experiência imersiva de 2 a 3 horas de duração, o título apresenta 5 finais distintos que recompensam a exploração e a tomada de decisões.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>Mergulhe em uma atmosfera opressiva e pós-apocalíptica onde o desconhecido espreita em cada canto. O jogo combina a tensão de fugas desesperadas de perseguição com a exploração de ambientes detalhados e a resolução de quebra-cabeças complexos, mantendo o jogador constantemente à beira do medo e da curiosidade.</p>
+
+            <h2 id="gameplay">Características e Avisos Importantes</h2>
+            <ul>
+                <li><strong>Múltiplos Finais:</strong> 5 desfechos diferentes que garantem alto fator de rejogabilidade para descobrir todas as ramificações da história.</li>
+                <li><strong>Inspiração Clássica:</strong> Mecânicas tradicionais de exploração em visão superior (top-down) típicas dos melhores títulos de terror em RPG Maker.</li>
+                <li><strong>Aviso de Autenticidade:</strong> Conforme alertado pela autora, qualquer versão de <em>Human Construction Site</em> encontrada em sites que não sejam a página oficial do Itch.io é considerada não oficial.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Compatibilidade</h2>
+            <ul>
+                <li><strong>Plataformas:</strong> Windows (PC), navegadores (HTML5) e port para Android.</li>
+                <li><strong>Compatibilidade Mac:</strong> Devido a atualizações do sistema operacional da Apple que afetam jogos em RPG Maker, jogadores de Mac devem utilizar wrappers ou aplicativos dedicados de compatibilidade.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img.itch.zone/aW1hZ2UvMzQyODI5LzI0MDQ1MzU4LnBuZw==/original/ehBesn.png" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMzQyODI5LzI0MDQ1MzQ5LnBuZw==/original/Nl4a%2Bc.png" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMzQyODI5LzI0MDQ1Mzk4LnBuZw==/original/YthV2F.png" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvMjQ5ODg0NDMucG5n/original/E2OWNc.png" alt="Screenshot 4" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte a página oficial do jogo no Itch.io, apoie a criadora através do Ko-fi ou adquira produtos oficiais na lojinha de merchandising indicada na seção acima.</p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
