@@ -10822,6 +10822,141 @@ const articlesDatabase = {
             <p>Consulte a página oficial do jogo no Itch.io, apoie a criadora através do Ko-fi ou adquira produtos oficiais na lojinha de merchandising indicada na seção acima.</p>
         `
     },
+    "realityminds": {
+        title: "リアリティ×マインズ",
+        addedAt: "2026-11-13",
+        trailers: [
+            {
+                title: "Trailer oficial EN",
+                url: "https://video.akamai.steamstatic.com/store_trailers/1616050/379141/4b488079d9e6a45fb3b8c87269c186791aab5c98/1751010166/hls_264_master.m3u8"
+            }
+        ],
+        categories: ["RPG", "JRPG", "CRPG", "2D", "Fantasia", "Indie", "Visual Novel"],
+        summary: "Um RPG desenvolvido por Yutaro Tsuyuki (criador de Feliestasha, Blood of Justice e Elemental Field) sobre troca de corpos e um efeito cascata que altera a mente de todos ao redor. Astrake é um jovem que treina esgrima para virar soldado da capital; após encontrar uma garota misteriosa na floresta, ele é atacado, desmaia e acorda no corpo dela (Silvana), tendo apenas um fantasma chamado Kvena como companhia.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/header.jpg?t=1725001026",
+            data: {
+                "Desenvolvedor": "Yutaro Tsuyuki (露木佑太郎)",
+                "Publicadora": "Gotcha Gotcha Games (Kadokawa / Degica)",
+                "Engine": "RPG Maker MV",
+                "Gêneros": "RPG, JRPG, CRPG, 2D, fantasia, arte desenhada à mão",
+                "Plataformas": "Windows (Steam, itch.io, freem!), Mac (via blog do autor)",
+                "Lançamento original": "16 de novembro de 2018 (freeware)",
+                "Lançamento comercial": "30 de agosto de 2021 (Steam) / 2022 (itch.io)",
+                "Classificação": "freem!: 12+ · Steam: DEJUS 10, USK 6, IGRS 18",
+                "Duração": "4 a 5 h (história principal); 7 a 9 h (pós-final)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Sistemas e Recursos" },
+            { id: "requisitos", text: "3. Requisitos e Versões" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links oficiais e downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Steam",
+                    url: "https://store.steampowered.com/app/1616050/RealityMinds/"
+                },
+                {
+                    label: "itch.io (Gotcha Gotcha Games)",
+                    url: "https://gotchagotchagames.itch.io/realityminds"
+                },
+                {
+                    label: "Página Oficial (RPG Maker / Action Game Tsukuru MV)",
+                    url: "https://rpgmakerofficial.com/act_game/game/realityminds/"
+                },
+                {
+                    label: "Hub da Comunidade Steam",
+                    url: "https://steamcommunity.com/app/1616050"
+                },
+                {
+                    label: "Twitter/X do Autor",
+                    url: "https://x.com/tsuyuki_tk"
+                },
+                {
+                    label: "Página do Autor na freem!",
+                    url: "https://www.freem.ne.jp/brand/5002"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Grátis (Versão Freeware Original 1.20 - 293 MB)",
+                    url: "https://4br.me/VWpVwv6N",
+                    details: "Página oficial de download freeware (freem!)"
+                },
+                {
+                    label: "Download Direto freeware (reality_minds.zip)",
+                    url: "https://4br.me/Tqtcepoc",
+                    details: "Arquivo direto Win 10 32/64-bit"
+                },
+                {
+                    label: "Versão Mac (Blog do Autor)",
+                    url: "https://4br.me/Td6my9AjEz",
+                    details: "Link direto para a versão Mac (requer aceitar exceção SSL no blog)"
+                },
+                {
+                    label: "Download MegaUp.net",
+                    url: "https://4br.me/q0ke4",
+                    details: "Espelho alternativo de download"
+                }
+            ],
+            installation: {
+                title: "Instruções e Torrent",
+                steps: [
+                    "A versão de 2018 é gratuita e liberada oficialmente pelo autor na freem!.",
+                    "Para baixar via Torrent, copie e cole o link magnético abaixo em seu cliente de torrent favorito:",
+                    "magnet:?xt=urn:btih:6d0a76ec19e4915d169173e55ed943f3c9e9da1f&dn=RealityMinds.rar&tr=udp://opentor.org:2710/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.moeking.me:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.theoks.net:6969/announce&tr=udp://retracker.lanta-net.ru:2710/announce&tr=udp://movies.zsw.ca:6969/announce",
+                    "1. Extraia ou instale o pacote baixado.",
+                    "2. Aplique o crack se necessário.",
+                    "3. Jogue e divirta-se!"
+                ]
+            }
+        },
+        content: `
+            <p><em>"Sabe de uma coisa? Se você pensar positivo, as coisas acabam dando certo."</em></p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p><strong>RealityMinds</strong> acompanha Astrake, um jovem que passa os dias treinando esgrima para virar soldado da capital real. Treinando na floresta com o melhor amigo, ele encontra uma garota misteriosa, é atacado, desmaia — e acorda no corpo dela. A garota (Silvana) está no corpo dele, e um fantasma chamado Kvena é a única companhia de Astrake. O jogo é um RPG sobre troca de corpos e sobre um efeito cascata que muda a mente de todo mundo ao redor.</p>
+            <p><em>Nota de enredo (Spoiler leve):</em> Kvena é a vilã — ela morreu, virou fantasma, controla a mente de Silvana e orquestra tudo para ser exorcizada. O epílogo envolve Ridgefern e a remoção das "essências" do mundo.</p>
+
+            <h2 id="gameplay">Sistemas e Recursos</h2>
+            <ul>
+                <li><strong>Chain Skills:</strong> Combinar habilidades específicas dispara ataques combinados com cut-in de rosto.</li>
+                <li><strong>Skill Tree:</strong> Sem níveis tradicionais; ganhe SP usando Chain Skills e invista na árvore para desbloquear skills ativas, passivas e atributos.</li>
+                <li><strong>Sem itens de cura em combate:</strong> A sobrevivência depende 100% de estratégias de skills.</li>
+                <li><strong>Conteúdo:</strong> 6 personagens jogáveis, 61 tipos de inimigos, +140 mapas, todos desenhados à mão pelo autor.</li>
+                <li><strong>Modos e Extras:</strong> Modos fácil, normal e difícil; New Game Plus com carregamento de progresso; sala do desenvolvedor; boss cameo dos outros jogos do autor; livro de roteiro bilíngue e making-of de ilustrações.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 a 10</li>
+                <li><strong>Processador:</strong> Intel Core 2 Duo</li>
+                <li><strong>Memória RAM:</strong> 4 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Compatível com OpenGL e DirectX 9</li>
+                <li><strong>Armazenamento:</strong> 500 MB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_bc92d28ee20481fff09f706005db9db934af6f9a.1920x1080.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_29fa21df293e32da1854f7b71157f701d0778597.1920x1080.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_4acabd9edb2f41edf72309cd090f9330ff37c87c.1920x1080.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_984762ee7a5b8932e5297bd03284eb2160f4d3a6.1920x1080.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_e2e6e7a52db9fe4a3944b55b524e398fa35761b8.1920x1080.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_5d5bc500b8cec32d37ca0a1e62b2ff60a2d86113.1920x1080.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_3185a6b8efc07b7a6be8054907e9bfb449b6dd0a.1920x1080.jpg" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_792a1cef5d1daf33b5c6c46c7d34167fc7818976.1920x1080.jpg" alt="Screenshot 8" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1616050/ss_c876d0a1e1cd326e1160148cddd54c3f51108653.1920x1080.jpg" alt="Screenshot 9" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as páginas na Steam, itch.io, links freeware originais, o link de torrent e as opções de download na seção acima.</p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
