@@ -10885,7 +10885,8 @@ const articlesDatabase = {
                 {
                     label: "Download PT-BR (466,2MB)",
                     url: "https://4br.me/nX0WaFYUk",
-                    details: "Download do patch de tradução em português brasileiro (feito por mim)."
+                    details: "Download do patch de tradução em português brasileiro (feito por mim).",
+                    verified: true
                 },
                 {
                     label: "Download Grátis (Versão Freeware Original 1.20 - 293 MB)",
