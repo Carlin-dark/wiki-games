@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Converse sobre jogos, relate erros e sugira traduções ou novos jogos para a comunidade WikiGames.">
+    <title>Comunidade - WikiGames</title>
+    <link rel="icon" href="../favicon.ico.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="community.css?v=community-3">
+</head>
+<body>
+    <main class="community-page">
+        <header class="community-topbar">
+            <a class="community-brand" href="../?route=home">WikiGames</a>
+            <nav aria-label="Navegação da comunidade">
+                <a href="../?route=perfil">Meu perfil</a>
+                <a href="../?route=home">Início</a>
+            </nav>
+        </header>
+
+        <section class="community-hero">
+            <p class="community-eyebrow">WikiGames · Espaço da comunidade</p>
+            <h1><i class="fa-solid fa-comments"></i> Comunidade</h1>
+            <p>Comente, relate erros e sugira traduções ou jogos para o catálogo.</p>
+            <p id="community-game-context" class="community-game-context" hidden></p>
+        </section>
+
+        <p id="community-feedback" class="community-feedback" role="status" aria-live="polite"></p>
+
+        <section id="community-composer" class="community-composer" hidden>
+            <h2>Nova publicação</h2>
+            <form id="community-form">
+                <div class="community-form-row">
+                    <label>Assunto
+                        <select name="kind" required>
+                            <option value="discussion">Comentário</option>
+                            <option value="bug">Relatar erro</option>
+                            <option value="translation">Pedir tradução</option>
+                            <option value="game-request">Sugerir jogo</option>
+                        </select>
+                    </label>
+                    <label>Jogo relacionado
+                        <select name="gameId" id="community-game">
+                            <option value="">Qualquer jogo</option>
+                        </select>
+                    </label>
+                </div>
+                <label for="community-text">Mensagem</label>
+                <textarea id="community-text" name="text" maxlength="1200" placeholder="Escreva sua mensagem..." rows="4"></textarea>
+                <div class="community-media-field">
+                    <label for="community-media-url">URL de imagem, GIF ou YouTube (opcional)</label>
+                    <div class="community-media-input">
+                        <input id="community-media-url" name="mediaUrl" type="url" maxlength="2000" placeholder="https://..." autocomplete="url">
+                        <button id="gif-panel-toggle" class="community-button community-button-secondary" type="button" aria-expanded="false" aria-controls="gif-picker-panel">
+                            <i class="fa-solid fa-image"></i> GIF
+                        </button>
+                    </div>
+                    <div id="gif-picker-panel" class="gif-picker-panel" hidden>
+                        <p>Pesquise um GIF no Tenor, abra os resultados e cole aqui o link do GIF escolhido.</p>
+                        <div class="community-media-input">
+                            <input id="gif-search" type="search" placeholder="Pesquisar GIFs">
+                            <a id="gif-search-link" class="community-button" href="https://tenor.com/search/gifs" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buscar GIFs
+                            </a>
+                        </div>
+                        <button id="gif-panel-close" class="community-text-button" type="button">Fechar</button>
+                    </div>
+                    <div id="community-media-preview" class="community-media-preview" hidden></div>
+                </div>
+                <div class="community-form-footer">
+                    <small>Use links HTTPS. Os vídeos do YouTube serão exibidos aqui.</small>
+                    <button class="community-button" type="submit"><i class="fa-solid fa-paper-plane"></i> Publicar</button>
+                </div>
+                <p id="community-form-feedback" class="community-form-feedback" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="community-login-gate" class="community-login-gate">
+            <p>Para publicar e curtir comentários, entre na sua conta WikiGames.</p>
+            <a class="community-button" href="../?route=home">Ir para o site e entrar</a>
+        </section>
+
+        <section class="community-feed" aria-labelledby="community-feed-title">
+            <div class="community-feed-heading">
+                <div>
+                    <h2 id="community-feed-title">Publicações</h2>
+                    <p>As mensagens mais recentes da comunidade.</p>
+                </div>
+                <label for="community-filter">Filtrar
+                    <select id="community-filter">
+                        <option value="">Todos os assuntos</option>
+                        <option value="discussion">Comentários</option>
+                        <option value="bug">Erros</option>
+                        <option value="translation">Traduções</option>
+                        <option value="game-request">Sugestões de jogos</option>
+                    </select>
+                </label>
+            </div>
+            <p id="community-feed-status" class="community-feed-status" role="status" aria-live="polite">Carregando publicações...</p>
+            <div id="community-posts" class="community-posts"></div>
+        </section>
+
+        <footer class="community-footer">WikiGames · Respeite os outros membros e compartilhe apenas conteúdo permitido.</footer>
+    </main>
+
+    <script src="../articles.js"></script>
+    <script src="community.js?v=community-3"></script>
+    <script type="module" src="../firebase-config.js?v=community-3"></script>
+</body>
+</html>
