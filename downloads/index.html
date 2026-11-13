@@ -58,7 +58,7 @@
             margin: 0 auto; 
             padding: 28px 0 64px; 
             display: grid;
-            grid-template-columns: 1fr 280px;
+            grid-template-columns: minmax(0, 1fr) 300px;
             gap: 32px;
             align-items: start;
         }
@@ -78,16 +78,28 @@
         }
 
         .ad-banner-box {
+            width: 300px;
+            max-width: 100%;
             background: var(--surface);
             border: 1px solid var(--line);
             border-radius: 6px;
             padding: 12px;
             text-align: center;
-            min-height: 250px;
+            min-height: 280px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+        }
+
+        .ad-label {
+            align-self: flex-start;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
@@ -120,7 +132,7 @@
         .empty-state p { color: var(--muted); }
         footer { grid-column: 1 / -1; padding-top: 20px; color: var(--muted); border-top: 1px solid var(--line); font-size: 12px; }
 
-        @media (max-width: 900px) {
+        @media (max-width: 700px) {
             .page { 
                 grid-template-columns: 1fr; 
                 width: min(100% - 28px, 940px); 
@@ -154,7 +166,7 @@
         <!-- Barra Lateral com o Banner de Anúncio -->
         <aside class="sidebar">
             <div class="ad-banner-box" id="sidebar-ad-container">
-                <!-- O script do anúncio será inserido aqui -->
+                <span class="ad-label">Publicidade</span>
             </div>
         </aside>
 
