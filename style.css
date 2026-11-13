@@ -1451,23 +1451,13 @@ body.high-contrast-mode .settings-genre-grid { border-color: #fff; }
 .public-list-card > div { display: flex; flex-wrap: wrap; gap: 7px; margin: 10px 0; }
 .public-list-card > div a { padding: 5px 8px; border: 1px solid #283850; background: rgba(28,43,62,.8); border-radius: 3px; font-size: 12px; }
 .copy-list-btn { padding: 7px 10px; border: 1px solid #283850; border-radius: 3px; color: #c5d5e5; background: rgba(28,43,62,.9); cursor: pointer; }
-.chat-panel { clear: both; margin-top: 22px; padding: 14px; border: 1px solid #283850; background: rgba(11,17,24,.68); border-radius: 4px; }
-.chat-panel h2 { margin: 0 0 4px; border: 0; }
-.chat-panel > p { font-size: 12px; color: #8fa3bc; }
-.chat-messages { height: 180px; overflow-y: auto; padding: 9px; margin: 10px 0; border: 1px solid #202e42; background: #080c12; }
-.chat-messages p { margin: 0 0 7px; font-size: 12px; color: #c5c8c6; }
-.chat-messages strong { color: #8ac7ff; }
-.chat-author { color: #8ac7ff; font-weight: 700; text-decoration: underline; text-decoration-color: rgba(138,199,255,.45); }
-.chat-messages span { color: #7a8b9e; font-size: 12px; }
-.chat-form { display: flex; gap: 7px; }
-.chat-form input { flex: 1; min-width: 0; padding: 9px; border: 1px solid #283850; background: #0b1118; color: #fff; border-radius: 3px; }
-.chat-form button { width: 40px; border: 1px solid #283850; border-radius: 3px; background: #1c2b3e; color: #dfeaf7; cursor: pointer; }
 .public-profile { max-width: 720px; }
-.public-profile-heading { display: flex; align-items: center; gap: 18px; padding-bottom: 18px; border-bottom: 1px solid #283850; }
+.public-profile-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding-bottom: 18px; border-bottom: 1px solid #283850; }
 .public-profile-heading h1 { margin: 0; }
+.public-profile-heading > div { flex: 1; }
 .public-profile-heading p, .public-profile-bio p { color: #9fb4c8; }
-.public-profile-avatar { width: 84px; height: 84px; flex: 0 0 84px; border-radius: 50%; object-fit: cover; border: 2px solid #385575; }
-.public-profile-avatar-placeholder { display: grid; place-items: center; background: #162235; color: #8ac7ff; font-size: 28px; }
+.public-profile-avatar { width: 128px; height: 128px; flex: 0 0 128px; border-radius: 50%; object-fit: cover; }
+.public-profile-avatar-placeholder { display: grid; place-items: center; background: #171216; color: var(--wg-red-bright); font-size: 40px; }
 .public-profile-bio { margin-top: 22px; }
 .public-profile-bio h2 { margin-top: 0; }
 
@@ -2078,7 +2068,7 @@ a:hover { color: #ff8189; }
 .share-options a:hover, .share-options button:hover { border-color: var(--wg-red); color: #ff6b75; }
 .app-toast { border-color: var(--wg-red); background: rgba(17, 13, 16, .98); }
 
-.rating-panel, .public-list-card, .chat-panel, .settings-section,
+.rating-panel, .public-list-card, .settings-section,
 .all-game-card, .mod-card, .mtool-download-card, .principle-card {
     border-color: var(--wg-border);
     background-color: rgba(20, 15, 18, .92);
@@ -2125,8 +2115,7 @@ a:hover { color: #ff8189; }
 .toc, .toc-title, .category-list li, .all-games-list li,
 .settings-language-dialog, .settings-language-options button,
 .settings-genre-grid, .settings-library-list li,
-.public-list-form, .list-game-picker, .chat-messages,
-.chat-form input, .rating-panel, .image-lightbox-toolbar,
+.public-list-form, .list-game-picker, .rating-panel, .image-lightbox-toolbar,
 .image-lightbox-close {
     border-color: var(--wg-border);
     background-color: #100d10;
@@ -2155,7 +2144,7 @@ a:hover { color: #ff8189; }
     color: #fff;
 }
 .mod-card, .mod-meta div, .mod-tags span, .mtool-download-card,
-.all-game-card, .public-list-card, .chat-panel, .principle-card {
+.all-game-card, .public-list-card, .principle-card {
     border-color: var(--wg-border);
     background: #141216;
 }
@@ -2299,3 +2288,18 @@ i.fa-solid, i.fa-regular, i.fa-brands { color: var(--wg-red-bright); }
 .home-card img { border-bottom: 0; }
 .settings-library-list li { border-left-color: #353535; }
 .mod-tags span { border-color: #252525; }
+
+body.game-detail-page .catalog-subnav { display: none; }
+.profile-page-heading { display: grid; grid-template-columns: minmax(0, 1fr) 136px; align-items: start; gap: 20px; }
+.profile-avatar-frame { display: grid; width: 128px; height: 128px; margin: 4px 0 15px; place-items: center; overflow: hidden; border-radius: 50%; background: #171216; justify-self: end; }
+.profile-avatar-preview { width: 100%; height: 100%; object-fit: cover; }
+.profile-avatar-fallback { color: var(--wg-red-bright); font-size: 40px; }
+.community-link { display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; color: var(--wg-red-bright) !important; font-size: 12px; font-weight: 700; }
+.community-link:hover { color: #fff !important; text-decoration: none; }
+.community-link i { color: var(--wg-red-bright); }
+
+@media (max-width: 600px) {
+    .profile-page-heading { grid-template-columns: minmax(0, 1fr) 92px; gap: 10px; }
+    .profile-avatar-frame { width: 88px; height: 88px; }
+    .public-profile-avatar { width: 88px; height: 88px; flex-basis: 88px; }
+}

@@ -102,6 +102,7 @@ function updatePageSeoMetadata(route = getRouteInfo().route, overrides = {}) {
         'minha-lista': { title: 'Minha Lista - WikiGames', description: 'Consulte os jogos salvos na sua lista pessoal da WikiGames.' },
         configuracoes: { title: 'Configurações - WikiGames', description: 'Configure suas preferências de conteúdo e organize sua biblioteca da WikiGames.' },
         listas: { title: 'Listas públicas - WikiGames', description: 'Explore e compartilhe listas de jogos criadas pela comunidade WikiGames.' },
+        comunidade: { title: 'Comunidade - WikiGames', description: 'Converse sobre jogos, relate erros e sugira traduções ou novos jogos para a WikiGames.' },
         mods: { title: 'Todos os Mods - WikiGames', description: 'Pesquise mods de jogos reunidos no catálogo da WikiGames.' },
         perfil: { title: 'Perfil - WikiGames', description: 'Perfil público da comunidade WikiGames.' }
     };
@@ -579,10 +580,24 @@ async function renderProfilePage() {
         container.innerHTML = '<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><p>Carregando sua sessão...</p>';
         return;
     }
-    container.innerHTML = `<h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${escapeHtml(user.displayName || user.email?.split('@')[0] || '')}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${escapeHtml(user.photoURL || '')}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Carregando dados do perfil..."></textarea></label><label>Redes sociais<input name="socials" maxlength="300" placeholder="Carregando dados do perfil..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form><section class="profile-ratings"><h2>Jogos Avaliados</h2><div id="profileRatings"><p>Carregando avaliações...</p></div></section><section class="profile-lists"><h2>Listas Criadas</h2><div id="profileLists"><p>Carregando listas...</p></div></section>`;
+    const initialPhotoURL = getSafeHttpsUrl(user.photoURL);
+    container.innerHTML = `<div class="profile-page-heading"><h1><i class="fa-solid fa-id-card"></i> Meu perfil</h1><div class="profile-avatar-frame"><img id="profileAvatarPreview" class="profile-avatar-preview" alt="Foto do perfil" ${initialPhotoURL ? `src="${escapeHtml(initialPhotoURL)}"` : ''} ${initialPhotoURL ? '' : 'hidden'}><span id="profileAvatarFallback" class="profile-avatar-fallback" ${initialPhotoURL ? 'hidden' : ''}><i class="fa-solid fa-user"></i></span></div></div><form id="profileForm" class="profile-form"><label>Nome<input name="name" value="${escapeHtml(user.displayName || user.email?.split('@')[0] || '')}" maxlength="60" required></label><label>URL do avatar<input name="photoURL" type="url" value="${escapeHtml(user.photoURL || '')}" placeholder="https://..." maxlength="500"></label><label>Biografia<textarea name="bio" maxlength="280" placeholder="Carregando dados do perfil..."></textarea></label><label>Redes sociais<input name="socials" maxlength="300" placeholder="Carregando dados do perfil..."></label><button class="share-page-btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar perfil</button><p id="profileMessage" role="status"></p></form><section class="profile-ratings"><h2>Jogos Avaliados</h2><div id="profileRatings"><p>Carregando avaliações...</p></div></section><section class="profile-lists"><h2>Listas Criadas</h2><div id="profileLists"><p>Carregando listas...</p></div></section>`;
     const profileForm = document.getElementById('profileForm');
     if (!profileForm) return;
     const profileFields = profileForm.elements;
+    const avatarPreview = document.getElementById('profileAvatarPreview');
+    const avatarFallback = document.getElementById('profileAvatarFallback');
+    const updateAvatarPreview = value => {
+        const safePhotoURL = getSafeHttpsUrl(value);
+        avatarPreview.hidden = !safePhotoURL;
+        avatarFallback.hidden = Boolean(safePhotoURL);
+        if (safePhotoURL) avatarPreview.src = safePhotoURL;
+    };
+    avatarPreview.addEventListener('error', () => {
+        avatarPreview.hidden = true;
+        avatarFallback.hidden = false;
+    });
+    profileFields.photoURL.addEventListener('input', () => updateAvatarPreview(profileFields.photoURL.value));
     services.get(services.ref(services.rtdb, `users/${user.uid}`)).then(snapshot => {
         const profile = snapshot.val();
         if (!profile) return;
@@ -590,6 +605,7 @@ async function renderProfilePage() {
         profileFields.photoURL.value = profile.photoURL || user.photoURL || '';
         profileFields.bio.value = profile.bio || '';
         profileFields.socials.value = profile.socials || '';
+        updateAvatarPreview(profileFields.photoURL.value);
         profileFields.bio.placeholder = 'Conte um pouco sobre você';
         profileFields.socials.placeholder = 'https://...';
     }).catch(error => logFirebaseError('Falha ao carregar dados complementares do perfil', error));
@@ -603,12 +619,28 @@ async function renderProfilePage() {
         event.preventDefault();
         const form = event.currentTarget;
         const message = document.getElementById('profileMessage');
+        const photoURLInput = form.photoURL.value.trim();
+        const photoURL = photoURLInput ? getSafeHttpsUrl(photoURLInput) : '';
+        if (photoURLInput && !photoURL) {
+            message.textContent = 'Use uma URL HTTPS válida para a foto do perfil.';
+            return;
+        }
         try {
-            await services.updateProfile(user, { displayName: form.name.value.trim(), photoURL: form.photoURL.value.trim() || null });
+            await services.updateProfile(user, { displayName: form.name.value.trim(), photoURL: photoURL || null });
             const profileReference = services.ref(services.rtdb, `users/${user.uid}`);
             const profileSnapshot = await services.get(profileReference);
-            await services.set(profileReference, { ...(profileSnapshot.val() || {}), name: form.name.value.trim(), username: form.name.value.trim(), email: user.email || '', photoURL: form.photoURL.value.trim(), bio: form.bio.value.trim(), socials: form.socials.value.trim() });
-            message.textContent = 'Perfil salvo.';
+            await services.set(profileReference, { ...(profileSnapshot.val() || {}), name: form.name.value.trim(), username: form.name.value.trim(), email: user.email || '', photoURL, bio: form.bio.value.trim(), socials: form.socials.value.trim() });
+            let sessionRefreshFailed = false;
+            try {
+                await user.getIdToken(true);
+            } catch (tokenError) {
+                sessionRefreshFailed = true;
+                logFirebaseError('Falha ao atualizar a sessão após salvar o perfil', tokenError);
+            }
+            updateAvatarPreview(photoURL);
+            message.textContent = sessionRefreshFailed
+                ? 'Perfil salvo, mas a sessão não atualizou. Talvez seja necessário entrar novamente.'
+                : 'Perfil salvo.';
         } catch (error) {
             logFirebaseError('Falha ao salvar o perfil', error);
             message.textContent = 'Não foi possível salvar o perfil.';
@@ -688,13 +720,23 @@ async function renderPublicProfilePage(userId) {
         }
         const profile = snapshot.val();
         const name = profile.name || 'Usuário WikiGames';
-        const avatar = profile.photoURL ? `<img class="public-profile-avatar" src="${escapeHtml(profile.photoURL)}" alt="Avatar de ${escapeHtml(name)}">` : '<div class="public-profile-avatar public-profile-avatar-placeholder"><i class="fa-solid fa-user"></i></div>';
+        const avatarURL = getSafeHttpsUrl(profile.photoURL);
+        const avatar = avatarURL ? `<img class="public-profile-avatar" src="${escapeHtml(avatarURL)}" alt="Avatar de ${escapeHtml(name)}">` : '<div class="public-profile-avatar public-profile-avatar-placeholder"><i class="fa-solid fa-user"></i></div>';
         const socials = profile.socials ? `<p><i class="fa-solid fa-link"></i> <a href="${escapeHtml(profile.socials)}" target="_blank" rel="noopener noreferrer">Rede social</a></p>` : '';
         const ratedGames = await getRatedGamesMarkup(services, userId);
         const createdLists = await getCreatedListsMarkup(services, userId);
-        container.innerHTML = `<section class="public-profile"><div class="public-profile-heading">${avatar}<div><h1>${escapeHtml(name)}</h1><p>Perfil da comunidade WikiGames</p></div></div><div class="public-profile-bio"><h2>Sobre</h2><p>${escapeHtml(profile.bio || 'Este usuário ainda não adicionou uma biografia.')}</p>${socials}<h2>Jogos Avaliados</h2><div id="profileRatings">${ratedGames}</div><h2>Listas Criadas</h2><div id="profileLists">${createdLists}</div></div></section>`;
+        container.innerHTML = `<section class="public-profile"><div class="public-profile-heading"><div><h1>${escapeHtml(name)}</h1><p>Perfil da comunidade WikiGames</p></div>${avatar}</div><div class="public-profile-bio"><h2>Sobre</h2><p>${escapeHtml(profile.bio || 'Este usuário ainda não adicionou uma biografia.')}</p>${socials}<h2>Jogos Avaliados</h2><div id="profileRatings">${ratedGames}</div><h2>Listas Criadas</h2><div id="profileLists">${createdLists}</div></div></section>`;
+        const avatarImage = container.querySelector('.public-profile-avatar[src]');
+        if (avatarImage) {
+            avatarImage.addEventListener('error', () => {
+                const fallback = document.createElement('span');
+                fallback.className = 'public-profile-avatar public-profile-avatar-placeholder';
+                fallback.innerHTML = '<i class="fa-solid fa-user"></i>';
+                avatarImage.replaceWith(fallback);
+            }, { once: true });
+        }
         document.title = `${name} - WikiGames`;
-        updatePageSeoMetadata('perfil', { title: document.title, description: `Perfil público de ${name} na comunidade WikiGames.`, image: profile.photoURL });
+        updatePageSeoMetadata('perfil', { title: document.title, description: `Perfil público de ${name} na comunidade WikiGames.`, image: avatarURL });
     } catch (error) {
         logFirebaseError(`Falha ao carregar perfil ${userId}`, error);
         const errorCode = error?.code ? ` (${escapeHtml(error.code)})` : '';
@@ -704,6 +746,15 @@ async function renderPublicProfilePage(userId) {
 
 function escapeHtml(value) {
     return String(value || '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
+}
+
+function getSafeHttpsUrl(value) {
+    try {
+        const url = new URL(String(value || '').trim());
+        return url.protocol === 'https:' && !url.username && !url.password ? url.href : '';
+    } catch (error) {
+        return '';
+    }
 }
 
 function getSiteBasePath() {
@@ -1159,49 +1210,6 @@ function renderPublicListCard(list) {
     const authorId = escapeHtml(list.authorId || '');
     const authorName = escapeHtml(list.authorName || list.ownerName || 'Usuário');
     return `<article class="public-list-card"><h2>${escapeHtml(list.title || 'Lista sem título')}</h2><p>${games.length} jogo${games.length === 1 ? '' : 's'} · Por <a href="${buildAppHref(`/?route=perfil&uid=${encodeURIComponent(list.authorId || '')}`)}">${authorName}</a></p>${list.description ? `<p>${escapeHtml(list.description)}</p>` : ''}<div>${games.map(route => articlesDatabase[route] ? `<a href="${buildAppHref(`/${route}`)}">${escapeHtml(articlesDatabase[route].title)}</a>` : '').join('')}</div><button class="copy-list-btn" type="button" data-list-url="${new URL(buildAppHref(`/?route=listas&list=${encodeURIComponent(list.id)}`), window.location.origin).href}"><i class="fa-solid fa-link"></i> Copiar link</button></article>`;
-}
-
-function setupChat(route, container) {
-    const services = window.firebaseServices;
-    if (!services) {
-        window.addEventListener('firebase-ready', () => setupChat(route, container), { once: true });
-        return;
-    }
-    const panel = document.createElement('section');
-    panel.className = 'chat-panel';
-    panel.dataset.chatRoute = route;
-    panel.innerHTML = `<h2><i class="fa-solid fa-comments"></i> Comentarios</h2><p>Converse sobre este jogo em uma sala separada.</p><div class="chat-messages"><span>Carregando mensagens...</span></div><form class="chat-form"><input name="message" maxlength="300" placeholder="Escreva uma mensagem..." required><button type="submit" aria-label="Enviar mensagem"><i class="fa-solid fa-paper-plane"></i></button></form>`;
-    container.appendChild(panel);
-    const messagesRef = services.ref(services.realtimeDb, `chats/${route}`);
-    const messages = panel.querySelector('.chat-messages');
-    services.onValue(messagesRef, snapshot => {
-        const values = Object.values(snapshot.val() || {}).sort((first, second) => (first.timestamp || 0) - (second.timestamp || 0)).slice(-50);
-        messages.innerHTML = values.length ? values.map(item => {
-            const profileId = item.userId || item.uid;
-            const author = escapeHtml(item.author || 'Usuário');
-            const authorMarkup = profileId ? `<a class="chat-author" href="${buildAppHref(`/?route=perfil&uid=${encodeURIComponent(profileId)}`)}">${author}</a>` : `<strong>${author}</strong>`;
-            return `<p>${authorMarkup} ${escapeHtml(item.text)}</p>`;
-        }).join('') : '<span>Nenhuma mensagem ainda.</span>';
-        messages.scrollTop = messages.scrollHeight;
-    }, error => {
-        logFirebaseError(`Falha ao carregar chat ${route}`, error);
-        messages.innerHTML = '<span>Não foi possível carregar as mensagens.</span>';
-    });
-    panel.querySelector('form').addEventListener('submit', async event => {
-        event.preventDefault();
-        const user = services.auth.currentUser;
-        const input = event.currentTarget.message;
-        if (!user) { input.value = ''; input.placeholder = 'Entre para participar do chat'; return; }
-        const text = input.value.trim();
-        if (!text) return;
-        try {
-            await services.push(messagesRef, { text, userId: user.uid, author: user.displayName || user.email, timestamp: services.realtimeTimestamp() });
-            input.value = '';
-        } catch (error) {
-            logFirebaseError(`Falha ao enviar mensagem no chat ${route}`, error);
-            input.placeholder = 'Não foi possível enviar a mensagem';
-        }
-    });
 }
 
 function setupAccount() {
@@ -1989,9 +1997,15 @@ function renderArticleContentWithDownloads(route, article) {
 function renderPage() {
     const { route, anchor } = getRouteInfo();
     const container = document.getElementById('article-container');
+    document.body.classList.toggle('game-detail-page', Boolean(articlesDatabase[route]?.infobox?.data));
 
     updatePageSeoMetadata(route);
     setPageBackground(null);
+
+    if (route === 'comunidade') {
+        window.location.assign(buildAppHref('/cunidade/'));
+        return;
+    }
 
     if (route === 'all') {
         renderAllGamesPage();
@@ -2128,6 +2142,7 @@ function renderPage() {
         if (route !== 'home') {
             htmlContent += `
                 <div class="article-actions">
+                    ${isGamePage ? `<a class="community-link" href="${buildAppHref('/cunidade/')}?game=${encodeURIComponent(route)}"><i class="fa-solid fa-comments"></i> Comunidade</a>` : ''}
                     <button id="sharePageBtn" class="share-page-btn" type="button">
                         <i class="fa-solid fa-share-nodes"></i> Compartilhar página
                     </button>
@@ -2208,7 +2223,6 @@ function renderPage() {
             ratingPanel.innerHTML = `<div><strong>Avaliação da comunidade</strong><span id="ratingAverage">Carregando...</span></div><div class="rating-stars" role="group" aria-label="Avaliar de 1 a 5 estrelas">${[1, 2, 3, 4, 5].map(value => `<button type="button" data-rating="${value}" aria-label="${value} estrela${value > 1 ? 's' : ''}"><i class="fa-regular fa-star"></i></button>`).join('')}</div>`;
             container.querySelector('.article-actions')?.before(ratingPanel);
             setupRating(route, ratingPanel);
-            setupChat(route, container);
         }
 
         const sharePageBtn = document.getElementById('sharePageBtn');

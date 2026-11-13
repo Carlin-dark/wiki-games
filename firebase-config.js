@@ -21,6 +21,11 @@ import {
     onSnapshot,
     query,
     where,
+    orderBy,
+    limit,
+    updateDoc,
+    deleteField,
+    FieldPath,
     serverTimestamp
 } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js';
 import { getDatabase, ref, get, set, push, onValue, serverTimestamp as realtimeTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js';
@@ -64,6 +69,11 @@ try {
         onSnapshot,
         query,
         where,
+        orderBy,
+        limit,
+        updateDoc,
+        deleteField,
+        FieldPath,
         serverTimestamp,
         ref,
         get,
