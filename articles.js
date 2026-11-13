@@ -8437,6 +8437,37 @@ const articlesDatabase = {
             { id: "galeria", text: "7. Galeria de Imagens" },
             { id: "links", text: "8. Links Oficiais e Downloads" }
         ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Steam",
+                    url: "https://store.steampowered.com/app/885810/The_Witchs_House_MV/"
+                },
+                {
+                    label: "Website Oficial de The Witch's House",
+                    url: "http://majonoie.karou.jp/index.html"
+                },
+                {
+                    label: "Portal Freem! (Hospedeiro Original da v1.09)",
+                    url: "https://www.freem.ne.jp/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download em Português (Patch de Tradução PT-BR)",
+                    url: "https://4br.me/o9JT8lg",
+                    details: "Versão traduzida para PT-BR pela Zero Corpse"
+                }
+            ],
+            installation: {
+                title: "Como instalar e requisitos",
+                steps: [
+                    "Aviso: É necessário ter o RPG Maker VX RTP instalado no computador para que os recursos do jogo funcionem corretamente.",
+                    "Baixe o arquivo de tradução ou o jogo original através dos links fornecidos.",
+                    "Extraia o conteúdo compactado utilizando o 7-Zip ou WinRAR e execute o arquivo executável para jogar."
+                ]
+            }
+        },
         content: `
             <p><strong>The Witch's House</strong> (<em>魔女の家 / Majo no Ie</em>) é um dos romances visuais e jogos de terror em pixel art mais influentes de todos os tempos. Desenvolvido de forma independente por <strong>Fummy (ふみー)</strong> no motor RPG Maker VX e lançado em outubro de 2012, o jogo tornou-se uma referência do gênero <em>puzzle horror</em>.</p>
 
@@ -8556,25 +8587,18 @@ const articlesDatabase = {
 
             <h2 id="galeria">Galeria de Imagens</h2>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://majonoie.karou.jp/img/ss1.png" alt="Screenshot 1" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://majonoie.karou.jp/img/ss15.png" alt="Screenshot 2" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://majonoie.karou.jp/img/ssq3.png" alt="Screenshot 3" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://majonoie.karou.jp/img/ss2.png" alt="Screenshot 4" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://majonoie.karou.jp/img/ss10.png" alt="Screenshot 5" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://majonoie.karou.jp/img/ssq1.png" alt="Screenshot 6" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://majonoie.karou.jp/img/ssq2.png" alt="Screenshot 7" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
-                <img src="https://majonoie.karou.jp/img/ss9.png" alt="Screenshot 8" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+                <img src="https://majonoie.karou.jp/img/ss1.png" alt="Screenshot 1" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://majonoie.karou.jp/img/ss15.png" alt="Screenshot 2" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://majonoie.karou.jp/img/ssq3.png" alt="Screenshot 3" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://majonoie.karou.jp/img/ss2.png" alt="Screenshot 4" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://majonoie.karou.jp/img/ss10.png" alt="Screenshot 5" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://majonoie.karou.jp/img/ssq1.png" alt="Screenshot 6" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://majonoie.karou.jp/img/ssq2.png" alt="Screenshot 7" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://majonoie.karou.jp/img/ss9.png" alt="Screenshot 8" style="max-width: 24%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
             </div>
 
-            <hr>
-            <h2 id="links">Links Oficiais e Downloads</h2>
-            
-            <p><i class="fa-solid fa-globe"></i> <strong>Páginas Oficiais:</strong></p>
-            <div class="play-links">
-                <a href="https://store.steampowered.com/app/885810/The_Witchs_House_MV/" target="_blank"><i class="fa-solid fa-house"></i> Steam</a>
-                <a href="http://majonoie.karou.jp/index.html" target="_blank"><i class="fa-solid fa-house"></i> Website Oficial de The Witch's House</a>
-                <a href="https://www.freem.ne.jp/" target="_blank"><i class="fa-solid fa-download"></i> Portal Freem! (Hospedeiro Original da v1.09)</a>
-            </div>
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as páginas oficiais, o link de download da tradução em português e as instruções detalhadas na seção de downloads acima.</p>
         `
     },
     "rance-01-02": {
