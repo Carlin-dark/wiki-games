@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="community.css?v=community-3">
+    <link rel="stylesheet" href="community.css?v=community-6">
 </head>
 <body>
     <main class="community-page">
@@ -61,13 +61,16 @@
                         </button>
                     </div>
                     <div id="gif-picker-panel" class="gif-picker-panel" hidden>
-                        <p>Pesquise um GIF no Tenor, abra os resultados e cole aqui o link do GIF escolhido.</p>
-                        <div class="community-media-input">
-                            <input id="gif-search" type="search" placeholder="Pesquisar GIFs">
-                            <a id="gif-search-link" class="community-button" href="https://tenor.com/search/gifs" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buscar GIFs
-                            </a>
+                        <div class="gif-picker-heading">
+                            <p>Pesquise e escolha um GIF sem sair da comunidade.</p>
+                            <span class="gif-picker-attribution">Powered By <strong>GIPHY</strong></span>
                         </div>
+                        <div id="gif-search-form" class="gif-search-form" role="search">
+                            <input id="gif-search" type="search" placeholder="Pesquisar GIFs" aria-label="Pesquisar GIFs">
+                            <button id="gif-search-button" class="community-button" type="button"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                        </div>
+                        <p id="gif-search-status" class="gif-search-status" role="status" aria-live="polite">Os GIFs populares aparecerão aqui.</p>
+                        <div id="gif-search-results" class="gif-picker-results" role="list" aria-label="Resultados de GIFs"></div>
                         <button id="gif-panel-close" class="community-text-button" type="button">Fechar</button>
                     </div>
                     <div id="community-media-preview" class="community-media-preview" hidden></div>
@@ -109,7 +112,8 @@
     </main>
 
     <script src="../articles.js"></script>
-    <script src="community.js?v=community-3"></script>
-    <script type="module" src="../firebase-config.js?v=community-3"></script>
+    <script src="community-config.js?v=community-6"></script>
+    <script src="community.js?v=community-6"></script>
+    <script type="module" src="../firebase-config.js?v=community-6"></script>
 </body>
 </html>

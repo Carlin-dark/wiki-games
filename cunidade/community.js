@@ -19,13 +19,18 @@ const communityMediaPreview = document.getElementById('community-media-preview')
 const gifPanel = document.getElementById('gif-picker-panel');
 const gifPanelToggle = document.getElementById('gif-panel-toggle');
 const gifSearchInput = document.getElementById('gif-search');
-const gifSearchLink = document.getElementById('gif-search-link');
+const gifSearchButton = document.getElementById('gif-search-button');
+const gifSearchStatus = document.getElementById('gif-search-status');
+const gifSearchResults = document.getElementById('gif-search-results');
 const initialGameId = new URLSearchParams(window.location.search).get('game') || '';
 
 let communityServices = null;
 let currentCommunityUser = null;
 let communityPosts = [];
 let communityFeedLoaded = false;
+let gifSearchAbortController = null;
+let gifSearchTimeout = 0;
+let gifSearchRequestId = 0;
 
 function escapeCommunityHtml(value) {
     return String(value || '').replace(/[&<>'"]/g, character => ({
@@ -199,10 +204,108 @@ function renderCommunityFeed() {
     });
 }
 
-function updateGifSearchLink() {
-    const term = gifSearchInput.value.trim() || 'gifs';
-    const slug = encodeURIComponent(term).replace(/%20/g, '-');
-    gifSearchLink.href = `https://tenor.com/search/${slug}-gifs`;
+function renderGifSearchResults(gifs) {
+    gifSearchResults.replaceChildren();
+    let resultCount = 0;
+
+    gifs.forEach(gif => {
+        const previewUrl = gif.images?.fixed_width_small?.url || gif.images?.fixed_width?.url || gif.images?.preview_gif?.url;
+        const gifUrl = gif.images?.fixed_width?.url || gif.images?.original?.url;
+        let safePreviewUrl;
+        let safeGifUrl;
+        try {
+            safePreviewUrl = new URL(previewUrl);
+            safeGifUrl = new URL(gifUrl);
+        } catch (error) {
+            return;
+        }
+
+        const isGiphyHost = hostname => hostname === 'giphy.com' || hostname.endsWith('.giphy.com');
+        if (safePreviewUrl.protocol !== 'https:' || !isGiphyHost(safePreviewUrl.hostname)
+            || safeGifUrl.protocol !== 'https:' || !isGiphyHost(safeGifUrl.hostname)
+            || !/\.gif$/i.test(safeGifUrl.pathname)) {
+            return;
+        }
+
+        const title = String(gif.title || 'GIF').trim() || 'GIF';
+        const button = document.createElement('button');
+        button.className = 'gif-picker-result';
+        button.type = 'button';
+        button.setAttribute('role', 'listitem');
+        button.setAttribute('aria-label', `Escolher GIF: ${title}`);
+        const image = document.createElement('img');
+        image.src = safePreviewUrl.href;
+        image.alt = title;
+        image.loading = 'lazy';
+        image.referrerPolicy = 'no-referrer';
+        const label = document.createElement('span');
+        label.textContent = title;
+        button.append(image, label);
+        button.addEventListener('click', () => {
+            const media = getCommunityMediaDetails(safeGifUrl.href);
+            communityMediaInput.value = media.url;
+            updateCommunityMediaPreview();
+            gifPanel.hidden = true;
+            gifPanelToggle.setAttribute('aria-expanded', 'false');
+            gifPanelToggle.focus();
+            setCommunityFormFeedback('GIF selecionado para a publicação.');
+        });
+        gifSearchResults.append(button);
+        resultCount += 1;
+    });
+
+    return resultCount;
+}
+
+async function searchGifResults(searchTerm = '') {
+    const normalizedTerm = searchTerm.trim();
+    if (normalizedTerm.length === 1) {
+        gifSearchResults.replaceChildren();
+        gifSearchStatus.textContent = 'Digite pelo menos 2 caracteres para pesquisar.';
+        return;
+    }
+
+    const apiKey = window.WIKIGAMES_COMMUNITY_CONFIG?.giphyApiKey;
+    if (!apiKey) {
+        gifSearchResults.replaceChildren();
+        gifSearchStatus.textContent = 'A busca de GIFs não está configurada.';
+        return;
+    }
+
+    if (gifSearchAbortController) gifSearchAbortController.abort();
+    const controller = new AbortController();
+    gifSearchAbortController = controller;
+    const requestId = ++gifSearchRequestId;
+    const endpoint = normalizedTerm ? 'search' : 'trending';
+    const apiUrl = new URL(`https://api.giphy.com/v1/gifs/${endpoint}`);
+    apiUrl.searchParams.set('api_key', apiKey);
+    apiUrl.searchParams.set('limit', '18');
+    apiUrl.searchParams.set('rating', 'pg');
+    apiUrl.searchParams.set('lang', 'pt');
+    if (normalizedTerm) apiUrl.searchParams.set('q', normalizedTerm);
+
+    gifSearchStatus.textContent = normalizedTerm ? 'Pesquisando GIFs...' : 'Carregando GIFs populares...';
+    gifSearchResults.replaceChildren();
+    gifSearchResults.setAttribute('aria-busy', 'true');
+
+    try {
+        const response = await fetch(apiUrl, { signal: controller.signal });
+        if (!response.ok) throw new Error(`Resposta GIPHY: ${response.status}`);
+        const payload = await response.json();
+        if (requestId !== gifSearchRequestId) return;
+        const resultCount = renderGifSearchResults(Array.isArray(payload.data) ? payload.data : []);
+        gifSearchStatus.textContent = resultCount
+            ? `${resultCount} GIFs encontrados. Selecione um para adicionar à publicação.`
+            : 'Nenhum GIF encontrado. Tente outra pesquisa.';
+    } catch (error) {
+        if (error.name === 'AbortError') return;
+        console.error('[Comunidade] Falha ao buscar GIFs:', error.message);
+        if (requestId === gifSearchRequestId) {
+            gifSearchStatus.textContent = 'Não foi possível buscar GIFs. Confira a conexão e o acesso à GIPHY API.';
+        }
+    } finally {
+        if (requestId === gifSearchRequestId) gifSearchResults.setAttribute('aria-busy', 'false');
+    }
 }
 
 function updateCommunityMediaPreview() {
@@ -257,14 +360,38 @@ function initializeCommunityPage() {
 }
 
 populateCommunityGames();
-updateGifSearchLink();
 communityFilter.addEventListener('change', renderCommunityFeed);
 communityMediaInput.addEventListener('input', updateCommunityMediaPreview);
-gifSearchInput.addEventListener('input', updateGifSearchLink);
+gifSearchInput.addEventListener('input', () => {
+    window.clearTimeout(gifSearchTimeout);
+    const searchTerm = gifSearchInput.value.trim();
+    if (searchTerm.length === 1) {
+        if (gifSearchAbortController) gifSearchAbortController.abort();
+        gifSearchRequestId += 1;
+        gifSearchStatus.textContent = 'Digite pelo menos 2 caracteres para pesquisar.';
+        gifSearchResults.replaceChildren();
+        gifSearchResults.setAttribute('aria-busy', 'false');
+        return;
+    }
+    gifSearchTimeout = window.setTimeout(() => searchGifResults(searchTerm), 450);
+});
+gifSearchInput.addEventListener('keydown', event => {
+    if (event.key !== 'Enter') return;
+    event.preventDefault();
+    window.clearTimeout(gifSearchTimeout);
+    searchGifResults(gifSearchInput.value);
+});
+gifSearchButton.addEventListener('click', () => {
+    window.clearTimeout(gifSearchTimeout);
+    searchGifResults(gifSearchInput.value);
+});
 gifPanelToggle.addEventListener('click', () => {
     gifPanel.hidden = !gifPanel.hidden;
     gifPanelToggle.setAttribute('aria-expanded', String(!gifPanel.hidden));
-    if (!gifPanel.hidden) gifSearchInput.focus();
+    if (!gifPanel.hidden) {
+        gifSearchInput.focus();
+        if (!gifSearchResults.childElementCount) searchGifResults(gifSearchInput.value);
+    }
 });
 document.getElementById('gif-panel-close').addEventListener('click', () => {
     gifPanel.hidden = true;

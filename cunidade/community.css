@@ -81,7 +81,17 @@ h1, h2 { font-family: "Cinzel", serif; line-height: 1.25; }
 .community-button-secondary:hover { background: #321319; }
 .community-text-button { padding: 4px 0; border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 12px; }
 .gif-picker-panel { display: grid; gap: 9px; padding: 12px; background: #141414; }
+.gif-picker-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .gif-picker-panel p { margin: 0; color: var(--muted); font-size: 12px; }
+.gif-picker-attribution { flex: 0 0 auto; color: var(--muted); font-size: 10px; white-space: nowrap; }
+.gif-picker-attribution strong { color: var(--accent-bright); letter-spacing: .5px; }
+.gif-search-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }
+.gif-search-status { min-height: 18px; }
+.gif-picker-results { display: grid; grid-template-columns: repeat(auto-fill, minmax(94px, 1fr)); gap: 8px; max-height: 340px; overflow-y: auto; }
+.gif-picker-result { position: relative; min-width: 0; aspect-ratio: 1; padding: 0; overflow: hidden; border: 0; border-radius: 4px; background: #080808; cursor: pointer; }
+.gif-picker-result:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+.gif-picker-result img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gif-picker-result span { position: absolute; right: 0; bottom: 0; left: 0; padding: 16px 5px 5px; overflow: hidden; background: linear-gradient(transparent, rgba(0, 0, 0, .86)); color: #fff; font-size: 10px; text-align: left; text-overflow: ellipsis; white-space: nowrap; }
 .community-media-preview { max-width: 320px; max-height: 220px; overflow: hidden; }
 .community-media-preview img { display: block; max-width: 100%; max-height: 200px; object-fit: contain; }
 .community-media-preview iframe { display: block; width: min(100%, 300px); aspect-ratio: 16 / 9; border: 0; }
@@ -131,4 +141,5 @@ h1, h2 { font-family: "Cinzel", serif; line-height: 1.25; }
     .community-media-input { flex-wrap: wrap; }
     .community-media-input input { flex-basis: 100%; }
     .community-media-input .community-button { flex: 1; }
+    .gif-picker-heading { align-items: flex-start; flex-direction: column; gap: 2px; }
 }
