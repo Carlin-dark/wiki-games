@@ -151,7 +151,13 @@ function renderCommunityMedia(mediaType, mediaUrl, authorName = '') {
 }
 
 function formatCommunityDate(timestamp) {
-    const date = timestamp?.toDate ? timestamp.toDate() : timestamp instanceof Date ? timestamp : null;
+    const date = timestamp?.toDate
+        ? timestamp.toDate()
+        : timestamp instanceof Date
+            ? timestamp
+            : typeof timestamp === 'number'
+                ? new Date(timestamp)
+                : null;
     if (!date || Number.isNaN(date.getTime())) return 'Agora';
     return new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short', timeStyle: 'short' }).format(date);
 }
@@ -335,18 +341,23 @@ function initializeCommunityPage() {
         renderCommunityFeed();
     });
 
-    const postsQuery = communityServices.query(
-        communityServices.collection(communityServices.db, 'communityPosts'),
-        communityServices.orderBy('createdAt', 'desc'),
-        communityServices.limit(60)
+    const postsQuery = communityServices.realtimeQuery(
+        communityServices.ref(communityServices.rtdb, 'communityPosts'),
+        communityServices.orderByChild('createdAt'),
+        communityServices.limitToLast(60)
     );
     const feedLoadTimeout = window.setTimeout(() => {
         if (communityFeedLoaded) return;
         communityFeedStatus.classList.add('is-error');
-        communityFeedStatus.textContent = 'A comunidade está demorando para responder. Tente novamente e confira as regras do Firestore.';
+        communityFeedStatus.textContent = 'A comunidade está demorando para responder. Tente novamente e confira as regras do Realtime Database.';
     }, 12000);
-    communityServices.onSnapshot(postsQuery, snapshot => {
-        communityPosts = snapshot.docs.map(documentSnapshot => ({ id: documentSnapshot.id, ...documentSnapshot.data() }));
+    communityServices.onValue(postsQuery, snapshot => {
+        const latestPosts = [];
+        snapshot.forEach(postSnapshot => {
+            const post = postSnapshot.val();
+            if (post && typeof post === 'object') latestPosts.push({ id: postSnapshot.key, ...post });
+        });
+        communityPosts = latestPosts.reverse();
         communityFeedLoaded = true;
         window.clearTimeout(feedLoadTimeout);
         communityFeedStatus.classList.remove('is-error');
@@ -355,7 +366,7 @@ function initializeCommunityPage() {
         window.clearTimeout(feedLoadTimeout);
         console.error('[Comunidade] Falha ao carregar publicações:', error);
         communityFeedStatus.classList.add('is-error');
-        communityFeedStatus.textContent = `Não foi possível carregar a comunidade${error.code ? ` (${error.code})` : ''}. Confira se as regras do Firestore foram publicadas.`;
+        communityFeedStatus.textContent = `Não foi possível carregar a comunidade${error.code ? ` (${error.code})` : ''}. Confira se as regras do Realtime Database foram publicadas.`;
     });
 }
 
@@ -425,7 +436,8 @@ communityForm.addEventListener('submit', async event => {
     const authorName = (user.displayName || 'Usuário').slice(0, 60);
     const authorPhoto = user.photoURL && /^https:\/\/[^\s]+$/i.test(user.photoURL) ? user.photoURL : '';
     try {
-        await communityServices.addDoc(communityServices.collection(communityServices.db, 'communityPosts'), {
+        const postReference = communityServices.push(communityServices.ref(communityServices.rtdb, 'communityPosts'));
+        await communityServices.set(postReference, {
             authorId: user.uid,
             authorName,
             authorPhoto,
@@ -434,8 +446,7 @@ communityForm.addEventListener('submit', async event => {
             text,
             mediaUrl: media.url,
             mediaType: media.type,
-            createdAt: communityServices.serverTimestamp(),
-            likes: {}
+            createdAt: communityServices.realtimeTimestamp()
         });
         form.reset();
         if (initialGameId && articlesDatabase?.[initialGameId]) communityGameSelect.value = initialGameId;
@@ -447,7 +458,7 @@ communityForm.addEventListener('submit', async event => {
         setCommunityFeedback('');
     } catch (error) {
         console.error('[Comunidade] Falha ao publicar:', error);
-        setCommunityFormFeedback(`Não foi possível publicar${error.code ? ` (${error.code})` : ''}. Confira as regras do Firestore e tente novamente.`, true);
+        setCommunityFormFeedback(`Não foi possível publicar${error.code ? ` (${error.code})` : ''}. Confira as regras do Realtime Database e tente novamente.`, true);
     } finally {
         submitButton.disabled = false;
     }
@@ -465,15 +476,16 @@ communityFeed.addEventListener('click', async event => {
     const liked = post.likes?.[currentCommunityUser.uid] === true;
     button.disabled = true;
     try {
-        await communityServices.updateDoc(
-            communityServices.doc(communityServices.db, 'communityPosts', post.id),
-            new communityServices.FieldPath('likes', currentCommunityUser.uid),
-            liked ? communityServices.deleteField() : true
+        const likeReference = communityServices.ref(
+            communityServices.rtdb,
+            `communityPosts/${post.id}/likes/${currentCommunityUser.uid}`
         );
+        if (liked) await communityServices.remove(likeReference);
+        else await communityServices.set(likeReference, true);
         setCommunityFeedback('');
     } catch (error) {
         console.error('[Comunidade] Falha ao curtir publicação:', error);
-        setCommunityFeedback(`Não foi possível atualizar a curtida${error.code ? ` (${error.code})` : ''}. Confira as regras do Firestore.`, true);
+        setCommunityFeedback(`Não foi possível atualizar a curtida${error.code ? ` (${error.code})` : ''}. Confira as regras do Realtime Database.`, true);
     } finally {
         button.disabled = false;
     }
