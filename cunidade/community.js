@@ -139,7 +139,7 @@ function renderCommunityMedia(mediaType, mediaUrl, authorName = '') {
     if (mediaType === 'youtube') {
         const videoId = getYoutubeVideoId(url);
         if (!videoId) return '<span class="community-media-unavailable">Vídeo indisponível.</span>';
-        return `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="Vídeo do YouTube" loading="lazy" referrerpolicy="no-referrer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        return `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="Vídeo do YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
     }
     if (mediaType === 'gif') {
         const embedUrl = getGifEmbedUrl(url);
