@@ -10883,6 +10883,11 @@ const articlesDatabase = {
             ],
             files: [
                 {
+                    label: "Download PT-BR (466,2MB)",
+                    url: "https://4br.me/nX0WaFYUk",
+                    details: "Download do patch de tradução em português brasileiro (feito por mim)."
+                },
+                {
                     label: "Download Grátis (Versão Freeware Original 1.20 - 293 MB)",
                     url: "https://4br.me/VWpVwv6N",
                     details: "Página oficial de download freeware (freem!)"
