@@ -995,6 +995,53 @@ function renderHomeSection(title, icon, items, emptyMessage, sectionClass = '') 
     return `<section class="home-section${sectionClass ? ` ${sectionClass}` : ''}"><h3><i class="${iconClass}"></i> ${title}</h3><div class="home-grid">${items.length ? items.join('') : `<p class="home-empty">${emptyMessage}</p>`}</div></section>`;
 }
 
+function renderHomeShowcase(games) {
+    const featured = games[0];
+    if (!featured) {
+        return `<section class="home-showcase"><div class="home-showcase-copy"><span class="home-showcase-kicker">WikiGames</span><h1>Catálogo de jogos</h1><p>Explore os jogos cadastrados na enciclopédia.</p><a class="home-showcase-button" href="${buildAppHref('/all')}">Ver todos os jogos</a></div></section>`;
+    }
+
+    const { route, game } = featured;
+    const categories = (game.categories || []).slice(0, 3);
+    const otherGames = games.slice(1, 5);
+    const downloadHref = buildAppHref(`/downloads/index.html?game=${encodeURIComponent(route)}`);
+    const exploreList = otherGames.length
+        ? otherGames.map(({ route: gameRoute, game: otherGame }) => `
+            <a class="home-featured-list-item" href="${buildAppHref(`/${gameRoute}`)}">
+                ${gameCoverMarkup(gameRoute, otherGame, 'home-featured-thumb')}
+                <span><strong>${escapeHtml(otherGame.title)}</strong><small>${escapeHtml((otherGame.categories || [])[0] || 'Ver ficha do jogo')}</small></span>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </a>
+        `).join('')
+        : '<p class="home-featured-empty">Novos jogos serão adicionados ao catálogo.</p>';
+
+    return `
+        <section class="home-showcase" aria-label="Destaque do catálogo">
+            <div class="home-showcase-main">
+                <a class="home-feature-art" href="${buildAppHref(`/${route}`)}" aria-label="Abrir ficha de ${escapeHtml(game.title)}">
+                    ${gameCoverMarkup(route, game, 'home-feature-image')}
+                    <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> Em destaque no catálogo</span>
+                </a>
+                <div class="home-showcase-copy">
+                    <span class="home-showcase-kicker">WikiGames <span aria-hidden="true">/</span> Catálogo</span>
+                    <h1>${escapeHtml(game.title)}</h1>
+                    <p>${escapeHtml(game.summary || 'Consulte a ficha para conhecer mais sobre este jogo.')}</p>
+                    ${categories.length ? `<div class="home-showcase-tags">${categories.map(category => `<span>${escapeHtml(category)}</span>`).join('')}</div>` : ''}
+                    <div class="home-showcase-actions">
+                        <a class="home-showcase-button" href="${buildAppHref(`/${route}`)}"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Ver ficha</a>
+                        <a class="home-showcase-secondary" href="${downloadHref}"><i class="fa-solid fa-download" aria-hidden="true"></i> Downloads e links oficiais</a>
+                    </div>
+                </div>
+            </div>
+            <aside class="home-showcase-list" aria-label="Outros jogos do catálogo">
+                <h2>Continue explorando</h2>
+                ${exploreList}
+                <a class="home-showcase-all" href="${buildAppHref('/all')}">Abrir catálogo completo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </aside>
+        </section>
+    `;
+}
+
 function renderRecentHomeSection() {
     const currentTime = Date.now();
     const weekInMilliseconds = 7 * 24 * 60 * 60 * 1000;
@@ -1019,7 +1066,7 @@ function renderHomeSections() {
     const androidGames = games.filter(({ game }) => /android/i.test(game.infobox.data?.Plataformas || ''));
     const androidSection = renderHomeSection('Para Android', 'fa-brands fa-android', androidGames.map(({ route, game }) => renderHomeGameCard(route, game)), 'Nenhum jogo com versão para Android foi catalogado ainda.');
     const popularSection = renderHomeSection('Mais Curtido', 'fa-heart', [], 'Carregando as notas da comunidade...', 'home-popular-section');
-    return `${androidSection}${popularSection}${renderRecentHomeSection()}`;
+    return `${renderHomeShowcase(games)}${androidSection}${popularSection}${renderRecentHomeSection()}`;
 }
 
 function loadPopularHomeSection() {
@@ -1123,7 +1170,7 @@ function setupChat(route, container) {
     const panel = document.createElement('section');
     panel.className = 'chat-panel';
     panel.dataset.chatRoute = route;
-    panel.innerHTML = `<h2><i class="fa-solid fa-comments"></i> Chat da rota</h2><p>Converse sobre este jogo em uma sala separada.</p><div class="chat-messages"><span>Carregando mensagens...</span></div><form class="chat-form"><input name="message" maxlength="300" placeholder="Escreva uma mensagem..." required><button type="submit" aria-label="Enviar mensagem"><i class="fa-solid fa-paper-plane"></i></button></form>`;
+    panel.innerHTML = `<h2><i class="fa-solid fa-comments"></i> Comentarios</h2><p>Converse sobre este jogo em uma sala separada.</p><div class="chat-messages"><span>Carregando mensagens...</span></div><form class="chat-form"><input name="message" maxlength="300" placeholder="Escreva uma mensagem..." required><button type="submit" aria-label="Enviar mensagem"><i class="fa-solid fa-paper-plane"></i></button></form>`;
     container.appendChild(panel);
     const messagesRef = services.ref(services.realtimeDb, `chats/${route}`);
     const messages = panel.querySelector('.chat-messages');
@@ -1289,7 +1336,8 @@ function isInternalAppLink(href) {
         const url = new URL(href, window.location.origin);
         if (url.origin !== window.location.origin) return false;
 
-        const cleanPath = getRouteInfo().route === 'home' ? 'home' : url.pathname.replace(/^\/+|\/+$/g, '').replace(new RegExp(`^${getSiteBasePath().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/?`), '');
+        const basePath = getSiteBasePath().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const cleanPath = url.pathname.replace(/^\/+|\/+$/g, '').replace(new RegExp(`^${basePath}/?`), '');
         const cleanQuery = url.searchParams.get('route');
 
         if (cleanQuery) return true;

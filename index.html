@@ -4,107 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WikiGames - A Enciclopédia de Visual Novels e jogos Indie</title>
-    <meta name="description" content="WikiGames é a maior enciclopédia focada em Visual Novels, Jogos Indies e Terror Psicológico.">
+    <title>WikiGames - Enciclopédia de jogos independentes e Visual Novels</title>
+    <meta name="description" content="Explore o catálogo WikiGames: Visual Novels, jogos independentes, terror psicológico e outras experiências narrativas.">
 
     <link rel="canonical" href="https://wikigames.duckdns.org/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wikigames.duckdns.org/">
     <meta property="og:title" content="WikiGames">
-    <meta property="og:description" content="A enciclopédia definitiva de Visual Novels e Terror Psicológico.">
+    <meta property="og:description" content="Explore o catálogo de jogos e Visual Novels da WikiGames.">
     <meta property="og:image" content="https://wikigames.duckdns.org/favicon.ico.jpg">
     <meta property="og:image:alt" content="WikiGames">
 
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0b0e14">
+    <meta name="theme-color" content="#000000">
     <link rel="icon" type="image/x-icon" href="favicon.ico.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="vndb-bg-wrapper">
-
         <header id="top-header">
             <div class="header-content">
-                <div class="logo">
-                    <a href="?route=home">
-                        <h1>WikiGames</h1>
-                        <span>the visual novel & indie database</span>
-                    </a>
-                </div>
+                <a class="logo" href="?route=home" aria-label="WikiGames - Página inicial">
+                    <span class="logo-icon"><i class="fa-solid fa-book-atlas" aria-hidden="true"></i></span>
+                    <span class="logo-copy">
+                        <strong>WIKI<span>GAMES</span></strong>
+                        <small>Catálogo de jogos e Visual Novels</small>
+                    </span>
+                </a>
 
-                <button id="hamburgerBtn" aria-label="Abrir Menu">
-                    <i class="fa-solid fa-bars"></i>
+                <nav class="primary-nav" aria-label="Navegação principal">
+                    <a href="?route=home">Início</a>
+                    <a href="?route=all">Jogos</a>
+                    <a href="?route=mods">Mods</a>
+                    <a href="?route=listas">Listas</a>
+                    <a href="?route=sobre">Sobre</a>
+                    <a href="?route=perfil">Perfil</a>
+                </nav>
+
+                <button id="hamburgerBtn" type="button" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
 
-                <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Pesquisar banco de dados...">
-                    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <div id="searchResults" class="search-results-dropdown"></div>
-                </div>
-
-                <div id="accountArea" class="account-area">
-                    <button id="accountBtn" class="account-btn" type="button" aria-expanded="false">
-                        <i class="fa-solid fa-user"></i><span>Entrar</span>
-                    </button>
-                    <div id="accountMenu" class="account-menu" hidden></div>
+                <div class="header-actions">
+                    <a class="header-library-link" href="?route=minha-lista" aria-label="Abrir minha lista">
+                        <i class="fa-solid fa-bookmark" aria-hidden="true"></i>
+                        <span>Minha lista</span>
+                    </a>
+                    <div class="search-bar">
+                        <input type="search" id="searchInput" placeholder="Pesquisar jogos..." aria-label="Pesquisar jogos">
+                        <button id="searchBtn" type="button" aria-label="Pesquisar">
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        </button>
+                        <div id="searchResults" class="search-results-dropdown"></div>
+                    </div>
+                    <div id="accountArea" class="account-area">
+                        <button id="accountBtn" class="account-btn" type="button" aria-expanded="false">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i><span>Entrar</span>
+                        </button>
+                        <div id="accountMenu" class="account-menu" hidden></div>
+                    </div>
                 </div>
             </div>
         </header>
+
+        <nav class="catalog-subnav" aria-label="Categorias do catálogo">
+            <div class="catalog-subnav-content">
+                <span>Explore por categoria</span>
+                <a href="?route=categorias">Todas as categorias</a>
+                <a href="?route=categoria/visual-novels">Visual Novels</a>
+                <a href="?route=categoria/jogos-de-terror">Terror</a>
+                <a href="?route=categoria/jogos-indie">Indies</a>
+                <a href="?route=categoria/rpgs">RPGs</a>
+                <a href="?route=categoria/jogos-de-misterio">Mistério</a>
+            </div>
+        </nav>
 
         <div id="menuOverlay"></div>
 
         <div class="container">
             <main id="content">
-                <article id="article-container">
-                </article>
+                <article id="article-container" aria-live="polite"></article>
             </main>
 
-            <aside id="sidebar">
-                <button id="closeMenuBtn" aria-label="Fechar Menu">
-                    <i class="fa-solid fa-xmark"></i>
+            <aside id="sidebar" aria-label="Menu complementar">
+                <button id="closeMenuBtn" type="button" aria-label="Fechar menu">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 </button>
 
                 <div class="sidebar-box">
                     <h3>Navegação</h3>
                     <ul class="vndb-menu">
-                        <li><a href="?route=home"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
-                        <li><a href="#" id="randomPageBtn"><i class="fa-solid fa-dice"></i> Página Aleatória</a></li>
-                        <li><a href="?route=all"><i class="fa-solid fa-database"></i> Todos os Jogos</a></li>
-                        <li><a href="?route=minha-lista"><i class="fa-solid fa-heart"></i> Minha Lista</a></li>
+                        <li><a href="?route=home"><i class="fa-solid fa-house"></i> Página inicial</a></li>
+                        <li><a href="#" id="randomPageBtn"><i class="fa-solid fa-dice"></i> Página aleatória</a></li>
+                        <li><a href="?route=all"><i class="fa-solid fa-database"></i> Todos os jogos</a></li>
+                        <li><a href="?route=minha-lista"><i class="fa-solid fa-heart"></i> Minha lista</a></li>
+                        <li><a href="?route=perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
                         <li><a href="?route=configuracoes"><i class="fa-solid fa-sliders"></i> Configurações</a></li>
                         <li><a href="?route=listas"><i class="fa-solid fa-list"></i> Listas públicas</a></li>
-                        <li><a href="?route=mods"><i class="fa-solid fa-puzzle-piece"></i> Todos os Mods</a></li>
-                        <li><a href="#/mtool-downloads"><i class="fa-solid fa-download"></i> MTool Downloads</a></li>
-                        <li><a href="#/sobre">Sobre o Site / Aviso Legal</a></li>
+                        <li><a href="?route=mods"><i class="fa-solid fa-puzzle-piece"></i> Todos os mods</a></li>
+                        <li><a href="?route=mtool-downloads"><i class="fa-solid fa-download"></i> MTool Downloads</a></li>
+                        <li><a href="?route=sobre"><i class="fa-solid fa-circle-info"></i> Sobre / Aviso legal</a></li>
                     </ul>
                 </div>
 
                 <div class="sidebar-box">
                     <h3>Categorias</h3>
                     <ul class="vndb-menu">
-                        <li><a href="?route=categoria/terror-psicologico">Terror Psicológico</a></li>
-                        <li><a href="?route=categoria/visual-novel">Visual Novel</a></li>
-                        <li><a href="?route=categoria/escape-room">Escape Room</a></li>
-                        <li><a href="?route=categoria/rpg">RPG</a></li>
-                        <li><a href="?route=categoria/horror-gotico">Horror Gótico</a></li>
+                        <li><a href="?route=categoria/visual-novels">Visual Novels</a></li>
+                        <li><a href="?route=categoria/jogos-de-terror">Jogos de Terror</a></li>
+                        <li><a href="?route=categoria/jogos-indie">Jogos Indie</a></li>
+                        <li><a href="?route=categoria/rpgs">RPGs</a></li>
+                        <li><a href="?route=categoria/jogos-de-misterio">Mistério</a></li>
+                        <li><a href="?route=categoria/jogos-com-multiplos-finais">Múltiplos finais</a></li>
                     </ul>
                 </div>
 
                 <div class="sidebar-box discord-box">
                     <h3>Comunidade</h3>
-                    <p>Servidor oficial da comunidade.</p>
-                    <a href="https://discord.gg/T2gZfXMCAm" target="_blank" class="discord-btn">
-                        <i class="fa-brands fa-discord"></i> Discord Oficial
+                    <p>Converse com a comunidade WikiGames.</p>
+                    <a href="https://discord.gg/T2gZfXMCAm" target="_blank" rel="noopener noreferrer" class="discord-btn">
+                        <i class="fa-brands fa-discord" aria-hidden="true"></i> Discord oficial
                     </a>
                 </div>
             </aside>
         </div>
 
         <footer class="vndb-footer">
-            <p>WikiGames &copy; 2026. Desenvolvido por <a href="https://github.com/Carlin-dark" target="_blank" style="color: #6897bb; text-decoration: underline;">Carlin-dark</a>. Todos os direitos reservados.</p>
+            <p>WikiGames &copy; 2026. Desenvolvido por <a href="https://github.com/Carlin-dark" target="_blank" rel="noopener noreferrer">Carlin-dark</a>.</p>
+            <p>Jogos, imagens e marcas pertencem aos respectivos criadores. Consulte as páginas oficiais e os avisos de cada jogo.</p>
         </footer>
     </div>
 
