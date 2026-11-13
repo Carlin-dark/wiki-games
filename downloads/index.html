@@ -51,7 +51,45 @@
             line-height: 1.6;
         }
         a { color: inherit; }
-        .page { width: min(940px, calc(100% - 36px)); margin: 0 auto; padding: 28px 0 64px; }
+        
+        /* Layout principal modificado para suportar a barra lateral (Sidebar) */
+        .page { 
+            width: min(1240px, calc(100% - 36px)); 
+            margin: 0 auto; 
+            padding: 28px 0 64px; 
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 32px;
+            align-items: start;
+        }
+        
+        .main-content {
+            grid-column: 1;
+            min-width: 0;
+        }
+
+        .sidebar {
+            grid-column: 2;
+            position: sticky;
+            top: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ad-banner-box {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
         .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
         .brand { color: var(--accent); font: 700 18px "Space Grotesk", sans-serif; text-decoration: none; }
         .back-link { color: var(--muted); font-size: 14px; text-decoration-thickness: 1px; text-underline-offset: 4px; }
@@ -80,13 +118,23 @@
         .empty-state { margin: 38px 0; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 5px; }
         .empty-state h1 { font-size: 30px; }
         .empty-state p { color: var(--muted); }
-        footer { padding-top: 20px; color: var(--muted); border-top: 1px solid var(--line); font-size: 12px; }
-        @media (max-width: 620px) {
-            .page { width: min(100% - 28px, 940px); padding-top: 18px; }
+        footer { grid-column: 1 / -1; padding-top: 20px; color: var(--muted); border-top: 1px solid var(--line); font-size: 12px; }
+
+        @media (max-width: 900px) {
+            .page { 
+                grid-template-columns: 1fr; 
+                width: min(100% - 28px, 940px); 
+                padding-top: 18px; 
+            }
+            .sidebar {
+                grid-column: 1;
+                position: static;
+            }
             .hero { grid-template-columns: 1fr; gap: 20px; padding-top: 30px; }
             .cover { max-width: 420px; }
             .section-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
         }
+
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
         }
@@ -94,11 +142,22 @@
 </head>
 <body>
     <main class="page" id="downloads-page" aria-live="polite">
-        <header class="topbar">
-            <a class="brand" href="../">WikiGames</a>
-            <a class="back-link" id="back-link" href="../">Voltar ao jogo</a>
-        </header>
-        <div id="downloads-content"></div>
+        <!-- Conteúdo Principal -->
+        <div class="main-content">
+            <header class="topbar">
+                <a class="brand" href="../">WikiGames</a>
+                <a class="back-link" id="back-link" href="../">Voltar ao jogo</a>
+            </header>
+            <div id="downloads-content"></div>
+        </div>
+
+        <!-- Barra Lateral com o Banner de Anúncio -->
+        <aside class="sidebar">
+            <div class="ad-banner-box" id="sidebar-ad-container">
+                <!-- O script do anúncio será inserido aqui -->
+            </div>
+        </aside>
+
         <footer>WikiGames · Consulte as páginas oficiais e os requisitos antes de instalar.</footer>
     </main>
 
@@ -296,6 +355,20 @@
                 <p class="notice">Os links são fornecidos pelas fontes indicadas em cada opção. Verifique a origem dos arquivos e siga as instruções oficiais do jogo.</p>
             `;
         })();
+    </script>
+
+    <!-- Script do Banner de Anúncio Posicionado na Lateral -->
+    <script>
+        (function(s){
+            s.dataset.zone = '12254528';
+            s.src = 'https://n6wxm.com/vignette.min.js';
+            const container = document.getElementById('sidebar-ad-container');
+            if (container) {
+                container.appendChild(s);
+            } else {
+                document.body.appendChild(s);
+            }
+        })(document.createElement('script'));
     </script>
 </body>
 </html>
