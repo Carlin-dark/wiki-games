@@ -23,7 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=community-5">
+    <link rel="stylesheet" href="style.css?v=report-1">
+    <link rel="stylesheet" href="report.css?v=report-1">
 </head>
 <body>
     <div class="vndb-bg-wrapper">
@@ -142,9 +143,42 @@
         </footer>
     </div>
 
+    <div id="reportModal" class="report-modal" hidden role="dialog" aria-modal="true" aria-labelledby="reportTitle">
+        <div class="report-box">
+            <button type="button" id="closeReport" class="report-close" aria-label="Fechar denúncia"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <h2 id="reportTitle">Denunciar conteúdo</h2>
+            <p>Informe o problema encontrado no WikiGames.</p>
+            <form id="reportForm">
+                <label for="reportType">Motivo da denúncia</label>
+                <select id="reportType" required>
+                    <option value="">Selecione um motivo</option>
+                    <option value="inappropriate">Conteúdo inapropriado</option>
+                    <option value="spam">Spam ou propaganda</option>
+                    <option value="malicious_nickname">Nick malicioso ou enganoso</option>
+                    <option value="harassment">Ofensas ou assédio</option>
+                    <option value="fake_information">Informação falsa</option>
+                    <option value="broken_link">Link quebrado</option>
+                    <option value="wrong_game">Informações incorretas sobre o jogo</option>
+                    <option value="scam">Possível golpe ou fraude</option>
+                    <option value="other">Outro</option>
+                </select>
+                <p id="reportTypeDescription" class="report-type-description" aria-live="polite"></p>
+                <label for="reportDescription">Descrição do problema</label>
+                <textarea id="reportDescription" maxlength="1500" minlength="5" required placeholder="Explique o que aconteceu..."></textarea>
+                <div class="report-trap" aria-hidden="true">
+                    <label for="reportWebsite">Website</label>
+                    <input id="reportWebsite" type="text" tabindex="-1" autocomplete="off">
+                </div>
+                <button type="submit" id="sendReport"><i class="fa-solid fa-flag" aria-hidden="true"></i> Enviar denúncia</button>
+                <p id="reportStatus" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
     <script src="articles.js"></script>
     <script src="mods.js"></script>
     <script type="module" src="firebase-config.js?v=community-5"></script>
-    <script src="app.js?v=community-5"></script>
+    <script src="app.js?v=report-1"></script>
+    <script src="report.js?v=report-1"></script>
 </body>
 </html>
