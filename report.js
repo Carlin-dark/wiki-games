@@ -23,7 +23,8 @@ const reportDescriptions = {
 let reportTarget = {
     targetType: 'game',
     targetId: '',
-    reportedUser: ''
+    reportedUser: '',
+    targetUrl: ''
 };
 let reportReturnFocus = null;
 let reportCloseTimeout = 0;
@@ -39,13 +40,14 @@ function closeReport() {
     if (reportReturnFocus?.isConnected) reportReturnFocus.focus();
 }
 
-function openReport(type, id, username = '') {
+function openReport(type, id, username = '', targetUrl = window.location.href) {
     window.clearTimeout(reportCloseTimeout);
     reportReturnFocus = document.activeElement;
     reportTarget = {
         targetType: String(type || ''),
         targetId: String(id || ''),
-        reportedUser: String(username || '')
+        reportedUser: String(username || ''),
+        targetUrl: String(targetUrl || '')
     };
     reportForm.reset();
     reportStatus.textContent = '';
@@ -64,7 +66,8 @@ document.addEventListener('click', event => {
         openReport(
             reportButton.dataset.reportType,
             reportButton.dataset.reportId,
-            reportButton.dataset.reportedUser || ''
+            reportButton.dataset.reportedUser || '',
+            reportButton.dataset.reportUrl || window.location.href
         );
         return;
     }

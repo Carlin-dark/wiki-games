@@ -725,7 +725,7 @@ async function renderPublicProfilePage(userId) {
         const socials = profile.socials ? `<p><i class="fa-solid fa-link"></i> <a href="${escapeHtml(profile.socials)}" target="_blank" rel="noopener noreferrer">Rede social</a></p>` : '';
         const ratedGames = await getRatedGamesMarkup(services, userId);
         const createdLists = await getCreatedListsMarkup(services, userId);
-        container.innerHTML = `<section class="public-profile"><div class="public-profile-heading"><div><h1>${escapeHtml(name)}</h1><p>Perfil da comunidade WikiGames</p><button class="report-button" type="button" data-open-report data-report-type="profile" data-report-id="${escapeHtml(userId)}" data-reported-user="${escapeHtml(name)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar perfil</button></div>${avatar}</div><div class="public-profile-bio"><h2>Sobre</h2><p>${escapeHtml(profile.bio || 'Este usuário ainda não adicionou uma biografia.')}</p>${socials}<h2>Jogos Avaliados</h2><div id="profileRatings">${ratedGames}</div><h2>Listas Criadas</h2><div id="profileLists">${createdLists}</div></div></section>`;
+        container.innerHTML = `<section class="public-profile"><div class="public-profile-heading"><div><h1>${escapeHtml(name)}</h1><p>Perfil da comunidade WikiGames</p><button class="report-button" type="button" data-open-report data-report-type="profile" data-report-id="${escapeHtml(userId)}" data-report-url="${escapeHtml(window.location.href)}" data-reported-user="${escapeHtml(name)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button></div>${avatar}</div><div class="public-profile-bio"><h2>Sobre</h2><p>${escapeHtml(profile.bio || 'Este usuário ainda não adicionou uma biografia.')}</p>${socials}<h2>Jogos Avaliados</h2><div id="profileRatings">${ratedGames}</div><h2>Listas Criadas</h2><div id="profileLists">${createdLists}</div></div></section>`;
         const avatarImage = container.querySelector('.public-profile-avatar[src]');
         if (avatarImage) {
             avatarImage.addEventListener('error', () => {
@@ -2142,7 +2142,7 @@ function renderPage() {
         if (route !== 'home') {
             htmlContent += `
                 <div class="article-actions">
-                    ${isGamePage ? `<a class="community-link" href="${buildAppHref('/cunidade/')}?game=${encodeURIComponent(route)}"><i class="fa-solid fa-comments"></i> Comunidade</a><button class="report-button" type="button" data-open-report data-report-type="game" data-report-id="${escapeHtml(route)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar jogo</button>` : ''}
+                    ${isGamePage ? `<a class="community-link" href="${buildAppHref('/cunidade/')}?game=${encodeURIComponent(route)}"><i class="fa-solid fa-comments"></i> Comunidade</a><button class="report-button" type="button" data-open-report data-report-type="game" data-report-id="${escapeHtml(route)}" data-report-url="${escapeHtml(window.location.href)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button>` : ''}
                     <button id="sharePageBtn" class="share-page-btn" type="button">
                         <i class="fa-solid fa-share-nodes"></i> Compartilhar página
                     </button>

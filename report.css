@@ -2,23 +2,22 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 7px;
-    padding: 8px 11px;
-    border: 1px solid var(--wg-border, #382a2c);
-    border-radius: 4px;
-    background: var(--wg-surface, #0c0c0c);
-    color: var(--wg-red-bright, #ff4652);
+    gap: 5px;
+    padding: 4px 6px;
+    border: 0;
+    border-radius: 3px;
+    background: transparent;
+    color: #b9adb0;
     cursor: pointer;
     font: inherit;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: 500;
     text-decoration: none;
 }
 .report-button:hover,
 .report-button:focus-visible {
-    border-color: var(--wg-red, #e32936);
-    background: #281217;
-    color: #fff;
+    background: rgba(227, 41, 54, .12);
+    color: var(--wg-red-bright, #ff4652);
 }
 .report-button i,
 .community-report-button i { color: var(--wg-red-bright, #ff4652); }
@@ -118,6 +117,8 @@
 body.report-modal-open { overflow: hidden; }
 
 .community-post-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.community-post-card,
+.community-comment { scroll-margin-top: 18px; }
 .community-post-actions .community-report-button { font-size: 11px; }
 .community-comment-actions .community-report-button { padding: 4px 0; border: 0; background: transparent; font-size: 11px; }
 .community-comment-actions .community-report-button:hover { background: transparent; color: #fff; }
