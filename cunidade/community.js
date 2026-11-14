@@ -23,6 +23,7 @@ const gifSearchButton = document.getElementById('gif-search-button');
 const gifSearchStatus = document.getElementById('gif-search-status');
 const gifSearchResults = document.getElementById('gif-search-results');
 const initialGameId = new URLSearchParams(window.location.search).get('game') || '';
+const COMMUNITY_ADMIN_UID = 'gC8d3SOP3ChsBRHq79SwOUn2Bdy1';
 
 let communityServices = null;
 let currentCommunityUser = null;
@@ -34,7 +35,7 @@ let gifSearchTimeout = 0;
 let gifSearchRequestId = 0;
 
 function isCommunityAdmin(user = currentCommunityUser) {
-    return String(user?.email || '').trim().toLowerCase() === 'konozuba1k@gmail.com';
+    return user?.uid === COMMUNITY_ADMIN_UID;
 }
 
 function isCommunityAdminAuthor(authorId) {
@@ -183,6 +184,8 @@ function renderCommunityPost(post) {
     const likedByCurrentUser = Boolean(currentCommunityUser && likes[currentCommunityUser.uid] === true);
     const authorName = post.authorName || 'Usuário WikiGames';
     const authorId = String(post.authorId || '');
+    const canManagePost = Boolean(currentCommunityUser
+        && (currentCommunityUser.uid === authorId || isCommunityAdmin()));
     const safePhotoURL = post.authorPhoto && /^https:\/\/[^\s]+$/i.test(post.authorPhoto) ? post.authorPhoto : '';
     const authorAvatar = safePhotoURL
         ? `<span class="community-author-avatar"><img src="${escapeCommunityHtml(safePhotoURL)}" alt="" loading="lazy" referrerpolicy="no-referrer"></span>`
@@ -207,7 +210,19 @@ function renderCommunityPost(post) {
         <header class="community-post-header">${authorAvatar}<div class="community-author-info">${authorLink}<div class="community-post-meta"><span class="community-post-tag">${escapeCommunityHtml(kind)}</span>${gameMarkup ? `<span>·</span>${gameMarkup}` : ''}<time>${escapeCommunityHtml(formatCommunityDate(post.createdAt))}</time></div></div></header>
         ${text ? `<p class="community-post-text">${text}</p>` : ''}
         ${media ? `<div class="community-post-media">${media}</div>` : ''}
-        <div class="community-post-actions"><button class="community-like-button" type="button" data-community-like="${escapeCommunityHtml(post.id)}" aria-pressed="${likedByCurrentUser}" aria-label="${likedByCurrentUser ? 'Descurtir' : 'Curtir'} comentário"><i class="fa-${likedByCurrentUser ? 'solid' : 'regular'} fa-heart"></i><span>${likeCount}</span><span>Curtir</span></button><button class="report-button community-report-button" type="button" data-open-report data-report-type="community_post" data-report-id="${escapeCommunityHtml(post.id)}" data-report-url="${escapeCommunityHtml(getCommunityReportUrl(postAnchorId))}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button></div>
+        <div class="community-post-actions">
+            <button class="community-like-button" type="button" data-community-like="${escapeCommunityHtml(post.id)}" aria-pressed="${likedByCurrentUser}" aria-label="${likedByCurrentUser ? 'Descurtir' : 'Curtir'} comentário"><i class="fa-${likedByCurrentUser ? 'solid' : 'regular'} fa-heart"></i><span>${likeCount}</span><span>Curtir</span></button>
+            ${canManagePost ? `<button class="community-text-button" type="button" data-community-post-edit="${escapeCommunityHtml(post.id)}">${isCommunityAdmin() && currentCommunityUser.uid !== authorId ? 'Editar (admin)' : 'Editar'}</button><button class="community-text-button community-delete-button" type="button" data-community-post-delete="${escapeCommunityHtml(post.id)}">${isCommunityAdmin() && currentCommunityUser.uid !== authorId ? 'Excluir (admin)' : 'Excluir'}</button>` : ''}
+            <button class="report-button community-report-button" type="button" data-open-report data-report-type="community_post" data-report-id="${escapeCommunityHtml(post.id)}" data-report-url="${escapeCommunityHtml(getCommunityReportUrl(postAnchorId))}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button>
+        </div>
+        ${canManagePost ? `<form class="community-comment-form community-post-edit-form" data-community-post-edit-form data-post-id="${escapeCommunityHtml(post.id)}" hidden>
+            <label>Editar publicação</label>
+            <textarea name="text" maxlength="1200" rows="3">${escapeCommunityHtml(post.text || '')}</textarea>
+            <div class="community-post-edit-actions">
+                <button class="community-button community-button-secondary" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
+                <button class="community-text-button" type="button" data-community-post-edit-cancel>Cancelar</button>
+            </div>
+        </form>` : ''}
         <section class="community-comments" aria-label="Comentários">
             <h3>Comentários <span>${commentList.length}</span></h3>
             ${commentsMarkup || '<p class="community-empty">Ainda não há comentários. Seja o primeiro a responder.</p>'}
@@ -258,8 +273,9 @@ function renderCommunityComment(comment, postId, childrenMarkup) {
     const replyLabel = comment.replyToName
         ? `<span class="community-comment-reply-target">respondendo a ${escapeCommunityHtml(comment.replyToName)}</span>`
         : '';
-    const canEdit = Boolean(currentCommunityUser && currentCommunityUser.uid === authorId);
-    const canDelete = canEdit || isCommunityAdmin();
+    const isCommentOwner = Boolean(currentCommunityUser && currentCommunityUser.uid === authorId);
+    const canEdit = isCommentOwner || isCommunityAdmin();
+    const canDelete = canEdit;
     const text = escapeCommunityHtml(comment.text || '').replace(/\n/g, '<br>');
     const commentId = escapeCommunityHtml(comment.id);
     const escapedPostId = escapeCommunityHtml(postId);
@@ -270,8 +286,8 @@ function renderCommunityComment(comment, postId, childrenMarkup) {
             ${replyLabel}<p class="community-comment-text">${text}</p>
             <div class="community-comment-actions">
                 ${currentCommunityUser ? `<button class="community-text-button" type="button" data-community-reply="${commentId}">Responder</button>` : ''}
-                ${canEdit ? `<button class="community-text-button" type="button" data-community-edit="${commentId}">Editar</button>` : ''}
-                ${canDelete ? `<button class="community-text-button community-delete-button" type="button" data-community-delete="${commentId}">${isCommunityAdmin() && !canEdit ? 'Excluir (admin)' : 'Excluir'}</button>` : ''}
+                ${canEdit ? `<button class="community-text-button" type="button" data-community-edit="${commentId}">${isCommunityAdmin() && !isCommentOwner ? 'Editar (admin)' : 'Editar'}</button>` : ''}
+                ${canDelete ? `<button class="community-text-button community-delete-button" type="button" data-community-delete="${commentId}">${isCommunityAdmin() && !isCommentOwner ? 'Excluir (admin)' : 'Excluir'}</button>` : ''}
                 ${!currentCommunityUser || currentCommunityUser.uid !== authorId ? `<button class="community-text-button community-report-button" type="button" data-open-report data-report-type="comment" data-report-id="${escapeCommunityHtml(`${postId}/${comment.id}`)}" data-report-url="${escapeCommunityHtml(getCommunityReportUrl(commentAnchorId))}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button>` : ''}
             </div>
             <form class="community-comment-form community-inline-comment-form" data-community-comment-form data-post-id="${escapedPostId}" data-parent-id="${commentId}" hidden>
@@ -280,7 +296,7 @@ function renderCommunityComment(comment, postId, childrenMarkup) {
                 <button class="community-button community-button-secondary" type="submit"><i class="fa-solid fa-reply"></i> Responder</button>
             </form>
             ${canEdit ? `<form class="community-comment-form community-inline-comment-form" data-community-comment-form data-post-id="${escapedPostId}" data-comment-id="${commentId}" hidden>
-                <label>Editar seu comentário</label>
+                <label>${isCommunityAdmin() && !isCommentOwner ? 'Editar comentário (admin)' : 'Editar seu comentário'}</label>
                 <textarea name="text" maxlength="1200" rows="2" required>${escapeCommunityHtml(comment.text || '')}</textarea>
                 <button class="community-button community-button-secondary" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
             </form>` : ''}
@@ -573,6 +589,41 @@ communityForm.addEventListener('submit', async event => {
 });
 
 communityFeed.addEventListener('submit', async event => {
+    const postEditForm = event.target.closest('form[data-community-post-edit-form]');
+    if (postEditForm) {
+        event.preventDefault();
+        const user = currentCommunityUser;
+        const post = communityPosts.find(item => item.id === postEditForm.dataset.postId);
+        const submitButton = postEditForm.querySelector('button[type="submit"]');
+        if (!user || !communityServices || !post
+            || (post.authorId !== user.uid && !isCommunityAdmin(user))) {
+            setCommunityFeedback('Você só pode editar suas próprias publicações.', true);
+            return;
+        }
+
+        const text = postEditForm.elements.text.value.trim();
+        if (text.length > 1200 || (!text && post.mediaType === 'none')) {
+            setCommunityFeedback('A publicação precisa ter texto ou mídia e pode ter até 1200 caracteres.', true);
+            return;
+        }
+
+        submitButton.disabled = true;
+        try {
+            await communityServices.set(
+                communityServices.ref(communityServices.rtdb, `communityPosts/${post.id}/text`),
+                text
+            );
+            postEditForm.hidden = true;
+            setCommunityFeedback('Publicação atualizada.');
+        } catch (error) {
+            console.error('[Comunidade] Falha ao editar publicação:', error);
+            setCommunityFeedback(`Não foi possível editar a publicação${error.code ? ` (${error.code})` : ''}. Confira as regras do Realtime Database e tente novamente.`, true);
+        } finally {
+            submitButton.disabled = false;
+        }
+        return;
+    }
+
     const form = event.target.closest('form[data-community-comment-form]');
     if (!form) return;
     event.preventDefault();
@@ -599,7 +650,7 @@ communityFeed.addEventListener('submit', async event => {
         const commentId = form.dataset.commentId;
         if (commentId) {
             const existingComment = post.comments?.[commentId];
-            if (!existingComment || existingComment.authorId !== user.uid) {
+            if (!existingComment || (existingComment.authorId !== user.uid && !isCommunityAdmin(user))) {
                 setCommunityFeedback('Você só pode editar seus próprios comentários.', true);
                 return;
             }
@@ -642,6 +693,55 @@ communityFeed.addEventListener('submit', async event => {
 });
 
 communityFeed.addEventListener('click', async event => {
+    const postEditButton = event.target.closest('[data-community-post-edit]');
+    if (postEditButton) {
+        if (!currentCommunityUser || !communityServices) {
+            setCommunityFeedback('Entre na sua conta WikiGames para editar publicações.', true);
+            return;
+        }
+        const form = postEditButton.closest('[data-post-id]')?.querySelector('[data-community-post-edit-form]');
+        if (form) {
+            form.hidden = !form.hidden;
+            if (!form.hidden) form.elements.text.focus();
+        }
+        return;
+    }
+
+    const postEditCancel = event.target.closest('[data-community-post-edit-cancel]');
+    if (postEditCancel) {
+        const form = postEditCancel.closest('[data-community-post-edit-form]');
+        if (form) {
+            form.reset();
+            form.hidden = true;
+        }
+        return;
+    }
+
+    const postDeleteButton = event.target.closest('[data-community-post-delete]');
+    if (postDeleteButton) {
+        const post = communityPosts.find(item => item.id === postDeleteButton.dataset.communityPostDelete);
+        const canDelete = post && currentCommunityUser
+            && (post.authorId === currentCommunityUser.uid || isCommunityAdmin());
+        if (!canDelete) {
+            setCommunityFeedback('Você só pode excluir suas próprias publicações.', true);
+            return;
+        }
+        if (!window.confirm('Tem certeza de que deseja excluir esta publicação?')) return;
+        postDeleteButton.disabled = true;
+        try {
+            await communityServices.remove(
+                communityServices.ref(communityServices.rtdb, `communityPosts/${post.id}`)
+            );
+            setCommunityFeedback('Publicação excluída.');
+        } catch (error) {
+            console.error('[Comunidade] Falha ao excluir publicação:', error);
+            setCommunityFeedback(`Não foi possível excluir a publicação${error.code ? ` (${error.code})` : ''}. Confira as regras do Realtime Database e tente novamente.`, true);
+        } finally {
+            postDeleteButton.disabled = false;
+        }
+        return;
+    }
+
     const replyButton = event.target.closest('[data-community-reply]');
     const editButton = event.target.closest('[data-community-edit]');
     if (replyButton || editButton) {

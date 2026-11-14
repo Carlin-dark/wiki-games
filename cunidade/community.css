@@ -121,7 +121,10 @@ h1, h2 { font-family: "Cinzel", serif; line-height: 1.25; }
 .community-post-media iframe { display: block; width: min(100%, 520px); aspect-ratio: 16 / 9; border: 0; background: #080808; }
 .community-post-media .community-gif-frame { width: min(100%, 300px); aspect-ratio: 4 / 3; }
 .community-media-unavailable { color: var(--muted); font-size: 12px; }
-.community-post-actions { margin-top: 8px; }
+.community-post-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+.community-post-edit-form { margin-top: 12px; }
+.community-post-edit-form textarea { width: 100%; min-height: 74px; padding: 8px 9px; border: 1px solid #303030; border-radius: 4px; background: #080808; color: var(--text); resize: vertical; }
+.community-post-edit-actions { display: flex; align-items: center; gap: 12px; }
 .community-like-button { display: inline-flex; align-items: center; gap: 6px; padding: 5px 0; border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 12px; }
 .community-like-button i { color: var(--accent-bright); }
 .community-like-button[aria-pressed="true"] { color: var(--accent-bright); }
