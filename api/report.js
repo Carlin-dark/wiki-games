@@ -74,7 +74,7 @@ module.exports = async (req, res) => {
       });
     }
 
-    if (!["game", "comment", "review", "profile"].includes(targetType)) {
+    if (!["game", "comment", "community_post", "review", "profile"].includes(targetType)) {
       return res.status(400).json({
         success: false,
         message: "Conteúdo inválido."
@@ -117,8 +117,16 @@ module.exports = async (req, res) => {
       other: "Outro motivo"
     };
 
+    const targetLabels = {
+      game: "Jogo",
+      comment: "Comentário",
+      community_post: "Publicação da comunidade",
+      review: "Avaliação",
+      profile: "Perfil"
+    };
+
     const embed = {
-      title: "Nova denúncia — IK Games",
+      title: "Nova denúncia — WikiGames",
       color: 0xE74C3C,
       fields: [
         {
@@ -128,7 +136,7 @@ module.exports = async (req, res) => {
         },
         {
           name: "Conteúdo",
-          value: targetType,
+          value: targetLabels[targetType],
           inline: true
         },
         {
@@ -153,7 +161,7 @@ module.exports = async (req, res) => {
         }
       ],
       footer: {
-        text: "IK Games • Sistema de denúncias"
+        text: "WikiGames • Sistema de denúncias"
       },
       timestamp: new Date().toISOString()
     };
