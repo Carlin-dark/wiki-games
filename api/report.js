@@ -64,6 +64,7 @@ module.exports = async (req, res) => {
     const type = clean(body.type, 50);
     const targetType = clean(body.targetType, 30);
     const targetId = clean(body.targetId, 100);
+    const targetUrlInput = clean(body.targetUrl, 1000);
     const reportedUser = clean(body.reportedUser, 80);
     const description = clean(body.description, 1500);
 
@@ -81,10 +82,34 @@ module.exports = async (req, res) => {
       });
     }
 
-    if (!targetId || !description || description.length < 5) {
+    if (!targetId || !targetUrlInput || !description || description.length < 5) {
       return res.status(400).json({
         success: false,
         message: "Preencha os campos obrigatórios."
+      });
+    }
+
+    let targetUrl;
+    try {
+      const parsedTargetUrl = new URL(targetUrlInput);
+      const allowedOrigin = new URL(siteOrigin || origin).origin;
+      const isLocalHttp = parsedTargetUrl.protocol === "http:" &&
+        ["localhost", "127.0.0.1"].includes(parsedTargetUrl.hostname);
+
+      if (
+        (parsedTargetUrl.protocol !== "https:" && !isLocalHttp) ||
+        parsedTargetUrl.origin !== allowedOrigin ||
+        parsedTargetUrl.username ||
+        parsedTargetUrl.password
+      ) {
+        throw new Error("Invalid target URL");
+      }
+
+      targetUrl = parsedTargetUrl.href;
+    } catch (error) {
+      return res.status(400).json({
+        success: false,
+        message: "Link do conteúdo inválido."
       });
     }
 
@@ -127,6 +152,7 @@ module.exports = async (req, res) => {
 
     const embed = {
       title: "Nova denúncia — WikiGames",
+      url: targetUrl,
       color: 0xE74C3C,
       fields: [
         {
@@ -142,6 +168,11 @@ module.exports = async (req, res) => {
         {
           name: "ID do conteúdo",
           value: targetId,
+          inline: false
+        },
+        {
+          name: "Link direto",
+          value: targetUrl,
           inline: false
         },
         {
