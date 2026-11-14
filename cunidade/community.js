@@ -28,6 +28,7 @@ let communityServices = null;
 let currentCommunityUser = null;
 let communityPosts = [];
 let communityFeedLoaded = false;
+let communityReportAnchorPending = Boolean(window.location.hash);
 let gifSearchAbortController = null;
 let gifSearchTimeout = 0;
 let gifSearchRequestId = 0;
@@ -48,6 +49,12 @@ function escapeCommunityHtml(value) {
         "'": '&#39;',
         '"': '&quot;'
     })[character]);
+}
+
+function getCommunityReportUrl(anchorId) {
+    const url = new URL(window.location.href);
+    url.hash = anchorId;
+    return url.href;
 }
 
 function setCommunityFeedback(message, isError = false) {
@@ -195,11 +202,12 @@ function renderCommunityPost(post) {
         .filter(([, comment]) => comment && typeof comment === 'object')
         .map(([id, comment]) => ({ id, ...comment }));
     const commentsMarkup = renderCommunityComments(post.id, commentList);
-    return `<article class="community-post-card" data-post-id="${escapeCommunityHtml(post.id)}">
+    const postAnchorId = `community-post-${post.id}`;
+    return `<article id="${escapeCommunityHtml(postAnchorId)}" class="community-post-card" data-post-id="${escapeCommunityHtml(post.id)}">
         <header class="community-post-header">${authorAvatar}<div class="community-author-info">${authorLink}<div class="community-post-meta"><span class="community-post-tag">${escapeCommunityHtml(kind)}</span>${gameMarkup ? `<span>·</span>${gameMarkup}` : ''}<time>${escapeCommunityHtml(formatCommunityDate(post.createdAt))}</time></div></div></header>
         ${text ? `<p class="community-post-text">${text}</p>` : ''}
         ${media ? `<div class="community-post-media">${media}</div>` : ''}
-        <div class="community-post-actions"><button class="community-like-button" type="button" data-community-like="${escapeCommunityHtml(post.id)}" aria-pressed="${likedByCurrentUser}" aria-label="${likedByCurrentUser ? 'Descurtir' : 'Curtir'} comentário"><i class="fa-${likedByCurrentUser ? 'solid' : 'regular'} fa-heart"></i><span>${likeCount}</span><span>Curtir</span></button><button class="report-button community-report-button" type="button" data-open-report data-report-type="community_post" data-report-id="${escapeCommunityHtml(post.id)}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar publicação</button></div>
+        <div class="community-post-actions"><button class="community-like-button" type="button" data-community-like="${escapeCommunityHtml(post.id)}" aria-pressed="${likedByCurrentUser}" aria-label="${likedByCurrentUser ? 'Descurtir' : 'Curtir'} comentário"><i class="fa-${likedByCurrentUser ? 'solid' : 'regular'} fa-heart"></i><span>${likeCount}</span><span>Curtir</span></button><button class="report-button community-report-button" type="button" data-open-report data-report-type="community_post" data-report-id="${escapeCommunityHtml(post.id)}" data-report-url="${escapeCommunityHtml(getCommunityReportUrl(postAnchorId))}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button></div>
         <section class="community-comments" aria-label="Comentários">
             <h3>Comentários <span>${commentList.length}</span></h3>
             ${commentsMarkup || '<p class="community-empty">Ainda não há comentários. Seja o primeiro a responder.</p>'}
@@ -255,7 +263,8 @@ function renderCommunityComment(comment, postId, childrenMarkup) {
     const text = escapeCommunityHtml(comment.text || '').replace(/\n/g, '<br>');
     const commentId = escapeCommunityHtml(comment.id);
     const escapedPostId = escapeCommunityHtml(postId);
-    return `<article class="community-comment" data-comment-id="${commentId}">
+    const commentAnchorId = `community-comment-${postId}-${comment.id}`;
+    return `<article id="${escapeCommunityHtml(commentAnchorId)}" class="community-comment" data-comment-id="${commentId}">
         <div class="community-comment-main">${avatar}<div class="community-comment-content">
             <header class="community-comment-header">${authorLink}${adminBadge}<time>${escapeCommunityHtml(formatCommunityDate(comment.createdAt))}</time></header>
             ${replyLabel}<p class="community-comment-text">${text}</p>
@@ -263,7 +272,7 @@ function renderCommunityComment(comment, postId, childrenMarkup) {
                 ${currentCommunityUser ? `<button class="community-text-button" type="button" data-community-reply="${commentId}">Responder</button>` : ''}
                 ${canEdit ? `<button class="community-text-button" type="button" data-community-edit="${commentId}">Editar</button>` : ''}
                 ${canDelete ? `<button class="community-text-button community-delete-button" type="button" data-community-delete="${commentId}">${isCommunityAdmin() && !canEdit ? 'Excluir (admin)' : 'Excluir'}</button>` : ''}
-                ${!currentCommunityUser || currentCommunityUser.uid !== authorId ? `<button class="community-text-button community-report-button" type="button" data-open-report data-report-type="comment" data-report-id="${escapeCommunityHtml(`${postId}/${comment.id}`)}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button>` : ''}
+                ${!currentCommunityUser || currentCommunityUser.uid !== authorId ? `<button class="community-text-button community-report-button" type="button" data-open-report data-report-type="comment" data-report-id="${escapeCommunityHtml(`${postId}/${comment.id}`)}" data-report-url="${escapeCommunityHtml(getCommunityReportUrl(commentAnchorId))}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button>` : ''}
             </div>
             <form class="community-comment-form community-inline-comment-form" data-community-comment-form data-post-id="${escapedPostId}" data-parent-id="${commentId}" hidden>
                 <label>Responder a ${escapeCommunityHtml(authorName)}</label>
@@ -298,6 +307,14 @@ function renderCommunityFeed() {
             image.replaceWith(unavailable);
         }, { once: true });
     });
+    if (communityReportAnchorPending && window.location.hash) {
+        const targetId = window.location.hash.slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+            communityReportAnchorPending = false;
+            window.requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+        }
+    }
 }
 
 function renderGifSearchResults(gifs) {
