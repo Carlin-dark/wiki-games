@@ -670,6 +670,15 @@ communityFeed.addEventListener('submit', async event => {
             const commentReference = communityServices.push(
                 communityServices.ref(communityServices.rtdb, `communityPosts/${post.id}/comments`)
             );
+            console.log('[DEBUG COMENTÁRIO]', {
+    uid: user.uid,
+    authenticated: Boolean(communityServices.auth.currentUser),
+    databasePath: `communityPosts/${post.id}/comments`,
+    parentCommentId,
+    authorName: user.displayName,
+    authorPhoto,
+    createdAt: communityServices.realtimeTimestamp()
+});
             await communityServices.set(commentReference, {
                 authorId: user.uid,
                 authorName: (user.displayName || 'Usuário').slice(0, 60),
