@@ -126,6 +126,30 @@ h1, h2 { font-family: "Cinzel", serif; line-height: 1.25; }
 .community-like-button i { color: var(--accent-bright); }
 .community-like-button[aria-pressed="true"] { color: var(--accent-bright); }
 .community-like-button:hover { color: #fff; }
+.community-admin-crown { color: #ffd166; }
+.community-comments { margin: 14px 0 0 48px; }
+.community-comments h3 { margin: 0 0 10px; font-size: 14px; }
+.community-comments h3 span { color: var(--muted); font: 400 12px "Roboto", sans-serif; }
+.community-comment { padding: 10px 0; border-top: 1px solid var(--line); }
+.community-comment-main { display: flex; align-items: flex-start; gap: 8px; }
+.community-comment-avatar { width: 28px; height: 28px; flex-basis: 28px; font-size: 12px; }
+.community-comment-content { min-width: 0; flex: 1; }
+.community-comment-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 12px; }
+.community-comment-header a { color: var(--text); font-weight: 700; text-decoration: none; }
+.community-comment-header a:hover { color: var(--accent-bright); }
+.community-comment-header time { color: var(--muted); font-size: 10px; }
+.community-comment-text { margin: 4px 0; overflow-wrap: anywhere; white-space: normal; font-size: 13px; }
+.community-comment-reply-target { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }
+.community-comment-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.community-comment-actions .community-text-button { font-size: 11px; }
+.community-delete-button:hover { color: #ff858d; }
+.community-comment-children { margin-left: 20px; padding-left: 10px; border-left: 1px solid var(--line); }
+.community-comment-form { display: grid; gap: 7px; margin-top: 9px; }
+.community-comment-form label { color: var(--muted); font-size: 11px; }
+.community-comment-form textarea { width: 100%; min-height: 54px; padding: 8px 9px; border: 1px solid #303030; border-radius: 4px; background: #080808; color: var(--text); resize: vertical; }
+.community-comment-form textarea:focus { border-color: #555; outline: none; }
+.community-comment-form .community-button { justify-self: start; min-height: 32px; padding: 5px 10px; font-size: 11px; }
+.community-root-comment-form { margin-top: 10px; }
 .community-empty { margin: 18px 0; color: var(--muted); font-size: 13px; }
 .community-footer { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
 
@@ -141,5 +165,7 @@ h1, h2 { font-family: "Cinzel", serif; line-height: 1.25; }
     .community-media-input { flex-wrap: wrap; }
     .community-media-input input { flex-basis: 100%; }
     .community-media-input .community-button { flex: 1; }
+    .community-comments { margin-left: 0; }
+    .community-comment-children { margin-left: 10px; padding-left: 7px; }
     .gif-picker-heading { align-items: flex-start; flex-direction: column; gap: 2px; }
 }

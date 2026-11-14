@@ -32,6 +32,14 @@ let gifSearchAbortController = null;
 let gifSearchTimeout = 0;
 let gifSearchRequestId = 0;
 
+function isCommunityAdmin(user = currentCommunityUser) {
+    return String(user?.email || '').trim().toLowerCase() === 'konozuba1k@gmail.com';
+}
+
+function isCommunityAdminAuthor(authorId) {
+    return Boolean(currentCommunityUser && currentCommunityUser.uid === authorId && isCommunityAdmin());
+}
+
 function escapeCommunityHtml(value) {
     return String(value || '').replace(/[&<>'"]/g, character => ({
         '&': '&amp;',
@@ -173,7 +181,7 @@ function renderCommunityPost(post) {
         ? `<span class="community-author-avatar"><img src="${escapeCommunityHtml(safePhotoURL)}" alt="" loading="lazy" referrerpolicy="no-referrer"></span>`
         : '<span class="community-author-avatar"><i class="fa-solid fa-user"></i></span>';
     const authorLink = authorId
-        ? `<a href="../?route=perfil&amp;uid=${encodeURIComponent(authorId)}">${escapeCommunityHtml(authorName)}</a>`
+        ? `<a href="../?route=perfil&amp;uid=${encodeURIComponent(authorId)}">${escapeCommunityHtml(authorName)}</a>${post.authorIsAdmin === true || isCommunityAdminAuthor(authorId) ? ' <i class="fa-solid fa-crown community-admin-crown" title="Administrador do site" aria-label="Administrador do site"></i>' : ''}`
         : `<strong>${escapeCommunityHtml(authorName)}</strong>`;
     const kind = communityKindLabels[post.kind] || communityKindLabels.discussion;
     const game = typeof articlesDatabase !== 'undefined' ? articlesDatabase[post.gameId] : null;
@@ -182,11 +190,93 @@ function renderCommunityPost(post) {
         : '';
     const text = escapeCommunityHtml(post.text || '').replace(/\n/g, '<br>');
     const media = renderCommunityMedia(post.mediaType, post.mediaUrl, authorName);
+    const comments = post.comments && typeof post.comments === 'object' ? post.comments : {};
+    const commentList = Object.entries(comments)
+        .filter(([, comment]) => comment && typeof comment === 'object')
+        .map(([id, comment]) => ({ id, ...comment }));
+    const commentsMarkup = renderCommunityComments(post.id, commentList);
     return `<article class="community-post-card" data-post-id="${escapeCommunityHtml(post.id)}">
         <header class="community-post-header">${authorAvatar}<div class="community-author-info">${authorLink}<div class="community-post-meta"><span class="community-post-tag">${escapeCommunityHtml(kind)}</span>${gameMarkup ? `<span>·</span>${gameMarkup}` : ''}<time>${escapeCommunityHtml(formatCommunityDate(post.createdAt))}</time></div></div></header>
         ${text ? `<p class="community-post-text">${text}</p>` : ''}
         ${media ? `<div class="community-post-media">${media}</div>` : ''}
-        <div class="community-post-actions"><button class="community-like-button" type="button" data-community-like="${escapeCommunityHtml(post.id)}" aria-pressed="${likedByCurrentUser}" aria-label="${likedByCurrentUser ? 'Descurtir' : 'Curtir'} comentário"><i class="fa-${likedByCurrentUser ? 'solid' : 'regular'} fa-heart"></i><span>${likeCount}</span><span>Curtir</span></button></div>
+        <div class="community-post-actions"><button class="community-like-button" type="button" data-community-like="${escapeCommunityHtml(post.id)}" aria-pressed="${likedByCurrentUser}" aria-label="${likedByCurrentUser ? 'Descurtir' : 'Curtir'} comentário"><i class="fa-${likedByCurrentUser ? 'solid' : 'regular'} fa-heart"></i><span>${likeCount}</span><span>Curtir</span></button><button class="report-button community-report-button" type="button" data-open-report data-report-type="community_post" data-report-id="${escapeCommunityHtml(post.id)}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar publicação</button></div>
+        <section class="community-comments" aria-label="Comentários">
+            <h3>Comentários <span>${commentList.length}</span></h3>
+            ${commentsMarkup || '<p class="community-empty">Ainda não há comentários. Seja o primeiro a responder.</p>'}
+            ${currentCommunityUser ? `<form class="community-comment-form community-root-comment-form" data-community-comment-form data-post-id="${escapeCommunityHtml(post.id)}">
+                <label for="community-comment-${escapeCommunityHtml(post.id)}">Adicionar comentário</label>
+                <textarea id="community-comment-${escapeCommunityHtml(post.id)}" name="text" maxlength="1200" rows="2" placeholder="Escreva um comentário..." required></textarea>
+                <button class="community-button community-button-secondary" type="submit"><i class="fa-solid fa-reply"></i> Comentar</button>
+            </form>` : ''}
+        </section>
+    </article>`;
+}
+
+function renderCommunityComments(postId, comments) {
+    const commentsById = new Map(comments.map(comment => [comment.id, comment]));
+    const childrenByParentId = new Map();
+    comments.forEach(comment => {
+        const parentId = comment.parentCommentId && commentsById.has(comment.parentCommentId)
+            ? comment.parentCommentId
+            : '';
+        const children = childrenByParentId.get(parentId) || [];
+        children.push(comment);
+        childrenByParentId.set(parentId, children);
+    });
+    const renderBranch = (parentId, ancestors = new Set()) => (childrenByParentId.get(parentId) || [])
+        .map(comment => {
+            if (ancestors.has(comment.id)) return '';
+            const nextAncestors = new Set(ancestors);
+            nextAncestors.add(comment.id);
+            return renderCommunityComment(comment, postId, renderBranch(comment.id, nextAncestors));
+        })
+        .join('');
+    return renderBranch('');
+}
+
+function renderCommunityComment(comment, postId, childrenMarkup) {
+    const authorId = String(comment.authorId || '');
+    const authorName = String(comment.authorName || 'Usuário WikiGames');
+    const safePhotoURL = comment.authorPhoto && /^https:\/\/[^\s]+$/i.test(comment.authorPhoto) ? comment.authorPhoto : '';
+    const avatar = safePhotoURL
+        ? `<span class="community-author-avatar community-comment-avatar"><img src="${escapeCommunityHtml(safePhotoURL)}" alt="" loading="lazy" referrerpolicy="no-referrer"></span>`
+        : '<span class="community-author-avatar community-comment-avatar"><i class="fa-solid fa-user"></i></span>';
+    const authorLink = authorId
+        ? `<a href="../?route=perfil&amp;uid=${encodeURIComponent(authorId)}">${escapeCommunityHtml(authorName)}</a>`
+        : `<strong>${escapeCommunityHtml(authorName)}</strong>`;
+    const adminBadge = comment.authorIsAdmin === true || isCommunityAdminAuthor(authorId)
+        ? ' <i class="fa-solid fa-crown community-admin-crown" title="Administrador do site" aria-label="Administrador do site"></i>'
+        : '';
+    const replyLabel = comment.replyToName
+        ? `<span class="community-comment-reply-target">respondendo a ${escapeCommunityHtml(comment.replyToName)}</span>`
+        : '';
+    const canEdit = Boolean(currentCommunityUser && currentCommunityUser.uid === authorId);
+    const canDelete = canEdit || isCommunityAdmin();
+    const text = escapeCommunityHtml(comment.text || '').replace(/\n/g, '<br>');
+    const commentId = escapeCommunityHtml(comment.id);
+    const escapedPostId = escapeCommunityHtml(postId);
+    return `<article class="community-comment" data-comment-id="${commentId}">
+        <div class="community-comment-main">${avatar}<div class="community-comment-content">
+            <header class="community-comment-header">${authorLink}${adminBadge}<time>${escapeCommunityHtml(formatCommunityDate(comment.createdAt))}</time></header>
+            ${replyLabel}<p class="community-comment-text">${text}</p>
+            <div class="community-comment-actions">
+                ${currentCommunityUser ? `<button class="community-text-button" type="button" data-community-reply="${commentId}">Responder</button>` : ''}
+                ${canEdit ? `<button class="community-text-button" type="button" data-community-edit="${commentId}">Editar</button>` : ''}
+                ${canDelete ? `<button class="community-text-button community-delete-button" type="button" data-community-delete="${commentId}">${isCommunityAdmin() && !canEdit ? 'Excluir (admin)' : 'Excluir'}</button>` : ''}
+                ${!currentCommunityUser || currentCommunityUser.uid !== authorId ? `<button class="community-text-button community-report-button" type="button" data-open-report data-report-type="comment" data-report-id="${escapeCommunityHtml(`${postId}/${comment.id}`)}" data-reported-user="${escapeCommunityHtml(authorName)}"><i class="fa-solid fa-flag" aria-hidden="true"></i> Denunciar</button>` : ''}
+            </div>
+            <form class="community-comment-form community-inline-comment-form" data-community-comment-form data-post-id="${escapedPostId}" data-parent-id="${commentId}" hidden>
+                <label>Responder a ${escapeCommunityHtml(authorName)}</label>
+                <textarea name="text" maxlength="1200" rows="2" placeholder="Escreva sua resposta..." required></textarea>
+                <button class="community-button community-button-secondary" type="submit"><i class="fa-solid fa-reply"></i> Responder</button>
+            </form>
+            ${canEdit ? `<form class="community-comment-form community-inline-comment-form" data-community-comment-form data-post-id="${escapedPostId}" data-comment-id="${commentId}" hidden>
+                <label>Editar seu comentário</label>
+                <textarea name="text" maxlength="1200" rows="2" required>${escapeCommunityHtml(comment.text || '')}</textarea>
+                <button class="community-button community-button-secondary" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
+            </form>` : ''}
+        </div></div>
+        ${childrenMarkup ? `<div class="community-comment-children">${childrenMarkup}</div>` : ''}
     </article>`;
 }
 
@@ -441,6 +531,7 @@ communityForm.addEventListener('submit', async event => {
             authorId: user.uid,
             authorName,
             authorPhoto,
+            authorIsAdmin: isCommunityAdmin(user),
             kind: form.elements.kind.value,
             gameId: form.elements.gameId.value,
             text,
@@ -464,7 +555,122 @@ communityForm.addEventListener('submit', async event => {
     }
 });
 
+communityFeed.addEventListener('submit', async event => {
+    const form = event.target.closest('form[data-community-comment-form]');
+    if (!form) return;
+    event.preventDefault();
+    const user = currentCommunityUser;
+    if (!user || !communityServices) {
+        setCommunityFeedback('Entre na sua conta WikiGames para comentar ou responder.', true);
+        return;
+    }
+
+    const text = form.elements.text.value.trim();
+    if (!text || text.length > 1200) {
+        setCommunityFeedback('O comentário deve ter entre 1 e 1200 caracteres.', true);
+        return;
+    }
+    const post = communityPosts.find(item => item.id === form.dataset.postId);
+    if (!post) {
+        setCommunityFeedback('Esta publicação não está mais disponível. Atualize a página e tente novamente.', true);
+        return;
+    }
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    try {
+        const commentId = form.dataset.commentId;
+        if (commentId) {
+            const existingComment = post.comments?.[commentId];
+            if (!existingComment || existingComment.authorId !== user.uid) {
+                setCommunityFeedback('Você só pode editar seus próprios comentários.', true);
+                return;
+            }
+            await communityServices.set(
+                communityServices.ref(communityServices.rtdb, `communityPosts/${post.id}/comments/${commentId}`),
+                { ...existingComment, text, updatedAt: communityServices.realtimeTimestamp() }
+            );
+            setCommunityFeedback('Comentário atualizado.');
+        } else {
+            const parentCommentId = form.dataset.parentId || '';
+            const parentComment = parentCommentId ? post.comments?.[parentCommentId] : null;
+            if (parentCommentId && !parentComment) {
+                setCommunityFeedback('O comentário respondido não está mais disponível. Atualize a página e tente novamente.', true);
+                return;
+            }
+            const authorPhoto = user.photoURL && /^https:\/\/[^\s]+$/i.test(user.photoURL) ? user.photoURL : '';
+            const commentReference = communityServices.push(
+                communityServices.ref(communityServices.rtdb, `communityPosts/${post.id}/comments`)
+            );
+            await communityServices.set(commentReference, {
+                authorId: user.uid,
+                authorName: (user.displayName || 'Usuário').slice(0, 60),
+                authorPhoto,
+                authorIsAdmin: isCommunityAdmin(user),
+                text,
+                parentCommentId,
+                replyToName: parentComment ? String(parentComment.authorName || 'Usuário WikiGames').slice(0, 60) : '',
+                createdAt: communityServices.realtimeTimestamp()
+            });
+            setCommunityFeedback(parentComment ? 'Resposta enviada.' : 'Comentário enviado.');
+        }
+        form.reset();
+        if (form.classList.contains('community-inline-comment-form')) form.hidden = true;
+    } catch (error) {
+        console.error('[Comunidade] Falha ao salvar comentário:', error);
+        setCommunityFeedback(`Não foi possível salvar o comentário${error.code ? ` (${error.code})` : ''}. Confira as regras do Realtime Database e tente novamente.`, true);
+    } finally {
+        submitButton.disabled = false;
+    }
+});
+
 communityFeed.addEventListener('click', async event => {
+    const replyButton = event.target.closest('[data-community-reply]');
+    const editButton = event.target.closest('[data-community-edit]');
+    if (replyButton || editButton) {
+        if (!currentCommunityUser || !communityServices) {
+            setCommunityFeedback('Entre na sua conta WikiGames para comentar ou responder.', true);
+            return;
+        }
+        const commentId = (replyButton || editButton).dataset[replyButton ? 'communityReply' : 'communityEdit'];
+        const formSelector = replyButton
+            ? `form[data-parent-id="${commentId}"]`
+            : `form[data-comment-id="${commentId}"]`;
+        const form = (replyButton || editButton).closest('.community-comment-content')?.querySelector(formSelector);
+        if (form) {
+            form.hidden = !form.hidden;
+            if (!form.hidden) form.elements.text.focus();
+        }
+        return;
+    }
+
+    const deleteButton = event.target.closest('[data-community-delete]');
+    if (deleteButton) {
+        const post = communityPosts.find(item => item.id === deleteButton.closest('[data-post-id]')?.dataset.postId);
+        const commentId = deleteButton.dataset.communityDelete;
+        const comment = post?.comments?.[commentId];
+        const canDelete = comment && currentCommunityUser
+            && (comment.authorId === currentCommunityUser.uid || isCommunityAdmin());
+        if (!canDelete) {
+            setCommunityFeedback('Você só pode excluir seus próprios comentários.', true);
+            return;
+        }
+        if (!window.confirm('Tem certeza de que deseja excluir este comentário?')) return;
+        deleteButton.disabled = true;
+        try {
+            await communityServices.remove(
+                communityServices.ref(communityServices.rtdb, `communityPosts/${post.id}/comments/${commentId}`)
+            );
+            setCommunityFeedback('Comentário excluído.');
+        } catch (error) {
+            console.error('[Comunidade] Falha ao excluir comentário:', error);
+            setCommunityFeedback(`Não foi possível excluir o comentário${error.code ? ` (${error.code})` : ''}. Confira as regras do Realtime Database e tente novamente.`, true);
+        } finally {
+            deleteButton.disabled = false;
+        }
+        return;
+    }
+
     const button = event.target.closest('[data-community-like]');
     if (!button) return;
     if (!currentCommunityUser || !communityServices) {
