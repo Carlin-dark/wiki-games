@@ -686,7 +686,7 @@ communityFeed.addEventListener('submit', async event => {
         if (form.classList.contains('community-inline-comment-form')) form.hidden = true;
     } catch (error) {
         console.error('[Comunidade] Falha ao salvar comentário:', error);
-        setCommunityFeedback(`Não foi possível salvar o comentário${error.code ? ` (${error.code})` : ''}. Confira as regras do Realtime Database e tente novamente.`, true);
+        setCommunityFeedback('Não foi possível enviar o comentário. Tente novamente.', true);
     } finally {
         submitButton.disabled = false;
     }
