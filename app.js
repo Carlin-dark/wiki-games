@@ -137,7 +137,7 @@ function updatePageSeoMetadata(route = getRouteInfo().route, overrides = {}) {
     setMetaProperty('og:image:alt', article?.title || category?.title || 'WikiGames');
 }
 
-const ADMIN_EMAIL = 'konozuba1k@gmail.com';
+const ADMIN_UID = 'gC8d3SOP3ChsBRHq79SwOUn2Bdy1';
 let favoriteRoutes = [];
 let favoritesLoadedFor = null;
 let gtaViCountdownTimer = null;
@@ -232,7 +232,7 @@ window.addEventListener('firebase-error', event => {
 });
 
 function isAdminUser(user) {
-    return String(user?.email || '').trim().toLowerCase() === ADMIN_EMAIL;
+    return user?.uid === ADMIN_UID;
 }
 
 function getFavorites() {
