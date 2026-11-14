@@ -10987,6 +10987,428 @@ const articlesDatabase = {
             <p>Consulte as páginas na Steam, itch.io, links freeware originais, o link de torrent e as opções de download na seção acima.</p>
         `
     },
+    "akazukin-no-mori": {
+        title: "紅ずきんの森 (あかずきんのもり)",
+        addedAt: "2026-11-14",
+        categories: ["RPG", "Dark Fairy Tale", "Horror", "Fantasia", "Eroge", "Adulto", "RPG Maker"],
+        summary: "Um RPG sombrio e de horror de conto de fadas desenvolvido por イニミニマニモ? (Sushi Yūsha Toro) no RPG Maker VX Ace. Numa noite de chuva, Red Hood desobedece aos avisos de sua avó, explora o porão proibido e é sugada para mundos espelhados repletos de perigos e revelações. O título serve como a pré-sequência de BLACKSOULS e traz mecânicas de combate por símbolos, forja de armas e o sistema de defeat ero.",
+        infobox: {
+            image: "https://p0.picjs.xyz/2021/06/4967303f21e58dc326.png",
+            data: {
+                "Título Original": "紅ずきんの森 (あかずきんのもり)",
+                "Títulos em Inglês": "Red Riding Woods / Red Hood's Woods",
+                "Desenvolvedor": "イニミニマニモ? (Sushi Yūsha Toro / 寿司勇者トロ)",
+                "Publicadora": "Autopublicado no DLsite",
+                "Engine": "RPG Maker VX Ace",
+                "Gêneros": "RPG, Dark Fairy Tale, Horror, Fantasia, Eroge",
+                "Plataformas": "Windows PC. No celular via emulador JoiPlay + RTP",
+                "Lançamento": "25 de setembro de 2016 (JP) · 30 de julho de 2019 (EN)",
+                "Classificação": "18+ (R18)",
+                "Duração": "Mediana (cerca de 3 horas)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Mecânicas" },
+            { id: "requisitos", text: "3. Requisitos e Observações" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links oficiais e downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "DLsite (JP, Oficial)",
+                    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ185696.html"
+                },
+                {
+                    label: "DLsite (Versão EN Oficial)",
+                    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ259845.html"
+                },
+                {
+                    label: "DLsite (Versão ZH Oficial)",
+                    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ280297.html"
+                },
+                {
+                    label: "Página do Circle no DLsite",
+                    url: "https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG33488.html"
+                },
+                {
+                    label: "Twitter / X do Autor",
+                    url: "https://x.com/toro_yori_ebi"
+                },
+                {
+                    label: "Ci-en (Blog Oficial)",
+                    url: "https://ci-en.dlsite.com/creator/6414"
+                },
+                {
+                    label: "Pixiv do Autor",
+                    url: "https://www.pixiv.net/users/2938678"
+                },
+                {
+                    label: "Fantia",
+                    url: "https://fantia.jp/fanclubs/22621"
+                },
+                {
+                    label: "Wiki de Detonado Oficial (JP)",
+                    url: "https://w.atwiki.jp/iniminimanimo/pages/23.html"
+                }
+            ],
+            files: [
+                {
+                    label: "Download do Jogo (PC)",
+                    url: "https://4br.me/UToeH1d",
+                    details: "Versão para PC (Windows)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Adquira o jogo na DLsite para apoiar o desenvolvedor ou utilize o link de download alternativo fornecido.",
+                    "Extraia o arquivo compactado baixado utilizando o 7-Zip ou WinRAR.",
+                    "Execute o arquivo executável para iniciar o jogo (no Android, utilize um emulador compatível como o JoiPlay com o RTP necessário)."
+                ]
+            }
+        },
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo é um eroge que contém cenas adultas explícitas, bestialidade, tentáculos e temas de horror sombrio. Discrição estritamente recomendada para maiores de 18 anos.</p>
+            </div>
+
+            <p><strong>紅ずきんの森 (Akazukin no Mori / Red Riding Woods)</strong> é o primeiro jogo criado pelo autor <strong>Sushi Yūsha Toro</strong> (寿司勇者トロ) utilizando o motor <em>RPG Maker VX Ace</em>. A obra serve como a pré-sequência oficial e fundação do universo de <em>BLACKSOULS</em>, apresentando a personagem Red Hood em uma jornada perturbadora através de mundos espelhados.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Numa noite de chuva, a avó sai e deixa Red Hood sozinha em casa com duas ordens rigorosas: não sair (há lobos lá fora) e jamais descer ao porão. Naturalmente, ela ignora ambas. O porão revela ser uma prisão contendo espelhos apodrecidos em cada cela. Ao tocá-los, a protagonista é tragada para mundos-espelho distintos — a Floresta da Névoa, a Floresta do Lago, a Floresta Escura e a Floresta da Neve —, cada qual culminando em um confronto contra um chefe.</p>
+            <p>O objetivo é atravessar os quatro domínios e retornar, desvendando aos poucos a sua verdadeira identidade e o destino trágico de sua família.</p>
+
+            <h2 id="gameplay">Características e Mecânicas</h2>
+            <ul>
+                <li><strong>Encontros por Símbolo:</strong> Inimigos visíveis no mapa, permitindo evitar ou iniciar combates estrategicamente.</li>
+                <li><strong>Evolução e Forja:</strong> Coleta de drops que aumentam atributos permanentemente e sistema de forja de armas (evoluindo até +5, com habilidades especiais como morte instantânea).</li>
+                <li><strong>Sistema de Defeat Ero:</strong> Cenas H que ocorrem ao ser derrotado por chefes ou minibosses. A protagonista possui uma personalidade apática ("maguro"), e o jogo inclui um equipamento de cheat embutido para quem deseja focar na história.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Compatibilidade</h2>
+            <ul>
+                <li><strong>Plataformas:</strong> Windows PC (Vista, 7, 8, 10, 11). Não possui versão oficial para Android ou iOS (no celular, apenas via emulador JoiPlay com RTP configurado).</li>
+                <li><strong>Tamanho:</strong> Aproximadamente 110 MB.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://p0.picjs.xyz/2021/06/4967303f21e58dc326.png" alt="Akazukin no Mori Cover" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as páginas oficiais na DLsite, redes sociais do autor, wikis de detonado e o link de download na seção acima.</p>
+        `
+    },
+    "the-monstrous-horror-show": {
+        title: "The Monstrous Horror Show",
+        addedAt: "2026-11-14",
+        trailers: [
+            {
+                title: "Trailer oficial",
+                url: "https://file.chobit.cc/contents/2202/c1g0dkcd0so4w4w0444k0o8sw/c1g0dkcd0so4w4w0444k0o8sw_8wp6w9.mp4"
+            }
+        ],
+        categories: ["Horror", "RPG", "Side-scroller", "Puzzle", "Visual Novel", "Eroge", "Adulto", "Pixel Art"],
+        summary: "Quatro garotas entram num hospital abandonado ('Funen Hospital'), cada uma por um motivo próprio. Você escolhe um dos 4 cenários, explora em visão lateral, acha itens, resolve puzzles, se esconde e foge de 'homens-monstro' (怪人). Ser pega leva a um final cruel — com retry imediato. Ao zerar um cenário, a heroína é levada para a 'Prisão', onde você joga do lado dos monstros, conversa com elas, sobe afinidade e desbloqueia cenas consensuais; há sistema de harém, galeria e 'H Record'.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2099790/header.jpg",
+            data: {
+                "Título Original (JP)": "怪異恐劇院 / The Monstrous Horror Show",
+                "Códigos DLsite": "RJ342323 (PC) · RJ416922 (Android) · RJ384672 (Pacote de Vídeos H)",
+                "Série": "Monstrous Series",
+                "Desenvolvedor / Circle": "kaniheadcrab (蟹ヘッドクラブ) — cenário e arte por ズワイKANI",
+                "Publicadora": "OTAKU Plan (Steam)",
+                "Plataformas": "PC (Windows, RPG Maker MV), Android (APK oficial via DLsite), Steam",
+                "Gêneros": "Horror, RPG de exploração em side-scroller, puzzle, visual novel, multiple endings, pixel art",
+                "Lançamento": "24/02/2022 (DLsite, JP) · 21/04/2023 (Steam, EN/ZH)",
+                "Classificação": "R18 (DLsite) / 'Sexual Content + Nudity' na Steam (patch R-18 oficial gratuito)",
+                "Duração": "Aproximadamente 4 a 10 horas"
+            }
+        },
+        toc: [
+            { id: "heroínas", text: "1. Heroínas Principais" },
+            { id: "sinopse", text: "2. Sinopse e História" },
+            { id: "gameplay", text: "3. Jogabilidade e Características" },
+            { id: "requisitos", text: "4. Requisitos de Sistema" },
+            { id: "galeria", text: "5. Galeria de Imagens e Arte" },
+            { id: "links", text: "6. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/2099790/The_Monstrous_Horror_Show/"
+                },
+                {
+                    label: "DLsite (PC, R18)",
+                    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ342323.html"
+                },
+                {
+                    label: "DLsite (Android, APK Oficial)",
+                    url: "https://www.dlsite.com/appx/work/=/product_id/RJ416922.html"
+                },
+                {
+                    label: "Página do Círculo no DLsite",
+                    url: "https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG58922.html"
+                },
+                {
+                    label: "Ci-en do Autor (Dev Blog)",
+                    url: "https://ci-en.dlsite.com/creator/7959"
+                },
+                {
+                    label: "Patch R-18 Oficial (OTAKU Plan)",
+                    url: "https://otaku-plan.net/games/2099790"
+                },
+                {
+                    label: "Demo Oficial (DLsite)",
+                    url: "https://trial.dlsite.com/doujin/RJ343000/RJ342323_trial.zip"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Jogo Completo (PC)",
+                    url: "https://4br.me/o22L",
+                    details: "Versão para PC (Inglês / 18+)"
+                },
+                {
+                    label: "APK Android (Não Oficial)",
+                    url: "https://4br.me/q8KBpq",
+                    details: "Port para dispositivos móveis Android"
+                },
+                {
+                    label: "Artes sem Censura",
+                    url: "https://justpaste.app/p/c34swm",
+                    details: "Coleção de imagens e artes sem censura"
+                }
+            ],
+            installation: {
+                title: "Instruções de Instalação e Requisitos",
+                steps: [
+                    "Atenção para usuários da Steam: A versão básica na Steam é censurada. Baixe o patch R-18 oficial e gratuito diretamente no site da publicadora OTAKU Plan e aplique-o na pasta do jogo.",
+                    "Para jogadores da DLsite (PC), é recomendado configurar o Locale do Windows para japonês para evitar problemas de codificação.",
+                    "Para dispositivos Android, utilize a versão oficial da DLsite ou o APK comunitário fornecido, garantindo suporte adequado ao RPG Maker MV."
+                ]
+            }
+        },
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo contém cenas sexuais explícitas, nudez, elementos de horror, violência e situações extremas. Discrição estritamente recomendada para maiores de 18 anos.</p>
+            </div>
+
+            <p><strong>The Monstrous Horror Show</strong> (<em>怪異恐劇院</em>) é um aclamado jogo de survival horror e exploração lateral desenvolvido pelo círculo <strong>kaniheadcrab</strong> e publicado pela <strong>OTAKU Plan</strong>. O título combina atmosfera opressiva, quebra-cabeças desafiadores e uma narrativa ramificada centrada em quatro protagonistas presas em um hospital abandonado.</p>
+
+            <h2 id="heroínas">Heroínas Principais</h2>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://img.dlsite.jp/modpub/images2/parts/RJ343000/RJ342323/9f86f1e55eb407bba3adca2a333dfdb0.jpg" alt="Youko Akenai" style="border-radius: 4px; margin-bottom: 8px; max-width: 100%;">
+                    <h3 style="margin: 5px 0;">Youko Akenai</h3>
+                    <p style="font-size: 0.85em; margin: 0;">Estudante tímida (Cenário 1).</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://img.dlsite.jp/modpub/images2/parts/RJ343000/RJ342323/fe8971d150c6f17ba88a51d4b45993c4.jpg" alt="Tachinami Hatenashi" style="border-radius: 4px; margin-bottom: 8px; max-width: 100%;">
+                    <h3 style="margin: 5px 0;">Tachinami Hatenashi</h3>
+                    <p style="font-size: 0.85em; margin: 0;">Professora de educação física novata, hermafrodita (Cenário 2).</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://img.dlsite.jp/modpub/images2/parts/RJ343000/RJ342323/b85ed4da3a7078a7ce22ff14902b0578.jpg" alt="Saffron Ikuha" style="border-radius: 4px; margin-bottom: 8px; max-width: 100%;">
+                    <h3 style="margin: 5px 0;">Saffron Ikuha</h3>
+                    <p style="font-size: 0.85em; margin: 0;">A personagem de personalidade intensa (Cenário 3).</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; text-align: center;">
+                    <img src="https://img.dlsite.jp/modpub/images2/parts/RJ343000/RJ342323/c5f640b70f5d2bd9a815a82502860be3.jpg" alt="Hajime Hatsumari" style="border-radius: 4px; margin-bottom: 8px; max-width: 100%;">
+                    <h3 style="margin: 5px 0;">Hajime Hatsumari</h3>
+                    <p style="font-size: 0.85em; margin: 0;">CEO mirrada de farmacêutica, investigando alguém (Cenário 4).</p>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2099790/extras/0642fc7fce18223a0dac0ad776503159.webp" alt="Banner Story" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Quatro garotas adentram o temido hospital abandonado <em>Funen Hospital</em> (譜音病院) motivadas por razões particulares. O jogador escolhe um dos quatro cenários disponíveis, explorando os corredores em visão lateral (side-scroller), coletando itens cruciais e resolvendo quebra-cabeças enquanto foge de perigosos monstros humanoides (怪人).</p>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2099790/extras/10a4458b75462c71f635abca9873f614.webp" alt="Banner Gameplay" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <h2 id="gameplay">Jogabilidade e Características</h2>
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://lewdzone.com/wp-content/uploads/2023/04/The-Monstrous-Horror-Show-Map.webp" alt="Mapa do Jogo" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <p>O jogo destaca-se por mecânicas de sobrevivência e progressão únicas:</p>
+            <ul>
+                <li><strong>Fuga e Puzzles:</strong> Esmague enigmas ambientais e evite ser capturado pelos monstros, o que resulta em finais punitivos e retry imediato.</li>
+                <li><strong>O Sistema de Prisão:</strong> Após concluir um cenário, a heroína é levada para a Prisão. Nela, o jogador assume a perspectiva dos monstros, interagindo com as personagens, elevando a afinidade e desbloqueando cenas consensuais, sistema de harém e galeria detalhada.</li>
+                <li><strong>Conteúdo Extenso:</strong> 59 CGs base e cerca de 700 imagens com variações, oferecendo de 4 a 10 horas de gameplay.</li>
+            </ul>
+
+            <div style="margin: 20px 0; text-align: center;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2099790/extras/988a4aff11e4d06fc8091ce64493e363.webp" alt="Banner Features" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #444;" loading="lazy">
+            </div>
+
+            <h2 id="requisitos">Requisitos de Sistema</h2>
+            <ul>
+                <li><strong>SO:</strong> Windows 7 / 8 / 8.1 / 10</li>
+                <li><strong>Processador:</strong> 3+ GHz</li>
+                <li><strong>Memória RAM:</strong> 8 GB de RAM</li>
+                <li><strong>Placa de Vídeo:</strong> Compatível com DirectX 10 / OpenGL 4.1</li>
+                <li><strong>Armazenamento:</strong> 1 GB a 2 GB de espaço disponível</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://img.dlsite.jp/modpub/images2/work/doujin/RJ343000/RJ342323_img_smp1.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.dlsite.jp/modpub/images2/work/doujin/RJ343000/RJ342323_img_smp3.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.dlsite.jp/modpub/images2/work/doujin/RJ343000/RJ342323_img_smp7.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.dlsite.jp/modpub/images2/work/doujin/RJ343000/RJ342323_img_smp8.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.dlsite.jp/modpub/images2/work/doujin/RJ343000/RJ342323_img_smp9.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2099790/ss_f019f44b74e9a7ef24f7fef0597f716c0e97a917.1920x1080.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2099790/ss_635a554337a68ecf699f5f380b0056dcb9730b96.1920x1080.jpg" alt="Screenshot 7" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as páginas na Steam, DLsite, links para o patch R-18 oficial, APK e arquivos de download na seção acima.</p>
+        `
+    },
+    "alicemare": {
+        title: "Alice mare (アリスメア)",
+        addedAt: "2026-11-14",
+        categories: ["Adventure", "Indie", "Exploração", "Puzzle", "Terror Leve", "Dark Fantasy", "Contos de Fada"],
+        summary: "Allen é um garoto que perdeu a memória após a morte dos pais e vai parar num orfanato administrado por um homem que exige ser chamado apenas de 'Professor'. Lá ele conhece Letty, Rick, Chelsy, Joshua e Stella. Numa noite, investigando um rumor sobre uma voz no segundo andar, Allen segue um gato preto até o armário do quarto e cai num mundo onírico governado pelo Coelho Branco e pelo Gato de Cheshire. Para voltar, precisa recuperar quatro 'Chaves do Mundo' — cada uma dentro do coração de uma das crianças, distorcidas por contos de fada.",
+        infobox: {
+            image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/524850/header.jpg",
+            data: {
+                "Título Original": "Alice mare (アリスメア)",
+                "Desenvolvedor": "△○□× (Sankaku Shikaku Batsu) / Miwashiba",
+                "Publicadora": "Autopublicado (freeware original) / AGM PLAYISM (versão comercial)",
+                "Engine": "WOLF RPG Editor",
+                "Gêneros": "Aventura, exploração, quebra-cabeça, terror leve, dark fantasy",
+                "Plataformas": "Windows (7+). Steam Deck: 'Playable'",
+                "Lançamento original": "18 de novembro de 2013 (gratuito)",
+                "Lançamento comercial": "21 de novembro de 2016 (Steam / Playism)",
+                "Preço": "US$ 2,99 (Steam)",
+                "Classificação": "Livre / Atmosférico (sem jumpscares ou perseguições)",
+                "Duração": "2 a 3 horas na primeira run; 7 finais distintos"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e História" },
+            { id: "gameplay", text: "2. Características e Jogabilidade" },
+            { id: "personagens", text: "3. Personagens Principais" },
+            { id: "finais", text: "4. Condições para os Finais" },
+            { id: "galeria", text: "5. Galeria de Imagens e Sprites" },
+            { id: "links", text: "6. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página na Steam",
+                    url: "https://store.steampowered.com/app/524850/Alicemare/"
+                },
+                {
+                    label: "Página na Playism",
+                    url: "https://playism.com/en/game/306/alicemare"
+                },
+                {
+                    label: "Site Oficial (Miwashiba)",
+                    url: "http://www.mwo48.com/mw/alicemare/index.html"
+                },
+                {
+                    label: "Loja BOOTH do Autor",
+                    url: "https://miwasiba.booth.pm/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Versão em Português (v2.0 - Zero Corpse)",
+                    url: "https://4br.me/g56lowPC",
+                    details: "Tradução completa em PT-BR (MediaFire)"
+                },
+                {
+                    label: "Download Versão em Inglês (v1.07 - vgperson)",
+                    url: "https://4br.me/AxMyM",
+                    details: "Tradução oficial em inglês (MediaFire)"
+                },
+                {
+                    label: "Download Versão Original Japonesa (v1.07 - BOOTH)",
+                    url: "https://4br.me/pZGhYqfSg",
+                    details: "Versão freeware oficial em japonês"
+                }
+            ],
+            installation: {
+                title: "Notas de Instalação e Requisitos",
+                steps: [
+                    "Extraia o arquivo .zip ou .rar para uma pasta própria antes de jogar (rodar direto do compactado faz os saves sumirem).",
+                    "Caso o texto apresente fontes quebradas, instale a fonte MS Gothic e ajuste a localidade do sistema para o Português (Brasil).",
+                    "Se encontrar uma tela preta que não avança, continue andando para frente (é um evento proposital do jogo)."
+                ]
+            }
+        },
+        content: `
+            <p><strong>Alice mare</strong> (<em>アリスメア</em>) é um aclamado jogo independente de exploração e terror atmosférico desenvolvido por <strong>Miwashiba</strong> utilizando o WOLF RPG Editor. Misturando elementos de contos de fada clássicos com uma narrativa psicológica melancólica, o jogo conquistou a comunidade mundial desde o seu lançamento freeware em 2013 e posterior chegada ao Steam.</p>
+
+            <h2 id="sinopse">Sinopse e História</h2>
+            <p>Allen é um garoto que perdeu a memória após a morte dos pais e foi acolhido em um orfanato isolado administrado por um homem conhecido apenas como "Professor". No local, convive com outras crianças marcadas por tragédias: Letty, Rick, Chelsy, Joshua e Stella. Certa noite, ao investigar rumores sobre sussurros no segundo andar, Allen segue um misterioso gato preto até um armário e acaba sendo transportado para um mundo onírico regido pelo Coelho Branco e pelo Gato de Cheshire. Para retornar à realidade, ele precisa desvendar as profundezas psicológicas de seus colegas, cada uma baseada em fábulas sombrias.</p>
+
+            <h2 id="gameplay">Características e Jogabilidade</h2>
+            <ul>
+                <li><strong>Exploração Atmosférica:</strong> Foco absoluto em narrativa, resolução de quebra-cabeças e imersão, sem combates, perseguições estressantes ou <em>jumpscares</em> barulhentos.</li>
+                <li><strong>Trilha Sonora Clássica:</strong> Apresenta arranjos refinados de peças clássicas de Tchaikovsky, Liszt, Debussy, Saint-Saëns e Schumann.</li>
+                <li><strong>Múltiplos Finais:</strong> O jogo possui 7 finais diferentes, incluindo o desfecho verdadeiro ("Recipient of Love") que exige a coleta de todas as 9 "Shards of XXXX".</li>
+            </ul>
+
+            <h2 id="personagens">Personagens Principais</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; justify-content: center;">
+                <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; text-align: center;">
+                    <img src="http://www.mwo48.com/mw/alicemare/img/chara/C1.png" alt="Allen" style="max-height: 80px; margin-bottom: 5px;">
+                    <h4 style="margin: 4px 0;">Allen</h4>
+                </div>
+                <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; text-align: center;">
+                    <img src="http://www.mwo48.com/mw/alicemare/img/chara/C2.png" alt="Letty & Rick" style="max-height: 80px; margin-bottom: 5px;">
+                    <h4 style="margin: 4px 0;">Letty & Rick</h4>
+                </div>
+                <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; text-align: center;">
+                    <img src="http://www.mwo48.com/mw/alicemare/img/chara/C4.png" alt="Chelsy" style="max-height: 80px; margin-bottom: 5px;">
+                    <h4 style="margin: 4px 0;">Chelsy</h4>
+                </div>
+                <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; text-align: center;">
+                    <img src="http://www.mwo48.com/mw/alicemare/img/chara/C5.png" alt="Joshua" style="max-height: 80px; margin-bottom: 5px;">
+                    <h4 style="margin: 4px 0;">Joshua</h4>
+                </div>
+                <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; text-align: center;">
+                    <img src="http://www.mwo48.com/mw/alicemare/img/chara/C6.png" alt="Stella" style="max-height: 80px; margin-bottom: 5px;">
+                    <h4 style="margin: 4px 0;">Stella</h4>
+                </div>
+                <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; text-align: center;">
+                    <img src="http://www.mwo48.com/mw/alicemare/img/chara/C7.png" alt="Professor" style="max-height: 80px; margin-bottom: 5px;">
+                    <h4 style="margin: 4px 0;">Professor</h4>
+                </div>
+            </div>
+
+            <h2 id="finais">Condições para os Finais</h2>
+            <ul>
+                <li><strong>Two of Us</strong>, <strong>The Color Red</strong>, <strong>Crying Wolf</strong>, <strong>Poison Apple</strong>, <strong>Cheshire Cat</strong>, <strong>Good Night</strong> e o final verdadeiro <strong>Recipient of Love</strong> (requer a coleta das 9 <em>Shards of XXXX</em>).</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/524850/ss_9cbf8df638885dd66c6a7966229f47b3198ce34f.1920x1080.jpg" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/524850/ss_f51387083d7ef7c6ee3fd8fe7408685d164615c2.1920x1080.jpg" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/524850/ss_f491af5634550a2406f4346ebd128aa73aae3629.1920x1080.jpg" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/524850/ss_dd38c9116a1ee8a7861fc050819a42f1c3952f0c.1920x1080.jpg" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/524850/ss_c776c64fd07f35b7f4eb91aa891b6296c3b2c4a3.1920x1080.jpg" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/524850/ss_67d120530aa8068b120937e4986e65f02f8b66fc.1920x1080.jpg" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte as páginas na Steam, Playism, o site oficial do autor, traduções comunitárias e os links de download na seção acima.</p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
