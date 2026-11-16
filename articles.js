@@ -11409,6 +11409,242 @@ const articlesDatabase = {
             <p>Consulte as páginas na Steam, Playism, o site oficial do autor, traduções comunitárias e os links de download na seção acima.</p>
         `
     },
+    "nannimo-okinai-mura-kara-no-dasshutsu": {
+        title: "なんにも起きない村からの脱出",
+        addedAt: "2026-11-16",
+        categories: ["Horror", "Aventura", "Escape", "Puzzle", "Perseguição", "RPG Maker", "Gratuito para Jogar", "Indie"],
+        summary: "Curta aventura de terror e fuga em pixel art, 100% gratuita, criada no RPG Maker MZ pela equipe oficial da Gotcha Gotcha Games. Você é um viajante que chega a uma vila pacata onde 'nada acontece' — até perceber que está preso e que os moradores não são o que parecem. Dura cerca de 15 minutos, possui 1 final, dificuldade fácil e não conta com batalhas.",
+        infobox: {
+            image: "https://fpiccdn.com/33965/w500/h0/mratio/ejpg/?08ff508b3ccd7e8b76113bbd127c98a8",
+            data: {
+                "Título Original": "なんにも起きない村からの脱出",
+                "Desenvolvedor": "Gotcha Gotcha Games / RPG Maker 公式 (equipe do canal oficial)",
+                "Publicadora": "Gotcha Gotcha Games (autopublicado, gratuito)",
+                "Motor": "RPG Maker MZ",
+                "Gêneros": "Horror, aventura, escape, puzzle, perseguição",
+                "Plataformas": "PC (Windows 8/10/11, 32 e 64 bits)",
+                "Lançamento": "14 de agosto de 2025",
+                "Versão": "1.0.0 (nannimo_ver.1.0.0.zip, ~110 MB)",
+                "Classificação": "12+ (AGE 12+)",
+                "Preço": "Grátis (Freeware)",
+                "Idioma": "Japonês",
+                "Duração": "~15 minutos (1 final)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Características e Origem do Projeto" },
+            { id: "requisitos", text: "3. Requisitos e Licença" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página Oficial no Freem!",
+                    url: "https://www.freem.ne.jp/win/game/33965"
+                },
+                {
+                    label: "Página Oficial de Sample Game (Gotcha Gotcha)",
+                    url: "https://rpgmakerofficial.com/product/mz/download/dlc/dl_04.html"
+                },
+                {
+                    label: "Página da Marca 'RPG Maker公式'",
+                    url: "https://www.freem.ne.jp/brand/16070"
+                },
+                {
+                    label: "Site Oficial RPG Maker",
+                    url: "https://rpgmakerofficial.com/"
+                },
+                {
+                    label: "Canal Oficial no YouTube",
+                    url: "https://www.youtube.com/@RPGMakerOfficial"
+                },
+                {
+                    label: "Playlist / Live #01 do はじツク",
+                    url: "https://www.youtube.com/live/4_-puIG-N14"
+                },
+                {
+                    label: "Gameplay (みなみ よつば)",
+                    url: "https://www.youtube.com/watch?v=QncYP2-eLd8"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Direto (Versão Oficial em japonês) com tutorial.",
+                    url: "https://4br.me/HPCyjVNq",
+                    details: "PC (Windows — ~110 MB)",
+                    verified: true
+                },
+                {
+                    label: "Download Em PT-BR (tradução em português feito pelo adm).",
+                    url: "https://4br.me/wlbjltinx",
+                    details: "PC (Windows — Pacote oficial com assets inclusos)",
+                    verified: true
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Baixe o arquivo compactado oficial (~110 MB) através de um dos links fornecidos.",
+                    "Extraia o conteúdo do arquivo .zip para uma pasta de sua preferência (não requer instalador).",
+                    "Execute o arquivo .exe para iniciar o jogo (o pacote oficial já inclui os assets necessários do RPG Maker MZ)."
+                ]
+            }
+        },
+        content: `
+            <p><strong>なんにも起きない村からの脱出</strong> (<em>Escape from the Village Where Nothing Happens</em>) é uma curta aventura de terror e fuga em pixel art, 100% gratuita, desenvolvida no <strong>RPG Maker MZ</strong> pela própria equipe oficial do canal da <strong>Gotcha Gotcha Games</strong>.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <blockquote style="background: rgba(255,255,255,0.03); border-left: 3px solid #aaa; padding: 8px 12px; margin: 10px 0; font-style: italic; font-size: 0.9em;">
+                "旅人のあなたは、ありふれた、平和な村へ立ち寄りました。なんにも起きないこの村で、旅の疲れを癒しましょう……。"
+                <br><small>("Você, um viajante, parou numa vila comum e pacífica. Descanse do cansaço da viagem nesta vila onde nada acontece…")</small>
+            </blockquote>
+            <p>Você assume o papel de um viajante que decide descansar em um vilarejo aparentemente comum e tranquilo. Contudo, a calmaria logo dá lugar ao pavor quando você percebe que está preso no local e que os habitantes escondem algo macabro.</p>
+            <p><em>Revelação do enredo (conforme mostrado nas lives de desenvolvimento):</em> A vila é, na verdade, controlada por um gigantesco monstro-cogumelo subterrâneo; os supostos "moradores" são cascas vazias tomadas por hifas, utilizadas pela criatura para atrair e devorar qualquer viajante que chegue ao local.</p>
+
+            <h2 id="gameplay">Características e Origem do Projeto</h2>
+            <ul>
+                <li><strong>Experiência Curta e Direta:</strong> Com duração média de 15 minutos, dificuldade acessível e 1 final, o título foca inteiramente em exploração, resolução de puzzles justos e momentos de perseguição, sem sistema de batalhas.</li>
+                <li><strong>Criado ao Vivo (Série はじツク):</strong> O jogo foi desenvolvido integralmente ao vivo durante a série de transmissões educativas <em>"はじツク" (HajiTsuku)</em> — um curso de RPG Maker MZ voltado para iniciantes no canal oficial, exibido entre dezembro de 2024 e junho de 2025, encerrando no episódio #09 (<em>"いよいよゲーム公開…!"</em>).</li>
+                <li><strong>Recepção:</strong> Elogiado na plataforma Freem! (nota 5/5) pela transição eficaz entre o clima pacato e a atmosfera sinistra, além de quebra-cabeças bem equilibrados.</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Licença</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 8 / 10 / 11 (32 e 64 bits).</li>
+                <li><strong>Licença de Uso:</strong> É proibido converter os recursos para outras engines fora da família RPG Maker (uso em MV e MZ é permitido). Modificações e distribuições gratuitas são autorizadas, sendo estritamente proibida a venda comercial.</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://fpiccdn.com/33965s/w500/h0/mratio/ejpg/?08ff508b3ccd7e8b76113bbd127c98a8" alt="Screenshot 1" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://fpiccdn.com/33965_2/w500/h0/mratio/ejpg/?08ff508b3ccd7e8b76113bbd127c98a8" alt="Screenshot 2" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://fpiccdn.com/33965_3/w500/h0/mratio/ejpg/?08ff508b3ccd7e8b76113bbd127c98a8" alt="Screenshot 3" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://rpgmakerofficial.com/product/mz/assets/images/download/dlc/thumb_4.png" alt="Arte Promocional Oficial" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte a página oficial no Freem!, o portal da Gotcha Gotcha Games, as transmissões de desenvolvimento no YouTube e os links diretos de download na seção acima.</p>
+        `
+    },
+    "kokoro-no-koe-dadamore-na-kapisa-no-hime": {
+        title: "心の声ダダ漏れなカピサーの姫",
+        addedAt: "2026-11-16",
+        trailers: [
+            {
+                title: "Gameplay Popular (asdfgame)",
+                url: "https://www.youtube.com/watch?v=2ZqQI-Vdq2w"
+            },
+            {
+                title: "Gameplay (Canal Oficial do Autor)",
+                url: "https://www.youtube.com/watch?v=5CMFw4nHD9c"
+            },
+            {
+                title: "Gameplay (KSG - Título em Inglês)",
+                url: "https://www.youtube.com/watch?v=TTuctfQAmkw"
+            },
+            {
+                title: "Gameplay (野中ソルト)",
+                url: "https://www.youtube.com/watch?v=Q9esY9brfz4"
+            },
+            {
+                title: "Playthrough (Sem Comentários)",
+                url: "https://www.youtube.com/watch?v=lCfUUMQXLls"
+            }
+        ],
+        categories: ["Aventura", "Terror", "Comédia", "Escape", "Exploração", "RPG Maker", "Gratuito para Jogar", "Indie", "Pixel Art"],
+        summary: "Curta aventura de exploração e terror-comédia em pixel art, 100% gratuita, desenvolvida por べるず (Bells) no RPG Maker MZ. Você joga como a 'princesa' de um círculo de otaku (オタサーの姫) e acompanha o contraste cômico entre sua fachada fofa e o monólogo interno real que vaza enquanto ela explora o ambiente.",
+        infobox: {
+            image: "https://fpiccdn.com/29687/w500/h0/mratio/ejpg/?59fbd3253cdf5191dd07053f8007d2c7",
+            data: {
+                "Título Original": "心の声ダダ漏れなカピサーの姫",
+                "Desenvolvedor": "べるず (Bells)",
+                "Publicadora": "Nenhuma — autopublicado no Freem!",
+                "Motor": "RPG Maker MZ",
+                "Gêneros": "Aventura, terror, comédia, escape/exploração",
+                "Plataformas": "Windows (Win 7 64bit declarado). Celular apenas via emulador (JoiPlay)",
+                "Lançamento": "05 de janeiro de 2023",
+                "Versão": "1.00 (dadahime.zip, ~110 MB)",
+                "Classificação": "EVERYONE (Freem!)",
+                "Preço": "Grátis (Freeware)",
+                "Idioma": "Japonês",
+                "Duração": "45 minutos a 1 hora"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Características e Curiosidades" },
+            { id: "requisitos", text: "3. Requisitos e Compatibilidade" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página Oficial no Freem!",
+                    url: "https://www.freem.ne.jp/win/game/29687"
+                },
+                {
+                    label: "Perfil do Autor no Freem! (Todos os Jogos)",
+                    url: "https://www.freem.ne.jp/brand/7736"
+                },
+                {
+                    label: "X / Twitter Oficial do Autor",
+                    url: "https://x.com/bells7144"
+                }
+            ],
+            files: [
+                {
+                    label: "Download Direto (dadahime.zip — ~110 MB)",
+                    url: "https://4br.me/s4Q879oM4",
+                    details: "PC (Windows — Versão oficial 1.00 gratuita)"
+                }
+            ],
+            installation: {
+                title: "Como instalar",
+                steps: [
+                    "Para PC: Baixe o arquivo zip oficial do Freem! (~110 MB) através do link fornecido.",
+                    "Extraia o conteúdo para uma pasta própria (não requer instalador) e execute o arquivo .exe.",
+                    "Para Android/Mobile: Não existe versão oficial nem APK nativo; é possível jogar apenas através de emuladores compatíveis com RPG Maker MZ, como o JoiPlay."
+                ]
+            }
+        },
+        content: `
+            <p><strong>心の声ダダ漏れなカピサーの姫</strong> (<em>"A Princesa do Círculo de Otaku cuja Voz Interior Vaza Toda"</em>) é uma curta e bem-humorada aventura de exploração e terror-comédia em pixel art, 100% gratuita, criada inteiramente de forma solo por <strong>べるず (Bells)</strong> no motor <em>RPG Maker MZ</em>.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <blockquote style="background: rgba(255,255,255,0.03); border-left: 3px solid #aaa; padding: 8px 12px; margin: 10px 0; font-style: italic; font-size: 0.9em;">
+                "Este jogo é uma aventura de exploração e terror em que o jogador descobre o que a protagonista, a princesa do círculo de otaku, realmente pensa durante a exploração. É um jogo para curtir o lado de fora e o lado de dentro dela."
+            </blockquote>
+            <p>Você assume o controle da "princesa" de um círculo de otaku (<em>オタサーの姫</em>). Enquanto explora o cenário, o jogo revela ao jogador o monólogo interno sem filtros da protagonista — criando um contraste hilário entre sua fachada doce e gentil e o que ela realmente pensa por dentro.</p>
+
+            <h2 id="gameplay">Características e Curiosidades</h2>
+            <ul>
+                <li><strong>Produção 100% Solo:</strong> Roteiro, gráficos em pixel art e efeitos sonoros foram todos criados exclusivamente pelo próprio desenvolvedor.</li>
+                <li><strong>Mais Comédia que Terror:</strong> Embora conte com elementos de perseguição e telas de <em>game over</em>, o foco principal é o humor leve, sendo perfeitamente jogável até mesmo para quem tem medo de jogos de terror tradicionais.</li>
+                <li><strong>O Trocadilho "Kapisa" (カピサー):</strong> O termo no título é uma junção criativa entre <em>カピバラ</em> (capivara) e <em>オタサー</em> (círculo de otaku). O mascote do grupo é uma capivara, e diversos vídeos de gameplay brincam com a mecânica de "intimidar a capivara".</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Compatibilidade</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows (Windows 7 64-bit declarado, compatível com versões posteriores). Sem requisitos formais pesados.</li>
+                <li><strong>Portabilidade:</strong> Execução direta após extração do arquivo compactado (portátil, sem necessidade de instalação).</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://fpiccdn.com/29687s/w500/h0/mratio/ejpg/?59fbd3253cdf5191dd07053f8007d2c7" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://fpiccdn.com/29687_2/w500/h0/mratio/ejpg/?59fbd3253cdf5191dd07053f8007d2c7" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://fpiccdn.com/29687_3/w500/h0/mratio/ejpg/?59fbd3253cdf5191dd07053f8007d2c7" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://fpiccdn.com/29687_4/w500/h0/mratio/ejpg/?59fbd3253cdf5191dd07053f8007d2c7" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://fpiccdn.com/29687_5/w500/h0/mratio/ejpg/?59fbd3253cdf5191dd07053f8007d2c7" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte a página oficial no Freem!, o perfil completo do autor, suas redes sociais e o link direto de download na seção acima.</p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
