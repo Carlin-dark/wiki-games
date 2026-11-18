@@ -11736,12 +11736,6 @@ const articlesDatabase = {
                     label: "RTP do RPG Maker 2003 (Inglês)",
                     url: "https://4br.me/zqthm73b",
                     details: "Necessário para rodar nativamente no Windows sem EasyRPG"
-                },
-                {
-                    label: "Patch de Tradução em Português",
-                    url: "https://4br.me/7j1pobCtd",
-                    details: "Patch de tradução não oficial em português (apenas para a build em inglês). Requer o jogo original em inglês.",
-                    verified: true
                 }
             ],
             installation: {
