@@ -11645,6 +11645,152 @@ const articlesDatabase = {
             <p>Consulte a página oficial no Freem!, o perfil completo do autor, suas redes sociais e o link direto de download na seção acima.</p>
         `
     },
+    "attero": {
+        title: "Attero",
+        addedAt: "2026-11-17",
+        categories: ["Adventure", "Exploração", "Horror Surreal", "YNFG", "RPG Maker", "Indie", "Gratuito para Jogar", "Terror Psicológico"],
+        summary: "Um fangame tradicional de Yume Nikki (YNFG) desenvolvido solo por AshitaMinami no RPG Maker 2003. Você controla Aren, um jovem isolado no próprio quarto que utiliza sua cama para mergulhar no mundo dos sonhos. Explore 6 mundos diferentes, colete 4 efeitos e interaja com NPCs em um sistema dinâmico de Status que altera os eventos conforme a mente de Aren reage.",
+        infobox: {
+            image: "https://img.itch.zone/aW1nLzI5NTEzMjQyLnBuZw==/315x250%23c/O9%2BWjk.png",
+            data: {
+                "Tagline": "How many times has it been so far?",
+                "Desenvolvedor": "AshitaMinami",
+                "Publicadora": "Autopublicado (itch.io)",
+                "Engine": "RPG Maker 2003",
+                "Gêneros": "Adventure, exploração, horror surreal, YNFG (Yume Nikki Fangame)",
+                "Plataformas": "Windows (nativo). Linux, Mac e Android via EasyRPG Player",
+                "Lançamento": "25 de agosto de 2026 (v0.0.0 — em desenvolvimento)",
+                "Preço": "Grátis",
+                "Idiomas": "Inglês e Espanhol (builds separadas)",
+                "Duração": "±1 hora",
+                "Classificação": "14+ (Descritores: vício, álcool e tabaco, gore, violência, ansiedade, crise existencial)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Histórico" },
+            { id: "gameplay", text: "2. Jogabilidade, Controles e Sistemas" },
+            { id: "requisitos", text: "3. Requisitos e Multiplataforma (EasyRPG)" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Página Oficial no itch.io",
+                    url: "https://ashitaminami.itch.io/attero"
+                },
+                {
+                    label: "Perfil do Desenvolvedor (itch.io)",
+                    url: "https://ashitaminami.itch.io/"
+                },
+                {
+                    label: "Ficha na Yume Nikki Fangames Wiki",
+                    url: "https://ynfg.yume.wiki/Attero"
+                },
+                {
+                    label: "Mendum Memoria (Jogo Irmão / Side B)",
+                    url: "https://ashitaminami.itch.io/mendum-memoria"
+                },
+                {
+                    label: "Akuma (Projeto Antigo na Wiki)",
+                    url: "https://ynfg.yume.wiki/Akuma"
+                },
+                {
+                    label: "Bluesky Oficial do Desenvolvedor",
+                    url: "https://bsky.app/profile/ashitaminami.bsky.social"
+                },
+                {
+                    label: "Twitter / X Oficial do Desenvolvedor",
+                    url: "https://twitter.com/AshitaMinami"
+                },
+                {
+                    label: "Download EasyRPG Player (Todas as Plataformas)",
+                    url: "https://easyrpg.org/player/downloads/"
+                },
+                {
+                    label: "EasyRPG Player (Google Play Store)",
+                    url: "https://play.google.com/store/apps/details?id=org.easyrpg.player"
+                },
+                {
+                    label: "EasyRPG Player (F-Droid)",
+                    url: "https://f-droid.org/en/packages/org.easyrpg.player/"
+                }
+            ],
+            files: [
+                {
+                    label: "Download PC — Inglês (Attero_v0.0.0_EN.zip — 34 MB)",
+                    url: "https://4br.me/Jk1Ph",
+                    details: "Build oficial em inglês (Windows / EasyRPG)"
+                },
+                {
+                    label: "Download PC — Espanhol (Attero_v0.0.0_ES.zip — 34 MB)",
+                    url: "https://4br.me/iNgd1bAO",
+                    details: "Build oficial em espanhol (Windows / EasyRPG)"
+                },
+                {
+                    label: "Download Projeto Antigo (Akuma v0.00)",
+                    url: "https://4br.me/Z3n0brlMzq",
+                    details: "Mirror da versão original de 2016 em espanhol"
+                },
+                {
+                    label: "RTP do RPG Maker 2003 (Inglês)",
+                    url: "https://4br.me/zqthm73b",
+                    details: "Necessário para rodar nativamente no Windows sem EasyRPG"
+                },
+                {
+                    label: "Patch de Tradução em Português",
+                    url: "https://4br.me/7j1pobCtd",
+                    details: "Patch de tradução não oficial em português (apenas para a build em inglês). Requer o jogo original em inglês."
+                }
+            ],
+            installation: {
+                title: "Como Instalar e Rodar (Windows e Mobile)",
+                steps: [
+                    "Execução Nativa (Windows): Extraia o arquivo compactado do jogo e execute o arquivo 'RPG_RT.exe'. Caso não possua o RTP do RPG Maker 2003 instalado, baixe-o através do link fornecido.",
+                    "Execução via EasyRPG Player (Windows / Linux / Mac): Baixe o EasyRPG Player, extraia o jogo, coloque o arquivo 'Player.exe' dentro da pasta do Attero e execute-o.",
+                    "Execução no Android: Não existe APK portado nativo. Baixe o aplicativo EasyRPG Player (via Play Store, F-Droid, APKPure ou Uptodown), descompacte a pasta do Attero no celular e abra o diretório pelo aplicativo."
+                ]
+            }
+        },
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO DE CONTEÚDO (PLAYER DISCRETION):</strong> Este jogo aborda temas sensíveis e maduros, incluindo vício, álcool e tabaco, gore, violência, palavrões, ansiedade e crise existencial. Discrição recomendada.</p>
+            </div>
+
+            <p><strong>Attero</strong> (<em>"How many times has it been so far?"</em>) é um fangame tradicional inspirado em <em>Yume Nikki</em> (YNFG), desenvolvido de forma solo por <strong>AshitaMinami</strong> no <em>RPG Maker 2003</em>. O projeto funciona como um reboot completo de <em>Akuma</em> (lançado pelo mesmo autor em 2016 em espanhol) e integra o universo do <strong>Distorted Dreams Project (DDP)</strong> ao lado de seu jogo irmão, <em>Mendum Memoria</em> (Side B).</p>
+
+            <h2 id="sinopse">Sinopse e Histórico</h2>
+            <p>Você assume o papel de <strong>Aren</strong>, um jovem isolado dentro do próprio quarto, que atua como o hub central da experiência: o computador serve para salvar o progresso, enquanto a cama transporta Aren para o mundo onírico. Ao adormecer, você explora cenários surreais, interage com habitantes enigmáticos e mergulha nas camadas psicológicas da mente do protagonista.</p>
+            <p><em>Nota do Desenvolvedor:</em> É altamente recomendado jogar o clássico <em>Yume Nikki</em> antes de experimentar <em>Attero</em>. Além disso, arquivos de save do antigo <em>Akuma</em> não são compatíveis com esta nova versão.</p>
+
+            <h2 id="gameplay">Jogabilidade, Controles e Sistemas</h2>
+            <ul>
+                <li><strong>Exploração e Efeitos:</strong> O mundo dos sonhos conta atualmente com 6 mundos interligados (acessíveis a partir de 2 portas principais no Nexus) e 4 efeitos coletáveis para descobrir e utilizar.</li>
+                <li><strong>Sistema Dinâmico de Status:</strong> Um medidor interno sobe ou desce conforme suas interações com NPCs, divididas entre eventos positivos, neutros e negativos — sendo que os eventos neutros só surgem dependendo do nível atual do medidor.</li>
+                <li><strong>Controles Básicos:</strong> Setas direcionais (mover), <strong>Z / Espaço</strong> (interagir), <strong>X</strong> (menu / cancelar), <strong>Shift</strong> (ação do efeito equipado) e tecla <strong>9</strong> (acordar e retornar ao quarto).</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos e Multiplataforma (EasyRPG)</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows 7 ou superior (nativo). Roda perfeitamente em Linux, macOS e Android por meio do interpretador open-source <em>EasyRPG Player</em>.</li>
+                <li><strong>Armazenamento e Dependências:</strong> Cerca de 50 MB de espaço livre em disco. Exige o RTP do RPG Maker 2003 para execução nativa no Windows (dispensável ao utilizar o EasyRPG Player).</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://ynfg.yume.wiki/images/3/3b/Attero_Title.png" alt="Tela de Título" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvNDkwMzQ2My8yOTUwNDkwOC5wbmc=/original/YTU1Oc.png" alt="Screenshot 1" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvNDkwMzQ2My8yOTUwNDkxMC5wbmc=/original/DmncDE.png" alt="Screenshot 2" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvNDkwMzQ2My8yOTUwNDkxMS5wbmc=/original/3GAq6H.png" alt="Screenshot 3" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvNDkwMzQ2My8yOTUwNDkxMi5wbmc=/original/d1TqnE.png" alt="Screenshot 4" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvNDkwMzQ2My8yOTUwNDkxMy5wbmc=/original/Mzbtjf.png" alt="Screenshot 5" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://img.itch.zone/aW1hZ2UvNDkwMzQ2My8yOTUwNDkxNC5wbmc=/original/2mu4Q6.png" alt="Screenshot 6" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte a página oficial no itch.io, a ficha na Wiki de YNFGs, os links do EasyRPG Player e os downloads das builds em inglês e espanhol na seção acima.</p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
