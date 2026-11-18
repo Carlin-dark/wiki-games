@@ -11740,7 +11740,8 @@ const articlesDatabase = {
                 {
                     label: "Patch de Tradução em Português",
                     url: "https://4br.me/7j1pobCtd",
-                    details: "Patch de tradução não oficial em português (apenas para a build em inglês). Requer o jogo original em inglês."
+                    details: "Patch de tradução não oficial em português (apenas para a build em inglês). Requer o jogo original em inglês.",
+                    verified: true
                 }
             ],
             installation: {
