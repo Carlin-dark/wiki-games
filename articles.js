@@ -11786,6 +11786,135 @@ const articlesDatabase = {
             <p>Consulte a página oficial no itch.io, a ficha na Wiki de YNFGs, os links do EasyRPG Player e os downloads das builds em inglês e espanhol na seção acima.</p>
         `
     },
+    "huniepop": {
+        title: "HuniePop",
+        addedAt: "2026-11-18",
+        categories: ["Puzzle", "Match-3", "RPG", "Simulação de Namoro", "Visual Novel", "Adulto", "Indie", "Estratégia"],
+        summary: "HuniePop é um jogo híbrido de quebra-cabeça match-3, simulação de namoro e visual novel desenvolvido pela HuniePot. Você controla um protagonista sem sorte no amor que é despertado no meio da noite por Kyu, uma fada do amor, e levado para a cidade de Glenberry com a missão de conquistar 12 garotas diferentes através de encontros de match-3, diálogos estratégicos e gerenciamento de atributos.",
+        infobox: {
+            image: "https://cdn.akamai.steamstatic.com/steam/apps/339800/header.jpg",
+            data: {
+                "Desenvolvedor": "HuniePot (Ryan Koons / HuniePotDev)",
+                "Publicadora": "HuniePot (autopublicado)",
+                "Motor": "Unity",
+                "Gêneros": "Puzzle de combinar 3 (match-3), RPG de quebra-cabeça, simulação de namoro, visual novel, adulto (NSFW)",
+                "Plataformas": "Windows, macOS, Linux, Android, iOS, Nintendo Switch",
+                "Lançamento": "19 de janeiro de 2015 (PC)",
+                "Classificação etária": "Mature 17+ (Steam) / ESRB M — nudez e conteúdo sexual explícito",
+                "Preço": "US$ 9,99 (Steam)",
+                "Tamanho": "~1 GB (604 MB Repack)",
+                "Situação": "Completo, finalizado; ganhou sequência em 2021 (HuniePop 2: Double Date)"
+            }
+        },
+        toc: [
+            { id: "sinopse", text: "1. Sinopse e Premissa" },
+            { id: "gameplay", text: "2. Jogabilidade, Personagens e Curiosidades" },
+            { id: "requisitos", text: "3. Requisitos de Sistema" },
+            { id: "galeria", text: "4. Galeria de Imagens" },
+            { id: "links", text: "5. Links Oficiais e Downloads" }
+        ],
+        downloads: {
+            officialLinks: [
+                {
+                    label: "Site Oficial do Jogo",
+                    url: "http://www.huniepop.com/"
+                },
+                {
+                    label: "Site do Estúdio (HuniePot)",
+                    url: "http://www.huniepot.com/"
+                },
+                {
+                    label: "Página na Steam (Windows / Mac / Linux)",
+                    url: "https://store.steampowered.com/app/339800/HuniePop/"
+                },
+                {
+                    label: "Sequência na Steam (HuniePop 2: Double Date)",
+                    url: "https://store.steampowered.com/app/1144400/HuniePop_2_Double_Date/"
+                },
+                {
+                    label: "Twitter / X do Desenvolvedor",
+                    url: "https://twitter.com/HuniePotDev"
+                },
+                {
+                    label: "Patreon Oficial",
+                    url: "https://www.patreon.com/huniepot"
+                }
+            ],
+            files: [
+                {
+                    label: "Download PC (Servidor 1 — Repack)",
+                    url: "https://4br.me/V63lAJFhp",
+                    details: "PC (Windows — Full Version)"
+                },
+                {
+                    label: "Download PC (Servidor 2 — Repack)",
+                    url: "https://4br.me/w8IIo5t3T",
+                    details: "PC (Windows — Mirror alternativo)"
+                },
+                {
+                    label: "Download PC (RG Mechanics Repack — 604 MB)",
+                    url: "https://4br.me/w1tAtMpyI",
+                    details: "PC (Cracked By 3DM — Altamente compactado)"
+                },
+                {
+                    label: "APKPure — Android (com.huniepot.huniepop)",
+                    url: "https://4br.me/3So0dXR",
+                    details: "Port oficial mobile para Android"
+                },
+                {
+                    label: "APKCombo — Android (Espelho Alternativo)",
+                    url: "https://4br.me/Zj5dA",
+                    details: "Port oficial mobile para Android"
+                }
+            ],
+            installation: {
+                title: "Como Instalar e Configurar (PC e Android)",
+                steps: [
+                    "PC (Steam): A versão oficial adquirida na Steam já vem integralmente desbloqueada, não necessitando de patches adicionais.",
+                    "PC (Repack): Extraia o arquivo compactado (.rar), execute o instalador, aplique o crack caso necessário e inicie o jogo. Recomenda-se verificar arquivos baixados antes da extração.",
+                    "Android (APK + Patch Uncensored): O port mobile oficial possui a nudez bloqueada por padrão. Instale o APK base, abra o jogo uma vez, feche-o completamente e substitua os arquivos pelo patch 'HuniePop Uncensored Patch' dentro da pasta Android/data/com.huniepot.huniepop/ (faça backup antes)."
+                ]
+            }
+        },
+        content: `
+            <div style="background-color: #331111; border-left: 4px solid #ff4444; padding: 12px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="margin: 0; color: #ff8888;"><strong>AVISO 18+ (CONTEÚDO ADULTO EXPLÍCITO):</strong> Este jogo contém nudez integral, linguagem imprópria e cenas sexuais explícitas em estilo anime. Discrição estritamente recomendada para maiores de 18 anos.</p>
+            </div>
+
+            <p><strong>HuniePop</strong> é um aclamado jogo independente híbrido de quebra-cabeça <em>match-3</em>, simulação de namoro e visual novel desenvolvido pelo estúdio americano <strong>HuniePot</strong> (liderado por Ryan Koons) no motor <em>Unity</em>. Financiado via Kickstarter em 2013 e lançado originalmente para PC em janeiro de 2015, o título tornou-se um dos maiores marcos do mercado adulto no PC graças à sua direção artística refinada, dublagem completa em inglês e mecânicas de puzzle genuinamente viciantes.</p>
+
+            <h2 id="sinopse">Sinopse e Premissa</h2>
+            <p>Você assume o papel de um protagonista virgem e sem sorte no amor que, após uma tentativa frustrada de flerte em um bar, é despertado no meio da noite por <strong>Kyu</strong>, uma fada do amor excêntrica. Ela decide treiná-lo na cidade fictícia de Glenberry com um objetivo direto: perder a virgindade e aprender a conversar e conquistar mulheres.</p>
+
+            <h2 id="gameplay">Jogabilidade, Personagens e Curiosidades</h2>
+            <ul>
+                <li><strong>Encontros em Match-3:</strong> Cada encontro funciona como uma partida tática de combinar 3 peças, gerenciando barras de movimento e afeto através de ícones específicos (corações, flores, moedas e presentes) para atingir a pontuação necessária antes que os turnos acabem.</li>
+                <li><strong>Gestão e Diálogos:</strong> Entre os encontros, o jogador administra seu dinheiro, compra presentes, evolui atributos principais (<em>Charme, Sensualidade, Romance, Talento e Sorte</em>) e participa de conversas de múltipla escolha que testam o quanto você conhece os gostos de cada garota.</li>
+                <li><strong>Elenco de 12 Garotas:</strong> O jogo conta com 12 personagens com personalidades e curvas de dificuldade distintas: <strong>Tiffany</strong> (a mais acessível), <strong>Aiko</strong>, <strong>Kyanna</strong>, <strong>Audrey</strong>, <strong>Nikki</strong>, <strong>Jessie</strong>, <strong>Beli</strong>, <strong>Lola</strong>, <strong>Kyu</strong>, <strong>Momo</strong>, além das personagens secretas <strong>Celeste</strong> e <strong>Venus</strong>. Concluir quatro encontros bem-sucedidos com uma garota desbloqueia sua cena íntima ilustrada.</li>
+                <li><strong>Idiomas e Franquia:</strong> O jogo possui áudio e texto originais em inglês (com traduções não oficiais em português feitas pela comunidade) e deu origem a derivados como <em>HunieCam Studio</em> e à sequência direta <em>HuniePop 2: Double Date</em> (2021).</li>
+            </ul>
+
+            <h2 id="requisitos">Requisitos de Sistema (PC)</h2>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Windows XP / Vista / 7 / 8 / 8.1 / 10 (além de suporte oficial a macOS e Linux)</li>
+                <li><strong>Processador:</strong> Mínimo Intel 1.2 GHz Dual Core (Recomendado: Intel 2.4 GHz Dual Core)</li>
+                <li><strong>Memória RAM:</strong> Mínimo 2 GB de RAM (Recomendado: 4 GB de RAM)</li>
+                <li><strong>Placa de Vídeo:</strong> Mínimo 512 MB de VRAM compatível com DirectX 9.0c (Recomendado: 1 GB de VRAM)</li>
+                <li><strong>Armazenamento:</strong> 1 GB a 2 GB de espaço livre em disco</li>
+            </ul>
+
+            <h2 id="galeria">Galeria de Imagens</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/339800/capsule_616x353.jpg" alt="Capsule Oficial" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/339800/library_hero.jpg" alt="Hero Banner" style="max-width: 48%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/339800/library_600x900.jpg" alt="Capa Vertical" style="max-width: 31%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/339800/page_bg_generated_v6b.jpg" alt="Background Oficial" style="max-width: 65%; height: auto; border-radius: 4px; border: 1px solid #ccc;" loading="lazy">
+            </div>
+
+            <h2 id="links">Links oficiais e downloads</h2>
+            <p>Consulte o site oficial da HuniePot, a página da Steam, os links de download para PC e Android e as instruções de instalação na seção acima.</p>
+        `
+    },
     "trainwreck": {
         title: "Trainwreck",
         categories: ["Visual Novel", "Indie", "Slice of Life", "Drama"],
